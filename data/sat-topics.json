@@ -1,0 +1,152 @@
+[
+  {
+    "topic": "Quadratic Equations",
+    "category": "Algebra",
+    "description": "Solving quadratic equations using factoring, completing the square, and the quadratic formula"
+  },
+  {
+    "topic": "Linear Functions",
+    "category": "Algebra",
+    "description": "Understanding slope, y-intercept, and graphing linear equations"
+  },
+  {
+    "topic": "Systems of Equations",
+    "category": "Algebra",
+    "description": "Solving systems using substitution, elimination, and graphing methods"
+  },
+  {
+    "topic": "Exponential Functions",
+    "category": "Algebra",
+    "description": "Properties of exponential growth and decay"
+  },
+  {
+    "topic": "Polynomial Operations",
+    "category": "Algebra",
+    "description": "Adding, subtracting, multiplying, and factoring polynomials"
+  },
+  {
+    "topic": "Right Triangle Trigonometry",
+    "category": "Geometry",
+    "description": "SOH-CAH-TOA and applications of sine, cosine, and tangent"
+  },
+  {
+    "topic": "Circle Properties",
+    "category": "Geometry",
+    "description": "Circumference, area, arc length, and sector area"
+  },
+  {
+    "topic": "Triangle Similarity",
+    "category": "Geometry",
+    "description": "Similar triangles, proportions, and geometric means"
+  },
+  {
+    "topic": "Pythagorean Theorem",
+    "category": "Geometry",
+    "description": "Applications of a² + b² = c² in various contexts"
+  },
+  {
+    "topic": "Volume and Surface Area",
+    "category": "Geometry",
+    "description": "3D shapes including prisms, cylinders, cones, and spheres"
+  },
+  {
+    "topic": "Data Analysis and Statistics",
+    "category": "Statistics",
+    "description": "Mean, median, mode, range, and standard deviation"
+  },
+  {
+    "topic": "Probability Basics",
+    "category": "Statistics",
+    "description": "Independent and dependent events, conditional probability"
+  },
+  {
+    "topic": "Scatter Plots and Correlation",
+    "category": "Statistics",
+    "description": "Interpreting linear relationships and correlation coefficients"
+  },
+  {
+    "topic": "Sampling and Study Design",
+    "category": "Statistics",
+    "description": "Random sampling, bias, and experimental design"
+  },
+  {
+    "topic": "Complex Numbers",
+    "category": "Advanced Math",
+    "description": "Operations with imaginary numbers and the complex plane"
+  },
+  {
+    "topic": "Rational Expressions",
+    "category": "Advanced Math",
+    "description": "Simplifying and operating with algebraic fractions"
+  },
+  {
+    "topic": "Radical Equations",
+    "category": "Advanced Math",
+    "description": "Solving equations containing square roots and other radicals"
+  },
+  {
+    "topic": "Absolute Value Functions",
+    "category": "Advanced Math",
+    "description": "Graphing and solving absolute value equations and inequalities"
+  },
+  {
+    "topic": "Unit Circle and Radian Measure",
+    "category": "Advanced Math",
+    "description": "Converting between degrees and radians, special angle values"
+  },
+  {
+    "topic": "Sequences and Series",
+    "category": "Advanced Math",
+    "description": "Arithmetic and geometric sequences, summation notation"
+  },
+  {
+    "topic": "Reading Comprehension Strategies",
+    "category": "Reading",
+    "description": "Identifying main ideas, supporting details, and author's purpose"
+  },
+  {
+    "topic": "Vocabulary in Context",
+    "category": "Reading",
+    "description": "Determining word meanings from surrounding text"
+  },
+  {
+    "topic": "Evidence-Based Reading",
+    "category": "Reading",
+    "description": "Finding textual evidence to support answers"
+  },
+  {
+    "topic": "Grammar and Usage",
+    "category": "Writing",
+    "description": "Subject-verb agreement, pronoun usage, and verb tense"
+  },
+  {
+    "topic": "Punctuation Rules",
+    "category": "Writing",
+    "description": "Commas, semicolons, colons, and apostrophes"
+  },
+  {
+    "topic": "Sentence Structure",
+    "category": "Writing",
+    "description": "Fragments, run-ons, and effective sentence construction"
+  },
+  {
+    "topic": "Transitions and Organization",
+    "category": "Writing",
+    "description": "Logical flow and coherence in written passages"
+  },
+  {
+    "topic": "Rhetorical Skills",
+    "category": "Writing",
+    "description": "Tone, style, and effective communication strategies"
+  },
+  {
+    "topic": "Scientific Method",
+    "category": "Science",
+    "description": "Hypothesis testing, controls, and experimental design"
+  },
+  {
+    "topic": "Interpreting Data Tables and Graphs",
+    "category": "Science",
+    "description": "Reading and analyzing scientific data presentations"
+  }
+]
