@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { useToast } from '@/components/ui/use-toast'
 import { useUploadThing } from '@/lib/uploadthing'
-import type { ExtractionResult } from '@/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -21,12 +20,11 @@ export default function UploadPage() {
   const [uploadProgress, setUploadProgress] = useState(0)
   const [errorMessage, setErrorMessage] = useState<string>('')
   const [dragActive, setDragActive] = useState(false)
-  const [extractedData, setExtractedData] = useState<ExtractionResult | null>(null)
 
   const { startUpload: startPdfUpload } = useUploadThing('pdfUploader', {
     onClientUploadComplete: (res) => {
       console.log('PDF upload complete:', res)
-      processExtraction(res[0], 'pdf')
+      processGeneration(res[0], 'pdf')
     },
     onUploadError: (error) => {
       console.error('Upload error:', error)
@@ -46,7 +44,7 @@ export default function UploadPage() {
   const { startUpload: startImageUpload } = useUploadThing('imageUploader', {
     onClientUploadComplete: (res) => {
       console.log('Image upload complete:', res)
-      processExtraction(res[0], 'image')
+      processGeneration(res[0], 'image')
     },
     onUploadError: (error) => {
       console.error('Upload error:', error)
@@ -63,7 +61,7 @@ export default function UploadPage() {
     },
   })
 
-  const processExtraction = async (uploadedFile: any, fileType: 'pdf' | 'image') => {
+  const processGeneration = async (uploadedFile: any, _fileType: 'pdf' | 'image') => {
     setUploadState('processing')
     setUploadProgress(50)
 
@@ -74,42 +72,41 @@ export default function UploadPage() {
 
       const formData = new FormData()
       formData.append('file', file)
+      formData.append('summaryLength', 'medium')
+      formData.append('style', 'notes')
 
-      const extractResponse = await fetch(
-        fileType === 'pdf' ? '/api/extract' : '/api/ocr',
-        {
-          method: 'POST',
-          body: formData,
-        }
-      )
+      const generateResponse = await fetch('/api/generate', {
+        method: 'POST',
+        body: formData,
+      })
 
-      const result = await extractResponse.json()
+      const result = await generateResponse.json()
 
-      if (!extractResponse.ok) {
-        throw new Error(result.error?.message || 'Extraction failed')
+      if (!generateResponse.ok) {
+        throw new Error(result.error?.message || 'Generation failed')
       }
 
-      setExtractedData(result)
       setUploadState('success')
       setUploadProgress(100)
 
       toast({
-        title: 'Success!',
-        description: 'Text extracted successfully',
+        title: 'Generation Started!',
+        description: 'Your document is being processed. You will be redirected to the status page.',
       })
 
+      // Redirect to status page with jobId
       setTimeout(() => {
-        router.push('/generation')
+        router.push(`/generation-status?jobId=${result.jobId}`)
       }, 2000)
     } catch (error) {
-      console.error('Extraction error:', error)
+      console.error('Generation error:', error)
       setUploadState('error')
       setErrorMessage(
-        error instanceof Error ? error.message : 'Failed to extract text from file'
+        error instanceof Error ? error.message : 'Failed to start generation'
       )
       toast({
-        title: 'Extraction failed',
-        description: error instanceof Error ? error.message : 'An error occurred during extraction',
+        title: 'Generation failed',
+        description: error instanceof Error ? error.message : 'An error occurred during generation',
         variant: 'destructive',
       })
     }
@@ -199,7 +196,6 @@ export default function UploadPage() {
     setUploadState('idle')
     setUploadProgress(0)
     setErrorMessage('')
-    setExtractedData(null)
   }
 
   const getFileIcon = () => {
@@ -229,9 +225,9 @@ export default function UploadPage() {
       case 'uploading':
         return 'Uploading file...'
       case 'processing':
-        return 'Extracting text...'
+        return 'Starting generation...'
       case 'success':
-        return 'Text extracted successfully! Redirecting...'
+        return 'Generation started! Redirecting to status page...'
       case 'error':
         return errorMessage || 'An error occurred'
       default:
@@ -244,10 +240,10 @@ export default function UploadPage() {
       <div className="max-w-2xl w-full">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-semibold text-neutral-900 mb-4">
-            Upload Document
+            Generate Handwritten Notes
           </h1>
           <p className="text-xl text-neutral-600">
-            Upload a PDF or image to extract text for your notes
+            Upload a PDF or image to generate AI-powered handwritten notes
           </p>
         </div>
 
@@ -354,18 +350,16 @@ export default function UploadPage() {
               </div>
             )}
 
-            {extractedData && uploadState === 'success' && (
+            {uploadState === 'success' && (
               <div className="flex items-start gap-3 p-4 bg-success-50 border border-success-200 rounded-xl">
                 <CheckCircle2 className="w-5 h-5 text-success-600 flex-shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <p className="text-sm font-medium text-success-900">
-                    Extraction Complete
+                    Generation Started
                   </p>
                   <p className="text-sm text-success-700 mt-1">
-                    Extracted {extractedData.text.length} characters
-                    {extractedData.confidence && 
-                      ` with ${(extractedData.confidence * 100).toFixed(0)}% confidence`
-                    }
+                    Your document is being processed in the background.
+                    You&apos;ll be redirected to the status page to track progress.
                   </p>
                 </div>
               </div>
@@ -375,14 +369,14 @@ export default function UploadPage() {
               {uploadState === 'idle' || uploadState === 'error' ? (
                 <>
                   <Button
-                    onClick={handleUpload}
-                    disabled={!file}
-                    className="flex-1"
-                    size="lg"
-                  >
-                    <Upload className="w-4 h-4 mr-2" />
-                    Upload & Extract
-                  </Button>
+                                       onClick={handleUpload}
+                                       disabled={!file}
+                                       className="flex-1"
+                                       size="lg"
+                                     >
+                                       <Upload className="w-4 h-4 mr-2" />
+                                       Generate Notes
+                                     </Button>
                   {file && (
                     <Button
                       onClick={resetUpload}
@@ -395,11 +389,11 @@ export default function UploadPage() {
                 </>
               ) : uploadState === 'success' ? (
                 <Button
-                  onClick={() => router.push('/generation')}
+                  onClick={() => router.push('/generation-status')}
                   className="flex-1"
                   size="lg"
                 >
-                  Continue to Generation
+                  View Generation Status
                 </Button>
               ) : null}
             </div>
