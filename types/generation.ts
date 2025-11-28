@@ -5,6 +5,24 @@ export interface GenerationRequest {
   extractedText?: string
 }
 
+export interface PDFLibraryItem {
+  id: string
+  title: string
+  url: string
+  thumbnailUrl?: string
+  createdAt: Date
+  topic: string
+  category?: string
+  summarySnippet?: string
+  status: 'ready' | 'processing' | 'error'
+  fileSize: number
+  metadata?: {
+    extractionConfidence?: number
+    summaryQuality?: number
+    pageCount?: number
+  }
+}
+
 export interface GenerationStatus {
   id: string
   status: 'extracting' | 'summarizing' | 'rendering' | 'complete' | 'error'

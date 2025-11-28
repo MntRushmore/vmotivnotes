@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { getPromptConfig } from '@/lib/claude-prompts'
-import { GenerationService, createGenerationError } from '@/lib/generation-service'
+import { createGenerationError } from '@/lib/generation-service'
 import { SummaryResult } from '@/types/generation'
 
 export const runtime = 'edge'
@@ -17,8 +17,34 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 })
 
+async function withRetry<T>(
+  fn: () => Promise<T>,
+  maxAttempts: number = 3,
+  baseDelay: number = 1000
+): Promise<T> {
+  let lastError: Error
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await fn()
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error))
+      
+      if (attempt === maxAttempts) {
+        throw error
+      }
+
+      const delay = baseDelay * Math.pow(2, attempt - 1)
+      await new Promise(resolve => setTimeout(resolve, delay))
+    }
+  }
+
+  throw lastError!
+}
+
 async function generateSummary(text: string, mode: '9th-grade' | 'SAT'): Promise<SummaryResult> {
   const config = getPromptConfig(mode)
+  const startTime = Date.now()
   
   if (!process.env.ANTHROPIC_API_KEY) {
     throw createGenerationError(
@@ -30,8 +56,7 @@ async function generateSummary(text: string, mode: '9th-grade' | 'SAT'): Promise
     )
   }
 
-  const response = await GenerationService.withRetry(
-    async () => {
+  const response = await withRetry(async () => {
       const result = await anthropic.messages.create({
         model: config.model,
         max_tokens: config.maxTokens,
@@ -50,13 +75,10 @@ async function generateSummary(text: string, mode: '9th-grade' | 'SAT'): Promise
       }
 
       return result.content[0].text
-    },
-    { maxAttempts: 3 },
-    'Claude API call'
+    }
   )
 
   const responseText = response as string
-  const startTime = Date.now()
   
   return parseSummaryResponse(responseText, mode, Date.now() - startTime)
 }
@@ -100,7 +122,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   
   try {
     body = await request.json() as SummarizeRequest
-    const { text, mode, generationId } = body
+    const { text, mode } = body
 
     if (typeof text !== 'string' || !text.trim()) {
       return NextResponse.json({ error: 'Text is required and must be a string' }, { status: 400 })
@@ -110,26 +132,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       return NextResponse.json({ error: 'Mode must be either "9th-grade" or "SAT"' }, { status: 400 })
     }
 
-    if (generationId) {
-      GenerationService.updateGenerationStatus(generationId, {
-        status: 'summarizing',
-        progress: 25,
-        currentStep: 'Generating summary with Claude Opus...'
-      })
-    }
-
-    const result = await GenerationService.withTimeout(
-      () => generateSummary(text, mode),
-      240000,
-      'Claude summarization'
-    )
-
-    if (generationId) {
-      GenerationService.updateGenerationStatus(generationId, {
-        progress: 50,
-        currentStep: 'Summary generated successfully'
-      })
-    }
+    const result = await generateSummary(text, mode)
 
     return NextResponse.json(result)
   } catch (error) {
@@ -169,10 +172,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
           false
         )
       }
-    }
-
-    if (body?.generationId) {
-      GenerationService.setError(body.generationId, genError)
     }
 
     return NextResponse.json(

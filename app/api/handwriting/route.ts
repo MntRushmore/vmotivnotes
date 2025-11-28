@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { GenerationService, createGenerationError } from '@/lib/generation-service'
+import { createGenerationError } from '@/lib/generation-service'
 import { HandwritingResult, HandwritingConfig } from '@/types/generation'
 
 export const runtime = 'nodejs'
@@ -21,6 +21,31 @@ const DEFAULT_HANDWRITING_CONFIG: HandwritingConfig = {
   }
 }
 
+async function withRetry<T>(
+  fn: () => Promise<T>,
+  maxAttempts: number = 3,
+  baseDelay: number = 1000
+): Promise<T> {
+  let lastError: Error
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await fn()
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error))
+      
+      if (attempt === maxAttempts) {
+        throw error
+      }
+
+      const delay = baseDelay * Math.pow(2, attempt - 1)
+      await new Promise(resolve => setTimeout(resolve, delay))
+    }
+  }
+
+  throw lastError!
+}
+
 async function generateHandwritingPDF(
   text: string,
   config: HandwritingConfig
@@ -35,8 +60,7 @@ async function generateHandwritingPDF(
     )
   }
 
-  const response = await GenerationService.withRetry(
-    async () => {
+  const response = await withRetry(async () => {
       const formData = new FormData()
       formData.append('text', text)
       formData.append('model', config.model)
@@ -57,9 +81,7 @@ async function generateHandwritingPDF(
       }
 
       return apiResponse
-    },
-    { maxAttempts: 3 },
-    'Nano Banana API call'
+    }
   )
 
   const contentType = response.headers.get('content-type')
@@ -76,7 +98,8 @@ async function generateHandwritingPDF(
       
       const buffer = Buffer.from(await pdfResponse.arrayBuffer())
       
-      if (!GenerationService.validatePDFBuffer(buffer)) {
+      // Simple PDF validation - check for %PDF header
+      if (!buffer.toString('ascii', 0, 4).includes('%PDF')) {
         throw new Error('Invalid PDF format received')
       }
 
@@ -95,7 +118,8 @@ async function generateHandwritingPDF(
   } else if (contentType?.includes('application/pdf')) {
     const buffer = Buffer.from(await response.arrayBuffer())
     
-    if (!GenerationService.validatePDFBuffer(buffer)) {
+    // Simple PDF validation - check for %PDF header
+    if (!buffer.toString('ascii', 0, 4).includes('%PDF')) {
       throw new Error('Invalid PDF format received')
     }
 
@@ -118,7 +142,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   
   try {
     body = await request.json() as HandwritingRequest
-    const { text, config: userConfig, generationId } = body
+    const { text, config: userConfig } = body
 
     if (typeof text !== 'string' || !text.trim()) {
       return NextResponse.json({ error: 'Text is required and must be a string' }, { status: 400 })
@@ -133,27 +157,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       }
     }
 
-    if (generationId) {
-      GenerationService.updateGenerationStatus(generationId, {
-        status: 'rendering',
-        progress: 75,
-        currentStep: 'Generating handwritten PDF...'
-      })
-    }
-
-    const result = await GenerationService.withTimeout(
-      () => generateHandwritingPDF(text, config),
-      240000,
-      'Handwriting PDF generation'
-    )
-
-    if (generationId) {
-      GenerationService.updateGenerationStatus(generationId, {
-        status: 'complete',
-        progress: 100,
-        currentStep: 'Handwritten PDF generated successfully'
-      })
-    }
+    const result = await generateHandwritingPDF(text, config)
 
     return NextResponse.json({
       pdfUrl: result.pdfUrl,
@@ -196,10 +200,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
           false
         )
       }
-    }
-
-    if (body?.generationId) {
-      GenerationService.setError(body.generationId, genError)
     }
 
     return NextResponse.json(

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { GenerationService, createGenerationError } from '@/lib/generation-service'
+import { createGenerationError } from '@/lib/generation-service'
 import { GenerationRequest, GenerationResult } from '@/types/generation'
 
 export const runtime = 'nodejs'
@@ -78,10 +78,17 @@ async function generateHandwriting(text: string, generationId: string): Promise<
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
-  const generationId = GenerationService.generateId()
+  const generationId = 'gen_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
   let generationResult: Partial<GenerationResult> = {
     id: generationId,
-    status: GenerationService.createGenerationStatus(generationId)
+    status: {
+      id: generationId,
+      status: 'extracting',
+      progress: 0,
+      currentStep: 'Starting generation...',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
   }
 
   try {
@@ -102,33 +109,36 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       )
     }
 
-    GenerationService.updateGenerationStatus(generationId, {
+    // Update status to extracting
+    generationResult.status = {
+      ...generationResult.status!,
       status: 'extracting',
       progress: 10,
-      currentStep: 'Extracting text from file...'
-    })
+      currentStep: 'Extracting text from file...',
+      updatedAt: new Date()
+    }
 
     let text: string
     
     if (extractedText) {
       text = extractedText
-      GenerationService.updateGenerationStatus(generationId, {
+      generationResult.status = {
+        ...generationResult.status!,
         progress: 20,
-        currentStep: 'Using provided extracted text...'
-      })
+        currentStep: 'Using provided extracted text...',
+        updatedAt: new Date()
+      }
     } else {
-      text = await GenerationService.withTimeout(
-        () => extractTextFromFile(fileId, fileName),
-        120000,
-        'Text extraction'
-      )
-      
+      text = await extractTextFromFile(fileId, fileName)
+
       generationResult.extractedText = text
-      
-      GenerationService.updateGenerationStatus(generationId, {
+
+      generationResult.status = {
+        ...generationResult.status!,
         progress: 20,
-        currentStep: 'Text extraction completed...'
-      })
+        currentStep: 'Text extraction completed...',
+        updatedAt: new Date()
+      }
     }
 
     if (!text || text.trim().length < 50) {
@@ -141,18 +151,16 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       )
     }
 
-    const summaryResult = await GenerationService.withTimeout(
-      () => summarizeText(text, summaryMode, generationId),
-      300000,
-      'Text summarization'
-    )
+    const summaryResult = await summarizeText(text, summaryMode, generationId)
     
     generationResult.summary = summaryResult
     
-    GenerationService.updateGenerationStatus(generationId, {
+    generationResult.status = {
+      ...generationResult.status!,
       progress: 60,
-      currentStep: 'Creating handwritten version...'
-    })
+      currentStep: 'Creating handwritten version...',
+      updatedAt: new Date()
+    }
 
     const textForHandwriting = `
 Summary:
@@ -165,23 +173,20 @@ Interactive Notes:
 ${summaryResult.interactiveNotes.map((note: string) => `• ${note}`).join('\n')}
     `.trim()
 
-    const handwritingResult = await GenerationService.withTimeout(
-      () => generateHandwriting(textForHandwriting, generationId),
-      300000,
-      'Handwriting generation'
-    )
+    const handwritingResult = await generateHandwriting(textForHandwriting, generationId)
     
     generationResult.handwriting = handwritingResult
 
-    GenerationService.updateGenerationStatus(generationId, {
+    generationResult.status = {
+      ...generationResult.status!,
       status: 'complete',
       progress: 100,
-      currentStep: 'Generation completed successfully!'
-    })
+      currentStep: 'Generation completed successfully!',
+      updatedAt: new Date()
+    }
 
     const finalResult: GenerationResult = {
-      ...generationResult as GenerationResult,
-      status: GenerationService.getGenerationStatus(generationId)!
+      ...generationResult as GenerationResult
     }
 
     return NextResponse.json(finalResult)
@@ -232,7 +237,15 @@ ${summaryResult.interactiveNotes.map((note: string) => `• ${note}`).join('\n')
       }
     }
 
-    GenerationService.setError(generationId, genError)
+    generationResult.status = {
+      id: generationId,
+      status: 'error',
+      progress: generationResult.status?.progress || 0,
+      currentStep: generationResult.status?.currentStep || 'Error occurred',
+      error: genError,
+      createdAt: generationResult.status?.createdAt || new Date(),
+      updatedAt: new Date()
+    }
 
     return NextResponse.json(
       {
@@ -241,7 +254,7 @@ ${summaryResult.interactiveNotes.map((note: string) => `• ${note}`).join('\n')
         code: genError.code,
         step: genError.step,
         retryable: genError.retryable,
-        status: GenerationService.getGenerationStatus(generationId)
+        status: generationResult.status
       },
       { status: 500 }
     )
@@ -259,14 +272,10 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     )
   }
 
-  const status = GenerationService.getGenerationStatus(generationId)
-
-  if (!status) {
-    return NextResponse.json(
-      { error: 'Generation not found' },
-      { status: 404 }
-    )
-  }
-
-  return NextResponse.json({ status })
+  // In a real implementation, this would fetch from a database
+  // For now, return a not found error
+  return NextResponse.json(
+    { error: 'Generation not found' },
+    { status: 404 }
+  )
 }

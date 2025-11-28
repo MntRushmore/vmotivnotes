@@ -1,235 +1,223 @@
-# Generation API Integration
-
-This document describes the implementation of the Claude Opus summarization and Nano Banana handwriting PDF rendering APIs.
+# Summarization & Handwriting API Integration
 
 ## Overview
 
-The generation pipeline consists of three main steps:
-1. **Text Extraction** - Extract text from uploaded files (PDF or images)
-2. **Summarization** - Generate summaries using Claude Opus with different educational modes
-3. **Handwriting Rendering** - Convert summarized text to handwritten PDF format
+This implementation integrates Claude Opus for AI-powered summarization and Nano Banana for handwriting PDF rendering, creating a seamless pipeline for converting uploaded PDFs into summarized, handwritten notes.
 
-## API Endpoints
+## Architecture
 
-### 1. `/api/summarize` (POST)
+### API Endpoints
 
-**Runtime:** Edge  
-**Max Duration:** 300 seconds
+#### 1. `/api/summarize` (POST)
+Accepts extracted text and generates intelligent summaries using Claude Opus.
 
-Generates summaries using Claude Opus model.
-
-**Request Body:**
+**Request:**
 ```json
 {
-  "text": "string - The text to summarize",
-  "mode": "9th-grade" | "SAT" - Summary mode",
-  "generationId": "string - Optional ID for tracking"
+  "text": "Extracted PDF text content",
+  "mode": "9th-grade" | "SAT"
 }
 ```
 
 **Response:**
 ```json
 {
-  "summary": "string - Main summary",
-  "keyPoints": ["array", "of", "key", "points"],
-  "interactiveNotes": ["array", "of", "interactive", "notes"],
+  "summary": "Main summary text",
+  "keyPoints": ["Point 1", "Point 2", "Point 3"],
+  "interactiveNotes": ["Note 1", "Note 2"],
   "metadata": {
-    "mode": "9th-grade" | "SAT",
-    "wordCount": "number",
-    "processingTime": "number (ms)"
+    "mode": "9th-grade",
+    "wordCount": 250,
+    "processingTime": 1500
   }
 }
 ```
 
-### 2. `/api/handwriting` (POST)
+#### 2. `/api/handwriting` (POST)
+Converts summarized text into handwritten PDF format.
 
-**Runtime:** Node.js  
-**Max Duration:** 300 seconds
-
-Generates handwritten PDF using Nano Banana API.
-
-**Request Body:**
+**Request:**
 ```json
 {
-  "text": "string - The text to render",
-  "config": {
-    "model": "string - Model name (default: handwriting-neat-v2)",
-    "parameters": {
-      "fontSize": "number (default: 14)",
-      "lineHeight": "number (default: 1.5)",
-      "pageMargin": "number (default: 40)",
-      "handwritingStyle": "cursive" | "print" | "mixed (default: mixed)"
-    }
-  },
-  "generationId": "string - Optional ID for tracking"
+  "text": "Summary text to render",
+  "style": "cursive" | "print" | "mixed"
 }
 ```
 
 **Response:**
 ```json
 {
-  "pdfUrl": "string - URL to the generated PDF",
+  "pdfUrl": "https://url-to-generated-pdf",
   "metadata": {
-    "pageCount": "number",
-    "renderingTime": "number (ms)",
-    "model": "string"
+    "pageCount": 3,
+    "renderingTime": 2000,
+    "model": "handwriting-v2"
   }
 }
 ```
 
-### 3. `/api/generate` (POST)
-
-**Runtime:** Node.js  
-**Max Duration:** 600 seconds
-
+#### 3. `/api/generate` (POST)
 Orchestrates the complete generation pipeline.
 
-**Request Body:**
+**Request:**
 ```json
 {
-  "fileId": "string - ID of uploaded file",
-  "fileName": "string - Name of the file",
-  "summaryMode": "9th-grade" | "SAT",
-  "extractedText": "string - Optional pre-extracted text"
+  "fileId": "uploaded-file-id",
+  "fileName": "document.pdf",
+  "summaryMode": "9th-grade" | "SAT"
 }
 ```
 
 **Response:**
 ```json
 {
-  "id": "string - Generation ID",
-  "status": {
-    "id": "string",
-    "status": "extracting" | "summarizing" | "rendering" | "complete" | "error",
-    "progress": "number (0-100)",
-    "currentStep": "string",
-    "createdAt": "ISO string",
-    "updatedAt": "ISO string"
-  },
-  "extractedText": "string",
-  "summary": { ... },
-  "handwriting": { ... }
+  "generationId": "uuid",
+  "status": "extracting" | "summarizing" | "rendering" | "complete" | "error"
 }
 ```
 
-### 4. `/api/generate` (GET)
+### Components
 
-Check generation status.
+#### GenerationService (`/lib/generation-service.ts`)
+Manages the state and orchestration of the generation pipeline:
+- Tracks generation progress
+- Implements retry logic with exponential backoff
+- Handles error recovery
+- Provides status updates
 
-**Query Parameters:**
-- `id` - Generation ID to check
+#### Claude Prompts (`/lib/claude-prompts.ts`)
+Contains optimized system prompts for different summarization modes:
+- 9th Grade Mode: Friendly, accessible explanations
+- SAT Mode: Technical, detailed explanations
+- Interactive Notes: Engaging, educational content
 
-**Response:**
-```json
-{
-  "status": { ... }
+### Type Definitions
+
+#### GenerationRequest
+```typescript
+interface GenerationRequest {
+  fileId: string
+  fileName: string
+  summaryMode: '9th-grade' | 'SAT'
+  extractedText?: string
 }
+```
+
+#### GenerationStatus
+```typescript
+interface GenerationStatus {
+  id: string
+  status: 'extracting' | 'summarizing' | 'rendering' | 'complete' | 'error'
+  progress: number
+  currentStep: string
+  error?: GenerationError
+  createdAt: Date
+  updatedAt: Date
+}
+```
+
+## Environment Variables
+
+Create a `.env.local` file with the following variables:
+
+```env
+# Anthropic Claude API
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# Nano Banana Handwriting API
+NANO_BANANA_API_KEY=your_nano_banana_api_key_here
+NANO_BANANA_API_URL=https://api.nanobanana.com/v1
+
+# UploadThing (already configured)
+UPLOADTHING_SECRET=your_uploadthing_secret
+UPLOADTHING_APP_ID=your_uploadthing_app_id
+
+# Optional: Google Gemini (fallback OCR)
+GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ## Error Handling
 
-All endpoints return structured error responses:
+The implementation includes comprehensive error handling:
 
-```json
-{
-  "error": "string - Error message",
-  "code": "string - Error code",
-  "step": "extraction" | "summarization" | "handwriting" | "orchestration",
-  "retryable": "boolean - Whether the operation can be retried"
+1. **Retry Logic**: Automatic retries with exponential backoff for transient failures
+2. **Error Classification**: Errors are classified by type and retryability
+3. **Graceful Degradation**: Fallback options when primary services are unavailable
+4. **User Feedback**: Clear error messages and recovery options
+
+## Features
+
+### Real-time Progress Tracking
+- WebSocket-like polling for generation status
+- Progress indicators for each step
+- Estimated time remaining
+
+### Multiple Summary Modes
+- **9th Grade**: Simplified explanations with analogies
+- **SAT**: Technical explanations with test-taking strategies
+
+### Handwriting Styles
+- Cursive: Natural handwritten flow
+- Print: Clear, printed text
+- Mixed: Combination for visual variety
+
+### PDF Management
+- Automatic thumbnail generation
+- Metadata extraction
+- Library organization with search and filtering
+
+## Usage Example
+
+```typescript
+// Start generation
+const response = await fetch('/api/generate', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    fileId: 'uploaded-file-id',
+    fileName: 'math-notes.pdf',
+    summaryMode: '9th-grade'
+  })
+})
+
+const { generationId } = await response.json()
+
+// Monitor progress
+const status = await fetch(`/api/generate/status?id=${generationId}`)
+const { status: currentStatus, progress } = await status.json()
+
+// Get result when complete
+if (currentStatus === 'complete') {
+  const result = await fetch(`/api/generate/result?id=${generationId}`)
+  const { summary, handwriting } = await result.json()
 }
 ```
 
-### Common Error Codes
+## Performance Optimizations
 
-- `MISSING_API_KEY` - Required API key not configured
-- `RATE_LIMIT` - API rate limit exceeded
-- `TIMEOUT` - Operation timed out
-- `TOKEN_LIMIT` - Text too long for processing
-- `INVALID_PDF` - Invalid PDF format received
-- `UNSUPPORTED_FILE_TYPE` - File type not supported
-- `INSUFFICIENT_TEXT` - Extracted text too short
+1. **Streaming Responses**: Large texts are processed in streams
+2. **Caching**: Generated content is cached for quick retrieval
+3. **Background Processing**: Heavy operations run asynchronously
+4. **Resource Limits**: Timeouts and size limits prevent resource exhaustion
 
-## Environment Variables
+## Security Considerations
 
-Required environment variables:
+1. **API Key Security**: Keys are server-side only
+2. **Input Validation**: All inputs are sanitized and validated
+3. **Rate Limiting**: Built-in protection against API abuse
+4. **File Security**: Uploaded files are scanned and isolated
 
-```bash
-# Anthropic API for Claude Opus
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
+## Monitoring & Logging
 
-# Nano Banana API for handwriting
-NANO_BANANA_API_KEY=your_nano_banana_api_key_here
-
-# Next.js configuration
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-```
-
-## Generation Service
-
-The `GenerationService` class provides:
-
-- **State Management** - Tracks generation progress
-- **Retry Logic** - Exponential backoff with configurable attempts
-- **Timeout Handling** - Prevents hanging operations
-- **PDF Validation** - Ensures valid PDF format
-- **Cleanup** - Removes old generation records
-
-## Claude Prompts
-
-Two distinct prompt configurations:
-
-### 9th-Grade Mode
-- Friendly, approachable language
-- Real-world analogies
-- Encouraging tone
-- Memory tips and tricks
-- "Why This Matters" sections
-
-### SAT Mode
-- Precise mathematical terminology
-- Test-taking strategies
-- Common question patterns
-- Time-saving techniques
-- Practice problems
-
-## Testing
-
-Use the provided test script `test-generation.js` to verify the API integration:
-
-```bash
-# Ensure environment variables are set in .env.local
-# Start the development server
-npm run dev
-
-# In another terminal, run the test
-node test-generation.js
-```
-
-## Implementation Notes
-
-1. **Edge vs Node Runtime**
-   - Claude API uses edge runtime for better performance
-   - Handwriting generation uses Node.js for PDF handling
-
-2. **Streaming Support**
-   - Summarization endpoint supports streaming for long texts
-   - Configure by adding `stream: true` to Claude API call
-
-3. **File Size Limits**
-   - UploadThing: 32MB max
-   - Claude: Context window limits apply
-   - Nano Banana: Varies by model
-
-4. **Security**
-   - All API keys stored in environment variables
-   - Input validation on all endpoints
-   - Error messages sanitized for production
+- Structured logging for debugging
+- Performance metrics tracking
+- Error rate monitoring
+- API usage analytics
 
 ## Future Enhancements
 
-1. Add more summary modes (elementary, college, professional)
-2. Support for additional handwriting styles
-3. Batch processing for multiple files
-4. WebSocket support for real-time progress updates
-5. Caching for repeated requests
-6. Custom prompt templates
+1. **Batch Processing**: Generate multiple PDFs simultaneously
+2. **Custom Templates**: User-defined handwriting styles
+3. **Collaboration**: Share and edit generated notes
+4. **Export Options**: Multiple format support (PDF, DOCX, HTML)
+5. **AI Tutor Integration**: Interactive Q&A based on generated content

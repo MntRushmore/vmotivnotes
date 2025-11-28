@@ -1,132 +1,304 @@
-import { GenerationStatus, RetryConfig, GenerationError } from '@/types/generation'
+import { GenerationRequest, GenerationStatus, GenerationResult, GenerationError, RetryConfig } from '@/types'
+import { v4 as uuidv4 } from 'uuid'
 
-const DEFAULT_RETRY_CONFIG: RetryConfig = {
-  maxAttempts: 3,
-  baseDelay: 1000,
-  maxDelay: 10000,
-  backoffFactor: 2
+interface GenerationState {
+  [key: string]: GenerationStatus
 }
 
-const generationStore = new Map<string, GenerationStatus>()
+class GenerationService {
+  private state: GenerationState = {}
+  private readonly retryConfig: RetryConfig = {
+    maxAttempts: 3,
+    baseDelay: 1000,
+    maxDelay: 10000,
+    backoffFactor: 2
+  }
 
-export class GenerationService {
-  static createGenerationStatus(id: string): GenerationStatus {
-    const status: GenerationStatus = {
+  /**
+   * Start a new generation process
+   */
+  async startGeneration(request: GenerationRequest): Promise<string> {
+    const id = uuidv4()
+    
+    // Initialize state
+    this.state[id] = {
       id,
       status: 'extracting',
       progress: 0,
-      currentStep: 'Starting extraction...',
+      currentStep: 'Extracting text from PDF...',
       createdAt: new Date(),
       updatedAt: new Date()
     }
-    generationStore.set(id, status)
-    return status
+
+    // Start the generation process in the background
+    this.runGeneration(id, request).catch(error => {
+      console.error(`Generation ${id} failed:`, error)
+      this.updateStatus(id, {
+        status: 'error',
+        error: {
+          code: 'GENERATION_FAILED',
+          message: error.message || 'Unknown error occurred',
+          step: 'orchestration',
+          retryable: true
+        }
+      })
+    })
+
+    return id
   }
 
-  static updateGenerationStatus(
-    id: string,
-    updates: Partial<Omit<GenerationStatus, 'id' | 'createdAt'>>
-  ): GenerationStatus | null {
-    const status = generationStore.get(id)
+  /**
+   * Get the current status of a generation
+   */
+  getStatus(id: string): GenerationStatus | null {
+    return this.state[id] || null
+  }
+
+  /**
+   * Get the full result of a completed generation
+   */
+  async getResult(id: string): Promise<GenerationResult | null> {
+    const status = this.getStatus(id)
     if (!status) return null
 
-    const updatedStatus: GenerationStatus = {
-      ...status,
-      ...updates,
-      updatedAt: new Date()
+    // In a real implementation, this would fetch from a database
+    // For now, we'll return the status as the result
+    return {
+      id,
+      status,
+      // These would be populated by the generation process
+      summary: undefined,
+      handwriting: undefined,
+      extractedText: undefined
     }
-    generationStore.set(id, updatedStatus)
-    return updatedStatus
   }
 
-  static getGenerationStatus(id: string): GenerationStatus | null {
-    return generationStore.get(id) || null
+  /**
+   * Run the complete generation pipeline
+   */
+  private async runGeneration(id: string, request: GenerationRequest): Promise<void> {
+    try {
+      // Step 1: Extract text
+      this.updateStatus(id, {
+        status: 'extracting',
+        progress: 10,
+        currentStep: 'Extracting text from PDF...'
+      })
+
+      let extractedText = request.extractedText
+      if (!extractedText) {
+        const extracted = await this.extractText(request.fileId)
+        if (!extracted) {
+          throw new Error('Failed to extract text from PDF')
+        }
+        extractedText = extracted
+      }
+
+      // Step 2: Summarize
+      this.updateStatus(id, {
+        status: 'summarizing',
+        progress: 40,
+        currentStep: 'Generating summary with Claude...'
+      })
+
+      const summary = await this.summarizeText(extractedText, request.summaryMode)
+
+      // Step 3: Render handwriting
+      this.updateStatus(id, {
+        status: 'rendering',
+        progress: 70,
+        currentStep: 'Rendering handwritten PDF...'
+      })
+
+      const handwriting = await this.renderHandwriting(summary.summary)
+
+      // Complete
+      this.updateStatus(id, {
+        status: 'complete',
+        progress: 100,
+        currentStep: 'Complete!'
+      })
+
+    } catch (error) {
+      this.updateStatus(id, {
+        status: 'error',
+        error: {
+          code: error.code || 'GENERATION_ERROR',
+          message: error.message || 'Generation failed',
+          step: error.step || 'orchestration',
+          details: error.details,
+          retryable: error.retryable !== false
+        }
+      })
+    }
   }
 
-  static setError(id: string, error: GenerationError): GenerationStatus {
-    return this.updateGenerationStatus(id, {
-      status: 'error',
-      error,
-      progress: 0
-    })!
+  /**
+   * Extract text from PDF
+   */
+  private async extractText(fileId: string): Promise<string | null> {
+    return this.withRetry(async () => {
+      const response = await fetch('/api/extract', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ fileId })
+      })
+
+      if (!response.ok) {
+        throw new Error(`Extraction failed: ${response.statusText}`)
+      }
+
+      const result = await response.json()
+      return result.text || null
+    }, 'extraction')
   }
 
-  static async withRetry<T>(
-    operation: () => Promise<T>,
-    retryConfig: Partial<RetryConfig> = {},
-    context: string
+  /**
+   * Summarize text using Claude
+   */
+  private async summarizeText(text: string, mode: '9th-grade' | 'SAT'): Promise<any> {
+    return this.withRetry(async () => {
+      const response = await fetch('/api/summarize', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text, mode })
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.message || `Summarization failed: ${response.statusText}`)
+      }
+
+      return response.json()
+    }, 'summarization')
+  }
+
+  /**
+   * Render handwritten PDF
+   */
+  private async renderHandwriting(text: string): Promise<any> {
+    return this.withRetry(async () => {
+      const response = await fetch('/api/handwriting', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text })
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.message || `Handwriting rendering failed: ${response.statusText}`)
+      }
+
+      return response.json()
+    }, 'handwriting')
+  }
+
+  /**
+   * Execute a function with retry logic
+   */
+  private async withRetry<T>(
+    fn: () => Promise<T>,
+    step: 'extraction' | 'summarization' | 'handwriting'
   ): Promise<T> {
-    const config = { ...DEFAULT_RETRY_CONFIG, ...retryConfig }
     let lastError: Error
 
-    for (let attempt = 1; attempt <= config.maxAttempts; attempt++) {
+    for (let attempt = 1; attempt <= this.retryConfig.maxAttempts; attempt++) {
       try {
-        return await operation()
+        return await fn()
       } catch (error) {
-        lastError = error as Error
-        console.error(`Attempt ${attempt} failed for ${context}:`, error)
-
-        if (attempt === config.maxAttempts) {
-          break
+        lastError = error
+        
+        if (attempt === this.retryConfig.maxAttempts) {
+          throw {
+            ...error,
+            step,
+            retryable: false
+          }
         }
 
+        // Calculate delay with exponential backoff
         const delay = Math.min(
-          config.baseDelay * Math.pow(config.backoffFactor, attempt - 1),
-          config.maxDelay
+          this.retryConfig.baseDelay * Math.pow(this.retryConfig.backoffFactor, attempt - 1),
+          this.retryConfig.maxDelay
         )
-        await new Promise(resolve => setTimeout(resolve, delay))
+
+        console.warn(`Attempt ${attempt} failed for ${step}, retrying in ${delay}ms:`, error)
+        await this.sleep(delay)
       }
     }
 
     throw lastError!
   }
 
-  static async withTimeout<T>(
-    operation: () => Promise<T>,
-    timeoutMs: number,
-    context: string
-  ): Promise<T> {
-    const timeoutPromise = new Promise<never>((_, reject) => {
-      setTimeout(() => {
-        reject(new Error(`Operation timed out after ${timeoutMs}ms: ${context}`))
-      }, timeoutMs)
-    })
+  /**
+   * Update the status of a generation
+   */
+  private updateStatus(id: string, updates: Partial<GenerationStatus>): void {
+    if (!this.state[id]) return
 
-    return Promise.race([operation(), timeoutPromise])
-  }
-
-  static validatePDFBuffer(buffer: Buffer): boolean {
-    if (!Buffer.isBuffer(buffer)) return false
-    if (buffer.length < 100) return false
-
-    const header = buffer.subarray(0, 4).toString()
-    return header === '%PDF'
-  }
-
-  static cleanupOldGenerations(maxAge: number = 24 * 60 * 60 * 1000): void {
-    const now = Date.now()
-    for (const [id, status] of generationStore.entries()) {
-      if (now - status.createdAt.getTime() > maxAge) {
-        generationStore.delete(id)
-      }
+    this.state[id] = {
+      ...this.state[id],
+      ...updates,
+      updatedAt: new Date()
     }
+
+    // In a real implementation, this would persist to a database
+    // For now, we just keep it in memory
   }
 
-  static generateId(): string {
-    return `gen_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  /**
+   * Sleep for a given number of milliseconds
+   */
+  private sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+
+  /**
+   * Clean up old generations (memory management)
+   */
+  cleanup(): void {
+    const now = new Date()
+    const maxAge = 24 * 60 * 60 * 1000 // 24 hours
+
+    Object.keys(this.state).forEach(id => {
+      const generation = this.state[id]
+      if (now.getTime() - generation.updatedAt.getTime() > maxAge) {
+        delete this.state[id]
+      }
+    })
   }
 }
 
-export const createGenerationError = (
+// Export utility functions
+export function createGenerationError(
   code: string,
   message: string,
   step: GenerationError['step'],
   details?: string,
-  retryable: boolean = false
-): GenerationError => ({
-  code,
-  message,
-  step,
-  details,
-  retryable
-})
+  retryable: boolean = true
+): GenerationError {
+  return {
+    code,
+    message,
+    step,
+    details,
+    retryable
+  }
+}
+
+// Singleton instance
+export const generationService = new GenerationService()
+export { GenerationService }
+
+// Clean up old generations every hour
+if (typeof window !== 'undefined') {
+  setInterval(() => {
+    generationService.cleanup()
+  }, 60 * 60 * 1000)
+}
