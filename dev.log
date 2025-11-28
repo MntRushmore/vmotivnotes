@@ -1,0 +1,20 @@
+npm warn Unknown env config "python". This will stop working in the next major version of npm.
+
+> vmotiv-notes@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.33
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1975ms
+ ○ Compiling /api/generate ...
+ ✓ Compiled /api/generate in 1051ms (105 modules)
+Job processor service started
+ POST /api/generate 400 in 1162ms
+ POST /api/generate 400 in 23ms
+ ✓ Compiled /api/status/[jobId] in 155ms (107 modules)
+ GET /api/status/test-job-123 404 in 680ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.8s (562 modules)
+ GET / 200 in 3948ms

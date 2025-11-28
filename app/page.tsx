@@ -45,7 +45,7 @@ export default function Home() {
             <textarea
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Upload a PDF or ask AI to explain something."
+              placeholder="Upload a document to generate handwritten notes, or ask AI to explain something."
               className={`
                 w-full px-6 py-4 pr-12 text-lg
                 bg-neutral-50 border-2 border-neutral-200 rounded-2xl
@@ -77,10 +77,10 @@ export default function Home() {
           <div className="flex flex-wrap gap-3 mt-6">
             <button 
               onClick={() => router.push('/upload')}
-              className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-100 hover:bg-primary-200 text-primary-700 rounded-xl transition-smooth"
             >
               <Upload size={18} />
-              <span className="text-sm text-neutral-700">Upload PDF</span>
+              <span className="text-sm font-medium">Generate Handwritten Notes</span>
             </button>
             <button className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth">
               <span className="text-sm text-neutral-700">Explain a concept</span>
@@ -88,8 +88,11 @@ export default function Home() {
             <button className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth">
               <span className="text-sm text-neutral-700">Summarize text</span>
             </button>
-            <button className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth">
-              <span className="text-sm text-neutral-700">Generate notes</span>
+            <button 
+              onClick={() => router.push('/generation-status')}
+              className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth"
+            >
+              <span className="text-sm text-neutral-700">Check Status</span>
             </button>
           </div>
         </div>
