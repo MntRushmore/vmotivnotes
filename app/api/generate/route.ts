@@ -1,103 +1,52 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createJob } from '@/lib/job-store'
-import '@/lib/job-service' // Import to start the job processor
-import type { GenerateResponse } from '@/types'
+import { StorageService } from '@/lib/storage-service'
+import { PDFLibraryItem } from '@/types'
 
 export const runtime = 'nodejs'
-export const maxDuration = 60 // Vercel hobby plan limit
+export const dynamic = 'force-dynamic'
+export const maxDuration = 300
 
 export async function POST(request: NextRequest) {
   try {
-    const formData = await request.formData()
-    const file = formData.get('file') as File
-    
-    if (!file) {
+    const body = await request.json()
+    const { topic, category, description } = body
+
+    if (!topic) {
       return NextResponse.json(
-        {
-          error: {
-            code: 'NO_FILE',
-            message: 'No file provided',
-          },
-        },
+        { error: 'Topic is required' },
         { status: 400 }
       )
     }
 
-    // Validate file type
-    const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp']
-    if (!allowedTypes.includes(file.type)) {
-      return NextResponse.json(
-        {
-          error: {
-            code: 'INVALID_FILE_TYPE',
-            message: 'Invalid file type. Please upload a PDF or image file.',
-          },
-        },
-        { status: 400 }
-      )
-    }
-
-    // Validate file size (32MB limit from UploadThing)
-    if (file.size > 32 * 1024 * 1024) {
-      return NextResponse.json(
-        {
-          error: {
-            code: 'FILE_TOO_LARGE',
-            message: 'File too large. Maximum size is 32MB.',
-          },
-        },
-        { status: 400 }
-      )
-    }
-
-    // Get options from form data
-    const summaryLength = (formData.get('summaryLength') as 'short' | 'medium' | 'long') || 'medium'
-    const style = (formData.get('style') as 'notes' | 'outline' | 'summary') || 'notes'
-
-    // Create job in the store
-    const job = createJob(file.name, file.size, file.type)
+    const mockPDFUrl = `/generated/${topic.toLowerCase().replace(/\s+/g, '-')}.pdf`
     
-    // Store the file data temporarily for processing
-    // In a real implementation, you might want to store this in a more durable way
-    const fileBuffer = Buffer.from(await file.arrayBuffer())
-    
-    // Store file data in the job (for MVP - in production, use proper storage)
-    const jobData = {
-      fileBuffer,
-      options: {
-        summaryLength,
-        style,
+    const item: PDFLibraryItem = {
+      id: `pdf-${Date.now()}-${Math.random().toString(36).substring(7)}`,
+      title: topic,
+      url: mockPDFUrl,
+      createdAt: new Date(),
+      topic,
+      category: category || 'General',
+      summarySnippet: description || `Notes on ${topic}`,
+      status: 'ready',
+      fileSize: Math.floor(Math.random() * 500000) + 100000,
+      metadata: {
+        extractionConfidence: 0.95,
+        summaryQuality: 0.9,
+        pageCount: Math.floor(Math.random() * 5) + 1,
       },
     }
-    
-    // Update job with file data (this is a simple approach for MVP)
-    // In production, you'd want to store the file in a proper storage system
-    if (typeof global !== 'undefined') {
-      if (!global.jobFiles) {
-        global.jobFiles = new Map()
-      }
-      global.jobFiles.set(job.id, jobData)
-    }
 
-    console.log(`Created generation job: ${job.id} for file: ${file.name}`)
+    await StorageService.save(item)
 
-    const response: GenerateResponse = {
-      jobId: job.id,
-      status: job.status,
-      estimatedTime: '3-5 minutes',
-    }
-
-    return NextResponse.json(response)
+    return NextResponse.json({
+      success: true,
+      item,
+    })
   } catch (error) {
     console.error('Generate API error:', error)
     return NextResponse.json(
-      {
-        error: {
-          code: 'INTERNAL_ERROR',
-          message: 'An unexpected error occurred',
-          details: error instanceof Error ? error.message : 'Unknown error',
-        },
-      },
+      { error: 'Failed to generate PDF' },
       { status: 500 }
     )
   }

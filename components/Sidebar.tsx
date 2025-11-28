@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import { Home, Upload, Library, Settings, Menu, X } from 'lucide-react'
 
 interface SidebarProps {
@@ -9,12 +10,14 @@ interface SidebarProps {
 
 export default function Sidebar({ className = '' }: SidebarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
   const menuItems = [
-    { icon: Home, label: 'Home', active: true },
-    { icon: Upload, label: 'Uploads', active: false },
-    { icon: Library, label: 'Notes Library', active: false },
-    { icon: Settings, label: 'Settings', active: false },
+    { icon: Home, label: 'Home', href: '/' },
+    { icon: Upload, label: 'Upload', href: '/upload' },
+    { icon: Library, label: 'Library', href: '/library' },
+    { icon: Settings, label: 'Settings', href: '/settings' },
   ]
 
   return (
@@ -43,23 +46,30 @@ export default function Sidebar({ className = '' }: SidebarProps) {
           {/* Navigation */}
           <nav className="flex-1 px-4">
             <ul className="space-y-2">
-              {menuItems.map((item, index) => (
-                <li key={index}>
-                  <button
-                    className={`
-                      w-full flex items-center gap-3 px-4 py-3 rounded-xl
-                      transition-smooth text-left
-                      ${item.active 
-                        ? 'bg-primary-50 text-primary-600 shadow-soft' 
-                        : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
-                      }
-                    `}
-                  >
-                    <item.icon size={20} />
-                    <span className="font-medium">{item.label}</span>
-                  </button>
-                </li>
-              ))}
+              {menuItems.map((item, index) => {
+                const isActive = pathname === item.href
+                return (
+                  <li key={index}>
+                    <button
+                      onClick={() => {
+                        router.push(item.href)
+                        setIsMobileMenuOpen(false)
+                      }}
+                      className={`
+                        w-full flex items-center gap-3 px-4 py-3 rounded-xl
+                        transition-smooth text-left
+                        ${isActive 
+                          ? 'bg-primary-50 text-primary-600 shadow-soft' 
+                          : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
+                        }
+                      `}
+                    >
+                      <item.icon size={20} />
+                      <span className="font-medium">{item.label}</span>
+                    </button>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
 

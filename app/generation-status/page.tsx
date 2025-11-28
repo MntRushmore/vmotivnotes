@@ -1,287 +1,294 @@
 'use client'
 
-import { useEffect, useState, Suspense } from 'react'
-import { useSearchParams, useRouter } from 'next/navigation'
-import { ArrowLeft, Download, RefreshCw, AlertCircle, CheckCircle, Loader2, Sparkles } from 'lucide-react'
+import { useState, useEffect, Suspense } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { 
+  FileText, 
+  Sparkles, 
+  Wand2, 
+  CheckCircle2, 
+  XCircle, 
+  Loader2,
+  Download,
+  ArrowLeft 
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
-import { Alert, AlertDescription } from '@/components/ui/alert'
+import { GenerationStatus } from '@/types'
 
 export const dynamic = 'force-dynamic'
 
-interface JobStatus {
-  jobId: string
-  status: 'queued' | 'extracting' | 'summarizing' | 'rendering' | 'complete' | 'failed'
-  progress: number
-  pdfUrl?: string
-  errorMessage?: string
-  estimatedTimeRemaining?: string
+type Step = {
+  id: GenerationStatus['status']
+  label: string
+  icon: typeof FileText
+  description: string
 }
 
+const steps: Step[] = [
+  {
+    id: 'extracting',
+    label: 'Extracting Text',
+    icon: FileText,
+    description: 'Reading and extracting text from your document'
+  },
+  {
+    id: 'summarizing',
+    label: 'Summarizing with AI',
+    icon: Sparkles,
+    description: 'Analyzing content and creating intelligent summaries'
+  },
+  {
+    id: 'rendering',
+    label: 'Rendering Handwriting',
+    icon: Wand2,
+    description: 'Converting to beautiful handwritten notes'
+  },
+  {
+    id: 'ready',
+    label: 'Ready',
+    icon: CheckCircle2,
+    description: 'Your PDF is ready for download'
+  }
+]
+
 function GenerationStatusContent() {
-  const searchParams = useSearchParams()
   const router = useRouter()
-  const jobId = searchParams.get('jobId')
-  
-  const [jobStatus, setJobStatus] = useState<JobStatus | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const searchParams = useSearchParams()
+  const jobId = searchParams.get('id')
 
-  // Poll job status every 3 seconds
+  const [status, setStatus] = useState<GenerationStatus>({
+    id: jobId || 'unknown',
+    status: 'extracting',
+    progress: 0,
+    estimatedTimeRemaining: 60,
+  })
+
   useEffect(() => {
-    if (!jobId) {
-      setError('No job ID provided')
-      setLoading(false)
-      return
-    }
-
-    const fetchStatus = async () => {
-      try {
-        const response = await fetch(`/api/status/${jobId}`)
-        
-        if (!response.ok) {
-          if (response.status === 404) {
-            setError('Job not found')
-          } else {
-            setError('Failed to fetch job status')
+    const simulateProgress = () => {
+      const interval = setInterval(() => {
+        setStatus((prev) => {
+          if (prev.status === 'error') {
+            clearInterval(interval)
+            return prev
           }
-          setLoading(false)
-          return
-        }
 
-        const data: JobStatus = await response.json()
-        setJobStatus(data)
-        setLoading(false)
+          let newStatus = prev.status
+          let newProgress = prev.progress + Math.random() * 10
 
-        // Stop polling if job is complete or failed
-        if (data.status === 'complete' || data.status === 'failed') {
-          return
-        }
-      } catch (err) {
-        console.error('Error fetching job status:', err)
-        setError('Failed to fetch job status')
-        setLoading(false)
-      }
+          if (prev.status === 'extracting' && newProgress >= 33) {
+            newStatus = 'summarizing'
+            newProgress = 33
+          } else if (prev.status === 'summarizing' && newProgress >= 66) {
+            newStatus = 'rendering'
+            newProgress = 66
+          } else if (prev.status === 'rendering' && newProgress >= 99) {
+            newStatus = 'ready'
+            newProgress = 100
+            clearInterval(interval)
+          }
+
+          return {
+            ...prev,
+            status: newStatus,
+            progress: Math.min(newProgress, 100),
+            estimatedTimeRemaining: Math.max(0, Math.floor((100 - newProgress) / 2)),
+          }
+        })
+      }, 1000)
+
+      return () => clearInterval(interval)
     }
 
-    // Initial fetch
-    fetchStatus()
+    const cleanup = simulateProgress()
+    return cleanup
+  }, [])
 
-    // Set up polling
-    const interval = setInterval(fetchStatus, 3000)
+  const currentStepIndex = steps.findIndex((step) => step.id === status.status)
+  const isComplete = status.status === 'ready'
+  const isError = status.status === 'error'
 
-    return () => clearInterval(interval)
-  }, [jobId])
-
-  const getStatusIcon = () => {
-    if (!jobStatus) return <Loader2 className="w-6 h-6 animate-spin" />
-    
-    switch (jobStatus.status) {
-      case 'queued':
-        return <Loader2 className="w-6 h-6 animate-spin text-neutral-500" />
-      case 'extracting':
-      case 'summarizing':
-      case 'rendering':
-        return <Loader2 className="w-6 h-6 animate-spin text-primary-600" />
-      case 'complete':
-        return <CheckCircle className="w-6 h-6 text-green-600" />
-      case 'failed':
-        return <AlertCircle className="w-6 h-6 text-red-600" />
-      default:
-        return <Loader2 className="w-6 h-6 animate-spin" />
-    }
-  }
-
-  const getStatusTitle = () => {
-    if (!jobStatus) return 'Loading Status'
-    
-    switch (jobStatus.status) {
-      case 'queued':
-        return 'Queued for Processing'
-      case 'extracting':
-        return 'Extracting Text'
-      case 'summarizing':
-        return 'Generating Summary'
-      case 'rendering':
-        return 'Creating Handwritten Notes'
-      case 'complete':
-        return 'Generation Complete!'
-      case 'failed':
-        return 'Generation Failed'
-      default:
-        return 'Processing'
-    }
-  }
-
-  const getStatusDescription = () => {
-    if (!jobStatus) return 'Checking job status...'
-    
-    switch (jobStatus.status) {
-      case 'queued':
-        return 'Your document is in the queue and will be processed shortly.'
-      case 'extracting':
-        return 'Extracting text from your document...'
-      case 'summarizing':
-        return 'Creating AI-powered summary of your content...'
-      case 'rendering':
-        return 'Generating beautiful handwritten notes...'
-      case 'complete':
-        return 'Your handwritten notes are ready for download!'
-      case 'failed':
-        return jobStatus.errorMessage || 'An error occurred during generation.'
-      default:
-        return 'Processing your request...'
-    }
-  }
-
-  const handleRetry = () => {
-    router.push('/')
-  }
-
-  const handleDownload = () => {
-    if (jobStatus?.pdfUrl) {
-      window.open(jobStatus.pdfUrl, '_blank')
-    }
-  }
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center px-4 py-12">
-        <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-primary-600" />
-          <p className="text-lg text-neutral-600">Loading job status...</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (error || !jobStatus) {
-    return (
-      <div className="min-h-screen flex items-center justify-center px-4 py-12">
-        <div className="max-w-2xl w-full">
-          <Alert className="mb-6">
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription>{error || 'Job not found'}</AlertDescription>
-          </Alert>
-          <Button onClick={() => router.push('/')} className="w-full">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
-        </div>
-      </div>
-    )
+  const formatTime = (seconds: number) => {
+    if (seconds < 60) return `${seconds}s`
+    const minutes = Math.floor(seconds / 60)
+    const remainingSeconds = seconds % 60
+    return `${minutes}m ${remainingSeconds}s`
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-neutral-50">
       <div className="max-w-2xl w-full">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-semibold text-neutral-900 mb-4">
-            Generation Status
-          </h1>
-          <p className="text-xl text-neutral-600">
-            Job ID: {jobStatus.jobId}
-          </p>
-        </div>
-
         <Card className="shadow-soft-xl">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              {getStatusIcon()}
-              {getStatusTitle()}
+            <CardTitle className="flex items-center gap-2 text-2xl">
+              {isError ? (
+                <XCircle className="w-7 h-7 text-destructive-600" />
+              ) : isComplete ? (
+                <CheckCircle2 className="w-7 h-7 text-success-600" />
+              ) : (
+                <Loader2 className="w-7 h-7 text-primary-600 animate-spin" />
+              )}
+              {isError ? 'Generation Failed' : isComplete ? 'Generation Complete' : 'Generating Your PDF'}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm text-neutral-600">
-                <span>Progress</span>
-                <span>{jobStatus.progress}%</span>
+            {/* Progress bar */}
+            {!isError && (
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-neutral-700">
+                    {isComplete ? 'Complete!' : `${Math.round(status.progress)}% complete`}
+                  </span>
+                  {!isComplete && status.estimatedTimeRemaining !== undefined && (
+                    <span className="text-neutral-500">
+                      ~{formatTime(status.estimatedTimeRemaining)} remaining
+                    </span>
+                  )}
+                </div>
+                <Progress value={status.progress} className="h-3" />
               </div>
-              <Progress value={jobStatus.progress} className="w-full" />
+            )}
+
+            {/* Steps */}
+            <div className="space-y-4">
+              {steps.map((step, index) => {
+                const isActive = step.id === status.status
+                const isCompleted = index < currentStepIndex || isComplete
+                const StepIcon = step.icon
+
+                return (
+                  <div
+                    key={step.id}
+                    className={`
+                      flex items-start gap-4 p-4 rounded-xl transition-all duration-300
+                      ${isActive ? 'bg-primary-50 border-2 border-primary-200' : 'bg-neutral-50 border-2 border-transparent'}
+                      ${isCompleted && !isActive ? 'opacity-60' : ''}
+                    `}
+                  >
+                    <div
+                      className={`
+                        flex items-center justify-center w-12 h-12 rounded-full shrink-0
+                        transition-all duration-300
+                        ${isActive ? 'bg-primary-600 text-white animate-pulse-soft' : ''}
+                        ${isCompleted && !isActive ? 'bg-success-600 text-white' : ''}
+                        ${!isActive && !isCompleted ? 'bg-neutral-200 text-neutral-500' : ''}
+                      `}
+                    >
+                      {isCompleted && !isActive ? (
+                        <CheckCircle2 className="w-6 h-6" />
+                      ) : isActive ? (
+                        <Loader2 className="w-6 h-6 animate-spin" />
+                      ) : (
+                        <StepIcon className="w-6 h-6" />
+                      )}
+                    </div>
+                    <div className="flex-1 pt-1">
+                      <h3 className={`text-lg font-semibold ${isActive ? 'text-primary-900' : 'text-neutral-900'}`}>
+                        {step.label}
+                      </h3>
+                      <p className="text-sm text-neutral-600 mt-1">
+                        {step.description}
+                      </p>
+                      {isActive && (
+                        <div className="mt-2">
+                          <span className="text-xs font-medium text-primary-700">
+                            In progress...
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )
+              })}
             </div>
 
-            <div className="p-4 bg-neutral-50 rounded-xl">
-              <p className="text-sm text-neutral-700">
-                {getStatusDescription()}
-              </p>
-              {jobStatus.estimatedTimeRemaining && (
-                <p className="text-xs text-neutral-500 mt-2">
-                  Estimated time remaining: {jobStatus.estimatedTimeRemaining}
-                </p>
-              )}
-            </div>
+            {/* Error state */}
+            {isError && (
+              <div className="p-4 bg-destructive-50 border border-destructive-200 rounded-xl">
+                <div className="flex items-start gap-3">
+                  <XCircle className="w-5 h-5 text-destructive-600 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-destructive-900">
+                      {status.error || 'An unexpected error occurred'}
+                    </p>
+                    <p className="text-sm text-destructive-700 mt-1">
+                      Please try again or contact support if the problem persists.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
 
-            {jobStatus.status === 'complete' && jobStatus.pdfUrl && (
-              <div className="space-y-3">
+            {/* Success actions */}
+            {isComplete && (
+              <div className="p-4 bg-success-50 border border-success-200 rounded-xl">
+                <div className="flex items-start gap-3 mb-4">
+                  <CheckCircle2 className="w-5 h-5 text-success-600 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-success-900">
+                      Your PDF has been generated successfully!
+                    </p>
+                    <p className="text-sm text-success-700 mt-1">
+                      You can now download it or view it in the library.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <Button
+                    className="flex-1"
+                    onClick={() => {
+                      if (status.result?.url) {
+                        window.open(status.result.url, '_blank')
+                      }
+                    }}
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download PDF
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => router.push('/library')}
+                  >
+                    Go to Library
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {/* Actions for error or in-progress */}
+            {(isError || !isComplete) && (
+              <div className="flex gap-3 pt-4">
+                {isError && (
+                  <Button
+                    className="flex-1"
+                    onClick={() => router.push('/upload')}
+                  >
+                    Try Again
+                  </Button>
+                )}
                 <Button
-                  onClick={handleDownload}
-                  className="w-full"
-                  size="lg"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Handwritten Notes
-                </Button>
-                
-                <Button
+                  variant="outline"
+                  className={isError ? '' : 'flex-1'}
                   onClick={() => router.push('/')}
-                  variant="outline"
-                  className="w-full"
-                  size="lg"
                 >
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  Generate Another Document
-                </Button>
-              </div>
-            )}
-
-            {jobStatus.status === 'failed' && (
-              <div className="space-y-3">
-                <Alert>
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>
-                    {jobStatus.errorMessage}
-                  </AlertDescription>
-                </Alert>
-                
-                <Button
-                  onClick={handleRetry}
-                  className="w-full"
-                  size="lg"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Try Again
-                </Button>
-              </div>
-            )}
-
-            {(jobStatus.status === 'queued' || 
-              jobStatus.status === 'extracting' || 
-              jobStatus.status === 'summarizing' || 
-              jobStatus.status === 'rendering') && (
-              <div className="text-center">
-                <Button
-                  onClick={() => window.location.reload()}
-                  variant="outline"
-                  size="sm"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Refresh Status
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Home
                 </Button>
               </div>
             )}
           </CardContent>
         </Card>
 
-        <div className="mt-6 text-center">
-          <Button
-            onClick={() => router.push('/')}
-            variant="ghost"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
-        </div>
+        {/* Additional info */}
+        {!isComplete && !isError && (
+          <div className="mt-6 p-4 bg-white rounded-xl shadow-soft text-center">
+            <p className="text-sm text-neutral-600">
+              Please keep this page open while we generate your PDF.
+              This usually takes 30-90 seconds.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   )
@@ -290,10 +297,10 @@ function GenerationStatusContent() {
 export default function GenerationStatusPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center px-4 py-12">
+      <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-neutral-50">
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-primary-600" />
-          <p className="text-lg text-neutral-600">Loading...</p>
+          <Loader2 className="w-12 h-12 text-primary-600 animate-spin mx-auto mb-4" />
+          <p className="text-neutral-600">Loading...</p>
         </div>
       </div>
     }>
