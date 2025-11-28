@@ -44,3 +44,13 @@ build
 # Misc
 *.pem
 .turbo
+
+# Generated PDFs (but keep directory structure)
+public/generated/**/*.pdf
+!public/generated/.gitkeep
+
+# Library data (can be regenerated)
+data/pdf-library.json
+
+# components.json (shadcn config)
+components.json

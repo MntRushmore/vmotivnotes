@@ -7,6 +7,18 @@ const nextConfig = {
       bodySizeLimit: '50mb',
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
