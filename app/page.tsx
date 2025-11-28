@@ -1,9 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { Upload, Sparkles } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
+  const router = useRouter()
   const [isVisible, setIsVisible] = useState(false)
   const [inputValue, setInputValue] = useState('')
 
@@ -71,7 +75,10 @@ export default function Home() {
 
           {/* Quick actions */}
           <div className="flex flex-wrap gap-3 mt-6">
-            <button className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth">
+            <button 
+              onClick={() => router.push('/upload')}
+              className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth"
+            >
               <Upload size={18} />
               <span className="text-sm text-neutral-700">Upload PDF</span>
             </button>

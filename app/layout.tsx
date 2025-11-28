@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import MainLayout from '@/components/MainLayout'
+import { ClientToaster } from '@/components/ClientToaster'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -48,6 +49,7 @@ export default function RootLayout({
         <MainLayout>
           {children}
         </MainLayout>
+        <ClientToaster />
       </body>
     </html>
   )
