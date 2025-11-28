@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import MainLayout from '@/components/MainLayout'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -43,8 +44,10 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#fafafa" />
       </head>
-      <body>
-        {children}
+      <body className="font-sans antialiased">
+        <MainLayout>
+          {children}
+        </MainLayout>
       </body>
     </html>
   )
