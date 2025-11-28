@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { ArrowLeft, Download, RefreshCw, AlertCircle, CheckCircle, Loader2, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -19,7 +19,7 @@ interface JobStatus {
   estimatedTimeRemaining?: string
 }
 
-export default function GenerationStatusPage() {
+function GenerationStatusContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const jobId = searchParams.get('jobId')
@@ -284,5 +284,20 @@ export default function GenerationStatusPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function GenerationStatusPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center px-4 py-12">
+        <div className="text-center">
+          <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-primary-600" />
+          <p className="text-lg text-neutral-600">Loading...</p>
+        </div>
+      </div>
+    }>
+      <GenerationStatusContent />
+    </Suspense>
   )
 }

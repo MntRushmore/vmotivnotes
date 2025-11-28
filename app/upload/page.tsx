@@ -359,7 +359,7 @@ export default function UploadPage() {
                   </p>
                   <p className="text-sm text-success-700 mt-1">
                     Your document is being processed in the background.
-                    You'll be redirected to the status page to track progress.
+                    You&apos;ll be redirected to the status page to track progress.
                   </p>
                 </div>
               </div>
