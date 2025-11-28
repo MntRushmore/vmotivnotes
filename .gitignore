@@ -44,3 +44,6 @@ build
 # Misc
 *.pem
 .turbo
+
+# Test files
+test-*.js
