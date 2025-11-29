@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Upload, Sparkles } from 'lucide-react'
+import { TooltipCoachMarks } from '@/components/onboarding/TooltipCoachMarks'
+import { useOnboarding } from '@/hooks/useOnboarding'
 
 export const dynamic = 'force-dynamic'
 
@@ -10,6 +12,7 @@ export default function Home() {
   const router = useRouter()
   const [isVisible, setIsVisible] = useState(false)
   const [inputValue, setInputValue] = useState('')
+  const { isComplete } = useOnboarding()
 
   useEffect(() => {
     setIsVisible(true)
@@ -77,6 +80,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-3 mt-6">
             <button 
               onClick={() => router.push('/upload')}
+              data-tour="upload"
               className="flex items-center gap-2 px-4 py-2 bg-primary-100 hover:bg-primary-200 text-primary-700 rounded-xl transition-smooth"
             >
               <Upload size={18} />
@@ -84,6 +88,13 @@ export default function Home() {
             </button>
             <button className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth">
               <span className="text-sm text-neutral-700">Explain a concept</span>
+            </button>
+            <button 
+              onClick={() => router.push('/library')}
+              data-tour="library"
+              className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth"
+            >
+              <span className="text-sm text-neutral-700">View Library</span>
             </button>
             <button className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-xl transition-smooth">
               <span className="text-sm text-neutral-700">Summarize text</span>
@@ -112,6 +123,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Tour Overlay */}
+      <TooltipCoachMarks
+        isEnabled={!isComplete}
+        onComplete={() => {
+          // Tour completed - can add additional logic here if needed
+        }}
+      />
     </div>
   )
 }

@@ -213,3 +213,25 @@ export interface AdminMetrics {
   }
   systemHealth: SystemHealthStatus[]
 }
+
+export interface OnboardingData {
+  name: string
+  school: string
+  preferredSummaryMode: '9th-grade' | 'sat'
+  notifications: {
+    emailOnCompletion: boolean
+    emailOnError: boolean
+    desktopNotifications: boolean
+  }
+}
+
+export type OnboardingStep = 'welcome' | 'profile' | 'preferences' | 'confirmation'
+
+export interface TourTooltip {
+  id: string
+  title: string
+  content: string
+  target: string
+  position: 'top' | 'bottom' | 'left' | 'right'
+  skipable?: boolean
+}
