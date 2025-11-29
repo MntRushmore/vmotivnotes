@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { Home, Upload, Library, Settings, Menu, X, Shield } from 'lucide-react'
 import { useUserSettings } from '@/hooks/useUserSettings'
+import { useOnboarding } from '@/hooks/useOnboarding'
 import { ADMIN_ACCESS_EVENT, ADMIN_ACCESS_FLAG } from '@/lib/constants'
 
 interface SidebarProps {
@@ -16,6 +17,7 @@ export default function Sidebar({ className = '' }: SidebarProps) {
   const pathname = usePathname()
   const router = useRouter()
   const { profile, isLoading } = useUserSettings()
+  const { isComplete: isOnboardingComplete, resumeOnboarding } = useOnboarding()
 
   useEffect(() => {
     const syncFlag = () => {
@@ -37,11 +39,16 @@ export default function Sidebar({ className = '' }: SidebarProps) {
     }
   }, [])
 
-  const menuItems = [
+  const menuItems: Array<{
+    icon: any
+    label: string
+    href: string
+    tourId?: string
+  }> = [
     { icon: Home, label: 'Home', href: '/' },
     { icon: Upload, label: 'Upload', href: '/upload' },
     { icon: Library, label: 'Library', href: '/library' },
-    { icon: Settings, label: 'Settings', href: '/settings' },
+    { icon: Settings, label: 'Settings', href: '/settings', tourId: 'help' },
   ]
 
   if (hasAdminAccess) {
@@ -71,6 +78,22 @@ export default function Sidebar({ className = '' }: SidebarProps) {
             <h1 className="text-2xl font-bold text-gradient">VMotiv</h1>
           </div>
 
+          {/* Resume Onboarding Pill */}
+          {!isOnboardingComplete && (
+            <div className="px-4 mb-4">
+              <button
+                onClick={() => {
+                  resumeOnboarding()
+                  router.push('/onboarding')
+                  setIsMobileMenuOpen(false)
+                }}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-100 hover:bg-primary-200 text-primary-700 rounded-xl transition-smooth"
+              >
+                <span className="text-sm font-medium">Complete Setup</span>
+              </button>
+            </div>
+          )}
+
           {/* Navigation */}
           <nav className="flex-1 px-4">
             <ul className="space-y-2">
@@ -83,6 +106,7 @@ export default function Sidebar({ className = '' }: SidebarProps) {
                         router.push(item.href)
                         setIsMobileMenuOpen(false)
                       }}
+                      {...(item.tourId && { 'data-tour': item.tourId })}
                       className={`
                         w-full flex items-center gap-3 px-4 py-3 rounded-xl
                         transition-smooth text-left

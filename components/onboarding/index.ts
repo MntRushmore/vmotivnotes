@@ -1,0 +1,7 @@
+export { WelcomeHero } from './WelcomeHero'
+export { ProfileStep } from './ProfileStep'
+export { PreferenceStep } from './PreferenceStep'
+export { ConfirmationStep } from './ConfirmationStep'
+export { SetupWizard } from './SetupWizard'
+export { TourOverlay } from './TourOverlay'
+export { TooltipCoachMarks } from './TooltipCoachMarks'
