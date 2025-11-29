@@ -107,7 +107,7 @@ export default function ContactSupportForm() {
       <CardHeader>
         <CardTitle>Contact Support</CardTitle>
         <CardDescription>
-          Still need help? Send us a message and we'll get back to you as soon as possible.
+          Still need help? Send us a message and we&apos;ll get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
       <form onSubmit={handleSubmit}>

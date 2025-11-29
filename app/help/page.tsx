@@ -165,7 +165,7 @@ export default function HelpPage() {
               Still Stuck?
             </h2>
             <p className="text-neutral-600">
-              Can't find what you're looking for? Get in touch with our support team
+              Can&apos;t find what you&apos;re looking for? Get in touch with our support team
             </p>
           </div>
 
@@ -178,7 +178,7 @@ export default function HelpPage() {
             Need More Help?
           </h3>
           <p className="text-neutral-700 max-w-2xl mx-auto">
-            If you're new to VMotiv, we recommend completing the onboarding wizard 
+            If you&apos;re new to VMotiv, we recommend completing the onboarding wizard 
             to get familiar with all features. You can also explore the documentation 
             or watch tutorial videos.
           </p>
