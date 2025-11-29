@@ -3,6 +3,7 @@
 import React, { ReactNode } from 'react'
 import Sidebar from './Sidebar'
 import FloatingOrb from './FloatingOrb'
+import ErrorBoundary from './ErrorBoundary'
 
 interface MainLayoutProps {
   children: ReactNode
@@ -16,7 +17,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <Sidebar />
         <main className="flex-1 lg:ml-0 relative z-10 min-h-screen">
           <div className="h-full overflow-y-auto">
-            {children}
+            <ErrorBoundary>
+              {children}
+            </ErrorBoundary>
           </div>
         </main>
       </div>
