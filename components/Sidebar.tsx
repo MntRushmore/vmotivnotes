@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { Home, Upload, Library, Settings, Menu, X, Shield } from 'lucide-react'
+import { Home, Upload, Library, Settings, Menu, X, Shield, HelpCircle } from 'lucide-react'
 import { useUserSettings } from '@/hooks/useUserSettings'
 import { useOnboarding } from '@/hooks/useOnboarding'
 import { ADMIN_ACCESS_EVENT, ADMIN_ACCESS_FLAG } from '@/lib/constants'
@@ -48,6 +48,7 @@ export default function Sidebar({ className = '' }: SidebarProps) {
     { icon: Home, label: 'Home', href: '/' },
     { icon: Upload, label: 'Upload', href: '/upload' },
     { icon: Library, label: 'Library', href: '/library' },
+    { icon: HelpCircle, label: 'Help', href: '/help' },
     { icon: Settings, label: 'Settings', href: '/settings', tourId: 'help' },
   ]
 
