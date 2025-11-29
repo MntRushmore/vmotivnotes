@@ -235,3 +235,32 @@ export interface TourTooltip {
   position: 'top' | 'bottom' | 'left' | 'right'
   skipable?: boolean
 }
+
+export interface FAQEntry {
+  id: string
+  question: string
+  answer: string
+  category: 'general' | 'upload' | 'library' | 'generation' | 'troubleshooting'
+}
+
+export interface TroubleshootingGuide {
+  id: string
+  title: string
+  description: string
+  icon: string
+  link?: string
+  steps?: string[]
+}
+
+export type SupportTicketStatus = 'open' | 'in-progress' | 'resolved' | 'closed'
+
+export interface SupportTicket {
+  id: string
+  name: string
+  email: string
+  subject: string
+  message: string
+  status: SupportTicketStatus
+  createdAt: string
+  updatedAt: string
+}
