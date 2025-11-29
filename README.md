@@ -233,6 +233,7 @@ See `.env.example` for all required environment variables:
 - `ANTHROPIC_API_KEY` - Claude AI integration
 - `NANO_BANANA_API_KEY` - Banana API integration
 - `GEMINI_API_KEY` - Google Gemini integration
+- `ADMIN_DASHBOARD_KEY` - Secures the operator dashboard
 - `NEXT_PUBLIC_APP_NAME` - Application name (public)
 - `NEXT_PUBLIC_APP_URL` - Application URL (public)
 

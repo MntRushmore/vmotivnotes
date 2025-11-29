@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { Home, Upload, Library, Settings, Menu, X } from 'lucide-react'
+import { Home, Upload, Library, Settings, Menu, X, Shield } from 'lucide-react'
 import { useUserSettings } from '@/hooks/useUserSettings'
+import { ADMIN_ACCESS_EVENT, ADMIN_ACCESS_FLAG } from '@/lib/constants'
 
 interface SidebarProps {
   className?: string
@@ -11,9 +12,30 @@ interface SidebarProps {
 
 export default function Sidebar({ className = '' }: SidebarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [hasAdminAccess, setHasAdminAccess] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
   const { profile, isLoading } = useUserSettings()
+
+  useEffect(() => {
+    const syncFlag = () => {
+      try {
+        const flagEnabled = localStorage.getItem(ADMIN_ACCESS_FLAG) === 'true'
+        setHasAdminAccess(flagEnabled)
+      } catch {
+        setHasAdminAccess(false)
+      }
+    }
+
+    syncFlag()
+    window.addEventListener('storage', syncFlag)
+    window.addEventListener(ADMIN_ACCESS_EVENT, syncFlag)
+
+    return () => {
+      window.removeEventListener('storage', syncFlag)
+      window.removeEventListener(ADMIN_ACCESS_EVENT, syncFlag)
+    }
+  }, [])
 
   const menuItems = [
     { icon: Home, label: 'Home', href: '/' },
@@ -21,6 +43,10 @@ export default function Sidebar({ className = '' }: SidebarProps) {
     { icon: Library, label: 'Library', href: '/library' },
     { icon: Settings, label: 'Settings', href: '/settings' },
   ]
+
+  if (hasAdminAccess) {
+    menuItems.push({ icon: Shield, label: 'Admin', href: '/admin/dashboard' })
+  }
 
   return (
     <>
