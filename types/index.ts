@@ -134,3 +134,82 @@ export interface ExportHistoryEntry {
   status: 'success' | 'failed'
   error?: string
 }
+
+export type TeacherStatus = 'active' | 'disabled' | 'invited'
+
+export interface Teacher {
+  id: string
+  name: string
+  email: string
+  subject: string
+  location?: string
+  status: TeacherStatus
+  totalUploads: number
+  totalGenerations: number
+  lastActiveAt: string
+  joinedAt: string
+  updatedAt: string
+}
+
+export type HealthStatus = 'healthy' | 'warning' | 'critical'
+
+export interface SystemHealthStatus {
+  id: string
+  service: string
+  status: HealthStatus
+  message: string
+  envVars: string[]
+  lastChecked: string
+}
+
+export interface UsageTrendPoint {
+  date: string
+  uploads: number
+  aiRequests: number
+  storageMb: number
+}
+
+export interface AdminJobLog {
+  id: string
+  fileName: string
+  fileSize: number
+  status: JobStatus
+  progress: number
+  createdAt: string
+  updatedAt: string
+  estimatedTimeRemaining?: number
+  errorMessage?: string
+}
+
+export interface AdminMetrics {
+  summary: {
+    totalLibraryItems: number
+    recentLibraryItems: number
+    activeJobs: number
+    queuedJobs: number
+    failedJobs: number
+    totalTeachers: number
+    activeTeachers: number
+    disabledTeachers: number
+    storageUsageMb: number
+  }
+  usage: {
+    trend: UsageTrendPoint[]
+    totals: {
+      uploads: number
+      aiRequests: number
+      storageMb: number
+    }
+  }
+  billing: {
+    plan: string
+    limit: number
+    used: number
+    renewsOn: string
+  }
+  jobs: {
+    totals: Record<JobStatus, number>
+    recent: AdminJobLog[]
+  }
+  systemHealth: SystemHealthStatus[]
+}

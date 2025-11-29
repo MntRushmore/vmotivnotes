@@ -1,0 +1,54 @@
+[
+  {
+    "id": "teacher-amy-johnson",
+    "name": "Amy Johnson",
+    "email": "amy.johnson@vmotivschools.org",
+    "subject": "AP English",
+    "location": "Austin, TX",
+    "status": "active",
+    "totalUploads": 42,
+    "totalGenerations": 118,
+    "lastActiveAt": "2024-11-28T14:20:00.000Z",
+    "joinedAt": "2024-02-10T09:00:00.000Z",
+    "updatedAt": "2024-11-28T14:20:00.000Z"
+  },
+  {
+    "id": "teacher-leo-martinez",
+    "name": "Leo Martinez",
+    "email": "leo.martinez@vmotivschools.org",
+    "subject": "Honors Biology",
+    "location": "Denver, CO",
+    "status": "active",
+    "totalUploads": 35,
+    "totalGenerations": 96,
+    "lastActiveAt": "2024-11-27T19:05:00.000Z",
+    "joinedAt": "2023-11-04T15:45:00.000Z",
+    "updatedAt": "2024-11-27T19:05:00.000Z"
+  },
+  {
+    "id": "teacher-priya-shah",
+    "name": "Priya Shah",
+    "email": "priya.shah@vmotivschools.org",
+    "subject": "World History",
+    "location": "Chicago, IL",
+    "status": "disabled",
+    "totalUploads": 18,
+    "totalGenerations": 54,
+    "lastActiveAt": "2024-10-14T13:10:00.000Z",
+    "joinedAt": "2023-08-22T12:00:00.000Z",
+    "updatedAt": "2024-11-15T09:32:00.000Z"
+  },
+  {
+    "id": "teacher-marcus-reed",
+    "name": "Marcus Reed",
+    "email": "marcus.reed@vmotivschools.org",
+    "subject": "Algebra II",
+    "location": "Seattle, WA",
+    "status": "active",
+    "totalUploads": 27,
+    "totalGenerations": 76,
+    "lastActiveAt": "2024-11-28T16:42:00.000Z",
+    "joinedAt": "2024-01-18T10:30:00.000Z",
+    "updatedAt": "2024-11-28T16:42:00.000Z"
+  }
+]
