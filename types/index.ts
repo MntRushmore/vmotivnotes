@@ -85,7 +85,7 @@ export interface StatusResponse {
   progress: number
   pdfUrl?: string
   errorMessage?: string
-  estimatedTimeRemaining?: string
+  estimatedTimeRemaining?: number
 }
 
 export interface GenerateRequest {
