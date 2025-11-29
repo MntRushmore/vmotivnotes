@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { Home, Upload, Library, Settings, Menu, X } from 'lucide-react'
+import { useUserSettings } from '@/hooks/useUserSettings'
 
 interface SidebarProps {
   className?: string
@@ -12,6 +13,7 @@ export default function Sidebar({ className = '' }: SidebarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
+  const { profile, isLoading } = useUserSettings()
 
   const menuItems = [
     { icon: Home, label: 'Home', href: '/' },
@@ -77,11 +79,15 @@ export default function Sidebar({ className = '' }: SidebarProps) {
           <div className="px-6 py-4 border-t border-neutral-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white font-semibold">
-                U
+                {!isLoading && profile.name ? profile.name.charAt(0).toUpperCase() : 'U'}
               </div>
               <div>
-                <p className="text-sm font-medium text-neutral-900">User</p>
-                <p className="text-xs text-neutral-500">user@example.com</p>
+                <p className="text-sm font-medium text-neutral-900 truncate">
+                  {!isLoading ? profile.name : 'User'}
+                </p>
+                <p className="text-xs text-neutral-500 truncate">
+                  {!isLoading ? profile.email : 'user@example.com'}
+                </p>
               </div>
             </div>
           </div>
