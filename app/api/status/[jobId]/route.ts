@@ -38,20 +38,13 @@ export async function GET(
       )
     }
 
-    // Format estimated time remaining
-    let estimatedTimeRemaining: string | undefined
-    if (job.estimatedTimeRemaining && job.estimatedTimeRemaining > 0) {
-      const minutes = Math.ceil(job.estimatedTimeRemaining / 60)
-      estimatedTimeRemaining = `~${minutes} minute${minutes !== 1 ? 's' : ''}`
-    }
-
     const response: StatusResponse = {
       jobId: job.id,
       status: job.status,
       progress: job.progress,
       pdfUrl: job.pdfUrl,
       errorMessage: job.errorMessage,
-      estimatedTimeRemaining,
+      estimatedTimeRemaining: job.estimatedTimeRemaining,
     }
 
     return NextResponse.json(response)
