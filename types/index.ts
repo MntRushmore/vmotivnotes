@@ -101,3 +101,36 @@ export interface GenerateResponse {
   status: JobStatus
   estimatedTime: string
 }
+
+export interface UserProfile {
+  name: string
+  email: string
+  school?: string
+  avatar?: string
+}
+
+export interface ApiKeyConfig {
+  uploadthing?: string
+  anthropic?: string
+  nanoBanana?: string
+}
+
+export interface NotificationPreferences {
+  emailOnCompletion: boolean
+  emailOnError: boolean
+  desktopNotifications: boolean
+}
+
+export interface UserPreferences {
+  defaultSummaryMode: '9th-grade' | 'sat'
+  notifications: NotificationPreferences
+}
+
+export interface ExportHistoryEntry {
+  id: string
+  timestamp: number
+  fileName: string
+  fileSize: number
+  status: 'success' | 'failed'
+  error?: string
+}
