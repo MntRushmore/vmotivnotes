@@ -7,10 +7,13 @@ export const ourFileRouter = {
     pdf: { maxFileSize: "32MB", maxFileCount: 1 },
   })
     .onUploadError(({ error }) => {
-      console.error("PDF upload error:", error)
+      console.error("[uploadthing][pdfUploader] Upload error:", error?.message || error)
     })
     .onUploadComplete(async ({ file }) => {
-      console.log("PDF upload complete:", file.url)
+      console.log(
+        "[uploadthing][pdfUploader] Upload complete:",
+        { url: file.url, key: file.key, name: file.name, size: file.size }
+      )
       return { url: file.url, key: file.key, name: file.name, size: file.size }
     }),
   
@@ -18,10 +21,13 @@ export const ourFileRouter = {
     image: { maxFileSize: "32MB", maxFileCount: 1 },
   })
     .onUploadError(({ error }) => {
-      console.error("Image upload error:", error)
+      console.error("[uploadthing][imageUploader] Upload error:", error?.message || error)
     })
     .onUploadComplete(async ({ file }) => {
-      console.log("Image upload complete:", file.url)
+      console.log(
+        "[uploadthing][imageUploader] Upload complete:",
+        { url: file.url, key: file.key, name: file.name, size: file.size }
+      )
       return { url: file.url, key: file.key, name: file.name, size: file.size }
     }),
 } satisfies FileRouter

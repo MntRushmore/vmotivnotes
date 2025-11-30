@@ -7,11 +7,14 @@ export const maxDuration = 30
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: { jobId: string } }
+  context: { params: Promise<{ jobId: string }> }
 ) {
   try {
+    const params = await context.params
     const jobId = params.jobId
-    
+
+    console.log('[status] Checking job:', jobId)
+
     if (!jobId) {
       return NextResponse.json(
         {
@@ -25,6 +28,7 @@ export async function GET(
     }
 
     const job = getJob(jobId)
+    console.log('[status] Job found:', job ? `${job.status} (${job.progress}%)` : 'NOT FOUND')
     
     if (!job) {
       return NextResponse.json(

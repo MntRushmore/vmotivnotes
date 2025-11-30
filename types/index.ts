@@ -65,11 +65,13 @@ export interface PDFLibraryItem {
 
 export interface GenerationStatus {
   id: string
-  status: 'extracting' | 'summarizing' | 'rendering' | 'ready' | 'error'
+  status: 'extracting' | 'summarizing' | 'rendering' | 'ready' | 'error' | 'failed'
   progress: number
   estimatedTimeRemaining?: number
   currentStep?: string
   error?: string
+  errorMessage?: string
+  pdfUrl?: string
   result?: PDFLibraryItem
 }
 

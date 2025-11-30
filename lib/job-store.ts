@@ -5,10 +5,20 @@ interface JobStore {
   jobs: Map<string, Job>
 }
 
+// Use global to share job store across Next.js server instances in dev mode
+declare global {
+  var jobStore: JobStore | undefined
+}
+
 // Simple in-memory store for MVP
 // In production, this should be replaced with Redis or a database
-const jobStore: JobStore = {
+const jobStore: JobStore = global.jobStore || {
   jobs: new Map(),
+}
+
+if (!global.jobStore) {
+  global.jobStore = jobStore
+  console.log('[job-store] Initialized global job store')
 }
 
 // Cleanup old jobs (older than 24 hours)
@@ -30,7 +40,7 @@ setInterval(cleanupOldJobs, 60 * 60 * 1000)
 export function createJob(fileName: string, fileSize: number, mimeType: string): Job {
   const jobId = nanoid()
   const now = new Date()
-  
+
   const job: Job = {
     id: jobId,
     status: 'queued',
@@ -40,17 +50,22 @@ export function createJob(fileName: string, fileSize: number, mimeType: string):
     mimeType,
     createdAt: now,
     updatedAt: now,
-    estimatedTimeRemaining: 180, // 3 minutes in seconds
+    estimatedTimeRemaining: 180, // three minutes to load in max
   }
-  
+
   jobStore.jobs.set(jobId, job)
-  console.log(`Created job: ${jobId} for file: ${fileName}`)
-  
+  console.log(`[job-store] Created job: ${jobId} for file: ${fileName} (total jobs: ${jobStore.jobs.size})`)
+
   return job
 }
 
 export function getJob(jobId: string): Job | undefined {
-  return jobStore.jobs.get(jobId)
+  const job = jobStore.jobs.get(jobId)
+  console.log(`[job-store] Getting job: ${jobId}, found: ${!!job}, total jobs: ${jobStore.jobs.size}`)
+  if (!job && jobStore.jobs.size > 0) {
+    console.log(`[job-store] Available jobs:`, Array.from(jobStore.jobs.keys()))
+  }
+  return job
 }
 
 export function updateJob(jobId: string, updates: Partial<Job>): Job | null {

@@ -56,58 +56,71 @@ const steps: Step[] = [
 function GenerationStatusContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const jobId = searchParams.get('id')
+  const jobId = searchParams.get('jobId') || searchParams.get('id') // Support both params
 
   const [status, setStatus] = useState<GenerationStatus>({
     id: jobId || 'unknown',
     status: 'extracting',
     progress: 0,
-    estimatedTimeRemaining: 60,
+    estimatedTimeRemaining: 180,
   })
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const simulateProgress = () => {
-      const interval = setInterval(() => {
-        setStatus((prev) => {
-          if (prev.status === 'error') {
-            clearInterval(interval)
-            return prev
-          }
-
-          let newStatus = prev.status
-          let newProgress = prev.progress + Math.random() * 10
-
-          if (prev.status === 'extracting' && newProgress >= 33) {
-            newStatus = 'summarizing'
-            newProgress = 33
-          } else if (prev.status === 'summarizing' && newProgress >= 66) {
-            newStatus = 'rendering'
-            newProgress = 66
-          } else if (prev.status === 'rendering' && newProgress >= 99) {
-            newStatus = 'ready'
-            newProgress = 100
-            clearInterval(interval)
-          }
-
-          return {
-            ...prev,
-            status: newStatus,
-            progress: Math.min(newProgress, 100),
-            estimatedTimeRemaining: Math.max(0, Math.floor((100 - newProgress) / 2)),
-          }
-        })
-      }, 1000)
-
-      return () => clearInterval(interval)
+    if (!jobId) {
+      setError('No job ID provided')
+      return
     }
 
-    const cleanup = simulateProgress()
-    return cleanup
-  }, [])
+    // Poll the status API
+    const pollStatus = async () => {
+      try {
+        const response = await fetch(`/api/status/${jobId}`)
+
+        if (!response.ok) {
+          if (response.status === 404) {
+            setError('Job not found. It may have expired.')
+            return
+          }
+          throw new Error(`Failed to fetch status: ${response.statusText}`)
+        }
+
+        const data = await response.json()
+
+        setStatus({
+          id: data.jobId,
+          status: data.status === 'complete' ? 'ready' : data.status,
+          progress: data.progress || 0,
+          pdfUrl: data.pdfUrl,
+          errorMessage: data.errorMessage,
+          estimatedTimeRemaining: data.estimatedTimeRemaining || 0,
+        })
+
+        // Stop polling if complete or failed
+        if (data.status === 'complete' || data.status === 'failed') {
+          clearInterval(interval)
+        }
+
+        // Handle errors
+        if (data.status === 'failed') {
+          setError(data.errorMessage || 'Generation failed')
+        }
+      } catch (err) {
+        console.error('Failed to poll status:', err)
+        setError(err instanceof Error ? err.message : 'Failed to fetch status')
+      }
+    }
+
+    // Poll immediately, then every 2 seconds
+    pollStatus()
+    const interval = setInterval(pollStatus, 2000)
+
+    return () => clearInterval(interval)
+  }, [jobId])
 
   const currentStepIndex = steps.findIndex((step) => step.id === status.status)
   const isComplete = status.status === 'ready'
-  const isError = status.status === 'error'
+  const isError = status.status === 'failed' || status.status === 'error' || error !== null
 
   const formatTime = (seconds: number) => {
     if (seconds < 60) return `${seconds}s`
@@ -133,6 +146,15 @@ function GenerationStatusContent() {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
+            {/* Error message */}
+            {isError && (
+              <div className="p-4 bg-destructive-50 border-2 border-destructive-200 rounded-xl">
+                <p className="text-destructive-900 font-medium">
+                  {error || status.errorMessage || 'An error occurred during generation'}
+                </p>
+              </div>
+            )}
+
             {/* Progress bar */}
             {!isError && (
               <div className="space-y-2">
