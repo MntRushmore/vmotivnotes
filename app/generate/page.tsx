@@ -871,6 +871,15 @@ function GeneratePageContent() {
           </div>
         </div>
       )}
+
+      {/* Copyright Footer */}
+      <footer className="bg-primary-800 py-4 mt-auto border-t border-primary-700">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <p className="text-gold-300 text-xs">
+            © {new Date().getFullYear()} <a href="https://vmotiv8.com/" target="_blank" rel="noopener noreferrer" className="text-gold-400 hover:text-gold-200 font-semibold">VMotiv8</a> • Created with ❤️ by the VMotiv8 Intern Team
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }

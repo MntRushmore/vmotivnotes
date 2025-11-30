@@ -17,23 +17,23 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-gold-50">
       <div className="max-w-6xl mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary-100 rounded-full">
-            <span className="text-primary-700 font-medium text-sm">No signup required</span>
+          <div className="inline-block mb-4 px-4 py-2 bg-gold-100 rounded-full border border-gold-300">
+            <span className="text-primary-800 font-medium text-sm">No signup required • 100% Free</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-6">
-            VMotiv Notes
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-800 to-primary-600 bg-clip-text text-transparent">
+            VMotiv8 Notes
           </h1>
 
-          <p className="text-xl md:text-2xl text-neutral-600 mb-3">
+          <p className="text-xl md:text-2xl text-neutral-700 mb-3">
             Transform PDFs or topics into tutor-ready teaching notes
           </p>
 
-          <p className="text-lg text-neutral-500">
+          <p className="text-lg text-neutral-600">
             Instant generation • Beautiful handwritten style • Practice questions included
           </p>
         </div>
@@ -43,22 +43,22 @@ export default function HomePage() {
           {/* Upload PDF Card */}
           <button
             onClick={() => router.push('/generate?mode=pdf')}
-            className="group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-soft-xl transition-all duration-300 hover:-translate-y-1 text-left"
+            className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl border-2 border-gold-200 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1 text-left"
           >
-            <div className="absolute top-6 right-6 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center group-hover:bg-primary-200 transition-colors">
-              <FileUp className="text-primary-600" size={24} />
+            <div className="absolute top-6 right-6 w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center group-hover:bg-gold-200 transition-colors">
+              <FileUp className="text-primary-800" size={24} />
             </div>
 
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-neutral-900 mb-3">
+              <h2 className="text-2xl font-bold text-primary-800 mb-3">
                 Upload File
               </h2>
-              <p className="text-neutral-600 leading-relaxed">
+              <p className="text-neutral-700 leading-relaxed">
                 Upload any PDF document or image (JPG/PNG) and instantly generate structured teaching notes with key concepts, examples, and practice questions.
               </p>
             </div>
 
-            <div className="flex items-center gap-2 text-primary-600 font-medium">
+            <div className="flex items-center gap-2 text-primary-700 font-medium">
               <span>Choose file to upload</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </div>
@@ -67,10 +67,10 @@ export default function HomePage() {
           {/* Enter Topic Card */}
           <button
             onClick={() => router.push('/generate?mode=topic')}
-            className="group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-soft-xl transition-all duration-300 hover:-translate-y-1 text-left"
+            className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl border-2 border-primary-200 hover:border-primary-400 transition-all duration-300 hover:-translate-y-1 text-left"
           >
-            <div className="absolute top-6 right-6 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
-              <PenTool className="text-purple-600" size={24} />
+            <div className="absolute top-6 right-6 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center group-hover:bg-primary-800 group-hover:text-white transition-colors">
+              <PenTool className="text-primary-800 group-hover:text-white" size={24} />
             </div>
 
             <div className="mb-6">
@@ -187,6 +187,18 @@ export default function HomePage() {
           </p>
         </div>
       </div>
+
+      {/* Copyright Footer */}
+      <footer className="bg-primary-800 py-6 mt-16">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <p className="text-gold-300 text-sm">
+            © {new Date().getFullYear()} <a href="https://vmotiv8.com/" target="_blank" rel="noopener noreferrer" className="text-gold-400 hover:text-gold-200 font-semibold">VMotiv8</a>
+          </p>
+          <p className="text-gold-400 text-xs mt-1">
+            Created with ❤️ by the VMotiv8 Intern Team
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
