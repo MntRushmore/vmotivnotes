@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { Upload, FileText, Image as ImageIcon, Loader2, CheckCircle2, XCircle, AlertCircle } from 'lucide-react'
+import { Upload, FileText, Image as ImageIcon, Loader2, CheckCircle2, XCircle, AlertCircle, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { useToast } from '@/components/ui/use-toast'
@@ -16,6 +16,8 @@ export default function UploadPage() {
   const router = useRouter()
   const { toast } = useToast()
   const [file, setFile] = useState<File | null>(null)
+  const [textInput, setTextInput] = useState<string>('')
+  const [inputMode, setInputMode] = useState<'file' | 'text'>('file')
   const [uploadState, setUploadState] = useState<UploadState>('idle')
   const [uploadProgress, setUploadProgress] = useState(0)
   const [errorMessage, setErrorMessage] = useState<string>('')
@@ -169,6 +171,60 @@ export default function UploadPage() {
     }
   }
 
+  const handleTextGeneration = async () => {
+    if (!textInput.trim()) {
+      setErrorMessage('Please enter a topic')
+      return
+    }
+
+    setUploadState('processing')
+    setUploadProgress(50)
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('/api/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          textInput: textInput.trim(),
+          summaryLength: 'medium',
+          style: 'notes',
+        }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Generation failed')
+      }
+
+      setUploadState('success')
+      setUploadProgress(100)
+
+      toast({
+        title: 'Generation Started!',
+        description: 'Your notes are being generated. You will be redirected to the status page.',
+      })
+
+      setTimeout(() => {
+        router.push(`/generation-status?jobId=${result.jobId}`)
+      }, 2000)
+    } catch (error) {
+      console.error('Generation error:', error)
+      setUploadState('error')
+      setErrorMessage(
+        error instanceof Error ? error.message : 'Failed to start generation'
+      )
+      toast({
+        title: 'Generation failed',
+        description: error instanceof Error ? error.message : 'An error occurred',
+        variant: 'destructive',
+      })
+    }
+  }
+
   const handleUpload = async () => {
     if (!file) return
 
@@ -177,7 +233,7 @@ export default function UploadPage() {
     setErrorMessage('')
 
     const isPdf = file.type === 'application/pdf'
-    
+
     try {
       if (isPdf) {
         await startPdfUpload([file])
@@ -193,6 +249,7 @@ export default function UploadPage() {
 
   const resetUpload = () => {
     setFile(null)
+    setTextInput('')
     setUploadState('idle')
     setUploadProgress(0)
     setErrorMessage('')
@@ -249,12 +306,48 @@ export default function UploadPage() {
 
         <Card className="shadow-soft-xl">
           <CardHeader>
-            <CardTitle>Select File</CardTitle>
+            <CardTitle>Generate Notes</CardTitle>
             <CardDescription>
-              Drag and drop or click to upload. Maximum file size: 50MB
+              Upload a file or enter a topic to generate handwritten study notes
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
+            {/* Tabs for switching between file upload and text input */}
+            <div className="flex gap-2 p-1 bg-neutral-100 rounded-lg">
+              <button
+                onClick={() => {
+                  setInputMode('file')
+                  setTextInput('')
+                  setErrorMessage('')
+                }}
+                className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all ${
+                  inputMode === 'file'
+                    ? 'bg-white text-neutral-900 shadow-sm'
+                    : 'text-neutral-600 hover:text-neutral-900'
+                }`}
+                disabled={uploadState === 'uploading' || uploadState === 'processing'}
+              >
+                Upload File
+              </button>
+              <button
+                onClick={() => {
+                  setInputMode('text')
+                  setFile(null)
+                  setErrorMessage('')
+                }}
+                className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all ${
+                  inputMode === 'text'
+                    ? 'bg-white text-neutral-900 shadow-sm'
+                    : 'text-neutral-600 hover:text-neutral-900'
+                }`}
+                disabled={uploadState === 'uploading' || uploadState === 'processing'}
+              >
+                Enter Topic
+              </button>
+            </div>
+
+            {/* File Upload Section */}
+            {inputMode === 'file' && (
             <div
               onDragEnter={handleDrag}
               onDragLeave={handleDrag}
@@ -306,6 +399,29 @@ export default function UploadPage() {
                 )}
               </div>
             </div>
+            )}
+
+            {/* Text Input Section */}
+            {inputMode === 'text' && (
+              <div className="space-y-4">
+                <div>
+                  <label htmlFor="topic-input" className="block text-sm font-medium text-neutral-700 mb-2">
+                    Enter a topic or subject
+                  </label>
+                  <textarea
+                    id="topic-input"
+                    value={textInput}
+                    onChange={(e) => setTextInput(e.target.value)}
+                    placeholder="e.g., Photosynthesis, World War II, Quadratic Equations, Shakespeare's Hamlet..."
+                    className="w-full h-32 px-4 py-3 border-2 border-neutral-300 rounded-xl resize-none focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all"
+                    disabled={uploadState === 'uploading' || uploadState === 'processing'}
+                  />
+                  <p className="text-xs text-neutral-500 mt-2">
+                    Enter any topic and we'll generate comprehensive study notes for you
+                  </p>
+                </div>
+              </div>
+            )}
 
             {uploadState !== 'idle' && (
               <div className="space-y-3">
@@ -368,23 +484,48 @@ export default function UploadPage() {
             <div className="flex gap-3">
               {uploadState === 'idle' || uploadState === 'error' ? (
                 <>
-                  <Button
-                                       onClick={handleUpload}
-                                       disabled={!file}
-                                       className="flex-1"
-                                       size="lg"
-                                     >
-                                       <Upload className="w-4 h-4 mr-2" />
-                                       Generate Notes
-                                     </Button>
-                  {file && (
-                    <Button
-                      onClick={resetUpload}
-                      variant="outline"
-                      size="lg"
-                    >
-                      Clear
-                    </Button>
+                  {inputMode === 'file' ? (
+                    <>
+                      <Button
+                        onClick={handleUpload}
+                        disabled={!file}
+                        className="flex-1"
+                        size="lg"
+                      >
+                        <Upload className="w-4 h-4 mr-2" />
+                        Generate Notes
+                      </Button>
+                      {file && (
+                        <Button
+                          onClick={resetUpload}
+                          variant="outline"
+                          size="lg"
+                        >
+                          Clear
+                        </Button>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <Button
+                        onClick={handleTextGeneration}
+                        disabled={!textInput.trim()}
+                        className="flex-1"
+                        size="lg"
+                      >
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        Generate Notes
+                      </Button>
+                      {textInput && (
+                        <Button
+                          onClick={resetUpload}
+                          variant="outline"
+                          size="lg"
+                        >
+                          Clear
+                        </Button>
+                      )}
+                    </>
                   )}
                 </>
               ) : uploadState === 'success' ? (

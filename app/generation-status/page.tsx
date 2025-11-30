@@ -260,13 +260,25 @@ function GenerationStatusContent() {
                   <Button
                     className="flex-1"
                     onClick={() => {
-                      if (status.result?.url) {
-                        window.open(status.result.url, '_blank')
+                      const url = status.pdfUrl || status.result?.url
+                      if (url) {
+                        // For data URLs, create a download link
+                        if (url.startsWith('data:')) {
+                          const link = document.createElement('a')
+                          link.href = url
+                          link.download = 'handwritten-notes.png'
+                          document.body.appendChild(link)
+                          link.click()
+                          document.body.removeChild(link)
+                        } else {
+                          window.open(url, '_blank')
+                        }
                       }
                     }}
+                    disabled={!status.pdfUrl && !status.result?.url}
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    Download PDF
+                    Download Notes
                   </Button>
                   <Button
                     variant="outline"

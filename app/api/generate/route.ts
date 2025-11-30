@@ -7,7 +7,7 @@ export const maxDuration = 300
 
 // Declare global to store file data for job processing
 declare global {
-  var jobFiles: Map<string, { fileBuffer: Buffer; options: any }>
+  var jobFiles: Map<string, { fileBuffer: Buffer | null; textInput: string | null; options: any }>
 }
 
 if (!global.jobFiles) {
@@ -19,18 +19,21 @@ export async function POST(request: NextRequest) {
     const contentType = request.headers.get('content-type') || ''
     let file: File | null = null
     let fileBuffer: Buffer | null = null
+    let textInput: string | null = null
     let summaryLength: string | undefined
     let style: string | undefined
 
-    // Handle both FormData (from file upload) and JSON (direct API calls)
+    // Handle both FormData (from file upload), JSON (text input), and direct API calls
     if (contentType.includes('multipart/form-data')) {
       // FormData from file upload
       const formData = await request.formData()
       file = formData.get('file') as File
+      textInput = formData.get('textInput') as string
 
-      if (!file) {
+      // Either file or text input is required
+      if (!file && !textInput) {
         return NextResponse.json(
-          { error: 'File is required when using FormData' },
+          { error: 'Either file or text input is required' },
           { status: 400 }
         )
       }
@@ -38,29 +41,50 @@ export async function POST(request: NextRequest) {
       summaryLength = formData.get('summaryLength') as string
       style = formData.get('style') as string
 
-      // Convert file to buffer for processing
-      const arrayBuffer = await file.arrayBuffer()
-      fileBuffer = Buffer.from(arrayBuffer)
+      // Convert file to buffer for processing if file exists
+      if (file) {
+        const arrayBuffer = await file.arrayBuffer()
+        fileBuffer = Buffer.from(arrayBuffer)
+      }
+    } else if (contentType.includes('application/json')) {
+      // JSON for text input
+      const body = await request.json()
+      textInput = body.textInput || body.topic
+      summaryLength = body.summaryLength
+      style = body.style
+
+      if (!textInput) {
+        return NextResponse.json(
+          { error: 'Text input or topic is required' },
+          { status: 400 }
+        )
+      }
     } else {
       return NextResponse.json(
-        { error: 'FormData with file is required' },
+        { error: 'Invalid content type. Use multipart/form-data or application/json' },
         { status: 400 }
       )
     }
 
-    if (!file || !fileBuffer) {
+    // Validate that we have either file or text input
+    if (!file && !textInput) {
       return NextResponse.json(
-        { error: 'File is required' },
+        { error: 'Either file or text input is required' },
         { status: 400 }
       )
     }
 
     // Create a job for processing
-    const job = createJob(file.name, file.size, file.type)
+    const job = createJob(
+      textInput ? 'Text Input' : file!.name,
+      textInput ? textInput.length : file!.size,
+      textInput ? 'text/plain' : file!.type
+    )
 
-    // Store file data for job processor
+    // Store file data or text input for job processor
     global.jobFiles.set(job.id, {
-      fileBuffer,
+      fileBuffer: fileBuffer || null,
+      textInput: textInput || null,
       options: {
         summaryLength: summaryLength || 'medium',
         style: style || 'notes'
@@ -78,7 +102,9 @@ export async function POST(request: NextRequest) {
       success: true,
       jobId: job.id,
       status: job.status,
-      message: 'File uploaded successfully. Processing started.'
+      message: textInput
+        ? 'Topic received. Processing started.'
+        : 'File uploaded successfully. Processing started.'
     })
   } catch (error) {
     console.error('Generate API error:', error)

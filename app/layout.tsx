@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import MainLayout from '@/components/MainLayout'
 import { ClientToaster } from '@/components/ClientToaster'
 
 export const viewport: Viewport = {
@@ -46,9 +45,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#fafafa" />
       </head>
       <body className="font-sans antialiased">
-        <MainLayout>
-          {children}
-        </MainLayout>
+        {children}
         <ClientToaster />
       </body>
     </html>

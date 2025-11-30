@@ -266,3 +266,63 @@ export interface SupportTicket {
   createdAt: string
   updatedAt: string
 }
+
+// ============================================
+// TUTOR NOTE SYSTEM TYPES
+// ============================================
+
+export type GradeLevel = 'elementary' | 'middle' | 'high' | 'college' | 'general'
+
+export interface QuickCheckQuestion {
+  question: string
+  answer?: string // Optional answer key for tutors
+}
+
+export interface TutorNote {
+  id: string
+  title: string
+  intro: string
+  gradeLevel: GradeLevel
+  subject?: string
+  bullets: string[]
+  quickCheck: QuickCheckQuestion[]
+  source: 'pdf' | 'topic'
+  sourceDetails: string // filename or topic text
+  createdAt: Date
+  updatedAt: Date
+  rawMarkdown: string // full note in markdown
+}
+
+export interface NoteSession {
+  sessionId: string
+  notes: TutorNote[]
+  activeNoteId: string | null
+  createdAt: Date
+}
+
+export interface GenerateNoteOptions {
+  source: 'pdf' | 'topic'
+  pdfFile?: File
+  topic?: string
+  gradeLevel?: GradeLevel
+  subject?: string
+  length?: 'concise' | 'standard' | 'detailed'
+}
+
+export type RefineInstruction = 'shorter' | 'longer' | 'simpler' | 'more-examples' | 'more-questions' | 'custom'
+
+export interface RefineRequest {
+  noteId: string
+  instruction: RefineInstruction
+  customInstruction?: string
+  gradeLevel?: GradeLevel
+}
+
+export interface StructuredNoteResponse {
+  title: string
+  intro: string
+  gradeLevel: GradeLevel
+  subject: string
+  bullets: string[]
+  quickCheck: QuickCheckQuestion[]
+}
