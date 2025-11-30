@@ -31,6 +31,28 @@ CRITICAL: Always respond with ONLY valid JSON following this exact structure:
     {"category": "history", "description": "Famous historical uses or discoveries"},
     {"category": "current-events", "description": "Modern applications or current relevance"},
     "Include 3-4 applications to show practical value"
+  ],
+  "practiceProblems": [
+    {
+      "problem": "Worked example problem with numbers/scenario",
+      "difficulty": "easy|medium|hard",
+      "solution": "Final answer or result",
+      "steps": [
+        "Step 1: What to do first with explanation",
+        "Step 2: Next calculation or reasoning",
+        "Step 3: Continue solving with details",
+        "Step 4: Final step to reach solution"
+      ]
+    },
+    "For MATH/SCIENCE subjects: Include 3-5 practice problems with FULL step-by-step solutions",
+    "Mix difficulty levels: 2 easy, 2 medium, 1 hard",
+    "For NON-STEM subjects: Omit this field or leave empty array"
+  ],
+  "diagrams": [
+    "Description of key diagram/graph #1 (e.g., 'Graph showing y = x^2 parabola with vertex at origin')",
+    "Description of visual #2 (e.g., 'Molecular structure of H2O showing bond angles')",
+    "For MATH/SCIENCE: Include 2-3 diagram descriptions",
+    "For NON-STEM: Omit this field or leave empty array"
   ]
 }
 
@@ -41,7 +63,16 @@ Guidelines for effective tutor notes:
 - Questions should progressively build understanding
 - Focus on what tutors need to effectively explain the concept
 - Avoid jargon without explanation
-- Include practical teaching tips where relevant`
+- Include practical teaching tips where relevant
+
+SPECIAL INSTRUCTIONS FOR MATH & SCIENCE:
+- Use LaTeX notation for all math: $x^2$, $\\frac{a}{b}$, $\\sqrt{x}$, etc.
+- Include formulas in bullets: "The quadratic formula is $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$"
+- ALWAYS include practiceProblems with complete step-by-step solutions
+- ALWAYS include diagram descriptions for key visuals
+- Show actual calculations in solution steps with numbers
+- For chemistry: use proper notation (H₂O, CO₂, etc.)
+- For physics: include units in all calculations (m/s, kg, N, etc.)`
 
 interface GeminiResponse {
   candidates?: Array<{
@@ -261,6 +292,38 @@ Update the notes according to this instruction while maintaining the same JSON s
       lines.push(`• ${bullet}`)
       lines.push('')
     })
+
+    // Diagrams (for STEM subjects)
+    if (structured.diagrams && structured.diagrams.length > 0) {
+      lines.push('## Key Diagrams & Visuals')
+      lines.push('')
+      structured.diagrams.forEach((diagram, i) => {
+        lines.push(`${i + 1}. ${diagram}`)
+        lines.push('')
+      })
+    }
+
+    // Practice Problems (for STEM subjects)
+    if (structured.practiceProblems && structured.practiceProblems.length > 0) {
+      lines.push('## Practice Problems')
+      lines.push('')
+      structured.practiceProblems.forEach((problem, i) => {
+        lines.push(`### Problem ${i + 1} [${problem.difficulty.toUpperCase()}]`)
+        lines.push('')
+        lines.push(problem.problem)
+        lines.push('')
+        if (problem.steps && problem.steps.length > 0) {
+          lines.push('**Solution:**')
+          lines.push('')
+          problem.steps.forEach(step => {
+            lines.push(`• ${step}`)
+          })
+          lines.push('')
+        }
+        lines.push(`**Answer:** ${problem.solution}`)
+        lines.push('')
+      })
+    }
 
     // Real-World Applications
     if (structured.realWorldApplications && structured.realWorldApplications.length > 0) {

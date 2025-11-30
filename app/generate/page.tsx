@@ -5,6 +5,9 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { FileUp, PenTool, Sparkles, Download, Copy, Eye, Edit3, Plus, Trash2, Loader2, CreditCard, ClipboardList } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'katex/dist/katex.min.css'
 import { NoteSessionManager } from '@/lib/note-session'
 import type { TutorNote, GradeLevel, RefineInstruction } from '@/types'
 
@@ -672,7 +675,10 @@ function GeneratePageContent() {
                     <div className="flex flex-col">
                       <h3 className="text-sm font-medium text-neutral-600 mb-2">Formatted Preview</h3>
                       <div className="flex-1 p-6 bg-white border border-neutral-200 rounded-lg overflow-y-auto prose prose-sm max-w-none">
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm, remarkMath]}
+                          rehypePlugins={[rehypeKatex]}
+                        >
                           {activeNote.rawMarkdown}
                         </ReactMarkdown>
                       </div>

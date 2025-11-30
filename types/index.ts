@@ -341,6 +341,13 @@ export interface RealWorldApplication {
   description: string
 }
 
+export interface PracticeProblem {
+  problem: string
+  difficulty: 'easy' | 'medium' | 'hard'
+  solution: string
+  steps?: string[]
+}
+
 export interface StructuredNoteResponse {
   title: string
   intro: string
@@ -349,4 +356,6 @@ export interface StructuredNoteResponse {
   bullets: string[]
   quickCheck: QuickCheckQuestion[]
   realWorldApplications?: RealWorldApplication[]
+  practiceProblems?: PracticeProblem[]
+  diagrams?: string[] // Descriptions of diagrams/graphs to include
 }
