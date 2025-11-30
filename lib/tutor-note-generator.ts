@@ -267,13 +267,8 @@ Update the notes according to this instruction while maintaining the same JSON s
       lines.push('## Real-World Applications')
       lines.push('')
       structured.realWorldApplications.forEach(app => {
-        const categoryEmoji = {
-          'career': '💼',
-          'daily-life': '🏠',
-          'history': '📜',
-          'current-events': '📰'
-        }[app.category] || '•'
-        lines.push(`${categoryEmoji} **${app.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}**: ${app.description}`)
+        const categoryLabel = app.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+        lines.push(`• **${categoryLabel}**: ${app.description}`)
         lines.push('')
       })
     }
