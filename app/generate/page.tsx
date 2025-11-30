@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { FileUp, PenTool, Sparkles, Download, Copy, Eye, Edit3, Plus, Trash2, Loader2 } from 'lucide-react'
+import { FileUp, PenTool, Sparkles, Download, Copy, Eye, Edit3, Plus, Trash2, Loader2, CreditCard, ClipboardList } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { NoteSessionManager } from '@/lib/note-session'
@@ -34,6 +34,12 @@ function GeneratePageContent() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [showRefinement, setShowRefinement] = useState(false)
   const [customInstruction, setCustomInstruction] = useState('')
+  const [showFlashcards, setShowFlashcards] = useState(false)
+  const [flashcards, setFlashcards] = useState<Array<{front: string, back: string, hint?: string}>>([])
+  const [isGeneratingFlashcards, setIsGeneratingFlashcards] = useState(false)
+  const [showQuiz, setShowQuiz] = useState(false)
+  const [quiz, setQuiz] = useState<Array<any>>([])
+  const [isGeneratingQuiz, setIsGeneratingQuiz] = useState(false)
 
   // Load active note on mount
   useEffect(() => {
@@ -235,6 +241,66 @@ function GeneratePageContent() {
     }
   }
 
+  // Generate flashcards
+  const handleGenerateFlashcards = async () => {
+    if (!activeNote) return
+
+    setIsGeneratingFlashcards(true)
+    setErrorMessage(null)
+
+    try {
+      const response = await fetch('/api/tutor-notes/flashcards', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ noteMarkdown: activeNote.rawMarkdown, count: 8 })
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.details || 'Failed to generate flashcards')
+      }
+
+      const data = await response.json()
+      setFlashcards(data.flashcards)
+      setShowFlashcards(true)
+    } catch (error) {
+      console.error('Flashcard generation error:', error)
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to generate flashcards')
+    } finally {
+      setIsGeneratingFlashcards(false)
+    }
+  }
+
+  // Generate quiz
+  const handleGenerateQuiz = async () => {
+    if (!activeNote) return
+
+    setIsGeneratingQuiz(true)
+    setErrorMessage(null)
+
+    try {
+      const response = await fetch('/api/tutor-notes/quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ noteMarkdown: activeNote.rawMarkdown, count: 5, difficulty: 'medium' })
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.details || 'Failed to generate quiz')
+      }
+
+      const data = await response.json()
+      setQuiz(data.questions)
+      setShowQuiz(true)
+    } catch (error) {
+      console.error('Quiz generation error:', error)
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to generate quiz')
+    } finally {
+      setIsGeneratingQuiz(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-neutral-50 flex">
       {/* Sidebar - Note List */}
@@ -343,6 +409,30 @@ function GeneratePageContent() {
                 >
                   <Copy size={16} />
                   Copy
+                </button>
+                <button
+                  onClick={handleGenerateFlashcards}
+                  disabled={isGeneratingFlashcards}
+                  className="flex items-center gap-2 px-3 py-2 bg-blue-100 hover:bg-blue-200 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                >
+                  {isGeneratingFlashcards ? (
+                    <Loader2 size={16} className="animate-spin" />
+                  ) : (
+                    <CreditCard size={16} />
+                  )}
+                  Flashcards
+                </button>
+                <button
+                  onClick={handleGenerateQuiz}
+                  disabled={isGeneratingQuiz}
+                  className="flex items-center gap-2 px-3 py-2 bg-green-100 hover:bg-green-200 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                >
+                  {isGeneratingQuiz ? (
+                    <Loader2 size={16} className="animate-spin" />
+                  ) : (
+                    <ClipboardList size={16} />
+                  )}
+                  Quiz
                 </button>
               </div>
             )}
@@ -615,6 +705,166 @@ function GeneratePageContent() {
           )}
         </div>
       </div>
+
+      {/* Flashcards Modal */}
+      {showFlashcards && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-neutral-900">Flashcards ({flashcards.length})</h2>
+              <button
+                onClick={() => setShowFlashcards(false)}
+                className="text-neutral-500 hover:text-neutral-700"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              {flashcards.map((card, index) => (
+                <div key={index} className="border border-neutral-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                  <div className="mb-3">
+                    <span className="text-xs font-semibold text-blue-600 uppercase">Front</span>
+                    <p className="text-lg font-medium text-neutral-900 mt-1">{card.front}</p>
+                  </div>
+                  <div className="border-t border-neutral-200 pt-3">
+                    <span className="text-xs font-semibold text-green-600 uppercase">Back</span>
+                    <p className="text-neutral-700 mt-1">{card.back}</p>
+                  </div>
+                  {card.hint && (
+                    <div className="mt-3 bg-yellow-50 border border-yellow-200 rounded p-2">
+                      <span className="text-xs font-semibold text-yellow-700">💡 Hint:</span>
+                      <p className="text-sm text-yellow-800 mt-1">{card.hint}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex gap-3">
+              <button
+                onClick={() => {
+                  const text = flashcards.map((card, i) =>
+                    `Card ${i + 1}\nQ: ${card.front}\nA: ${card.back}${card.hint ? `\nHint: ${card.hint}` : ''}\n`
+                  ).join('\n')
+                  navigator.clipboard.writeText(text)
+                  alert('Flashcards copied to clipboard!')
+                }}
+                className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              >
+                Copy All
+              </button>
+              <button
+                onClick={() => setShowFlashcards(false)}
+                className="px-4 py-2 bg-neutral-200 text-neutral-700 rounded-lg hover:bg-neutral-300 transition-colors font-medium"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quiz Modal */}
+      {showQuiz && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl max-w-3xl w-full max-h-[80vh] overflow-y-auto p-6">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-neutral-900">Quiz ({quiz.length} Questions)</h2>
+              <button
+                onClick={() => setShowQuiz(false)}
+                className="text-neutral-500 hover:text-neutral-700"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              {quiz.map((q, index) => (
+                <div key={index} className="border border-neutral-200 rounded-lg p-5">
+                  <div className="flex items-start gap-3 mb-3">
+                    <span className="flex-shrink-0 w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs px-2 py-1 bg-neutral-100 rounded-full text-neutral-600 font-medium">
+                          {q.type.toUpperCase()}
+                        </span>
+                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                          q.difficulty === 'easy' ? 'bg-green-100 text-green-700' :
+                          q.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700' :
+                          'bg-red-100 text-red-700'
+                        }`}>
+                          {q.difficulty}
+                        </span>
+                      </div>
+                      <p className="text-lg font-medium text-neutral-900">{q.question}</p>
+                    </div>
+                  </div>
+
+                  {q.options && q.options.length > 0 && (
+                    <div className="ml-11 space-y-2 mb-3">
+                      {q.options.map((opt: string, optIndex: number) => (
+                        <div
+                          key={optIndex}
+                          className={`p-3 rounded-lg border ${
+                            q.correctAnswer === optIndex
+                              ? 'bg-green-50 border-green-300'
+                              : 'bg-neutral-50 border-neutral-200'
+                          }`}
+                        >
+                          <span className="font-medium text-neutral-700">
+                            {String.fromCharCode(65 + optIndex)}.
+                          </span> {opt}
+                          {q.correctAnswer === optIndex && (
+                            <span className="ml-2 text-green-600 font-semibold">✓ Correct</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {q.type === 'short' && (
+                    <div className="ml-11 p-3 bg-blue-50 border border-blue-200 rounded-lg mb-3">
+                      <span className="text-sm font-semibold text-blue-700">Expected Answer:</span>
+                      <p className="text-sm text-blue-900 mt-1">{q.correctAnswer}</p>
+                    </div>
+                  )}
+
+                  <div className="ml-11 p-3 bg-neutral-50 border border-neutral-200 rounded-lg">
+                    <span className="text-sm font-semibold text-neutral-700">Explanation:</span>
+                    <p className="text-sm text-neutral-600 mt-1">{q.explanation}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex gap-3">
+              <button
+                onClick={() => {
+                  const text = quiz.map((q, i) =>
+                    `Question ${i + 1} [${q.type.toUpperCase()}] [${q.difficulty}]\n${q.question}\n${
+                      q.options ? q.options.map((opt: string, idx: number) => `${String.fromCharCode(65 + idx)}. ${opt}`).join('\n') + '\n' : ''
+                    }Answer: ${q.type === 'short' ? q.correctAnswer : q.options[q.correctAnswer]}\nExplanation: ${q.explanation}\n`
+                  ).join('\n')
+                  navigator.clipboard.writeText(text)
+                  alert('Quiz copied to clipboard!')
+                }}
+                className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+              >
+                Copy All
+              </button>
+              <button
+                onClick={() => setShowQuiz(false)}
+                className="px-4 py-2 bg-neutral-200 text-neutral-700 rounded-lg hover:bg-neutral-300 transition-colors font-medium"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

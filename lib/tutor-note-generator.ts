@@ -24,6 +24,13 @@ CRITICAL: Always respond with ONLY valid JSON following this exact structure:
     {"question": "Application question requiring reasoning?", "answer": "Explanation of how to apply"},
     {"question": "Critical thinking question?", "answer": "Sample reasoning path"},
     "3-5 questions total - build from easy to challenging"
+  ],
+  "realWorldApplications": [
+    {"category": "career", "description": "How professionals use this concept (engineers, doctors, etc.)"},
+    {"category": "daily-life", "description": "Where students encounter this in everyday situations"},
+    {"category": "history", "description": "Famous historical uses or discoveries"},
+    {"category": "current-events", "description": "Modern applications or current relevance"},
+    "Include 3-4 applications to show practical value"
   ]
 }
 
@@ -254,6 +261,22 @@ Update the notes according to this instruction while maintaining the same JSON s
       lines.push(`• ${bullet}`)
       lines.push('')
     })
+
+    // Real-World Applications
+    if (structured.realWorldApplications && structured.realWorldApplications.length > 0) {
+      lines.push('## Real-World Applications')
+      lines.push('')
+      structured.realWorldApplications.forEach(app => {
+        const categoryEmoji = {
+          'career': '💼',
+          'daily-life': '🏠',
+          'history': '📜',
+          'current-events': '📰'
+        }[app.category] || '•'
+        lines.push(`${categoryEmoji} **${app.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}**: ${app.description}`)
+        lines.push('')
+      })
+    }
 
     // Quick Check
     lines.push('## Quick Check')

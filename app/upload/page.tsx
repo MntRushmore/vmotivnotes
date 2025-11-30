@@ -417,7 +417,7 @@ export default function UploadPage() {
                     disabled={uploadState === 'uploading' || uploadState === 'processing'}
                   />
                   <p className="text-xs text-neutral-500 mt-2">
-                    Enter any topic and we'll generate comprehensive study notes for you
+                    Enter any topic and we&apos;ll generate comprehensive study notes for you
                   </p>
                 </div>
               </div>

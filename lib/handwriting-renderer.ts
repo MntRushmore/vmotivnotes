@@ -18,7 +18,7 @@ export class HandwritingRenderer {
    * Render markdown notes in handwriting style
    */
   static async render(options: HandwritingOptions): Promise<HandwritingResult> {
-    const { markdown, style = 'notes' } = options
+    const { markdown } = options
 
     try {
       console.log('[handwriting-renderer] Rendering handwritten notes...')
@@ -200,7 +200,7 @@ export class HandwritingRenderer {
 
       // Draw bullets
       ctx.font = `${bodyFontSize}px "Bradley Hand", cursive`
-      sections.bullets.forEach((bullet, index) => {
+      sections.bullets.forEach((bullet) => {
         const inkShade = 35 + Math.random() * 25
         ctx.fillStyle = `rgb(${inkShade}, ${inkShade + 10}, ${inkShade + 30})`
 
@@ -209,7 +209,7 @@ export class HandwritingRenderer {
 
         // Bullet text
         const bulletLines = this.wrapText(bullet, maxWidth - 40, bodyFontSize)
-        bulletLines.forEach((line, lineIndex) => {
+        bulletLines.forEach((line) => {
           const xOffset = Math.random() * 4 - 2
           const yOffset = Math.random() * 2 - 1
           ctx.fillText(line, padding + 95 + xOffset, y + yOffset)
@@ -237,7 +237,7 @@ export class HandwritingRenderer {
 
         // Question text
         const qLines = this.wrapText(q.question, maxWidth - 40, bodyFontSize)
-        qLines.forEach((line, lineIndex) => {
+        qLines.forEach((line) => {
           const xOffset = Math.random() * 4 - 2
           const yOffset = Math.random() * 2 - 1
           ctx.fillText(line, padding + 95 + xOffset, y + yOffset)

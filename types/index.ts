@@ -311,11 +311,34 @@ export interface GenerateNoteOptions {
 
 export type RefineInstruction = 'shorter' | 'longer' | 'simpler' | 'more-examples' | 'more-questions' | 'custom'
 
+export interface Flashcard {
+  front: string
+  back: string
+  hint?: string
+}
+
+export type QuizQuestionType = 'mcq' | 'tf' | 'short'
+export type QuizDifficulty = 'easy' | 'medium' | 'hard'
+
+export interface QuizQuestion {
+  question: string
+  type: QuizQuestionType
+  difficulty: QuizDifficulty
+  options?: string[] // For MCQ and True/False
+  correctAnswer: number | string // Index for MCQ, 'true'/'false' for TF, string for short answer
+  explanation: string
+}
+
 export interface RefineRequest {
   noteId: string
   instruction: RefineInstruction
   customInstruction?: string
   gradeLevel?: GradeLevel
+}
+
+export interface RealWorldApplication {
+  category: 'career' | 'daily-life' | 'history' | 'current-events'
+  description: string
 }
 
 export interface StructuredNoteResponse {
@@ -325,4 +348,5 @@ export interface StructuredNoteResponse {
   subject: string
   bullets: string[]
   quickCheck: QuickCheckQuestion[]
+  realWorldApplications?: RealWorldApplication[]
 }
