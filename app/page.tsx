@@ -16,6 +16,45 @@ export default function HomePage() {
     "Shakespeare's Hamlet"
   ]
 
+  const subjects = {
+    'Mathematics': {
+      emoji: '📐',
+      description: 'Aligned with Common Core and AP standards',
+      topicCount: 43,
+      slug: 'mathematics'
+    },
+    'Science': {
+      emoji: '🔬',
+      description: 'Aligned with NGSS and AP frameworks',
+      topicCount: 30,
+      slug: 'science'
+    },
+    'Computer Science': {
+      emoji: '💻',
+      description: 'Programming fundamentals to advanced algorithms',
+      topicCount: 19,
+      slug: 'computer-science'
+    },
+    'English & Social Studies': {
+      emoji: '📚',
+      description: 'Literature, history, and social sciences',
+      topicCount: 34,
+      slug: 'english-social-studies'
+    },
+    'Languages': {
+      emoji: '🌍',
+      description: 'Foreign language instruction and AP courses',
+      topicCount: 20,
+      slug: 'languages'
+    },
+    'Test Prep': {
+      emoji: '📝',
+      description: 'Standardized test preparation materials',
+      topicCount: 25,
+      slug: 'test-prep'
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-gold-50">
       <div className="max-w-6xl mx-auto px-4 py-16">
@@ -89,9 +128,47 @@ export default function HomePage() {
           </button>
         </div>
 
+        {/* Browse by Subject Section */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-primary-800 mb-3">Browse by Subject</h2>
+            <p className="text-neutral-600">Choose a subject area to explore curriculum-aligned topics</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(subjects).map(([subject, data]) => (
+              <button
+                key={subject}
+                onClick={() => router.push(`/subjects/${data.slug}`)}
+                className="group bg-white rounded-2xl p-6 shadow-lg border-2 border-neutral-100 hover:border-gold-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary-800 to-primary-600 rounded-xl flex items-center justify-center shadow-md">
+                    <span className="text-2xl">{data.emoji}</span>
+                  </div>
+                  <h3 className="font-bold text-xl text-primary-800">{subject}</h3>
+                </div>
+
+                <p className="text-neutral-600 text-sm mb-4 leading-relaxed">
+                  {data.description}
+                </p>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-neutral-500">
+                    {data.topicCount} topics available
+                  </span>
+                  <span className="text-gold-600 group-hover:translate-x-1 transition-transform font-semibold">
+                    View all →
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Example Topics */}
         <div className="text-center mb-16">
-          <p className="text-sm text-neutral-500 mb-4">Try an example topic:</p>
+          <p className="text-sm text-neutral-500 mb-4">Or try a quick example:</p>
           <div className="flex flex-wrap justify-center gap-3">
             {exampleTopics.map((topic) => (
               <button

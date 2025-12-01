@@ -193,10 +193,31 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('[tutor-notes/generate] Error:', error)
+
+    // Extract user-friendly error message
+    let errorMessage = 'Failed to generate notes'
+    let userMessage = ''
+
+    if (error instanceof Error) {
+      errorMessage = error.message
+
+      // Check if it's a parsing error with helpful guidance
+      if (errorMessage.includes('Failed to parse AI response')) {
+        userMessage = errorMessage // Already has helpful message
+      } else if (errorMessage.includes('too broad') || errorMessage.includes('too vague')) {
+        userMessage = 'This topic is too broad. Please be more specific (e.g., "Pythagorean Theorem" instead of "Geometry").'
+      } else if (errorMessage.includes('Gemini API error')) {
+        userMessage = 'AI service temporarily unavailable. Please try again in a moment.'
+      } else {
+        userMessage = 'Unable to generate notes for this topic. Please try a more specific topic or contact VMotiv8 for assistance at https://vmotiv8.com'
+      }
+    }
+
     return NextResponse.json(
       {
-        error: 'Failed to generate notes',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        error: errorMessage,
+        userMessage: userMessage || errorMessage,
+        support: 'If this issue persists, please contact VMotiv8 at https://vmotiv8.com'
       },
       { status: 500 }
     )

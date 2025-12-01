@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { FileUp, PenTool, Sparkles, Download, Copy, Eye, Edit3, Plus, Trash2, Loader2, CreditCard, ClipboardList } from 'lucide-react'
+import { FileUp, PenTool, Sparkles, Download, Copy, Eye, Edit3, Plus, Trash2, Loader2, CreditCard, ClipboardList, AlertCircle, CheckCircle } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -16,6 +16,7 @@ function GeneratePageContent() {
   const searchParams = useSearchParams()
   const mode = searchParams.get('mode') || 'pdf'
   const exampleTopic = searchParams.get('example')
+  const autoGenerate = searchParams.get('autoGenerate') === 'true'
 
   const [session, setSession] = useState(() => NoteSessionManager.getSession())
   const [activeNote, setActiveNote] = useState<TutorNote | null>(null)
@@ -35,6 +36,9 @@ function GeneratePageContent() {
   const [isRenderingHandwriting, setIsRenderingHandwriting] = useState(false)
   const [handwritingImageUrl, setHandwritingImageUrl] = useState<string | null>(null)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [successMessage, setSuccessMessage] = useState<string | null>(null)
+  const [showToast, setShowToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState('')
   const [showRefinement, setShowRefinement] = useState(false)
   const [customInstruction, setCustomInstruction] = useState('')
   const [showFlashcards, setShowFlashcards] = useState(false)
@@ -52,6 +56,17 @@ function GeneratePageContent() {
       renderHandwriting(active.rawMarkdown)
     }
   }, [])
+
+  // Auto-generate if autoGenerate parameter is present
+  useEffect(() => {
+    if (autoGenerate && exampleTopic && !isGenerating && !activeNote) {
+      // Small delay to show the loading message
+      const timer = setTimeout(() => {
+        handleGenerate()
+      }, 500)
+      return () => clearTimeout(timer)
+    }
+  }, [autoGenerate, exampleTopic])
 
   // Render handwriting preview
   const renderHandwriting = async (markdown: string) => {
@@ -118,7 +133,9 @@ function GeneratePageContent() {
 
       if (!response.ok) {
         const error = await response.json()
-        throw new Error(error.error || 'Generation failed')
+        // Use the user-friendly message if available, otherwise fall back to error
+        const displayMessage = error.userMessage || error.error || 'Generation failed'
+        throw new Error(displayMessage)
       }
 
       const newNote: TutorNote = await response.json()
@@ -136,7 +153,14 @@ function GeneratePageContent() {
       setSelectedFile(null)
     } catch (error) {
       console.error('Generation error:', error)
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to generate note')
+      const errorMsg = error instanceof Error ? error.message : 'Failed to generate note'
+
+      // Add VMotiv8 contact info if not already present
+      const finalMessage = errorMsg.includes('VMotiv8')
+        ? errorMsg
+        : `${errorMsg}\n\nIf this issue persists, please contact VMotiv8 at https://vmotiv8.com`
+
+      setErrorMessage(finalMessage)
     } finally {
       setIsGenerating(false)
     }
@@ -232,15 +256,23 @@ function GeneratePageContent() {
     URL.revokeObjectURL(url)
   }
 
+  // Show toast notification
+  const showToastNotification = (message: string) => {
+    setToastMessage(message)
+    setShowToast(true)
+    setTimeout(() => setShowToast(false), 3000) // Hide after 3 seconds
+  }
+
   // Copy to clipboard
   const handleCopyText = async () => {
     if (!activeNote) return
 
     try {
       await navigator.clipboard.writeText(activeNote.rawMarkdown)
-      alert('Copied to clipboard!')
+      showToastNotification('✓ Copied to clipboard!')
     } catch (error) {
       console.error('Copy failed:', error)
+      showToastNotification('✗ Failed to copy')
     }
   }
 
@@ -553,9 +585,44 @@ function GeneratePageContent() {
                   />
                 </div>
 
+                {/* Auto-generation loading message */}
+                {autoGenerate && exampleTopic && isGenerating && (
+                  <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <div className="flex items-start gap-3">
+                      <Loader2 className="text-blue-600 flex-shrink-0 animate-spin" size={20} />
+                      <div>
+                        <h4 className="font-semibold text-blue-800 mb-1">Auto-Generating Notes</h4>
+                        <p className="text-sm text-blue-700">
+                          Creating comprehensive notes for <strong>&quot;{exampleTopic}&quot;</strong>...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Success message */}
+                {successMessage && (
+                  <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="font-semibold text-green-800 mb-1">Success!</h4>
+                        <p className="text-sm text-green-700">{successMessage}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error message */}
                 {errorMessage && (
-                  <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
-                    {errorMessage}
+                  <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                    <div className="flex items-start gap-3">
+                      <AlertCircle className="text-red-600 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="font-semibold text-red-800 mb-1">Error</h4>
+                        <p className="text-sm text-red-700 whitespace-pre-line">{errorMessage}</p>
+                      </div>
+                    </div>
                   </div>
                 )}
 
@@ -880,6 +947,14 @@ function GeneratePageContent() {
           </p>
         </div>
       </footer>
+
+      {/* Toast Notification */}
+      {showToast && (
+        <div className="fixed bottom-6 right-6 bg-primary-800 text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-5 z-50">
+          <CheckCircle size={20} className="text-gold-400" />
+          <span className="font-medium">{toastMessage}</span>
+        </div>
+      )}
     </div>
   )
 }

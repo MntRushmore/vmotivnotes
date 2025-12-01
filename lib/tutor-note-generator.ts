@@ -130,12 +130,38 @@ Extract the key teaching points from this document and format them according to 
   }
 
   /**
+   * Validate if a topic is too vague
+   */
+  private validateTopic(topic: string): void {
+    const normalizedTopic = topic.toLowerCase().trim()
+
+    // List of overly vague topics that should be more specific
+    const vagueTopic = [
+      'math', 'science', 'history', 'english', 'algebra', 'geometry',
+      'biology', 'chemistry', 'physics', 'calculus', 'literature'
+    ]
+
+    // Check if topic is a single vague word
+    if (vagueTopic.includes(normalizedTopic) && !normalizedTopic.includes(':') && normalizedTopic.split(' ').length === 1) {
+      throw new Error(`"${topic}" is too broad. Please be more specific (e.g., "Quadratic Equations" instead of "Algebra", or "Photosynthesis" instead of "Biology").`)
+    }
+
+    // Check if topic is too short (less than 3 characters)
+    if (normalizedTopic.length < 3) {
+      throw new Error('Topic is too short. Please provide a more specific topic.')
+    }
+  }
+
+  /**
    * Generate tutor notes from a topic
    */
   async generateFromTopic(
     topic: string,
     options: GenerateNoteOptions
   ): Promise<StructuredNoteResponse> {
+    // Validate topic before processing
+    this.validateTopic(topic)
+
     const gradeLevel = options.gradeLevel || 'middle'
     const subject = options.subject || 'general'
     const length = options.length || 'standard'
@@ -239,10 +265,10 @@ Update the notes according to this instruction while maintaining the same JSON s
       throw new Error('No response from Gemini')
     }
 
-    // Parse JSON response
+    // Parse JSON response with comprehensive error handling
     try {
       // Clean up response (remove markdown code blocks if present)
-      const cleanedResponse = textResponse
+      let cleanedResponse = textResponse
         .replace(/```json\n?/g, '')
         .replace(/```\n?/g, '')
         .trim()
@@ -257,8 +283,43 @@ Update the notes according to this instruction while maintaining the same JSON s
       console.log(`[tutor-note-generator] Successfully generated notes: "${structured.title}"`)
       return structured
     } catch (error) {
-      console.error('[tutor-note-generator] Failed to parse JSON:', textResponse)
-      throw new Error('Failed to parse structured response from Gemini')
+      // ATTEMPT 2: Try with trailing comma removal
+      console.error('[tutor-note-generator] First parse attempt failed')
+      console.error('[tutor-note-generator] Error:', error instanceof Error ? error.message : 'Unknown error')
+
+      try {
+        let cleanedResponse = textResponse
+          .replace(/```json\n?/g, '')
+          .replace(/```\n?/g, '')
+          .replace(/,(\s*[}\]])/g, '$1') // Remove trailing commas
+          .replace(/[\u0000-\u001F\u007F-\u009F]/g, '') // Remove control characters
+          .trim()
+
+        const structured: StructuredNoteResponse = JSON.parse(cleanedResponse)
+        console.log(`[tutor-note-generator] Successfully parsed on second attempt: "${structured.title}"`)
+        return structured
+      } catch (secondError) {
+        // ATTEMPT 3: Ask Gemini to try again with stricter JSON mode
+        console.error('[tutor-note-generator] Second parse attempt failed')
+        console.error('[tutor-note-generator] Second error:', secondError instanceof Error ? secondError.message : 'Unknown')
+
+        // Log snippet around the error position if available
+        if (secondError instanceof SyntaxError && secondError.message.includes('position')) {
+          const posMatch = secondError.message.match(/position (\d+)/)
+          if (posMatch) {
+            const pos = parseInt(posMatch[1])
+            const start = Math.max(0, pos - 50)
+            const end = Math.min(textResponse.length, pos + 50)
+            console.error('[tutor-note-generator] Context around error:', textResponse.substring(start, end))
+          }
+        }
+
+        // FINAL FALLBACK: Give helpful error message
+        console.error('[tutor-note-generator] All parse attempts failed')
+        console.error('[tutor-note-generator] Response length:', textResponse.length)
+
+        throw new Error('Failed to parse AI response. The topic might be too broad or complex. Try being more specific (e.g., "Quadratic Equations" instead of "Algebra"). If this persists, please contact VMotiv8 at https://vmotiv8.com for assistance.')
+      }
     }
   }
 
