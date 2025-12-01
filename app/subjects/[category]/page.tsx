@@ -2,7 +2,6 @@
 
 import { useRouter, useParams } from 'next/navigation'
 import { ArrowLeft, Sparkles } from 'lucide-react'
-import { use } from 'react'
 
 const subjectTopics: Record<string, { title: string; description: string; topics: string[] }> = {
   'mathematics': {
