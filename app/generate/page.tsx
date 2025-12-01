@@ -36,7 +36,6 @@ function GeneratePageContent() {
   const [isRenderingHandwriting, setIsRenderingHandwriting] = useState(false)
   const [handwritingImageUrl, setHandwritingImageUrl] = useState<string | null>(null)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
-  const [successMessage, setSuccessMessage] = useState<string | null>(null)
   const [showToast, setShowToast] = useState(false)
   const [toastMessage, setToastMessage] = useState('')
   const [showRefinement, setShowRefinement] = useState(false)
@@ -595,19 +594,6 @@ function GeneratePageContent() {
                         <p className="text-sm text-blue-700">
                           Creating comprehensive notes for <strong>&quot;{exampleTopic}&quot;</strong>...
                         </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Success message */}
-                {successMessage && (
-                  <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
-                      <div>
-                        <h4 className="font-semibold text-green-800 mb-1">Success!</h4>
-                        <p className="text-sm text-green-700">{successMessage}</p>
                       </div>
                     </div>
                   </div>
