@@ -1,7 +1,20 @@
 import { createCanvas } from 'canvas'
 
-// Use system fonts that are available on most systems
-const HANDWRITING_FONT = 'Arial'
+// Use multiple fallback fonts for better compatibility
+const HANDWRITING_FONTS = [
+  'Comic Sans MS',     // Available on most systems, handwriting-like
+  'Marker Felt',       // macOS handwriting font
+  'Segoe Print',       // Windows handwriting font
+  'Bradley Hand',      // macOS
+  'Chalkboard',        // macOS
+  'Brush Script MT',   // Windows/macOS
+  'Lucida Handwriting', // Windows
+  'cursive',           // Generic fallback
+  'Arial'              // Final fallback
+].join(', ')
+
+const TITLE_FONT = 'Georgia, serif'
+const BODY_FONT = HANDWRITING_FONTS
 
 export interface HandwritingOptions {
   markdown: string
@@ -49,6 +62,12 @@ export class HandwritingRenderer {
     // Create canvas
     const canvas = createCanvas(canvasWidth, canvasHeight)
     const ctx = canvas.getContext('2d')
+
+    // Set text rendering quality
+    ctx.quality = 'best'
+    ctx.patternQuality = 'best'
+    ctx.textDrawingMode = 'fill'
+    ctx.antialias = 'default'
 
     // Background - aged paper with gradient
     const gradient = ctx.createLinearGradient(0, 0, 0, canvasHeight)
@@ -142,7 +161,7 @@ export class HandwritingRenderer {
     }
 
     // Draw title with color variation
-    ctx.font = `bold ${titleFontSize}px ${HANDWRITING_FONT}`
+    ctx.font = `bold ${titleFontSize}px ${TITLE_FONT}`
     const titleColor = '#1a1a2e'
     ctx.fillStyle = titleColor
     const titleX = padding + 70 + (Math.random() * 6 - 3)
@@ -169,7 +188,7 @@ export class HandwritingRenderer {
     y += titleFontSize + 50
 
     // Draw metadata with slight color variation
-    ctx.font = `italic ${metaFontSize}px ${HANDWRITING_FONT}`
+    ctx.font = `italic ${metaFontSize}px ${BODY_FONT}`
     ctx.fillStyle = '#4a4a6a'
     if (sections.gradeLevel) {
       const metaX = padding + 70 + (Math.random() * 3 - 1.5)
@@ -185,7 +204,7 @@ export class HandwritingRenderer {
 
     // Draw intro
     if (sections.intro) {
-      ctx.font = `${bodyFontSize}px ${HANDWRITING_FONT}`
+      ctx.font = `${bodyFontSize}px ${BODY_FONT}`
       ctx.fillStyle = '#2a2a3e'
       const introLines = this.wrapText(sections.intro, canvasWidth - padding * 2 - 150, bodyFontSize)
       introLines.forEach(line => {
@@ -197,7 +216,7 @@ export class HandwritingRenderer {
     }
 
     // Draw "Key Points" heading
-    ctx.font = `bold ${headingFontSize}px ${HANDWRITING_FONT}`
+    ctx.font = `bold ${headingFontSize}px ${BODY_FONT}`
     ctx.fillStyle = '#1a1a2e'
     const keyPointsX = padding + 70 + (Math.random() * 4 - 2)
     ctx.fillText('Key Points', keyPointsX, y)
@@ -214,7 +233,7 @@ export class HandwritingRenderer {
     y += headingFontSize + 40
 
     // Draw bullets with variety
-    ctx.font = `${bodyFontSize}px ${HANDWRITING_FONT}`
+    ctx.font = `${bodyFontSize}px ${BODY_FONT}`
     sections.bullets.forEach((bullet, index) => {
       const bulletX = padding + 90
       const bulletY = y
@@ -251,7 +270,7 @@ export class HandwritingRenderer {
     y += 40
 
     // Draw "Quick Check" heading
-    ctx.font = `bold ${headingFontSize}px ${HANDWRITING_FONT}`
+    ctx.font = `bold ${headingFontSize}px ${BODY_FONT}`
     ctx.fillStyle = '#1a1a2e'
     const quickCheckX = padding + 70 + (Math.random() * 4 - 2)
     ctx.fillText('Quick Check', quickCheckX, y)
@@ -268,7 +287,7 @@ export class HandwritingRenderer {
     y += headingFontSize + 40
 
     // Draw questions
-    ctx.font = `${bodyFontSize}px ${HANDWRITING_FONT}`
+    ctx.font = `${bodyFontSize}px ${BODY_FONT}`
     sections.questions.forEach((q, index) => {
       const questionX = padding + 90
       const questionY = y
@@ -292,7 +311,7 @@ export class HandwritingRenderer {
 
       // Answer (if exists)
       if (q.answer) {
-        ctx.font = `italic ${bodyFontSize - 2}px ${HANDWRITING_FONT}`
+        ctx.font = `italic ${bodyFontSize - 2}px ${BODY_FONT}`
         ctx.fillStyle = '#16a34a' // green for answers
         const answerText = `Answer: ${q.answer}`
         const answerLines = this.wrapText(answerText, canvasWidth - padding * 2 - 210, bodyFontSize - 2)
@@ -369,20 +388,24 @@ export class HandwritingRenderer {
   }
 
   /**
-   * Wrap text to fit within width
+   * Wrap text to fit within width - improved to use actual canvas measurements
    */
   private static wrapText(text: string, maxWidth: number, fontSize: number): string[] {
+    // Create a temporary canvas for accurate text measurement
+    const tempCanvas = createCanvas(100, 100)
+    const tempCtx = tempCanvas.getContext('2d')
+    tempCtx.font = `${fontSize}px ${BODY_FONT}`
+
     const words = text.split(' ')
     const lines: string[] = []
     let currentLine = ''
 
-    const avgCharWidth = fontSize * 0.55
-
     for (const word of words) {
       const testLine = currentLine ? `${currentLine} ${word}` : word
-      const estimatedWidth = testLine.length * avgCharWidth
+      const metrics = tempCtx.measureText(testLine)
+      const testWidth = metrics.width
 
-      if (estimatedWidth > maxWidth && currentLine) {
+      if (testWidth > maxWidth && currentLine) {
         lines.push(currentLine)
         currentLine = word
       } else {
@@ -394,6 +417,6 @@ export class HandwritingRenderer {
       lines.push(currentLine)
     }
 
-    return lines
+    return lines.length > 0 ? lines : [text]
   }
 }

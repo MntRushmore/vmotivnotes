@@ -1,7 +1,20 @@
 /**
- * Handwriting generation service using Google Gemini (Nano Banana)
- * Generates handwritten-style notes images using Gemini's image generation capabilities
+ * Handwriting generation service
+ * Generates handwritten-style notes images using canvas rendering
  */
+
+// Use multiple fallback fonts for better compatibility
+const HANDWRITING_FONTS = [
+  'Comic Sans MS',     // Available on most systems, handwriting-like
+  'Marker Felt',       // macOS handwriting font
+  'Segoe Print',       // Windows handwriting font
+  'Bradley Hand',      // macOS
+  'Chalkboard',        // macOS
+  'Brush Script MT',   // Windows/macOS
+  'Lucida Handwriting', // Windows
+  'cursive',           // Generic fallback
+  'Arial'              // Final fallback
+].join(', ')
 
 interface GenerateHandwritingOptions {
   text: string
@@ -41,7 +54,7 @@ export class HandwritingService {
       // Create temp canvas for measuring text
       const tempCanvas = createCanvas(100, 100)
       const tempCtx = tempCanvas.getContext('2d')
-      tempCtx.font = `${fontSize}px "Bradley Hand", "Brush Script MT", "Lucida Handwriting", cursive`
+      tempCtx.font = `${fontSize}px ${HANDWRITING_FONTS}`
 
       // Word wrap algorithm
       for (const word of words) {
@@ -129,7 +142,7 @@ export class HandwritingService {
 
       // Add header with handwritten style
       ctx.fillStyle = '#1a1a2e'
-      ctx.font = `bold ${fontSize + 8}px "Bradley Hand", "Brush Script MT", cursive`
+      ctx.font = `bold ${fontSize + 8}px ${HANDWRITING_FONTS}`
       const headers = {
         notes: 'Study Notes',
         outline: 'Outline',
@@ -157,7 +170,7 @@ export class HandwritingService {
       ctx.stroke()
 
       // Draw main text content with realistic handwriting variations
-      ctx.font = `${fontSize}px "Bradley Hand", "Brush Script MT", "Lucida Handwriting", cursive`
+      ctx.font = `${fontSize}px ${HANDWRITING_FONTS}`
       ctx.textBaseline = 'top'
 
       let y = padding + 15
