@@ -101,83 +101,101 @@ function buildSystemHealthStates(): SystemHealthStatus[] {
 }
 
 export async function getAdminMetrics(): Promise<AdminMetrics> {
-  const [libraryItems, teachers] = await Promise.all([
-    StorageService.getAll(),
-    TeacherService.getAll(),
-  ])
-  const jobs = getAllJobs()
+  try {
+    console.log('[admin-metrics] Starting metrics collection...')
 
-  const jobTotals = JOB_STATUSES.reduce(
-    (acc, status) => {
-      acc[status] = 0
-      return acc
-    },
-    {} as Record<JobStatus, number>
-  )
+    const [libraryItems, teachers] = await Promise.all([
+      StorageService.getAll().catch(err => {
+        console.error('[admin-metrics] Error loading library items:', err)
+        return []
+      }),
+      TeacherService.getAll().catch(err => {
+        console.error('[admin-metrics] Error loading teachers:', err)
+        return []
+      }),
+    ])
 
-  jobs.forEach(job => {
-    jobTotals[job.status] = (jobTotals[job.status] || 0) + 1
-  })
+    console.log(`[admin-metrics] Loaded ${libraryItems.length} library items, ${teachers.length} teachers`)
 
-  const totalLibrarySize = libraryItems.reduce((sum, item) => sum + (item.fileSize || 0), 0)
-  const storageUsageMb = bytesToMb(totalLibrarySize)
+    const jobs = getAllJobs()
+    console.log(`[admin-metrics] Loaded ${jobs.length} jobs`)
 
-  const sevenDaysAgo = new Date()
-  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
-
-  const recentLibraryItems = libraryItems.filter(item => new Date(item.createdAt) >= sevenDaysAgo).length
-  const activeTeachers = teachers.filter(teacher => teacher.status === 'active').length
-  const disabledTeachers = teachers.length - activeTeachers
-
-  const teacherGenerations = teachers.reduce((sum, teacher) => sum + (teacher.totalGenerations || 0), 0)
-
-  const trend = buildUsageTrend(libraryItems, jobs)
-
-  const metrics: AdminMetrics = {
-    summary: {
-      totalLibraryItems: libraryItems.length,
-      recentLibraryItems,
-      activeJobs: jobTotals.extracting + jobTotals.summarizing + jobTotals.rendering,
-      queuedJobs: jobTotals.queued,
-      failedJobs: jobTotals.failed,
-      totalTeachers: teachers.length,
-      activeTeachers,
-      disabledTeachers,
-      storageUsageMb,
-    },
-    usage: {
-      trend,
-      totals: {
-        uploads: libraryItems.length,
-        aiRequests: jobs.length + teacherGenerations,
-        storageMb: storageUsageMb,
+    const jobTotals = JOB_STATUSES.reduce(
+      (acc, status) => {
+        acc[status] = 0
+        return acc
       },
-    },
-    billing: {
-      plan: libraryItems.length > 500 ? 'Scale' : 'Growth',
-      limit: 1000,
-      used: Math.min(1000, libraryItems.length + jobTotals.extracting + jobTotals.rendering),
-      renewsOn: new Date(Date.now() + 1000 * 60 * 60 * 24 * 12).toISOString(),
-    },
-    jobs: {
-      totals: jobTotals,
-      recent: [...jobs]
-        .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
-        .slice(0, 8)
-        .map(job => ({
-          id: job.id,
-          fileName: job.fileName,
-          fileSize: job.fileSize,
-          status: job.status,
-          progress: job.progress,
-          createdAt: new Date(job.createdAt).toISOString(),
-          updatedAt: new Date(job.updatedAt).toISOString(),
-          estimatedTimeRemaining: job.estimatedTimeRemaining,
-          errorMessage: job.errorMessage,
-        })),
-    },
-    systemHealth: buildSystemHealthStates(),
-  }
+      {} as Record<JobStatus, number>
+    )
 
-  return metrics
+    jobs.forEach(job => {
+      jobTotals[job.status] = (jobTotals[job.status] || 0) + 1
+    })
+
+    const totalLibrarySize = libraryItems.reduce((sum, item) => sum + (item.fileSize || 0), 0)
+    const storageUsageMb = bytesToMb(totalLibrarySize)
+
+    const sevenDaysAgo = new Date()
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
+
+    const recentLibraryItems = libraryItems.filter(item => new Date(item.createdAt) >= sevenDaysAgo).length
+    const activeTeachers = teachers.filter(teacher => teacher.status === 'active').length
+    const disabledTeachers = teachers.length - activeTeachers
+
+    const teacherGenerations = teachers.reduce((sum, teacher) => sum + (teacher.totalGenerations || 0), 0)
+
+    const trend = buildUsageTrend(libraryItems, jobs)
+
+    const metrics: AdminMetrics = {
+      summary: {
+        totalLibraryItems: libraryItems.length,
+        recentLibraryItems,
+        activeJobs: jobTotals.extracting + jobTotals.summarizing + jobTotals.rendering,
+        queuedJobs: jobTotals.queued,
+        failedJobs: jobTotals.failed,
+        totalTeachers: teachers.length,
+        activeTeachers,
+        disabledTeachers,
+        storageUsageMb,
+      },
+      usage: {
+        trend,
+        totals: {
+          uploads: libraryItems.length,
+          aiRequests: jobs.length + teacherGenerations,
+          storageMb: storageUsageMb,
+        },
+      },
+      billing: {
+        plan: libraryItems.length > 500 ? 'Scale' : 'Growth',
+        limit: 1000,
+        used: Math.min(1000, libraryItems.length + jobTotals.extracting + jobTotals.rendering),
+        renewsOn: new Date(Date.now() + 1000 * 60 * 60 * 24 * 12).toISOString(),
+      },
+      jobs: {
+        totals: jobTotals,
+        recent: [...jobs]
+          .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
+          .slice(0, 8)
+          .map(job => ({
+            id: job.id,
+            fileName: job.fileName,
+            fileSize: job.fileSize,
+            status: job.status,
+            progress: job.progress,
+            createdAt: new Date(job.createdAt).toISOString(),
+            updatedAt: new Date(job.updatedAt).toISOString(),
+            estimatedTimeRemaining: job.estimatedTimeRemaining,
+            errorMessage: job.errorMessage,
+          })),
+      },
+      systemHealth: buildSystemHealthStates(),
+    }
+
+    console.log('[admin-metrics] Metrics collection complete')
+    return metrics
+  } catch (error) {
+    console.error('[admin-metrics] Fatal error collecting metrics:', error)
+    throw error
+  }
 }
