@@ -1,7 +1,6 @@
 import type { AdminMetrics, Job, JobStatus, SystemHealthStatus } from '@/types'
 import { StorageService } from './storage-service'
 import { getAllJobs } from './job-store'
-import { TeacherService } from './teacher-service'
 
 const JOB_STATUSES: JobStatus[] = ['queued', 'extracting', 'summarizing', 'rendering', 'complete', 'failed']
 
