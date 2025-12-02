@@ -104,18 +104,12 @@ export async function getAdminMetrics(): Promise<AdminMetrics> {
   try {
     console.log('[admin-metrics] Starting metrics collection...')
 
-    const [libraryItems, teachers] = await Promise.all([
-      StorageService.getAll().catch(err => {
-        console.error('[admin-metrics] Error loading library items:', err)
-        return []
-      }),
-      TeacherService.getAll().catch(err => {
-        console.error('[admin-metrics] Error loading teachers:', err)
-        return []
-      }),
-    ])
+    const libraryItems = await StorageService.getAll().catch(err => {
+      console.error('[admin-metrics] Error loading library items:', err)
+      return []
+    })
 
-    console.log(`[admin-metrics] Loaded ${libraryItems.length} library items, ${teachers.length} teachers`)
+    console.log(`[admin-metrics] Loaded ${libraryItems.length} library items`)
 
     const jobs = getAllJobs()
     console.log(`[admin-metrics] Loaded ${jobs.length} jobs`)
@@ -139,10 +133,6 @@ export async function getAdminMetrics(): Promise<AdminMetrics> {
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
 
     const recentLibraryItems = libraryItems.filter(item => new Date(item.createdAt) >= sevenDaysAgo).length
-    const activeTeachers = teachers.filter(teacher => teacher.status === 'active').length
-    const disabledTeachers = teachers.length - activeTeachers
-
-    const teacherGenerations = teachers.reduce((sum, teacher) => sum + (teacher.totalGenerations || 0), 0)
 
     const trend = buildUsageTrend(libraryItems, jobs)
 
@@ -153,16 +143,16 @@ export async function getAdminMetrics(): Promise<AdminMetrics> {
         activeJobs: jobTotals.extracting + jobTotals.summarizing + jobTotals.rendering,
         queuedJobs: jobTotals.queued,
         failedJobs: jobTotals.failed,
-        totalTeachers: teachers.length,
-        activeTeachers,
-        disabledTeachers,
+        totalTeachers: 0,
+        activeTeachers: 0,
+        disabledTeachers: 0,
         storageUsageMb,
       },
       usage: {
         trend,
         totals: {
           uploads: libraryItems.length,
-          aiRequests: jobs.length + teacherGenerations,
+          aiRequests: jobs.length,
           storageMb: storageUsageMb,
         },
       },

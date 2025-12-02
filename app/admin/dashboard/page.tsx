@@ -337,7 +337,7 @@ export default function AdminDashboardPage() {
 
   const renderMetrics = () => (
     <>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Card className="p-6">
           <div className="flex items-start justify-between">
             <div>
@@ -385,23 +385,6 @@ export default function AdminDashboardPage() {
             </div>
             <div className="rounded-2xl bg-neutral-100 p-3 text-neutral-600">
               <BarChart3 className="h-5 w-5" />
-            </div>
-          </div>
-        </Card>
-
-        <Card className="p-6">
-          <div className="flex items-start justify-between">
-            <div>
-              <p className="text-sm text-neutral-500">Active Teachers</p>
-              <p className="mt-2 text-3xl font-semibold text-neutral-900">
-                {metrics?.summary.activeTeachers ?? 0}
-              </p>
-              <p className="text-xs text-neutral-500">
-                {metrics?.summary.totalTeachers ?? 0} total faculty
-              </p>
-            </div>
-            <div className="rounded-2xl bg-success-50 p-3 text-success-600">
-              <Users className="h-5 w-5" />
             </div>
           </div>
         </Card>
@@ -501,77 +484,7 @@ export default function AdminDashboardPage() {
         </Card>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
-        <Card className="lg:col-span-2">
-          <CardHeader className="flex flex-row items-center justify-between">
-            <div>
-              <CardTitle>Teacher Access</CardTitle>
-              <CardDescription>Enable or pause campus accounts</CardDescription>
-            </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={fetchAdminData}
-              disabled={isLoading}
-            >
-              <RefreshCcw className={`mr-2 h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
-              Sync
-            </Button>
-          </CardHeader>
-          <CardContent className="overflow-x-auto">
-            {teachers.length === 0 ? (
-              <p className="text-sm text-neutral-500">No teacher records yet.</p>
-            ) : (
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Teacher</TableHead>
-                    <TableHead>Subject</TableHead>
-                    <TableHead className="text-center">Generations</TableHead>
-                    <TableHead>Last Active</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead className="text-right">Access</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {teachers.map(teacher => (
-                    <TableRow key={teacher.id}>
-                      <TableCell>
-                        <div className="font-medium text-neutral-900">{teacher.name}</div>
-                        <div className="text-xs text-neutral-500">{teacher.email}</div>
-                      </TableCell>
-                      <TableCell className="text-sm text-neutral-600">{teacher.subject}</TableCell>
-                      <TableCell className="text-center text-sm font-semibold text-neutral-900">
-                        {integerNumber(teacher.totalGenerations)}
-                      </TableCell>
-                      <TableCell className="text-sm text-neutral-600">
-                        {dateTimeFormatter.format(new Date(teacher.lastActiveAt))}
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant={teacherStatusVariant[teacher.status]}>{teacher.status}</Badge>
-                      </TableCell>
-                      <TableCell className="text-right">
-                        <button
-                          type="button"
-                          aria-label="Toggle access"
-                          aria-pressed={teacher.status === 'active'}
-                          onClick={() => handleToggleTeacher(teacher)}
-                          disabled={updatingTeacherId === teacher.id}
-                          className={`inline-flex h-6 w-11 items-center rounded-full transition-colors ${teacher.status === 'active' ? 'bg-primary-500' : 'bg-neutral-300'} ${updatingTeacherId === teacher.id ? 'opacity-70' : ''}`}
-                        >
-                          <span
-                            className={`h-5 w-5 transform rounded-full bg-white transition-transform ${teacher.status === 'active' ? 'translate-x-5' : 'translate-x-1'}`}
-                          />
-                        </button>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            )}
-          </CardContent>
-        </Card>
-
+      <div className="grid gap-6">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
