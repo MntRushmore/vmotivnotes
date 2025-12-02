@@ -8,7 +8,6 @@ import {
   RefreshCcw,
   ShieldCheck,
   Sparkles,
-  Users,
   Zap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
