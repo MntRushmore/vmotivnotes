@@ -16,9 +16,8 @@ import { Input } from '@/components/ui/input'
 import { Badge, type BadgeProps } from '@/components/ui/badge'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Progress } from '@/components/ui/progress'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { useToast } from '@/components/ui/use-toast'
-import type { AdminMetrics, JobStatus, SystemHealthStatus, Teacher, TeacherStatus } from '@/types'
+import type { AdminMetrics, JobStatus, SystemHealthStatus } from '@/types'
 import { ADMIN_ACCESS_EVENT, ADMIN_ACCESS_FLAG } from '@/lib/constants'
 
 export const dynamic = 'force-dynamic'
@@ -53,12 +52,6 @@ const jobStatusVariant: Partial<Record<JobStatus, BadgeProps['variant']>> = {
   failed: 'destructive',
 }
 
-const teacherStatusVariant: Record<TeacherStatus, BadgeProps['variant']> = {
-  active: 'success',
-  disabled: 'destructive',
-  invited: 'warning',
-}
-
 const PageSkeleton = () => (
   <div className="space-y-6">
     <Skeleton className="h-8 w-64 rounded-2xl" />
@@ -75,13 +68,11 @@ const PageSkeleton = () => (
 export default function AdminDashboardPage() {
   const { toast } = useToast()
   const [metrics, setMetrics] = useState<AdminMetrics | null>(null)
-  const [teachers, setTeachers] = useState<Teacher[]>([])
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isInitializing, setIsInitializing] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
   const [adminKey, setAdminKey] = useState('')
   const [isVerifying, setIsVerifying] = useState(false)
-  const [updatingTeacherId, setUpdatingTeacherId] = useState<string | null>(null)
   const [lastRefreshedAt, setLastRefreshedAt] = useState<string | null>(null)
 
   const fetchAdminData = useCallback(async () => {
@@ -89,39 +80,26 @@ export default function AdminDashboardPage() {
     let unauthorized = false
 
     try {
-      const [metricsRes, teachersRes] = await Promise.all([
-        fetch('/api/admin/dashboard', {
-          cache: 'no-store',
-          credentials: 'include',
-        }),
-        fetch('/api/admin/teachers', {
-          cache: 'no-store',
-          credentials: 'include',
-        }),
-      ])
+      const metricsRes = await fetch('/api/admin/dashboard', {
+        cache: 'no-store',
+        credentials: 'include',
+      })
 
-      if (metricsRes.status === 401 || teachersRes.status === 401) {
+      if (metricsRes.status === 401) {
         unauthorized = true
         setIsAuthenticated(false)
         setMetrics(null)
-        setTeachers([])
         setLastRefreshedAt(null)
         return
       }
 
       const metricsPayload = await metricsRes.json()
-      const teachersPayload = await teachersRes.json()
 
       if (!metricsRes.ok) {
         throw new Error(metricsPayload?.error ?? 'Failed to load metrics')
       }
 
-      if (!teachersRes.ok) {
-        throw new Error(teachersPayload?.error ?? 'Failed to load teachers')
-      }
-
       setMetrics(metricsPayload.data)
-      setTeachers(teachersPayload.data)
       setIsAuthenticated(true)
       setLastRefreshedAt(new Date().toISOString())
 
@@ -200,85 +178,6 @@ export default function AdminDashboardPage() {
       setIsVerifying(false)
     }
   }, [adminKey, fetchAdminData, toast])
-
-  const handleToggleTeacher = useCallback(async (teacher: Teacher) => {
-    const previousStatus = teacher.status
-    const nextStatus: TeacherStatus = teacher.status === 'active' ? 'disabled' : 'active'
-
-    setUpdatingTeacherId(teacher.id)
-    setTeachers(prev =>
-      prev.map(existing =>
-        existing.id === teacher.id
-          ? { ...existing, status: nextStatus }
-          : existing
-      )
-    )
-
-    try {
-      const response = await fetch('/api/admin/teachers', {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-        body: JSON.stringify({ teacherId: teacher.id, status: nextStatus }),
-      })
-
-      const payload = await response.json()
-
-      if (!response.ok) {
-        throw new Error(payload?.error ?? 'Unable to update teacher')
-      }
-
-      const updatedTeacher = payload?.data as Teacher
-
-      setTeachers(prev =>
-        prev.map(existing =>
-          existing.id === teacher.id ? updatedTeacher : existing
-        )
-      )
-
-      setMetrics(prev => {
-        if (!prev) return prev
-        const summary = { ...prev.summary }
-
-        if (previousStatus !== nextStatus) {
-          if (nextStatus === 'active') {
-            summary.activeTeachers += 1
-            summary.disabledTeachers = Math.max(0, summary.disabledTeachers - 1)
-          } else {
-            summary.disabledTeachers += 1
-            summary.activeTeachers = Math.max(0, summary.activeTeachers - 1)
-          }
-        }
-
-        return {
-          ...prev,
-          summary,
-        }
-      })
-
-      toast({
-        title: nextStatus === 'active' ? 'Teacher enabled' : 'Teacher disabled',
-        description: `${updatedTeacher.name} is now ${nextStatus}.`,
-      })
-    } catch (error) {
-      console.error('Teacher toggle failed:', error)
-      setTeachers(prev =>
-        prev.map(existing =>
-          existing.id === teacher.id ? { ...existing, status: previousStatus } : existing
-        )
-      )
-
-      toast({
-        title: 'Unable to update teacher',
-        description: error instanceof Error ? error.message : 'Please try again.',
-        variant: 'destructive',
-      })
-    } finally {
-      setUpdatingTeacherId(null)
-    }
-  }, [toast])
 
   const usageTrend = metrics?.usage.trend ?? []
   const usagePeak = useMemo(() => {
