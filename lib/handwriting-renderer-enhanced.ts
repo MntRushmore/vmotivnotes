@@ -1,19 +1,9 @@
 import { createCanvas } from 'canvas'
 
-// Use multiple fallback fonts for better compatibility
-const HANDWRITING_FONTS = [
-  'Comic Sans MS',     // Available on most systems, handwriting-like
-  'Marker Felt',       // macOS handwriting font
-  'Segoe Print',       // Windows handwriting font
-  'Bradley Hand',      // macOS
-  'Chalkboard',        // macOS
-  'Brush Script MT',   // Windows/macOS
-  'Lucida Handwriting', // Windows
-  'cursive',           // Generic fallback
-  'Arial'              // Final fallback
-].join(', ')
-
-const TITLE_FONT = 'Georgia, serif'
+// Use fonts that are available in Node.js canvas by default
+// Arial and sans-serif are reliably available
+const HANDWRITING_FONTS = 'Arial, sans-serif'
+const TITLE_FONT = 'Arial, sans-serif'
 const BODY_FONT = HANDWRITING_FONTS
 
 export interface HandwritingOptions {

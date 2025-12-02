@@ -800,21 +800,21 @@ function GeneratePageContent() {
                   )}
 
                   {/* Markdown Editor - Split View */}
-                  <div className="grid grid-cols-2 gap-4 h-[700px]">
+                  <div className="grid grid-cols-2 gap-3 h-[700px]">
                     {/* Raw Markdown */}
                     <div className="flex flex-col">
-                      <h3 className="text-sm font-medium text-neutral-600 mb-2">Markdown Source</h3>
+                      <h3 className="text-sm font-medium text-neutral-600 mb-1.5">Markdown Source</h3>
                       <textarea
                         value={activeNote.rawMarkdown}
                         onChange={(e) => handleMarkdownEdit(e.target.value)}
-                        className="flex-1 p-4 bg-neutral-50 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 font-mono text-sm resize-none"
+                        className="flex-1 p-3 bg-neutral-50 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 font-mono text-sm resize-none"
                       />
                     </div>
 
                     {/* Styled Preview */}
                     <div className="flex flex-col">
-                      <h3 className="text-sm font-medium text-neutral-600 mb-2">Formatted Preview</h3>
-                      <div className="flex-1 p-6 bg-white border border-neutral-200 rounded-lg overflow-y-auto prose prose-sm max-w-none">
+                      <h3 className="text-sm font-medium text-neutral-600 mb-1.5">Formatted Preview</h3>
+                      <div className="flex-1 p-3 bg-white border border-neutral-200 rounded-lg overflow-y-auto prose prose-sm max-w-none">
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm, remarkMath]}
                           rehypePlugins={[rehypeKatex]}
@@ -828,7 +828,7 @@ function GeneratePageContent() {
               ) : (
                 /* Handwriting Preview */
                 <div>
-                  <h2 className="text-2xl font-bold text-neutral-900 mb-4">Handwritten Preview</h2>
+                  <h2 className="text-2xl font-bold text-neutral-900 mb-2">Handwritten Preview</h2>
                   {isRenderingHandwriting ? (
                     <div className="flex items-center justify-center h-[600px] bg-white rounded-lg border-2 border-dashed border-neutral-200">
                       <div className="text-center">
@@ -838,7 +838,7 @@ function GeneratePageContent() {
                       </div>
                     </div>
                   ) : handwritingImageUrl ? (
-                    <div className="bg-white rounded-lg p-4 shadow-soft">
+                    <div className="bg-white rounded-lg p-2 shadow-soft">
                       <img src={handwritingImageUrl} alt="Handwritten note" className="w-full" />
                     </div>
                   ) : (

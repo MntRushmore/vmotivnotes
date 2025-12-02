@@ -16,12 +16,18 @@ export function getAdminSessionSignature(): string | null {
     .digest('hex')
 }
 
-export function isAdminRequestAuthorized(): boolean {
+export async function isAdminRequestAuthorized(): Promise<boolean> {
   const expectedSignature = getAdminSessionSignature()
   if (!expectedSignature) {
     return false
   }
 
-  const sessionCookie = cookies().get(ADMIN_SESSION_COOKIE)
-  return sessionCookie?.value === expectedSignature
+  try {
+    const cookieStore = await cookies()
+    const sessionCookie = cookieStore.get(ADMIN_SESSION_COOKIE)
+    return sessionCookie?.value === expectedSignature
+  } catch (error) {
+    console.error('Error checking admin authorization:', error)
+    return false
+  }
 }

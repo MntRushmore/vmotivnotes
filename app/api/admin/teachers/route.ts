@@ -12,7 +12,7 @@ function isValidStatus(value: unknown): value is TeacherStatus {
   return typeof value === 'string' && VALID_STATUSES.includes(value as TeacherStatus)
 }
 
-function ensureAdminAccess() {
+async function ensureAdminAccess() {
   if (!isAdminKeyConfigured()) {
     return NextResponse.json(
       { error: 'Admin dashboard key is not configured' },
@@ -20,7 +20,8 @@ function ensureAdminAccess() {
     )
   }
 
-  if (!isAdminRequestAuthorized()) {
+  const isAuthorized = await isAdminRequestAuthorized()
+  if (!isAuthorized) {
     return NextResponse.json(
       { error: 'Unauthorized' },
       { status: 401 }
@@ -31,7 +32,7 @@ function ensureAdminAccess() {
 }
 
 export async function GET() {
-  const guardResponse = ensureAdminAccess()
+  const guardResponse = await ensureAdminAccess()
   if (guardResponse) {
     return guardResponse
   }
@@ -49,7 +50,7 @@ export async function GET() {
 }
 
 export async function PATCH(request: NextRequest) {
-  const guardResponse = ensureAdminAccess()
+  const guardResponse = await ensureAdminAccess()
   if (guardResponse) {
     return guardResponse
   }

@@ -15,7 +15,8 @@ export async function GET() {
       )
     }
 
-    if (!isAdminRequestAuthorized()) {
+    const isAuthorized = await isAdminRequestAuthorized()
+    if (!isAuthorized) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
