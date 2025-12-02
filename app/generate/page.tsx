@@ -46,6 +46,9 @@ function GeneratePageContent() {
   const [showQuiz, setShowQuiz] = useState(false)
   const [quiz, setQuiz] = useState<Array<any>>([])
   const [isGeneratingQuiz, setIsGeneratingQuiz] = useState(false)
+  const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
+  const [lastSaved, setLastSaved] = useState<Date | null>(null)
+  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false)
 
   // Load active note on mount
   useEffect(() => {
@@ -56,9 +59,64 @@ function GeneratePageContent() {
     }
   }, [])
 
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ctrl/Cmd + /: Show keyboard shortcuts help
+      if ((e.ctrlKey || e.metaKey) && e.key === '/') {
+        e.preventDefault()
+        setShowKeyboardHelp(!showKeyboardHelp)
+      }
+
+      // Escape: Close modals
+      if (e.key === 'Escape') {
+        setShowKeyboardHelp(false)
+        setDeleteConfirm(null)
+        setShowFlashcards(false)
+        setShowQuiz(false)
+      }
+
+      // Ctrl/Cmd + N: New note
+      if ((e.ctrlKey || e.metaKey) && e.key === 'n') {
+        e.preventDefault()
+        setActiveNote(null)
+        setHandwritingImageUrl(null)
+        showToastNotification('Ready to create new note')
+      }
+
+      // Ctrl/Cmd + S: Show save confirmation (visual feedback)
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault()
+        if (activeNote) {
+          setLastSaved(new Date())
+          showToastNotification('All changes auto-saved!')
+        }
+      }
+
+      // Ctrl/Cmd + D: Download current note
+      if ((e.ctrlKey || e.metaKey) && e.key === 'd' && activeNote) {
+        e.preventDefault()
+        handleDownloadText()
+      }
+
+      // Ctrl/Cmd + Shift + C: Copy to clipboard
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'C' && activeNote) {
+        e.preventDefault()
+        handleCopyText()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [activeNote, showKeyboardHelp])
+
   // Auto-generate if autoGenerate parameter is present
   useEffect(() => {
-    if (autoGenerate && exampleTopic && !isGenerating && !activeNote) {
+    if (autoGenerate && exampleTopic && !isGenerating) {
+      // Clear active note to show generation form
+      setActiveNote(null)
+      setHandwritingImageUrl(null)
+
       // Small delay to show the loading message
       const timer = setTimeout(() => {
         handleGenerate()
@@ -150,6 +208,9 @@ function GeneratePageContent() {
       // Reset form
       setTopic('')
       setSelectedFile(null)
+
+      // Show success toast
+      showToastNotification('Note generated successfully!')
     } catch (error) {
       console.error('Generation error:', error)
       const errorMsg = error instanceof Error ? error.message : 'Failed to generate note'
@@ -201,6 +262,7 @@ function GeneratePageContent() {
 
       setShowRefinement(false)
       setCustomInstruction('')
+      showToastNotification('Note refined successfully!')
     } catch (error) {
       console.error('Refinement error:', error)
       setErrorMessage('Failed to refine note')
@@ -219,6 +281,7 @@ function GeneratePageContent() {
     const updatedNote = updatedSession.notes.find(n => n.id === activeNote.id)
     if (updatedNote) {
       setActiveNote(updatedNote)
+      setLastSaved(new Date())
     }
   }
 
@@ -226,6 +289,7 @@ function GeneratePageContent() {
   const handleDeleteNote = (noteId: string) => {
     const updatedSession = NoteSessionManager.deleteNote(noteId)
     setSession(updatedSession)
+    setDeleteConfirm(null)
 
     if (activeNote?.id === noteId) {
       const newActive = updatedSession.notes[0] || null
@@ -233,6 +297,13 @@ function GeneratePageContent() {
       if (newActive) renderHandwriting(newActive.rawMarkdown)
       else setHandwritingImageUrl(null)
     }
+
+    showToastNotification('Note deleted successfully')
+  }
+
+  // Confirm delete
+  const confirmDelete = (noteId: string) => {
+    setDeleteConfirm(noteId)
   }
 
   // Switch active note
@@ -253,6 +324,7 @@ function GeneratePageContent() {
     a.download = `${activeNote.title.replace(/[^a-z0-9]/gi, '_')}.md`
     a.click()
     URL.revokeObjectURL(url)
+    showToastNotification('Note downloaded successfully!')
   }
 
   // Show toast notification
@@ -268,10 +340,10 @@ function GeneratePageContent() {
 
     try {
       await navigator.clipboard.writeText(activeNote.rawMarkdown)
-      showToastNotification('✓ Copied to clipboard!')
+      showToastNotification('Copied to clipboard!')
     } catch (error) {
       console.error('Copy failed:', error)
-      showToastNotification('✗ Failed to copy')
+      showToastNotification('Failed to copy')
     }
   }
 
@@ -355,30 +427,34 @@ function GeneratePageContent() {
 
         <div className="flex-1 overflow-y-auto space-y-2">
           {session.notes.length === 0 ? (
-            <p className="text-sm text-neutral-500 text-center py-8">No notes yet</p>
+            <div className="text-center py-8">
+              <p className="text-sm text-neutral-500 mb-2">No notes yet</p>
+              <p className="text-xs text-neutral-400">Create your first note to get started!</p>
+            </div>
           ) : (
             session.notes.map(note => (
               <div
                 key={note.id}
                 className={`
-                  p-3 rounded-lg cursor-pointer transition-all group
-                  ${activeNote?.id === note.id ? 'bg-primary-100 border border-primary-300' : 'bg-neutral-50 hover:bg-neutral-100'}
+                  p-3 rounded-lg cursor-pointer transition-all group relative
+                  ${activeNote?.id === note.id ? 'bg-primary-100 border border-primary-300 shadow-sm' : 'bg-neutral-50 hover:bg-neutral-100 hover:shadow-sm'}
                 `}
                 onClick={() => handleSwitchNote(note)}
               >
                 <div className="flex justify-between items-start mb-1">
-                  <h3 className="text-sm font-medium text-neutral-900 line-clamp-2">{note.title}</h3>
+                  <h3 className="text-sm font-medium text-neutral-900 line-clamp-2 pr-8">{note.title}</h3>
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
-                      handleDeleteNote(note.id)
+                      confirmDelete(note.id)
                     }}
-                    className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-red-100 rounded"
+                    className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-red-100 rounded"
+                    title="Delete note"
                   >
                     <Trash2 size={14} className="text-red-600" />
                   </button>
                 </div>
-                <p className="text-xs text-neutral-500">
+                <p className="text-xs text-neutral-500 font-medium">
                   {note.gradeLevel} • {note.subject || 'General'}
                 </p>
                 <p className="text-xs text-neutral-400 mt-1">
@@ -395,12 +471,20 @@ function GeneratePageContent() {
         {/* Top Bar */}
         <div className="bg-white border-b border-neutral-200 px-6 py-4">
           <div className="flex items-center justify-between">
-            <button
-              onClick={() => router.push('/')}
-              className="text-sm text-neutral-600 hover:text-neutral-900"
-            >
-              ← Back to Home
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => router.push('/')}
+                className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                ← Back to Home
+              </button>
+              {activeNote && lastSaved && (
+                <div className="flex items-center gap-2 text-xs text-neutral-500">
+                  <CheckCircle size={14} className="text-green-600" />
+                  <span>Saved {new Date(lastSaved).toLocaleTimeString()}</span>
+                </div>
+              )}
+            </div>
 
             {activeNote && (
               <div className="flex items-center gap-3">
@@ -478,7 +562,10 @@ function GeneratePageContent() {
           {!activeNote ? (
             /* Generation Form */
             <div className="max-w-2xl mx-auto">
-              <h1 className="text-3xl font-bold text-neutral-900 mb-8">Generate New Note</h1>
+              <div className="mb-8">
+                <h1 className="text-3xl font-bold text-neutral-900 mb-2">Generate New Note</h1>
+                <p className="text-neutral-600">Create comprehensive study notes with AI assistance</p>
+              </div>
 
               {/* Input Mode Toggle */}
               <div className="flex gap-3 mb-6">
@@ -615,17 +702,17 @@ function GeneratePageContent() {
                 <button
                   onClick={handleGenerate}
                   disabled={isGenerating}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium transition-colors"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium transition-all hover:shadow-lg active:scale-98"
                 >
                   {isGenerating ? (
                     <>
                       <Loader2 size={20} className="animate-spin" />
-                      Generating...
+                      <span>Generating with AI...</span>
                     </>
                   ) : (
                     <>
                       <Sparkles size={20} />
-                      Generate Note
+                      <span>Generate Note</span>
                     </>
                   )}
                 </button>
@@ -704,9 +791,9 @@ function GeneratePageContent() {
                         </button>
                       </div>
                       {isRefining && (
-                        <div className="mt-3 flex items-center gap-2 text-sm text-neutral-600">
+                        <div className="mt-3 flex items-center gap-2 text-sm text-primary-600 bg-primary-50 px-3 py-2 rounded-lg">
                           <Loader2 size={16} className="animate-spin" />
-                          Refining note...
+                          <span className="font-medium">Refining with AI...</span>
                         </div>
                       )}
                     </div>
@@ -743,10 +830,11 @@ function GeneratePageContent() {
                 <div>
                   <h2 className="text-2xl font-bold text-neutral-900 mb-4">Handwritten Preview</h2>
                   {isRenderingHandwriting ? (
-                    <div className="flex items-center justify-center h-[600px] bg-white rounded-lg">
+                    <div className="flex items-center justify-center h-[600px] bg-white rounded-lg border-2 border-dashed border-neutral-200">
                       <div className="text-center">
-                        <Loader2 size={32} className="animate-spin text-primary-600 mx-auto mb-2" />
-                        <p className="text-neutral-600">Rendering handwriting...</p>
+                        <Loader2 size={40} className="animate-spin text-primary-600 mx-auto mb-3" />
+                        <p className="text-neutral-700 font-medium">Rendering handwriting...</p>
+                        <p className="text-sm text-neutral-500 mt-1">This may take a moment</p>
                       </div>
                     </div>
                   ) : handwritingImageUrl ? (
@@ -767,8 +855,8 @@ function GeneratePageContent() {
 
       {/* Flashcards Modal */}
       {showFlashcards && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 animate-slide-in-up">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold text-neutral-900">Flashcards ({flashcards.length})</h2>
               <button
@@ -826,8 +914,8 @@ function GeneratePageContent() {
 
       {/* Quiz Modal */}
       {showQuiz && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-3xl w-full max-h-[80vh] overflow-y-auto p-6">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-xl max-w-3xl w-full max-h-[80vh] overflow-y-auto p-6 animate-slide-in-up">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold text-neutral-900">Quiz ({quiz.length} Questions)</h2>
               <button
@@ -934,13 +1022,102 @@ function GeneratePageContent() {
         </div>
       </footer>
 
+      {/* Delete Confirmation Modal */}
+      {deleteConfirm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl animate-slide-in-up">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                <AlertCircle size={24} className="text-red-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-neutral-900 mb-2">Delete Note?</h3>
+                <p className="text-sm text-neutral-600">
+                  Are you sure you want to delete this note? This action cannot be undone.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setDeleteConfirm(null)}
+                className="flex-1 px-4 py-2 bg-neutral-100 text-neutral-700 rounded-lg hover:bg-neutral-200 transition-colors font-medium"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => handleDeleteNote(deleteConfirm)}
+                className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Keyboard Shortcuts Help */}
+      {showKeyboardHelp && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in" onClick={() => setShowKeyboardHelp(false)}>
+          <div className="bg-white rounded-xl max-w-lg w-full p-6 shadow-2xl animate-slide-in-up" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-neutral-900">Keyboard Shortcuts</h2>
+              <button
+                onClick={() => setShowKeyboardHelp(false)}
+                className="text-neutral-500 hover:text-neutral-700 text-2xl leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between py-2 border-b border-neutral-100">
+                <span className="text-neutral-700">Show this help</span>
+                <kbd className="px-3 py-1.5 bg-neutral-100 text-neutral-800 rounded-md text-sm font-mono">⌘ /</kbd>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-neutral-100">
+                <span className="text-neutral-700">New note</span>
+                <kbd className="px-3 py-1.5 bg-neutral-100 text-neutral-800 rounded-md text-sm font-mono">⌘ N</kbd>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-neutral-100">
+                <span className="text-neutral-700">Save (show confirmation)</span>
+                <kbd className="px-3 py-1.5 bg-neutral-100 text-neutral-800 rounded-md text-sm font-mono">⌘ S</kbd>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-neutral-100">
+                <span className="text-neutral-700">Download note</span>
+                <kbd className="px-3 py-1.5 bg-neutral-100 text-neutral-800 rounded-md text-sm font-mono">⌘ D</kbd>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-neutral-100">
+                <span className="text-neutral-700">Copy to clipboard</span>
+                <kbd className="px-3 py-1.5 bg-neutral-100 text-neutral-800 rounded-md text-sm font-mono">⌘ ⇧ C</kbd>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <span className="text-neutral-700">Close modal</span>
+                <kbd className="px-3 py-1.5 bg-neutral-100 text-neutral-800 rounded-md text-sm font-mono">Esc</kbd>
+              </div>
+            </div>
+            <p className="text-xs text-neutral-500 mt-6 text-center">
+              ⌘ = Cmd on Mac, Ctrl on Windows/Linux
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Toast Notification */}
       {showToast && (
-        <div className="fixed bottom-6 right-6 bg-primary-800 text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-5 z-50">
+        <div className="fixed bottom-6 right-6 bg-primary-800 text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-3 z-50 animate-slide-in-up">
           <CheckCircle size={20} className="text-gold-400" />
           <span className="font-medium">{toastMessage}</span>
         </div>
       )}
+
+      {/* Keyboard Shortcuts Hint */}
+      <button
+        onClick={() => setShowKeyboardHelp(true)}
+        className="fixed bottom-6 left-6 bg-white text-neutral-700 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2 text-sm font-medium border border-neutral-200 hover:border-primary-300"
+        title="Keyboard shortcuts"
+      >
+        <span>⌨️</span>
+        <span className="hidden sm:inline">Shortcuts</span>
+      </button>
     </div>
   )
 }
