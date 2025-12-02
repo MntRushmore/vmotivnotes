@@ -66,7 +66,7 @@ export class HandwritingRenderer {
     // Set text rendering quality
     ctx.quality = 'best'
     ctx.patternQuality = 'best'
-    ctx.textDrawingMode = 'fill'
+    ctx.textDrawingMode = 'glyph'
     ctx.antialias = 'default'
 
     // Background - aged paper with gradient
