@@ -180,9 +180,27 @@ export default function WhiteboardPage() {
             </button>
           </div>
 
+          {/* Warning Banner */}
+          <div className="bg-amber-50 border-b border-amber-200 px-6 py-3">
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
+                <span className="text-lg">⚠️</span>
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-amber-900">
+                  Local Mode: Drawings are saved to your browser only
+                </p>
+                <p className="text-xs text-amber-700 mt-0.5">
+                  Real-time collaboration is not enabled yet. Each user sees their own drawings. See MULTIPLAYER_SETUP.md to enable sync.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Whiteboard Area */}
           <div className="flex-1 relative bg-white">
             <Tldraw
+              autoFocus
               persistenceKey={`vmotiv8-whiteboard-${roomId}`}
             />
           </div>

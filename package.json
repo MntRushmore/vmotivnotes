@@ -37,8 +37,11 @@
     "tailwindcss": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
     "tesseract.js": "^6.0.1",
-    "tldraw": "^2.0.0",
-    "uploadthing": "^7.7.4"
+    "tldraw": "^2.4.6",
+    "@tldraw/sync": "^2.4.6",
+    "uploadthing": "^7.7.4",
+    "y-partykit": "^0.0.19",
+    "partykit": "^0.0.111"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
