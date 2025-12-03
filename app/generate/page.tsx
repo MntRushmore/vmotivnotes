@@ -341,18 +341,32 @@ function GeneratePageContent() {
     setActiveNote(note)
   }
 
-  // Download as text
-  const handleDownloadText = () => {
+  // Download as PDF
+  const handleDownloadText = async () => {
     if (!activeNote) return
 
-    const blob = new Blob([activeNote.rawMarkdown], { type: 'text/markdown' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `${activeNote.title.replace(/[^a-z0-9]/gi, '_')}.md`
-    a.click()
-    URL.revokeObjectURL(url)
-    showToastNotification('Note downloaded successfully!')
+    try {
+      showToastNotification('Generating PDF...')
+
+      // Dynamically import the PDF generator (client-side only)
+      const { generateNotePDF } = await import('@/lib/pdf-generator')
+
+      // Generate the PDF
+      const pdfBlob = await generateNotePDF(activeNote.title, activeNote.content)
+
+      // Create download link
+      const url = URL.createObjectURL(pdfBlob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `${activeNote.title.replace(/[^a-z0-9]/gi, '_')}.pdf`
+      a.click()
+      URL.revokeObjectURL(url)
+
+      showToastNotification('PDF downloaded successfully!')
+    } catch (error) {
+      console.error('PDF generation error:', error)
+      showToastNotification('Failed to generate PDF')
+    }
   }
 
   // Show toast notification
@@ -557,7 +571,7 @@ function GeneratePageContent() {
                   className="flex items-center gap-2 px-3 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-lg text-sm font-medium transition-colors"
                 >
                   <Download size={16} />
-                  Download
+                  Download PDF
                 </button>
                 <button
                   onClick={handleCopyText}
