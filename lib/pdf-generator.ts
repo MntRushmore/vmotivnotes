@@ -1,17 +1,10 @@
 import { jsPDF } from 'jspdf'
-
-interface NoteContent {
-  title: string
-  intro: string
-  keyPoints: string[]
-  examples: string[]
-  quickCheck?: Array<{ question: string; answer: string }>
-}
+import type { TutorNote } from '@/types'
 
 /**
- * Generate a beautifully formatted PDF from note content
+ * Generate a beautifully formatted PDF from tutor note
  */
-export async function generateNotePDF(title: string, content: NoteContent): Promise<Blob> {
+export async function generateNotePDF(note: TutorNote): Promise<Blob> {
   const pdf = new jsPDF({
     orientation: 'portrait',
     unit: 'mm',
@@ -66,7 +59,7 @@ export async function generateNotePDF(title: string, content: NoteContent): Prom
   pdf.setFontSize(24)
   pdf.setFont('helvetica', 'bold')
 
-  const titleLines = wrapText(content.title, contentWidth)
+  const titleLines = wrapText(note.title, contentWidth)
   titleLines.forEach(line => {
     pdf.text(line, margin, yPosition)
     yPosition += 10
@@ -91,7 +84,7 @@ export async function generateNotePDF(title: string, content: NoteContent): Prom
   pdf.setFontSize(11)
   pdf.setFont('helvetica', 'normal')
 
-  const introLines = wrapText(content.intro, contentWidth - 10)
+  const introLines = wrapText(note.intro, contentWidth - 10)
   let introY = yPosition + 5
   introLines.forEach(line => {
     pdf.text(line, margin + 5, introY)
@@ -113,7 +106,7 @@ export async function generateNotePDF(title: string, content: NoteContent): Prom
   pdf.setFontSize(11)
   pdf.setFont('helvetica', 'normal')
 
-  content.keyPoints.forEach((point, index) => {
+  note.bullets.forEach((point, index) => {
     checkAndAddPage(15)
 
     // Bullet point with gold circle
@@ -131,58 +124,8 @@ export async function generateNotePDF(title: string, content: NoteContent): Prom
 
   yPosition += 5
 
-  // ==================== EXAMPLES ====================
-  if (content.examples && content.examples.length > 0) {
-    checkAndAddPage(15)
-
-    pdf.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2])
-    pdf.setFontSize(16)
-    pdf.setFont('helvetica', 'bold')
-    pdf.text('Examples', margin, yPosition)
-    yPosition += 8
-
-    pdf.setTextColor(60, 60, 60)
-    pdf.setFontSize(10)
-    pdf.setFont('helvetica', 'normal')
-
-    content.examples.forEach((example, index) => {
-      checkAndAddPage(20)
-
-      // Example box
-      pdf.setFillColor(252, 252, 252)
-      pdf.setDrawColor(200, 200, 200)
-      pdf.setLineWidth(0.3)
-
-      const exampleLines = wrapText(example, contentWidth - 12)
-      const boxHeight = exampleLines.length * 5 + 8
-
-      pdf.roundedRect(margin, yPosition - 3, contentWidth, boxHeight, 2, 2, 'FD')
-
-      // Example number badge
-      pdf.setFillColor(accentColor[0], accentColor[1], accentColor[2])
-      pdf.circle(margin + 5, yPosition + 1, 3, 'F')
-      pdf.setTextColor(255, 255, 255)
-      pdf.setFontSize(9)
-      pdf.setFont('helvetica', 'bold')
-      pdf.text(`${index + 1}`, margin + 3.5, yPosition + 2)
-
-      // Example text
-      pdf.setTextColor(60, 60, 60)
-      pdf.setFontSize(10)
-      pdf.setFont('helvetica', 'normal')
-
-      exampleLines.forEach((line, lineIndex) => {
-        pdf.text(line, margin + 12, yPosition + (lineIndex * 5))
-      })
-
-      yPosition += boxHeight + 5
-    })
-
-    yPosition += 5
-  }
-
   // ==================== QUICK CHECK ====================
-  if (content.quickCheck && content.quickCheck.length > 0) {
+  if (note.quickCheck && note.quickCheck.length > 0) {
     checkAndAddPage(15)
 
     pdf.setTextColor(primaryColor[0], primaryColor[1], primaryColor[2])
@@ -191,7 +134,7 @@ export async function generateNotePDF(title: string, content: NoteContent): Prom
     pdf.text('Quick Check', margin, yPosition)
     yPosition += 8
 
-    content.quickCheck.forEach((item, index) => {
+    note.quickCheck.forEach((item, index) => {
       checkAndAddPage(25)
 
       // Question
@@ -205,16 +148,20 @@ export async function generateNotePDF(title: string, content: NoteContent): Prom
       })
       yPosition += qLines.length * 5 + 3
 
-      // Answer
-      pdf.setTextColor(100, 100, 100)
-      pdf.setFontSize(10)
-      pdf.setFont('helvetica', 'italic')
+      // Answer (if available)
+      if (item.answer) {
+        pdf.setTextColor(100, 100, 100)
+        pdf.setFontSize(10)
+        pdf.setFont('helvetica', 'italic')
 
-      const aLines = wrapText(`Answer: ${item.answer}`, contentWidth - 5)
-      aLines.forEach((line, lineIndex) => {
-        pdf.text(line, margin + 5, yPosition + (lineIndex * 5))
-      })
-      yPosition += aLines.length * 5 + 7
+        const aLines = wrapText(`Answer: ${item.answer}`, contentWidth - 5)
+        aLines.forEach((line, lineIndex) => {
+          pdf.text(line, margin + 5, yPosition + (lineIndex * 5))
+        })
+        yPosition += aLines.length * 5 + 7
+      } else {
+        yPosition += 7
+      }
     })
   }
 

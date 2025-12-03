@@ -352,7 +352,7 @@ function GeneratePageContent() {
       const { generateNotePDF } = await import('@/lib/pdf-generator')
 
       // Generate the PDF
-      const pdfBlob = await generateNotePDF(activeNote.title, activeNote.content)
+      const pdfBlob = await generateNotePDF(activeNote)
 
       // Create download link
       const url = URL.createObjectURL(pdfBlob)
