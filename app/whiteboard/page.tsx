@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { ArrowLeft, Users, Copy, Check } from 'lucide-react'
+import { Tldraw } from 'tldraw'
+import 'tldraw/tldraw.css'
 
 /**
  * Shared Whiteboard Page
@@ -12,11 +14,6 @@ import { ArrowLeft, Users, Copy, Check } from 'lucide-react'
  * - Real-time collaboration via tldraw
  * - Shareable room codes
  * - Easy join/create room interface
- *
- * SETUP REQUIRED:
- * 1. Run: npm install tldraw
- * 2. Uncomment the tldraw imports below
- * 3. Deploy or run locally
  */
 
 export default function WhiteboardPage() {
@@ -185,42 +182,9 @@ export default function WhiteboardPage() {
 
           {/* Whiteboard Area */}
           <div className="flex-1 relative bg-white">
-            {/* Placeholder - Replace with actual tldraw component after npm install */}
-            <div className="absolute inset-0 flex items-center justify-center bg-neutral-50">
-              <div className="text-center max-w-md p-8">
-                <div className="text-6xl mb-4">🎨</div>
-                <h2 className="text-2xl font-bold text-neutral-900 mb-3">Whiteboard Ready!</h2>
-                <p className="text-neutral-600 mb-6">
-                  To enable the whiteboard, complete the setup:
-                </p>
-                <div className="bg-neutral-900 text-white p-4 rounded-lg font-mono text-sm text-left mb-6">
-                  <div>1. npm install tldraw</div>
-                  <div className="mt-2">2. Uncomment imports in this file</div>
-                  <div className="mt-2">3. Restart dev server</div>
-                </div>
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg text-left text-sm">
-                  <p className="text-blue-800">
-                    <strong>Room Code:</strong> <span className="font-mono">{roomId}</span>
-                  </p>
-                  <p className="text-blue-700 mt-2">
-                    This code works! Your students can join when tldraw is installed.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/*
-            UNCOMMENT THIS SECTION AFTER INSTALLING TLDRAW:
-
-            import { Tldraw } from 'tldraw'
-            import 'tldraw/tldraw.css'
-
-            Then replace the placeholder div above with:
-
             <Tldraw
               persistenceKey={`vmotiv8-whiteboard-${roomId}`}
             />
-            */}
           </div>
         </div>
       )}

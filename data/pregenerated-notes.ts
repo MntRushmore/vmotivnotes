@@ -1490,6 +1490,855 @@ export const pregeneratedNotes: PregeneratedNote[] = [
     }
   }
 
+  // ==================== ALGEBRA 2 ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'Algebra 2',
+    topicName: 'Logarithms and Exponential Functions',
+    content: {
+      title: 'Logarithms and Exponential Functions',
+      intro: 'Logarithms and exponential functions are inverse operations that model growth, decay, and many real-world phenomena. Understanding their properties and relationships is essential for advanced mathematics and science.',
+      keyPoints: [
+        'An exponential function has the form f(x) = a·bˣ where a ≠ 0, b > 0, and b ≠ 1',
+        'A logarithm is the inverse of an exponential: if bˣ = y, then log_b(y) = x',
+        'The natural logarithm ln(x) uses base e ≈ 2.718, while common logarithm log(x) uses base 10',
+        'Product rule: log_b(xy) = log_b(x) + log_b(y)',
+        'Quotient rule: log_b(x/y) = log_b(x) - log_b(y)',
+        'Power rule: log_b(xⁿ) = n·log_b(x)',
+        'Change of base formula: log_b(x) = log_c(x) / log_c(b)',
+        'Exponential growth: y = a·eᵏᵗ where k > 0 (population, compound interest)',
+        'Exponential decay: y = a·e⁻ᵏᵗ where k > 0 (radioactive decay, depreciation)',
+        'The domain of log_b(x) is x > 0; the range is all real numbers',
+        'The graphs of y = bˣ and y = log_b(x) are reflections across y = x',
+        'For exponential functions: as x → ∞, f(x) → ∞ (if b > 1) or f(x) → 0 (if 0 < b < 1)',
+        'Solving exponential equations: take logarithm of both sides',
+        'Solving logarithmic equations: convert to exponential form',
+        'Half-life formula: A(t) = A₀·(1/2)^(t/h) where h is the half-life'
+      ],
+      examples: [
+        'Solve: 2ˣ = 16\nSince 16 = 2⁴, we have x = 4\nAlternatively: log₂(16) = x → x = 4',
+        'Simplify: log₃(27) + log₃(9)\n= log₃(27·9) = log₃(243)\n= log₃(3⁵) = 5',
+        'Solve: 5^(x+2) = 125\n5^(x+2) = 5³\nx + 2 = 3\nx = 1',
+        'Expand: log(x²y³/z)\n= log(x²) + log(y³) - log(z)\n= 2log(x) + 3log(y) - log(z)',
+        'Solve for t: 1000 = 500·e^(0.05t)\n2 = e^(0.05t)\nln(2) = 0.05t\nt = ln(2)/0.05 ≈ 13.86 years',
+        'Graph description: y = 2ˣ passes through (0,1), increases exponentially, has horizontal asymptote at y = 0'
+      ],
+      commonMistakes: [
+        'Thinking log_b(x + y) = log_b(x) + log_b(y) (NOT TRUE - only for multiplication)',
+        'Forgetting that you cannot take the logarithm of a negative number',
+        'Confusing ln(x) with log(x) - they have different bases',
+        'Not checking for extraneous solutions when solving logarithmic equations',
+        'Incorrectly applying the power rule: log(x²) ≠ (log x)²'
+      ],
+      tips: [
+        'When solving exponential equations, try to express both sides with the same base',
+        'Remember: log and exponential functions "undo" each other',
+        'Always check that solutions to logarithmic equations are in the domain (x > 0)',
+        'Use the change of base formula to evaluate logs with uncommon bases on calculators',
+        'For word problems, identify if the situation involves growth (k > 0) or decay (k < 0)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'Algebra 2',
+    topicName: 'Polynomial Functions and Complex Numbers',
+    content: {
+      title: 'Polynomial Functions and Complex Numbers',
+      intro: 'Polynomial functions are fundamental algebraic expressions involving powers of variables. Complex numbers extend the real number system to include solutions to equations like x² = -1, enabling complete solutions to all polynomial equations.',
+      keyPoints: [
+        'A polynomial of degree n has the form: f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀',
+        'The Fundamental Theorem of Algebra: A polynomial of degree n has exactly n complex roots (counting multiplicity)',
+        'Complex number form: z = a + bi where i = √(-1) and i² = -1',
+        'Adding complex numbers: (a + bi) + (c + di) = (a + c) + (b + d)i',
+        'Multiplying complex numbers: (a + bi)(c + di) = (ac - bd) + (ad + bc)i',
+        'Complex conjugate of z = a + bi is z̄ = a - bi',
+        'To divide complex numbers, multiply numerator and denominator by the conjugate of denominator',
+        'End behavior of polynomials depends on the leading term: aₙxⁿ',
+        'Rational Root Theorem: possible rational roots are ±(factors of a₀)/(factors of aₙ)',
+        'Factor Theorem: (x - c) is a factor of f(x) if and only if f(c) = 0',
+        'Remainder Theorem: When dividing f(x) by (x - c), the remainder is f(c)',
+        'Complex roots come in conjugate pairs for polynomials with real coefficients',
+        'Multiplicity of a root: if (x - c)ᵏ is a factor, c is a root of multiplicity k',
+        'Descartes Rule of Signs helps determine the number of positive and negative real roots',
+        'Synthetic division is a shortcut for dividing polynomials by linear factors'
+      ],
+      examples: [
+        'Add complex numbers: (3 + 4i) + (2 - 5i) = 5 - i',
+        'Multiply: (2 + 3i)(1 - 2i)\n= 2 - 4i + 3i - 6i²\n= 2 - i - 6(-1)\n= 8 - i',
+        'Divide: (3 + 4i)/(1 + 2i)\nMultiply by conjugate: (3 + 4i)(1 - 2i)/[(1 + 2i)(1 - 2i)]\n= (3 - 6i + 4i - 8i²)/(1 - 4i²)\n= (11 - 2i)/5 = 11/5 - 2i/5',
+        'Find roots of f(x) = x³ - 6x² + 11x - 6\nPossible rational roots: ±1, ±2, ±3, ±6\nTest x = 1: f(1) = 1 - 6 + 11 - 6 = 0 ✓\nFactor: (x - 1)(x² - 5x + 6) = (x - 1)(x - 2)(x - 3)\nRoots: x = 1, 2, 3',
+        'End behavior of f(x) = -2x⁴ + 3x³ - x + 5:\nAs x → ∞, f(x) → -∞ (leading term dominates)\nAs x → -∞, f(x) → -∞',
+        'Graph description: Cubic function f(x) = x³ - 3x + 1 has S-shape, crosses x-axis 3 times, inflection point at origin'
+      ],
+      commonMistakes: [
+        'Forgetting that i² = -1 when multiplying complex numbers',
+        'Incorrectly simplifying: (a + bi)² ≠ a² + b²i²',
+        'Missing complex conjugate roots when factoring polynomials',
+        'Not using synthetic division efficiently for repeated root tests',
+        'Confusing degree with the number of turning points (degree n has at most n-1 turning points)'
+      ],
+      tips: [
+        'Always simplify i² = -1 immediately when multiplying complex numbers',
+        'Use synthetic division to quickly test multiple possible rational roots',
+        'Remember: if a + bi is a root of a polynomial with real coefficients, so is a - bi',
+        'Graph polynomials to visualize roots and turning points',
+        'Check your factored form by expanding it back to verify correctness'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'Algebra 2',
+    topicName: 'Sequences and Series',
+    content: {
+      title: 'Sequences and Series',
+      intro: 'Sequences are ordered lists of numbers following a pattern, while series are the sums of sequence terms. These concepts appear in finance, physics, and computer science, and form the foundation for calculus.',
+      keyPoints: [
+        'A sequence is a function whose domain is positive integers: a₁, a₂, a₃, ..., aₙ',
+        'Arithmetic sequence: each term differs by a constant d (common difference)',
+        'Arithmetic sequence formula: aₙ = a₁ + (n-1)d',
+        'Geometric sequence: each term is multiplied by a constant r (common ratio)',
+        'Geometric sequence formula: aₙ = a₁ · rⁿ⁻¹',
+        'Arithmetic series sum: Sₙ = n(a₁ + aₙ)/2 or Sₙ = n[2a₁ + (n-1)d]/2',
+        'Geometric series sum: Sₙ = a₁(1 - rⁿ)/(1 - r) for r ≠ 1',
+        'Infinite geometric series sum (|r| < 1): S = a₁/(1 - r)',
+        'Infinite geometric series diverges if |r| ≥ 1',
+        'Recursive formula defines each term using previous terms: aₙ = f(aₙ₋₁)',
+        'Explicit formula defines aₙ directly in terms of n',
+        'Sigma notation: Σ represents summation from lower to upper limit',
+        'Factorial: n! = n·(n-1)·(n-2)·...·3·2·1, with 0! = 1',
+        'Applications: compound interest, population growth, amortization',
+        'Fibonacci sequence: aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 1, a₂ = 1'
+      ],
+      examples: [
+        'Arithmetic sequence: 3, 7, 11, 15, ...\na₁ = 3, d = 4\na₁₀ = 3 + (10-1)·4 = 3 + 36 = 39',
+        'Geometric sequence: 2, 6, 18, 54, ...\na₁ = 2, r = 3\na₆ = 2·3⁵ = 2·243 = 486',
+        'Sum of arithmetic series: 2 + 5 + 8 + ... + 50\na₁ = 2, d = 3, aₙ = 50\nFind n: 50 = 2 + (n-1)·3 → n = 17\nS₁₇ = 17(2 + 50)/2 = 442',
+        'Sum of geometric series: 1 + 1/2 + 1/4 + 1/8 + ...\na₁ = 1, r = 1/2\nS = 1/(1 - 1/2) = 2',
+        'Evaluate: Σ(2k + 1) from k=1 to 5\n= 3 + 5 + 7 + 9 + 11 = 35',
+        'Table: Arithmetic vs Geometric Sequences\n| Property | Arithmetic | Geometric |\n|----------|------------|----------|\n| Pattern | Add d | Multiply by r |\n| Formula | aₙ = a₁+(n-1)d | aₙ = a₁·rⁿ⁻¹ |\n| Example | 2,5,8,11 | 2,6,18,54 |'
+      ],
+      commonMistakes: [
+        'Confusing arithmetic (add) with geometric (multiply) sequences',
+        'Using the wrong formula for series sums',
+        'Forgetting that infinite geometric series only converges when |r| < 1',
+        'Off-by-one errors when counting terms in a sequence',
+        'Not simplifying sigma notation before attempting to sum'
+      ],
+      tips: [
+        'For arithmetic: look for what you ADD each time (common difference)',
+        'For geometric: look for what you MULTIPLY by each time (common ratio)',
+        'To find n in a sequence, solve the explicit formula for n',
+        'Check if |r| < 1 before using infinite geometric series formula',
+        'Use tables to organize sequence data and spot patterns easily'
+      ]
+    }
+  },
+
+  // ==================== CALCULUS ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'Calculus',
+    topicName: 'Limits and Continuity',
+    content: {
+      title: 'Limits and Continuity',
+      intro: 'Limits describe the behavior of functions as inputs approach specific values. They form the foundation of calculus, enabling us to define derivatives and integrals rigorously.',
+      keyPoints: [
+        'Limit notation: lim(x→a) f(x) = L means f(x) approaches L as x approaches a',
+        'A limit exists if left-hand limit equals right-hand limit: lim(x→a⁻) f(x) = lim(x→a⁺) f(x)',
+        'Limit laws: lim[f(x) ± g(x)] = lim f(x) ± lim g(x)',
+        'Product law: lim[f(x)·g(x)] = [lim f(x)]·[lim g(x)]',
+        'Quotient law: lim[f(x)/g(x)] = [lim f(x)]/[lim g(x)] if lim g(x) ≠ 0',
+        'Direct substitution: If f is continuous at a, then lim(x→a) f(x) = f(a)',
+        'Indeterminate forms: 0/0, ∞/∞, 0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞',
+        'Factoring technique: Cancel common factors to resolve 0/0 form',
+        'Rationalization: Multiply by conjugate to simplify radical expressions',
+        'Squeeze Theorem: If g(x) ≤ f(x) ≤ h(x) and lim g(x) = lim h(x) = L, then lim f(x) = L',
+        'Continuity at a: f is continuous at x = a if lim(x→a) f(x) = f(a)',
+        'Types of discontinuity: removable, jump, infinite',
+        'Intermediate Value Theorem: If f is continuous on [a,b] and k is between f(a) and f(b), then there exists c where f(c) = k',
+        'Limits at infinity: lim(x→∞) f(x) describes end behavior',
+        'Horizontal asymptote at y = L if lim(x→±∞) f(x) = L'
+      ],
+      examples: [
+        'Evaluate: lim(x→3) (x² - 9)/(x - 3)\nFactor: (x-3)(x+3)/(x-3) = x + 3\nLimit = 3 + 3 = 6',
+        'Evaluate: lim(x→0) (√(x+4) - 2)/x\nRationalize: multiply by (√(x+4) + 2)/(√(x+4) + 2)\n= (x+4-4)/[x(√(x+4)+2)] = 1/(√(x+4)+2)\nLimit = 1/4',
+        'Evaluate: lim(x→∞) (3x² + 2x)/(x² - 5)\nDivide by x²: (3 + 2/x)/(1 - 5/x²)\nAs x→∞: (3 + 0)/(1 - 0) = 3',
+        'Test continuity of f(x) = {x² if x < 1; 2x if x ≥ 1} at x = 1\nLeft: lim(x→1⁻) x² = 1\nRight: lim(x→1⁺) 2x = 2\nLimits don\'t match → jump discontinuity',
+        'Graph description: f(x) = 1/x has vertical asymptote at x = 0, horizontal asymptote at y = 0',
+        'Table: Types of Discontinuity\n| Type | Description | Example |\n|------|-------------|----------|\n| Removable | Hole in graph | (x²-1)/(x-1) at x=1 |\n| Jump | Left ≠ Right | Piecewise at boundary |\n| Infinite | Vertical asymptote | 1/x at x=0 |'
+      ],
+      commonMistakes: [
+        'Directly substituting when it gives 0/0 (indeterminate form)',
+        'Thinking lim(x→a) f(x) requires f(a) to exist (it doesn\'t!)',
+        'Confusing "limit exists" with "function is continuous"',
+        'Forgetting to check both left and right limits for existence',
+        'Incorrectly canceling terms that aren\'t common factors'
+      ],
+      tips: [
+        'Always try direct substitution first - it\'s the fastest method',
+        'For 0/0 forms, try factoring, rationalizing, or L\'Hôpital\'s Rule (if learned)',
+        'For limits at infinity, divide by highest power of x in denominator',
+        'Draw a graph to visualize limit behavior and discontinuities',
+        'Remember: continuity requires THREE things: f(a) exists, limit exists, and they\'re equal'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'Calculus',
+    topicName: 'Derivatives and Applications',
+    content: {
+      title: 'Derivatives and Applications',
+      intro: 'The derivative measures instantaneous rate of change and is the foundation of differential calculus. Derivatives enable us to analyze motion, optimize functions, and model real-world phenomena.',
+      keyPoints: [
+        'Derivative definition: f\'(x) = lim(h→0) [f(x+h) - f(x)]/h',
+        'Derivative notation: f\'(x), dy/dx, df/dx, d/dx[f(x)]',
+        'Geometric meaning: derivative is the slope of the tangent line at a point',
+        'Physical meaning: velocity is derivative of position; acceleration is derivative of velocity',
+        'Power rule: d/dx[xⁿ] = n·xⁿ⁻¹',
+        'Constant multiple: d/dx[c·f(x)] = c·f\'(x)',
+        'Sum rule: d/dx[f(x) + g(x)] = f\'(x) + g\'(x)',
+        'Product rule: d/dx[f(x)·g(x)] = f\'(x)·g(x) + f(x)·g\'(x)',
+        'Quotient rule: d/dx[f(x)/g(x)] = [f\'(x)·g(x) - f(x)·g\'(x)]/[g(x)]²',
+        'Chain rule: d/dx[f(g(x))] = f\'(g(x))·g\'(x) or dy/dx = (dy/du)·(du/dx)',
+        'Exponential: d/dx[eˣ] = eˣ, d/dx[aˣ] = aˣ·ln(a)',
+        'Logarithmic: d/dx[ln(x)] = 1/x, d/dx[log_a(x)] = 1/(x·ln(a))',
+        'Trig: d/dx[sin(x)] = cos(x), d/dx[cos(x)] = -sin(x), d/dx[tan(x)] = sec²(x)',
+        'Critical points occur where f\'(x) = 0 or f\'(x) is undefined',
+        'First derivative test: f\' changes from + to - → local max; - to + → local min',
+        'Second derivative test: f\'\'(c) > 0 → concave up (local min); f\'\'(c) < 0 → concave down (local max)',
+        'Optimization: find critical points, test endpoints and critical points',
+        'Related rates: use chain rule to relate rates of change of multiple variables',
+        'Mean Value Theorem: If f is continuous on [a,b] and differentiable on (a,b), then there exists c where f\'(c) = [f(b)-f(a)]/(b-a)'
+      ],
+      examples: [
+        'Find derivative: f(x) = 3x⁴ - 2x² + 5\nf\'(x) = 12x³ - 4x',
+        'Product rule: f(x) = x²·sin(x)\nf\'(x) = 2x·sin(x) + x²·cos(x)',
+        'Quotient rule: f(x) = (x² + 1)/(x - 2)\nf\'(x) = [2x(x-2) - (x²+1)·1]/(x-2)²\n= (x² - 4x - 1)/(x-2)²',
+        'Chain rule: f(x) = (3x² + 1)⁵\nLet u = 3x² + 1, then f = u⁵\nf\'(x) = 5u⁴·(6x) = 30x(3x² + 1)⁴',
+        'Find local extrema of f(x) = x³ - 3x² + 2\nf\'(x) = 3x² - 6x = 3x(x - 2)\nCritical points: x = 0, 2\nf\'\'(x) = 6x - 6\nf\'\'(0) = -6 < 0 → local max at (0, 2)\nf\'\'(2) = 6 > 0 → local min at (2, -2)',
+        'Related rates: A balloon\'s radius increases at 2 cm/s. How fast is volume changing when r = 5?\nV = (4/3)πr³\ndV/dt = 4πr²·(dr/dt) = 4π(5²)·2 = 200π cm³/s',
+        'Graph description: f(x) = x³ - 3x has critical points at x = -1 (local max) and x = 1 (local min)'
+      ],
+      commonMistakes: [
+        'Forgetting to multiply by inner derivative when using chain rule',
+        'Mixing up product rule and chain rule',
+        'Not checking endpoints when finding absolute extrema on closed intervals',
+        'Incorrectly applying quotient rule: wrong sign or order',
+        'Thinking f\'(x) = 0 always means local max or min (could be inflection point)'
+      ],
+      tips: [
+        'For nested functions, use chain rule; for multiplied functions, use product rule',
+        'Practice recognizing when to use each rule - this becomes intuitive',
+        'Always simplify derivatives after applying rules',
+        'For optimization: identify variable to optimize, write equation, find f\'(x), solve f\'(x) = 0',
+        'In related rates: draw diagram, write equation relating variables, differentiate with respect to time'
+      ]
+    }
+  },
+
+  // ==================== STATISTICS ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'Statistics',
+    topicName: 'Descriptive Statistics and Data Analysis',
+    content: {
+      title: 'Descriptive Statistics and Data Analysis',
+      intro: 'Descriptive statistics summarize and describe the main features of a dataset. These measures help us understand central tendency, variability, and distribution shape.',
+      keyPoints: [
+        'Mean (average): sum of all values divided by number of values: x̄ = Σx/n',
+        'Median: middle value when data is ordered (50th percentile)',
+        'Mode: most frequently occurring value in the dataset',
+        'Range: difference between maximum and minimum values',
+        'Variance (σ²): average of squared deviations from mean',
+        'Standard deviation (σ): square root of variance, measures spread',
+        'Population variance: σ² = Σ(x - μ)²/N',
+        'Sample variance: s² = Σ(x - x̄)²/(n - 1) (uses n-1 for unbiased estimate)',
+        'Quartiles: Q1 (25th), Q2 (50th/median), Q3 (75th percentiles)',
+        'Interquartile range (IQR): Q3 - Q1, measures middle 50% spread',
+        'Outliers: values below Q1 - 1.5·IQR or above Q3 + 1.5·IQR',
+        'Z-score: standardized value z = (x - μ)/σ, measures standard deviations from mean',
+        'Box plot: visual display showing min, Q1, median, Q3, max, and outliers',
+        'Distribution shapes: symmetric, skewed left (negative), skewed right (positive)',
+        'For symmetric distributions: mean ≈ median; for skewed right: mean > median',
+        'Five-number summary: minimum, Q1, median, Q3, maximum'
+      ],
+      examples: [
+        'Dataset: 2, 4, 4, 5, 7, 9, 10\nMean: (2+4+4+5+7+9+10)/7 = 41/7 ≈ 5.86\nMedian: 5 (middle value)\nMode: 4 (appears twice)',
+        'Calculate standard deviation for {2, 4, 6, 8}:\nMean = 5\nVariance = [(2-5)² + (4-5)² + (6-5)² + (8-5)²]/4\n= [9 + 1 + 1 + 9]/4 = 5\nStandard deviation = √5 ≈ 2.24',
+        'Find quartiles: 3, 5, 7, 8, 10, 12, 15, 18, 20\nQ2 (median) = 10\nQ1 (median of lower half) = 7\nQ3 (median of upper half) = 15\nIQR = 15 - 7 = 8',
+        'Z-score: Test score 85 with mean 75 and σ = 10\nz = (85 - 75)/10 = 1\nInterpretation: score is 1 standard deviation above mean',
+        'Identify outliers: Dataset with Q1 = 20, Q3 = 40\nIQR = 20\nLower fence: 20 - 1.5(20) = -10\nUpper fence: 40 + 1.5(20) = 70\nAny value < -10 or > 70 is an outlier',
+        'Table: Measures of Center\n| Measure | Formula | Best Use |\n|---------|---------|----------|\n| Mean | Σx/n | Symmetric data |\n| Median | Middle value | Skewed data |\n| Mode | Most frequent | Categorical data |',
+        'Box plot description: Shows Q1 at 20, median at 30, Q3 at 45, whiskers extend to 10 and 60, one outlier at 85'
+      ],
+      commonMistakes: [
+        'Using mean for skewed data (median is more appropriate)',
+        'Forgetting to divide by n-1 for sample standard deviation',
+        'Confusing variance with standard deviation (variance is squared)',
+        'Not ordering data before finding median or quartiles',
+        'Calculating IQR as (max - min) instead of (Q3 - Q1)'
+      ],
+      tips: [
+        'Always plot your data first to see shape and identify outliers',
+        'Use median and IQR for skewed data; use mean and standard deviation for symmetric data',
+        'Remember: about 68% of data falls within 1σ of mean (for normal distributions)',
+        'Box plots are excellent for comparing multiple groups',
+        'Z-scores are useful for comparing values from different distributions'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'Statistics',
+    topicName: 'Probability and Distributions',
+    content: {
+      title: 'Probability and Distributions',
+      intro: 'Probability quantifies the likelihood of events occurring. Probability distributions describe the pattern of outcomes for random variables and form the basis for statistical inference.',
+      keyPoints: [
+        'Probability: P(A) = (number of favorable outcomes)/(total number of outcomes)',
+        'All probabilities satisfy: 0 ≤ P(A) ≤ 1',
+        'Complement rule: P(not A) = 1 - P(A)',
+        'Addition rule: P(A or B) = P(A) + P(B) - P(A and B)',
+        'For mutually exclusive events: P(A or B) = P(A) + P(B)',
+        'Multiplication rule (independent): P(A and B) = P(A)·P(B)',
+        'Conditional probability: P(A|B) = P(A and B)/P(B)',
+        'Random variable: numerical outcome of a random process',
+        'Discrete variable: countable outcomes (coin flips, dice rolls)',
+        'Continuous variable: infinite possible values in an interval (height, time)',
+        'Expected value: E(X) = Σ[x·P(x)], the long-run average',
+        'Binomial distribution: n independent trials, two outcomes, constant probability',
+        'Binomial formula: P(X = k) = C(n,k)·p^k·(1-p)^(n-k)',
+        'Normal distribution: bell-shaped, symmetric, described by mean μ and standard deviation σ',
+        'Empirical rule (68-95-99.7): 68% within 1σ, 95% within 2σ, 99.7% within 3σ',
+        'Standard normal (Z) distribution: μ = 0, σ = 1, use z-table for probabilities'
+      ],
+      examples: [
+        'Single die probability:\nP(rolling 4) = 1/6\nP(rolling even) = 3/6 = 1/2\nP(rolling 1 or 6) = 1/6 + 1/6 = 1/3',
+        'Two coin flips:\nP(HH) = 1/4, P(HT) = 1/4, P(TH) = 1/4, P(TT) = 1/4\nP(at least one H) = 1 - P(TT) = 1 - 1/4 = 3/4',
+        'Conditional probability:\nP(rain) = 0.3, P(traffic|rain) = 0.8\nP(traffic and rain) = 0.3 × 0.8 = 0.24',
+        'Expected value: Roll die, win $10 for 6, lose $2 otherwise\nE(X) = (1/6)·10 + (5/6)·(-2) = 10/6 - 10/6 = 0\nFair game!',
+        'Binomial: Flip coin 5 times, P(exactly 3 heads)\nP(X=3) = C(5,3)·(0.5)³·(0.5)² = 10·0.125·0.25 = 0.3125',
+        'Normal distribution: IQ scores with μ=100, σ=15\nFind P(X > 115) = P(Z > 1) ≈ 0.16 (16%)\nFind P(85 < X < 115) = P(-1 < Z < 1) ≈ 0.68 (68%)',
+        'Table: Common Probability Distributions\n| Distribution | Type | Example Use |\n|--------------|------|-------------|\n| Binomial | Discrete | Coin flips, yes/no surveys |\n| Normal | Continuous | Heights, test scores |\n| Uniform | Both | Random number generator |',
+        'Graph description: Normal curve centered at μ, symmetric bell shape, tails approach but never touch x-axis'
+      ],
+      commonMistakes: [
+        'Adding probabilities for non-mutually exclusive events without subtracting overlap',
+        'Multiplying probabilities for dependent events (need conditional probability)',
+        'Confusing P(A|B) with P(B|A) - they are usually different!',
+        'Forgetting that probabilities must sum to 1 for all possible outcomes',
+        'Using binomial formula when trials are not independent'
+      ],
+      tips: [
+        'Draw a Venn diagram for complex probability problems',
+        'Use tree diagrams to visualize sequential events',
+        'Check if events are independent before multiplying probabilities',
+        'For normal distribution problems, always standardize first (convert to Z-score)',
+        'Remember: "or" usually means add, "and" usually means multiply (with care for independence)'
+      ]
+    }
+  },
+
+  // ==================== AP BIOLOGY ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Biology',
+    topicName: 'Cell Membrane and Transport',
+    content: {
+      title: 'Cell Membrane and Transport',
+      intro: 'The cell membrane is a selectively permeable barrier that controls what enters and exits the cell. Understanding membrane structure and transport mechanisms is fundamental to cell biology.',
+      keyPoints: [
+        'Cell membrane structure: phospholipid bilayer with embedded proteins (fluid mosaic model)',
+        'Phospholipids: hydrophilic (water-loving) heads face outward, hydrophobic (water-fearing) tails face inward',
+        'Membrane proteins: integral (embedded) and peripheral (surface-attached)',
+        'Cholesterol: maintains membrane fluidity at various temperatures',
+        'Selective permeability: allows some molecules through while blocking others',
+        'Passive transport: movement down concentration gradient, no energy required',
+        'Simple diffusion: small nonpolar molecules (O₂, CO₂) pass directly through membrane',
+        'Facilitated diffusion: polar molecules use channel or carrier proteins, no energy needed',
+        'Osmosis: diffusion of water across selectively permeable membrane',
+        'Hypertonic solution: higher solute concentration outside cell → cell shrinks',
+        'Hypotonic solution: lower solute concentration outside cell → cell swells',
+        'Isotonic solution: equal solute concentration → no net water movement',
+        'Active transport: movement against concentration gradient, requires ATP',
+        'Sodium-potassium pump: uses ATP to pump 3 Na⁺ out, 2 K⁺ in',
+        'Endocytosis: cell membrane engulfs material (phagocytosis, pinocytosis, receptor-mediated)',
+        'Exocytosis: vesicles fuse with membrane to release contents outside cell'
+      ],
+      examples: [
+        'Diagram: Phospholipid bilayer with hydrophilic heads (circles) pointing outward, hydrophobic tails (lines) pointing inward',
+        'Osmosis in red blood cells:\n- In hypertonic solution: cell crenates (shrinks)\n- In hypotonic solution: cell lyses (bursts)\n- In isotonic solution: cell maintains normal shape',
+        'Active transport: Sodium-potassium pump maintains electrochemical gradient\nATP → ADP + P, energy used to pump ions against gradient\nCritical for nerve impulse transmission',
+        'Facilitated diffusion: Glucose enters cells via GLUT transporters\nNo ATP required, moves down concentration gradient\nMuch faster than simple diffusion alone',
+        'Endocytosis types:\n- Phagocytosis: "cell eating" - engulfs large particles\n- Pinocytosis: "cell drinking" - takes in fluid droplets\n- Receptor-mediated: specific molecules bind receptors',
+        'Table: Passive vs Active Transport\n| Property | Passive | Active |\n|----------|---------|--------|\n| Energy | None (ATP) | Requires ATP |\n| Direction | Down gradient | Against gradient |\n| Examples | Diffusion, osmosis | Na⁺/K⁺ pump |'
+      ],
+      commonMistakes: [
+        'Thinking all transport requires energy (passive transport does not)',
+        'Confusing hypertonic and hypotonic solutions',
+        'Believing proteins can flip-flop across membrane (they cannot - too large)',
+        'Thinking osmosis only occurs in one direction (water moves both ways, but net flow depends on gradient)',
+        'Forgetting that facilitated diffusion still requires no energy'
+      ],
+      tips: [
+        'Remember: hyper = higher solute concentration, hypo = lower solute concentration',
+        'Think of membrane as "fluid" (molecules can move laterally) and "mosaic" (diverse proteins)',
+        'For transport problems, first determine if energy is required or available',
+        'Draw diagrams showing inside vs outside of cell to visualize concentration gradients',
+        'Active transport always involves proteins and ATP'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Biology',
+    topicName: 'Cellular Respiration',
+    content: {
+      title: 'Cellular Respiration',
+      intro: 'Cellular respiration is the process by which cells break down glucose to produce ATP, the energy currency of cells. This multistep process occurs in the mitochondria and is essential for life.',
+      keyPoints: [
+        'Overall equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ~38 ATP',
+        'Cellular respiration has three main stages: glycolysis, Krebs cycle, electron transport chain',
+        'Glycolysis: occurs in cytoplasm, breaks glucose (6C) into 2 pyruvate (3C)',
+        'Glycolysis produces: 2 ATP (net), 2 NADH, 2 pyruvate',
+        'Krebs cycle (citric acid cycle): occurs in mitochondrial matrix',
+        'Krebs cycle inputs: Acetyl-CoA (2C from pyruvate)',
+        'Krebs cycle outputs per glucose: 2 ATP, 6 NADH, 2 FADH₂, 4 CO₂',
+        'Electron transport chain (ETC): inner mitochondrial membrane',
+        'ETC uses NADH and FADH₂ to create proton gradient',
+        'Chemiosmosis: protons flow through ATP synthase to generate ATP',
+        'Oxygen is final electron acceptor, forms water',
+        'Total ATP yield: ~38 ATP per glucose (theoretical maximum)',
+        'Anaerobic respiration (fermentation): occurs without oxygen, produces only 2 ATP',
+        'Lactic acid fermentation: pyruvate → lactate (in muscles during intense exercise)',
+        'Alcoholic fermentation: pyruvate → ethanol + CO₂ (in yeast)',
+        'Fermentation regenerates NAD⁺ so glycolysis can continue'
+      ],
+      examples: [
+        'Diagram: Mitochondrion showing outer membrane, inner membrane (cristae), matrix, and location of each respiration stage',
+        'ATP production summary:\nGlycolysis: 2 ATP\nKrebs cycle: 2 ATP\nElectron transport: ~34 ATP\nTotal: ~38 ATP',
+        'Energy flow: Glucose → Glycolysis → Pyruvate → Acetyl-CoA → Krebs → NADH/FADH₂ → ETC → ATP',
+        'Anaerobic vs aerobic:\nAerobic: 38 ATP from 1 glucose (with O₂)\nAnaerobic: 2 ATP from 1 glucose (no O₂)',
+        'Real-world example: Marathon runner\n- First 20 min: aerobic respiration (efficient)\n- After glycogen depleted: fatigue sets in\n- Sprint at end: lactic acid fermentation (quick but inefficient)',
+        'Table: Comparison of Respiration Stages\n| Stage | Location | Inputs | Outputs |\n|-------|----------|--------|----------|\n| Glycolysis | Cytoplasm | Glucose | 2 ATP, 2 NADH |\n| Krebs | Matrix | Acetyl-CoA | 2 ATP, 6 NADH, 2 FADH₂ |\n| ETC | Inner membrane | NADH, FADH₂, O₂ | ~34 ATP, H₂O |'
+      ],
+      commonMistakes: [
+        'Thinking glycolysis requires oxygen (it doesn\'t - it\'s anaerobic)',
+        'Confusing ATP produced directly vs through ETC',
+        'Forgetting that each glucose produces 2 pyruvates, so Krebs happens twice',
+        'Thinking fermentation produces ATP (it doesn\'t - it only regenerates NAD⁺)',
+        'Not accounting for ATP used to start glycolysis (4 produced - 2 used = 2 net)'
+      ],
+      tips: [
+        'Remember location: glyco(cytoplasm)-lysis, Krebs(matrix), ETC(membrane)',
+        'Focus on carbon tracking: 6C glucose → 2(3C pyruvate) → 6CO₂',
+        'NADH and FADH₂ are electron carriers - they don\'t directly make ATP',
+        'Oxygen is only needed for ETC - that\'s why we breathe!',
+        'Fermentation is "backup plan" when oxygen runs out'
+      ]
+    }
+  },
+
+  // ==================== AP CHEMISTRY ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Chemistry',
+    topicName: 'Chemical Equilibrium',
+    content: {
+      title: 'Chemical Equilibrium',
+      intro: 'Chemical equilibrium occurs when the rates of forward and reverse reactions are equal, resulting in constant concentrations of reactants and products. Understanding equilibrium is crucial for predicting reaction behavior.',
+      keyPoints: [
+        'Equilibrium: dynamic state where forward and reverse reaction rates are equal',
+        'Equilibrium constant (Kc): ratio of product to reactant concentrations at equilibrium',
+        'For aA + bB ⇌ cC + dD: Kc = [C]^c[D]^d / [A]^a[B]^b',
+        'Pure solids and liquids are omitted from K expression',
+        'Kc > 1: products favored at equilibrium',
+        'Kc < 1: reactants favored at equilibrium',
+        'Kc = 1: similar amounts of reactants and products',
+        'Q (reaction quotient): same expression as Kc but using current concentrations',
+        'If Q < K: forward reaction proceeds (shift right)',
+        'If Q > K: reverse reaction proceeds (shift left)',
+        'If Q = K: system is at equilibrium',
+        'Le Châtelier\'s Principle: system shifts to counteract imposed changes',
+        'Adding reactant: shifts right (toward products)',
+        'Increasing pressure: shifts toward side with fewer gas molecules',
+        'Increasing temperature: shifts in endothermic direction',
+        'Catalysts do not affect equilibrium position - only rate of reaching equilibrium',
+        'Kp (pressure equilibrium constant) for gas reactions: Kp = Kc(RT)^Δn'
+      ],
+      examples: [
+        'Write K expression: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g)\nKc = [SO₃]² / ([SO₂]²[O₂])',
+        'Calculate Kc: At equilibrium, [N₂]=0.5 M, [H₂]=0.8 M, [NH₃]=0.3 M\nN₂ + 3H₂ ⇌ 2NH₃\nKc = [NH₃]² / ([N₂][H₂]³) = (0.3)² / [(0.5)(0.8)³] = 0.09 / 0.256 ≈ 0.35',
+        'Use Q to predict direction:\nN₂ + 3H₂ ⇌ 2NH₃, Kc = 0.5\nCurrent: [N₂]=1, [H₂]=1, [NH₃]=2\nQ = 2² / (1·1³) = 4\nQ > K → shift left (toward reactants)',
+        'Le Châtelier: N₂(g) + 3H₂(g) ⇌ 2NH₃(g) + heat\n- Add N₂: shifts right (make more NH₃)\n- Increase pressure: shifts right (4 moles → 2 moles)\n- Increase temp: shifts left (endothermic direction)',
+        'Table: Effects on Equilibrium\n| Change | Effect | Shift Direction |\n|--------|--------|----------------|\n| Add reactant | ↑ forward rate | Right (→) |\n| Remove product | ↓ reverse rate | Right (→) |\n| ↑ pressure | Favor fewer moles | Depends on Δn |\n| ↑ temperature | Favor endothermic | Depends on ΔH |'
+      ],
+      commonMistakes: [
+        'Including solids or liquids in K expression',
+        'Thinking catalyst changes K (it doesn\'t - only speeds up reaching equilibrium)',
+        'Confusing Q with K (Q is current state, K is at equilibrium)',
+        'Not raising concentrations to stoichiometric coefficients in K expression',
+        'Forgetting that equilibrium is dynamic (reactions still occurring)'
+      ],
+      tips: [
+        'Always write balanced equation before writing K expression',
+        'Use ICE table (Initial, Change, Equilibrium) for calculations',
+        'Remember: adding reactant or removing product shifts right',
+        'For pressure: count total moles of gas on each side',
+        'Temperature is only factor that changes K value itself'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Chemistry',
+    topicName: 'Acids, Bases, and pH',
+    content: {
+      title: 'Acids, Bases, and pH',
+      intro: 'Acids and bases are fundamental to chemistry and biology. Understanding pH, acid-base equilibria, and buffer systems is essential for predicting chemical behavior in aqueous solutions.',
+      keyPoints: [
+        'Arrhenius definition: acids produce H⁺, bases produce OH⁻ in water',
+        'Brønsted-Lowry definition: acids donate H⁺ (protons), bases accept H⁺',
+        'Strong acids completely dissociate: HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄',
+        'Weak acids partially dissociate: CH₃COOH, H₂CO₃, H₃PO₄',
+        'pH = -log[H⁺], measures acidity on scale from 0-14',
+        'pH < 7: acidic; pH = 7: neutral; pH > 7: basic',
+        'pOH = -log[OH⁻], pH + pOH = 14 at 25°C',
+        'Water autoionization: H₂O ⇌ H⁺ + OH⁻, Kw = [H⁺][OH⁻] = 1.0×10⁻¹⁴',
+        'Acid dissociation constant: Ka = [H⁺][A⁻]/[HA]',
+        'Larger Ka means stronger acid',
+        'pKa = -log(Ka), smaller pKa means stronger acid',
+        'Henderson-Hasselbalch equation: pH = pKa + log([A⁻]/[HA])',
+        'Conjugate acid-base pairs: acid loses H⁺ to form conjugate base',
+        'Buffer solution: resists pH change, contains weak acid and conjugate base',
+        'Titration: gradual addition of acid/base to determine concentration',
+        'Equivalence point: moles acid = moles base, pH depends on salt formed'
+      ],
+      examples: [
+        'Calculate pH: [H⁺] = 1.0×10⁻³ M\npH = -log(1.0×10⁻³) = 3\nSolution is acidic',
+        'Find [OH⁻] given pH = 11:\npOH = 14 - 11 = 3\n[OH⁻] = 10⁻³ = 0.001 M',
+        'Weak acid equilibrium: CH₃COOH ⇌ H⁺ + CH₃COO⁻\nKa = 1.8×10⁻⁵\nIf [CH₃COOH] = 0.1 M, find pH using Ka expression\nAssume x = [H⁺], then Ka = x²/(0.1-x) ≈ x²/0.1\nx = √(Ka·0.1) = √(1.8×10⁻⁶) ≈ 1.3×10⁻³\npH = -log(1.3×10⁻³) ≈ 2.89',
+        'Buffer calculation using Henderson-Hasselbalch:\nBuffer: 0.1 M CH₃COOH, 0.1 M CH₃COO⁻, pKa = 4.74\npH = 4.74 + log(0.1/0.1) = 4.74 + 0 = 4.74',
+        'Titration curve description: Weak acid titrated with strong base shows gradual pH increase, buffer region before equivalence point, steep rise at equivalence point (pH > 7)',
+        'Table: Strong vs Weak Acids\n| Property | Strong Acid | Weak Acid |\n|----------|-------------|----------|\n| Dissociation | Complete | Partial |\n| Ka | Large (>1) | Small (<1) |\n| pH (0.1M) | ~1 | 2-6 |\n| Examples | HCl, HNO₃ | CH₃COOH |'
+      ],
+      commonMistakes: [
+        'Confusing pH and pOH (they sum to 14)',
+        'Using strong acid calculations for weak acids (must use Ka)',
+        'Thinking pH 6 is twice as acidic as pH 3 (it\'s 1000× less acidic!)',
+        'Forgetting that equivalence point pH ≠ 7 for weak acid-strong base titrations',
+        'Not recognizing conjugate acid-base pairs'
+      ],
+      tips: [
+        'Memorize the 6 strong acids - everything else is weak',
+        'For pH calculations: strong acids/bases use [H⁺] or [OH⁻] directly',
+        'For weak acids: use Ka and ICE table or Henderson-Hasselbalch',
+        'pH scale is logarithmic: each unit is 10× change in [H⁺]',
+        'Buffers work best when pH ≈ pKa (within ±1)'
+      ]
+    }
+  },
+
+  // ==================== AP PHYSICS ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Physics',
+    topicName: 'Kinematics and Motion',
+    content: {
+      title: 'Kinematics and Motion',
+      intro: 'Kinematics describes the motion of objects without considering the forces that cause the motion. Mastering kinematic equations and graphical analysis is fundamental to understanding physics.',
+      keyPoints: [
+        'Position (x or s): location of an object at a given time',
+        'Displacement (Δx): change in position, vector quantity',
+        'Distance: total path length traveled, scalar quantity',
+        'Velocity (v): rate of change of position, v = Δx/Δt',
+        'Speed: magnitude of velocity, scalar',
+        'Acceleration (a): rate of change of velocity, a = Δv/Δt',
+        'Average velocity: v_avg = (v₀ + v)/2 = Δx/Δt',
+        'Kinematic equations (constant acceleration):\n  v = v₀ + at\n  x = x₀ + v₀t + ½at²\n  v² = v₀² + 2a(x - x₀)\n  x = x₀ + ½(v₀ + v)t',
+        'Free fall: acceleration due to gravity g = 9.8 m/s² downward',
+        'Projectile motion: horizontal and vertical components are independent',
+        'Horizontal motion: constant velocity (no acceleration)',
+        'Vertical motion: constant acceleration (g)',
+        'Position-time graph: slope gives velocity',
+        'Velocity-time graph: slope gives acceleration, area gives displacement',
+        'Acceleration-time graph: area gives change in velocity'
+      ],
+      examples: [
+        'Constant acceleration: Car accelerates from rest at 2 m/s² for 5 seconds\nv = v₀ + at = 0 + 2(5) = 10 m/s\nx = ½at² = ½(2)(5²) = 25 m',
+        'Free fall: Ball dropped from 45 m height, find time to hit ground\nx = x₀ + v₀t + ½at²\n0 = 45 + 0·t - ½(9.8)t²\nt² = 90/9.8\nt = 3.03 seconds',
+        'Two-stage motion: Ball thrown up at 20 m/s, find max height\nAt max height, v = 0\nv² = v₀² + 2a(x - x₀)\n0 = (20)² + 2(-9.8)(h)\nh = 400/(19.6) ≈ 20.4 m',
+        'Projectile motion: Ball thrown horizontally at 10 m/s from 5 m height\nVertical: y = h - ½gt² → 0 = 5 - 4.9t² → t = 1.01 s\nHorizontal: x = v₀t = 10(1.01) = 10.1 m',
+        'Graph description: Position-time graph showing parabola indicates constant acceleration; straight line indicates constant velocity',
+        'Table: Kinematic Quantities\n| Quantity | Symbol | Units | Vector? |\n|----------|--------|-------|--------|\n| Position | x | m | Yes |\n| Velocity | v | m/s | Yes |\n| Acceleration | a | m/s² | Yes |\n| Time | t | s | No |'
+      ],
+      commonMistakes: [
+        'Confusing displacement and distance (displacement can be zero even if distance is not)',
+        'Using kinematic equations when acceleration is not constant',
+        'Forgetting that velocity is zero at maximum height in projectile motion',
+        'Mixing up signs: choosing inconsistent positive directions',
+        'Not treating horizontal and vertical motion independently in projectile problems'
+      ],
+      tips: [
+        'Always define positive direction first (usually up or right)',
+        'List known and unknown variables before choosing equation',
+        'For projectile motion: split into x and y components immediately',
+        'Check units - if they don\'t match, you made an error',
+        'Graph interpretation: steep slope means large velocity/acceleration'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Physics',
+    topicName: 'Electricity and Circuits',
+    content: {
+      title: 'Electricity and Circuits',
+      intro: 'Electric circuits involve the flow of charge through conductors. Understanding current, voltage, resistance, and circuit analysis is essential for modern technology and physics applications.',
+      keyPoints: [
+        'Electric current (I): rate of charge flow, I = Q/t, measured in amperes (A)',
+        'Voltage (V): electric potential difference, energy per unit charge, measured in volts (V)',
+        'Resistance (R): opposition to current flow, measured in ohms (Ω)',
+        'Ohm\'s Law: V = IR (voltage equals current times resistance)',
+        'Power: P = IV = I²R = V²/R, measured in watts (W)',
+        'Energy: E = Pt = IVt, measured in joules (J) or kilowatt-hours (kWh)',
+        'Series circuits: same current through all components, I_total = I₁ = I₂',
+        'Series resistance: R_total = R₁ + R₂ + R₃ + ...',
+        'Series voltage: V_total = V₁ + V₂ + V₃ + ...',
+        'Parallel circuits: same voltage across all components, V_total = V₁ = V₂',
+        'Parallel resistance: 1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...',
+        'Parallel current: I_total = I₁ + I₂ + I₃ + ...',
+        'Kirchhoff\'s Current Law (KCL): sum of currents into a node equals sum out',
+        'Kirchhoff\'s Voltage Law (KVL): sum of voltage changes around a loop is zero',
+        'Internal resistance: batteries have internal resistance r, V = ℰ - Ir'
+      ],
+      examples: [
+        'Ohm\'s Law: 12V battery, 3Ω resistor, find current\nI = V/R = 12/3 = 4 A',
+        'Power calculation: 120V appliance draws 5A\nP = IV = 120·5 = 600 W = 0.6 kW',
+        'Series circuit: 10V battery, R₁ = 2Ω, R₂ = 3Ω\nR_total = 2 + 3 = 5Ω\nI = V/R = 10/5 = 2A\nV₁ = IR₁ = 2·2 = 4V, V₂ = IR₂ = 2·3 = 6V',
+        'Parallel circuit: 12V battery, R₁ = 4Ω, R₂ = 6Ω\n1/R_total = 1/4 + 1/6 = 3/12 + 2/12 = 5/12\nR_total = 12/5 = 2.4Ω\nI_total = 12/2.4 = 5A\nI₁ = 12/4 = 3A, I₂ = 12/6 = 2A',
+        'Circuit diagram description: Series circuit shows components in single path; parallel circuit shows multiple branches between same two points',
+        'Table: Series vs Parallel\n| Property | Series | Parallel |\n|----------|--------|----------|\n| Current | Same everywhere | Splits at junctions |\n| Voltage | Splits across components | Same across branches |\n| R_total | Sum of resistances | 1/R_total = Σ(1/R) |'
+      ],
+      commonMistakes: [
+        'Confusing series and parallel formulas for resistance',
+        'Thinking voltage is same in series (it\'s current that\'s same)',
+        'Thinking current is same in parallel (it\'s voltage that\'s same)',
+        'Forgetting to convert units (mA to A, kΩ to Ω)',
+        'Not checking if power dissipated equals power supplied (energy conservation)'
+      ],
+      tips: [
+        'For series: think "current stays constant"',
+        'For parallel: think "voltage stays constant"',
+        'Draw and label circuit diagrams before calculating',
+        'Use Kirchhoff\'s laws for complex circuits with multiple loops',
+        'Check answers: total resistance in parallel is always less than smallest resistor'
+      ]
+    }
+  },
+
+  // ==================== COMPUTER SCIENCE ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Computer Science',
+    topicName: 'Object-Oriented Programming Concepts',
+    content: {
+      title: 'Object-Oriented Programming Concepts',
+      intro: 'Object-oriented programming (OOP) organizes code around objects that contain both data and methods. Understanding classes, inheritance, and polymorphism is fundamental to modern software development.',
+      keyPoints: [
+        'Class: blueprint or template for creating objects',
+        'Object: instance of a class with specific values',
+        'Attributes (fields): variables that store object data',
+        'Methods: functions defined within a class that define behavior',
+        'Constructor: special method called when creating new object, initializes attributes',
+        'Encapsulation: bundling data and methods together, hiding internal details',
+        'Access modifiers: public (accessible everywhere), private (accessible only within class)',
+        'Inheritance: creating new class (subclass) based on existing class (superclass)',
+        'Subclass inherits attributes and methods from superclass',
+        'Method overriding: subclass provides specific implementation of superclass method',
+        'Polymorphism: objects of different classes can be treated as objects of common superclass',
+        'Abstract class: cannot be instantiated, serves as base for subclasses',
+        'Interface: contract specifying methods a class must implement',
+        'this keyword: refers to current object',
+        'super keyword: refers to superclass',
+        'Composition: "has-a" relationship (Car has-a Engine)',
+        'Inheritance: "is-a" relationship (Dog is-a Animal)'
+      ],
+      examples: [
+        'Define a class:\nclass Dog {\n  private String name;\n  private int age;\n  \n  public Dog(String n, int a) {\n    name = n;\n    age = a;\n  }\n  \n  public void bark() {\n    System.out.println(name + " says woof!");\n  }\n}',
+        'Create object:\nDog myDog = new Dog("Buddy", 3);\nmyDog.bark(); // Output: Buddy says woof!',
+        'Inheritance example:\nclass Animal {\n  protected String name;\n  public void eat() {\n    System.out.println("Eating...");\n  }\n}\n\nclass Cat extends Animal {\n  public void meow() {\n    System.out.println(name + " meows");\n  }\n}',
+        'Method overriding:\nclass Shape {\n  public double area() { return 0; }\n}\n\nclass Circle extends Shape {\n  private double radius;\n  \n  @Override\n  public double area() {\n    return Math.PI * radius * radius;\n  }\n}',
+        'Polymorphism:\nShape s1 = new Circle();\nShape s2 = new Rectangle();\n// Both treated as Shape, but call their own area() method',
+        'Table: OOP Principles\n| Principle | Description | Example |\n|-----------|-------------|----------|\n| Encapsulation | Hide implementation | Private variables |\n| Inheritance | Code reuse | Dog extends Animal |\n| Polymorphism | Multiple forms | Shape references |\n| Abstraction | Hide complexity | Abstract classes |'
+      ],
+      commonMistakes: [
+        'Forgetting to use "new" keyword when creating objects',
+        'Confusing class (blueprint) with object (instance)',
+        'Not calling super() constructor in subclass constructor',
+        'Making everything public instead of using appropriate access modifiers',
+        'Overusing inheritance when composition would be better'
+      ],
+      tips: [
+        'Think of class as cookie cutter, object as actual cookie',
+        'Use private for attributes, public for methods (usually)',
+        'Favor composition over inheritance when possible',
+        'Name classes with nouns (Dog, Car), methods with verbs (run, drive)',
+        'Draw UML diagrams to visualize class relationships'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'AP Computer Science',
+    topicName: 'Data Structures: Arrays and ArrayLists',
+    content: {
+      title: 'Data Structures: Arrays and ArrayLists',
+      intro: 'Arrays and ArrayLists are fundamental data structures for storing collections of elements. Understanding their characteristics, operations, and appropriate use cases is essential for efficient programming.',
+      keyPoints: [
+        'Array: fixed-size collection of elements of same type',
+        'Array declaration: int[] numbers = new int[5];',
+        'Array initialization: int[] numbers = {1, 2, 3, 4, 5};',
+        'Array indexing starts at 0: first element is array[0]',
+        'Array length: array.length (property, not method)',
+        'Arrays are fixed size - cannot grow or shrink after creation',
+        'ArrayList: resizable array from Java Collections Framework',
+        'ArrayList declaration: ArrayList<Integer> list = new ArrayList<>();',
+        'ArrayList methods: add(), get(), set(), remove(), size()',
+        'ArrayList automatically resizes when elements added',
+        'ArrayLists can only store objects (use Integer, not int)',
+        'Accessing elements: array[i] vs list.get(i)',
+        'Traversing: use for loop, enhanced for loop, or while loop',
+        'Two-dimensional arrays: int[][] matrix = new int[3][4];',
+        'ArrayList of ArrayLists: ArrayList<ArrayList<Integer>> matrix',
+        'Common algorithms: linear search, binary search, sorting'
+      ],
+      examples: [
+        'Array basics:\nint[] scores = {95, 87, 92, 88, 90};\nSystem.out.println(scores[0]); // 95\nSystem.out.println(scores.length); // 5\nscores[2] = 100; // modify element',
+        'ArrayList basics:\nArrayList<String> names = new ArrayList<>();\nnames.add("Alice");\nnames.add("Bob");\nSystem.out.println(names.get(0)); // Alice\nnames.set(1, "Charlie"); // replace Bob\nnames.remove(0); // remove Alice\nSystem.out.println(names.size()); // 1',
+        'Traversing array:\nint[] numbers = {10, 20, 30, 40};\n// Method 1: regular for loop\nfor (int i = 0; i < numbers.length; i++) {\n  System.out.println(numbers[i]);\n}\n// Method 2: enhanced for loop\nfor (int num : numbers) {\n  System.out.println(num);\n}',
+        'Linear search:\npublic static int search(int[] arr, int target) {\n  for (int i = 0; i < arr.length; i++) {\n    if (arr[i] == target) return i;\n  }\n  return -1; // not found\n}',
+        '2D array:\nint[][] grid = {\n  {1, 2, 3},\n  {4, 5, 6},\n  {7, 8, 9}\n};\nSystem.out.println(grid[1][2]); // 6 (row 1, col 2)',
+        'Table: Array vs ArrayList\n| Feature | Array | ArrayList |\n|---------|-------|----------|\n| Size | Fixed | Dynamic |\n| Type | Primitives OK | Objects only |\n| Syntax | arr[i] | list.get(i) |\n| Performance | Faster | Slightly slower |'
+      ],
+      commonMistakes: [
+        'ArrayIndexOutOfBoundsException: accessing invalid index',
+        'Forgetting that indexing starts at 0, not 1',
+        'Using = to compare arrays (use Arrays.equals() instead)',
+        'Trying to use primitives with ArrayList (use wrapper classes)',
+        'Confusing array.length (property) with list.size() (method)'
+      ],
+      tips: [
+        'Use arrays when size is known and won\'t change',
+        'Use ArrayList when size is unknown or needs to change',
+        'Be careful with off-by-one errors in loops',
+        'Remember: last valid index is length - 1',
+        'For searching sorted arrays, use binary search (O(log n))'
+      ]
+    }
+  },
+
+  // ==================== HISTORY ====================
+  {
+    categorySlug: 'high-school',
+    subjectName: 'US History',
+    topicName: 'The American Revolution',
+    content: {
+      title: 'The American Revolution',
+      intro: 'The American Revolution (1775-1783) was a colonial revolt against British rule that resulted in the independence of the thirteen American colonies and the formation of the United States of America.',
+      keyPoints: [
+        'Causes: taxation without representation, British mercantilist policies, Enlightenment ideas',
+        'Sugar Act (1764) and Stamp Act (1765): first major colonial protests',
+        'Boston Massacre (1770): British soldiers killed five colonists, fueled anti-British sentiment',
+        'Boston Tea Party (1773): colonists dumped British tea into harbor to protest Tea Act',
+        'Intolerable Acts (1774): British punishment for Boston Tea Party',
+        'First Continental Congress (1774): colonial delegates coordinated resistance',
+        'Lexington and Concord (April 1775): first military engagements, "shot heard round the world"',
+        'Second Continental Congress (1775): managed war effort, created Continental Army',
+        'George Washington appointed commander of Continental Army',
+        'Declaration of Independence (July 4, 1776): formally declared separation from Britain',
+        'Key battles: Bunker Hill, Saratoga (turning point), Yorktown (final victory)',
+        'Foreign assistance: France (1778 alliance), Spain, Netherlands provided crucial support',
+        'Treaty of Paris (1783): officially ended war, recognized US independence',
+        'Results: independence, republican government, inspired other revolutions',
+        'Challenges: economic instability, weak central government under Articles of Confederation'
+      ],
+      examples: [
+        'Taxation without representation: Colonists had no seats in British Parliament but were taxed\n"No taxation without representation" became rallying cry',
+        'Declaration of Independence key ideas:\n- All men are created equal\n- Unalienable rights: life, liberty, pursuit of happiness\n- Government derives power from consent of governed\n- Right to alter or abolish unjust government',
+        'Battle of Saratoga (1777): American victory convinced France to ally with US\nFrench support (troops, navy, supplies) was crucial to ultimate victory',
+        'Valley Forge (winter 1777-78): Continental Army endured harsh conditions\nTrained by Baron von Steuben, emerged as more professional force',
+        'Yorktown (1781): Cornwallis surrounded by Washington and French fleet\nBritish surrender effectively ended the war',
+        'Timeline:\n1765 - Stamp Act\n1770 - Boston Massacre\n1773 - Boston Tea Party\n1775 - Lexington & Concord\n1776 - Declaration of Independence\n1777 - Saratoga\n1781 - Yorktown\n1783 - Treaty of Paris'
+      ],
+      commonMistakes: [
+        'Thinking revolution was universally supported (many loyalists remained)',
+        'Believing colonists wanted independence from the start (many sought reconciliation first)',
+        'Overlooking role of France and other allies (US couldn\'t win alone)',
+        'Assuming Declaration of Independence ended the war (fighting continued until 1783)',
+        'Forgetting about ongoing Native American conflicts during and after revolution'
+      ],
+      tips: [
+        'Remember cause-and-effect: British policies → colonial resistance → war',
+        'Focus on turning points: Saratoga, French alliance, Yorktown',
+        'Understand Enlightenment influence on revolutionary ideals',
+        'Connect to later US government structure (Constitution addressed weaknesses)',
+        'Consider multiple perspectives: patriots, loyalists, enslaved people, Native Americans'
+      ]
+    }
+  },
+  {
+    categorySlug: 'high-school',
+    subjectName: 'World History',
+    topicName: 'The Industrial Revolution',
+    content: {
+      title: 'The Industrial Revolution',
+      intro: 'The Industrial Revolution (c. 1760-1840) transformed economies from agrarian and handicraft-based to machine-based manufacturing. Beginning in Britain, it spread globally and fundamentally changed society, technology, and daily life.',
+      keyPoints: [
+        'Started in Great Britain in the late 18th century',
+        'Key factors: agricultural revolution, capital accumulation, natural resources (coal, iron)',
+        'Technological innovations: spinning jenny, water frame, power loom, steam engine',
+        'James Watt improved steam engine (1769), powered factories and transportation',
+        'Textile industry: first to mechanize, dramatic productivity increases',
+        'Transportation revolution: railroads, steamships enabled faster movement of goods',
+        'Factory system replaced cottage industry (home-based manufacturing)',
+        'Urbanization: people moved from rural areas to cities for factory jobs',
+        'Working conditions: long hours, low wages, dangerous conditions, child labor',
+        'Social classes: rise of industrial middle class (bourgeoisie), working class (proletariat)',
+        'Environmental impact: pollution, deforestation, resource depletion',
+        'Spread to Europe and United States by mid-19th century',
+        'Second Industrial Revolution (late 1800s): steel, electricity, chemicals, petroleum',
+        'Long-term effects: economic growth, urbanization, social reforms, labor movements',
+        'Inspired new ideologies: capitalism, socialism, communism'
+      ],
+      examples: [
+        'Textile mechanization:\n1764 - Spinning jenny (James Hargreaves)\n1769 - Water frame (Richard Arkwright)\n1779 - Spinning mule (Samuel Crompton)\n1785 - Power loom (Edmund Cartwright)\nResult: Cotton production increased 50-fold by 1850',
+        'Steam engine impact:\n- Factories no longer needed water power location\n- Railroads revolutionized transportation\n- Steamships enabled faster ocean travel\n- Manufacturing productivity soared',
+        'Railroad expansion:\n1825 - Stockton-Darlington Railway (first public railroad)\n1830 - Liverpool-Manchester Railway\nBy 1850 - 6,000 miles of track in Britain\nBy 1900 - Global railroad network connected continents',
+        'Working conditions in factories:\n- 12-16 hour workdays\n- Children as young as 5-6 worked in factories\n- No safety regulations\n- Low wages, no benefits\nLed to labor movements and reform legislation',
+        'Urbanization example - Manchester, England:\n1773 population: 27,000\n1851 population: 303,000\nRapid growth caused overcrowding, sanitation issues, disease',
+        'Table: Pre-Industrial vs Industrial Production\n| Feature | Before | After |\n|---------|--------|-------|\n| Location | Home/small workshop | Factory |\n| Power | Human/animal | Steam/machines |\n| Output | Small scale | Mass production |\n| Workers | Skilled artisans | Factory workers |'
+      ],
+      commonMistakes: [
+        'Thinking Industrial Revolution was sudden (it was gradual over decades)',
+        'Assuming only positive effects (many negative social and environmental impacts)',
+        'Believing it started everywhere simultaneously (began in Britain, spread slowly)',
+        'Overlooking connection to colonialism (raw materials from colonies)',
+        'Forgetting about resistance (Luddites destroyed machines, workers organized)'
+      ],
+      tips: [
+        'Focus on both technological and social changes',
+        'Remember cause-and-effect chains: invention → factory system → urbanization → social problems',
+        'Compare pre-industrial and industrial production methods',
+        'Consider winners and losers: factory owners prospered, workers suffered initially',
+        'Connect to modern issues: labor rights, environmental concerns, technological change'
+      ]
+    }
+  },
+
   // Continue with more topics... (This is a starting template showing the structure)
 ]
 
