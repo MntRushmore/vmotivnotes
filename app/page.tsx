@@ -117,8 +117,8 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Three Main Option Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        {/* Two Main Option Cards */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
           {/* Upload PDF Card */}
           <button
             onClick={() => router.push('/generate?mode=pdf')}
@@ -163,30 +163,6 @@ export default function HomePage() {
 
             <div className="flex items-center gap-2 text-purple-600 font-medium">
               <span>Start typing a topic</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </button>
-
-          {/* Whiteboard Card */}
-          <button
-            onClick={() => router.push('/whiteboard')}
-            className="group relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 shadow-lg hover:shadow-2xl border-2 border-transparent transition-all duration-300 hover:-translate-y-1 text-left"
-          >
-            <div className="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:bg-white/30 transition-colors backdrop-blur-sm">
-              <span className="text-3xl">🎨</span>
-            </div>
-
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold text-white mb-3">
-                Shared Whiteboard
-              </h2>
-              <p className="text-white/90 leading-relaxed">
-                Collaborate in real-time with your tutor or students on a shared digital whiteboard.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-2 text-white font-medium">
-              <span>Start collaborating</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </div>
           </button>
