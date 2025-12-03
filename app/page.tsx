@@ -13,47 +13,87 @@ export default function HomePage() {
     'Photosynthesis',
     'American Revolution',
     'Chemical Bonds',
-    "Shakespeare's Hamlet"
+    "Shakespeare's Hamlet",
+    'Newton\'s Laws of Motion',
+    'Cellular Respiration',
+    'World War II',
+    'Quadratic Formula',
+    'DNA Replication',
+    'The Great Depression',
+    'Verb Conjugations in Spanish',
+    'Trigonometric Identities',
+    'Electric Circuits',
+    'Civil Rights Movement',
+    'Object-Oriented Programming',
+    'Supply and Demand',
+    'Rhetorical Analysis'
   ]
 
-  const subjects = {
-    'Mathematics': {
+  const categories = [
+    {
+      name: 'Mathematics',
       emoji: '📐',
-      description: 'Aligned with Common Core and AP standards',
-      topicCount: 43,
-      slug: 'mathematics'
+      description: 'Pure and applied mathematics from fundamentals to advanced topics',
+      slug: 'mathematics',
+      subjectCount: 12
     },
-    'Science': {
+    {
+      name: 'Science',
       emoji: '🔬',
-      description: 'Aligned with NGSS and AP frameworks',
-      topicCount: 30,
-      slug: 'science'
+      description: 'Natural sciences exploring the physical and living world',
+      slug: 'science',
+      subjectCount: 12
     },
-    'Computer Science': {
+    {
+      name: 'Computer Science',
       emoji: '💻',
-      description: 'Programming fundamentals to advanced algorithms',
-      topicCount: 19,
-      slug: 'computer-science'
+      description: 'Programming, algorithms, and computational thinking',
+      slug: 'computer-science',
+      subjectCount: 8
     },
-    'English & Social Studies': {
+    {
+      name: 'English & Literature',
       emoji: '📚',
-      description: 'Literature, history, and social sciences',
-      topicCount: 34,
-      slug: 'english-social-studies'
+      description: 'Reading, writing, and literary analysis',
+      slug: 'english',
+      subjectCount: 5
     },
-    'Languages': {
+    {
+      name: 'Social Studies',
       emoji: '🌍',
-      description: 'Foreign language instruction and AP courses',
-      topicCount: 20,
-      slug: 'languages'
+      description: 'History, geography, economics, and government',
+      slug: 'social-studies',
+      subjectCount: 8
     },
-    'Test Prep': {
+    {
+      name: 'World Languages',
+      emoji: '🗣️',
+      description: 'Foreign language instruction and cultural studies',
+      slug: 'languages',
+      subjectCount: 7
+    },
+    {
+      name: 'Test Preparation',
       emoji: '📝',
-      description: 'Standardized test preparation materials',
-      topicCount: 25,
-      slug: 'test-prep'
+      description: 'Standardized test prep and strategies',
+      slug: 'test-prep',
+      subjectCount: 7
+    },
+    {
+      name: 'Arts & Music',
+      emoji: '🎨',
+      description: 'Visual arts, music theory, and performance',
+      slug: 'arts',
+      subjectCount: 3
+    },
+    {
+      name: 'Business & Career',
+      emoji: '💼',
+      description: 'Business fundamentals and professional skills',
+      slug: 'business',
+      subjectCount: 3
     }
-  }
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-gold-50">
@@ -128,37 +168,37 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* Browse by Subject Section */}
+        {/* Browse by Category Section */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-primary-800 mb-3">Browse by Subject</h2>
-            <p className="text-neutral-600">Choose a subject area to explore curriculum-aligned topics</p>
+            <h2 className="text-3xl font-bold text-primary-800 mb-3">Browse by Category</h2>
+            <p className="text-neutral-600">Explore hundreds of subjects organized by academic field</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(subjects).map(([subject, data]) => (
+            {categories.map((category) => (
               <button
-                key={subject}
-                onClick={() => router.push(`/subjects/${data.slug}`)}
+                key={category.slug}
+                onClick={() => router.push(`/categories/${category.slug}`)}
                 className="group bg-white rounded-2xl p-6 shadow-lg border-2 border-neutral-100 hover:border-gold-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary-800 to-primary-600 rounded-xl flex items-center justify-center shadow-md">
-                    <span className="text-2xl">{data.emoji}</span>
+                    <span className="text-2xl">{category.emoji}</span>
                   </div>
-                  <h3 className="font-bold text-xl text-primary-800">{subject}</h3>
+                  <h3 className="font-bold text-xl text-primary-800">{category.name}</h3>
                 </div>
 
                 <p className="text-neutral-600 text-sm mb-4 leading-relaxed">
-                  {data.description}
+                  {category.description}
                 </p>
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-neutral-500">
-                    {data.topicCount} topics available
+                    {category.subjectCount} subjects
                   </span>
                   <span className="text-gold-600 group-hover:translate-x-1 transition-transform font-semibold">
-                    View all →
+                    Explore →
                   </span>
                 </div>
               </button>
