@@ -1,14 +1,16 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { ArrowLeft, Users, Copy, Check, Home } from 'lucide-react'
-import { Tldraw, defaultShapeUtils } from 'tldraw'
-import { createYjsStore } from '@tldraw/sync-yjs'
-import * as Y from 'yjs'
-const PartyKitProvider =
-  require('y-partykit').default ?? require('y-partykit')
+import dynamic from 'next/dynamic'
 import 'tldraw/tldraw.css'
+
+// Dynamically import the whiteboard canvas to avoid SSR issues
+const WhiteboardCanvas = dynamic(
+  () => import('@/components/WhiteboardCanvas'),
+  { ssr: false }
+)
 
 /**
  * VMotiv8 Shared Whiteboard
@@ -20,35 +22,6 @@ import 'tldraw/tldraw.css'
  * - Persistent cloud storage
  */
 
-// PartyKit host - use localhost for development
-const PARTYKIT_HOST = process.env.NODE_ENV === 'development'
-  ? 'localhost:1999'
-  : 'vmotiv8-whiteboard.your-username.partykit.dev'
-
-function WhiteboardCanvas({ roomId }: { roomId: string }) {
-  const store = useMemo(() => {
-    // Create a new Yjs document
-    const doc = new Y.Doc()
-
-    // Connect to PartyKit server
-    const provider = PartyKitProvider(PARTYKIT_HOST, roomId, doc)
-
-    // Create tldraw store with Yjs synchronization
-    const yStore = createYjsStore({
-      doc,
-      shapeUtils: defaultShapeUtils,
-    })
-
-    return yStore
-  }, [roomId])
-
-  return (
-    <div className="flex-1 relative bg-white">
-      <Tldraw store={store} autoFocus />
-    </div>
-  )
-}
-
 export default function WhiteboardPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -57,7 +30,6 @@ export default function WhiteboardPage() {
   const [roomId, setRoomId] = useState(roomIdParam || '')
   const [isInRoom, setIsInRoom] = useState(!!roomIdParam)
   const [copied, setCopied] = useState(false)
-  const [activeUsers, setActiveUsers] = useState(1)
 
   // Generate random room ID
   const generateRoomId = () => {
