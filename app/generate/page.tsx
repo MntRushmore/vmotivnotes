@@ -1005,37 +1005,44 @@ function GeneratePageContent() {
               </button>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {problems.map((problem, index) => (
-                <div key={index} className="border border-neutral-200 rounded-lg p-5 hover:border-purple-300 transition-colors">
-                  <div className="flex items-start gap-3 mb-4">
-                    <span className="flex-shrink-0 w-8 h-8 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold text-sm">
+                <div key={index} className="bg-white border-2 border-neutral-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all">
+                  <div className="flex items-start gap-4 mb-5">
+                    <span className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-400 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow-md">
                       {index + 1}
                     </span>
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                          problem.difficulty === 'easy' ? 'bg-green-100 text-green-700' :
-                          problem.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-                          problem.difficulty === 'hard' ? 'bg-orange-100 text-orange-700' :
-                          'bg-red-100 text-red-700'
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className={`text-xs px-3 py-1.5 rounded-full font-semibold ${
+                          problem.difficulty === 'easy' ? 'bg-green-100 text-green-800 border border-green-300' :
+                          problem.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-800 border border-yellow-300' :
+                          problem.difficulty === 'hard' ? 'bg-orange-100 text-orange-800 border border-orange-300' :
+                          'bg-red-100 text-red-800 border border-red-300'
                         }`}>
                           {problem.difficulty.toUpperCase()}
                         </span>
                       </div>
-                      <div className="bg-neutral-50 p-4 rounded-lg border border-neutral-200 mb-4">
-                        <p className="text-lg font-medium text-neutral-900 whitespace-pre-wrap">{problem.problem}</p>
+                      <div className="bg-gradient-to-br from-neutral-50 to-neutral-100 p-5 rounded-xl border-2 border-neutral-200 mb-5">
+                        <h4 className="text-xs uppercase tracking-wider text-neutral-500 font-semibold mb-2">Problem</h4>
+                        <p className="text-lg leading-relaxed text-neutral-900 whitespace-pre-wrap font-medium">{problem.problem}</p>
                       </div>
                     </div>
                   </div>
 
-                  <details className="ml-11">
-                    <summary className="cursor-pointer text-sm font-semibold text-purple-700 hover:text-purple-800 select-none bg-purple-50 px-4 py-2 rounded-lg inline-block">
-                      Show Solution
+                  <details className="ml-14 group">
+                    <summary className="cursor-pointer text-sm font-bold text-purple-700 hover:text-purple-900 select-none bg-gradient-to-r from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200 px-6 py-3 rounded-xl inline-flex items-center gap-2 border-2 border-purple-200 transition-all shadow-sm hover:shadow-md">
+                      <span>📝 Show Solution</span>
+                      <span className="text-xs group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <div className="mt-3 p-4 bg-green-50 border border-green-200 rounded-lg">
-                      <span className="text-sm font-semibold text-green-700">Solution:</span>
-                      <div className="text-sm text-green-900 mt-2 whitespace-pre-wrap">{problem.solution}</div>
+                    <div className="mt-5 p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl shadow-inner">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-lg">✅</span>
+                        <span className="text-sm font-bold text-green-800 uppercase tracking-wide">Solution</span>
+                      </div>
+                      <div className="prose prose-sm max-w-none">
+                        <div className="text-base leading-relaxed text-green-900 whitespace-pre-wrap font-mono bg-white/50 p-4 rounded-lg border border-green-200">{problem.solution}</div>
+                      </div>
                     </div>
                   </details>
                 </div>
