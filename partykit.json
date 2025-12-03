@@ -1,5 +1,5 @@
 {
   "name": "vmotiv8-whiteboard",
-  "main": "./party/whiteboard.ts",
+  "main": "party/whiteboard.ts",
   "compatibilityDate": "2024-01-01"
 }
