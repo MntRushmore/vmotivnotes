@@ -16,6 +16,7 @@
     "@radix-ui/react-separator": "*",
     "@radix-ui/react-slot": "*",
     "@radix-ui/react-toast": "*",
+    "@tldraw/sync": "^2.4.6",
     "@uploadthing/react": "^7.3.3",
     "autoprefixer": "^10.4.0",
     "canvas": "^3.2.0",
@@ -25,6 +26,7 @@
     "lucide-react": "^0.400.0",
     "nanoid": "^5.1.6",
     "next": "^14.2.0",
+    "partykit": "^0.0.111",
     "pdf-parse": "^2.4.5",
     "postcss": "^8.4.0",
     "react": "^18.2.0",
@@ -38,10 +40,9 @@
     "tailwindcss-animate": "^1.0.7",
     "tesseract.js": "^6.0.1",
     "tldraw": "^2.4.6",
-    "@tldraw/sync": "^2.4.6",
     "uploadthing": "^7.7.4",
     "y-partykit": "^0.0.19",
-    "partykit": "^0.0.111"
+    "yjs": "^13.6.27"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
