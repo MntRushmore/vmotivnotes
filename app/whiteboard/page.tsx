@@ -3,10 +3,11 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { ArrowLeft, Users, Copy, Check, Home } from 'lucide-react'
-import { Tldraw, createTLStore, defaultShapeUtils } from 'tldraw'
-import { useYjsStore } from '@tldraw/sync'
+import { Tldraw, defaultShapeUtils } from 'tldraw'
+import { createYjsStore } from '@tldraw/sync-yjs'
 import * as Y from 'yjs'
-import { PartyKitProvider } from 'y-partykit/provider'
+const PartyKitProvider =
+  require('y-partykit').default ?? require('y-partykit')
 import 'tldraw/tldraw.css'
 
 /**
@@ -30,12 +31,10 @@ function WhiteboardCanvas({ roomId }: { roomId: string }) {
     const doc = new Y.Doc()
 
     // Connect to PartyKit server
-    const provider = new PartyKitProvider(PARTYKIT_HOST, roomId, doc, {
-      connect: true,
-    })
+    const provider = PartyKitProvider(PARTYKIT_HOST, roomId, doc)
 
     // Create tldraw store with Yjs synchronization
-    const yStore = useYjsStore({
+    const yStore = createYjsStore({
       doc,
       shapeUtils: defaultShapeUtils,
     })
