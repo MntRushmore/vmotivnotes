@@ -1488,7 +1488,7 @@ export const pregeneratedNotes: PregeneratedNote[] = [
         'Semicolons can join closely related independent clauses'
       ]
     }
-  }
+  },
 
   // ==================== ALGEBRA 2 ====================
   {
