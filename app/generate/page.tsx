@@ -10,6 +10,8 @@ import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 import { NoteSessionManager } from '@/lib/note-session'
 import type { TutorNote, GradeLevel, RefineInstruction } from '@/types'
+import { getPregeneratedNote } from '@/data/pregenerated-notes'
+import { nanoid } from 'nanoid'
 
 function GeneratePageContent() {
   const router = useRouter()
@@ -43,6 +45,9 @@ function GeneratePageContent() {
   const [showQuiz, setShowQuiz] = useState(false)
   const [quiz, setQuiz] = useState<Array<any>>([])
   const [isGeneratingQuiz, setIsGeneratingQuiz] = useState(false)
+  const [showProblems, setShowProblems] = useState(false)
+  const [problems, setProblems] = useState<Array<{problem: string, solution: string, difficulty: string}>>([])
+  const [isGeneratingProblems, setIsGeneratingProblems] = useState(false)
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
   const [lastSaved, setLastSaved] = useState<Date | null>(null)
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false)
@@ -125,9 +130,10 @@ function GeneratePageContent() {
     setIsGenerating(true)
 
     try {
-      let response
+      let newNote: TutorNote
 
       if (inputMode === 'pdf') {
+        // PDF mode always uses AI generation
         if (!selectedFile) {
           setErrorMessage('Please select a PDF file')
           return
@@ -139,36 +145,106 @@ function GeneratePageContent() {
         formData.append('subject', subject)
         formData.append('length', length)
 
-        response = await fetch('/api/tutor-notes/generate', {
+        const response = await fetch('/api/tutor-notes/generate', {
           method: 'POST',
           body: formData
         })
+
+        if (!response.ok) {
+          const error = await response.json()
+          const displayMessage = error.userMessage || error.error || 'Generation failed'
+          throw new Error(displayMessage)
+        }
+
+        newNote = await response.json()
       } else {
+        // Topic mode: check for pre-generated notes first
         if (!topic.trim()) {
           setErrorMessage('Please enter a topic')
           return
         }
 
-        response = await fetch('/api/tutor-notes/generate', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            topic: topic.trim(),
-            gradeLevel,
-            subject,
-            length
+        // Try to find pre-generated notes (we'll need to parse category/subject from search params or URL)
+        const categoryParam = searchParams.get('category')
+        const subjectParam = searchParams.get('subject')
+
+        let pregeneratedNote = null
+        if (categoryParam && subjectParam) {
+          pregeneratedNote = getPregeneratedNote(
+            categoryParam,
+            decodeURIComponent(subjectParam),
+            topic.trim()
+          )
+        }
+
+        if (pregeneratedNote) {
+          // Use pre-generated notes - format as TutorNote
+          const content = pregeneratedNote.content
+
+          // Convert to markdown format
+          let markdown = `# ${content.title}\n\n`
+          markdown += `## Introduction\n${content.intro}\n\n`
+          markdown += `## Key Points\n\n`
+          content.keyPoints.forEach((point, i) => {
+            markdown += `${i + 1}. ${point}\n`
           })
-        })
-      }
+          markdown += `\n## Examples\n\n`
+          content.examples.forEach((example, i) => {
+            markdown += `### Example ${i + 1}\n\`\`\`\n${example}\n\`\`\`\n\n`
+          })
+          if (content.commonMistakes && content.commonMistakes.length > 0) {
+            markdown += `\n## Common Mistakes to Avoid\n\n`
+            content.commonMistakes.forEach((mistake, i) => {
+              markdown += `${i + 1}. ${mistake}\n`
+            })
+          }
+          if (content.tips && content.tips.length > 0) {
+            markdown += `\n## Tips for Success\n\n`
+            content.tips.forEach((tip, i) => {
+              markdown += `${i + 1}. ${tip}\n`
+            })
+          }
 
-      if (!response.ok) {
-        const error = await response.json()
-        // Use the user-friendly message if available, otherwise fall back to error
-        const displayMessage = error.userMessage || error.error || 'Generation failed'
-        throw new Error(displayMessage)
-      }
+          newNote = {
+            id: nanoid(),
+            title: content.title,
+            intro: content.intro,
+            gradeLevel: gradeLevel,
+            subject: subjectParam || subject,
+            bullets: content.keyPoints,
+            quickCheck: [],
+            source: 'topic' as const,
+            sourceDetails: topic.trim(),
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            rawMarkdown: markdown
+          }
 
-      const newNote: TutorNote = await response.json()
+          // Show instant success message
+          showToastNotification('✨ Notes loaded instantly (pre-generated)')
+        } else {
+          // Fall back to AI generation
+          const response = await fetch('/api/tutor-notes/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              topic: topic.trim(),
+              gradeLevel,
+              subject,
+              length
+            })
+          })
+
+          if (!response.ok) {
+            const error = await response.json()
+            const displayMessage = error.userMessage || error.error || 'Generation failed'
+            throw new Error(displayMessage)
+          }
+
+          newNote = await response.json()
+          showToastNotification('Note generated with AI')
+        }
+      }
 
       // Add to session
       const updatedSession = NoteSessionManager.addNote(newNote)
@@ -359,6 +435,42 @@ function GeneratePageContent() {
     }
   }
 
+  // Generate practice problems with AI
+  const handleGenerateProblems = async () => {
+    if (!activeNote) return
+
+    setIsGeneratingProblems(true)
+    setErrorMessage(null)
+
+    try {
+      const response = await fetch('/api/tutor-notes/problems', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          noteMarkdown: activeNote.rawMarkdown,
+          topic: activeNote.title,
+          count: 10,
+          difficulty: 'mixed'
+        })
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.details || 'Failed to generate problems')
+      }
+
+      const data = await response.json()
+      setProblems(data.problems)
+      setShowProblems(true)
+      showToastNotification('Practice problems generated!')
+    } catch (error) {
+      console.error('Problems generation error:', error)
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to generate practice problems')
+    } finally {
+      setIsGeneratingProblems(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-neutral-50 flex">
       {/* Sidebar - Note List */}
@@ -477,6 +589,18 @@ function GeneratePageContent() {
                     <ClipboardList size={16} />
                   )}
                   Quiz
+                </button>
+                <button
+                  onClick={handleGenerateProblems}
+                  disabled={isGeneratingProblems}
+                  className="flex items-center gap-2 px-3 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                >
+                  {isGeneratingProblems ? (
+                    <Loader2 size={16} className="animate-spin" />
+                  ) : (
+                    <PenTool size={16} />
+                  )}
+                  Problems
                 </button>
               </div>
             )}
@@ -858,6 +982,81 @@ function GeneratePageContent() {
               </button>
               <button
                 onClick={() => setShowQuiz(false)}
+                className="px-4 py-2 bg-neutral-200 text-neutral-700 rounded-lg hover:bg-neutral-300 transition-colors font-medium"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Practice Problems Modal */}
+      {showProblems && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto p-6 animate-slide-in-up">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-neutral-900">Practice Problems ({problems.length})</h2>
+              <button
+                onClick={() => setShowProblems(false)}
+                className="text-neutral-500 hover:text-neutral-700"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              {problems.map((problem, index) => (
+                <div key={index} className="border border-neutral-200 rounded-lg p-5 hover:border-purple-300 transition-colors">
+                  <div className="flex items-start gap-3 mb-4">
+                    <span className="flex-shrink-0 w-8 h-8 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                          problem.difficulty === 'easy' ? 'bg-green-100 text-green-700' :
+                          problem.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700' :
+                          problem.difficulty === 'hard' ? 'bg-orange-100 text-orange-700' :
+                          'bg-red-100 text-red-700'
+                        }`}>
+                          {problem.difficulty.toUpperCase()}
+                        </span>
+                      </div>
+                      <div className="bg-neutral-50 p-4 rounded-lg border border-neutral-200 mb-4">
+                        <p className="text-lg font-medium text-neutral-900 whitespace-pre-wrap">{problem.problem}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <details className="ml-11">
+                    <summary className="cursor-pointer text-sm font-semibold text-purple-700 hover:text-purple-800 select-none bg-purple-50 px-4 py-2 rounded-lg inline-block">
+                      Show Solution
+                    </summary>
+                    <div className="mt-3 p-4 bg-green-50 border border-green-200 rounded-lg">
+                      <span className="text-sm font-semibold text-green-700">Solution:</span>
+                      <div className="text-sm text-green-900 mt-2 whitespace-pre-wrap">{problem.solution}</div>
+                    </div>
+                  </details>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex gap-3">
+              <button
+                onClick={() => {
+                  const text = problems.map((p, i) =>
+                    `Problem ${i + 1} [${p.difficulty.toUpperCase()}]\n${p.problem}\n\nSolution:\n${p.solution}\n`
+                  ).join('\n' + '='.repeat(50) + '\n\n')
+                  navigator.clipboard.writeText(text)
+                  alert('All problems copied to clipboard!')
+                }}
+                className="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+              >
+                Copy All Problems
+              </button>
+              <button
+                onClick={() => setShowProblems(false)}
                 className="px-4 py-2 bg-neutral-200 text-neutral-700 rounded-lg hover:bg-neutral-300 transition-colors font-medium"
               >
                 Close

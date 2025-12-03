@@ -30,7 +30,7 @@ export default function SubjectPage() {
   }
 
   const handleTopicClick = (topicName: string) => {
-    router.push(`/generate?mode=topic&example=${encodeURIComponent(topicName)}&autoGenerate=true`)
+    router.push(`/generate?mode=topic&example=${encodeURIComponent(topicName)}&category=${categorySlug}&subject=${encodeURIComponent(subjectName)}&autoGenerate=true`)
   }
 
   return (
