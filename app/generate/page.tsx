@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { FileUp, PenTool, Sparkles, Download, Copy, Plus, Trash2, Loader2, CreditCard, ClipboardList, AlertCircle, CheckCircle } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
@@ -108,6 +108,7 @@ function GeneratePageContent() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeNote, showKeyboardHelp])
 
   // Auto-generate if autoGenerate parameter is present
@@ -122,6 +123,7 @@ function GeneratePageContent() {
       }, 500)
       return () => clearTimeout(timer)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoGenerate, exampleTopic])
 
   // Generate new note

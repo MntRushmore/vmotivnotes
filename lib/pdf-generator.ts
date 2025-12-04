@@ -106,7 +106,7 @@ export async function generateNotePDF(note: TutorNote): Promise<Blob> {
   pdf.setFontSize(11)
   pdf.setFont('helvetica', 'normal')
 
-  note.bullets.forEach((point, index) => {
+  note.bullets.forEach((point) => {
     checkAndAddPage(15)
 
     // Bullet point with gold circle
