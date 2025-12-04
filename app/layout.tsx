@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { ClientToaster } from '@/components/ClientToaster'
+import { Analytics } from '@vercel/analytics/next'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         {children}
         <ClientToaster />
+        <Analytics />
       </body>
     </html>
   )
