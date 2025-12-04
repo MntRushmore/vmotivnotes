@@ -2,7 +2,13 @@ import type { GenerateNoteOptions, StructuredNoteResponse, RefineRequest } from 
 
 const SYSTEM_INSTRUCTION = `You are an expert tutor assistant that creates clear, comprehensive, structured teaching notes for educators. Your notes must be thorough, well-organized, actionable, and formatted consistently.
 
-CRITICAL: Always respond with ONLY valid JSON following this exact structure:
+CRITICAL JSON FORMATTING RULES:
+1. Always respond with ONLY valid JSON
+2. ALL backslashes in strings MUST be double-escaped (use \\\\ for LaTeX backslashes)
+3. For example: "The formula is $x = \\\\frac{a}{b}$" (note the double backslashes)
+4. Never use single backslashes in JSON strings
+
+Required JSON structure:
 
 {
   "title": "Clear, engaging title",
@@ -64,13 +70,15 @@ Guidelines for effective tutor notes:
 - Include practical teaching tips where relevant
 
 SPECIAL INSTRUCTIONS FOR MATH & SCIENCE:
-- Use LaTeX notation for all math: $x^2$, $\\frac{a}{b}$, $\\sqrt{x}$, etc.
-- Include formulas in bullets: "The quadratic formula is $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$"
+- Use LaTeX notation for all math: $x^2$, $\\\\frac{a}{b}$, $\\\\sqrt{x}$, etc. (remember to double-escape!)
+- Include formulas in bullets: "The quadratic formula is $x = \\\\frac{-b \\\\pm \\\\sqrt{b^2-4ac}}{2a}$"
 - ALWAYS include practiceProblems with complete step-by-step solutions
 - ALWAYS include diagram descriptions for key visuals
 - Show actual calculations in solution steps with numbers
 - For chemistry: use proper notation (H₂O, CO₂, etc.)
-- For physics: include units in all calculations (m/s, kg, N, etc.)`
+- For physics: include units in all calculations (m/s, kg, N, etc.)
+
+REMEMBER: In JSON, backslashes must be escaped! Use \\\\ not \\ for LaTeX commands.`
 
 interface GeminiResponse {
   candidates?: Array<{
@@ -255,6 +263,9 @@ Update the notes according to this instruction while maintaining the same JSON s
       throw new Error('No response from Gemini')
     }
 
+    console.log('[tutor-note-generator] Response length:', textResponse.length)
+    console.log('[tutor-note-generator] First 200 chars:', textResponse.substring(0, 200))
+
     // Parse JSON response with comprehensive error handling
     try {
       // Clean up response (remove markdown code blocks if present)
@@ -267,7 +278,23 @@ Update the notes according to this instruction while maintaining the same JSON s
 
       // Validate required fields
       if (!structured.title || !structured.bullets || !structured.quickCheck) {
-        throw new Error('Invalid response structure')
+        console.error('[tutor-note-generator] Missing required fields:', {
+          hasTitle: !!structured.title,
+          hasBullets: !!structured.bullets,
+          hasQuickCheck: !!structured.quickCheck
+        })
+        throw new Error('Invalid response structure - missing required fields')
+      }
+
+      // Ensure arrays are properly formatted
+      if (!Array.isArray(structured.bullets)) {
+        console.error('[tutor-note-generator] bullets is not an array:', typeof structured.bullets)
+        throw new Error('Invalid response structure - bullets must be an array')
+      }
+
+      if (!Array.isArray(structured.quickCheck)) {
+        console.error('[tutor-note-generator] quickCheck is not an array:', typeof structured.quickCheck)
+        throw new Error('Invalid response structure - quickCheck must be an array')
       }
 
       console.log(`[tutor-note-generator] Successfully generated notes: "${structured.title}"`)
@@ -284,6 +311,16 @@ Update the notes according to this instruction while maintaining the same JSON s
           .replace(/,(\s*[}\]])/g, '$1') // Remove trailing commas
           .replace(/[\u0000-\u001F\u007F-\u009F]/g, '') // Remove control characters
           .trim()
+
+        // Fix unescaped backslashes in JSON strings (common with LaTeX)
+        // This regex finds string values and properly escapes single backslashes
+        cleanedResponse = cleanedResponse.replace(
+          /"([^"\\]*(\\.[^"\\]*)*)"/g,
+          (match) => {
+            // Skip if it's a key (followed by colon) or already properly escaped
+            return match.replace(/\\(?!["\\/bfnrtu])/g, '\\\\')
+          }
+        )
 
         const structured: StructuredNoteResponse = JSON.parse(cleanedResponse)
         console.log(`[tutor-note-generator] Successfully parsed on second attempt: "${structured.title}"`)
@@ -307,6 +344,8 @@ Update the notes according to this instruction while maintaining the same JSON s
         // FINAL FALLBACK: Give helpful error message
         console.error('[tutor-note-generator] All parse attempts failed')
         console.error('[tutor-note-generator] Response length:', textResponse.length)
+        console.error('[tutor-note-generator] Full response (first 500 chars):', textResponse.substring(0, 500))
+        console.error('[tutor-note-generator] Full response (last 500 chars):', textResponse.substring(Math.max(0, textResponse.length - 500)))
 
         throw new Error('Failed to parse AI response. The topic might be too broad or complex. Try being more specific (e.g., "Quadratic Equations" instead of "Algebra"). If this persists, please contact VMotiv8 at https://vmotiv8.com for assistance.')
       }

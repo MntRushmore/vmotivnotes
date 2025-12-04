@@ -32,9 +32,95 @@ export async function generateNotePDF(note: TutorNote): Promise<Blob> {
     return false
   }
 
+  // Helper function to convert LaTeX to readable text
+  const convertLatexToText = (text: string): string => {
+    let result = text
+
+    // Handle inline math: $...$
+    result = result.replace(/\$([^$]+)\$/g, (_, math) => {
+      let converted = math
+        // Fractions: \frac{a}{b} -> a/b
+        .replace(/\\\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1/$2')
+        .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1/$2')
+        // Square root: \sqrt{x} -> √x
+        .replace(/\\\\sqrt\{([^}]+)\}/g, '√$1')
+        .replace(/\\sqrt\{([^}]+)\}/g, '√$1')
+        .replace(/\\\\sqrt/g, '√')
+        .replace(/\\sqrt/g, '√')
+        // Superscripts: x^{n} or x^n -> use Unicode where possible
+        .replace(/\^\\{2\\}/g, '²')
+        .replace(/\^\{2\}/g, '²')
+        .replace(/\^2/g, '²')
+        .replace(/\^\\{3\\}/g, '³')
+        .replace(/\^\{3\}/g, '³')
+        .replace(/\^3/g, '³')
+        .replace(/\^\\{4\\}/g, '⁴')
+        .replace(/\^\{4\}/g, '⁴')
+        .replace(/\^4/g, '⁴')
+        .replace(/\^\\{([^}]+)\\}/g, '^($1)')
+        .replace(/\^\{([^}]+)\}/g, '^($1)')
+        .replace(/\^(\w+)/g, '^$1')
+        // Subscripts: x_{n} or x_n
+        .replace(/_\\{([^}]+)\\}/g, '_($1)')
+        .replace(/_\{([^}]+)\}/g, '_($1)')
+        .replace(/_0/g, '₀')
+        .replace(/_1/g, '₁')
+        .replace(/_2/g, '₂')
+        .replace(/_3/g, '₃')
+        .replace(/_4/g, '₄')
+        .replace(/_(\w+)/g, '_$1')
+        // Greek letters (both escaped and unescaped)
+        .replace(/\\\\alpha/g, 'α').replace(/\\alpha/g, 'α')
+        .replace(/\\\\beta/g, 'β').replace(/\\beta/g, 'β')
+        .replace(/\\\\gamma/g, 'γ').replace(/\\gamma/g, 'γ')
+        .replace(/\\\\delta/g, 'δ').replace(/\\delta/g, 'δ')
+        .replace(/\\\\theta/g, 'θ').replace(/\\theta/g, 'θ')
+        .replace(/\\\\pi/g, 'π').replace(/\\pi/g, 'π')
+        .replace(/\\\\sigma/g, 'σ').replace(/\\sigma/g, 'σ')
+        .replace(/\\\\lambda/g, 'λ').replace(/\\lambda/g, 'λ')
+        .replace(/\\\\mu/g, 'μ').replace(/\\mu/g, 'μ')
+        // Math operators
+        .replace(/\\\\pm/g, '±').replace(/\\pm/g, '±')
+        .replace(/\\\\times/g, '×').replace(/\\times/g, '×')
+        .replace(/\\\\div/g, '÷').replace(/\\div/g, '÷')
+        .replace(/\\\\cdot/g, '·').replace(/\\cdot/g, '·')
+        .replace(/\\\\leq/g, '≤').replace(/\\leq/g, '≤')
+        .replace(/\\\\geq/g, '≥').replace(/\\geq/g, '≥')
+        .replace(/\\\\neq/g, '≠').replace(/\\neq/g, '≠')
+        .replace(/\\\\approx/g, '≈').replace(/\\approx/g, '≈')
+        .replace(/\\\\infty/g, '∞').replace(/\\infty/g, '∞')
+        .replace(/\\\\sum/g, 'Σ').replace(/\\sum/g, 'Σ')
+        .replace(/\\\\int/g, '∫').replace(/\\int/g, '∫')
+        // Remove remaining LaTeX commands (replace with space)
+        .replace(/\\\\[a-zA-Z]+/g, '')
+        .replace(/\\[a-zA-Z]+/g, '')
+        // Clean up braces
+        .replace(/\\\\([{}])/g, '$1')
+        .replace(/\\([{}])/g, '$1')
+        .replace(/[{}]/g, '')
+        // Clean up multiple backslashes
+        .replace(/\\\\/g, '')
+        .replace(/\\/g, '')
+
+      return converted.trim()
+    })
+
+    // Clean up whitespace more aggressively
+    result = result
+      .replace(/\s+/g, ' ')           // Multiple spaces to single
+      .replace(/\s+([.,;:!?)])/g, '$1') // Remove space before punctuation
+      .replace(/\(\s+/g, '(')          // Remove space after opening paren
+      .replace(/\s+\)/g, ')')          // Remove space before closing paren
+      .replace(/\s*\/\s*/g, '/')       // Remove spaces around division
+      .trim()
+
+    return result
+  }
+
   // Helper function to wrap text
   const wrapText = (text: string, maxWidth: number): string[] => {
-    return pdf.splitTextToSize(text, maxWidth)
+    const cleanText = convertLatexToText(text)
+    return pdf.splitTextToSize(cleanText, maxWidth)
   }
 
   // ==================== HEADER ====================
