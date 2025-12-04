@@ -1,64 +1,56 @@
 import type { GenerateNoteOptions, StructuredNoteResponse, RefineRequest } from '@/types'
 
-const SYSTEM_INSTRUCTION = `You are an expert tutor assistant that creates EXTREMELY DETAILED, comprehensive, structured teaching notes for educators. Your notes must be thorough, clear, actionable, and formatted consistently.
+const SYSTEM_INSTRUCTION = `You are an expert tutor assistant that creates clear, comprehensive, structured teaching notes for educators. Your notes must be thorough, well-organized, actionable, and formatted consistently.
 
 CRITICAL: Always respond with ONLY valid JSON following this exact structure:
 
 {
   "title": "Clear, engaging title",
-  "intro": "2-3 sentence detailed overview that sets context and explains importance",
+  "intro": "2-3 sentence overview that sets context and explains importance",
   "gradeLevel": "elementary|middle|high|college",
   "subject": "subject area (e.g., math, science, history)",
   "bullets": [
-    "Key concept 1 with clear, thorough explanation",
-    "Definition: Term - precise meaning with extensive context and etymology if relevant",
-    "Step-by-step process: 1) First step with detailed explanation 2) Second step with reasoning 3) Third step with examples 4) Fourth step and beyond",
-    "Example: [Multiple detailed real-world scenarios that illustrate the concept from different angles]",
-    "Visual analogy: Compare to something students know with detailed comparison",
-    "Common misconception: What students often get wrong, why it's wrong, and the correct understanding",
-    "Connection: How this relates to other topics with specific examples",
-    "Historical context: Background and development of this concept",
-    "Advanced insight: Deeper understanding or edge cases",
-    "15-25 bullets total - each must be highly informative and detailed with concrete examples"
+    "Key concept 1 with clear explanation and example",
+    "Definition: Term - precise meaning with context",
+    "Step-by-step process: 1) First step 2) Second step 3) Third step with reasoning",
+    "Example: Real-world scenario that illustrates the concept",
+    "Visual analogy: Compare to something students know",
+    "Common misconception: What students often get wrong and the correct understanding",
+    "Connection: How this relates to other topics",
+    "Historical context or background (if relevant)",
+    "12-15 bullets total - each informative with concrete examples"
   ],
   "quickCheck": [
-    {"question": "Simple recall question?", "answer": "Direct factual answer with context"},
-    {"question": "Application question requiring reasoning?", "answer": "Detailed explanation of how to apply"},
-    {"question": "Critical thinking question?", "answer": "Sample reasoning path with multiple steps"},
-    {"question": "Synthesis question connecting multiple concepts?", "answer": "Comprehensive explanation"},
-    "8-12 questions total - build from easy to very challenging with diverse question types"
+    {"question": "Simple recall question?", "answer": "Direct factual answer"},
+    {"question": "Application question?", "answer": "Explanation of how to apply"},
+    {"question": "Critical thinking question?", "answer": "Sample reasoning path"},
+    "5-8 questions total - build from easy to challenging"
   ],
   "realWorldApplications": [
-    {"category": "career", "description": "Detailed explanation of how professionals use this concept (engineers, doctors, scientists, etc.) with specific examples"},
-    {"category": "daily-life", "description": "Multiple specific scenarios where students encounter this in everyday situations"},
-    {"category": "history", "description": "Famous historical uses, discoveries, and the people behind them"},
-    {"category": "current-events", "description": "Modern applications, cutting-edge research, or current relevance"},
-    {"category": "technology", "description": "How this concept is used in modern technology and innovation"},
-    "Include 5-8 detailed applications to show extensive practical value"
+    {"category": "career", "description": "How professionals use this (engineers, doctors, etc.)"},
+    {"category": "daily-life", "description": "Where students encounter this in everyday life"},
+    {"category": "history", "description": "Famous historical uses or discoveries"},
+    "Include 3-4 practical applications"
   ],
   "practiceProblems": [
     {
-      "problem": "Detailed worked example problem with numbers/scenario and context",
-      "difficulty": "easy|medium|hard|very-hard",
-      "solution": "Final answer or result with units/context",
+      "problem": "Clear problem statement with numbers/scenario",
+      "difficulty": "easy|medium|hard",
+      "solution": "Final answer with units/context",
       "steps": [
-        "Step 1: What to do first with detailed explanation of why",
-        "Step 2: Next calculation or reasoning with intermediate results",
-        "Step 3: Continue solving with detailed work shown",
-        "Step 4: Further steps with explanations",
-        "Step 5+: Additional steps as needed to reach solution"
+        "Step 1: What to do first with brief explanation",
+        "Step 2: Next calculation with intermediate results",
+        "Step 3: Continue solving",
+        "Step 4: Final step to reach solution"
       ]
     },
-    "For MATH/SCIENCE subjects: Include 20-30 practice problems with COMPLETE step-by-step solutions",
-    "Mix difficulty levels: 8-10 easy, 10-12 medium, 5-7 hard, 2-3 very hard",
-    "Include variety: word problems, numerical problems, conceptual problems, multi-step problems",
-    "For NON-STEM subjects: Include 15-20 practice questions/essay prompts with detailed guidance"
+    "Include 5-8 practice problems ONLY - focused and high-quality",
+    "Mix difficulty: 2-3 easy, 2-3 medium, 1-2 hard",
+    "Include variety: word problems, numerical, conceptual"
   ],
   "diagrams": [
-    "Detailed description of key diagram/graph #1 with all labels and features (e.g., 'Graph showing y = x^2 parabola with vertex at origin, axis of symmetry at x=0, opening upward, showing points (-2,4), (-1,1), (0,0), (1,1), (2,4)')",
-    "Comprehensive description of visual #2 with annotations (e.g., 'Molecular structure of H2O showing 104.5° bond angle, two O-H bonds, lone pairs, polarity arrows')",
-    "For MATH/SCIENCE: Include 5-8 detailed diagram descriptions with complete annotations",
-    "For NON-STEM: Include 3-5 visual organizers, timelines, or concept maps"
+    "Description of key diagram/graph with labels (e.g., 'Graph of y = x^2 showing vertex, axis of symmetry')",
+    "Include 2-3 diagram descriptions for important visuals"
   ]
 }
 
@@ -109,7 +101,7 @@ export class TutorNoteGenerator {
   ): Promise<StructuredNoteResponse> {
     const gradeLevel = options.gradeLevel || 'middle'
 
-    const prompt = `Analyze this document and create EXTREMELY DETAILED tutor-friendly teaching notes.
+    const prompt = `Analyze this document and create comprehensive tutor-friendly teaching notes.
 
 Document content:
 ${extractedText.slice(0, 8000)} ${extractedText.length > 8000 ? '...(truncated for length)' : ''}
@@ -117,16 +109,15 @@ ${extractedText.slice(0, 8000)} ${extractedText.length > 8000 ? '...(truncated f
 Target grade level: ${gradeLevel}
 
 Requirements:
-- Be VERY comprehensive with 15-25 detailed bullet points covering ALL concepts thoroughly
+- Create 12-15 clear bullet points covering key concepts
 - Use language appropriate for ${gradeLevel} level
-- Include multiple examples that ${gradeLevel} students can relate to
-- Create 8-12 Quick Check questions at varying difficulty levels
-- For MATH/SCIENCE: Include 20-30 practice problems with complete solutions at mixed difficulty
-- For NON-STEM: Include 15-20 practice questions/essay prompts with detailed guidance
-- Include 5-8 detailed diagram descriptions
-- Include 5-8 real-world applications
+- Include examples that ${gradeLevel} students can relate to
+- Create 5-8 Quick Check questions at varying difficulty levels
+- Include 5-8 practice problems with step-by-step solutions
+- Include 2-3 diagram descriptions for important visuals
+- Include 3-4 real-world applications
 
-Extract ALL key teaching points from this document and format them according to the system instructions with MAXIMUM detail.`
+Extract key teaching points from this document and format them according to the system instructions.`
 
     return this.callGemini(prompt)
   }
@@ -175,7 +166,7 @@ Extract ALL key teaching points from this document and format them according to 
       general: 'Use clear, professional language suitable for adult learners or general audiences with extensive coverage.'
     }
 
-    const prompt = `Create EXTREMELY DETAILED and COMPREHENSIVE tutor notes for teaching this topic: "${topic}"
+    const prompt = `Create comprehensive tutor notes for teaching this topic: "${topic}"
 
 Subject area: ${subject}
 Target audience: ${gradeLevel} level
@@ -184,18 +175,17 @@ Teaching context:
 ${gradeContext[gradeLevel]}
 
 Requirements:
-- Be VERY comprehensive with 15-25 detailed bullet points covering ALL aspects of the topic
-- Cover fundamental concepts, key definitions, important examples, historical context, and advanced insights
-- Make it practical and actionable for tutors to teach from with extensive detail
-- Include 8-12 Quick Check questions that test understanding at varying difficulty levels
-- For MATH/SCIENCE topics: Include 20-30 practice problems with COMPLETE step-by-step solutions
-  - Mix difficulty: 8-10 easy, 10-12 medium, 5-7 hard, 2-3 very hard
-  - Include variety: word problems, numerical, conceptual, multi-step problems
-- For NON-STEM topics: Include 15-20 practice questions/essay prompts with detailed guidance
-- Include 5-8 detailed diagram descriptions with complete annotations
-- Include 5-8 real-world applications across different categories
+- Create 12-15 clear bullet points covering key aspects of the topic
+- Cover fundamental concepts, definitions, examples, and important connections
+- Make it practical and actionable for tutors
+- Include 5-8 Quick Check questions at varying difficulty levels
+- Include 5-8 practice problems with step-by-step solutions
+  - Mix difficulty: 2-3 easy, 2-3 medium, 1-2 hard
+  - Include variety: word problems, numerical, conceptual
+- Include 2-3 diagram descriptions for important visuals
+- Include 3-4 real-world applications
 
-Research this topic THOROUGHLY and create notes following the system instructions with MAXIMUM detail and comprehensiveness.`
+Research this topic and create notes following the system instructions.`
 
     return this.callGemini(prompt)
   }
@@ -244,8 +234,8 @@ Update the notes according to this instruction while maintaining the same JSON s
             parts: [{ text: `${SYSTEM_INSTRUCTION}\n\n${prompt}` }]
           }],
           generationConfig: {
-            temperature: 0.7,
-            maxOutputTokens: 8192,
+            temperature: 0.4,
+            maxOutputTokens: 6144,
             responseMimeType: 'application/json', // Request JSON output
           }
         })
