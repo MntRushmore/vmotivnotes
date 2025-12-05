@@ -2339,7 +2339,829 @@ export const pregeneratedNotes: PregeneratedNote[] = [
     }
   },
 
-  // Continue with more topics... (This is a starting template showing the structure)
+  // ==================== PHYSICS ====================
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics',
+    topicName: 'Newton\'s Laws of Motion',
+    content: {
+      title: 'Newton\'s Laws of Motion',
+      intro: 'Newton\'s three laws of motion form the foundation of classical mechanics, explaining how forces affect the motion of objects. These principles are essential for understanding everything from everyday phenomena to complex engineering systems.',
+      keyPoints: [
+        'Newton\'s First Law (Inertia): An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by a net external force',
+        'Inertia is the tendency of objects to resist changes in motion - more massive objects have greater inertia',
+        'Newton\'s Second Law: F = ma (Force equals mass times acceleration) - this is the fundamental equation of dynamics',
+        'The net force is the vector sum of all forces acting on an object',
+        'Acceleration is directly proportional to net force and inversely proportional to mass',
+        'Newton\'s Third Law: For every action, there is an equal and opposite reaction - forces always occur in pairs',
+        'Action-reaction pairs act on different objects, not the same object',
+        'Weight is the gravitational force: W = mg, where g ≈ 9.8 m/s² on Earth',
+        'Free-body diagrams show all forces acting on a single object - essential for problem solving',
+        'Normal force is perpendicular to contact surfaces and adjusts to prevent penetration',
+        'Friction opposes motion: static friction (prevents sliding), kinetic friction (opposes sliding)',
+        'Net force of zero means constant velocity (which includes being at rest)',
+        'Units: Force in Newtons (N), mass in kilograms (kg), acceleration in m/s²',
+        'Common forces: gravity, normal force, friction, tension, applied force',
+        'Problem-solving strategy: Draw free-body diagram → Sum forces → Apply F = ma → Solve'
+      ],
+      examples: [
+        'First Law Example: A hockey puck sliding on ice continues moving because friction is minimal. It would continue forever in space (no forces).',
+        'Second Law Calculation:\nA 10 kg box is pushed with 50 N force.\nFind acceleration:\nF = ma\n50 = 10a\na = 5 m/s²',
+        'Third Law Example: When you jump, you push down on the ground (action). The ground pushes up on you with equal force (reaction), propelling you upward.',
+        'Weight Calculation:\nFind weight of 60 kg person:\nW = mg\nW = 60 × 9.8\nW = 588 N',
+        'Combined Forces:\nTwo people push a car: one applies 200 N east, another 150 N east.\nNet force = 200 + 150 = 350 N east\nIf car mass is 1000 kg:\na = F/m = 350/1000 = 0.35 m/s²',
+        'Friction Problem:\nBox on floor: mass = 20 kg, coefficient of friction = 0.3\nFrictional force = μN = μmg\nf = 0.3 × 20 × 9.8 = 58.8 N\nNeed > 58.8 N to move the box'
+      ],
+      commonMistakes: [
+        'Confusing mass (kg) and weight (N) - mass is amount of matter, weight is gravitational force',
+        'Thinking action-reaction pairs cancel out - they act on different objects so don\'t cancel',
+        'Forgetting to convert units (grams to kg, etc.) before calculating',
+        'Including forces not actually acting on the object in free-body diagrams',
+        'Assuming all motion requires a force - constant velocity needs zero net force',
+        'Not recognizing that friction can be static (preventing motion) or kinetic (during motion)'
+      ],
+      tips: [
+        'Always draw a free-body diagram first - it\'s the key to solving force problems',
+        'Choose a coordinate system and be consistent with positive/negative directions',
+        'Remember: net force causes acceleration, not velocity',
+        'For Third Law, identify the two objects involved in the action-reaction pair',
+        'Check if answer makes physical sense - negative acceleration means slowing down',
+        'Practice identifying all forces: look for contact (normal, friction, tension) and non-contact (gravity)'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics',
+    topicName: 'Work, Energy, and Power',
+    content: {
+      title: 'Work, Energy, and Power',
+      intro: 'Energy is one of the most fundamental concepts in physics, representing the ability to do work. Understanding the relationship between work, energy, and power is crucial for analyzing mechanical systems and solving real-world engineering problems.',
+      keyPoints: [
+        'Work is force applied over a distance: W = Fd cos(θ), where θ is angle between force and displacement',
+        'Work is only done when force causes displacement in the direction of the force',
+        'Kinetic Energy (KE) is energy of motion: KE = ½mv², depends on mass and velocity',
+        'Potential Energy (PE) is stored energy: Gravitational PE = mgh, where h is height above reference point',
+        'Elastic PE in springs: PE = ½kx², where k is spring constant and x is compression/stretch',
+        'Work-Energy Theorem: Net work done equals change in kinetic energy: W_net = ΔKE',
+        'Conservation of Energy: Total energy in isolated system remains constant (energy transforms but isn\'t created/destroyed)',
+        'Mechanical Energy = KE + PE (conserved when only conservative forces act)',
+        'Power is the rate of doing work: P = W/t or P = Fv (force times velocity)',
+        'Conservative forces (gravity, springs) allow energy recovery - non-conservative forces (friction) dissipate energy as heat',
+        'Energy is a scalar (no direction), unlike force which is a vector',
+        'Units: Energy and work in Joules (J), Power in Watts (W), 1 W = 1 J/s',
+        'Efficiency = (Useful output energy / Input energy) × 100%',
+        'When object speeds up, work is positive; when it slows down, work is negative',
+        'At maximum height, all KE converts to PE (velocity = 0)'
+      ],
+      examples: [
+        'Work Calculation:\nPush box 5 m with 30 N force at 0° angle:\nW = Fd cos(θ) = 30 × 5 × cos(0°) = 30 × 5 × 1 = 150 J',
+        'Kinetic Energy:\nCar with mass 1200 kg traveling at 20 m/s:\nKE = ½mv² = ½ × 1200 × 20² = ½ × 1200 × 400 = 240,000 J',
+        'Potential Energy:\nLift 5 kg object to height of 10 m:\nPE = mgh = 5 × 9.8 × 10 = 490 J',
+        'Conservation of Energy:\nBall dropped from 20 m height:\nInitial: PE = mgh, KE = 0\nJust before hitting ground: PE = 0, KE = mgh\nVelocity when hitting: ½mv² = mgh → v = √(2gh) = √(2 × 9.8 × 20) = 19.8 m/s',
+        'Power Calculation:\nEngine does 5000 J of work in 10 seconds:\nP = W/t = 5000/10 = 500 W\nAlternatively: If force is 250 N and velocity is 2 m/s:\nP = Fv = 250 × 2 = 500 W',
+        'Spring Energy:\nCompress spring (k = 200 N/m) by 0.3 m:\nPE = ½kx² = ½ × 200 × 0.3² = ½ × 200 × 0.09 = 9 J'
+      ],
+      commonMistakes: [
+        'Forgetting cos(θ) in work formula - if force perpendicular to motion, work = 0',
+        'Using wrong reference point for potential energy - choose consistently',
+        'Thinking energy is lost - it\'s transformed (often to heat) but conserved overall',
+        'Confusing power with energy - power is rate, energy is total',
+        'Not squaring velocity in KE formula - KE = ½mv², not ½mv',
+        'Assuming mechanical energy always conserved - only true without friction/air resistance'
+      ],
+      tips: [
+        'Energy problems: List initial and final energy forms, apply conservation',
+        'Remember energy is conserved, but mechanical energy may not be (friction converts to heat)',
+        'For projectiles: at max height, KE is minimum and PE is maximum',
+        'Power tells you how fast work is done, not total work done',
+        'Check units: 1 kWh = 3.6 million Joules (common in electricity bills)',
+        'Efficiency is always less than 100% in real systems due to friction and heat loss'
+      ]
+    }
+  },
+
+  // ==================== CHEMISTRY ====================
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Atomic Structure and Electron Configuration',
+    content: {
+      title: 'Atomic Structure and Electron Configuration',
+      intro: 'Understanding atomic structure is fundamental to chemistry. The arrangement of electrons in atoms determines chemical properties, bonding behavior, and the organization of the periodic table.',
+      keyPoints: [
+        'Atoms consist of protons (positive), neutrons (neutral) in nucleus, and electrons (negative) in orbitals',
+        'Atomic number (Z) = number of protons = number of electrons in neutral atom',
+        'Mass number (A) = protons + neutrons; isotopes have same Z but different A',
+        'Electrons exist in energy levels (shells) designated n = 1, 2, 3, 4... with increasing energy',
+        'Each energy level contains sublevels: s (max 2e⁻), p (max 6e⁻), d (max 10e⁻), f (max 14e⁻)',
+        'Aufbau Principle: Electrons fill lowest energy orbitals first (1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p...)',
+        'Pauli Exclusion Principle: Each orbital holds maximum 2 electrons with opposite spins',
+        'Hund\'s Rule: Electrons fill degenerate orbitals singly before pairing up',
+        'Valence electrons are outermost electrons and determine chemical reactivity',
+        'Electron configuration shows distribution: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰...',
+        'Noble gas shorthand uses [Ne], [Ar], [Kr] etc. to represent core electrons',
+        'Orbital diagrams use boxes and arrows to show electron spin: ↑↓ = paired, ↑ = unpaired',
+        'Quantum numbers: n (shell), l (subshell), ml (orbital), ms (spin)',
+        'Ions: Cations lose electrons, anions gain electrons to achieve stable configuration',
+        'Transition metals lose 4s electrons before 3d when forming cations'
+      ],
+      examples: [
+        'Carbon (Z=6) electron configuration:\nFull: 1s² 2s² 2p²\nOrbital diagram: 1s: ↑↓  2s: ↑↓  2p: ↑ ↑ _\nValence: 4 electrons (2s² 2p²)',
+        'Chlorine (Z=17):\nFull: 1s² 2s² 2p⁶ 3s² 3p⁵\nNoble gas: [Ne] 3s² 3p⁵\nValence: 7 electrons\nTo become Cl⁻: gains 1 electron → [Ar] configuration',
+        'Iron (Z=26):\nFull: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶\nNoble gas: [Ar] 4s² 3d⁶\nFe²⁺ (loses 4s electrons): [Ar] 3d⁶\nFe³⁺: [Ar] 3d⁵',
+        'Oxygen (Z=8) orbital filling:\n1s: ↑↓\n2s: ↑↓\n2p: ↑↓ ↑ ↑ (Hund\'s rule: fill singly first)\nConfiguration: 1s² 2s² 2p⁴',
+        'Sodium (Z=11):\n1s² 2s² 2p⁶ 3s¹\nValence: 1 electron\nNa⁺ loses 1 electron → 1s² 2s² 2p⁶ = [Ne]',
+        'Sulfur (Z=16):\n[Ne] 3s² 3p⁴\n3p orbitals: ↑↓ ↑ ↑ (two paired, two unpaired)\nS²⁻ gains 2 electrons → [Ar]'
+      ],
+      commonMistakes: [
+        'Forgetting that 4s fills before 3d, but 4s empties before 3d when forming cations',
+        'Writing electron configuration for ions without adding/removing correct electrons',
+        'Not following Hund\'s rule - putting electrons in pairs before filling all orbitals singly',
+        'Confusing atomic number with mass number',
+        'Assuming valence electrons are always in highest n - transition metals have (n-1)d electrons too',
+        'Forgetting exceptions: Cr is [Ar] 4s¹ 3d⁵, Cu is [Ar] 4s¹ 3d¹⁰ (half-filled and filled d are more stable)'
+      ],
+      tips: [
+        'Memorize order: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p...',
+        'Use diagonal rule or aufbau diagram to remember filling order',
+        'For ions: find neutral atom config first, then add/remove electrons',
+        'Valence electrons determine reactivity: Group 1 has 1, Group 17 has 7, Group 18 has 8',
+        'Noble gas configurations are stable (full outer shell)',
+        'Period number = highest energy level (n); Group number (for main groups) = valence electrons'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Chemical Bonding and Molecular Geometry',
+    content: {
+      title: 'Chemical Bonding and Molecular Geometry',
+      intro: 'Chemical bonds form when atoms share or transfer electrons to achieve stable electron configurations. The type of bonding and molecular shape determine the physical and chemical properties of substances.',
+      keyPoints: [
+        'Ionic bonds form between metals and nonmetals through electron transfer, creating oppositely charged ions',
+        'Covalent bonds form between nonmetals through electron sharing',
+        'Metallic bonding occurs in metals: delocalized electrons create "sea of electrons"',
+        'Electronegativity difference determines bond type: >1.7 = ionic, 0.4-1.7 = polar covalent, <0.4 = nonpolar covalent',
+        'Lewis structures show valence electrons as dots and bonds as lines',
+        'Octet rule: Atoms tend to gain, lose, or share electrons to have 8 valence electrons (except H wants 2)',
+        'VSEPR Theory: Electron pairs repel, determining molecular geometry',
+        'Electron geometry considers all electron groups (bonds + lone pairs); molecular geometry considers only atoms',
+        'Common geometries: Linear (2 groups), Trigonal planar (3), Tetrahedral (4), Trigonal bipyramidal (5), Octahedral (6)',
+        'Lone pairs repel more than bonding pairs, distorting bond angles',
+        'Polar molecules have asymmetric charge distribution (dipole moment), nonpolar are symmetric',
+        'Resonance structures show electron delocalization - actual structure is hybrid',
+        'Formal charge = V - N - B/2 (valence - nonbonding - half of bonding electrons)',
+        'Multiple bonds: double bond = 4 electrons, triple bond = 6 electrons',
+        'Expanded octets occur in period 3+ elements (can use d orbitals): SF₆ has 12 electrons'
+      ],
+      examples: [
+        'Ionic Bond - NaCl:\nNa (1 valence) → Na⁺ (loses 1e⁻)\nCl (7 valence) → Cl⁻ (gains 1e⁻)\nElectrostatic attraction forms crystal lattice',
+        'Lewis Structure - H₂O:\nO has 6 valence, each H has 1\nTotal: 6 + 1 + 1 = 8 electrons\nO-H bonds use 4e⁻, 4e⁻ remain as 2 lone pairs on O\nStructure: H-O-H with 2 lone pairs on O',
+        'VSEPR - H₂O:\nElectron groups: 2 bonds + 2 lone pairs = 4 total\nElectron geometry: Tetrahedral\nMolecular geometry: Bent (only considering atoms)\nBond angle: ~104.5° (less than 109.5° due to lone pair repulsion)',
+        'Polar vs Nonpolar - CO₂ vs H₂O:\nCO₂: O=C=O (linear, symmetrical) → nonpolar\nH₂O: bent shape → polar (dipoles don\'t cancel)',
+        'Resonance - CO₃²⁻:\nThree equivalent structures with double bond in different positions\nActual structure: all C-O bonds identical, 1.33 bond order\n[Show three structures with double bond rotating]',
+        'Formal Charge - HCN:\nH-C≡N:\nH: 1-0-2/2 = 0\nC: 4-0-8/2 = 0\nN: 5-2-6/2 = 0\nBest structure (all zeros)'
+      ],
+      commonMistakes: [
+        'Drawing incorrect Lewis structures - count total valence electrons first',
+        'Forgetting lone pairs when determining molecular geometry',
+        'Thinking polar bonds always make polar molecules - shape matters (CO₂ is nonpolar despite polar C=O bonds)',
+        'Not recognizing resonance - drawing only one structure when multiple exist',
+        'Assuming all atoms follow octet rule - exceptions include H (2), Be (4), B (6), and expanded octets',
+        'Confusing electron geometry with molecular geometry'
+      ],
+      tips: [
+        'Lewis structures: 1) Count valence e⁻, 2) Draw skeleton, 3) Add bonds, 4) Complete octets, 5) Check formal charges',
+        'VSEPR: Count electron groups → determine electron geometry → consider lone pairs → find molecular shape',
+        'Memorize bond angles: Linear (180°), Trigonal planar (120°), Tetrahedral (109.5°)',
+        'For polarity: Check individual bond polarity first, then molecular symmetry',
+        'Resonance: Use double-headed arrow (↔) between structures, not equilibrium arrows',
+        'Formal charge closest to zero is usually most stable structure'
+      ]
+    }
+  },
+
+  // ==================== BIOLOGY ====================
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Cell Cycle and Mitosis',
+    content: {
+      title: 'Cell Cycle and Mitosis',
+      intro: 'The cell cycle is the sequence of events that cells go through as they grow and divide. Understanding mitosis is essential for comprehending growth, development, tissue repair, and the prevention of cancer.',
+      keyPoints: [
+        'Cell cycle consists of Interphase (G₁, S, G₂) and M phase (mitosis + cytokinesis)',
+        'Interphase is the growth phase: G₁ (growth), S (DNA synthesis/replication), G₂ (preparation for mitosis)',
+        'Cells spend most time in interphase (90% of cycle), not actively dividing',
+        'Mitosis produces two genetically identical diploid daughter cells from one parent cell',
+        'Mitosis phases (PMAT): Prophase, Metaphase, Anaphase, Telophase',
+        'Prophase: Chromatin condenses to chromosomes, spindle apparatus forms, nuclear envelope breaks down',
+        'Metaphase: Chromosomes align at cell equator (metaphase plate), spindle attaches to centromeres',
+        'Anaphase: Sister chromatids separate and move to opposite poles, cell elongates',
+        'Telophase: Nuclear envelopes reform, chromosomes decondense, spindle disappears',
+        'Cytokinesis divides cytoplasm: cleavage furrow in animals, cell plate in plants',
+        'Checkpoints regulate cell cycle: G₁ checkpoint (size, nutrients), G₂ checkpoint (DNA replicated), M checkpoint (spindle attachment)',
+        'Cyclins and CDKs (cyclin-dependent kinases) control progression through checkpoints',
+        'Cancer results from uncontrolled cell division due to checkpoint failure',
+        'Chromosome = one DNA molecule; after replication = 2 sister chromatids joined at centromere',
+        'Humans: 46 chromosomes (23 pairs) in somatic cells, maintained through mitosis'
+      ],
+      examples: [
+        'Interphase DNA Content:\nG₁ phase: cell has 2n DNA (diploid)\nS phase: DNA replicates, content goes from 2n to 4n\nG₂ phase: cell has 4n DNA (still diploid, but sister chromatids)\nAfter mitosis: two cells each with 2n DNA',
+        'Mitosis in Human Cell:\nStart: 1 cell with 46 chromosomes (23 pairs)\nAfter S phase: 46 chromosomes, each with 2 sister chromatids\nMetaphase: 46 chromosomes aligned\nAnaphase: 92 chromatids (46 go to each pole)\nResult: 2 cells, each with 46 chromosomes',
+        'Checkpoint Example - G₁:\nCell checks: Is environment favorable? Sufficient nutrients? Proper size?\nIf NO → cell enters G₀ (quiescent state)\nIf YES → cell proceeds to S phase\nNeurons stay in G₀ permanently',
+        'Cancer Connection:\np53 protein (tumor suppressor) monitors DNA damage at G₁ checkpoint\nIf damaged: p53 stops cycle for repair or triggers apoptosis\nMutated p53: damaged cells continue dividing → cancer\n50% of cancers involve p53 mutations',
+        'Timing Example:\nTypical human cell cycle: 24 hours\nInterphase: ~23 hours (G₁: 11h, S: 8h, G₂: 4h)\nMitosis: ~1 hour\nCytokinesis: overlaps with telophase',
+        'Plant vs Animal Mitosis:\nAnimals: centrioles present, cleavage furrow\nPlants: no centrioles, cell plate forms\nBoth: identical genetic outcome (2 diploid cells)'
+      ],
+      commonMistakes: [
+        'Confusing mitosis (produces identical cells) with meiosis (produces gametes)',
+        'Thinking chromosomes replicate during mitosis - replication happens in S phase of interphase',
+        'Not recognizing that sister chromatids are identical copies (not homologous pairs)',
+        'Assuming all cells constantly divide - many enter G₀ and don\'t divide',
+        'Mixing up chromosome number vs DNA content (after S phase, same # chromosomes but double DNA)',
+        'Forgetting that cytokinesis is separate from mitosis (can have mitosis without cytokinesis → multinucleate cell)'
+      ],
+      tips: [
+        'Remember PMAT for mitosis phases: Prophase, Metaphase, Anaphase, Telophase',
+        'Metaphase = "M" for Middle (chromosomes in middle)',
+        'Anaphase = "A" for Apart (chromatids pull apart)',
+        'Interphase is NOT a phase of mitosis, it\'s preparation before mitosis',
+        'Draw diagrams showing chromosome appearance in each phase',
+        'For checkpoints: G₁ checks environment, G₂ checks DNA replication, M checks spindle attachment'
+      ]
+    }
+  },
+
+  // ==================== CALCULUS ====================
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Limits and Continuity',
+    content: {
+      title: 'Limits and Continuity',
+      intro: 'Limits are the foundation of calculus, allowing us to analyze function behavior near specific points. Understanding limits is essential for defining derivatives and integrals, the two main concepts in calculus.',
+      keyPoints: [
+        'Limit: lim(x→a) f(x) = L means f(x) approaches L as x approaches a',
+        'Limit exists only if left-hand limit equals right-hand limit: lim(x→a⁻) f(x) = lim(x→a⁺) f(x)',
+        'Limit may exist even if f(a) is undefined or different from the limit',
+        'Direct substitution: Try plugging in x = a first; if defined, that\'s the limit',
+        'Indeterminate forms require algebraic manipulation: 0/0, ∞/∞, etc.',
+        'Techniques: factoring, rationalizing, common denominator, L\'Hôpital\'s rule (for AB: basic cases)',
+        'Continuity at x = a requires: 1) f(a) exists, 2) lim(x→a) f(x) exists, 3) lim(x→a) f(x) = f(a)',
+        'Types of discontinuities: Removable (hole), Jump, Infinite (vertical asymptote)',
+        'Intermediate Value Theorem: If f continuous on [a,b], then f takes all values between f(a) and f(b)',
+        'Horizontal asymptote: lim(x→∞) f(x) = L or lim(x→-∞) f(x) = L',
+        'Vertical asymptote at x = a: lim(x→a) f(x) = ±∞',
+        'Limit laws: limits of sums, products, quotients follow arithmetic rules (if limits exist)',
+        'Special limits: lim(x→0) (sin x)/x = 1, lim(x→∞) (1 + 1/x)ˣ = e',
+        'Squeeze Theorem: If g(x) ≤ f(x) ≤ h(x) and lim g(x) = lim h(x) = L, then lim f(x) = L',
+        'One-sided limits: lim(x→a⁻) approaches from left, lim(x→a⁺) approaches from right'
+      ],
+      examples: [
+        'Direct Substitution:\nlim(x→3) (x² + 2x - 1)\nPlug in x = 3: 3² + 2(3) - 1 = 9 + 6 - 1 = 14\nAnswer: 14',
+        'Factoring (0/0 form):\nlim(x→2) (x² - 4)/(x - 2)\nDirect sub gives 0/0 (indeterminate)\nFactor: (x - 2)(x + 2)/(x - 2)\nCancel: x + 2\nSubstitute: 2 + 2 = 4',
+        'Rationalizing:\nlim(x→0) (√(x + 1) - 1)/x\nMultiply by conjugate: [(√(x + 1) - 1)/x] · [(√(x + 1) + 1)/(√(x + 1) + 1)]\n= (x + 1 - 1)/[x(√(x + 1) + 1)] = x/[x(√(x + 1) + 1)]\nCancel x: 1/(√(x + 1) + 1)\nSubstitute x = 0: 1/(√1 + 1) = 1/2',
+        'Continuity Check - f(x) = (x² - 1)/(x - 1) at x = 1:\n1) f(1) = undefined (division by zero)\n2) lim(x→1) = lim(x→1) (x - 1)(x + 1)/(x - 1) = lim(x→1) (x + 1) = 2\n3) f(1) ≠ lim → NOT continuous (removable discontinuity)',
+        'Infinite Limit:\nlim(x→0) 1/x²\nAs x→0⁺: 1/(small positive)² → +∞\nAs x→0⁻: 1/(small negative)² → +∞\nAnswer: +∞ (vertical asymptote at x = 0)',
+        'Horizontal Asymptote:\nlim(x→∞) (3x² + 2)/(x² - 1)\nDivide by highest power (x²):\nlim(x→∞) (3 + 2/x²)/(1 - 1/x²) = 3/1 = 3\nHorizontal asymptote: y = 3'
+      ],
+      commonMistakes: [
+        'Saying limit doesn\'t exist just because f(a) is undefined - limit can still exist',
+        'Canceling terms before checking if it creates 0/0 indeterminate form',
+        'Assuming limit equals function value - only true if function is continuous',
+        'Not checking both one-sided limits before concluding limit exists',
+        'Confusing "limit is infinity" (limit doesn\'t exist) with "limit doesn\'t exist" (could be different left/right limits)',
+        'Forgetting to simplify before substituting - may need factoring or rationalization'
+      ],
+      tips: [
+        'Always try direct substitution first - easiest method when it works',
+        'If you get 0/0, factor or rationalize; if ∞/∞, divide by highest power',
+        'Graph the function to visualize limit behavior',
+        'For piecewise functions, check limits from both sides at boundary points',
+        'Continuity mnemonic: "Can draw without lifting pencil"',
+        'IVT applications: proving equation has solution in interval'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Derivatives - Definition and Rules',
+    content: {
+      title: 'Derivatives: Definition and Rules',
+      intro: 'The derivative measures the instantaneous rate of change of a function - essentially, how fast something is changing at a specific moment. Derivatives are fundamental to understanding motion, optimization, and rates of change in all scientific fields.',
+      keyPoints: [
+        'Derivative definition: f\'(x) = lim(h→0) [f(x+h) - f(x)]/h (instantaneous rate of change)',
+        'Geometric meaning: derivative is slope of tangent line at a point',
+        'Physical meaning: velocity is derivative of position, acceleration is derivative of velocity',
+        'Notation: f\'(x), dy/dx, df/dx, d/dx[f(x)] all mean derivative',
+        'Power Rule: d/dx[xⁿ] = nxⁿ⁻¹ (most frequently used rule)',
+        'Constant Rule: d/dx[c] = 0 (derivative of constant is zero)',
+        'Constant Multiple Rule: d/dx[cf(x)] = c·f\'(x)',
+        'Sum/Difference Rule: d/dx[f(x) ± g(x)] = f\'(x) ± g\'(x)',
+        'Product Rule: d/dx[f(x)g(x)] = f\'(x)g(x) + f(x)g\'(x)',
+        'Quotient Rule: d/dx[f(x)/g(x)] = [f\'(x)g(x) - f(x)g\'(x)]/[g(x)]²',
+        'Chain Rule: d/dx[f(g(x))] = f\'(g(x))·g\'(x) (outside derivative times inside derivative)',
+        'Exponential: d/dx[eˣ] = eˣ, d/dx[aˣ] = aˣ ln(a)',
+        'Logarithmic: d/dx[ln x] = 1/x, d/dx[log_a x] = 1/(x ln a)',
+        'Trig derivatives: d/dx[sin x] = cos x, d/dx[cos x] = -sin x, d/dx[tan x] = sec² x',
+        'If f\'(x) > 0, function is increasing; if f\'(x) < 0, function is decreasing'
+      ],
+      examples: [
+        'Power Rule:\nd/dx[x⁵] = 5x⁴\nd/dx[x⁻²] = -2x⁻³ = -2/x³\nd/dx[√x] = d/dx[x^(1/2)] = (1/2)x^(-1/2) = 1/(2√x)',
+        'Product Rule:\nd/dx[x² sin x]\nf(x) = x², f\'(x) = 2x\ng(x) = sin x, g\'(x) = cos x\nAnswer: 2x sin x + x² cos x',
+        'Quotient Rule:\nd/dx[(x² + 1)/(x - 3)]\nf(x) = x² + 1, f\'(x) = 2x\ng(x) = x - 3, g\'(x) = 1\nAnswer: [2x(x - 3) - (x² + 1)(1)]/(x - 3)²\n= (2x² - 6x - x² - 1)/(x - 3)² = (x² - 6x - 1)/(x - 3)²',
+        'Chain Rule:\nd/dx[(3x + 5)⁴]\nOutside: u⁴, derivative: 4u³\nInside: u = 3x + 5, derivative: 3\nAnswer: 4(3x + 5)³ · 3 = 12(3x + 5)³',
+        'Combined Rules:\nd/dx[e^(x²) sin(3x)]\nProduct rule with chain rule:\nFirst function: e^(x²), derivative: e^(x²) · 2x (chain rule)\nSecond function: sin(3x), derivative: cos(3x) · 3 (chain rule)\nAnswer: 2xe^(x²) sin(3x) + 3e^(x²) cos(3x)',
+        'From Definition:\nFind f\'(2) for f(x) = x²:\nf\'(2) = lim(h→0) [(2+h)² - 2²]/h\n= lim(h→0) [4 + 4h + h² - 4]/h\n= lim(h→0) (4h + h²)/h = lim(h→0) (4 + h) = 4'
+      ],
+      commonMistakes: [
+        'Forgetting to multiply by inside derivative in chain rule',
+        'Using power rule on base that\'s not x (need chain rule)',
+        'Product rule error: d/dx[fg] ≠ f\'g\' (must use f\'g + fg\')',
+        'Quotient rule sign error - numerator is "lo d-hi minus hi d-lo"',
+        'Not simplifying before differentiating - factor when possible',
+        'Confusing d/dx[eˣ] = eˣ with d/dx[xⁿ] = nxⁿ⁻¹'
+      ],
+      tips: [
+        'Product rule mnemonic: "first times derivative of second plus second times derivative of first"',
+        'Quotient rule mnemonic: "lo d-hi minus hi d-lo, square the bottom and away we go"',
+        'Chain rule: Work outside-in, multiply derivatives',
+        'Always simplify algebraically before differentiating when possible',
+        'Check answer by seeing if it makes sense (correct sign, reasonable form)',
+        'Practice recognizing when to use each rule - chain rule is most commonly forgotten'
+      ]
+    }
+  },
+
+  // ==================== COMPUTER SCIENCE ====================
+  {
+    categorySlug: 'computer-science',
+    subjectName: 'AP Computer Science A',
+    topicName: 'Object-Oriented Programming Fundamentals',
+    content: {
+      title: 'Object-Oriented Programming Fundamentals',
+      intro: 'Object-Oriented Programming (OOP) is a programming paradigm based on the concept of objects containing data and methods. Understanding OOP is essential for writing organized, reusable, and maintainable code in Java.',
+      keyPoints: [
+        'Class: Blueprint or template for creating objects (defines attributes and behaviors)',
+        'Object: Instance of a class with specific values for attributes',
+        'Encapsulation: Bundling data (fields) and methods that operate on data within a class',
+        'Information hiding: Using private access modifier to restrict direct access to fields',
+        'Constructor: Special method called when object is created, initializes object state',
+        'Default constructor: No-argument constructor automatically provided if no constructor defined',
+        'Instance variables (fields): Data stored in each object, unique to each instance',
+        'Instance methods: Behaviors/actions that objects can perform',
+        'this keyword: Refers to current object, used to distinguish instance variables from parameters',
+        'Accessor methods (getters): Return value of private instance variable (getName())',
+        'Mutator methods (setters): Modify value of private instance variable (setName(String n))',
+        'Static variables: Shared by all instances of class, belongs to class not objects',
+        'Static methods: Called on class itself, not on instances (Math.sqrt())',
+        'Method overloading: Multiple methods with same name but different parameters',
+        'toString() method: Returns string representation of object, useful for debugging'
+      ],
+      examples: [
+        'Class Definition:\npublic class Student {\n    // Instance variables\n    private String name;\n    private int grade;\n    private double gpa;\n    \n    // Constructor\n    public Student(String n, int g, double p) {\n        name = n;\n        grade = g;\n        gpa = p;\n    }\n    \n    // Accessor method\n    public String getName() {\n        return name;\n    }\n    \n    // Mutator method\n    public void setGPA(double newGPA) {\n        gpa = newGPA;\n    }\n}',
+        'Creating Objects:\nStudent alice = new Student("Alice", 11, 3.8);\nStudent bob = new Student("Bob", 10, 3.5);\n\n// Each object has own values\nalice.getName(); // returns "Alice"\nbob.getName();   // returns "Bob"',
+        'Using this keyword:\npublic class Circle {\n    private double radius;\n    \n    public Circle(double radius) {\n        this.radius = radius;  // this.radius is instance variable\n        // radius is parameter\n    }\n    \n    public double getArea() {\n        return Math.PI * this.radius * this.radius;\n    }\n}',
+        'Static vs Instance:\npublic class BankAccount {\n    private double balance;           // instance variable\n    private static double interestRate = 0.03;  // static variable\n    \n    public void addInterest() {\n        balance += balance * interestRate;  // instance method using static variable\n    }\n    \n    public static void setInterestRate(double rate) {  // static method\n        interestRate = rate;\n    }\n}\n\nBankAccount.setInterestRate(0.04);  // call static method on class',
+        'Method Overloading:\npublic class Calculator {\n    public int add(int a, int b) {\n        return a + b;\n    }\n    \n    public double add(double a, double b) {\n        return a + b;\n    }\n    \n    public int add(int a, int b, int c) {\n        return a + b + c;\n    }\n}\n\nCalculator calc = new Calculator();\ncalc.add(5, 3);        // calls int version\ncalc.add(5.5, 3.2);    // calls double version\ncalc.add(1, 2, 3);     // calls three-parameter version',
+        'toString() Method:\npublic class Book {\n    private String title;\n    private String author;\n    \n    public String toString() {\n        return title + " by " + author;\n    }\n}\n\nBook book = new Book("1984", "George Orwell");\nSystem.out.println(book);  // automatically calls toString()\n// Output: 1984 by George Orwell'
+      ],
+      commonMistakes: [
+        'Making all instance variables public instead of private (violates encapsulation)',
+        'Forgetting to use "this" when parameter name same as instance variable',
+        'Trying to access instance variables from static methods',
+        'Confusing class and object - class is blueprint, object is instance',
+        'Not providing constructor when default values needed',
+        'Using == to compare objects instead of .equals() method'
+      ],
+      tips: [
+        'Always make instance variables private and provide public getters/setters',
+        'Constructor name must exactly match class name',
+        'Use meaningful names: class = noun (Student), method = verb (calculateGrade)',
+        'Static = belongs to class, instance = belongs to object',
+        'Test classes incrementally - write constructor first, then add methods one at a time',
+        'toString() method very useful for debugging - implement for all classes'
+      ]
+    }
+  },
+
+  // ==================== ENGLISH ====================
+  {
+    categorySlug: 'english',
+    subjectName: 'AP English Literature',
+    topicName: 'Literary Analysis and Close Reading',
+    content: {
+      title: 'Literary Analysis and Close Reading',
+      intro: 'Close reading is the careful, detailed analysis of a text to understand its meaning, techniques, and significance. This skill is essential for AP English Literature and for deep engagement with any literary work.',
+      keyPoints: [
+        'Close reading focuses on what the text says, how it says it, and why it matters',
+        'Annotation: Mark up text with observations, questions, connections, and reactions',
+        'Literary devices: Techniques authors use to create meaning (metaphor, imagery, symbolism, irony, etc.)',
+        'Diction: Author\'s word choice - consider connotation, formality, tone',
+        'Syntax: Sentence structure - short/long sentences, fragments, parallelism affect meaning',
+        'Imagery: Descriptive language appealing to senses creates vivid mental pictures',
+        'Figurative language: Metaphor (comparison), simile (comparison with like/as), personification (human qualities to non-human)',
+        'Symbolism: Object, character, or event representing abstract idea or concept',
+        'Tone: Author\'s attitude toward subject (sarcastic, reverent, critical, nostalgic)',
+        'Theme: Central idea or message about life/human nature (not same as topic)',
+        'Characterization: How author reveals character traits (STEAL: Speech, Thoughts, Effects on others, Actions, Looks)',
+        'Point of view: First person (I), third person limited (one character\'s perspective), omniscient (all-knowing narrator)',
+        'Irony types: Verbal (says opposite), situational (opposite of expected), dramatic (audience knows more than character)',
+        'Context matters: Consider historical period, author biography, cultural background',
+        'Evidence-based interpretation: Support claims with specific textual evidence (quotes)'
+      ],
+      examples: [
+        'Analyzing Diction:\n"The winter evening settles down / With smell of steaks in passageways" - T.S. Eliot\nWord choice: "settles" (gentle, gradual) vs "crashes"\n"smell of steaks" - ordinary, working-class imagery\nEffect: Creates mundane, melancholy atmosphere',
+        'Identifying Metaphor:\n"Hope is the thing with feathers / That perches in the soul" - Emily Dickinson\nMetaphor: Hope = bird\nImplications: Hope is light, delicate, persistent (birds sing), elevates spirit (perches)',
+        'Analyzing Syntax:\n"It was the best of times, it was the worst of times" - Dickens\nParallel structure emphasizes contradiction\nCommas create rhythm, balance\nEffect: Sets up paradox central to novel',
+        'Symbolism Example:\nGreen light in The Great Gatsby:\n- Literal: Light at end of Daisy\'s dock\n- Symbolic: Gatsby\'s dreams, unattainable past, American Dream\n- Deeper meaning: Hope that draws people forward but remains out of reach',
+        'Characterization (STEAL):\n"Scrooge! a squeezing, wrenching, grasping, scraping, clutching, covetous old sinner!" - Dickens\nDirect characterization through narrator\nDiction: Repetitive verbs (all about taking/holding)\nEffect: Emphasizes greed, creates harsh tone',
+        'Analyzing Tone:\n"I wandered lonely as a cloud" - Wordsworth\nDiction: "wandered" (aimless), "lonely" (isolated)\nSimile: Compares speaker to cloud (floating, detached)\nTone: Initially melancholic, becomes joyful\nShift: When daffodils appear, tone transforms'
+      ],
+      commonMistakes: [
+        'Summarizing instead of analyzing - describe what techniques do, not just what happens',
+        'Identifying devices without explaining their effect or significance',
+        'Making claims without textual evidence to support them',
+        'Confusing theme (abstract idea) with topic (subject matter)',
+        'Reading too quickly without pausing to think deeply about language',
+        'Ignoring context - historical period and author background matter'
+      ],
+      tips: [
+        'Read passage at least twice: first for understanding, second for analysis',
+        'Look for patterns: repeated words, images, sentence structures',
+        'Ask "So what?" - Why did author make this choice? What\'s the effect?',
+        'Consider contrasts and juxtapositions - often reveal meaning',
+        'Pay special attention to beginnings and endings - usually significant',
+        'Practice with timed writing - AP exam requires quick, focused analysis'
+      ]
+    }
+  },
+
+  // ==================== MORE MATHEMATICS ====================
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Quadratic Functions and Equations',
+    content: {
+      title: 'Quadratic Functions and Equations',
+      intro: 'Quadratic functions are polynomial functions of degree 2, creating parabolic graphs. They appear everywhere in physics, engineering, and real-world optimization problems, making them essential for advanced mathematics.',
+      keyPoints: [
+        'Standard form: f(x) = ax² + bx + c, where a ≠ 0 determines whether parabola opens up (a > 0) or down (a < 0)',
+        'Vertex form: f(x) = a(x - h)² + k, where (h, k) is the vertex (turning point)',
+        'Factored form: f(x) = a(x - r₁)(x - r₂), where r₁ and r₂ are x-intercepts (zeros/roots)',
+        'Axis of symmetry: Vertical line x = -b/(2a) passes through vertex',
+        'Vertex is minimum point when a > 0, maximum point when a < 0',
+        'Discriminant: b² - 4ac determines number of real solutions: positive = 2, zero = 1, negative = 0',
+        'Quadratic Formula: x = (-b ± √(b² - 4ac))/(2a) solves any quadratic equation',
+        'Completing the square: Convert standard form to vertex form by adding/subtracting (b/2)²',
+        'Zero Product Property: If ab = 0, then a = 0 or b = 0 (used for solving factored equations)',
+        'Parabola always symmetric about axis of symmetry',
+        'Y-intercept occurs at x = 0, giving point (0, c) in standard form',
+        'Domain of quadratic function: all real numbers; Range: y ≥ k (opens up) or y ≤ k (opens down)',
+        'Transformations: h shifts horizontally, k shifts vertically, a affects width and direction',
+        'Larger |a| makes parabola narrower, smaller |a| makes it wider',
+        'Applications: projectile motion, profit optimization, area maximization'
+      ],
+      examples: [
+        'Converting Standard to Vertex Form:\nf(x) = x² + 6x + 5\nComplete the square:\n= x² + 6x + 9 - 9 + 5\n= (x + 3)² - 4\nVertex: (-3, -4)\nAxis of symmetry: x = -3',
+        'Using Quadratic Formula:\nSolve: 2x² - 5x - 3 = 0\na = 2, b = -5, c = -3\nx = (5 ± √(25 - 4(2)(-3)))/(2·2)\nx = (5 ± √(25 + 24))/4\nx = (5 ± √49)/4\nx = (5 ± 7)/4\nx = 3 or x = -1/2',
+        'Factoring Method:\nx² - 7x + 12 = 0\nFactor: (x - 3)(x - 4) = 0\nZero Product Property:\nx - 3 = 0 or x - 4 = 0\nx = 3 or x = 4',
+        'Finding Vertex from Standard Form:\nf(x) = -2x² + 8x - 3\nx-coordinate: -b/(2a) = -8/(2·-2) = -8/(-4) = 2\ny-coordinate: f(2) = -2(2)² + 8(2) - 3 = -8 + 16 - 3 = 5\nVertex: (2, 5)\nSince a = -2 < 0, parabola opens down, vertex is maximum',
+        'Discriminant Analysis:\nDetermine number of solutions for x² - 4x + 4 = 0:\nb² - 4ac = (-4)² - 4(1)(4) = 16 - 16 = 0\nDiscriminant = 0 → one real solution (double root)\nSolving: (x - 2)² = 0 → x = 2',
+        'Real-World Application:\nBall thrown upward: h(t) = -16t² + 64t + 5 (height in feet, time in seconds)\nFind maximum height:\nt = -64/(2·-16) = -64/(-32) = 2 seconds\nh(2) = -16(4) + 64(2) + 5 = -64 + 128 + 5 = 69 feet\nMaximum height: 69 feet at t = 2 seconds'
+      ],
+      commonMistakes: [
+        'Sign errors in quadratic formula, especially with negative b value',
+        'Forgetting ± symbol in quadratic formula (gives only one solution)',
+        'Confusing vertex coordinates - mixing up h and k in vertex form',
+        'Not dividing entire formula by 2a in quadratic formula',
+        'Assuming parabola always opens up - check sign of a',
+        'When completing square, forgetting to add AND subtract (b/2)²'
+      ],
+      tips: [
+        'Always identify a, b, c values before using quadratic formula',
+        'Check discriminant first to know how many solutions to expect',
+        'Vertex form is best for graphing, factored form best for finding zeros',
+        'For word problems: identify what quadratic represents (area, height, profit, etc.)',
+        'Verify solutions by substituting back into original equation',
+        'Remember: coefficient a affects width AND direction of parabola'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Exponential and Logarithmic Functions',
+    content: {
+      title: 'Exponential and Logarithmic Functions',
+      intro: 'Exponential and logarithmic functions are inverse functions crucial for modeling growth, decay, and scaling phenomena in science, finance, and technology. Understanding these functions is essential for advanced mathematics and real-world applications.',
+      keyPoints: [
+        'Exponential function: f(x) = a·bˣ where b > 0, b ≠ 1 (b is base, a is initial value)',
+        'If b > 1: exponential growth; if 0 < b < 1: exponential decay',
+        'Natural exponential: f(x) = eˣ where e ≈ 2.71828 (Euler\'s number)',
+        'Logarithm is inverse of exponential: if bˣ = y, then log_b(y) = x',
+        'Common logarithm: log(x) means log₁₀(x); Natural logarithm: ln(x) means log_e(x)',
+        'Product Rule: log_b(xy) = log_b(x) + log_b(y)',
+        'Quotient Rule: log_b(x/y) = log_b(x) - log_b(y)',
+        'Power Rule: log_b(xⁿ) = n·log_b(x)',
+        'Change of Base Formula: log_b(x) = log(x)/log(b) = ln(x)/ln(b)',
+        'Domain of log function: x > 0 (can only take log of positive numbers)',
+        'Range of exponential: y > 0 (exponential functions always positive)',
+        'Exponential growth: A(t) = A₀·eᵏᵗ where k > 0, used for population, compound interest',
+        'Exponential decay: A(t) = A₀·e⁻ᵏᵗ where k > 0, used for radioactive decay, depreciation',
+        'Doubling time formula: t = ln(2)/k; Half-life formula: t = ln(2)/k',
+        'Key property: log_b(bˣ) = x and b^(log_b(x)) = x (inverse functions cancel)'
+      ],
+      examples: [
+        'Solving Exponential Equation:\n3ˣ = 81\n3ˣ = 3⁴\nx = 4\n\nAlternatively using logs:\nlog(3ˣ) = log(81)\nx·log(3) = log(81)\nx = log(81)/log(3) = 4',
+        'Solving Logarithmic Equation:\nlog₂(x) = 5\nConvert to exponential:\n2⁵ = x\nx = 32\n\nCheck: log₂(32) = log₂(2⁵) = 5 ✓',
+        'Using Logarithm Properties:\nExpand: log₃(x²y/z)\n= log₃(x²) + log₃(y) - log₃(z)\n= 2log₃(x) + log₃(y) - log₃(z)',
+        'Compound Interest:\n$1000 invested at 5% annual rate, compounded continuously\nA(t) = 1000·e^(0.05t)\nFind amount after 10 years:\nA(10) = 1000·e^(0.5)\nA(10) = 1000·1.6487 = $1,648.70',
+        'Population Growth:\nBacteria doubles every 3 hours, starts with 100\nFind population after 12 hours:\nA(t) = 100·2^(t/3)\nA(12) = 100·2^(12/3) = 100·2⁴ = 100·16 = 1,600 bacteria',
+        'Half-Life Problem:\nRadioactive substance has half-life of 20 years\nHow long until 25% remains?\nA(t) = A₀·(1/2)^(t/20)\n0.25A₀ = A₀·(1/2)^(t/20)\n0.25 = (1/2)^(t/20)\nlog(0.25) = (t/20)·log(0.5)\nt = 20·log(0.25)/log(0.5) = 40 years'
+      ],
+      commonMistakes: [
+        'Trying to take log of negative number or zero (undefined)',
+        'Distributing log incorrectly: log(x + y) ≠ log(x) + log(y)',
+        'Forgetting to apply log to BOTH sides when solving exponential equations',
+        'Confusing log rules: log(xy) = log(x) + log(y), NOT log(x)·log(y)',
+        'Not converting log equation to exponential form for solving',
+        'Mixing up natural log (ln) with common log (log)'
+      ],
+      tips: [
+        'Remember: log is inverse of exponential - use this to solve equations',
+        'For exponential equations with different bases, use logarithms',
+        'Memorize log properties - they\'re essential for simplification',
+        'ln(e) = 1, log(10) = 1, ln(1) = 0, log(1) = 0',
+        'Growth problems use positive exponent, decay uses negative',
+        'Always check if answer makes sense in context (population can\'t be negative)'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Triangles and the Pythagorean Theorem',
+    content: {
+      title: 'Triangles and the Pythagorean Theorem',
+      intro: 'Triangles are fundamental geometric shapes with unique properties. The Pythagorean Theorem is one of the most important relationships in mathematics, connecting the sides of right triangles and enabling countless practical applications.',
+      keyPoints: [
+        'Triangle angle sum: Interior angles always add to 180°',
+        'Triangle inequality: Sum of any two sides must be greater than third side',
+        'Types by angles: Acute (all angles < 90°), Right (one 90° angle), Obtuse (one angle > 90°)',
+        'Types by sides: Equilateral (all equal), Isosceles (two equal), Scalene (none equal)',
+        'Pythagorean Theorem: a² + b² = c² for right triangles, where c is hypotenuse',
+        'Pythagorean Triples: Integer solutions like (3,4,5), (5,12,13), (8,15,17), (7,24,25)',
+        'Converse of Pythagorean Theorem: If a² + b² = c², triangle is right triangle',
+        'If a² + b² > c², triangle is acute; if a² + b² < c², triangle is obtuse',
+        'Special right triangles: 45-45-90 has sides in ratio 1:1:√2',
+        '30-60-90 triangle has sides in ratio 1:√3:2 (opposite angles 30°, 60°, 90°)',
+        'Area of triangle: A = (1/2)bh where b is base, h is height',
+        'Heron\'s formula: A = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2',
+        'Exterior angle equals sum of two non-adjacent interior angles',
+        'Isosceles triangle: Base angles are equal, altitude from apex bisects base',
+        'Similar triangles: Corresponding angles equal, corresponding sides proportional'
+      ],
+      examples: [
+        'Pythagorean Theorem - Find Hypotenuse:\nRight triangle with legs 6 and 8\na² + b² = c²\n6² + 8² = c²\n36 + 64 = c²\n100 = c²\nc = 10',
+        'Pythagorean Theorem - Find Leg:\nHypotenuse = 13, one leg = 5, find other leg\n5² + b² = 13²\n25 + b² = 169\nb² = 144\nb = 12\nThis is the (5,12,13) Pythagorean triple',
+        '45-45-90 Triangle:\nIsosceles right triangle with legs of 5\nHypotenuse = leg × √2\nc = 5√2 ≈ 7.07',
+        '30-60-90 Triangle:\nShortest side (opposite 30°) = 4\nMedium side (opposite 60°) = 4√3 ≈ 6.93\nHypotenuse (opposite 90°) = 8\nRatio check: 4 : 4√3 : 8 = 1 : √3 : 2 ✓',
+        'Triangle Inequality:\nCan sides 3, 7, 11 form a triangle?\nCheck: 3 + 7 = 10, which is NOT > 11\nNo triangle possible (violates triangle inequality)',
+        'Area Calculation:\nTriangle with base 12 and height 8\nA = (1/2)bh = (1/2)(12)(8) = 48 square units\n\nUsing Heron\'s formula for sides 5, 6, 7:\ns = (5+6+7)/2 = 9\nA = √(9·4·3·2) = √216 = 6√6 ≈ 14.7 square units'
+      ],
+      commonMistakes: [
+        'Using Pythagorean Theorem on non-right triangles',
+        'Confusing legs and hypotenuse (hypotenuse is always longest side)',
+        'Forgetting to take square root after calculating c²',
+        'Assuming any three numbers can form a triangle (need triangle inequality)',
+        'Mixing up 30-60-90 and 45-45-90 triangle ratios',
+        'Not identifying which angle is which in special right triangles'
+      ],
+      tips: [
+        'Always identify the hypotenuse first (opposite the right angle, longest side)',
+        'Check if numbers are Pythagorean triple - saves calculation time',
+        'For special triangles, draw diagram and label angles',
+        'Triangle inequality quick check: longest side < sum of other two',
+        'In 30-60-90: short = 1x, medium = x√3, long = 2x',
+        'In 45-45-90: legs = x, hypotenuse = x√2'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Trigonometric Ratios and the Unit Circle',
+    content: {
+      title: 'Trigonometric Ratios and the Unit Circle',
+      intro: 'Trigonometry studies relationships between angles and sides in triangles. The unit circle provides a powerful framework for understanding trigonometric functions beyond right triangles, essential for calculus and advanced mathematics.',
+      keyPoints: [
+        'SOH-CAH-TOA: sin(θ) = Opposite/Hypotenuse, cos(θ) = Adjacent/Hypotenuse, tan(θ) = Opposite/Adjacent',
+        'Reciprocal functions: csc(θ) = 1/sin(θ), sec(θ) = 1/cos(θ), cot(θ) = 1/tan(θ)',
+        'Unit circle: Circle with radius 1 centered at origin, point (x,y) = (cos θ, sin θ)',
+        'Pythagorean Identity: sin²(θ) + cos²(θ) = 1 (fundamental identity)',
+        'tan(θ) = sin(θ)/cos(θ) (quotient identity)',
+        'Reference angles: Acute angle formed with x-axis, used to find trig values in any quadrant',
+        'ASTC rule (All Students Take Calculus): Quadrant I (all positive), II (sin positive), III (tan positive), IV (cos positive)',
+        'Special angles (degrees/radians): 0°/0, 30°/π/6, 45°/π/4, 60°/π/3, 90°/π/2',
+        'sin(30°) = 1/2, cos(30°) = √3/2, tan(30°) = 1/√3',
+        'sin(45°) = √2/2, cos(45°) = √2/2, tan(45°) = 1',
+        'sin(60°) = √3/2, cos(60°) = 1/2, tan(60°) = √3',
+        'Radian measure: π radians = 180°, conversion: radians = degrees × π/180',
+        'Coterminal angles: Differ by 360° (or 2π), have same trig values',
+        'Even/Odd functions: cos(-θ) = cos(θ) (even), sin(-θ) = -sin(θ) (odd)',
+        'Period: sin and cos have period 2π, tan has period π'
+      ],
+      examples: [
+        'Right Triangle - SOH-CAH-TOA:\nTriangle with opposite = 3, adjacent = 4, hypotenuse = 5\nsin(θ) = 3/5 = 0.6\ncos(θ) = 4/5 = 0.8\ntan(θ) = 3/4 = 0.75',
+        'Find All Trig Functions from One:\nGiven: sin(θ) = 3/5, θ in Quadrant II\nUse Pythagorean identity: sin²(θ) + cos²(θ) = 1\n9/25 + cos²(θ) = 1\ncos²(θ) = 16/25\ncos(θ) = -4/5 (negative in Quadrant II)\ntan(θ) = sin/cos = (3/5)/(-4/5) = -3/4',
+        'Unit Circle - Find sin and cos:\nAngle θ = 150° (Quadrant II)\nReference angle = 180° - 150° = 30°\nsin(150°) = sin(30°) = 1/2 (positive in II)\ncos(150°) = -cos(30°) = -√3/2 (negative in II)',
+        'Convert Degrees to Radians:\n225° to radians:\n225° × π/180 = 225π/180 = 5π/4\n\nConvert Radians to Degrees:\n2π/3 to degrees:\n2π/3 × 180/π = 120°',
+        'Evaluate Trig Function:\nFind tan(7π/6):\n7π/6 is in Quadrant III (between π and 3π/2)\nReference angle: 7π/6 - π = π/6\nIn Quadrant III, tan is positive\ntan(7π/6) = tan(π/6) = 1/√3 = √3/3',
+        'Using Pythagorean Identity:\nIf cos(θ) = 2/3, find sin(θ) (θ in Quadrant I)\nsin²(θ) + (2/3)² = 1\nsin²(θ) + 4/9 = 1\nsin²(θ) = 5/9\nsin(θ) = √5/3 (positive in Quadrant I)'
+      ],
+      commonMistakes: [
+        'Mixing up opposite and adjacent in right triangles',
+        'Forgetting to check quadrant for sign (ASTC rule)',
+        'Using degree mode when answer should be in radians (or vice versa)',
+        'Confusing sin(2θ) with 2sin(θ) - these are NOT equal',
+        'Not simplifying radicals in answers (√2/2 preferred over 1/√2)',
+        'Forgetting that tan is undefined when cos = 0 (at 90°, 270°, etc.)'
+      ],
+      tips: [
+        'Memorize special angle values - they appear constantly',
+        'ASTC mnemonic for quadrant signs (or "All Students Take Calculus")',
+        'Unit circle: moving counterclockwise = positive angles, clockwise = negative',
+        'For unknown quadrant, use Pythagorean identity to find missing value',
+        'Reference angles are always between 0° and 90°',
+        'Check calculator mode: degree vs radian - common source of errors'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Measures of Center and Spread',
+    content: {
+      title: 'Measures of Center and Spread',
+      intro: 'Descriptive statistics summarize data using measures of center (where data clusters) and spread (how data varies). These concepts are fundamental for analyzing data, making predictions, and understanding variability in any field.',
+      keyPoints: [
+        'Mean (average): Sum of all values divided by number of values, affected by outliers',
+        'Median: Middle value when data ordered, resistant to outliers',
+        'Mode: Most frequently occurring value, can have multiple modes or none',
+        'Range: Maximum - Minimum, simplest measure of spread',
+        'Variance (σ²): Average of squared deviations from mean, measures spread',
+        'Standard deviation (σ): Square root of variance, same units as data',
+        'Interquartile Range (IQR): Q₃ - Q₁, spread of middle 50% of data',
+        'Quartiles: Q₁ (25th percentile), Q₂ (median, 50th), Q₃ (75th percentile)',
+        'Five-number summary: Minimum, Q₁, Median, Q₃, Maximum (used for boxplots)',
+        'Outlier rule: Value is outlier if < Q₁ - 1.5×IQR or > Q₃ + 1.5×IQR',
+        'Population parameters: μ (mean), σ (standard deviation)',
+        'Sample statistics: x̄ (mean), s (standard deviation)',
+        'Empirical Rule (68-95-99.7): For normal distributions, 68% within 1σ, 95% within 2σ, 99.7% within 3σ',
+        'Choosing measure: Use median when outliers present, mean when symmetric distribution',
+        'Coefficient of variation: (σ/μ) × 100%, compares spread across different units'
+      ],
+      examples: [
+        'Calculate Mean, Median, Mode:\nData: 3, 7, 7, 2, 9, 5, 7, 12\nMean: (3+7+7+2+9+5+7+12)/8 = 52/8 = 6.5\nMedian: Ordered: 2,3,5,7,7,7,9,12 → (7+7)/2 = 7\nMode: 7 (appears 3 times)',
+        'Calculate Variance and Standard Deviation:\nData: 2, 4, 6, 8, 10\nMean = 6\nDeviations: -4, -2, 0, 2, 4\nSquared: 16, 4, 0, 4, 16\nVariance = (16+4+0+4+16)/5 = 40/5 = 8\nStandard deviation = √8 ≈ 2.83',
+        'Find Quartiles and IQR:\nData: 2, 5, 7, 8, 10, 12, 15, 18, 20\nQ₁ (median of lower half): 7\nQ₂ (median): 10\nQ₃ (median of upper half): 15\nIQR = Q₃ - Q₁ = 15 - 7 = 8',
+        'Identify Outliers:\nQ₁ = 20, Q₃ = 40, IQR = 20\nLower fence: 20 - 1.5(20) = 20 - 30 = -10\nUpper fence: 40 + 1.5(20) = 40 + 30 = 70\nAny value < -10 or > 70 is an outlier\nValue 85 is an outlier (85 > 70)',
+        'Using Empirical Rule:\nTest scores: mean = 75, σ = 5\n68% of scores between 70 and 80 (75 ± 5)\n95% of scores between 65 and 85 (75 ± 10)\n99.7% of scores between 60 and 90 (75 ± 15)',
+        'Compare Datasets:\nDataset A: Mean = 50, σ = 10\nDataset B: Mean = 100, σ = 10\nCoefficient of variation:\nA: (10/50) × 100% = 20%\nB: (10/100) × 100% = 10%\nDataset A has more relative variability'
+      ],
+      commonMistakes: [
+        'Confusing mean and median - median is middle value, not average',
+        'Forgetting to order data before finding median or quartiles',
+        'Using mean when outliers present (median more appropriate)',
+        'Calculating variance without squaring deviations first',
+        'Forgetting to take square root to get standard deviation from variance',
+        'Thinking mode must be unique - can have multiple modes or no mode'
+      ],
+      tips: [
+        'Always order data first when finding median, quartiles',
+        'Check for outliers before choosing mean vs median',
+        'Remember: variance is squared, standard deviation is not',
+        'IQR is resistant to outliers, range is not',
+        'For skewed distributions, use median and IQR over mean and σ',
+        'Boxplot shows five-number summary visually'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Precalculus',
+    topicName: 'Functions - Domain, Range, and Composition',
+    content: {
+      title: 'Functions: Domain, Range, and Composition',
+      intro: 'Functions are fundamental mathematical objects that assign exactly one output to each input. Understanding domain, range, and composition is essential for calculus and modeling real-world relationships.',
+      keyPoints: [
+        'Function: Relation where each input (x) has exactly one output (f(x))',
+        'Domain: Set of all possible input values (x-values)',
+        'Range: Set of all possible output values (y-values)',
+        'Vertical Line Test: Graph represents function if any vertical line intersects at most once',
+        'Function notation: f(x) means "function f evaluated at x" (not multiplication)',
+        'Common domain restrictions: No division by zero, no square root of negative (for real numbers)',
+        'Rational functions: Domain excludes values making denominator zero',
+        'Square root functions: Domain includes only values making radicand ≥ 0',
+        'Composition: (f ∘ g)(x) = f(g(x)) - output of g becomes input of f',
+        'Domain of composition: x values where g(x) is defined AND g(x) is in domain of f',
+        'Piecewise functions: Different rules for different intervals of domain',
+        'One-to-one function: Each output comes from exactly one input (passes horizontal line test)',
+        'Inverse function f⁻¹: Reverses f, exists only if f is one-to-one',
+        'Even function: f(-x) = f(x) (symmetric about y-axis)',
+        'Odd function: f(-x) = -f(x) (symmetric about origin)'
+      ],
+      examples: [
+        'Find Domain:\nf(x) = 1/(x² - 9)\nDenominator cannot be zero:\nx² - 9 ≠ 0\n(x-3)(x+3) ≠ 0\nx ≠ 3 and x ≠ -3\nDomain: All real numbers except 3 and -3',
+        'Find Domain of Square Root:\nf(x) = √(2x - 6)\nRadicand must be ≥ 0:\n2x - 6 ≥ 0\n2x ≥ 6\nx ≥ 3\nDomain: [3, ∞)',
+        'Function Composition:\nf(x) = x² + 1, g(x) = 2x - 3\nFind (f ∘ g)(x):\nf(g(x)) = f(2x - 3)\n= (2x - 3)² + 1\n= 4x² - 12x + 9 + 1\n= 4x² - 12x + 10',
+        'Evaluate Piecewise Function:\nf(x) = { x² if x < 0\n         2x + 1 if x ≥ 0\nFind f(-2): Since -2 < 0, use x²\nf(-2) = (-2)² = 4\nFind f(3): Since 3 ≥ 0, use 2x + 1\nf(3) = 2(3) + 1 = 7',
+        'Find Range:\nf(x) = x² - 4 (parabola opening upward)\nVertex at (0, -4)\nSince parabola opens up, minimum is -4\nRange: [-4, ∞)',
+        'Domain of Composition:\nf(x) = √x, g(x) = x - 5\nFind domain of (f ∘ g)(x) = √(x - 5)\nNeed g(x) ≥ 0:\nx - 5 ≥ 0\nx ≥ 5\nDomain: [5, ∞)'
+      ],
+      commonMistakes: [
+        'Confusing domain and range - domain is input, range is output',
+        'Forgetting to exclude division by zero from domain',
+        'Wrong order in composition: f(g(x)) ≠ g(f(x)) in general',
+        'Not checking if radicand is non-negative for square roots',
+        'Assuming f(a + b) = f(a) + f(b) - this is usually FALSE',
+        'Mixing up f⁻¹(x) (inverse) with 1/f(x) (reciprocal)'
+      ],
+      tips: [
+        'For domain: look for denominators (≠0) and square roots (≥0)',
+        'Composition reads right to left: (f ∘ g)(x) means "g first, then f"',
+        'Test piecewise functions at boundary points carefully',
+        'For range: consider minimum/maximum values and behavior as x → ±∞',
+        'Vertical line test for function, horizontal line test for one-to-one',
+        'Practice composition by working inside-out'
+      ]
+    }
+  },
+
+  // ==================== ECONOMICS ====================
+  {
+    categorySlug: 'social-studies',
+    subjectName: 'AP Economics',
+    topicName: 'Supply and Demand',
+    content: {
+      title: 'Supply and Demand',
+      intro: 'Supply and demand are the fundamental forces determining prices in market economies. Understanding how these forces interact is essential for analyzing economic behavior, predicting market changes, and making informed decisions.',
+      keyPoints: [
+        'Law of Demand: As price increases, quantity demanded decreases (inverse relationship), holding all else constant',
+        'Demand curve slopes downward (negative slope) showing inverse price-quantity relationship',
+        'Law of Supply: As price increases, quantity supplied increases (direct relationship)',
+        'Supply curve slopes upward (positive slope) showing direct price-quantity relationship',
+        'Market equilibrium: Where supply and demand curves intersect - quantity supplied equals quantity demanded',
+        'Equilibrium price (market-clearing price): Price at which market is in balance',
+        'Surplus: Quantity supplied exceeds quantity demanded (price too high) - puts downward pressure on price',
+        'Shortage: Quantity demanded exceeds quantity supplied (price too low) - puts upward pressure on price',
+        'Change in demand: Entire curve shifts due to non-price factors (income, preferences, related goods prices)',
+        'Change in quantity demanded: Movement along curve due to price change',
+        'Demand shifters: Income, consumer preferences, prices of substitutes/complements, expectations, number of buyers',
+        'Supply shifters: Input costs, technology, taxes/subsidies, expectations, number of sellers, natural conditions',
+        'Substitutes: Goods that replace each other (Coke and Pepsi) - price increase in one increases demand for other',
+        'Complements: Goods used together (cars and gasoline) - price increase in one decreases demand for other',
+        'Elasticity: Measure of responsiveness to price changes (covered in depth separately)'
+      ],
+      examples: [
+        'Equilibrium Example:\nDemand: Qd = 100 - 2P\nSupply: Qs = 20 + 3P\nAt equilibrium, Qd = Qs:\n100 - 2P = 20 + 3P\n80 = 5P\nP = $16 (equilibrium price)\nQ = 100 - 2(16) = 68 units (equilibrium quantity)',
+        'Surplus Scenario:\nMarket equilibrium: $5, 100 units\nGovernment sets price floor at $7:\nAt $7: Quantity supplied = 130, Quantity demanded = 70\nSurplus = 130 - 70 = 60 units\nResult: Unsold inventory, pressure to lower price',
+        'Demand Shift - Normal Good:\nConsumer income increases:\n→ Demand curve shifts RIGHT\n→ Higher equilibrium price AND quantity\nExample: Income rises → demand for restaurant meals increases',
+        'Demand Shift - Inferior Good:\nConsumer income increases:\n→ Demand curve shifts LEFT\n→ Lower equilibrium price AND quantity\nExample: Income rises → demand for instant ramen decreases',
+        'Supply Shift - Technology:\nNew harvesting technology for wheat:\n→ Supply curve shifts RIGHT\n→ Lower equilibrium price, higher equilibrium quantity\nResult: More wheat available at every price',
+        'Complements Example:\nGasoline price increases significantly:\n→ Demand for SUVs decreases (curve shifts left)\n→ Lower SUV prices, fewer SUVs sold\nGas and SUVs are complements'
+      ],
+      commonMistakes: [
+        'Confusing change in demand (shift) with change in quantity demanded (movement along curve)',
+        'Moving wrong direction when shifting curves - income increase shifts normal good demand RIGHT',
+        'Thinking price causes supply/demand to shift - price causes movement along curve, not shift',
+        'Forgetting that equilibrium represents stable point where market naturally tends',
+        'Mixing up substitutes and complements effects',
+        'Not distinguishing normal goods (demand increases with income) from inferior goods (demand decreases with income)'
+      ],
+      tips: [
+        'Shift acronym for demand: TONIE (Tastes, Other goods, Number of buyers, Income, Expectations)',
+        'Remember: Price changes → move along curve; Non-price factors → shift entire curve',
+        'Right shift = increase (in supply or demand); Left shift = decrease',
+        'Practice drawing graphs - visualizing helps understand relationships',
+        'Equilibrium is self-correcting: surplus → price falls, shortage → price rises',
+        'Think real-world: What would happen to smartphone demand if income doubled? If prices fell?'
+      ]
+    }
+  }
 ]
 
 /**
