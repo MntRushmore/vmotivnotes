@@ -46,8 +46,6 @@ function buildUsageTrend(libraryItems: Awaited<ReturnType<typeof StorageService.
 
 function buildSystemHealthStates(): SystemHealthStatus[] {
   const now = new Date().toISOString()
-  const uploadSecret = Boolean(process.env.UPLOADTHING_SECRET)
-  const uploadAppId = Boolean(process.env.UPLOADTHING_APP_ID)
   const anthro = Boolean(process.env.ANTHROPIC_API_KEY)
   const nano = Boolean(process.env.NANO_BANANA_API_KEY)
   const gemini = Boolean(process.env.GEMINI_API_KEY)
@@ -71,18 +69,10 @@ function buildSystemHealthStates(): SystemHealthStatus[] {
       lastChecked: now,
     },
     {
-      id: 'uploadthing',
-      service: 'UploadThing',
-      status: uploadSecret && uploadAppId ? 'healthy' : uploadSecret || uploadAppId ? 'warning' : 'critical',
-      message: uploadSecret && uploadAppId ? 'Uploads enabled' : 'UploadThing credentials incomplete',
-      envVars: ['UPLOADTHING_APP_ID', 'UPLOADTHING_SECRET'],
-      lastChecked: now,
-    },
-    {
       id: 'gemini',
-      service: 'Gemini OCR',
-      status: gemini ? 'healthy' : 'warning',
-      message: gemini ? 'Fallback OCR ready' : 'Optional GEMINI_API_KEY missing',
+      service: 'Gemini AI',
+      status: gemini ? 'healthy' : 'critical',
+      message: gemini ? 'AI generation ready' : 'Missing GEMINI_API_KEY',
       envVars: ['GEMINI_API_KEY'],
       lastChecked: now,
     },

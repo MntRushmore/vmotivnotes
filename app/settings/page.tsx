@@ -33,13 +33,11 @@ export default function SettingsPage() {
   })
 
   const [apiKeyForms, setApiKeyForms] = useState({
-    uploadthing: '',
     anthropic: '',
     nanoBanana: '',
   })
 
   const [revealedKeys, setRevealedKeys] = useState({
-    uploadthing: false,
     anthropic: false,
     nanoBanana: false,
   })
@@ -72,7 +70,6 @@ export default function SettingsPage() {
       })
 
       setApiKeyForms({
-        uploadthing: apiKeys.uploadthing || '',
         anthropic: apiKeys.anthropic || '',
         nanoBanana: apiKeys.nanoBanana || '',
       })
@@ -365,70 +362,6 @@ export default function SettingsPage() {
             <CardDescription>Manage your API keys for integrations</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            {/* UploadThing */}
-            <div>
-              <Label className="text-base font-semibold">UploadThing</Label>
-              <p className="text-sm text-neutral-600 mb-3">API key for file uploads</p>
-              <div className="flex gap-2">
-                <div className="flex-1 relative">
-                  <Input
-                    type={revealedKeys.uploadthing ? 'text' : 'password'}
-                    value={apiKeyForms.uploadthing}
-                    onChange={(e) => setApiKeyForms({ ...apiKeyForms, uploadthing: e.target.value })}
-                    placeholder="sk_..."
-                  />
-                  {apiKeyForms.uploadthing && (
-                    <button
-                      onClick={() => setRevealedKeys({ ...revealedKeys, uploadthing: !revealedKeys.uploadthing })}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-700"
-                    >
-                      {revealedKeys.uploadthing ? <EyeOff size={18} /> : <Eye size={18} />}
-                    </button>
-                  )}
-                </div>
-                {apiKeyForms.uploadthing && (
-                  <>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      onClick={() => {
-                        navigator.clipboard.writeText(apiKeyForms.uploadthing)
-                        toast({ title: 'Copied to clipboard' })
-                      }}
-                    >
-                      <Copy size={18} />
-                    </Button>
-                    <Button
-                      variant="outline"
-                      onClick={() => handleTestConnection('uploadthing')}
-                    >
-                      Test
-                    </Button>
-                  </>
-                )}
-              </div>
-              <div className="flex gap-2 mt-2">
-                {apiKeyForms.uploadthing && (
-                  <Button
-                    variant="ghost"
-                    onClick={() => handleRemoveApiKey('uploadthing')}
-                  >
-                    Remove
-                  </Button>
-                )}
-                {!apiKeyForms.uploadthing && (
-                  <Button
-                    variant="secondary"
-                    onClick={() => handleSaveApiKey('uploadthing')}
-                  >
-                    Save
-                  </Button>
-                )}
-              </div>
-            </div>
-
-            <Separator />
-
             {/* Anthropic */}
             <div>
               <Label className="text-base font-semibold">Anthropic</Label>
