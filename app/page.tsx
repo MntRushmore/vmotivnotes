@@ -112,9 +112,22 @@ export default function HomePage() {
             Transform any topic into tutor-ready teaching notes
           </p>
 
-          <p className="text-lg text-neutral-600">
+          <p className="text-lg text-neutral-600 mb-6">
             Instant generation • Comprehensive notes • Practice questions included
           </p>
+
+          {/* Product Hunt Badge */}
+          <div className="flex justify-center mb-8">
+            <a href="https://www.producthunt.com/products/vmotiv8-notes?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-vmotiv8&#0045;notes" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1046369&theme=light&t=1764916899278"
+                alt="VMotiv8&#0032;Notes - Transform&#0032;any&#0032;topic&#0032;into&#0032;tutor&#0045;ready&#0032;teaching&#0032;notes | Product Hunt"
+                style={{ width: '250px', height: '54px' }}
+                width="250"
+                height="54"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Single Main Option Card */}
@@ -122,24 +135,25 @@ export default function HomePage() {
           {/* Enter Topic Card */}
           <button
             onClick={() => router.push('/generate')}
-            className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl border-2 border-primary-200 hover:border-primary-400 transition-all duration-300 hover:-translate-y-1 text-left w-full"
+            className="group relative bg-gradient-to-br from-white to-primary-50 rounded-3xl p-10 shadow-2xl hover:shadow-3xl border-2 border-primary-300 hover:border-primary-500 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] text-left w-full"
           >
-            <div className="absolute top-6 right-6 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center group-hover:bg-primary-800 group-hover:text-white transition-colors">
-              <PenTool className="text-primary-800 group-hover:text-white" size={24} />
+            <div className="absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+              <PenTool className="text-white" size={28} />
             </div>
 
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold text-neutral-900 mb-3">
-                Enter Topic
+            <div className="mb-8 pr-20">
+              <h2 className="text-3xl font-bold text-neutral-900 mb-4 bg-gradient-to-r from-primary-800 to-primary-600 bg-clip-text text-transparent">
+                Enter Any Topic
               </h2>
-              <p className="text-neutral-600 leading-relaxed">
+              <p className="text-neutral-700 leading-relaxed text-lg">
                 Simply type any topic and AI will research and create comprehensive tutor notes from scratch.
               </p>
             </div>
 
-            <div className="flex items-center gap-2 text-purple-600 font-medium">
-              <span>Start typing a topic</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            <div className="flex items-center gap-3 text-primary-700 font-semibold text-lg group-hover:text-primary-800 transition-colors">
+              <Sparkles className="text-gold-600" size={20} />
+              <span>Start generating notes</span>
+              <span className="group-hover:translate-x-2 transition-transform">→</span>
             </div>
           </button>
         </div>
