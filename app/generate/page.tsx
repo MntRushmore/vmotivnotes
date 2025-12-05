@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { FileUp, PenTool, Sparkles, Download, Copy, Plus, Trash2, Loader2, CreditCard, ClipboardList, AlertCircle, CheckCircle } from 'lucide-react'
+import { PenTool, Sparkles, Download, Copy, Plus, Trash2, Loader2, CreditCard, ClipboardList, AlertCircle, CheckCircle } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -16,20 +16,17 @@ import { nanoid } from 'nanoid'
 function GeneratePageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const mode = searchParams.get('mode') || 'pdf'
   const exampleTopic = searchParams.get('example')
   const autoGenerate = searchParams.get('autoGenerate') === 'true'
 
   const [session, setSession] = useState(() => NoteSessionManager.getSession())
   const [activeNote, setActiveNote] = useState<TutorNote | null>(null)
 
-  // Generation form state
-  const [inputMode, setInputMode] = useState<'pdf' | 'topic'>(mode as 'pdf' | 'topic')
+  // Generation form state (topic only)
   const [topic, setTopic] = useState(exampleTopic || '')
   const gradeLevel: GradeLevel = 'middle'
   const [subject, setSubject] = useState('')
   const length: 'concise' | 'standard' | 'detailed' = 'detailed'
-  const [selectedFile, setSelectedFile] = useState<File | null>(null)
 
   // UI state
   const [isGenerating, setIsGenerating] = useState(false)
@@ -134,22 +131,81 @@ function GeneratePageContent() {
     try {
       let newNote: TutorNote
 
-      if (inputMode === 'pdf') {
-        // PDF mode always uses AI generation
-        if (!selectedFile) {
-          setErrorMessage('Please select a PDF file')
-          return
+      // Topic mode: check for pre-generated notes first
+      if (!topic.trim()) {
+        setErrorMessage('Please enter a topic')
+        return
+      }
+
+      // Try to find pre-generated notes (we'll need to parse category/subject from search params or URL)
+      const categoryParam = searchParams.get('category')
+      const subjectParam = searchParams.get('subject')
+
+      let pregeneratedNote = null
+      if (categoryParam && subjectParam) {
+        pregeneratedNote = getPregeneratedNote(
+          categoryParam,
+          decodeURIComponent(subjectParam),
+          topic.trim()
+        )
+      }
+
+      if (pregeneratedNote) {
+        // Use pre-generated notes - format as TutorNote
+        const content = pregeneratedNote.content
+
+        // Convert to markdown format
+        let markdown = `# ${content.title}\n\n`
+        markdown += `## Introduction\n${content.intro}\n\n`
+        markdown += `## Key Points\n\n`
+        content.keyPoints.forEach((point, i) => {
+          markdown += `${i + 1}. ${point}\n`
+        })
+        markdown += `\n## Examples\n\n`
+        content.examples.forEach((example, i) => {
+          markdown += `### Example ${i + 1}\n\`\`\`\n${example}\n\`\`\`\n\n`
+        })
+        if (content.commonMistakes && content.commonMistakes.length > 0) {
+          markdown += `\n## Common Mistakes to Avoid\n\n`
+          content.commonMistakes.forEach((mistake, i) => {
+            markdown += `${i + 1}. ${mistake}\n`
+          })
+        }
+        if (content.tips && content.tips.length > 0) {
+          markdown += `\n## Tips for Success\n\n`
+          content.tips.forEach((tip, i) => {
+            markdown += `${i + 1}. ${tip}\n`
+          })
         }
 
-        const formData = new FormData()
-        formData.append('file', selectedFile)
-        formData.append('gradeLevel', gradeLevel)
-        formData.append('subject', subject)
-        formData.append('length', length)
+        newNote = {
+          id: nanoid(),
+          title: content.title,
+          intro: content.intro,
+          gradeLevel: gradeLevel,
+          subject: subjectParam || subject,
+          bullets: content.keyPoints,
+          quickCheck: [],
+          source: 'topic' as const,
+          sourceDetails: topic.trim(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          rawMarkdown: markdown
+        }
 
+        // Show instant success message
+        showToastNotification('✨ Notes loaded instantly (pre-generated)')
+      } else {
+        // Fall back to AI generation
         const response = await fetch('/api/tutor-notes/generate', {
           method: 'POST',
-          body: formData
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topic: topic.trim(),
+            gradeLevel,
+            subject,
+            length
+          })
         })
 
         if (!response.ok) {
@@ -159,93 +215,7 @@ function GeneratePageContent() {
         }
 
         newNote = await response.json()
-      } else {
-        // Topic mode: check for pre-generated notes first
-        if (!topic.trim()) {
-          setErrorMessage('Please enter a topic')
-          return
-        }
-
-        // Try to find pre-generated notes (we'll need to parse category/subject from search params or URL)
-        const categoryParam = searchParams.get('category')
-        const subjectParam = searchParams.get('subject')
-
-        let pregeneratedNote = null
-        if (categoryParam && subjectParam) {
-          pregeneratedNote = getPregeneratedNote(
-            categoryParam,
-            decodeURIComponent(subjectParam),
-            topic.trim()
-          )
-        }
-
-        if (pregeneratedNote) {
-          // Use pre-generated notes - format as TutorNote
-          const content = pregeneratedNote.content
-
-          // Convert to markdown format
-          let markdown = `# ${content.title}\n\n`
-          markdown += `## Introduction\n${content.intro}\n\n`
-          markdown += `## Key Points\n\n`
-          content.keyPoints.forEach((point, i) => {
-            markdown += `${i + 1}. ${point}\n`
-          })
-          markdown += `\n## Examples\n\n`
-          content.examples.forEach((example, i) => {
-            markdown += `### Example ${i + 1}\n\`\`\`\n${example}\n\`\`\`\n\n`
-          })
-          if (content.commonMistakes && content.commonMistakes.length > 0) {
-            markdown += `\n## Common Mistakes to Avoid\n\n`
-            content.commonMistakes.forEach((mistake, i) => {
-              markdown += `${i + 1}. ${mistake}\n`
-            })
-          }
-          if (content.tips && content.tips.length > 0) {
-            markdown += `\n## Tips for Success\n\n`
-            content.tips.forEach((tip, i) => {
-              markdown += `${i + 1}. ${tip}\n`
-            })
-          }
-
-          newNote = {
-            id: nanoid(),
-            title: content.title,
-            intro: content.intro,
-            gradeLevel: gradeLevel,
-            subject: subjectParam || subject,
-            bullets: content.keyPoints,
-            quickCheck: [],
-            source: 'topic' as const,
-            sourceDetails: topic.trim(),
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            rawMarkdown: markdown
-          }
-
-          // Show instant success message
-          showToastNotification('✨ Notes loaded instantly (pre-generated)')
-        } else {
-          // Fall back to AI generation
-          const response = await fetch('/api/tutor-notes/generate', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              topic: topic.trim(),
-              gradeLevel,
-              subject,
-              length
-            })
-          })
-
-          if (!response.ok) {
-            const error = await response.json()
-            const displayMessage = error.userMessage || error.error || 'Generation failed'
-            throw new Error(displayMessage)
-          }
-
-          newNote = await response.json()
-          showToastNotification('Note generated with AI')
-        }
+        showToastNotification('Note generated with AI')
       }
 
       // Add to session
@@ -255,7 +225,6 @@ function GeneratePageContent() {
 
       // Reset form
       setTopic('')
-      setSelectedFile(null)
 
       // Show success toast
       showToastNotification('Note generated successfully!')
@@ -633,62 +602,20 @@ function GeneratePageContent() {
                 <p className="text-neutral-600">Create comprehensive study notes with AI assistance</p>
               </div>
 
-              {/* Input Mode Toggle */}
-              <div className="flex gap-3 mb-6">
-                <button
-                  onClick={() => setInputMode('pdf')}
-                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all ${
-                    inputMode === 'pdf' ? 'bg-primary-600 text-white' : 'bg-white text-neutral-700 hover:bg-neutral-50'
-                  }`}
-                >
-                  <FileUp size={20} />
-                  Upload PDF
-                </button>
-                <button
-                  onClick={() => setInputMode('topic')}
-                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all ${
-                    inputMode === 'topic' ? 'bg-primary-600 text-white' : 'bg-white text-neutral-700 hover:bg-neutral-50'
-                  }`}
-                >
-                  <PenTool size={20} />
-                  Enter Topic
-                </button>
-              </div>
-
               {/* Form */}
               <div className="bg-white rounded-2xl p-6 shadow-soft space-y-4">
-                {inputMode === 'pdf' ? (
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-2">
-                      Upload File (PDF, JPG, PNG)
-                    </label>
-                    <input
-                      type="file"
-                      accept=".pdf,.jpg,.jpeg,.png"
-                      onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
-                      className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
-                    />
-                    {selectedFile && (
-                      <p className="text-sm text-neutral-600 mt-2">Selected: {selectedFile.name}</p>
-                    )}
-                    <p className="text-xs text-neutral-500 mt-1">
-                      Supported formats: PDF documents, JPG/PNG images
-                    </p>
-                  </div>
-                ) : (
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-2">
-                      Topic
-                    </label>
-                    <textarea
-                      value={topic}
-                      onChange={(e) => setTopic(e.target.value)}
-                      placeholder="e.g., Pythagorean Theorem, Photosynthesis, American Revolution..."
-                      className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-                      rows={3}
-                    />
-                  </div>
-                )}
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-2">
+                    Topic
+                  </label>
+                  <textarea
+                    value={topic}
+                    onChange={(e) => setTopic(e.target.value)}
+                    placeholder="e.g., Pythagorean Theorem, Photosynthesis, American Revolution..."
+                    className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
+                    rows={3}
+                  />
+                </div>
 
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-2">
