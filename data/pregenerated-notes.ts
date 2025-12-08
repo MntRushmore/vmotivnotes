@@ -3161,6 +3161,801 @@ export const pregeneratedNotes: PregeneratedNote[] = [
         'Think real-world: What would happen to smartphone demand if income doubled? If prices fell?'
       ]
     }
+  },
+
+  // ============================================================================
+  // BUSINESS COURSES - Comprehensive Coverage
+  // ============================================================================
+
+  // Introduction to Business
+  {
+    categorySlug: 'business',
+    subjectName: 'Introduction to Business',
+    topicName: 'Types of Business Structures',
+    content: {
+      title: 'Types of Business Structures',
+      intro: 'Choosing the right business structure is one of the most important decisions entrepreneurs make. The structure affects taxes, liability, ownership, and how the business operates legally.',
+      keyPoints: [
+        'Main business structures: Sole Proprietorship, Partnership, LLC, Corporation, and Nonprofit',
+        'Each structure has different tax implications, liability protection, and operational complexity',
+        'Sole proprietorships are simplest but offer no personal liability protection',
+        'Corporations provide strongest liability protection but have double taxation (C-Corp)',
+        'LLCs combine liability protection of corporations with tax flexibility of partnerships',
+        'Choice depends on business size, number of owners, liability risk, and tax considerations',
+        'You can change business structure as your company grows',
+        'Each structure requires different formation documents and fees',
+        'State laws vary in requirements and costs for different structures',
+        'Professional advice (lawyer/accountant) recommended before choosing'
+      ],
+      examples: [
+        'Sole Proprietorship: Freelance graphic designer working independently - simple to start, full control, but personally liable for debts',
+        'Partnership: Two accountants forming a firm - shared ownership, profits, and liabilities based on partnership agreement',
+        'LLC: Small tech startup with 3 founders - liability protection for personal assets, flexible tax options, moderate complexity',
+        'C-Corporation: Large software company planning IPO - unlimited shareholders, strong liability protection, subject to corporate taxes then dividend taxes',
+        'S-Corporation: Small consulting firm with 10 employees - pass-through taxation, limited to 100 US shareholders',
+        'Nonprofit: Charitable foundation - tax-exempt status, must serve public benefit, cannot distribute profits to owners'
+      ],
+      commonMistakes: [
+        'Starting without considering liability risks - personal assets exposed in sole proprietorships',
+        'Choosing corporation when LLC would be simpler and more tax-efficient',
+        'Not creating proper operating agreements or bylaws',
+        'Mixing personal and business finances regardless of structure',
+        'Failing to maintain corporate formalities (meetings, records) which can pierce corporate veil'
+      ],
+      tips: [
+        'Start with your liability risk assessment - how much personal asset protection do you need?',
+        'Consider tax implications with an accountant before deciding',
+        'Think about future plans: Will you seek investors? Go public? Sell the business?',
+        'Many small businesses start as sole proprietorships or LLCs and convert to corporations later',
+        'Register your business name and get required licenses regardless of structure',
+        'Keep excellent records and maintain separation between personal and business finances'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Introduction to Business',
+    topicName: 'The Four Ps of Marketing (Product, Price, Place, Promotion)',
+    content: {
+      title: 'The Four Ps of Marketing (Product, Price, Place, Promotion)',
+      intro: 'The Four Ps of Marketing (Product, Price, Place, Promotion) form the marketing mix - the fundamental framework for developing and executing marketing strategies. Mastering these elements is essential for business success.',
+      keyPoints: [
+        'Product: What you sell - includes features, quality, design, branding, packaging, and services',
+        'Price: How much you charge - considers costs, competition, perceived value, and pricing strategy',
+        'Place: Where/how customers buy - distribution channels, locations, logistics, and accessibility',
+        'Promotion: How you communicate - advertising, sales, PR, social media, and promotional tactics',
+        'All four Ps must work together cohesively for effective marketing',
+        'Marketing mix decisions should be customer-focused and data-driven',
+        'The Four Ps apply to both products and services',
+        'Digital transformation has expanded Place and Promotion options significantly',
+        'Pricing affects perception of quality and brand positioning',
+        'Place includes both physical and digital distribution channels'
+      ],
+      examples: [
+        'Apple iPhone - Product: premium design/features, Price: premium pricing, Place: Apple stores + carriers + online, Promotion: sleek ads emphasizing innovation',
+        'Dollar Store - Product: variety of budget items, Price: everything $1, Place: convenient neighborhood locations, Promotion: value-focused advertising',
+        'Netflix - Product: streaming content library, Price: tiered subscriptions, Place: digital platform accessible anywhere, Promotion: original content marketing + word-of-mouth',
+        'Tesla - Product: electric luxury vehicles, Price: premium but lower than gas luxury cars long-term, Place: direct-to-consumer online + showrooms, Promotion: Elon Musk\'s social media + tech events'
+      ],
+      commonMistakes: [
+        'Focusing on only one P (usually Product) while neglecting others',
+        'Pricing too low thinking it will guarantee sales - hurts perceived value',
+        'Not considering how distribution channels affect customer experience',
+        'Promotion without clear understanding of target audience',
+        'Copying competitors\' marketing mix without considering your unique value'
+      ],
+      tips: [
+        'Start with deep customer understanding - what do they value most?',
+        'Ensure consistency across all Four Ps - luxury product needs premium pricing and placement',
+        'Test different combinations to find optimal marketing mix',
+        'Review and adjust your marketing mix regularly based on market feedback',
+        'Use data analytics to measure effectiveness of each P',
+        'Consider adding 3 more Ps for services: People, Process, Physical Evidence'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Introduction to Business',
+    topicName: 'Financial Statements (Balance Sheet, Income Statement, Cash Flow)',
+    content: {
+      title: 'Financial Statements: Balance Sheet, Income Statement, Cash Flow',
+      intro: 'Financial statements are the primary tools for understanding a company\'s financial health. The three core statements - Balance Sheet, Income Statement, and Cash Flow Statement - provide complementary views of business performance.',
+      keyPoints: [
+        'Balance Sheet: Snapshot of assets, liabilities, and equity at a specific point in time',
+        'Accounting equation: Assets = Liabilities + Equity (must always balance)',
+        'Income Statement: Shows revenues, expenses, and profit over a period (month, quarter, year)',
+        'Also called Profit & Loss (P&L) statement',
+        'Cash Flow Statement: Tracks actual cash moving in and out of business',
+        'Three sections: Operating activities, Investing activities, Financing activities',
+        'Profitable companies can still fail from cash flow problems',
+        'Balance sheet shows what you own and owe; Income statement shows profitability; Cash flow shows liquidity',
+        'All three statements are interconnected and tell complete financial story together',
+        'Used by investors, creditors, management to make decisions'
+      ],
+      examples: [
+        'Balance Sheet example: Assets $500K (cash $50K, inventory $200K, equipment $250K) = Liabilities $300K (loans) + Equity $200K (owner investment + retained earnings)',
+        'Income Statement example: Revenue $1M, Cost of Goods Sold $400K = Gross Profit $600K, Operating Expenses $450K = Net Income $150K',
+        'Cash Flow example: Started year with $50K cash, operations generated $200K, bought equipment ($100K), repaid loan ($80K), ending cash $70K',
+        'Tech startup showing losses on income statement (developing product) but positive cash from investor funding on cash flow statement'
+      ],
+      commonMistakes: [
+        'Confusing profit with cash - can be profitable but cash-poor',
+        'Not understanding that balance sheet is a point in time, while income statement is a period',
+        'Ignoring cash flow statement - many profitable businesses fail due to cash problems',
+        'Mixing personal and business finances making statements inaccurate',
+        'Not reconciling the three statements to ensure consistency'
+      ],
+      tips: [
+        'Learn to read all three statements together for complete picture',
+        'Focus on trends over time, not just single period',
+        'Compare your statements to industry benchmarks',
+        'Cash is king - monitor cash flow closely even when profitable',
+        'Use accounting software to generate accurate statements automatically',
+        'Review statements monthly to catch problems early'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Introduction to Business',
+    topicName: 'Break-Even Analysis',
+    content: {
+      title: 'Break-Even Analysis',
+      intro: 'Break-even analysis determines the sales volume needed to cover all costs - where total revenue equals total costs and profit is zero. This critical tool helps businesses make pricing, production, and investment decisions.',
+      keyPoints: [
+        'Break-even point: Level of sales where business neither makes profit nor loss',
+        'Formula: Break-even units = Fixed Costs ÷ (Price per unit - Variable cost per unit)',
+        'Contribution margin = Price - Variable cost per unit',
+        'Fixed costs don\'t change with production volume (rent, salaries, insurance)',
+        'Variable costs change with production volume (materials, hourly labor, shipping)',
+        'Below break-even: Company loses money; Above break-even: Company profits',
+        'Lower break-even point = less risky, easier to achieve profitability',
+        'Can calculate in units sold or dollar sales',
+        'Margin of safety: How far sales can drop before hitting break-even',
+        'Used for pricing decisions, cost control, and feasibility analysis'
+      ],
+      examples: [
+        'Coffee shop: Fixed costs $10,000/month, coffee price $5, variable cost $2. Break-even = 10,000 ÷ (5-2) = 3,334 cups per month',
+        'Software company: Fixed costs $500K/year, subscription $100/month, variable cost $20/month. Break-even = 500,000 ÷ (100-20) = 6,250 subscribers',
+        'Manufacturing: Fixed costs $100K, sell widgets at $50, variable cost $30. Break-even = 100,000 ÷ (50-30) = 5,000 units',
+        'Consulting firm considering new hire: Additional fixed cost $80K salary. Need $80K ÷ contribution margin to justify hire'
+      ],
+      commonMistakes: [
+        'Misclassifying costs as fixed vs variable',
+        'Forgetting some fixed costs like depreciation or insurance',
+        'Not updating analysis when costs or prices change',
+        'Assuming linear relationships - reality may show economies of scale',
+        'Making major decisions on break-even alone without considering other factors'
+      ],
+      tips: [
+        'Calculate break-even before launching any new product or business',
+        'Test different scenarios: What if costs increase 10%? What if price drops?',
+        'Set sales goals above break-even to ensure healthy profit margin',
+        'Track actual performance against break-even projections monthly',
+        'Use break-even to evaluate whether price cuts are worthwhile',
+        'Lower break-even by reducing fixed costs or increasing contribution margin'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Introduction to Business',
+    topicName: 'Business Plan Development',
+    content: {
+      title: 'Business Plan Development',
+      intro: 'A business plan is a comprehensive document outlining your business goals, strategies, market analysis, and financial projections. It serves as a roadmap for success and is essential for securing funding from investors or lenders.',
+      keyPoints: [
+        'Key sections: Executive Summary, Company Description, Market Analysis, Organization, Products/Services, Marketing Strategy, Financial Projections',
+        'Executive summary is first but written last - concise overview of entire plan',
+        'Market analysis shows you understand your industry, customers, and competition',
+        'Financial projections typically include 3-5 year forecasts',
+        'Business plan forces you to think through all aspects of your business',
+        'Living document - should be updated as business evolves',
+        'Different formats for different purposes: traditional (for banks), lean startup (for agile businesses)',
+        'Investors look for scalable business model, strong team, clear competitive advantage',
+        'Must be realistic yet optimistic - overly aggressive projections hurt credibility',
+        'Typically 20-40 pages for traditional plan, 1-2 pages for lean canvas'
+      ],
+      examples: [
+        'Tech startup plan: Focus on product innovation, large addressable market, scalability, path to profitability, experienced team',
+        'Restaurant plan: Location analysis, menu concept, target demographics, startup costs breakdown, detailed first-year cash flow',
+        'Consulting business plan: Service offerings, target clients, pricing structure, marketing approach, modest capital needs',
+        'E-commerce plan: Product sourcing, website development, digital marketing strategy, customer acquisition costs, inventory management'
+      ],
+      commonMistakes: [
+        'Making unrealistic financial projections to impress investors',
+        'Insufficient market research and competitive analysis',
+        'Focusing too much on product/service and not enough on customers and marketing',
+        'Writing plan once and never updating it',
+        'Copying business plan templates without customization',
+        'Ignoring potential risks and challenges'
+      ],
+      tips: [
+        'Start with lean canvas or one-page plan, expand to full plan when seeking investment',
+        'Research thoroughly - talk to potential customers, analyze competitors',
+        'Be specific and quantify everything possible with data',
+        'Have multiple people review your plan for feedback',
+        'Include contingency plans for potential obstacles',
+        'Tailor plan to audience - banks want different info than venture capitalists',
+        'Update financial projections quarterly based on actual performance'
+      ]
+    }
+  },
+
+  // Accounting
+  {
+    categorySlug: 'business',
+    subjectName: 'Accounting',
+    topicName: 'Double-Entry Bookkeeping',
+    content: {
+      title: 'Double-Entry Bookkeeping',
+      intro: 'Double-entry bookkeeping is the foundation of modern accounting. Every transaction affects at least two accounts, creating a self-balancing system that ensures accuracy and completeness of financial records.',
+      keyPoints: [
+        'Every transaction has two sides: a debit and a credit of equal amounts',
+        'Debits and credits must always be equal - this is the fundamental rule',
+        'Debits are not bad and credits are not good - they\'re just two sides of each transaction',
+        'The accounting equation: Assets = Liabilities + Equity must always balance',
+        'Debit increases: Assets and Expenses; Credit increases: Liabilities, Equity, and Revenue',
+        'Every entry is recorded in journal first, then posted to ledger accounts',
+        'Trial balance verifies that total debits equal total credits',
+        'System provides built-in error detection - if debits ≠ credits, there\'s a mistake',
+        'Provides complete audit trail of all transactions',
+        'Foundation for financial statements preparation'
+      ],
+      examples: [
+        'Purchase equipment $5,000 cash: Debit Equipment $5,000 (asset increases), Credit Cash $5,000 (asset decreases)',
+        'Receive payment from customer $1,000: Debit Cash $1,000 (asset increases), Credit Accounts Receivable $1,000 (asset decreases)',
+        'Pay rent $2,000: Debit Rent Expense $2,000 (expense increases), Credit Cash $2,000 (asset decreases)',
+        'Take out loan $10,000: Debit Cash $10,000 (asset increases), Credit Notes Payable $10,000 (liability increases)',
+        'Earn revenue $3,000 on credit: Debit Accounts Receivable $3,000 (asset increases), Credit Revenue $3,000 (revenue increases)'
+      ],
+      commonMistakes: [
+        'Confusing which accounts to debit vs credit',
+        'Recording only one side of transaction',
+        'Getting debit/credit backwards for different account types',
+        'Not documenting transaction source/purpose',
+        'Skipping trial balance verification'
+      ],
+      tips: [
+        'Memorize the DEALER acronym: Debits increase Expenses, Assets, Losses; Credits increase Equity, Revenues',
+        'Every transaction tells a story - think about what happened economically',
+        'Verify debits = credits before posting any entry',
+        'Use T-accounts to visualize how transactions affect accounts',
+        'Practice identifying account types first (asset, liability, etc.) before determining debit/credit',
+        'Review trial balance regularly to catch errors early'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Accounting',
+    topicName: 'Financial Ratio Analysis',
+    content: {
+      title: 'Financial Ratio Analysis',
+      intro: 'Financial ratios transform raw financial statement numbers into meaningful metrics that reveal a company\'s profitability, liquidity, efficiency, and solvency. Ratios enable comparison across companies and time periods.',
+      keyPoints: [
+        'Four main categories: Liquidity, Profitability, Efficiency, and Leverage ratios',
+        'Liquidity ratios measure ability to pay short-term obligations (Current Ratio, Quick Ratio)',
+        'Profitability ratios measure ability to generate profit (ROI, ROE, Profit Margin)',
+        'Efficiency ratios measure how well company uses assets (Inventory Turnover, Asset Turnover)',
+        'Leverage ratios measure debt levels (Debt-to-Equity, Interest Coverage)',
+        'Compare ratios to industry benchmarks and company\'s historical performance',
+        'No single ratio tells complete story - analyze multiple ratios together',
+        'Ratios are tools for identifying areas needing investigation',
+        'Different industries have different "normal" ratio ranges',
+        'Trend analysis over time often more valuable than single point-in-time ratio'
+      ],
+      examples: [
+        'Current Ratio = Current Assets ÷ Current Liabilities. Example: $200K ÷ $100K = 2.0 (company has $2 of current assets for every $1 of current liabilities)',
+        'ROE = Net Income ÷ Shareholders\' Equity. Example: $50K ÷ $500K = 10% (company generates $0.10 profit for each $1 of equity)',
+        'Profit Margin = Net Income ÷ Revenue. Example: $100K ÷ $1M = 10% (company keeps $0.10 profit from each $1 of sales)',
+        'Debt-to-Equity = Total Debt ÷ Total Equity. Example: $300K ÷ $200K = 1.5 (company has $1.50 of debt for every $1 of equity)',
+        'Quick Ratio = (Current Assets - Inventory) ÷ Current Liabilities. Example: ($200K - $80K) ÷ $100K = 1.2'
+      ],
+      commonMistakes: [
+        'Comparing ratios across different industries without context',
+        'Relying on one ratio without looking at full picture',
+        'Not considering economic conditions affecting ratios',
+        'Assuming higher/lower is always better without understanding the ratio',
+        'Using outdated financial data for ratio calculations'
+      ],
+      tips: [
+        'Calculate 2-3 ratios from each category for comprehensive analysis',
+        'Compare your ratios to direct competitors, not just industry averages',
+        'Look for trends - is profitability improving or declining?',
+        'Investigate unusual ratios - they often reveal important insights',
+        'Use ratio analysis to identify questions, then dig deeper for answers',
+        'Current ratio of 1.5-2.0 generally considered healthy; debt-to-equity under 2.0 typically acceptable'
+      ]
+    }
+  },
+
+  // Marketing
+  {
+    categorySlug: 'business',
+    subjectName: 'Marketing',
+    topicName: 'SWOT Analysis',
+    content: {
+      title: 'SWOT Analysis',
+      intro: 'SWOT Analysis is a strategic planning framework that evaluates Strengths, Weaknesses, Opportunities, and Threats. This tool helps businesses understand their competitive position and develop informed strategies.',
+      keyPoints: [
+        'SWOT = Strengths, Weaknesses, Opportunities, Threats',
+        'Strengths and Weaknesses are internal factors you can control',
+        'Opportunities and Threats are external factors in your environment',
+        'Strengths: What you do well, competitive advantages, unique resources',
+        'Weaknesses: Areas for improvement, resource limitations, competitive disadvantages',
+        'Opportunities: External conditions you can exploit (market trends, technology)',
+        'Threats: External challenges that could harm business (competition, regulations)',
+        'Used for strategic planning, market entry, product launches, competitive positioning',
+        'Should involve multiple stakeholders for diverse perspectives',
+        'Must be honest and realistic - overly optimistic SWOT is useless'
+      ],
+      examples: [
+        'Coffee shop Strengths: Prime location, loyal customers, unique recipes; Weaknesses: High rent, limited parking, small staff',
+        'Software startup Opportunities: Growing market demand, competitor weakness, new technology; Threats: Established competitors, economic downturn, changing regulations',
+        'Retail store analyzing e-commerce entry: Strength = brand recognition, Weakness = no online experience, Opportunity = growing online sales, Threat = Amazon',
+        'Restaurant chain: Strength = efficient operations, Weakness = dated décor, Opportunity = delivery apps, Threat = food cost inflation'
+      ],
+      commonMistakes: [
+        'Listing too many items - focus on most significant factors',
+        'Confusing internal/external factors (putting opportunities in strengths)',
+        'Being too vague - "good customer service" vs "24/7 support with 2-minute response time"',
+        'Doing SWOT once and never updating it',
+        'Not turning analysis into action - SWOT should drive strategy'
+      ],
+      tips: [
+        'Limit to 5-7 items per quadrant for focus',
+        'Be specific and provide evidence for each item',
+        'Ask: How can we use strengths to capture opportunities?',
+        'Ask: How can we minimize weaknesses to avoid threats?',
+        'Involve customers and employees for honest external perspective',
+        'Update SWOT annually or when major changes occur',
+        'Convert SWOT insights into concrete strategic actions'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Marketing',
+    topicName: 'Customer Acquisition Cost (CAC)',
+    content: {
+      title: 'Customer Acquisition Cost (CAC)',
+      intro: 'Customer Acquisition Cost (CAC) measures how much a business spends to acquire a new customer. This critical metric determines marketing efficiency and long-term profitability.',
+      keyPoints: [
+        'CAC = Total Marketing & Sales Costs ÷ Number of New Customers Acquired',
+        'Includes advertising, marketing salaries, software, events, sales commissions',
+        'Should be calculated for specific time periods (monthly, quarterly)',
+        'Lower CAC means more efficient customer acquisition',
+        'Must be compared to Customer Lifetime Value (LTV) - ideally LTV:CAC ratio > 3:1',
+        'CAC varies significantly by industry and acquisition channel',
+        'Different channels have different CACs - track separately',
+        'CAC typically increases as you scale and exhaust easy markets',
+        'Reducing CAC through optimization is key to profitable growth',
+        'Payback period = how long to recover CAC from customer revenue'
+      ],
+      examples: [
+        'Spent $10,000 on marketing in May, acquired 100 customers: CAC = $10,000 ÷ 100 = $100 per customer',
+        'SaaS company: $50K/month marketing spend, 200 new subscribers: CAC = $250. If monthly subscription is $50, payback period = 5 months',
+        'E-commerce store: Facebook ads $5,000, Google ads $3,000, got 400 orders: CAC = $8,000 ÷ 400 = $20 per customer',
+        'Different channels: Email marketing CAC $15, Instagram ads CAC $45, Trade shows CAC $200 - focus budget on efficient channels'
+      ],
+      commonMistakes: [
+        'Not including all costs - forgetting salaries, software, overhead',
+        'Comparing CAC across different industries without context',
+        'Focusing only on CAC without considering customer lifetime value',
+        'Not tracking CAC by channel to identify most efficient sources',
+        'Cutting marketing spend without understanding impact on CAC long-term'
+      ],
+      tips: [
+        'Calculate CAC monthly to spot trends early',
+        'Break down CAC by acquisition channel for optimization',
+        'Aim for LTV:CAC ratio of at least 3:1 for healthy business',
+        'Ideal payback period is under 12 months',
+        'Test new channels systematically to find lower CAC sources',
+        'Improve CAC by: better targeting, conversion optimization, referral programs, content marketing',
+        'As business matures, focus shifts from growth-at-all-costs to sustainable CAC'
+      ]
+    }
+  },
+
+  // Finance
+  {
+    categorySlug: 'business',
+    subjectName: 'Finance',
+    topicName: 'Time Value of Money',
+    content: {
+      title: 'Time Value of Money',
+      intro: 'The Time Value of Money (TVM) is the foundational concept that a dollar today is worth more than a dollar in the future. Understanding TVM is essential for all financial decisions including investments, loans, and business valuations.',
+      keyPoints: [
+        'Money today is worth more than same amount in future due to earning potential',
+        'Three reasons: opportunity cost (could invest), inflation (reduces purchasing power), risk (future uncertain)',
+        'Present Value (PV) = today\'s value of future cash flows',
+        'Future Value (FV) = what today\'s money will be worth in future with interest',
+        'Formula: FV = PV × (1 + r)^n where r = interest rate, n = number of periods',
+        'Discounting: Converting future value to present value',
+        'Compounding: Calculating how money grows over time with reinvested earnings',
+        'Higher interest rate or longer time period = greater difference between PV and FV',
+        'TVM applies to all financial decisions: investments, loans, business projects',
+        'Basis for NPV, IRR, and other investment evaluation methods'
+      ],
+      examples: [
+        'FV calculation: Invest $1,000 today at 8% for 5 years: FV = $1,000 × (1.08)^5 = $1,469.33',
+        'PV calculation: Need $10,000 in 3 years, can earn 6%: PV = $10,000 ÷ (1.06)^3 = $8,396.19 (invest this today)',
+        'Lottery choice: $1M today vs $1.5M in 10 years. If you can earn 7%, PV of $1.5M = $762K. Take $1M today!',
+        'Business decision: Spend $50K now on equipment that will generate $15K/year for 5 years at 10% discount rate - is it worth it?'
+      ],
+      commonMistakes: [
+        'Comparing future dollars to present dollars without adjusting for time value',
+        'Ignoring inflation when calculating real returns',
+        'Using wrong interest rate for discount rate',
+        'Not accounting for compounding frequency (annual vs monthly)',
+        'Forgetting that higher risk requires higher discount rate'
+      ],
+      tips: [
+        'When evaluating options with different timing, always convert to same time period (usually PV)',
+        'Use financial calculator or Excel functions (PV, FV, NPV) for complex calculations',
+        'Real interest rate = Nominal rate - Inflation rate',
+        'Compound interest is powerful - start investing early',
+        'For business decisions, use company\'s cost of capital as discount rate',
+        'Verify calculations - small error in rate or periods creates big differences'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Finance',
+    topicName: 'Net Present Value (NPV)',
+    content: {
+      title: 'Net Present Value (NPV)',
+      intro: 'Net Present Value (NPV) is the gold standard for evaluating investments and projects. It calculates the value created by comparing present value of cash inflows to present value of cash outflows.',
+      keyPoints: [
+        'NPV = Present Value of Cash Inflows - Present Value of Cash Outflows',
+        'Positive NPV = investment creates value, should accept',
+        'Negative NPV = investment destroys value, should reject',
+        'Zero NPV = investment breaks even, indifferent',
+        'Accounts for time value of money by discounting all future cash flows',
+        'Discount rate (usually cost of capital) reflects risk and opportunity cost',
+        'Higher discount rate = lower NPV (future cash flows worth less)',
+        'NPV is additive - can sum NPVs of multiple projects',
+        'Most reliable capital budgeting method for maximizing shareholder value',
+        'Assumptions: cash flows occur at end of period, reinvestment at discount rate'
+      ],
+      examples: [
+        'Project costs $100K today, generates $30K/year for 5 years, discount rate 10%: NPV = -$100K + $30K/1.1 + $30K/1.1² + ... + $30K/1.1⁵ = $13,723 → Accept',
+        'Machine costs $50K, saves $15K/year for 4 years, scrap value $5K, rate 12%: Calculate PV of each year + salvage, subtract $50K initial cost',
+        'Comparing projects: Project A NPV = $25K, Project B NPV = $30K. Choose B (creates more value)',
+        'Expansion decision: Open new store for $200K, expect annual cash flows $50K for 10 years, discount at 15%: NPV = $50,881 → Proceed'
+      ],
+      commonMistakes: [
+        'Using wrong discount rate - should reflect project risk and opportunity cost',
+        'Forgetting to include all cash flows (taxes, working capital, salvage value)',
+        'Not accounting for inflation in cash flow projections',
+        'Confusing accounting profit with cash flows',
+        'Ignoring that NPV is only as good as your cash flow estimates'
+      ],
+      tips: [
+        'Excel NPV function: =NPV(rate, cash flows) + initial investment (negative)',
+        'Positive NPV means return exceeds discount rate',
+        'Perform sensitivity analysis - how does NPV change if assumptions vary?',
+        'Higher risk projects require higher discount rates',
+        'Compare NPV to initial investment for perspective on value created',
+        'NPV preferred over IRR when projects have unusual cash flow patterns',
+        'Always use after-tax cash flows for business decisions'
+      ]
+    }
+  },
+
+  // Personal Finance
+  {
+    categorySlug: 'business',
+    subjectName: 'Personal Finance',
+    topicName: 'Creating a Personal Budget',
+    content: {
+      title: 'Creating a Personal Budget',
+      intro: 'A personal budget is your financial roadmap - tracking income and expenses to ensure you spend less than you earn and achieve your financial goals. Budgeting is the foundation of financial success.',
+      keyPoints: [
+        'Budget formula: Income - Savings - Fixed Expenses - Variable Expenses = $0',
+        'Track all income sources: salary, side hustles, investments',
+        'Fixed expenses: Same each month (rent, insurance, subscriptions)',
+        'Variable expenses: Change monthly (groceries, entertainment, utilities)',
+        'Pay yourself first: Allocate savings before spending',
+        '50/30/20 rule: 50% needs, 30% wants, 20% savings and debt repayment',
+        'Review and adjust budget monthly based on actual spending',
+        'Budget gives permission to spend, not restriction',
+        'Emergency fund should be first savings priority',
+        'Technology helps: budgeting apps, automatic tracking, alerts'
+      ],
+      examples: [
+        'Monthly budget: Income $5,000, Savings $1,000 (20%), Rent $1,500, Groceries $500, Utilities $200, Transportation $300, Entertainment $400, Other $1,100',
+        '50/30/20 on $4,000 income: Needs $2,000 (housing, food, utilities), Wants $1,200 (dining, hobbies), Savings $800',
+        'Zero-based budget: Every dollar assigned a job. Income $3,500 = Rent $1,000 + Food $400 + Car $350 + Insurance $150 + Savings $500 + Debt $600 + Fun $500',
+        'Irregular income (freelancer): Budget based on lowest month\'s income, save excess from high-income months'
+      ],
+      commonMistakes: [
+        'Underestimating expenses - track everything for accurate picture',
+        'Creating unrealistic budget that\'s impossible to follow',
+        'Not accounting for irregular expenses (annual insurance, car maintenance)',
+        'Giving up after first month instead of adjusting',
+        'Budgeting what\'s left after spending instead of spending what\'s left after budgeting'
+      ],
+      tips: [
+        'Track spending for one month before creating budget to understand patterns',
+        'Start with actual numbers, not aspirational ones',
+        'Use budgeting app (Mint, YNAB, EveryDollar) to automate tracking',
+        'Build sinking funds for irregular expenses',
+        'Review budget every month and adjust categories as needed',
+        'Set realistic goals - cutting from $500 to $50 on dining out unlikely to stick',
+        'Include category for fun/guilt-free spending to prevent budget burnout'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Personal Finance',
+    topicName: 'Understanding Credit Scores',
+    content: {
+      title: 'Understanding Credit Scores',
+      intro: 'Your credit score is a three-digit number (300-850) that represents your creditworthiness. It affects your ability to borrow money, interest rates you pay, and even employment and housing opportunities.',
+      keyPoints: [
+        'FICO score range: 300-850 (670-739 good, 740-799 very good, 800+ exceptional)',
+        'Five factors: Payment history (35%), Amounts owed (30%), Length of history (15%), New credit (10%), Credit mix (10%)',
+        'Payment history most important - never miss payments',
+        'Credit utilization ratio (balance ÷ limit) should be under 30%, ideally under 10%',
+        'Average age of accounts matters - don\'t close old cards',
+        'Hard inquiries (credit applications) slightly lower score temporarily',
+        'Check credit reports free annually at AnnualCreditReport.com',
+        'Three bureaus: Experian, Equifax, TransUnion - scores may differ',
+        'Building credit takes time - quick fixes don\'t exist',
+        'Good credit saves thousands in lower interest rates'
+      ],
+      examples: [
+        'Impact of score: $300K mortgage at 6% (700 score) = $1,799/month vs 7% (620 score) = $1,996/month - difference of $70K over 30 years!',
+        'Building credit: Get secured credit card with $500 limit, charge $50/month (10% utilization), pay in full every month - score improves over 6-12 months',
+        'Credit utilization: Have $10K total credit limit, carrying $4K balance = 40% utilization (hurts score). Pay down to $1K = 10% utilization (helps score)',
+        'Length of history: Have 10-year-old card you don\'t use - keep it open! Closing it reduces average age of accounts and hurts score'
+      ],
+      commonMistakes: [
+        'Carrying high balances thinking it helps credit - utilization should be low',
+        'Closing old credit cards (reduces available credit and account age)',
+        'Applying for multiple credit cards in short time (multiple hard inquiries)',
+        'Only making minimum payments and carrying balances month-to-month',
+        'Not checking credit reports for errors - 1 in 5 reports contain errors'
+      ],
+      tips: [
+        'Set up automatic payments to never miss due dates',
+        'Pay credit card balances in full every month if possible',
+        'Request credit limit increases to improve utilization ratio',
+        'Become authorized user on family member\'s old account with good history',
+        'Dispute errors on credit report immediately',
+        'Monitor credit score monthly with free tools (Credit Karma, Credit Sesame)',
+        'Mix of credit types helps (credit card + installment loan) but don\'t take debt just for this',
+        'Building good credit takes 6-12 months of responsible use'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Personal Finance',
+    topicName: 'Index Funds and ETFs',
+    content: {
+      title: 'Index Funds and ETFs',
+      intro: 'Index funds and ETFs (Exchange-Traded Funds) are investment vehicles that track market indexes, offering instant diversification and low costs. They are the foundation of modern passive investing strategies.',
+      keyPoints: [
+        'Index fund: Mutual fund designed to track specific market index (S&P 500, total stock market)',
+        'ETF: Similar to index fund but trades like stock throughout day',
+        'Both provide instant diversification across hundreds or thousands of securities',
+        'Passive management = lower expense ratios than actively managed funds',
+        'Historically, index funds outperform 80-90% of actively managed funds long-term',
+        'Popular indexes: S&P 500 (500 large US companies), Total Stock Market (all US stocks), International, Bonds',
+        'Expense ratios typically 0.03% - 0.20% vs 1% - 2% for active funds',
+        'Key difference: Index funds trade once daily at NAV, ETFs trade continuously at market price',
+        'Tax efficient - low turnover means fewer capital gains distributions',
+        'Core-satellite strategy: Index funds as core, individual stocks/active funds as satellite'
+      ],
+      examples: [
+        'Vanguard S&P 500 Index Fund (VFIAX): Tracks 500 largest US companies, expense ratio 0.04%, $3K minimum',
+        'SPDR S&P 500 ETF (SPY): Same holdings as above, trades like stock, no minimum, slightly higher expenses',
+        'Total market portfolio: 60% US stocks (VTI), 30% international stocks (VXUS), 10% bonds (BND) - instant global diversification',
+        'Investing $500/month in S&P 500 index fund over 30 years at 10% average return = $1.1 million'
+      ],
+      commonMistakes: [
+        'Trying to time the market - better to invest consistently regardless of market conditions',
+        'Paying high expense ratios when low-cost options exist',
+        'Picking too many index funds creating overlap and confusion',
+        'Trading ETFs frequently incurring commission costs',
+        'Abandoning strategy during market downturns instead of staying the course'
+      ],
+      tips: [
+        'Start with simple three-fund portfolio: US stocks, international stocks, bonds',
+        'Choose expense ratio under 0.20% - every 1% in fees costs ~25% of returns over 30 years',
+        'Dollar-cost averaging: Invest same amount regularly regardless of price',
+        'Rebalance annually to maintain target allocation',
+        'For long-term investing (retirement), favor stock index funds',
+        'In taxable accounts, prefer ETFs for tax efficiency',
+        'Set up automatic investments to stay consistent'
+      ]
+    }
+  },
+
+  // Management and Leadership
+  {
+    categorySlug: 'business',
+    subjectName: 'Management and Leadership',
+    topicName: 'Goal Setting (SMART Goals)',
+    content: {
+      title: 'Goal Setting (SMART Goals)',
+      intro: 'SMART goals transform vague aspirations into achievable objectives. This framework ensures goals are Specific, Measurable, Achievable, Relevant, and Time-bound - dramatically increasing likelihood of success.',
+      keyPoints: [
+        'S = Specific: Clear and well-defined, answers who, what, where, when, why',
+        'M = Measurable: Quantifiable metrics to track progress and know when achieved',
+        'A = Achievable: Realistic and attainable with available resources and time',
+        'R = Relevant: Aligns with broader objectives and priorities',
+        'T = Time-bound: Has deadline creating urgency and focus',
+        'SMART goals provide clarity and direction',
+        'Writing goals increases achievement likelihood by 42%',
+        'Break large goals into smaller milestones',
+        'Review goals regularly and adjust as needed',
+        'Used in performance management, project planning, personal development'
+      ],
+      examples: [
+        'Vague: "Increase sales" → SMART: "Increase monthly sales by 15% from $100K to $115K by Q4 through new email marketing campaign"',
+        'Vague: "Get healthier" → SMART: "Exercise 30 minutes, 5 days per week for next 3 months, tracking in fitness app"',
+        'Vague: "Improve customer service" → SMART: "Reduce average customer support response time from 24 hours to 4 hours by end of quarter by hiring 2 support staff"',
+        'Vague: "Learn programming" → SMART: "Complete Python beginner course on Coursera and build 3 practice projects by December 31st"'
+      ],
+      commonMistakes: [
+        'Setting too many goals at once - focus diluted',
+        'Making goals too easy (not stretching) or impossible (demotivating)',
+        'Lacking specific metrics - can\'t measure progress',
+        'No deadline creating procrastination',
+        'Setting goals not aligned with values and priorities'
+      ],
+      tips: [
+        'Limit to 3-5 major goals at a time for focus',
+        'Write goals down and review weekly',
+        'Share goals with accountability partner or team',
+        'Celebrate milestone achievements along the way',
+        'Ask: "How will I know when I\'ve achieved this?" to ensure measurability',
+        'Use OKR framework (Objectives and Key Results) for team goal-setting',
+        'Review and revise goals quarterly - it\'s okay to adjust based on new information'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Management and Leadership',
+    topicName: 'Motivation Theories (Maslow, Herzberg, McGregor)',
+    content: {
+      title: 'Motivation Theories: Maslow, Herzberg, McGregor',
+      intro: 'Understanding what motivates people is crucial for effective leadership. Three foundational theories - Maslow\'s Hierarchy, Herzberg\'s Two-Factor Theory, and McGregor\'s Theory X and Y - provide frameworks for motivating employees.',
+      keyPoints: [
+        'Maslow\'s Hierarchy: 5 levels of needs - Physiological, Safety, Social, Esteem, Self-actualization',
+        'People motivated by unfulfilled needs; must satisfy lower levels before higher levels',
+        'Herzberg\'s Two Factors: Hygiene factors (prevent dissatisfaction) vs Motivators (create satisfaction)',
+        'Hygiene factors: Salary, working conditions, policies - absence causes dissatisfaction',
+        'Motivators: Achievement, recognition, responsibility, growth - presence creates satisfaction',
+        'McGregor Theory X: Assumes people dislike work, need control and direction',
+        'McGregor Theory Y: Assumes people are self-motivated, seek responsibility, creative',
+        'Management style should match theory - X leads to micromanagement, Y to empowerment',
+        'Modern research supports Theory Y approach for knowledge workers',
+        'Effective leaders combine insights from all theories'
+      ],
+      examples: [
+        'Maslow applied: Employee worried about job security (safety need) won\'t focus on creative projects (self-actualization) until security addressed',
+        'Herzberg applied: Giving raise (hygiene factor) prevents dissatisfaction temporarily, but giving challenging project (motivator) creates lasting engagement',
+        'Theory X manager: Strict supervision, time clocks, detailed procedures, assumes employees will slack off if not watched',
+        'Theory Y manager: Flexible work arrangements, trust-based culture, employee empowerment, assumes employees are self-directed'
+      ],
+      commonMistakes: [
+        'Assuming money is primary motivator - often recognition and growth more important',
+        'Trying to motivate with hygiene factors alone (better office, higher pay) without true motivators',
+        'Applying Theory X when Theory Y appropriate for knowledge workers',
+        'Ignoring that different people motivated by different things',
+        'Not recognizing that motivation factors change over time and circumstances'
+      ],
+      tips: [
+        'Use Maslow to understand hierarchy - address basic needs before higher ones',
+        'Focus on motivators (recognition, growth, autonomy) for long-term engagement',
+        'Ensure hygiene factors are adequate to prevent dissatisfaction',
+        'Default to Theory Y assumptions - most people want to do good work',
+        'Provide opportunities for achievement and recognition',
+        'Give employees autonomy and meaningful work',
+        'Ask employees directly what motivates them - don\'t assume'
+      ]
+    }
+  },
+
+  // Career Development
+  {
+    categorySlug: 'business',
+    subjectName: 'Career Development',
+    topicName: 'Resume Writing',
+    content: {
+      title: 'Resume Writing',
+      intro: 'Your resume is your marketing document - a concise summary of your skills, experience, and achievements designed to get you an interview. A well-crafted resume can be the difference between landing your dream job and being overlooked.',
+      keyPoints: [
+        'Standard sections: Contact info, Summary/Objective, Experience, Education, Skills',
+        'Keep to 1 page for most roles (2 pages if 10+ years experience)',
+        'Use reverse chronological order - most recent experience first',
+        'Focus on achievements and results, not just duties',
+        'Quantify accomplishments with numbers, percentages, dollar amounts',
+        'Tailor resume to each job - match keywords from job description',
+        'Use action verbs: achieved, managed, developed, increased, implemented',
+        'Clean, professional formatting - consistent fonts, spacing, bullet points',
+        'No photos, personal pronouns (I, me), or irrelevant personal information',
+        'ATS (Applicant Tracking System) friendly - avoid graphics, tables, unusual formatting'
+      ],
+      examples: [
+        'Weak: "Responsible for sales" → Strong: "Increased regional sales 35% ($2.1M to $2.8M) in 18 months through consultative selling approach"',
+        'Weak: "Managed social media" → Strong: "Grew Instagram following from 5K to 50K in 6 months, driving 200% increase in website traffic"',
+        'Weak: "Worked with customers" → Strong: "Resolved 95% of customer issues on first contact, improving satisfaction scores from 3.2 to 4.6/5.0"',
+        'Skills section: "Python, SQL, Tableau, Excel (pivot tables, VLOOKUP), Project Management" - specific, relevant skills'
+      ],
+      commonMistakes: [
+        'Listing duties instead of accomplishments',
+        'Using same generic resume for every application',
+        'Including irrelevant work experience from 15+ years ago',
+        'Spelling and grammar errors - instant rejection',
+        'Overly creative formatting that confuses ATS systems',
+        'Lying or exaggerating - easily discovered and ruins credibility'
+      ],
+      tips: [
+        'Start each bullet with strong action verb',
+        'Use CAR format: Challenge, Action, Result',
+        'Include numbers wherever possible to demonstrate impact',
+        'Match keywords from job posting naturally throughout resume',
+        'Have 3 people proofread before submitting',
+        'Save as PDF to preserve formatting',
+        'File name: FirstName_LastName_Resume.pdf',
+        'Update resume even when not job searching to capture achievements fresh'
+      ]
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Career Development',
+    topicName: 'Salary Negotiation',
+    content: {
+      title: 'Salary Negotiation',
+      intro: 'Negotiating salary is one of the highest-ROI skills you can develop. A single successful negotiation can result in thousands of dollars in additional compensation annually and compound over your career.',
+      keyPoints: [
+        'Research market rates using Glassdoor, PayScale, Levels.fyi before negotiating',
+        'Consider total compensation: base salary, bonus, equity, benefits, PTO, remote work',
+        'Let employer make first offer when possible',
+        'Never accept first offer - almost always room to negotiate',
+        'Anchor high but reasonable based on research',
+        'Provide specific number or range with justification',
+        'Emphasize value you bring, not what you need',
+        'Get offer in writing before accepting',
+        'Be prepared to walk away if offer doesn\'t meet minimum',
+        'Negotiating is expected and won\'t cause offer to be rescinded if done professionally'
+      ],
+      examples: [
+        'Initial offer $70K: "Based on my research and experience with [specific skills], I was expecting $80-85K. Can we work toward $82K?"',
+        'Counter on total comp: "While base is lower than expected, could we discuss sign-on bonus, extra PTO, or earlier equity vesting?"',
+        'Multiple offers: "I have another offer at $90K, but I prefer this role. Can you match or come closer to that number?"',
+        'Internal promotion: "This role typically pays $X-Y. Given my performance (cite specific achievements), I believe $Y is appropriate."'
+      ],
+      commonMistakes: [
+        'Accepting first offer without negotiating',
+        'Revealing current/desired salary too early in process',
+        'Negotiating based on personal needs ("I need X for my mortgage") instead of market value',
+        'Being too aggressive or combative in approach',
+        'Not researching market rates beforehand',
+        'Forgetting to negotiate other benefits beyond base salary'
+      ],
+      tips: [
+        'Practice negotiation conversation with friend beforehand',
+        'Show enthusiasm for role while negotiating - not mutually exclusive',
+        'Ask: "Is there flexibility in the offer?" to open negotiation',
+        'If they can\'t budge on salary, negotiate PTO, signing bonus, review timeline, title, remote work',
+        'Silence is powerful - state your number then wait for response',
+        'Get all terms in writing before resigning current job',
+        'Consider long-term: equity vesting, promotion path, skill development',
+        'Women and minorities often negotiated less - level playing field by always negotiating professionally'
+      ]
+    }
   }
 ]
 
