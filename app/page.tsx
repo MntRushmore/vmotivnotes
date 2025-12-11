@@ -91,7 +91,7 @@ export default function HomePage() {
       emoji: '💼',
       description: 'Business fundamentals and professional skills',
       slug: 'business',
-      subjectCount: 3
+      subjectCount: 10
     }
   ]
 

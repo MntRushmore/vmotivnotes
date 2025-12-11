@@ -3956,6 +3956,4586 @@ export const pregeneratedNotes: PregeneratedNote[] = [
         'Women and minorities often negotiated less - level playing field by always negotiating professionally'
       ]
     }
+  },
+
+  // ============================================================================
+  // ALGEBRA 1 - Complete Subject Coverage (35 Topics)
+  // ============================================================================
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Linear Equations and Inequalities',
+    content: {
+      title: 'Linear Equations and Inequalities',
+      intro: 'Linear equations and inequalities form the foundation of algebra. Understanding how to solve and graph these expressions is essential for advanced mathematics and real-world problem solving.',
+      keyPoints: [
+        'Linear equation standard form: ax + b = c, where a, b, c are constants',
+        'Solution is the value of x that makes the equation true',
+        'Use inverse operations to isolate the variable',
+        'Whatever you do to one side, do to the other side',
+        'Linear inequalities use <, >, ≤, or ≥ instead of =',
+        'Flip the inequality sign when multiplying or dividing by negative numbers',
+        'Solution set for inequalities is a range of values, not just one',
+        'Graph inequalities on number line: open circle for < or >, closed circle for ≤ or ≥',
+        'Compound inequalities combine two inequalities with "and" or "or"',
+        'Check solutions by substituting back into original equation'
+      ],
+      examples: [
+        'Solve: 3x + 7 = 22\nSubtract 7: 3x = 15\nDivide by 3: x = 5\nCheck: 3(5) + 7 = 22 ✓',
+        'Solve: 2(x - 4) = 10\nDistribute: 2x - 8 = 10\nAdd 8: 2x = 18\nDivide by 2: x = 9',
+        'Solve: -3x + 5 > 14\nSubtract 5: -3x > 9\nDivide by -3 (flip sign): x < -3\nGraph: open circle at -3, arrow left',
+        'Solve: -2 < x + 3 ≤ 5\nSubtract 3 from all parts: -5 < x ≤ 2'
+      ],
+      commonMistakes: [
+        'Forgetting to flip inequality when multiplying/dividing by negative',
+        'Not distributing correctly with parentheses',
+        'Making arithmetic errors when combining like terms',
+        'Using open vs closed circles incorrectly on graphs'
+      ],
+      tips: [
+        'Always check your answer by substituting back',
+        'Draw a diagram for inequalities to visualize the solution',
+        'Remember: "less than" points left, "greater than" points right',
+        'Write out each step - rushing leads to sign errors'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Slope and Y-Intercept',
+    content: {
+      title: 'Slope and Y-Intercept',
+      intro: 'Slope and y-intercept are fundamental concepts for understanding linear functions. They tell us how steep a line is and where it crosses the y-axis.',
+      keyPoints: [
+        'Slope (m) measures steepness: rise over run = (change in y)/(change in x)',
+        'Formula: m = (y₂ - y₁)/(x₂ - x₁) for two points (x₁, y₁) and (x₂, x₂)',
+        'Positive slope: line goes up from left to right',
+        'Negative slope: line goes down from left to right',
+        'Zero slope: horizontal line (no rise)',
+        'Undefined slope: vertical line (no run, division by zero)',
+        'Y-intercept (b): point where line crosses y-axis, has coordinates (0, b)',
+        'To find y-intercept from equation: set x = 0 and solve for y',
+        'To find y-intercept from graph: look where line crosses y-axis',
+        'Slope-intercept form: y = mx + b connects both concepts'
+      ],
+      examples: [
+        'Find slope between (2, 3) and (5, 9):\nm = (9-3)/(5-2) = 6/3 = 2',
+        'Find slope of y = -3x + 7:\nSlope m = -3 (coefficient of x)',
+        'Find y-intercept of 2x + 3y = 12:\nSet x = 0: 3y = 12, so y = 4\nY-intercept is (0, 4)',
+        'Line through (1, 5) and (1, 8):\nm = (8-5)/(1-1) = 3/0 = undefined (vertical line)'
+      ],
+      commonMistakes: [
+        'Mixing up x and y in slope formula (subtracting x values in numerator)',
+        'Forgetting negative signs when subtracting coordinates',
+        'Confusing x-intercept with y-intercept',
+        'Thinking all lines must have defined slopes (forgetting vertical lines)'
+      ],
+      tips: [
+        'Memorize: slope is rise/run or "how far up per how far right"',
+        'Positive slope = / shape, negative slope = \\ shape',
+        'Steeper line = larger absolute value of slope',
+        'Y-intercept always has x-coordinate of 0',
+        'Draw a quick sketch to check if slope makes sense'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Slope-Intercept Form',
+    content: {
+      title: 'Slope-Intercept Form',
+      intro: 'The slope-intercept form y = mx + b is the most useful way to write linear equations. It immediately reveals the slope and y-intercept, making graphing and analysis straightforward.',
+      keyPoints: [
+        'Standard form: y = mx + b where m = slope, b = y-intercept',
+        'Variable y must be isolated (by itself) on left side',
+        'Coefficient m tells you steepness and direction of line',
+        'Constant b tells you where line crosses y-axis',
+        'Easy to graph: start at (0, b), then use slope to find next points',
+        'To graph: plot y-intercept, then go up m and right 1 (or use rise/run)',
+        'Convert other forms by solving for y',
+        'Parallel lines have same slope (same m value)',
+        'Can quickly identify if lines will intersect by comparing slopes',
+        'Most intuitive form for understanding linear relationships'
+      ],
+      examples: [
+        'y = 2x + 3\nSlope m = 2, y-intercept b = 3\nGraph: start at (0,3), go up 2, right 1',
+        'y = -½x + 4\nSlope m = -½, y-intercept b = 4\nLine goes down (negative slope)',
+        'Convert 3x + y = 6 to slope-intercept:\nSubtract 3x: y = -3x + 6\nm = -3, b = 6',
+        'Convert 2x - 4y = 8:\n-4y = -2x + 8\ny = ½x - 2\nm = ½, b = -2'
+      ],
+      commonMistakes: [
+        'Not fully solving for y (leaving equation as 2y = 4x + 6)',
+        'Forgetting to divide ALL terms when isolating y',
+        'Misidentifying slope when equation not in standard form',
+        'Confusing b (y-intercept) with x-intercept'
+      ],
+      tips: [
+        'Always solve for y first before identifying m and b',
+        'Check: y-intercept is the constant term when y is alone',
+        'Slope is whatever is multiplied by x',
+        'Graph quickly: plot b on y-axis, use m to find second point',
+        'Practice converting from other forms - it\'s a key skill'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Graphing Linear Functions',
+    content: {
+      title: 'Graphing Linear Functions',
+      intro: 'Graphing linear functions transforms algebraic equations into visual representations. Understanding multiple graphing methods helps you quickly visualize and analyze linear relationships.',
+      keyPoints: [
+        'Linear functions create straight lines when graphed',
+        'Need only two points to draw a line (but three is better for checking)',
+        'Method 1: Plot two points and connect them',
+        'Method 2: Use slope-intercept form (start at b, use m)',
+        'Method 3: Find x and y intercepts, connect them',
+        'X-intercept: where line crosses x-axis (y = 0)',
+        'Y-intercept: where line crosses y-axis (x = 0)',
+        'Domain: all real numbers (line extends infinitely)',
+        'Range: all real numbers (except for horizontal lines)',
+        'Always use a ruler for accuracy'
+      ],
+      examples: [
+        'Graph y = 2x - 1 using slope-intercept:\nPlot (0, -1), then up 2, right 1 to (1, 1)\nConnect points',
+        'Graph 2x + 3y = 6 using intercepts:\nX-intercept: set y=0 → x=3, point (3,0)\nY-intercept: set x=0 → y=2, point (0,2)\nConnect',
+        'Graph y = -3 (horizontal line):\nY-value is always -3\nDraw horizontal line through y=-3',
+        'Graph x = 2 (vertical line):\nX-value is always 2\nDraw vertical line through x=2'
+      ],
+      commonMistakes: [
+        'Not using a ruler (creating curved or wavy lines)',
+        'Plotting points incorrectly (mixing up x and y)',
+        'Stopping the line at the points (lines continue infinitely)',
+        'Forgetting arrows at ends to show line continues'
+      ],
+      tips: [
+        'Plot three points when possible to check for errors',
+        'Label your axes and scale clearly',
+        'Use graph paper for accuracy',
+        'Check that slope looks correct visually',
+        'Extend line beyond points with arrows',
+        'Verify points by substituting into equation'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Systems of Equations',
+    content: {
+      title: 'Systems of Equations',
+      intro: 'A system of equations consists of two or more equations with the same variables. The solution is the point(s) where all equations are simultaneously true - where the graphs intersect.',
+      keyPoints: [
+        'System of two equations can have: one solution, no solution, or infinite solutions',
+        'One solution: lines intersect at one point (different slopes)',
+        'No solution: lines are parallel (same slope, different y-intercepts)',
+        'Infinite solutions: lines are identical (same equation)',
+        'Three methods: graphing, substitution, elimination',
+        'Solution must satisfy BOTH equations',
+        'Written as ordered pair (x, y)',
+        'Check solution by substituting into both original equations',
+        'Used to solve real-world problems with multiple constraints',
+        'Applications: mixture problems, rate problems, business decisions'
+      ],
+      examples: [
+        'System: y = 2x + 1 and y = -x + 7\nGraph both lines\nIntersection point: (2, 5)\nCheck: 5 = 2(2)+1 ✓ and 5 = -(2)+7 ✓',
+        'No solution example:\ny = 3x + 2 and y = 3x - 1\nSame slope (3), different intercepts\nParallel lines never intersect',
+        'Infinite solutions:\n2x + y = 4 and 4x + 2y = 8\nSecond equation is first × 2\nSame line, infinite points',
+        'Word problem: Tickets cost $5 (adults) and $3 (children). 100 tickets sold for $400. How many of each?\n5a + 3c = 400 and a + c = 100'
+      ],
+      commonMistakes: [
+        'Not checking solution in BOTH equations',
+        'Misreading the intersection point from graph',
+        'Assuming system always has exactly one solution',
+        'Forgetting to write solution as ordered pair'
+      ],
+      tips: [
+        'Graph both equations on same axes carefully',
+        'Verify solution algebraically even when graphing',
+        'If slopes are equal, check y-intercepts for no solution vs infinite',
+        'Use graphing for visualization, algebraic methods for precision',
+        'Real-world meaning: solution satisfies all conditions simultaneously'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Solving Systems by Substitution',
+    content: {
+      title: 'Solving Systems by Substitution',
+      intro: 'The substitution method solves systems by replacing one variable with an expression from another equation. This method works particularly well when one equation is already solved for a variable.',
+      keyPoints: [
+        'Step 1: Solve one equation for one variable (if not already done)',
+        'Step 2: Substitute that expression into the other equation',
+        'Step 3: Solve the resulting single-variable equation',
+        'Step 4: Substitute back to find the other variable',
+        'Step 5: Check solution in both original equations',
+        'Best when: one variable already isolated (y = ...)',
+        'Creates one equation with one unknown',
+        'Always results in exact answer (no estimation)',
+        'Useful for any system that has a solution',
+        'Leads to false statements if no solution exists'
+      ],
+      examples: [
+        'Solve: y = 2x + 1 and 3x + y = 11\nSubstitute: 3x + (2x + 1) = 11\nCombine: 5x + 1 = 11\nSolve: x = 2\nBack-substitute: y = 2(2) + 1 = 5\nSolution: (2, 5)',
+        'Solve: x + 2y = 7 and 3x - y = 5\nSolve first for x: x = 7 - 2y\nSubstitute: 3(7 - 2y) - y = 5\n21 - 6y - y = 5\n-7y = -16\ny = 16/7, x = 17/7',
+        'No solution example: y = 2x + 3 and y = 2x - 1\nSubstitute: 2x + 3 = 2x - 1\n3 = -1 (false statement)\nNo solution'
+      ],
+      commonMistakes: [
+        'Substituting into the same equation you solved',
+        'Not distributing correctly after substitution',
+        'Forgetting to find the second variable',
+        'Making sign errors during substitution'
+      ],
+      tips: [
+        'Choose the equation that\'s easiest to solve for a variable',
+        'If y is already alone, substitute into other equation',
+        'Write out substitution step clearly before simplifying',
+        'Use parentheses when substituting expressions',
+        'Always verify answer in BOTH original equations'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Solving Systems by Elimination',
+    content: {
+      title: 'Solving Systems by Elimination',
+      intro: 'The elimination method (also called addition method) solves systems by adding or subtracting equations to eliminate one variable. This creates a single equation that can be solved directly.',
+      keyPoints: [
+        'Goal: eliminate one variable by adding/subtracting equations',
+        'Step 1: Line up equations with like terms in columns',
+        'Step 2: Multiply equations if needed to make coefficients opposite',
+        'Step 3: Add equations to eliminate one variable',
+        'Step 4: Solve for remaining variable',
+        'Step 5: Substitute back to find other variable',
+        'Best when: coefficients are already opposites or easily made opposite',
+        'Can multiply one or both equations by constants',
+        'Sign must be opposite to eliminate (3x and -3x)',
+        'More efficient than substitution for many systems'
+      ],
+      examples: [
+        'Solve: 2x + 3y = 12 and x - 3y = 0\nAdd equations directly:\n2x + 3y = 12\n+  x - 3y = 0\n3x = 12\nx = 4\nSubstitute: 4 - 3y = 0, y = 4/3\nSolution: (4, 4/3)',
+        'Solve: 2x + y = 7 and 3x - 2y = 4\nMultiply first by 2: 4x + 2y = 14\nAdd to second:\n4x + 2y = 14\n+ 3x - 2y = 4\n7x = 18\nx = 18/7, then find y',
+        'Solve: 3x + 2y = 16 and 2x + 3y = 14\nMultiply first by 3: 9x + 6y = 48\nMultiply second by -2: -4x - 6y = -28\nAdd to eliminate y'
+      ],
+      commonMistakes: [
+        'Adding equations when signs are the same (both positive)',
+        'Only multiplying one term instead of entire equation',
+        'Making arithmetic errors when multiplying equations',
+        'Forgetting to solve for second variable'
+      ],
+      tips: [
+        'Look for coefficients that are opposites or easy to make opposite',
+        'Check: when you add, one variable should cancel out completely',
+        'Write equations vertically aligned to avoid errors',
+        'Multiply by negative if needed to create opposite signs',
+        'Verify answer in both original equations'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Quadratic Functions',
+    content: {
+      title: 'Quadratic Functions',
+      intro: 'Quadratic functions create U-shaped curves called parabolas. These functions model many real-world phenomena including projectile motion, area optimization, and profit maximization.',
+      keyPoints: [
+        'Standard form: f(x) = ax² + bx + c where a ≠ 0',
+        'Graph is a parabola (U-shape)',
+        'If a > 0: parabola opens upward (smiles)',
+        'If a < 0: parabola opens downward (frowns)',
+        'Vertex: highest or lowest point on parabola',
+        'Axis of symmetry: vertical line through vertex, x = -b/(2a)',
+        'Y-intercept: (0, c) - where parabola crosses y-axis',
+        'X-intercepts (roots/zeros): where parabola crosses x-axis',
+        'Domain: all real numbers',
+        'Range: depends on whether parabola opens up or down'
+      ],
+      examples: [
+        'f(x) = x² - 4x + 3\na = 1 (opens up), c = 3 (y-intercept)\nAxis: x = -(-4)/(2·1) = 2\nVertex: (2, f(2)) = (2, -1)\nMinimum value: -1',
+        'f(x) = -2x² + 8x - 5\na = -2 (opens down), c = -5\nAxis: x = -8/(2·-2) = 2\nVertex: (2, 3)\nMaximum value: 3',
+        'f(x) = x² + 6x + 9 = (x + 3)²\nPerfect square: vertex at (-3, 0)\nTouches x-axis at one point'
+      ],
+      commonMistakes: [
+        'Forgetting that a = 0 makes it linear, not quadratic',
+        'Confusing vertex and y-intercept',
+        'Wrong sign in axis of symmetry formula',
+        'Thinking all quadratics have two x-intercepts'
+      ],
+      tips: [
+        'Check a to determine if parabola opens up or down',
+        'Find vertex first using x = -b/(2a), then find y-value',
+        'Y-intercept is always just the constant term c',
+        'Parabola is symmetric about the axis of symmetry',
+        'Sketch quickly: plot vertex, y-intercept, and use symmetry'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Quadratic Formula',
+    content: {
+      title: 'Quadratic Formula',
+      intro: 'The quadratic formula solves any quadratic equation, even when factoring is difficult or impossible. It\'s one of the most powerful tools in algebra.',
+      keyPoints: [
+        'Formula: x = [-b ± √(b² - 4ac)] / (2a) for equation ax² + bx + c = 0',
+        'Always works for any quadratic equation',
+        'Discriminant: b² - 4ac determines number of solutions',
+        'If b² - 4ac > 0: two real solutions',
+        'If b² - 4ac = 0: one real solution (repeated root)',
+        'If b² - 4ac < 0: no real solutions (two complex solutions)',
+        'The ± symbol means two answers: one with +, one with -',
+        'Must have equation equal to zero before using formula',
+        'Identify a, b, c carefully (include negative signs)',
+        'Simplify radical when possible'
+      ],
+      examples: [
+        'Solve: x² - 5x + 6 = 0\na=1, b=-5, c=6\nx = [5 ± √(25-24)] / 2\nx = [5 ± 1] / 2\nx = 3 or x = 2',
+        'Solve: 2x² + 3x - 2 = 0\na=2, b=3, c=-2\nx = [-3 ± √(9+16)] / 4\nx = [-3 ± 5] / 4\nx = 1/2 or x = -2',
+        'Solve: x² + 4x + 4 = 0\nDiscriminant: 16 - 16 = 0\nx = -4/2 = -2 (one solution)',
+        'Solve: x² + x + 1 = 0\nDiscriminant: 1 - 4 = -3 < 0\nNo real solutions'
+      ],
+      commonMistakes: [
+        'Forgetting the ± symbol (only finding one solution)',
+        'Wrong signs for a, b, or c (especially negative b)',
+        'Not simplifying equation to equal zero first',
+        'Arithmetic errors with negatives in formula',
+        'Forgetting to divide entire numerator by 2a'
+      ],
+      tips: [
+        'Write out a, b, c values before plugging into formula',
+        'Check discriminant first to know how many solutions',
+        'Remember: -b is negative of b (changes sign)',
+        'Simplify √ when possible: √32 = 4√2',
+        'Verify answers by substituting back into equation',
+        'Use calculator for messy arithmetic, but show work'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Factoring Trinomials',
+    content: {
+      title: 'Factoring Trinomials',
+      intro: 'Factoring trinomials rewrites expressions as products of binomials. This skill is essential for solving quadratic equations, simplifying expressions, and understanding algebraic structure.',
+      keyPoints: [
+        'Goal: rewrite ax² + bx + c as (dx + e)(fx + g)',
+        'For x² + bx + c: find two numbers that multiply to c and add to b',
+        'For ax² + bx + c (a ≠ 1): more complex, use AC method',
+        'Check by multiplying factors back using FOIL',
+        'Not all trinomials are factorable with integers',
+        'Always check for GCF (greatest common factor) first',
+        'Factored form reveals x-intercepts quickly',
+        'Pattern: (x + p)(x + q) = x² + (p+q)x + pq',
+        'Signs matter: positive/negative affect factoring',
+        'Prime trinomials cannot be factored'
+      ],
+      examples: [
+        'Factor: x² + 7x + 12\nFind two numbers: multiply to 12, add to 7\nNumbers: 3 and 4\nAnswer: (x + 3)(x + 4)',
+        'Factor: x² - 5x + 6\nNumbers: multiply to +6, add to -5\nBoth negative: -2 and -3\nAnswer: (x - 2)(x - 3)',
+        'Factor: x² + 2x - 15\nNumbers: multiply to -15, add to +2\nNumbers: 5 and -3\nAnswer: (x + 5)(x - 3)',
+        'Factor: 2x² + 7x + 3\nAC method: a·c = 6, numbers that add to 7\nNumbers: 6 and 1\n2x² + 6x + x + 3\n2x(x + 3) + 1(x + 3)\n(2x + 1)(x + 3)'
+      ],
+      commonMistakes: [
+        'Wrong signs in factors',
+        'Not checking answer by multiplying back',
+        'Forgetting to factor out GCF first',
+        'Mixing up which number goes where',
+        'Trying to factor when trinomial is prime'
+      ],
+      tips: [
+        'List factor pairs of c systematically',
+        'Check sign of c: positive means same signs, negative means different',
+        'Check sign of b: tells you which factor is larger',
+        'Always verify by FOILing your answer',
+        'If a ≠ 1, AC method or guess-and-check',
+        'Practice makes pattern recognition faster'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Difference of Squares',
+    content: {
+      title: 'Difference of Squares',
+      intro: 'The difference of squares is a special factoring pattern that appears frequently in algebra. Recognizing this pattern allows for quick factoring of expressions like x² - 9.',
+      keyPoints: [
+        'Pattern: a² - b² = (a + b)(a - b)',
+        'Must be subtraction (difference), not addition',
+        'Both terms must be perfect squares',
+        'No middle term (coefficient of x is zero)',
+        'Examples of perfect squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100',
+        'Variable perfect squares: x², x⁴, x⁶, y², 4x², 9y²',
+        'One factor is sum, other is difference',
+        'Can apply pattern multiple times if needed',
+        'Reverse of multiplying conjugates',
+        'Quick way to factor compared to other methods'
+      ],
+      examples: [
+        'Factor: x² - 25\na = x, b = 5\nAnswer: (x + 5)(x - 5)',
+        'Factor: 4x² - 49\na = 2x, b = 7\nAnswer: (2x + 7)(2x - 7)',
+        'Factor: x⁴ - 16\nFirst: (x²)² - 4²\n(x² + 4)(x² - 4)\nSecond application: (x² + 4)(x + 2)(x - 2)',
+        'Factor: 9y² - 64\na = 3y, b = 8\nAnswer: (3y + 8)(3y - 8)',
+        'Not difference of squares: x² + 25\nAddition, not subtraction - cannot factor with real numbers'
+      ],
+      commonMistakes: [
+        'Trying to factor sum of squares (a² + b²) - not factorable with reals',
+        'Not recognizing perfect squares',
+        'Wrong signs in factors (both positive or both negative)',
+        'Forgetting to check if result can be factored again',
+        'Missing coefficient on variable terms'
+      ],
+      tips: [
+        'Memorize perfect squares up to 144',
+        'Check: is it subtraction? Are both terms perfect squares?',
+        'Take square root of each term for your factors',
+        'One factor is addition, one is subtraction',
+        'Always check if further factoring possible',
+        'Pattern works for any powers: x⁶ - y⁴ = (x³)² - (y²)²'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Polynomials and Factoring',
+    content: {
+      title: 'Polynomials and Factoring',
+      intro: 'Polynomials are expressions with multiple terms containing variables with whole number exponents. Factoring breaks polynomials into simpler multiplicative components, revealing important properties.',
+      keyPoints: [
+        'Polynomial: sum of terms with form ax^n where n is whole number',
+        'Degree: highest exponent in the polynomial',
+        'Always factor out GCF (greatest common factor) first',
+        'Four main types: GCF, trinomials, difference of squares, grouping',
+        'Factoring by grouping: for 4-term polynomials',
+        'Completely factored: broken down to prime factors',
+        'Zero Product Property: if ab = 0, then a = 0 or b = 0',
+        'Factored form useful for finding zeros/roots',
+        'Check by multiplying factors back together',
+        'Not all polynomials factor nicely with integers'
+      ],
+      examples: [
+        'Factor: 6x² + 9x\nGCF = 3x\nAnswer: 3x(2x + 3)',
+        'Factor: x³ + 2x² + 3x + 6 (grouping)\nGroup: (x³ + 2x²) + (3x + 6)\nFactor: x²(x + 2) + 3(x + 2)\nAnswer: (x + 2)(x² + 3)',
+        'Factor completely: 3x² - 27\nGCF = 3: 3(x² - 9)\nDifference of squares: 3(x + 3)(x - 3)',
+        'Factor: 2x² + 8x + 8\nGCF = 2: 2(x² + 4x + 4)\nPerfect square: 2(x + 2)²'
+      ],
+      commonMistakes: [
+        'Not factoring out GCF first',
+        'Stopping before polynomial is completely factored',
+        'Making errors with negative signs',
+        'Not checking answer by multiplying back',
+        'Trying to factor when expression is prime'
+      ],
+      tips: [
+        'Always start by looking for GCF',
+        'Count terms: 2 terms (GCF or difference of squares), 3 terms (trinomial), 4 terms (grouping)',
+        'Check if completely factored by seeing if factors can be factored more',
+        'Verify by multiplying factors using distributive property',
+        'Practice recognizing patterns quickly',
+        'Use factoring to solve equations: set equal to zero, factor, apply zero product property'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Domain and Range',
+    content: {
+      title: 'Domain and Range',
+      intro: 'Domain and range describe the input and output values of a function. Understanding these concepts is crucial for analyzing functions and their behavior.',
+      keyPoints: [
+        'Domain: all possible input values (x-values) for a function',
+        'Range: all possible output values (y-values) for a function',
+        'Written in interval notation or set notation',
+        'For linear functions: domain and range usually all real numbers',
+        'For quadratic functions: domain is all reals, range depends on vertex',
+        'Domain restrictions: cannot divide by zero, cannot take even root of negative',
+        'Find domain: identify x-values that make function undefined',
+        'Find range: identify y-values function can produce',
+        'From graph: domain is left-right extent, range is up-down extent',
+        'Notation: ℝ means "all real numbers", (-∞, ∞) in interval notation'
+      ],
+      examples: [
+        'f(x) = 2x + 3\nDomain: all real numbers (-∞, ∞)\nRange: all real numbers (-∞, ∞)',
+        'f(x) = x² + 1\nDomain: all real numbers\nRange: [1, ∞) because minimum value is 1',
+        'f(x) = 1/(x - 2)\nDomain: x ≠ 2 (cannot divide by zero)\nIn interval notation: (-∞, 2) ∪ (2, ∞)\nRange: y ≠ 0',
+        'f(x) = √x\nDomain: [0, ∞) (cannot take square root of negative)\nRange: [0, ∞)',
+        'From graph: line segment from (1, 2) to (5, 8)\nDomain: [1, 5]\nRange: [2, 8]'
+      ],
+      commonMistakes: [
+        'Confusing domain and range',
+        'Writing domain as y-values instead of x-values',
+        'Not using proper interval notation brackets',
+        'Forgetting restrictions (like no division by zero)',
+        'Saying "all numbers" instead of "all real numbers"'
+      ],
+      tips: [
+        'Domain is input (x), Range is output (y)',
+        'Use brackets [ ] for included endpoints, parentheses ( ) for excluded',
+        'Always write inequality or interval notation, not just words',
+        'For fractions: find where denominator = 0, exclude those x-values',
+        'For even roots: require inside ≥ 0',
+        'Check graph: domain is horizontal extent, range is vertical extent'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Function Notation',
+    content: {
+      title: 'Function Notation',
+      intro: 'Function notation f(x) is a precise way to express relationships between variables. It replaces y with f(x) to emphasize that output depends on input.',
+      keyPoints: [
+        'f(x) reads as "f of x" meaning "function of x"',
+        'f is the function name (can be any letter: g, h, etc.)',
+        'x is the input variable',
+        'f(x) represents the output (replaces y)',
+        'f(x) = 2x + 3 means "when you input x, output is 2x + 3"',
+        'Evaluating: f(5) means substitute 5 for x',
+        'Can have multiple functions: f(x), g(x), h(x) in same problem',
+        'Composite functions: f(g(x)) means output of g becomes input of f',
+        'Function notation emphasizes input-output relationship',
+        'Every x-value has exactly one y-value (vertical line test)'
+      ],
+      examples: [
+        'If f(x) = 3x - 2, find f(4):\nSubstitute: f(4) = 3(4) - 2 = 12 - 2 = 10',
+        'If g(x) = x² + 1, find g(-3):\ng(-3) = (-3)² + 1 = 9 + 1 = 10',
+        'If h(x) = 2x + 5, find h(a):\nh(a) = 2a + 5 (just substitute a for x)',
+        'If f(x) = x² and g(x) = x + 1, find f(g(2)):\nFirst: g(2) = 2 + 1 = 3\nThen: f(3) = 3² = 9',
+        'Solve f(x) = 7 when f(x) = 2x - 3:\n2x - 3 = 7\n2x = 10\nx = 5'
+      ],
+      commonMistakes: [
+        'Thinking f(x) means f times x (it\'s not multiplication)',
+        'Not substituting completely (forgetting parentheses)',
+        'Confusing f(x) with x when solving equations',
+        'Wrong order in composite functions',
+        'Treating function name and variable as separate'
+      ],
+      tips: [
+        'f(x) is just fancy notation for y',
+        'To evaluate: replace every x with the number in parentheses',
+        'Use parentheses when substituting to avoid sign errors',
+        'f(x) = y, so equations like f(x) = 5 mean "when does output equal 5?"',
+        'For composite functions: work inside-out',
+        'Practice reading: f(3) as "f of 3" or "f evaluated at 3"'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Exponents and Radicals',
+    content: {
+      title: 'Exponents and Radicals',
+      intro: 'Exponents and radicals are inverse operations. Understanding their properties allows you to simplify expressions and solve equations efficiently.',
+      keyPoints: [
+        'Exponent: x^n means multiply x by itself n times',
+        'Product Rule: x^a · x^b = x^(a+b)',
+        'Quotient Rule: x^a ÷ x^b = x^(a-b)',
+        'Power Rule: (x^a)^b = x^(ab)',
+        'Negative exponent: x^(-n) = 1/x^n',
+        'Zero exponent: x^0 = 1 (when x ≠ 0)',
+        'Radical: √x asks "what squared equals x?"',
+        'Radical form: √x = x^(1/2), ∛x = x^(1/3)',
+        'Simplify radicals: factor out perfect squares',
+        'Rationalize denominator: eliminate radicals from bottom'
+      ],
+      examples: [
+        'Simplify: x³ · x⁵ = x^(3+5) = x⁸',
+        'Simplify: (y²)⁴ = y^(2·4) = y⁸',
+        'Simplify: x⁷ ÷ x³ = x^(7-3) = x⁴',
+        'Simplify: 2⁻³ = 1/2³ = 1/8',
+        'Simplify: √32 = √(16·2) = 4√2',
+        'Rationalize: 1/√3 = 1/√3 · √3/√3 = √3/3',
+        'Simplify: (2x²y³)³ = 8x⁶y⁹'
+      ],
+      commonMistakes: [
+        'Adding exponents when multiplying bases (2³ · 3⁴ ≠ 6⁷)',
+        'Confusing power rule with product rule',
+        'Thinking x⁰ = 0 (it equals 1)',
+        'Not simplifying radicals completely',
+        'Making errors with negative exponents'
+      ],
+      tips: [
+        'Memorize the three main rules: product, quotient, power',
+        'Negative exponent flips to denominator',
+        'For radicals, look for largest perfect square factor',
+        'To rationalize, multiply by conjugate or √n/√n',
+        'Check simplified radical: no perfect squares under radical',
+        'Practice converting between radical and exponential form'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Properties of Exponents',
+    content: {
+      title: 'Properties of Exponents',
+      intro: 'The properties of exponents provide rules for simplifying expressions with powers. Mastering these properties is essential for algebra and higher mathematics.',
+      keyPoints: [
+        'Product of Powers: a^m · a^n = a^(m+n) - same base, add exponents',
+        'Quotient of Powers: a^m ÷ a^n = a^(m-n) - same base, subtract exponents',
+        'Power of a Power: (a^m)^n = a^(mn) - multiply exponents',
+        'Power of a Product: (ab)^n = a^n · b^n - distribute exponent',
+        'Power of a Quotient: (a/b)^n = a^n/b^n - distribute to both',
+        'Negative Exponent: a^(-n) = 1/a^n - flip to denominator',
+        'Zero Exponent: a^0 = 1 for any a ≠ 0',
+        'Fractional Exponent: a^(m/n) = ⁿ√(a^m)',
+        'Only apply rules when bases are the same',
+        'Order of operations still applies'
+      ],
+      examples: [
+        'Simplify: x⁴ · x³ = x^(4+3) = x⁷',
+        'Simplify: (2³)² = 2^(3·2) = 2⁶ = 64',
+        'Simplify: (3x²)³ = 3³ · (x²)³ = 27x⁶',
+        'Simplify: y⁸/y⁵ = y^(8-5) = y³',
+        'Simplify: (x/2)⁴ = x⁴/2⁴ = x⁴/16',
+        'Simplify: 5⁻² = 1/5² = 1/25',
+        'Simplify: x^(2/3) = ³√(x²)',
+        'Simplify: (2x³y²)² = 4x⁶y⁴'
+      ],
+      commonMistakes: [
+        'Using rules when bases are different (x² · y³ cannot be simplified)',
+        'Multiplying exponents when using product rule (should add)',
+        'Not distributing exponents to all factors',
+        'Forgetting that a⁰ = 1, not 0',
+        'Errors with negative exponents'
+      ],
+      tips: [
+        'Write out the property name as you use it',
+        'Check that bases match before applying rules',
+        'Break complex problems into steps',
+        'Practice with numbers first to understand the pattern',
+        'Remember: multiply base = add exponents, power of power = multiply exponents',
+        'Keep track of negative signs carefully'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Scientific Notation',
+    content: {
+      title: 'Scientific Notation',
+      intro: 'Scientific notation expresses very large or very small numbers efficiently using powers of 10. It\'s essential for science, engineering, and working with extreme values.',
+      keyPoints: [
+        'Form: a × 10^n where 1 ≤ |a| < 10 and n is integer',
+        'a is the coefficient (decimal between 1 and 10)',
+        'n is the exponent (power of 10)',
+        'Positive exponent: large number (move decimal right)',
+        'Negative exponent: small number (move decimal left)',
+        'To convert to scientific: move decimal until you have single digit left of decimal',
+        'Count moves: that\'s your exponent',
+        'Multiply: multiply coefficients, add exponents',
+        'Divide: divide coefficients, subtract exponents',
+        'Final answer must have coefficient between 1 and 10'
+      ],
+      examples: [
+        'Write in scientific notation: 45,000\nMove decimal 4 places left: 4.5 × 10⁴',
+        'Write in scientific notation: 0.00067\nMove decimal 4 places right: 6.7 × 10⁻⁴',
+        'Write in standard form: 3.2 × 10⁵\nMove decimal 5 places right: 320,000',
+        'Multiply: (2 × 10³)(3 × 10⁵)\n= 6 × 10⁸',
+        'Divide: (8 × 10⁶) ÷ (2 × 10²)\n= 4 × 10⁴',
+        'Add: (3 × 10⁴) + (5 × 10⁴)\n= 8 × 10⁴\n(Only when exponents match!)'
+      ],
+      commonMistakes: [
+        'Coefficient not between 1 and 10',
+        'Wrong sign on exponent',
+        'Counting decimal moves incorrectly',
+        'Adding exponents when multiplying coefficients',
+        'Trying to add numbers with different exponents without adjusting'
+      ],
+      tips: [
+        'Large number → positive exponent, small number → negative exponent',
+        'Number of places moved = absolute value of exponent',
+        'For multiplication/division: treat coefficients and powers separately',
+        'To add/subtract: make exponents match first',
+        'Check: does your coefficient make sense? (Should be 1-9.999...)',
+        'Practice with calculator: enter 3.2E5 for 3.2 × 10⁵'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Absolute Value Equations',
+    content: {
+      title: 'Absolute Value Equations',
+      intro: 'Absolute value represents distance from zero, always positive. Equations with absolute value typically have two solutions because both positive and negative values can have the same distance from zero.',
+      keyPoints: [
+        'Absolute value: |x| is distance from zero on number line',
+        '|x| is always non-negative',
+        '|5| = 5 and |-5| = 5',
+        'Basic equation |x| = a has solutions x = a and x = -a (when a ≥ 0)',
+        'If |x| = negative number, no solution (distance cannot be negative)',
+        'Isolate absolute value expression first',
+        'Then split into two cases: positive and negative',
+        'Check both solutions in original equation',
+        'Can result in 0, 1, or 2 solutions',
+        'Graph of y = |x| is V-shaped'
+      ],
+      examples: [
+        'Solve: |x| = 7\nTwo solutions: x = 7 or x = -7',
+        'Solve: |x + 3| = 5\nCase 1: x + 3 = 5 → x = 2\nCase 2: x + 3 = -5 → x = -8\nSolutions: x = 2 or x = -8',
+        'Solve: |2x - 1| = 9\nCase 1: 2x - 1 = 9 → 2x = 10 → x = 5\nCase 2: 2x - 1 = -9 → 2x = -8 → x = -4',
+        'Solve: |x| = -3\nNo solution (absolute value cannot be negative)',
+        'Solve: 2|x - 5| + 3 = 11\nFirst isolate: 2|x - 5| = 8\n|x - 5| = 4\nx - 5 = 4 or x - 5 = -4\nx = 9 or x = 1'
+      ],
+      commonMistakes: [
+        'Forgetting the negative case',
+        'Not isolating absolute value before splitting cases',
+        'Thinking |x + 2| = 5 means x = 5 or x = -5',
+        'Not checking solutions (some may be extraneous)',
+        'Forgetting that absolute value cannot equal negative'
+      ],
+      tips: [
+        'Always isolate the absolute value expression first',
+        'Think: "what values have this distance from zero?"',
+        'Set up two equations: expression = positive and expression = negative',
+        'Check both solutions in original equation',
+        'If equation equals negative, stop - no solution',
+        'Remember: absolute value removes negative sign'
+      ]
+    }
+  },
+
+  // Continuing Algebra 1 - Remaining 17 topics
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Point-Slope Form',
+    content: {
+      title: 'Point-Slope Form',
+      intro: 'Point-slope form is perfect for writing equations when you know a point and the slope. This form directly uses the definition of slope.',
+      keyPoints: [
+        'Formula: y - y₁ = m(x - x₁) where m is slope and (x₁, y₁) is a point',
+        'Used when you know: slope and one point on the line',
+        'Can convert to slope-intercept form by solving for y',
+        'Particularly useful for word problems',
+        'm represents the rate of change',
+        '(x₁, y₁) is the known point - use actual numbers',
+        'Subtraction of coordinates is built into the formula',
+        'Easy to write equation quickly from given information',
+        'Multiple point-slope equations can describe same line',
+        'Can also find equation from two points: find slope first'
+      ],
+      examples: [
+        'Write equation with slope 3 through point (2, 5):\ny - 5 = 3(x - 2)\nOr convert: y - 5 = 3x - 6\ny = 3x - 1',
+        'Line through (1, 4) with slope -2:\ny - 4 = -2(x - 1)\ny - 4 = -2x + 2\ny = -2x + 6',
+        'Find equation through (3, 1) and (5, 7):\nSlope: m = (7-1)/(5-3) = 3\nUsing (3,1): y - 1 = 3(x - 3)',
+        'Horizontal line through (4, 2):\nSlope = 0: y - 2 = 0(x - 4)\ny = 2'
+      ],
+      commonMistakes: [
+        'Wrong signs when substituting negative coordinates',
+        'Using wrong point (not the given point)',
+        'Forgetting to distribute the slope',
+        'Confusing x and y coordinates'
+      ],
+      tips: [
+        'Plug in the point and slope directly - don\'t overthink it',
+        'Watch signs carefully with negative coordinates',
+        'Can use either of two points if you have both',
+        'Distribute and simplify to get slope-intercept form',
+        'Check: substitute original point into final equation'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Standard Form of a Line',
+    content: {
+      title: 'Standard Form of a Line',
+      intro: 'Standard form Ax + By = C presents linear equations with integer coefficients. This form is useful for finding intercepts and certain applications.',
+      keyPoints: [
+        'Form: Ax + By = C where A, B, C are integers',
+        'A should be positive (convention)',
+        'A and B should not both be zero',
+        'No fractions in standard form (multiply to clear)',
+        'Easy to find intercepts: set x=0 for y-int, y=0 for x-int',
+        'Used in systems of equations and real-world applications',
+        'Convert from other forms by rearranging',
+        'Parallel lines have same A and B coefficients',
+        'Slope = -A/B (from standard form)',
+        'Useful for presenting final answers in some contexts'
+      ],
+      examples: [
+        'Convert y = 2x + 3 to standard form:\n-2x + y = 3\nMultiply by -1: 2x - y = -3',
+        'Convert y = -½x + 4:\nMultiply by 2: 2y = -x + 8\nx + 2y = 8',
+        'Find intercepts of 3x + 4y = 12:\nx-int: 3x = 12, x = 4 → (4, 0)\ny-int: 4y = 12, y = 3 → (0, 3)',
+        'Write through (2,3) with slope 4 in standard form:\ny - 3 = 4(x - 2)\ny - 3 = 4x - 8\n-4x + y = -5\n4x - y = 5'
+      ],
+      commonMistakes: [
+        'Leaving fractions in the equation',
+        'Having negative A coefficient',
+        'Moving terms to wrong side',
+        'Not simplifying completely'
+      ],
+      tips: [
+        'Move x and y terms to left, constant to right',
+        'Multiply through to eliminate fractions',
+        'Make A positive by multiplying entire equation by -1',
+        'Reduce coefficients to lowest terms if they share a common factor',
+        'Standard form great for quickly finding both intercepts'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Parallel and Perpendicular Lines',
+    content: {
+      title: 'Parallel and Perpendicular Lines',
+      intro: 'Parallel lines never intersect and have equal slopes. Perpendicular lines intersect at right angles and have slopes that are negative reciprocals.',
+      keyPoints: [
+        'Parallel lines: same slope (m₁ = m₂), different y-intercepts',
+        'Parallel lines never intersect',
+        'Perpendicular lines: slopes are negative reciprocals (m₁ × m₂ = -1)',
+        'Perpendicular lines form 90° angles',
+        'Negative reciprocal: flip fraction and change sign',
+        'Horizontal (m=0) and vertical (undefined) are perpendicular',
+        'To write parallel line: use same slope, different point',
+        'To write perpendicular: find negative reciprocal of slope',
+        'Parallel: no solution when solving system',
+        'Perpendicular: one solution forming right angle'
+      ],
+      examples: [
+        'Parallel to y = 3x + 2 through (1, 5):\nSame slope m = 3\ny - 5 = 3(x - 1)\ny = 3x + 2',
+        'Perpendicular to y = 2x - 1 through (4, 3):\nSlope of given: m = 2\nPerpendicular slope: m = -½\ny - 3 = -½(x - 4)\ny = -½x + 5',
+        'Check if parallel: y = -3x + 1 and y = -3x + 7\nSame slope (-3), different intercepts → Parallel ✓',
+        'Check if perpendicular: y = ¾x + 2 and y = -4/3x - 1\n(¾)(-4/3) = -1 → Perpendicular ✓'
+      ],
+      commonMistakes: [
+        'Forgetting to change sign for negative reciprocal',
+        'Not flipping fraction for perpendicular slope',
+        'Using same y-intercept for parallel line',
+        'Thinking perpendicular means opposite sign only'
+      ],
+      tips: [
+        'Parallel = same slope, Perpendicular = negative reciprocal',
+        'To find negative reciprocal: flip and negate (2 → -½, -¾ → 4/3)',
+        'Check perpendicular: multiply slopes, should equal -1',
+        'Horizontal and vertical lines are always perpendicular',
+        'Remember: parallel never meet, perpendicular meet at 90°'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Writing Equations from Word Problems',
+    content: {
+      title: 'Writing Equations from Word Problems',
+      intro: 'Translating word problems into algebraic equations is a crucial skill. Learning key phrases and systematic approaches helps solve real-world problems.',
+      keyPoints: [
+        'Define variable(s): What are you trying to find?',
+        'Identify given information and what it represents',
+        '"Is/equals/was" usually means = sign',
+        '"More than/increased by" means addition (+)',
+        '"Less than/decreased by" means subtraction (-)',
+        '"Times/product/of" means multiplication (×)',
+        '"Per/divided by/quotient" means division (÷)',
+        'Look for relationships between quantities',
+        'Draw diagram if helpful',
+        'Check solution makes sense in context'
+      ],
+      examples: [
+        'Problem: "Five more than twice a number is 17"\nLet x = the number\nEquation: 2x + 5 = 17\nSolution: x = 6',
+        'Problem: "Perimeter of rectangle is 50. Length is 3 more than width"\nLet w = width, l = length\nl = w + 3\n2l + 2w = 50\nSubstitute: 2(w+3) + 2w = 50\nSolution: w = 11, l = 14',
+        'Problem: "Phone plan: $30 base + $0.10 per minute. Total bill $47.50"\nLet m = minutes\n30 + 0.10m = 47.50\nSolution: m = 175 minutes',
+        'Problem: "Concert tickets: adult $12, child $8. Sold 250 tickets for $2,600"\nLet a = adults, c = children\na + c = 250\n12a + 8c = 2600'
+      ],
+      commonMistakes: [
+        'Not defining variable clearly',
+        'Translating "less than" backward (5 less than x is x-5, not 5-x)',
+        'Using too many variables when one is enough',
+        'Forgetting units in final answer',
+        'Not checking if answer makes sense'
+      ],
+      tips: [
+        'Read problem multiple times',
+        'Write down what variable represents',
+        'Look for "equal" to place = sign',
+        'Translate phrase by phrase',
+        'Check answer in original words, not just equation',
+        'Draw picture for geometry problems'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Compound Inequalities',
+    content: {
+      title: 'Compound Inequalities',
+      intro: 'Compound inequalities combine two inequalities with "and" or "or". They represent ranges or unions of solution sets.',
+      keyPoints: [
+        'AND compound: both conditions must be true (intersection)',
+        'OR compound: at least one condition must be true (union)',
+        'AND written as: a < x < b or a < x AND x < b',
+        'OR written as: x < a OR x > b',
+        'AND creates single interval on number line',
+        'OR creates two separate regions on number line',
+        'Solve each inequality separately',
+        'Graph AND with line segment between bounds',
+        'Graph OR with rays going opposite directions',
+        'Solution set uses interval notation or set notation'
+      ],
+      examples: [
+        'Solve: -3 < 2x + 1 < 7\nSubtract 1: -4 < 2x < 6\nDivide by 2: -2 < x < 3\nSolution: (-2, 3)',
+        'Solve: x + 2 < 1 OR x - 3 > 4\nFirst: x < -1\nSecond: x > 7\nSolution: (-∞, -1) ∪ (7, ∞)',
+        'Solve: 3 ≤ x + 2 ≤ 8\nSubtract 2: 1 ≤ x ≤ 6\nSolution: [1, 6]',
+        'Solve: 2x < 4 OR 3x > 15\nx < 2 OR x > 5'
+      ],
+      commonMistakes: [
+        'Confusing AND with OR',
+        'Not flipping inequality when multiplying/dividing by negative',
+        'Forgetting to solve both parts',
+        'Wrong notation for OR (should use ∪)',
+        'Not including endpoints when ≤ or ≥'
+      ],
+      tips: [
+        'AND = overlap (both true), OR = union (either true)',
+        'For AND: work all parts simultaneously',
+        'For OR: solve separately, combine solutions',
+        'Graph to check: AND is between, OR is outside',
+        'Remember bracket vs parenthesis for endpoints'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Solving and Graphing Inequalities',
+    content: {
+      title: 'Solving and Graphing Inequalities',
+      intro: 'Inequalities show ranges of solutions rather than single values. Graphing them on a number line provides visual representation of all solutions.',
+      keyPoints: [
+        'Solution is all values that make inequality true',
+        'Solve like equations but watch for special rules',
+        'FLIP inequality when multiplying/dividing by negative',
+        'Open circle: < or > (not included)',
+        'Closed circle: ≤ or ≥ (included)',
+        'Arrow shows direction of solutions',
+        'Can check by testing value from solution region',
+        'Interval notation: ( ) for open, [ ] for closed',
+        'Solution set is infinite (unbounded)',
+        'Graph and notation must match'
+      ],
+      examples: [
+        'Solve and graph: 3x - 5 > 7\n3x > 12\nx > 4\nGraph: open circle at 4, arrow right\nInterval: (4, ∞)',
+        'Solve: -2x + 3 ≤ 11\n-2x ≤ 8\nx ≥ -4 (flipped!)\nGraph: closed circle at -4, arrow right',
+        'Solve: 5 - x < 2\n-x < -3\nx > 3 (flipped!)',
+        'Solve: ½x + 1 ≥ 4\n½x ≥ 3\nx ≥ 6'
+      ],
+      commonMistakes: [
+        'Forgetting to flip when multiplying/dividing by negative',
+        'Using wrong circle type (open vs closed)',
+        'Arrow pointing wrong direction',
+        'Not simplifying completely before graphing',
+        'Mixing up < and ≤ notation'
+      ],
+      tips: [
+        'Always flip inequality with negative multiply/divide',
+        'Open circle = strictly less/greater, Closed = includes endpoint',
+        'Test a value to verify your solution region',
+        '> points right, < points left on number line',
+        'Write solution in words first, then interval notation',
+        'Double-check direction before finalizing'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Systems of Inequalities',
+    content: {
+      title: 'Systems of Inequalities',
+      intro: 'Systems of inequalities have solutions that satisfy multiple inequalities simultaneously. The solution is the overlapping region where all inequalities are true.',
+      keyPoints: [
+        'Solution region: all points satisfying ALL inequalities',
+        'Graph each inequality on same coordinate plane',
+        'Use solid line for ≤ or ≥, dashed line for < or >',
+        'Shade appropriate region for each inequality',
+        'Solution is where ALL shaded regions overlap',
+        'Test point to verify correct side shaded',
+        'Often creates polygonal region',
+        'Vertices of region found where boundary lines intersect',
+        'May have bounded or unbounded solution region',
+        'Used in linear programming and optimization'
+      ],
+      examples: [
+        'System: y < x + 2 and y ≥ -x + 1\nGraph both lines\nShade below first (dashed), above second (solid)\nSolution: overlapping region',
+        'System: x ≥ 0, y ≥ 0, x + y ≤ 4\nFirst quadrant (x,y both positive)\nBelow line x + y = 4\nForms triangular region',
+        'Test point (1,2) in y > x + 1:\n2 > 1 + 1\n2 > 2? FALSE\nSo (1,2) not in solution',
+        'Find vertices: x + y = 5 and x - y = 1\nSolve system: x = 3, y = 2\nVertex at (3, 2)'
+      ],
+      commonMistakes: [
+        'Using wrong line type (solid vs dashed)',
+        'Shading wrong side of line',
+        'Not finding overlap region',
+        'Forgetting to check boundary lines included',
+        'Not testing point to verify'
+      ],
+      tips: [
+        'Graph inequalities one at a time',
+        'Use different colors or patterns for each shade',
+        'Test (0,0) if not on any line - easy to check',
+        'Solution region should satisfy ALL inequalities',
+        'Vertices are where boundary lines intersect',
+        'Label solution region clearly'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Graphing Systems of Equations',
+    content: {
+      title: 'Graphing Systems of Equations',
+      intro: 'Graphing systems of equations visually shows where lines intersect. The intersection point(s) represent solutions that satisfy all equations.',
+      keyPoints: [
+        'Graph each equation on same coordinate plane',
+        'Intersection point is the solution',
+        'Lines can: intersect once, never (parallel), or overlap (same line)',
+        'One intersection = one solution (different slopes)',
+        'No intersection = no solution (parallel lines)',
+        'Infinite intersections = infinite solutions (same line)',
+        'Estimate solution from graph, verify algebraically',
+        'Check solution in both original equations',
+        'Use graphing when visualization helpful',
+        'Algebraic methods (substitution/elimination) more precise'
+      ],
+      examples: [
+        'Graph: y = x + 1 and y = -x + 5\nLines intersect at (2, 3)\nVerify: 3 = 2+1 ✓ and 3 = -2+5 ✓',
+        'Graph: y = 2x + 1 and y = 2x - 3\nParallel (same slope 2)\nNo intersection → No solution',
+        'Graph: 2x + y = 4 and 4x + 2y = 8\nSecond is double of first\nSame line → Infinite solutions',
+        'Graph: x + y = 6 and x - y = 2\nIntersect at (4, 2)'
+      ],
+      commonMistakes: [
+        'Misreading intersection point coordinates',
+        'Not checking solution in both equations',
+        'Assuming lines that look parallel are (check slopes)',
+        'Graphing inaccurately leading to wrong solution',
+        'Not extending lines far enough to see intersection'
+      ],
+      tips: [
+        'Convert to slope-intercept form before graphing',
+        'Use ruler for straight, accurate lines',
+        'Extend lines beyond first few points',
+        'Verify graphical solution algebraically',
+        'If intersection looks between integers, use algebra',
+        'Plot at least 3 points per line for accuracy'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Evaluating Functions',
+    content: {
+      title: 'Evaluating Functions',
+      intro: 'Evaluating functions means finding the output value for a given input. This fundamental skill connects inputs to outputs through function rules.',
+      keyPoints: [
+        'To evaluate f(a): substitute a for every x in the function',
+        'Use parentheses when substituting to avoid sign errors',
+        'Follow order of operations after substituting',
+        'Can evaluate with numbers, variables, or expressions',
+        'f(0) gives y-intercept',
+        'Solving f(x) = k finds when output equals k',
+        'Can evaluate composite functions: work inside out',
+        'Function notation emphasizes input-output relationship',
+        'Same function can be evaluated at multiple points',
+        'Result is a number (or expression if input is variable)'
+      ],
+      examples: [
+        'If f(x) = 2x² - 3x + 1, find f(4):\nf(4) = 2(4)² - 3(4) + 1\n= 2(16) - 12 + 1\n= 32 - 12 + 1 = 21',
+        'If g(x) = x² + 5, find g(-3):\ng(-3) = (-3)² + 5\n= 9 + 5 = 14',
+        'If h(x) = 3x - 7, find h(a+2):\nh(a+2) = 3(a+2) - 7\n= 3a + 6 - 7 = 3a - 1',
+        'If f(x) = x² and g(x) = 2x + 1, find f(g(3)):\ng(3) = 2(3) + 1 = 7\nf(7) = 7² = 49'
+      ],
+      commonMistakes: [
+        'Not using parentheses when substituting negatives',
+        'Forgetting to square negative numbers correctly',
+        'Only substituting in one place if x appears multiple times',
+        'Order of operations errors',
+        'Confusing f(x+2) with f(x) + 2'
+      ],
+      tips: [
+        'Always use parentheses: f(x) = x², so f(-3) = (-3)²',
+        'Substitute everywhere x appears in the function',
+        'Check each step carefully',
+        'For composite functions: evaluate inner function first',
+        'Verify by substituting answer back if solving f(x) = k',
+        'Practice with different types of inputs: numbers, negatives, variables'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Adding and Subtracting Polynomials',
+    content: {
+      title: 'Adding and Subtracting Polynomials',
+      intro: 'Adding and subtracting polynomials involves combining like terms. This fundamental operation is used throughout algebra.',
+      keyPoints: [
+        'Like terms: same variable(s) with same exponent(s)',
+        'Only like terms can be combined',
+        'Combine coefficients, keep variable part same',
+        'Addition: combine like terms directly',
+        'Subtraction: distribute negative, then combine like terms',
+        'Terms can be rearranged (commutative property)',
+        'Result is simplified when no like terms remain',
+        'Degree of result ≤ degree of larger polynomial',
+        'Horizontally or vertically - both work',
+        'Check by substituting a test value'
+      ],
+      examples: [
+        'Add: (3x² + 2x - 5) + (x² - 4x + 7)\n= 3x² + x² + 2x - 4x - 5 + 7\n= 4x² - 2x + 2',
+        'Subtract: (5x² + 3x - 1) - (2x² - x + 4)\n= 5x² + 3x - 1 - 2x² + x - 4\n= 3x² + 4x - 5',
+        'Add: (2x³ - x + 3) + (x² + 5x - 2)\n= 2x³ + x² + 4x + 1',
+        'Vertical subtraction:\n  5x² + 3x - 7\n-(2x² - 4x + 1)\n= 3x² + 7x - 8'
+      ],
+      commonMistakes: [
+        'Combining unlike terms (x² + x ≠ x³)',
+        'Sign errors when subtracting (not distributing negative)',
+        'Forgetting to subtract the constant term',
+        'Adding exponents instead of coefficients',
+        'Dropping terms that don\'t have matches'
+      ],
+      tips: [
+        'Circle or underline like terms in same color',
+        'For subtraction: change every sign in second polynomial',
+        'Line up like terms vertically if helpful',
+        'Check each term type: x², x, constants',
+        'Simplify completely - no like terms should remain',
+        'Result should have terms in descending order of exponents'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Multiplying Polynomials',
+    content: {
+      title: 'Multiplying Polynomials',
+      intro: 'Multiplying polynomials uses the distributive property repeatedly. Each term in one polynomial multiplies each term in the other.',
+      keyPoints: [
+        'Distribute each term to every other term',
+        'Multiply coefficients, add exponents of same base',
+        'FOIL for binomials: First, Outer, Inner, Last',
+        'Box method works for any polynomial multiplication',
+        'Combine like terms after multiplying',
+        'Result degree = sum of degrees',
+        '(a + b)(c + d) = ac + ad + bc + bd',
+        'Special products: (a+b)² = a² + 2ab + b²',
+        'Difference of squares: (a+b)(a-b) = a² - b²',
+        'Check by substituting test value or using FOIL backward'
+      ],
+      examples: [
+        'Multiply: (2x + 3)(x - 4)\nF: 2x·x = 2x²\nO: 2x·(-4) = -8x\nI: 3·x = 3x\nL: 3·(-4) = -12\n= 2x² - 5x - 12',
+        'Multiply: (x + 5)²\n= (x + 5)(x + 5)\n= x² + 5x + 5x + 25\n= x² + 10x + 25',
+        'Multiply: (3x - 2)(2x² + x - 4)\n= 6x³ + 3x² - 12x - 4x² - 2x + 8\n= 6x³ - x² - 14x + 8',
+        'Multiply: (x + 3)(x - 3)\n= x² - 3x + 3x - 9\n= x² - 9'
+      ],
+      commonMistakes: [
+        'Missing terms (not distributing to all)',
+        'Adding exponents when multiplying coefficients',
+        'Sign errors, especially with negatives',
+        'Not combining like terms at end',
+        'Forgetting middle term in (a+b)²'
+      ],
+      tips: [
+        'Write out FOIL or use box method to stay organized',
+        'Be extra careful with negative signs',
+        'Combine like terms as final step',
+        'Memorize special products to save time',
+        'Check: degree of answer = sum of original degrees',
+        'Count total terms before combining: binomial × binomial = 4 terms initially'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Perfect Square Trinomials',
+    content: {
+      title: 'Perfect Square Trinomials',
+      intro: 'Perfect square trinomials result from squaring binomials. Recognizing this pattern allows quick factoring and simplification.',
+      keyPoints: [
+        'Pattern: a² + 2ab + b² = (a + b)²',
+        'Pattern: a² - 2ab + b² = (a - b)²',
+        'First and last terms must be perfect squares',
+        'Middle term = 2 × (product of square roots)',
+        'Three forms: all positive, negative middle, all negative not possible',
+        'Check: Is first term perfect square? Last term? Middle = 2×√first×√last?',
+        'Factor as binomial squared',
+        'Reverse of squaring a binomial',
+        'Common in completing the square method',
+        'Both factors are identical (repeated root)'
+      ],
+      examples: [
+        'Factor: x² + 6x + 9\na² = x², a = x\nb² = 9, b = 3\nMiddle: 2(x)(3) = 6x ✓\nAnswer: (x + 3)²',
+        'Factor: 4x² - 12x + 9\na² = 4x², a = 2x\nb² = 9, b = 3\nMiddle: 2(2x)(3) = 12x ✓\nAnswer: (2x - 3)²',
+        'Factor: x² + 10x + 25\na = x, b = 5\n2(x)(5) = 10x ✓\nAnswer: (x + 5)²',
+        'Is x² + 4x + 9 perfect square?\n2(x)(3) = 6x ≠ 4x\nNot perfect square trinomial'
+      ],
+      commonMistakes: [
+        'Assuming any trinomial with perfect square first/last is perfect square',
+        'Not checking middle term formula',
+        'Wrong sign in factored form',
+        'Forgetting to write squared notation (x+3)²',
+        'Trying to factor when middle term doesn\'t match'
+      ],
+      tips: [
+        'Check list: perfect square first? perfect square last? middle = 2×√×√?',
+        'If middle term off, it\'s not perfect square - use regular factoring',
+        'Sign of middle term tells sign inside binomial',
+        'Memorize the patterns - saves time',
+        'Perfect squares have special importance in quadratics',
+        'Completing the square creates perfect square trinomials'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Solving Quadratic Equations by Factoring',
+    content: {
+      title: 'Solving Quadratic Equations by Factoring',
+      intro: 'Solving quadratics by factoring uses the Zero Product Property: if ab = 0, then a = 0 or b = 0. This method works when equations can be factored.',
+      keyPoints: [
+        'Step 1: Set equation equal to zero',
+        'Step 2: Factor completely',
+        'Step 3: Set each factor equal to zero',
+        'Step 4: Solve each simple equation',
+        'Step 5: Check both solutions',
+        'Zero Product Property is the key',
+        'Can have 0, 1, or 2 real solutions',
+        'Solutions are x-intercepts of parabola',
+        'Must have equation = 0 before factoring',
+        'Fastest method when factoring is easy'
+      ],
+      examples: [
+        'Solve: x² + 5x + 6 = 0\nFactor: (x + 2)(x + 3) = 0\nx + 2 = 0 or x + 3 = 0\nx = -2 or x = -3',
+        'Solve: x² - 9 = 0\nFactor: (x + 3)(x - 3) = 0\nx = -3 or x = 3',
+        'Solve: 2x² + 7x = 4\nRearrange: 2x² + 7x - 4 = 0\nFactor: (2x - 1)(x + 4) = 0\nx = ½ or x = -4',
+        'Solve: x² - 6x + 9 = 0\nPerfect square: (x - 3)² = 0\nx = 3 (repeated root)'
+      ],
+      commonMistakes: [
+        'Not setting equation equal to zero first',
+        'Dividing by variable (loses solution x = 0)',
+        'Setting product equal to number other than zero',
+        'Sign errors when factoring',
+        'Not checking solutions in original equation'
+      ],
+      tips: [
+        'MUST be equal to zero before applying zero product property',
+        'If GCF contains x, that gives x = 0 as solution',
+        'Check both solutions in original equation',
+        'If can\'t factor easily, use quadratic formula instead',
+        'Graph mental image: solutions are where parabola crosses x-axis',
+        'Some quadratics don\'t factor with integers - that\'s OK, use formula'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Completing the Square',
+    content: {
+      title: 'Completing the Square',
+      intro: 'Completing the square transforms quadratic equations into perfect square form. This method always works and is the basis for deriving the quadratic formula.',
+      keyPoints: [
+        'Goal: transform ax² + bx + c into (x + p)² = q form',
+        'Works for any quadratic equation',
+        'Step 1: Move constant to right side',
+        'Step 2: If a ≠ 1, divide everything by a',
+        'Step 3: Take half of b coefficient, square it, add to both sides',
+        'Step 4: Factor left side as perfect square',
+        'Step 5: Take square root of both sides (± on right)',
+        'Step 6: Solve for x',
+        'Formula for completing: add (b/2)² to both sides',
+        'Used to find vertex form of quadratic'
+      ],
+      examples: [
+        'Solve: x² + 6x - 7 = 0\nx² + 6x = 7\nAdd (6/2)² = 9 to both sides:\nx² + 6x + 9 = 16\n(x + 3)² = 16\nx + 3 = ±4\nx = 1 or x = -7',
+        'Solve: x² - 4x + 1 = 0\nx² - 4x = -1\nAdd (-4/2)² = 4:\nx² - 4x + 4 = 3\n(x - 2)² = 3\nx = 2 ± √3',
+        'Convert to vertex form: x² + 8x + 10\n= (x² + 8x + 16) - 16 + 10\n= (x + 4)² - 6',
+        'Solve: 2x² + 12x - 4 = 0\nDivide by 2: x² + 6x - 2 = 0\nx² + 6x = 2\nx² + 6x + 9 = 11\n(x + 3)² = 11\nx = -3 ± √11'
+      ],
+      commonMistakes: [
+        'Forgetting to add to BOTH sides',
+        'Not dividing by a if a ≠ 1',
+        'Arithmetic error calculating (b/2)²',
+        'Forgetting ± when taking square root',
+        'Wrong sign when completing square'
+      ],
+      tips: [
+        'Memorize: add (b/2)² to both sides',
+        'Only works when x² coefficient is 1 (divide first if not)',
+        'Check: does left side factor as perfect square?',
+        'Remember ± symbol when taking square roots',
+        'Completing square gives exact answers even when messy',
+        'This method reveals vertex of parabola'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Graphing Parabolas',
+    content: {
+      title: 'Graphing Parabolas',
+      intro: 'Parabolas are U-shaped graphs of quadratic functions. Understanding key features like vertex, axis of symmetry, and intercepts allows accurate graphing.',
+      keyPoints: [
+        'Standard form: y = ax² + bx + c',
+        'Vertex form: y = a(x - h)² + k with vertex (h, k)',
+        'Opens upward if a > 0, downward if a < 0',
+        'Vertex is minimum (a > 0) or maximum (a < 0) point',
+        'Axis of symmetry: vertical line x = -b/(2a) through vertex',
+        'Y-intercept: (0, c) from standard form',
+        'X-intercepts: solve ax² + bx + c = 0',
+        'Plot vertex, intercepts, and 2-3 more points',
+        'Use symmetry: points equidistant from axis have same y-value',
+        'Wider parabola when |a| < 1, narrower when |a| > 1'
+      ],
+      examples: [
+        'Graph: y = x² - 4x + 3\nVertex: x = -(-4)/(2·1) = 2, y = (2)² - 4(2) + 3 = -1 → (2, -1)\nY-int: (0, 3)\nX-ints: (x-1)(x-3) = 0 → (1,0), (3,0)\nOpens up',
+        'Graph: y = -x² + 2x + 3\nVertex: x = 1, y = 4 → (1, 4)\nOpens down (a = -1)\nY-int: (0, 3)\nSymmetry about x = 1',
+        'Graph: y = 2(x + 1)² - 8\nVertex form: vertex (-1, -8)\nOpens up (a = 2), narrower than y = x²',
+        'Graph: y = -½x² + 4\nVertex: (0, 4)\nWider parabola (|a| = ½ < 1)\nOpens down'
+      ],
+      commonMistakes: [
+        'Wrong direction (up vs down)',
+        'Not finding vertex correctly',
+        'Forgetting parabola is symmetric',
+        'Plotting as straight lines between points',
+        'Confusing vertex and y-intercept'
+      ],
+      tips: [
+        'Find vertex first using x = -b/(2a)',
+        'Plot vertex, y-intercept, and mirror point using symmetry',
+        'Find x-intercepts by solving equation = 0',
+        'Sketch smooth curve, not pointed V',
+        'Use axis of symmetry to find mirror points',
+        'Check: does graph match sign of a (up/down)?'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Simplifying Radical Expressions',
+    content: {
+      title: 'Simplifying Radical Expressions',
+      intro: 'Simplifying radicals means removing perfect square factors from under the radical sign. This creates a standard form for comparing and combining radicals.',
+      keyPoints: [
+        'Goal: √a × b where a is largest perfect square factor',
+        'Perfect squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144...',
+        'Property: √(ab) = √a × √b',
+        'Factor out largest perfect square',
+        'Simplified when no perfect square factors remain under radical',
+        'Simplify variables: √(x⁴) = x², √(x³) = x√x',
+        'Even exponents come out, odd exponents split',
+        'Cannot simplify √(a + b) to √a + √b (common error!)',
+        'Rationalize denominator: no radicals in denominator',
+        'Like radicals: same index and radicand'
+      ],
+      examples: [
+        'Simplify: √32\n√32 = √(16×2) = √16 × √2 = 4√2',
+        'Simplify: √75\n√75 = √(25×3) = 5√3',
+        'Simplify: √(48x³)\n√48 × √x³ = √(16×3) × √(x²×x)\n= 4x√(3x)',
+        'Simplify: √(200a⁴b³)\n= √(100×2) × √(a⁴) × √(b²×b)\n= 10a²b√(2b)',
+        'Rationalize: 1/√5 = 1/√5 × √5/√5 = √5/5'
+      ],
+      commonMistakes: [
+        'Thinking √(a+b) = √a + √b (false!)',
+        'Not finding largest perfect square factor',
+        'Leaving perfect squares under radical',
+        'Variable exponent errors',
+        'Not rationalizing denominators'
+      ],
+      tips: [
+        'Factor radicand to find perfect squares',
+        'List perfect squares up to 144 for quick recognition',
+        'For variables: divide exponent by 2, remainder stays under radical',
+        'Check: square your answer to verify',
+        'Practice prime factorization for systematic approach',
+        'Radicals in denominator? Multiply by √n/√n to rationalize'
+      ]
+    }
+  },
+
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Operations with Radicals',
+    content: {
+      title: 'Operations with Radicals',
+      intro: 'Operations with radicals follow specific rules. Like radicals can be added/subtracted; multiplication and division use properties of roots.',
+      keyPoints: [
+        'Add/subtract: only combine like radicals (same index and radicand)',
+        'Like radicals: combine coefficients, keep radical same',
+        'Unlike radicals cannot be combined unless simplified first',
+        'Multiply: √a × √b = √(ab)',
+        'Divide: √a ÷ √b = √(a/b)',
+        'Always simplify radicals before adding/subtracting',
+        'Simplify final answer completely',
+        'Distributive property works: √3(√5 + √2) = √15 + √6',
+        'FOIL works: (√a + √b)(√c + √d)',
+        'Conjugates eliminate radicals: (√a + √b)(√a - √b) = a - b'
+      ],
+      examples: [
+        'Add: 2√3 + 5√3 = 7√3\n(Like radicals, add coefficients)',
+        'Simplify then add: √8 + √18\n= 2√2 + 3√2 = 5√2',
+        'Cannot combine: √2 + √3\n(Unlike radicals)',
+        'Multiply: √6 × √10 = √60 = √(4×15) = 2√15',
+        'Multiply: (2√3)(5√6)\n= 10√18 = 10 × 3√2 = 30√2',
+        'FOIL: (√5 + 2)(√5 - 3)\n= 5 - 3√5 + 2√5 - 6\n= -1 - √5',
+        'Conjugate: (√7 + √3)(√7 - √3) = 7 - 3 = 4'
+      ],
+      commonMistakes: [
+        'Adding unlike radicals: √2 + √3 ≠ √5',
+        'Multiplying wrong: √2 × √3 ≠ √6 (actually this IS correct)',
+        'Not simplifying before trying to combine',
+        'Distributing wrong with radicals',
+        'Forgetting FOIL with binomial radicals'
+      ],
+      tips: [
+        'Simplify all radicals first',
+        'Only like radicals can be added/subtracted',
+        'Multiplication: multiply under same radical',
+        'Use conjugates to rationalize denominator with binomials',
+        'Check if answer can be simplified further',
+        'Practice recognizing like radicals after simplification'
+      ]
+    }
+  },
+  // Pre-Algebra Topics
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Variables and Expressions',
+    content: {
+      title: 'Variables and Expressions',
+      intro: 'Variables are symbols (usually letters) that represent unknown or changing values. Expressions combine numbers, variables, and operations without an equals sign.',
+      keyPoints: [
+        'Variable: a symbol (like x, y, n) representing a value',
+        'Constant: a fixed number that doesn\'t change',
+        'Coefficient: the number multiplied by a variable (in 3x, 3 is the coefficient)',
+        'Term: a single number, variable, or product (5, x, 3y are terms)',
+        'Expression: combination of terms with operations (no equals sign)',
+        'Algebraic expression: contains variables (3x + 5)',
+        'Numerical expression: contains only numbers (8 + 3)',
+        'Evaluate: substitute values for variables and simplify',
+        'Like terms: same variable(s) with same exponent',
+        'Terms are separated by + or - signs'
+      ],
+      examples: [
+        'Expression: 2x + 5\n(2x is one term, 5 is another term)',
+        'Evaluate 3x + 7 when x = 4:\n3(4) + 7 = 12 + 7 = 19',
+        'Evaluate a² - 2b when a = 5 and b = 3:\n5² - 2(3) = 25 - 6 = 19',
+        'Expression: 4y - 2y + 8\n(4y and -2y are like terms)',
+        'Translate: "5 more than twice a number"\nExpression: 2n + 5',
+        'Translate: "the product of 3 and x, decreased by 7"\nExpression: 3x - 7'
+      ],
+      commonMistakes: [
+        'Writing 2x as 2 × x instead of understanding it as a single term',
+        'Confusing expression (no equals) with equation (has equals)',
+        'Forgetting to follow order of operations when evaluating',
+        'Not substituting parentheses around negative values',
+        'Mixing up "more than" (add) vs "less than" (subtract) in word problems'
+      ],
+      tips: [
+        'Variables can represent any number',
+        'Always write coefficient before variable (3x, not x3)',
+        'Use parentheses when substituting values',
+        'Check your work by substituting back',
+        'Read word problems carefully: "sum" means add, "product" means multiply',
+        'Practice translating between words and algebraic expressions'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Solving Equations',
+    content: {
+      title: 'Solving Equations',
+      intro: 'An equation states that two expressions are equal. Solving means finding the value(s) that make the equation true.',
+      keyPoints: [
+        'Equation: mathematical statement with an equals sign',
+        'Solution: value that makes the equation true',
+        'Solve: isolate the variable on one side',
+        'Inverse operations undo each other (+ and -, × and ÷)',
+        'Whatever you do to one side, do to the other',
+        'Addition Property: add same amount to both sides',
+        'Subtraction Property: subtract same amount from both sides',
+        'Multiplication Property: multiply both sides by same nonzero number',
+        'Division Property: divide both sides by same nonzero number',
+        'Check: substitute solution back into original equation'
+      ],
+      examples: [
+        'Solve: x + 7 = 15\nSubtract 7: x = 8\nCheck: 8 + 7 = 15 ✓',
+        'Solve: 5x = 30\nDivide by 5: x = 6\nCheck: 5(6) = 30 ✓',
+        'Solve: x - 9 = 12\nAdd 9: x = 21\nCheck: 21 - 9 = 12 ✓',
+        'Solve: x/4 = 7\nMultiply by 4: x = 28\nCheck: 28/4 = 7 ✓',
+        'Solve: -3x = 18\nDivide by -3: x = -6\nCheck: -3(-6) = 18 ✓'
+      ],
+      commonMistakes: [
+        'Only applying operation to one side of equation',
+        'Dividing/multiplying wrong when negatives involved',
+        'Not checking answer in original equation',
+        'Subtracting when should add, or vice versa',
+        'Forgetting to flip sign when dividing by negative'
+      ],
+      tips: [
+        'Goal: get variable alone on one side',
+        'Use inverse operations',
+        'Work backwards through order of operations',
+        'Always check your answer',
+        'Show your work step by step',
+        'Keep equation balanced: same operation both sides'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Ratios and Proportions',
+    content: {
+      title: 'Ratios and Proportions',
+      intro: 'Ratios compare quantities. Proportions are equations stating two ratios are equal. Essential for scaling, rates, and real-world problem solving.',
+      keyPoints: [
+        'Ratio: comparison of two quantities (can be written a:b, a to b, or a/b)',
+        'Proportion: equation stating two ratios are equal (a/b = c/d)',
+        'Equivalent ratios: represent same relationship (2:3 = 4:6 = 6:9)',
+        'Cross multiplication: if a/b = c/d, then ad = bc',
+        'Unit rate: ratio with denominator of 1',
+        'Scale factor: ratio of corresponding sides in similar figures',
+        'Simplify ratios like fractions (divide by GCF)',
+        'Ratios can compare part-to-part or part-to-whole',
+        'Keep units consistent when comparing',
+        'Proportions are useful for scaling recipes, maps, and models'
+      ],
+      examples: [
+        'Simplify ratio 12:18\nGCF is 6\n12÷6 : 18÷6 = 2:3',
+        'Solve proportion: x/5 = 12/15\nCross multiply: 15x = 60\nx = 4',
+        'If 3 apples cost $2, how much for 12 apples?\nSet up: 3/2 = 12/x\nCross multiply: 3x = 24\nx = $8',
+        'Ratio of boys to girls is 3:5. If 15 girls, how many boys?\n3/5 = b/15\n5b = 45\nb = 9 boys',
+        'Unit rate: 120 miles in 3 hours\n120/3 = 40 miles per hour'
+      ],
+      commonMistakes: [
+        'Setting up proportion with wrong corresponding values',
+        'Not keeping units consistent',
+        'Forgetting to simplify ratios',
+        'Cross multiplying incorrectly',
+        'Confusing part-to-part with part-to-whole ratios'
+      ],
+      tips: [
+        'Set up proportion carefully: match corresponding values',
+        'Label your ratios with units',
+        'Check if answer makes sense in context',
+        'Simplify ratios just like fractions',
+        'Use cross multiplication to solve',
+        'Unit rate = divide top by bottom'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Percentages and Decimals',
+    content: {
+      title: 'Percentages and Decimals',
+      intro: 'Percentages represent parts per hundred. Converting between fractions, decimals, and percentages is fundamental for real-world math.',
+      keyPoints: [
+        'Percent means "per hundred" (% symbol)',
+        'Decimal to percent: multiply by 100 (move decimal 2 right)',
+        'Percent to decimal: divide by 100 (move decimal 2 left)',
+        'Fraction to percent: divide numerator by denominator, multiply by 100',
+        'Finding percentage of a number: convert % to decimal, multiply',
+        'Percent increase: (new - old)/old × 100%',
+        'Percent decrease: (old - new)/old × 100%',
+        '100% = whole amount',
+        'Greater than 100% means more than the whole',
+        'Less than 1% is possible (0.5% = 0.005)'
+      ],
+      examples: [
+        '0.75 to percent:\n0.75 × 100 = 75%',
+        '45% to decimal:\n45 ÷ 100 = 0.45',
+        'Find 20% of 80:\n0.20 × 80 = 16',
+        'What percent of 50 is 15?\n15/50 = 0.3 = 30%',
+        'Price increased from $40 to $50:\n(50-40)/40 × 100% = 25% increase',
+        '3/4 to percent:\n3 ÷ 4 = 0.75 = 75%'
+      ],
+      commonMistakes: [
+        'Moving decimal wrong direction in conversions',
+        'Forgetting to convert percent to decimal before multiplying',
+        'Using wrong formula for percent change',
+        'Confusing "what percent" with "what is the percent of"',
+        'Rounding too early in calculations'
+      ],
+      tips: [
+        'Remember: % → decimal = move 2 left',
+        'Decimal → % = move 2 right',
+        'Common conversions: 50% = 0.5, 25% = 0.25, 10% = 0.1',
+        'For "find x% of y": convert x to decimal, multiply by y',
+        'For "what % of x is y": divide y by x, convert to %',
+        'Use estimation to check reasonableness'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Order of Operations',
+    content: {
+      title: 'Order of Operations',
+      intro: 'Order of operations (PEMDAS/BODMAS) is the set of rules for evaluating expressions with multiple operations. Follow the correct sequence to get the right answer.',
+      keyPoints: [
+        'PEMDAS: Parentheses, Exponents, Multiplication/Division, Addition/Subtraction',
+        'BODMAS: Brackets, Orders, Division/Multiplication, Addition/Subtraction',
+        'Parentheses/Brackets first (innermost first if nested)',
+        'Exponents/Orders (powers and roots) second',
+        'Multiplication and Division left to right (same priority)',
+        'Addition and Subtraction left to right (same priority)',
+        'Work from left to right when operations have equal priority',
+        'Grouping symbols: ( ), [ ], { }, and fraction bars',
+        'Expression above/below fraction bar is grouped',
+        'Without proper order, you get wrong answer'
+      ],
+      examples: [
+        '5 + 3 × 2\n= 5 + 6 = 11\n(NOT 8 × 2 = 16)',
+        '(5 + 3) × 2\n= 8 × 2 = 16\n(Parentheses change result)',
+        '20 - 12 ÷ 4\n= 20 - 3 = 17\n(Division before subtraction)',
+        '3² + 4 × 5\n= 9 + 20 = 29\n(Exponent first, then multiply, then add)',
+        '(8 - 2) × (3 + 4)\n= 6 × 7 = 42',
+        '18 ÷ 3 × 2\n= 6 × 2 = 12\n(Left to right, not 18 ÷ 6)'
+      ],
+      commonMistakes: [
+        'Working strictly left to right ignoring PEMDAS',
+        'Doing addition before multiplication',
+        'Thinking multiplication always comes before division',
+        'Forgetting parentheses are first priority',
+        'Not recognizing fraction bar as grouping symbol',
+        'Doing exponents last instead of early'
+      ],
+      tips: [
+        'Memorize PEMDAS or BODMAS',
+        'Write each step clearly',
+        'Circle or highlight what you do each step',
+        'MD and AS are equal priority - go left to right',
+        'Use parentheses to clarify complex expressions',
+        'Double-check by working through again',
+        'Think: "Please Excuse My Dear Aunt Sally"'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Integers and Absolute Value',
+    content: {
+      title: 'Integers and Absolute Value',
+      intro: 'Integers are whole numbers and their opposites (positive, negative, and zero). Absolute value measures distance from zero on the number line.',
+      keyPoints: [
+        'Integers: {..., -3, -2, -1, 0, 1, 2, 3, ...}',
+        'Positive integers: numbers greater than 0',
+        'Negative integers: numbers less than 0',
+        'Zero is neither positive nor negative',
+        'Absolute value |x| = distance from zero (always ≥ 0)',
+        '|5| = 5 and |-5| = 5 (both are 5 units from zero)',
+        'Opposites have same absolute value: |a| = |-a|',
+        'Number line: negative left of zero, positive right',
+        'Comparing: more negative is smaller (-5 < -2)',
+        'Absolute value removes negative sign: |-7| = 7'
+      ],
+      examples: [
+        '|8| = 8\n(8 is 8 units from zero)',
+        '|-12| = 12\n(distance is always positive)',
+        'Which is greater: -3 or -7?\n-3 > -7 (closer to zero)',
+        'Evaluate: |4 - 9|\n= |-5| = 5',
+        'Order: -2, 5, |-3|, -4\n|-3| = 3\nOrder: -4, -2, 3, 5',
+        'Solve: |x| = 6\nx = 6 or x = -6'
+      ],
+      commonMistakes: [
+        'Thinking absolute value can be negative',
+        'Confusing |x| with -x',
+        'Believing -5 > -2 (bigger number means more negative)',
+        'Forgetting zero is an integer',
+        'Not simplifying inside absolute value first',
+        'Thinking |-x| = -|x| (false unless x = 0)'
+      ],
+      tips: [
+        'Absolute value = distance = always positive or zero',
+        'Use number line to visualize',
+        'Opposite of a is -a',
+        'More negative = farther left = smaller',
+        '|x| ≥ 0 always',
+        'Simplify inside | | before taking absolute value',
+        'Think of absolute value as "removing the negative sign"'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Fractions and Mixed Numbers',
+    content: {
+      title: 'Fractions and Mixed Numbers',
+      intro: 'Fractions represent parts of a whole. Mixed numbers combine whole numbers and fractions. Converting between forms and operating with fractions are essential skills.',
+      keyPoints: [
+        'Fraction: numerator/denominator (top/bottom)',
+        'Proper fraction: numerator < denominator (3/4)',
+        'Improper fraction: numerator ≥ denominator (7/4)',
+        'Mixed number: whole number + fraction (1 3/4)',
+        'Convert mixed to improper: multiply whole by denominator, add numerator',
+        'Convert improper to mixed: divide numerator by denominator',
+        'Equivalent fractions: same value, different form (1/2 = 2/4 = 3/6)',
+        'Simplify: divide top and bottom by GCF',
+        'Compare fractions: find common denominator or cross multiply',
+        'Unit fraction: numerator is 1 (1/3, 1/5)'
+      ],
+      examples: [
+        'Convert 3 2/5 to improper:\n(3 × 5 + 2)/5 = 17/5',
+        'Convert 23/4 to mixed:\n23 ÷ 4 = 5 R3\n= 5 3/4',
+        'Simplify 12/18:\nGCF = 6\n12÷6 / 18÷6 = 2/3',
+        'Compare 3/4 and 5/6:\nCross: 3×6=18, 4×5=20\n18 < 20, so 3/4 < 5/6',
+        'Equivalent: 2/3 = ?/12\n3 × 4 = 12, so 2 × 4 = 8\n2/3 = 8/12'
+      ],
+      commonMistakes: [
+        'Adding/subtracting denominators (1/2 + 1/3 ≠ 2/5)',
+        'Converting mixed numbers incorrectly',
+        'Not simplifying final answer',
+        'Comparing numerators without same denominator',
+        'Forgetting to multiply whole number when converting',
+        'Thinking larger denominator = larger fraction'
+      ],
+      tips: [
+        'Always simplify fractions completely',
+        'Improper fractions are "top-heavy"',
+        'Mixed numbers easier to visualize',
+        'Use cross multiplication to compare',
+        'Find GCF to simplify',
+        'Check: mixed × denominator + numerator = improper numerator',
+        'Practice converting both directions'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Greatest Common Factor (GCF)',
+    content: {
+      title: 'Greatest Common Factor (GCF)',
+      intro: 'The GCF is the largest factor shared by two or more numbers. It\'s used for simplifying fractions, factoring, and solving problems.',
+      keyPoints: [
+        'Factor: number that divides evenly into another',
+        'Common factor: factor shared by two or more numbers',
+        'GCF: largest factor that divides all numbers',
+        'List factors method: list all factors, find largest common',
+        'Prime factorization method: use smallest power of common primes',
+        'GCF of two primes is always 1',
+        'GCF ≤ smallest number in the set',
+        'Used to simplify fractions to lowest terms',
+        'GCF(a, b) × LCM(a, b) = a × b',
+        'Dividing by GCF gives relatively prime numbers'
+      ],
+      examples: [
+        'GCF of 12 and 18:\nFactors of 12: 1, 2, 3, 4, 6, 12\nFactors of 18: 1, 2, 3, 6, 9, 18\nGCF = 6',
+        'GCF of 24 and 36 using prime factorization:\n24 = 2³ × 3\n36 = 2² × 3²\nGCF = 2² × 3 = 12',
+        'Simplify 24/36:\nGCF = 12\n24÷12 / 36÷12 = 2/3',
+        'GCF of 15 and 28:\nNo common prime factors\nGCF = 1 (relatively prime)',
+        'GCF of 20, 30, 40:\nPrime: 20=2²×5, 30=2×3×5, 40=2³×5\nGCF = 2 × 5 = 10'
+      ],
+      commonMistakes: [
+        'Confusing GCF with LCM',
+        'Listing multiples instead of factors',
+        'Choosing a common factor that\'s not the greatest',
+        'Thinking GCF is always one of the original numbers',
+        'Not considering all numbers when finding GCF of 3+',
+        'Missing factors when listing'
+      ],
+      tips: [
+        'Factors come in pairs',
+        'Start listing: 1, 2, 3, ... up to the number',
+        'GCF is never greater than smallest number',
+        'For large numbers, use prime factorization',
+        'GCF of 1 and any number is 1',
+        'Practice with factor trees',
+        'Check work: GCF should divide all numbers evenly'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Least Common Multiple (LCM)',
+    content: {
+      title: 'Least Common Multiple (LCM)',
+      intro: 'The LCM is the smallest number that is a multiple of two or more numbers. Essential for adding/subtracting fractions with different denominators.',
+      keyPoints: [
+        'Multiple: product of a number and any integer',
+        'Common multiple: multiple shared by two or more numbers',
+        'LCM: smallest positive common multiple',
+        'List multiples method: list multiples, find smallest common',
+        'Prime factorization method: use highest power of each prime',
+        'LCM ≥ largest number in the set',
+        'Used to find common denominators for fractions',
+        'LCM of two primes = their product',
+        'LCM(a, b) × GCF(a, b) = a × b',
+        'LCM of any number and 1 is the number itself'
+      ],
+      examples: [
+        'LCM of 4 and 6:\nMultiples of 4: 4, 8, 12, 16, 20, ...\nMultiples of 6: 6, 12, 18, 24, ...\nLCM = 12',
+        'LCM of 8 and 12 using prime factorization:\n8 = 2³\n12 = 2² × 3\nLCM = 2³ × 3 = 24',
+        'Add 1/4 + 1/6:\nLCM(4, 6) = 12\n3/12 + 2/12 = 5/12',
+        'LCM of 5 and 7:\nPrimes, so LCM = 5 × 7 = 35',
+        'LCM of 6, 8, 12:\nPrime: 6=2×3, 8=2³, 12=2²×3\nLCM = 2³ × 3 = 24'
+      ],
+      commonMistakes: [
+        'Confusing LCM with GCF',
+        'Listing factors instead of multiples',
+        'Choosing a common multiple that\'s not the least',
+        'Thinking LCM is always the product of the numbers',
+        'Using wrong powers in prime factorization method',
+        'Stopping too soon when listing multiples'
+      ],
+      tips: [
+        'Multiples are products: 3, 6, 9, 12, ...',
+        'LCM is never less than largest number',
+        'For large numbers, use prime factorization',
+        'Take highest power of each prime factor',
+        'LCM × GCF = product of two numbers (useful check)',
+        'Practice both methods',
+        'Check: LCM should be divisible by all numbers'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Prime Factorization',
+    content: {
+      title: 'Prime Factorization',
+      intro: 'Prime factorization expresses a number as a product of prime numbers. It\'s fundamental for finding GCF, LCM, and simplifying fractions.',
+      keyPoints: [
+        'Prime number: natural number > 1 with exactly two factors (1 and itself)',
+        'Composite number: natural number > 1 with more than two factors',
+        '1 is neither prime nor composite',
+        'Prime factorization: writing number as product of primes',
+        'Factor tree method: divide by primes until all branches are prime',
+        'Every composite number has unique prime factorization',
+        'Exponents show repeated prime factors (2³ means 2×2×2)',
+        'Smallest primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29...',
+        '2 is only even prime',
+        'Used to find GCF (lowest powers) and LCM (highest powers)'
+      ],
+      examples: [
+        'Prime factorization of 24:\n24 = 2 × 12\n12 = 2 × 6\n6 = 2 × 3\n24 = 2³ × 3',
+        'Prime factorization of 60:\n60 = 2 × 30\n30 = 2 × 15\n15 = 3 × 5\n60 = 2² × 3 × 5',
+        'Prime factorization of 100:\n100 = 10 × 10\n10 = 2 × 5\n100 = 2² × 5²',
+        'Is 17 prime?\nCheck divisibility by 2, 3 (no others needed since √17 < 5)\nYes, 17 is prime',
+        'Prime factorization of 72:\n72 = 2 × 36 = 2 × 2 × 18 = 2 × 2 × 2 × 9 = 2³ × 3²'
+      ],
+      commonMistakes: [
+        'Thinking 1 is prime (it\'s not)',
+        'Forgetting 2 is prime (only even prime)',
+        'Not continuing factor tree until all branches are prime',
+        'Missing exponents in final answer',
+        'Using composite numbers in factorization',
+        'Not checking if final answer multiplies back to original'
+      ],
+      tips: [
+        'Start with smallest prime (usually 2)',
+        'Use divisibility rules to find factors quickly',
+        'Draw factor tree to organize work',
+        'Check: multiply all primes to get original number',
+        'Memorize first 10-15 primes',
+        'If stuck, try dividing by 2, 3, 5, 7, 11...',
+        'Use exponent notation for repeated factors',
+        'Every branch must end in a prime'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Exponents and Powers',
+    content: {
+      title: 'Exponents and Powers',
+      intro: 'Exponents indicate repeated multiplication. Understanding exponent rules is essential for algebra and scientific notation.',
+      keyPoints: [
+        'Exponent (power): tells how many times to multiply the base',
+        'Base: the number being multiplied',
+        'b^n means b × b × b... (n times)',
+        'Read as "b to the nth power" or "b raised to n"',
+        'b² is "b squared", b³ is "b cubed"',
+        'Any number to the power of 1 equals itself: b¹ = b',
+        'Any nonzero number to the power of 0 equals 1: b⁰ = 1',
+        'Negative base with even exponent → positive result',
+        'Negative base with odd exponent → negative result',
+        'Exponent applies only to what it\'s directly attached to'
+      ],
+      examples: [
+        '2⁴ = 2 × 2 × 2 × 2 = 16\n(2 multiplied 4 times)',
+        '5³ = 5 × 5 × 5 = 125',
+        '(-3)² = (-3) × (-3) = 9\n(Negative base, even exponent = positive)',
+        '(-2)³ = (-2) × (-2) × (-2) = -8\n(Negative base, odd exponent = negative)',
+        '-2⁴ = -(2⁴) = -16\n(Exponent only on 2, then apply negative)',
+        '10⁰ = 1\n(Any nonzero number to 0 power is 1)'
+      ],
+      commonMistakes: [
+        'Confusing 2³ with 2 × 3 = 6 (should be 8)',
+        'Thinking (-2)² = -4 (actually +4)',
+        'Confusing -2² with (-2)² (different results)',
+        'Believing 0⁰ = 1 (undefined)',
+        'Adding instead of multiplying: 3² ≠ 3 + 3',
+        'Applying exponent to more than the base'
+      ],
+      tips: [
+        'Parentheses matter: (-3)² ≠ -3²',
+        'Memorize squares: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25...',
+        'Memorize cubes: 2³=8, 3³=27, 4³=64, 5³=125',
+        'Even exponent on negative = positive',
+        'Odd exponent on negative = negative',
+        'b⁰ = 1 for any b ≠ 0',
+        'Write out the multiplication to understand',
+        'Use calculator for large exponents'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Square Roots and Cube Roots',
+    content: {
+      title: 'Square Roots and Cube Roots',
+      intro: 'Roots are inverse operations of exponents. Square roots undo squaring, cube roots undo cubing. Essential for solving equations and geometry.',
+      keyPoints: [
+        'Square root: number that when squared gives the original (√a)',
+        'Cube root: number that when cubed gives the original (∛a)',
+        'Principal square root: positive square root',
+        '√(a²) = |a| (absolute value)',
+        'Every positive number has two square roots (±)',
+        'Perfect square: number with integer square root (1, 4, 9, 16...)',
+        'Perfect cube: number with integer cube root (1, 8, 27, 64...)',
+        '√(ab) = √a × √b',
+        'Cube roots can be negative: ∛(-8) = -2',
+        'Radicand: number inside the radical symbol'
+      ],
+      examples: [
+        '√16 = 4\n(because 4² = 16)',
+        '√49 = 7\n(because 7² = 49)',
+        '∛27 = 3\n(because 3³ = 27)',
+        '∛(-8) = -2\n(because (-2)³ = -8)',
+        'Simplify √50:\n√50 = √(25 × 2) = √25 × √2 = 5√2',
+        'Estimate √20:\nBetween √16 = 4 and √25 = 5\n≈ 4.5 (actually 4.47)'
+      ],
+      commonMistakes: [
+        'Thinking √4 = ±2 (principal root is positive only)',
+        'Believing √(a + b) = √a + √b (false)',
+        'Confusing √9 = 3 with √(-9) (undefined in real numbers)',
+        'Thinking ∛(-27) is undefined (it\'s -3)',
+        'Not simplifying radicals completely',
+        'Forgetting absolute value: √(x²) = |x|, not x'
+      ],
+      tips: [
+        'Memorize perfect squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100',
+        'Memorize perfect cubes: 1, 8, 27, 64, 125',
+        'Principal square root is always ≥ 0',
+        'Cube roots can be positive or negative',
+        'To simplify: factor out perfect squares/cubes',
+        'Use √ calculator button to check',
+        'Estimate: find nearest perfect squares',
+        '√(negative) is not real (but ∛(negative) is)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Negative Numbers and Operations',
+    content: {
+      title: 'Negative Numbers and Operations',
+      intro: 'Negative numbers extend the number line below zero. Understanding how to operate with negatives is crucial for all of algebra.',
+      keyPoints: [
+        'Negative numbers: less than zero (left of zero on number line)',
+        'Adding a negative = subtracting: a + (-b) = a - b',
+        'Subtracting a negative = adding: a - (-b) = a + b',
+        'Multiplying: same signs = positive, different signs = negative',
+        'Dividing: same signs = positive, different signs = negative',
+        'Two negatives multiply/divide to positive: (-a)(-b) = ab',
+        'Positive × negative = negative: (a)(-b) = -ab',
+        'Double negative = positive: -(-a) = a',
+        'Zero is neither positive nor negative',
+        'Think: opposite of opposite is the original'
+      ],
+      examples: [
+        '5 + (-3) = 5 - 3 = 2\n(Adding negative is subtracting)',
+        '7 - (-4) = 7 + 4 = 11\n(Subtracting negative is adding)',
+        '(-6) × (-2) = 12\n(Negative times negative is positive)',
+        '(-8) × 3 = -24\n(Negative times positive is negative)',
+        '(-15) ÷ (-3) = 5\n(Negative divided by negative is positive)',
+        '-4 + (-7) = -11\n(Adding two negatives: add magnitudes, keep negative)'
+      ],
+      commonMistakes: [
+        'Thinking -5 - 3 = -2 (should be -8)',
+        'Believing (-2)(-3) = -6 (should be +6)',
+        'Not recognizing -(-x) = x',
+        'Confusing -x² with (-x)²',
+        'Adding magnitudes instead of following rules',
+        'Forgetting: subtracting negative = adding'
+      ],
+      tips: [
+        'Same signs: result is positive',
+        'Different signs: result is negative',
+        'Subtracting = adding the opposite',
+        'Use number line to visualize addition/subtraction',
+        'Two negatives make a positive in multiply/divide',
+        'Practice with small numbers first',
+        'Think: owing money (negative) vs having money (positive)',
+        'Check answer: does the sign make sense?'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Properties of Operations (Commutative, Associative, Distributive)',
+    content: {
+      title: 'Properties of Operations',
+      intro: 'Mathematical properties describe how operations behave. These fundamental properties allow us to rearrange and simplify expressions.',
+      keyPoints: [
+        'Commutative Property (Add/Mult): order doesn\'t matter',
+        'Addition: a + b = b + a',
+        'Multiplication: a × b = b × a',
+        'Subtraction and division are NOT commutative',
+        'Associative Property (Add/Mult): grouping doesn\'t matter',
+        'Addition: (a + b) + c = a + (b + c)',
+        'Multiplication: (a × b) × c = a × (b × c)',
+        'Distributive Property: a(b + c) = ab + ac',
+        'Distribute multiplication over addition/subtraction',
+        'Identity Property: a + 0 = a, a × 1 = a'
+      ],
+      examples: [
+        'Commutative (add): 5 + 3 = 3 + 5 = 8',
+        'Commutative (mult): 4 × 7 = 7 × 4 = 28',
+        'Associative (add): (2 + 3) + 4 = 2 + (3 + 4) = 9',
+        'Associative (mult): (2 × 3) × 5 = 2 × (3 × 5) = 30',
+        'Distributive: 3(x + 5) = 3x + 15',
+        'Distributive: 2(4 + 6) = 2(4) + 2(6) = 8 + 12 = 20',
+        'NOT commutative: 5 - 3 ≠ 3 - 5\n(2 ≠ -2)'
+      ],
+      commonMistakes: [
+        'Thinking subtraction is commutative (5 - 3 ≠ 3 - 5)',
+        'Thinking division is commutative (8 ÷ 4 ≠ 4 ÷ 8)',
+        'Not distributing to all terms: 3(x + 2) ≠ 3x + 2',
+        'Confusing properties with each other',
+        'Forgetting to distribute negative signs',
+        'Applying distributive wrong: (a + b)² ≠ a² + b²'
+      ],
+      tips: [
+        'Commutative: numbers can "commute" (switch places)',
+        'Associative: parentheses (grouping) can move',
+        'Distributive: multiply each term inside',
+        'Only add/mult are commutative and associative',
+        'Use distributive to simplify and expand',
+        'Memorize: a(b + c) = ab + ac',
+        'Check work by computing both ways',
+        'These properties make mental math easier'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Evaluating Algebraic Expressions',
+    content: {
+      title: 'Evaluating Algebraic Expressions',
+      intro: 'Evaluating means finding the value of an expression by substituting numbers for variables and simplifying using order of operations.',
+      keyPoints: [
+        'Substitute: replace each variable with given value',
+        'Use parentheses around substituted values (especially negatives)',
+        'Follow order of operations (PEMDAS)',
+        'Simplify step by step',
+        'Different values of variables give different results',
+        'Expression has no equals sign (unlike equation)',
+        'Can evaluate for multiple variables',
+        'Write substitution step clearly before simplifying',
+        'Show all work for complex expressions',
+        'Check: answer should make sense in context'
+      ],
+      examples: [
+        'Evaluate 3x + 7 when x = 5:\n3(5) + 7 = 15 + 7 = 22',
+        'Evaluate 2a - b when a = 4, b = 3:\n2(4) - 3 = 8 - 3 = 5',
+        'Evaluate x² + 2x when x = -3:\n(-3)² + 2(-3) = 9 + (-6) = 3',
+        'Evaluate 5(2y - 1) when y = 3:\n5(2(3) - 1) = 5(6 - 1) = 5(5) = 25',
+        'Evaluate a/b + c when a = 12, b = 4, c = 7:\n12/4 + 7 = 3 + 7 = 10'
+      ],
+      commonMistakes: [
+        'Not using parentheses for negative values',
+        'Forgetting order of operations',
+        'Substituting for only some variables',
+        'Computing 2x with x = 3 as 23 instead of 2(3) = 6',
+        'Not squaring negative correctly: (-3)² ≠ -9',
+        'Skipping substitution step and getting confused'
+      ],
+      tips: [
+        'Write out substitution clearly with parentheses',
+        'Replace each variable with its value',
+        'Use PEMDAS after substituting',
+        'Parentheses around negatives prevent errors',
+        'Show each step of simplification',
+        'Double-check substitution before calculating',
+        'Practice with multi-variable expressions',
+        'Verify: plug answer back in if possible'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Combining Like Terms',
+    content: {
+      title: 'Combining Like Terms',
+      intro: 'Combining like terms simplifies expressions by adding or subtracting terms with the same variable parts. This is fundamental for solving equations.',
+      keyPoints: [
+        'Like terms: same variable(s) with same exponent(s)',
+        'Combine by adding/subtracting coefficients',
+        'Variable part stays the same when combining',
+        'Unlike terms cannot be combined',
+        'Constants (numbers without variables) are like terms',
+        'Order doesn\'t matter when combining (commutative)',
+        'x and x² are NOT like terms (different exponents)',
+        'Coefficient: the number part of a term',
+        'Simplify expressions by combining all like terms',
+        'Combining doesn\'t change the value of expression'
+      ],
+      examples: [
+        'Combine: 3x + 5x = 8x\n(Add coefficients: 3 + 5 = 8)',
+        'Combine: 7y - 2y = 5y\n(Subtract coefficients: 7 - 2 = 5)',
+        'Simplify: 2x + 3 + 5x - 1\n= (2x + 5x) + (3 - 1) = 7x + 2',
+        'Combine: 4a + 3b - 2a + b\n= (4a - 2a) + (3b + b) = 2a + 4b',
+        'Cannot combine: 3x + 2y\n(Unlike terms)',
+        'Simplify: x² + 2x + 3x² - x\n= (x² + 3x²) + (2x - x) = 4x² + x'
+      ],
+      commonMistakes: [
+        'Combining unlike terms: 2x + 3y ≠ 5xy',
+        'Changing variable part: 3x + 5x ≠ 8x²',
+        'Forgetting negative signs: 5x - 2x ≠ 7x',
+        'Thinking x + x = x² (should be 2x)',
+        'Combining x and x² (different exponents)',
+        'Not combining constants: 3x + 2 + 5x ≠ 8x + 2'
+      ],
+      tips: [
+        'Circle or underline like terms in different colors',
+        'Group like terms together first',
+        'Add/subtract coefficients, keep variable same',
+        'Constants can always be combined',
+        'Write terms in order (x², then x, then constants)',
+        'Check: count variables and exponents',
+        'x means 1x (coefficient is 1)',
+        'Practice identifying like vs unlike terms'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'One-Step and Two-Step Equations',
+    content: {
+      title: 'One-Step and Two-Step Equations',
+      intro: 'One-step equations require one operation to solve. Two-step equations require two operations. These are foundational for more complex equations.',
+      keyPoints: [
+        'One-step: one operation to isolate variable (x + 5 = 12)',
+        'Two-step: two operations to isolate variable (2x + 3 = 11)',
+        'Use inverse operations to solve',
+        'Goal: get variable alone on one side',
+        'Whatever you do to one side, do to the other',
+        'Two-step strategy: undo addition/subtraction first, then mult/div',
+        'Work backwards through order of operations',
+        'Always check solution by substituting back',
+        'Solution: the value that makes equation true',
+        'Keep equation balanced at every step'
+      ],
+      examples: [
+        'One-step: x + 7 = 15\nSubtract 7: x = 8\nCheck: 8 + 7 = 15 ✓',
+        'One-step: 3x = 21\nDivide by 3: x = 7\nCheck: 3(7) = 21 ✓',
+        'Two-step: 2x + 5 = 13\nSubtract 5: 2x = 8\nDivide by 2: x = 4\nCheck: 2(4) + 5 = 13 ✓',
+        'Two-step: x/3 - 2 = 4\nAdd 2: x/3 = 6\nMultiply by 3: x = 18\nCheck: 18/3 - 2 = 4 ✓',
+        'Two-step: -4x + 1 = 17\nSubtract 1: -4x = 16\nDivide by -4: x = -4\nCheck: -4(-4) + 1 = 17 ✓'
+      ],
+      commonMistakes: [
+        'Doing operations in wrong order for two-step',
+        'Only applying operation to one side',
+        'Dividing by x instead of the coefficient',
+        'Sign errors when dividing by negative',
+        'Not checking answer',
+        'Trying to do too much in one step'
+      ],
+      tips: [
+        'One-step: one inverse operation solves it',
+        'Two-step: undo ± first, then × ÷',
+        'Think: what\'s done to x, undo it',
+        'Show each step on separate line',
+        'Always check your answer',
+        'Keep equation balanced',
+        'Write work neatly to avoid errors',
+        'If stuck, ask "what operation is on x?"'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Multi-Step Equations',
+    content: {
+      title: 'Multi-Step Equations',
+      intro: 'Multi-step equations require three or more operations to solve. They may involve combining like terms, using distributive property, and variables on both sides.',
+      keyPoints: [
+        'Multi-step: requires 3+ operations or steps',
+        'Strategy: simplify each side first',
+        'Combine like terms on each side',
+        'Use distributive property to remove parentheses',
+        'Get all variable terms on one side, constants on other',
+        'Undo addition/subtraction, then multiplication/division',
+        'Variables on both sides: move variables to one side first',
+        'Simplify → Collect → Solve → Check',
+        'Some equations have no solution or infinite solutions',
+        'Show work step by step'
+      ],
+      examples: [
+        'Solve: 3x + 2 - x = 10\nCombine: 2x + 2 = 10\nSubtract 2: 2x = 8\nDivide by 2: x = 4',
+        'Solve: 2(x + 3) = 14\nDistribute: 2x + 6 = 14\nSubtract 6: 2x = 8\nDivide by 2: x = 4',
+        'Solve: 5x + 3 = 2x + 12\nSubtract 2x: 3x + 3 = 12\nSubtract 3: 3x = 9\nDivide by 3: x = 3',
+        'Solve: 4(x - 1) + 2x = 20\nDistribute: 4x - 4 + 2x = 20\nCombine: 6x - 4 = 20\nAdd 4: 6x = 24\nDivide by 6: x = 4',
+        'Solve: 3x - 5 = 3x + 2\nSubtract 3x: -5 = 2\nNo solution (false statement)'
+      ],
+      commonMistakes: [
+        'Not combining like terms first',
+        'Not distributing to all terms',
+        'Moving variables incorrectly to one side',
+        'Losing track of negative signs',
+        'Skipping steps and making errors',
+        'Not checking if answer makes equation true',
+        'Forgetting that 0 = 0 means infinite solutions'
+      ],
+      tips: [
+        'Step 1: Simplify both sides (combine like terms, distribute)',
+        'Step 2: Move variables to one side',
+        'Step 3: Move constants to other side',
+        'Step 4: Divide/multiply to isolate variable',
+        'Step 5: Check your answer',
+        'Write each step on new line',
+        'Circle or box final answer',
+        'If you get 0 = 0, infinite solutions; if 5 = 2, no solution',
+        'Practice breaking down complex equations systematically'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Inequalities on Number Lines',
+    content: {
+      title: 'Inequalities on Number Lines',
+      intro: 'Inequalities compare expressions using <, >, ≤, ≥. Graphing on number lines visualizes solution sets, which often include ranges of values.',
+      keyPoints: [
+        'Inequality: comparison using <, >, ≤, or ≥',
+        '< means "less than", > means "greater than"',
+        '≤ means "less than or equal to", ≥ means "greater than or equal to"',
+        'Solution set: all values that make inequality true',
+        'Number line: visual representation of solutions',
+        'Open circle: endpoint NOT included (< or >)',
+        'Closed circle: endpoint IS included (≤ or ≥)',
+        'Shade/arrow direction shows solution region',
+        'Arrow to right: greater than; arrow to left: less than',
+        'Can have infinite solutions'
+      ],
+      examples: [
+        'Graph x > 3:\nOpen circle at 3, arrow right\n(All numbers greater than 3)',
+        'Graph x ≤ -2:\nClosed circle at -2, arrow left\n(All numbers less than or equal to -2)',
+        'Graph x ≥ 0:\nClosed circle at 0, arrow right\n(All non-negative numbers)',
+        'Is x = 5 a solution to x < 7?\nYes, 5 < 7 is true',
+        'Is x = 3 a solution to x > 3?\nNo, 3 > 3 is false (use ≥ to include 3)'
+      ],
+      commonMistakes: [
+        'Using closed circle for < or > (should be open)',
+        'Using open circle for ≤ or ≥ (should be closed)',
+        'Shading wrong direction',
+        'Confusing < and > symbols',
+        'Not checking if endpoint is included',
+        'Thinking inequality has only one solution'
+      ],
+      tips: [
+        'Open circle: does NOT include endpoint',
+        'Closed circle: DOES include endpoint',
+        '> and ≥: shade right (greater)',
+        '< and ≤: shade left (less)',
+        'Alligator eats bigger number: 3 < 5',
+        'Test a value in shaded region to verify',
+        'Draw number line with clear scale',
+        'Solution set usually has infinitely many values',
+        'Inequality symbol points to smaller number'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Unit Rates and Unit Prices',
+    content: {
+      title: 'Unit Rates and Unit Prices',
+      intro: 'A unit rate compares a quantity to one unit of another quantity. Unit price helps compare costs to find better deals. Essential for real-world problem solving.',
+      keyPoints: [
+        'Unit rate: rate with denominator of 1',
+        'Rate: ratio comparing two quantities with different units',
+        'Unit price: cost per one item or unit',
+        'Calculate: divide numerator by denominator',
+        'Lower unit price = better deal',
+        'Common unit rates: mph, $/hour, miles/gallon',
+        'Express as "per" or "for each"',
+        'Useful for comparing different package sizes',
+        'Rate form: a/b → unit rate: (a÷b)/1',
+        'Always include units in your answer'
+      ],
+      examples: [
+        'Unit rate: 150 miles in 3 hours\n150 ÷ 3 = 50 miles per hour',
+        'Unit price: $4.50 for 3 pounds\n$4.50 ÷ 3 = $1.50 per pound',
+        'Compare: 12 oz for $3 vs 18 oz for $4\n$3/12 = $0.25/oz\n$4/18 ≈ $0.22/oz\n18 oz package is better deal',
+        'Unit rate: Typing 240 words in 4 minutes\n240 ÷ 4 = 60 words per minute',
+        'Unit price: 6 apples for $3.60\n$3.60 ÷ 6 = $0.60 per apple'
+      ],
+      commonMistakes: [
+        'Dividing in wrong order (denominator by numerator)',
+        'Not including units in answer',
+        'Comparing prices without finding unit price',
+        'Rounding too early in calculations',
+        'Mixing up which quantity goes on top',
+        'Forgetting that lower unit price is better deal'
+      ],
+      tips: [
+        'Unit rate has 1 in denominator',
+        'Divide to find "per one"',
+        'Always include units: mph, $/lb, etc.',
+        'To compare: find unit rate for each option',
+        'Lower unit price = better value',
+        'Use calculator for complex division',
+        'Check: does answer make sense?',
+        'Read "per" as "divided by"',
+        'Practice with grocery store flyers'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Scale Drawings and Maps',
+    content: {
+      title: 'Scale Drawings and Maps',
+      intro: 'Scale drawings and maps use a ratio to represent real distances in smaller (or larger) proportional sizes. Essential for reading maps, blueprints, and models.',
+      keyPoints: [
+        'Scale: ratio of drawing distance to actual distance',
+        'Scale written as ratio (1:100) or equation (1 in = 5 ft)',
+        'Map scale shows relationship between map and real distance',
+        'Use proportion to find actual or scaled distance',
+        'Scale factor: number you multiply by to change sizes',
+        'Larger scale = more detail, smaller area shown',
+        'Smaller scale = less detail, larger area shown',
+        'Units must match or convert properly',
+        'Similar figures have same shape, proportional sides',
+        'Applications: maps, blueprints, models, drawings'
+      ],
+      examples: [
+        'Scale: 1 inch = 20 miles. Map distance = 3 inches.\nActual: 3 × 20 = 60 miles',
+        'Scale: 1 cm = 5 m. Actual length = 30 m.\nDrawing: 30 ÷ 5 = 6 cm',
+        'Map scale 1:50,000 means 1 cm = 50,000 cm = 500 m',
+        'Blueprint: 1/4 inch = 1 foot. Drawing shows 3 inches.\nActual: 3 ÷ (1/4) = 12 feet',
+        'Model car scale 1:24. Real car is 12 feet.\nModel: 12 ft × 12 in/ft ÷ 24 = 6 inches'
+      ],
+      commonMistakes: [
+        'Confusing which distance is drawing vs actual',
+        'Not converting units before calculating',
+        'Multiplying when should divide (or vice versa)',
+        'Misreading scale notation',
+        'Not setting up proportion correctly',
+        'Forgetting to include units in final answer'
+      ],
+      tips: [
+        'Set up proportion: map/actual = map/actual',
+        'Label units clearly',
+        'Check if units need conversion first',
+        'Scale 1:100 means drawing is 1/100 of actual',
+        'Drawing distance × scale = actual distance',
+        'Actual distance ÷ scale = drawing distance',
+        'Use proportions when scale is ratio',
+        'Always ask: drawing or actual distance?',
+        'Verify answer makes sense (actual > drawing usually)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Converting Units of Measurement',
+    content: {
+      title: 'Converting Units of Measurement',
+      intro: 'Unit conversion uses multiplication or division by conversion factors. Essential for science, cooking, travel, and everyday problem solving.',
+      keyPoints: [
+        'Conversion factor: ratio equal to 1 (12 in/1 ft)',
+        'Multiply by conversion factor to change units',
+        'Units cancel like fractions',
+        'Metric prefixes: kilo (1000), centi (1/100), milli (1/1000)',
+        'US customary: inches, feet, yards, miles; ounces, pounds, tons',
+        'Metric: meters, liters, grams with prefixes',
+        'Temperature: C to F: F = (9/5)C + 32; F to C: C = (5/9)(F - 32)',
+        'Time: 60 sec = 1 min, 60 min = 1 hr, 24 hr = 1 day',
+        'Set up so units cancel correctly',
+        'Can chain multiple conversions'
+      ],
+      examples: [
+        'Convert 3 feet to inches:\n3 ft × (12 in / 1 ft) = 36 inches',
+        'Convert 2500 meters to kilometers:\n2500 m × (1 km / 1000 m) = 2.5 km',
+        'Convert 4 hours to minutes:\n4 hr × (60 min / 1 hr) = 240 minutes',
+        'Convert 5 miles to feet:\n5 mi × (5280 ft / 1 mi) = 26,400 feet',
+        'Convert 250 cm to meters:\n250 cm × (1 m / 100 cm) = 2.5 m',
+        'Chain: 3 yards to inches:\n3 yd × (3 ft/1 yd) × (12 in/1 ft) = 108 in'
+      ],
+      commonMistakes: [
+        'Multiplying/dividing by wrong number',
+        'Not setting up conversion factor correctly',
+        'Units don\'t cancel properly',
+        'Forgetting intermediate conversions (ft → in when going yd → in)',
+        'Mixing up numerator and denominator in conversion',
+        'Not checking if answer makes sense'
+      ],
+      tips: [
+        'Write conversion factor as fraction equal to 1',
+        'Place units so unwanted unit cancels',
+        'Cross out units that cancel',
+        'Memorize common conversions',
+        'Metric is powers of 10 (easier)',
+        'Check: larger unit → more smaller units',
+        'Show units in all steps',
+        'Use dimensional analysis',
+        'Answer should be reasonable in context'
+      ]
+    }
+  },
+  // Algebra 2 Topics
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Polynomial Functions',
+    content: {
+      title: 'Polynomial Functions',
+      intro: 'Polynomial functions are sums of terms with non-negative integer exponents. They include linear, quadratic, cubic, and higher-degree functions with diverse shapes and behaviors.',
+      keyPoints: [
+        'Polynomial: expression with variables raised to non-negative integer powers',
+        'General form: f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀',
+        'Degree: highest exponent (determines shape and end behavior)',
+        'Leading coefficient: coefficient of highest degree term',
+        'Constant term: term without variable (a₀)',
+        'End behavior: determined by degree and leading coefficient sign',
+        'Even degree: same end behavior both sides; odd degree: opposite',
+        'Positive leading coefficient: right side rises; negative: right side falls',
+        'Zeros/roots: x-values where f(x) = 0',
+        'Fundamental Theorem: degree n polynomial has exactly n roots (counting multiplicity)',
+        'Multiplicity: how many times a root repeats (affects graph behavior)',
+        'Turning points: at most (n-1) for degree n polynomial'
+      ],
+      examples: [
+        'Linear (degree 1): f(x) = 2x + 3\nDegree 1, one root',
+        'Quadratic (degree 2): f(x) = x² - 4x + 3\nDegree 2, parabola, up to 2 roots',
+        'Cubic (degree 3): f(x) = x³ - 3x² + 2x\nDegree 3, "S" shape, up to 3 roots',
+        'Find zeros of f(x) = x² - 5x + 6:\nFactor: (x - 2)(x - 3) = 0\nZeros: x = 2, x = 3',
+        'End behavior of f(x) = -2x⁴ + 3x² - 1:\nDegree 4 (even), negative leading coefficient\nBoth ends fall (down on left and right)',
+        'Multiplicity: f(x) = (x - 2)³(x + 1)\nRoot x = 2 has multiplicity 3 (graph crosses but flattens)\nRoot x = -1 has multiplicity 1 (graph crosses normally)'
+      ],
+      commonMistakes: [
+        'Confusing degree with number of terms',
+        'Forgetting negative leading coefficient flips end behavior',
+        'Thinking degree 3 means 3 terms (degree is highest exponent)',
+        'Not counting repeated roots in multiplicity',
+        'Mixing up even/odd degree end behavior',
+        'Believing all polynomials factor nicely over integers'
+      ],
+      tips: [
+        'Degree determines maximum number of roots and turning points',
+        'Even degree: U-shape variations; odd degree: S-shape variations',
+        'Leading coefficient sign: positive rises right, negative falls right',
+        'Factor to find real roots when possible',
+        'Use synthetic or long division for higher degrees',
+        'Graph behaves differently at roots with even vs odd multiplicity',
+        'Even multiplicity: graph touches x-axis and bounces back',
+        'Odd multiplicity: graph crosses x-axis',
+        'End behavior: look at highest degree term only'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Exponential and Logarithmic Functions',
+    content: {
+      title: 'Exponential and Logarithmic Functions',
+      intro: 'Exponential functions grow/decay by constant factors. Logarithms are their inverses. Both are essential for modeling growth, decay, and solving exponential equations.',
+      keyPoints: [
+        'Exponential function: f(x) = abˣ where b > 0, b ≠ 1',
+        'Base b > 1: exponential growth; 0 < b < 1: exponential decay',
+        'Natural base: e ≈ 2.71828 (f(x) = aeˣ)',
+        'Logarithm: inverse of exponential (logb(x) asks "b to what power = x?")',
+        'Definition: y = logb(x) ⟺ bʸ = x',
+        'Common log: log₁₀(x) written as log(x)',
+        'Natural log: logₑ(x) written as ln(x)',
+        'Properties: logb(xy) = logb(x) + logb(y)',
+        'logb(x/y) = logb(x) - logb(y)',
+        'logb(xⁿ) = n·logb(x)',
+        'Change of base: logb(x) = log(x)/log(b) = ln(x)/ln(b)',
+        'Domain of log: x > 0; range: all real numbers'
+      ],
+      examples: [
+        'Exponential growth: f(x) = 2·3ˣ\nInitial value a = 2, growth factor b = 3',
+        'Exponential decay: f(x) = 100·(0.5)ˣ\nInitial value 100, decay factor 0.5',
+        'Solve for x: 2ˣ = 8\nRewrite: 2ˣ = 2³\nTherefore x = 3',
+        'Evaluate log₂(16):\nAsk: "2 to what power = 16?"\n2⁴ = 16, so log₂(16) = 4',
+        'Expand: log(x²y³)\n= log(x²) + log(y³)\n= 2log(x) + 3log(y)',
+        'Solve: ln(x) = 3\nRewrite exponentially: x = e³ ≈ 20.09',
+        'Compound interest: A = P(1 + r/n)^(nt)\nP = principal, r = rate, n = compounds per year, t = years'
+      ],
+      commonMistakes: [
+        'Thinking log(x + y) = log(x) + log(y) (FALSE)',
+        'Confusing log(xy) with (log x)(log y)',
+        'Forgetting log domain: cannot take log of negative or zero',
+        'Mixing up properties: log(xⁿ) ≠ (log x)ⁿ',
+        'Not checking for extraneous solutions after solving',
+        'Believing eˣ and ln(x) are same function (they\'re inverses)'
+      ],
+      tips: [
+        'Exponential: constant base, variable exponent',
+        'To solve exponential equation: take log of both sides',
+        'To solve log equation: rewrite in exponential form',
+        'Memorize log properties for expanding/condensing',
+        'ln and e are inverse operations: ln(eˣ) = x, e^(ln x) = x',
+        'Use change of base formula for calculator',
+        'Exponential functions never reach zero (horizontal asymptote)',
+        'Log functions have vertical asymptote at x = 0',
+        'Graph exp and log are reflections over y = x line'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Rational Functions',
+    content: {
+      title: 'Rational Functions',
+      intro: 'Rational functions are ratios of polynomials. They have unique features like asymptotes, holes, and interesting domain restrictions.',
+      keyPoints: [
+        'Rational function: f(x) = P(x)/Q(x) where P, Q are polynomials',
+        'Domain: all real numbers except where Q(x) = 0',
+        'Vertical asymptote: x-value where denominator = 0 (not canceled)',
+        'Horizontal asymptote: end behavior as x → ±∞',
+        'If degree(P) < degree(Q): y = 0 horizontal asymptote',
+        'If degree(P) = degree(Q): y = ratio of leading coefficients',
+        'If degree(P) > degree(Q): no horizontal asymptote (slant asymptote possible)',
+        'Hole (removable discontinuity): factor cancels from numerator and denominator',
+        'x-intercepts (zeros): where numerator = 0 (not at holes)',
+        'y-intercept: f(0) if defined',
+        'Slant/oblique asymptote: when degree(P) = degree(Q) + 1',
+        'End behavior approaches asymptotes'
+      ],
+      examples: [
+        'f(x) = 1/x\nVertical asymptote: x = 0\nHorizontal asymptote: y = 0\nDomain: x ≠ 0',
+        'f(x) = (x + 2)/(x - 3)\nVertical asymptote: x = 3\nDegree P = degree Q = 1\nHorizontal asymptote: y = 1/1 = 1',
+        'f(x) = (x² - 4)/(x - 2)\n= (x + 2)(x - 2)/(x - 2)\n= x + 2 with hole at x = 2\nNo vertical asymptote (canceled)',
+        'f(x) = (2x² + 1)/(x + 3)\nDegree(P) = 2, degree(Q) = 1\nDegree P > Q by 1: slant asymptote\nDivide: y = 2x - 6 is slant asymptote',
+        'Find domain of f(x) = 3/(x² - 9):\nDenominator = 0: x² - 9 = 0 → x = ±3\nDomain: all reals except x = 3, x = -3'
+      ],
+      commonMistakes: [
+        'Forgetting to check for holes (canceled factors)',
+        'Not simplifying before finding asymptotes',
+        'Thinking vertical asymptote where there\'s a hole',
+        'Wrong horizontal asymptote rule application',
+        'Forgetting to exclude asymptote x-values from domain',
+        'Canceling terms incorrectly (only factors cancel, not terms)'
+      ],
+      tips: [
+        'Always factor numerator and denominator first',
+        'Canceled factors → holes; uncanceled zeros in denominator → vertical asymptotes',
+        'Compare degrees to find horizontal asymptote',
+        'Domain excludes all zeros of original denominator',
+        'Graph approaches but never crosses vertical asymptotes',
+        'Can cross horizontal/slant asymptotes (only end behavior)',
+        'Use polynomial long division for slant asymptotes',
+        'Check for symmetry: f(-x) = f(x) even, f(-x) = -f(x) odd',
+        'Test values in each region between asymptotes'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Complex Numbers',
+    content: {
+      title: 'Complex Numbers',
+      intro: 'Complex numbers extend the real number system by including imaginary unit i where i² = -1. They enable solutions to all polynomial equations.',
+      keyPoints: [
+        'Imaginary unit: i = √(-1), so i² = -1',
+        'Complex number: a + bi where a, b are real (a = real part, b = imaginary part)',
+        'Real numbers are complex numbers with b = 0',
+        'Purely imaginary: a = 0, b ≠ 0 (like 3i)',
+        'Complex conjugate: for a + bi, conjugate is a - bi',
+        'Addition/subtraction: combine like terms (real with real, imaginary with imaginary)',
+        'Multiplication: use distributive property, replace i² with -1',
+        'Division: multiply by conjugate to rationalize denominator',
+        'Absolute value (modulus): |a + bi| = √(a² + b²)',
+        'Powers of i cycle: i, -1, -i, 1, i, -1, -i, 1...',
+        'i⁰ = 1, i¹ = i, i² = -1, i³ = -i, i⁴ = 1',
+        'Quadratic formula gives complex roots when discriminant < 0'
+      ],
+      examples: [
+        'Simplify: √(-25)\n= √(25 × -1) = 5i',
+        'Add: (3 + 4i) + (2 - 5i)\n= (3 + 2) + (4i - 5i) = 5 - i',
+        'Multiply: (2 + 3i)(1 - 2i)\n= 2 - 4i + 3i - 6i²\n= 2 - i - 6(-1) = 8 - i',
+        'Divide: (3 + 2i)/(1 - i)\nMultiply by conjugate:\n= (3 + 2i)(1 + i)/[(1 - i)(1 + i)]\n= (3 + 3i + 2i + 2i²)/(1 - i²)\n= (3 + 5i - 2)/2 = (1 + 5i)/2',
+        'Find i²⁵:\n25 = 4(6) + 1\ni²⁵ = (i⁴)⁶ · i¹ = 1⁶ · i = i',
+        'Solve x² + 4 = 0:\nx² = -4\nx = ±√(-4) = ±2i'
+      ],
+      commonMistakes: [
+        'Forgetting i² = -1 when multiplying',
+        'Thinking √(-a)√(-b) = √(ab) (FALSE for negatives)',
+        'Not simplifying after using i² = -1',
+        'Forgetting to multiply by conjugate when dividing',
+        'Believing i = √(-1) means i² = √(-1)² = -1 = 1 (wrong reasoning)',
+        'Not reducing complex fractions fully'
+      ],
+      tips: [
+        'Treat i like a variable, but replace i² with -1',
+        'Conjugate pairs multiply to real numbers: (a + bi)(a - bi) = a² + b²',
+        'To divide: multiply top and bottom by conjugate of denominator',
+        'Powers of i repeat every 4: divide exponent by 4, use remainder',
+        'Complex roots come in conjugate pairs for real polynomials',
+        'Plot on complex plane: horizontal = real, vertical = imaginary',
+        'Absolute value is distance from origin in complex plane',
+        '√(-a) = i√a for positive a',
+        'All polynomial equations have solutions in complex numbers'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Sequences and Series',
+    content: {
+      title: 'Sequences and Series',
+      intro: 'Sequences are ordered lists of numbers. Series are sums of sequence terms. Arithmetic and geometric patterns are the most common types.',
+      keyPoints: [
+        'Sequence: ordered list a₁, a₂, a₃, ... (can be finite or infinite)',
+        'Series: sum of sequence terms S = a₁ + a₂ + a₃ + ...',
+        'Arithmetic sequence: constant difference d between consecutive terms',
+        'Arithmetic: aₙ = a₁ + (n-1)d',
+        'Arithmetic series sum: Sₙ = n(a₁ + aₙ)/2 or Sₙ = n[2a₁ + (n-1)d]/2',
+        'Geometric sequence: constant ratio r between consecutive terms',
+        'Geometric: aₙ = a₁ · rⁿ⁻¹',
+        'Geometric series sum (finite): Sₙ = a₁(1 - rⁿ)/(1 - r)',
+        'Infinite geometric series: converges if |r| < 1, S = a₁/(1 - r)',
+        'Recursive formula: defines term using previous term(s)',
+        'Explicit formula: defines term directly using n',
+        'Sigma notation: Σ indicates summation'
+      ],
+      examples: [
+        'Arithmetic: 3, 7, 11, 15, ...\nd = 4\na₅ = 3 + (5-1)(4) = 19',
+        'Arithmetic series: 2 + 5 + 8 + ... + 29\nd = 3, a₁ = 2, aₙ = 29\nFind n: 29 = 2 + (n-1)(3) → n = 10\nS₁₀ = 10(2 + 29)/2 = 155',
+        'Geometric: 2, 6, 18, 54, ...\nr = 3\na₅ = 2 · 3⁴ = 162',
+        'Geometric series: 1 + 2 + 4 + 8 + 16 + 32\na₁ = 1, r = 2, n = 6\nS₆ = 1(1 - 2⁶)/(1 - 2) = -63/(-1) = 63',
+        'Infinite geometric: 1 + 1/2 + 1/4 + 1/8 + ...\na₁ = 1, r = 1/2\nS = 1/(1 - 1/2) = 2',
+        'Sigma notation: Σ(2k + 1) from k=1 to 4\n= (2·1+1) + (2·2+1) + (2·3+1) + (2·4+1)\n= 3 + 5 + 7 + 9 = 24'
+      ],
+      commonMistakes: [
+        'Confusing sequence (list) with series (sum)',
+        'Using wrong formula for arithmetic vs geometric',
+        'Forgetting n-1 in exponent for geometric term',
+        'Applying infinite series formula when |r| ≥ 1 (diverges)',
+        'Off-by-one errors in counting terms',
+        'Not checking if sequence is arithmetic or geometric first',
+        'Mixing up sum formulas'
+      ],
+      tips: [
+        'Check difference (arithmetic) or ratio (geometric) first',
+        'Arithmetic: add same amount each time',
+        'Geometric: multiply by same factor each time',
+        'For series, make sure you know n (number of terms)',
+        'Infinite geometric only converges if |r| < 1',
+        'Recursive defines pattern; explicit gives direct answer',
+        'Write out first few terms to identify pattern',
+        'Remember: series is about sums, sequence is about terms',
+        'Sigma notation: index starts at bottom, ends at top'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 2',
+    topicName: 'Conic Sections',
+    content: {
+      title: 'Conic Sections',
+      intro: 'Conic sections are curves formed by intersecting a plane with a double cone: circles, ellipses, parabolas, and hyperbolas. Each has unique algebraic and geometric properties.',
+      keyPoints: [
+        'Four types: circle, ellipse, parabola, hyperbola',
+        'Circle: all points equidistant from center',
+        'Standard circle: (x - h)² + (y - k)² = r² (center (h,k), radius r)',
+        'Ellipse: sum of distances to two foci is constant',
+        'Standard ellipse (horizontal): (x-h)²/a² + (y-k)²/b² = 1 (a > b)',
+        'Ellipse: center (h,k), vertices a units from center, co-vertices b units',
+        'Parabola: set of points equidistant from focus and directrix',
+        'Parabola vertex form: y = a(x - h)² + k or x = a(y - k)² + h',
+        'Hyperbola: difference of distances to two foci is constant',
+        'Standard hyperbola: (x-h)²/a² - (y-k)²/b² = 1 (opens left/right)',
+        'Hyperbola has two branches and asymptotes',
+        'Degenerate cases: point, line, intersecting lines'
+      ],
+      examples: [
+        'Circle: (x - 2)² + (y + 3)² = 25\nCenter: (2, -3), radius: r = 5',
+        'Circle from equation: x² + y² - 4x + 6y = 12\nComplete square:\n(x² - 4x + 4) + (y² + 6y + 9) = 12 + 4 + 9\n(x - 2)² + (y + 3)² = 25',
+        'Ellipse: (x - 1)²/16 + (y - 2)²/9 = 1\nCenter: (1, 2)\nHorizontal (a² = 16, b² = 9)\na = 4, b = 3\nVertices: (1±4, 2) = (5, 2) and (-3, 2)',
+        'Parabola: y = 2(x - 3)² - 1\nVertex: (3, -1)\nOpens upward (a = 2 > 0)',
+        'Hyperbola: (x - 2)²/9 - (y + 1)²/4 = 1\nCenter: (2, -1)\nOpens horizontally\na = 3, b = 2\nVertices: (2±3, -1) = (5, -1) and (-1, -1)\nAsymptotes: y + 1 = ±(b/a)(x - 2) = ±(2/3)(x - 2)'
+      ],
+      commonMistakes: [
+        'Forgetting to set equation = 1 before reading values',
+        'Confusing a and b in ellipse/hyperbola',
+        'Not completing the square correctly',
+        'Mixing up which axis is major/minor in ellipse',
+        'Forgetting sign difference between ellipse (+) and hyperbola (-)',
+        'Thinking r² in circle is the radius (it\'s r)',
+        'Not identifying center from (x-h), (y-k) form correctly'
+      ],
+      tips: [
+        'Circle: both variables squared, same coefficient, added',
+        'Ellipse: both squared, different coefficients, added, = 1',
+        'Hyperbola: both squared, subtracted, = 1',
+        'Parabola: only one variable squared',
+        'Complete the square to get standard form',
+        'For ellipse: larger denominator tells major axis direction',
+        'For hyperbola: positive term tells opening direction',
+        'Center at (h, k) from (x-h) and (y-k)',
+        'Draw sketch to visualize: helps avoid errors',
+        'Check units: a, b, r are distances (positive)'
+      ]
+    }
+  },
+  // Trigonometry Topics
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Right Triangle Trigonometry',
+    content: {
+      title: 'Right Triangle Trigonometry',
+      intro: 'Right triangle trigonometry uses ratios of sides to relate angles and side lengths. The three primary ratios—sine, cosine, and tangent—are fundamental to solving triangles.',
+      keyPoints: [
+        'SOH-CAH-TOA: sin = opposite/hypotenuse, cos = adjacent/hypotenuse, tan = opposite/adjacent',
+        'Applies only to right triangles (one 90° angle)',
+        'Hypotenuse: longest side, opposite the right angle',
+        'Opposite: side across from the angle in question',
+        'Adjacent: side next to the angle (not hypotenuse)',
+        'Reciprocal functions: csc = 1/sin, sec = 1/cos, cot = 1/tan',
+        'Pythagorean theorem: a² + b² = c² (c is hypotenuse)',
+        'Angles in triangle sum to 180°; complementary angles in right triangle',
+        'Special triangles: 30-60-90 and 45-45-90 have known ratios',
+        'Solve for side: multiply or divide using trig ratio',
+        'Solve for angle: use inverse trig function (sin⁻¹, cos⁻¹, tan⁻¹)'
+      ],
+      examples: [
+        'Find sin(θ) in right triangle: opposite = 3, hypotenuse = 5\nsin(θ) = 3/5 = 0.6',
+        'Find angle: sin(θ) = 0.5\nθ = sin⁻¹(0.5) = 30°',
+        'Find side: cos(60°) = adjacent/10\n0.5 = adjacent/10\nadjacent = 5',
+        '30-60-90 triangle ratios: sides are 1 : √3 : 2\nIf hypotenuse = 10, then short leg = 5, long leg = 5√3',
+        '45-45-90 triangle ratios: sides are 1 : 1 : √2\nIf leg = 6, then hypotenuse = 6√2',
+        'Ladder problem: 20 ft ladder against wall at 70° angle\nHeight = 20 × sin(70°) ≈ 18.8 ft'
+      ],
+      commonMistakes: [
+        'Mixing up opposite and adjacent sides',
+        'Using wrong trig function for given information',
+        'Forgetting to use inverse function to find angle',
+        'Calculator in wrong mode (degrees vs radians)',
+        'Applying right triangle trig to non-right triangles',
+        'Using hypotenuse as adjacent or opposite'
+      ],
+      tips: [
+        'Draw and label triangle first',
+        'Identify which angle you\'re working with',
+        'Label opposite, adjacent, hypotenuse relative to that angle',
+        'SOH-CAH-TOA is your friend—memorize it',
+        'Check calculator mode: degrees for most problems',
+        'Use Pythagorean theorem to find third side',
+        'Complementary angles: sin(θ) = cos(90° - θ)',
+        'Verify answer makes sense (side lengths, angle measures)',
+        'Learn special triangle ratios—saves time'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Unit Circle',
+    content: {
+      title: 'Unit Circle',
+      intro: 'The unit circle is a circle with radius 1 centered at the origin. It defines trigonometric functions for all angles and connects geometry with periodic functions.',
+      keyPoints: [
+        'Unit circle: radius = 1, center at origin (0, 0)',
+        'Point on circle: (cos θ, sin θ) where θ is angle from positive x-axis',
+        'Angles measured counterclockwise from positive x-axis',
+        'Radians: arc length = angle in radians (full circle = 2π radians = 360°)',
+        'Convert: radians to degrees multiply by 180/π; degrees to radians multiply by π/180',
+        'Quadrant I: all positive; II: sin positive; III: tan positive; IV: cos positive',
+        'Reference angle: acute angle to x-axis (use to find values)',
+        'Special angles: 0°, 30°, 45°, 60°, 90° (and multiples)',
+        'Coordinates at special angles: (1,0), (√3/2, 1/2), (√2/2, √2/2), (1/2, √3/2), (0,1)',
+        'Period: sin and cos repeat every 2π; tan repeats every π',
+        'Even/odd: cos is even, sin and tan are odd functions'
+      ],
+      examples: [
+        'Find sin(π/6) and cos(π/6):\nπ/6 = 30°\nPoint: (√3/2, 1/2)\ncos(π/6) = √3/2, sin(π/6) = 1/2',
+        'Find sin(3π/4):\n3π/4 = 135° (Quadrant II)\nReference angle: π/4 = 45°\nsin positive in Q-II\nsin(3π/4) = √2/2',
+        'Convert 60° to radians:\n60° × π/180 = π/3 radians',
+        'Find tan(π):\nπ = 180°, point (-1, 0)\ntan(π) = 0/(-1) = 0',
+        'Evaluate cos(5π/3):\n5π/3 = 300° (Q-IV)\nReference: π/3 = 60°\ncos positive in Q-IV\ncos(5π/3) = 1/2',
+        'Point (−√2/2, √2/2) represents angle:\nQ-II, reference 45°\nAngle = 3π/4 or 135°'
+      ],
+      commonMistakes: [
+        'Confusing degrees and radians',
+        'Wrong sign in different quadrants',
+        'Forgetting reference angle is always acute',
+        'Mixing up x and y coordinates (cos and sin)',
+        'Not reducing angles to [0, 2π) or finding coterminal angles',
+        'Thinking all angles are in Q-I'
+      ],
+      tips: [
+        'Memorize unit circle for special angles',
+        'ASTC rule: All Students Take Calculus (Q-I, II, III, IV signs)',
+        'Use reference angle to find values in other quadrants',
+        'Radians are often easier for calculus/advanced math',
+        'cos is x-coordinate, sin is y-coordinate',
+        'Quadrant determines sign: learn quadrant rules',
+        'Practice converting degrees ↔ radians',
+        'Draw unit circle with special angles labeled',
+        'Coterminal angles: add/subtract 2π (or 360°)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Trigonometric Functions',
+    content: {
+      title: 'Trigonometric Functions',
+      intro: 'Trigonometric functions extend beyond triangles to become periodic functions. They model waves, oscillations, and circular motion with applications throughout science.',
+      keyPoints: [
+        'Six trig functions: sin, cos, tan, csc, sec, cot',
+        'sin(θ) = y/r, cos(θ) = x/r, tan(θ) = y/x',
+        'csc(θ) = r/y = 1/sin, sec(θ) = r/x = 1/cos, cot(θ) = x/y = 1/tan',
+        'Domain of sin, cos: all reals; tan, sec: exclude odd multiples of π/2',
+        'Range: sin, cos in [-1, 1]; tan, cot all reals; csc, sec in (-∞, -1] ∪ [1, ∞)',
+        'Period: sin, cos, csc, sec have period 2π; tan, cot have period π',
+        'Amplitude: for y = A sin(x), amplitude = |A|',
+        'Phase shift: y = sin(x - c) shifts right by c',
+        'Vertical shift: y = sin(x) + d shifts up by d',
+        'Frequency: y = sin(Bx) completes B cycles in 2π (period = 2π/|B|)',
+        'Graphs: sin and cos are waves; tan has vertical asymptotes'
+      ],
+      examples: [
+        'Graph y = 2sin(x):\nAmplitude = 2, period = 2π\nOscillates between -2 and 2',
+        'Graph y = cos(2x):\nAmplitude = 1, period = 2π/2 = π\nCompletes 2 cycles in 2π',
+        'Graph y = sin(x - π/4):\nStandard sine shifted right by π/4',
+        'Graph y = tan(x):\nPeriod = π\nVertical asymptotes at ±π/2, ±3π/2, ...',
+        'Find amplitude and period of y = -3cos(4x) + 1:\nAmplitude = |-3| = 3\nPeriod = 2π/4 = π/2\nVertical shift up 1',
+        'Evaluate csc(π/6):\ncsc(π/6) = 1/sin(π/6) = 1/(1/2) = 2'
+      ],
+      commonMistakes: [
+        'Confusing amplitude with vertical shift',
+        'Wrong period formula (forgetting to divide 2π by B)',
+        'Thinking tan has same period as sin/cos',
+        'Forgetting domain restrictions for tan, sec, csc, cot',
+        'Not recognizing reciprocal relationships',
+        'Phase shift direction confusion (x - c is right, x + c is left)'
+      ],
+      tips: [
+        'General form: y = A sin(B(x - C)) + D or y = A cos(B(x - C)) + D',
+        'A = amplitude, B affects period (2π/|B|), C = phase shift, D = vertical shift',
+        'sin starts at 0, cos starts at max',
+        'tan has asymptotes where cos = 0',
+        'csc has asymptotes where sin = 0',
+        'sec has asymptotes where cos = 0',
+        'Memorize basic graphs: sin, cos, tan',
+        'Use transformations to graph variations',
+        'Check key points: max, min, zeros, asymptotes'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Inverse Trigonometric Functions',
+    content: {
+      title: 'Inverse Trigonometric Functions',
+      intro: 'Inverse trig functions reverse the process: given a ratio, find the angle. They have restricted domains to ensure they are functions.',
+      keyPoints: [
+        'Notation: sin⁻¹(x) or arcsin(x); similarly cos⁻¹, tan⁻¹',
+        'sin⁻¹ does NOT mean 1/sin (that\'s csc)',
+        'Domain of sin⁻¹, cos⁻¹: [-1, 1]; tan⁻¹: all reals',
+        'Range of sin⁻¹: [-π/2, π/2] or [-90°, 90°]',
+        'Range of cos⁻¹: [0, π] or [0°, 180°]',
+        'Range of tan⁻¹: (-π/2, π/2) or (-90°, 90°)',
+        'Restricted ranges ensure one output per input (function requirement)',
+        'Composition: sin(sin⁻¹(x)) = x for x in [-1, 1]',
+        'Composition: sin⁻¹(sin(x)) = x only if x in [-π/2, π/2]',
+        'Used to find angles when trig ratio is known',
+        'Calculator gives principal value (within range)'
+      ],
+      examples: [
+        'Evaluate sin⁻¹(1/2):\nAngle whose sine is 1/2 in [-π/2, π/2]\nAnswer: π/6 or 30°',
+        'Evaluate cos⁻¹(-1):\nAngle whose cosine is -1 in [0, π]\nAnswer: π or 180°',
+        'Evaluate tan⁻¹(1):\nAngle whose tangent is 1 in (-π/2, π/2)\nAnswer: π/4 or 45°',
+        'Simplify: sin(cos⁻¹(3/5)):\nLet θ = cos⁻¹(3/5), so cos(θ) = 3/5\nRight triangle: adjacent = 3, hypotenuse = 5\nOpposite = √(25 - 9) = 4\nsin(θ) = 4/5',
+        'Evaluate: sin⁻¹(sin(3π/4)):\n3π/4 not in range [-π/2, π/2]\nsin(3π/4) = √2/2\nsin⁻¹(√2/2) = π/4',
+        'Solve: sin(x) = 0.7 for x in [0, 2π):\nx = sin⁻¹(0.7) ≈ 0.775 rad (Q-I)\nAlso x = π - 0.775 ≈ 2.366 rad (Q-II)'
+      ],
+      commonMistakes: [
+        'Thinking sin⁻¹ means 1/sin',
+        'Expecting inverse to "undo" outside restricted range',
+        'Not checking if angle is in principal range',
+        'Forgetting there may be multiple angles with same trig value',
+        'Using wrong range for each inverse function',
+        'Calculator mode errors (degrees vs radians)'
+      ],
+      tips: [
+        'sin⁻¹ gives angle in [-90°, 90°] (Q-I or Q-IV)',
+        'cos⁻¹ gives angle in [0°, 180°] (Q-I or Q-II)',
+        'tan⁻¹ gives angle in (-90°, 90°) (Q-I or Q-IV)',
+        'Draw right triangle to evaluate compositions',
+        'Use Pythagorean theorem to find missing side',
+        'Remember: inverse finds angle from ratio',
+        'Check calculator mode matches problem',
+        'For all solutions, consider other quadrants',
+        'Principal value is what calculator gives'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Trigonometric Identities',
+    content: {
+      title: 'Trigonometric Identities',
+      intro: 'Trigonometric identities are equations that are true for all values of the variables. They simplify expressions, solve equations, and prove other relationships.',
+      keyPoints: [
+        'Pythagorean identities: sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, 1 + cot²θ = csc²θ',
+        'Reciprocal identities: csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ',
+        'Quotient identities: tan θ = sin θ/cos θ, cot θ = cos θ/sin θ',
+        'Even/odd identities: cos(-θ) = cos θ, sin(-θ) = -sin θ, tan(-θ) = -tan θ',
+        'Cofunction identities: sin(π/2 - θ) = cos θ, cos(π/2 - θ) = sin θ',
+        'Sum/difference: sin(A ± B) = sin A cos B ± cos A sin B',
+        'Sum/difference: cos(A ± B) = cos A cos B ∓ sin A sin B',
+        'Double angle: sin(2θ) = 2sin θ cos θ, cos(2θ) = cos²θ - sin²θ',
+        'Half angle: sin²θ = (1 - cos 2θ)/2, cos²θ = (1 + cos 2θ)/2',
+        'Use identities to simplify, prove, or solve equations'
+      ],
+      examples: [
+        'Simplify: sin²x + cos²x\n= 1 (Pythagorean identity)',
+        'Simplify: tan x · cos x\n= (sin x/cos x) · cos x = sin x',
+        'Prove: tan²x + 1 = sec²x\ntan²x + 1 = sin²x/cos²x + 1\n= (sin²x + cos²x)/cos²x = 1/cos²x = sec²x ✓',
+        'Find sin(2x) if sin x = 3/5 and x in Q-I:\ncos x = √(1 - 9/25) = 4/5\nsin(2x) = 2sin x cos x = 2(3/5)(4/5) = 24/25',
+        'Simplify: cos(π/2 - θ)\n= sin θ (cofunction identity)',
+        'Expand: sin(x + π/4)\n= sin x cos(π/4) + cos x sin(π/4)\n= sin x(√2/2) + cos x(√2/2)\n= (√2/2)(sin x + cos x)'
+      ],
+      commonMistakes: [
+        'Thinking sin²θ + cos²θ = 2 or some other number',
+        'Distributing incorrectly: sin(A + B) ≠ sin A + sin B',
+        'Sign errors in sum/difference formulas',
+        'Forgetting to square in Pythagorean identities',
+        'Not recognizing when to use which identity',
+        'Algebraic errors when manipulating expressions'
+      ],
+      tips: [
+        'Memorize fundamental identities (Pythagorean, reciprocal, quotient)',
+        'Convert everything to sin and cos when stuck',
+        'Look for patterns that match identities',
+        'Factor or expand strategically',
+        'Multiply by conjugate to simplify',
+        'Work on more complicated side toward simpler side',
+        'Practice, practice, practice—recognition is key',
+        'Verify answer by substituting test angle',
+        'Keep track of quadrant when finding angle values'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Law of Sines and Cosines',
+    content: {
+      title: 'Law of Sines and Cosines',
+      intro: 'The Law of Sines and Law of Cosines extend trigonometry to non-right triangles. They allow solving for unknown sides and angles in any triangle.',
+      keyPoints: [
+        'Law of Sines: a/sin A = b/sin B = c/sin C (sides opposite angles)',
+        'Use Law of Sines for: AAS, ASA, SSA cases',
+        'Law of Cosines: a² = b² + c² - 2bc cos A (generalizes Pythagorean theorem)',
+        'Use Law of Cosines for: SAS, SSS cases',
+        'SSA (ambiguous case): may have 0, 1, or 2 solutions',
+        'Always check if triangle is valid (angle sum = 180°)',
+        'Label triangle: sides a, b, c opposite angles A, B, C',
+        'After finding one part, use simpler methods if possible',
+        'Law of Cosines also: cos A = (b² + c² - a²)/(2bc)',
+        'Choose law based on given information'
+      ],
+      examples: [
+        'Law of Sines (AAS): A = 40°, B = 60°, a = 10, find b\nC = 180° - 40° - 60° = 80°\n10/sin 40° = b/sin 60°\nb = 10 sin 60°/sin 40° ≈ 13.5',
+        'Law of Cosines (SAS): a = 7, b = 9, C = 50°, find c\nc² = 7² + 9² - 2(7)(9)cos 50°\nc² = 49 + 81 - 126(0.643) ≈ 49.0\nc ≈ 7.0',
+        'Law of Cosines (SSS): a = 5, b = 6, c = 7, find A\ncos A = (36 + 49 - 25)/(2·6·7) = 60/84\nA = cos⁻¹(60/84) ≈ 44.4°',
+        'Ambiguous case (SSA): a = 7, b = 8, A = 30°\nsin B = (8 sin 30°)/7 = 4/7\nB ≈ 34.8° or B ≈ 145.2°\nCheck both to see if valid triangle forms',
+        'Area formula using sine:\nArea = (1/2)ab sin C\nIf a = 10, b = 12, C = 60°\nArea = (1/2)(10)(12)sin 60° = 60(√3/2) ≈ 51.96'
+      ],
+      commonMistakes: [
+        'Using wrong law for given information',
+        'Forgetting to check for second solution in SSA case',
+        'Not labeling sides opposite correct angles',
+        'Sign errors in Law of Cosines',
+        'Forgetting angle sum must equal 180°',
+        'Using Law of Sines when Law of Cosines is needed (SAS, SSS)'
+      ],
+      tips: [
+        'Given 2 sides and angle opposite one: Law of Sines (watch for ambiguous)',
+        'Given 2 sides and included angle (SAS): Law of Cosines',
+        'Given 3 sides (SSS): Law of Cosines',
+        'Given 2 angles and a side (AAS/ASA): Law of Sines',
+        'Draw and label triangle before solving',
+        'Check if solution makes sense (side lengths, angle measures)',
+        'Use simpler methods after finding first unknown',
+        'SSA: check if sin B > 1 (no solution) or if both angles valid',
+        'Remember: these work for ANY triangle, not just right triangles'
+      ]
+    }
+  },
+  // Pre-Calculus Topics
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Functions and Transformations',
+    content: {
+      title: 'Functions and Transformations',
+      intro: 'Functions map inputs to outputs. Transformations shift, stretch, compress, or reflect function graphs. Understanding these changes is essential for analyzing and graphing functions.',
+      keyPoints: [
+        'Function: relation where each input has exactly one output',
+        'Notation: f(x) read as "f of x"',
+        'Domain: all possible input values (x)',
+        'Range: all possible output values (f(x))',
+        'Vertical line test: if vertical line intersects graph more than once, not a function',
+        'Vertical shift: f(x) + k shifts graph up k units (down if k negative)',
+        'Horizontal shift: f(x - h) shifts graph right h units (left if h negative)',
+        'Vertical stretch/compression: a·f(x) where |a| > 1 stretches, 0 < |a| < 1 compresses',
+        'Horizontal stretch/compression: f(bx) where |b| > 1 compresses, 0 < |b| < 1 stretches',
+        'Reflection: -f(x) reflects over x-axis, f(-x) reflects over y-axis',
+        'Order of transformations: horizontal shifts/stretches first, then vertical'
+      ],
+      examples: [
+        'Is y² = x a function?\nNo: x = 4 gives y = ±2 (fails vertical line test)',
+        'Domain of f(x) = √(x - 3):\nNeed x - 3 ≥ 0\nDomain: [3, ∞)',
+        'Transform y = x²:\ny = (x - 2)² + 3 shifts right 2, up 3\nVertex moves from (0,0) to (2,3)',
+        'Transform y = |x|:\ny = -2|x + 1| - 4\nShift left 1, stretch by 2, reflect over x-axis, shift down 4',
+        'Describe transformation: g(x) = 3f(x - 5) + 2\nShift right 5, vertical stretch by 3, shift up 2',
+        'If f(x) = x², find f(x + h):\nf(x + h) = (x + h)² = x² + 2xh + h²'
+      ],
+      commonMistakes: [
+        'Confusing f(x - 2) with f(x) - 2 (different transformations)',
+        'Thinking f(x - 2) shifts left (actually shifts right)',
+        'Wrong order of transformations',
+        'Believing horizontal stretch factor works same as vertical',
+        'Not recognizing f(-x) vs -f(x) difference',
+        'Applying transformation to wrong part of function'
+      ],
+      tips: [
+        'f(x) ± k: vertical shifts (add to output)',
+        'f(x ± h): horizontal shifts (subtract in parentheses → shift right)',
+        'To shift right, subtract; to shift left, add',
+        'Vertical stretch: coefficient outside function',
+        'Horizontal stretch: coefficient inside with x',
+        'Negative outside: flip upside down',
+        'Negative inside: flip left-right',
+        'Start with parent function, apply transformations step by step',
+        'Test a few points to verify transformation'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Polynomial and Rational Functions',
+    content: {
+      title: 'Polynomial and Rational Functions',
+      intro: 'Polynomial functions have terms with non-negative integer exponents. Rational functions are ratios of polynomials. Both have important graphical features and applications.',
+      keyPoints: [
+        'Polynomial: f(x) = aₙxⁿ + ... + a₁x + a₀ where n is non-negative integer',
+        'Degree determines shape and number of roots/turning points',
+        'End behavior: dominated by leading term aₙxⁿ',
+        'Rational function: P(x)/Q(x) where P, Q are polynomials',
+        'Vertical asymptote where denominator = 0 (unreduced)',
+        'Horizontal asymptote: compare degrees of numerator and denominator',
+        'Hole (removable discontinuity): common factor cancels',
+        'Slant asymptote: degree of P exactly one more than degree of Q',
+        'Zeros of polynomial: where f(x) = 0',
+        'Multiplicity affects graph behavior at zeros',
+        'Polynomial division: long division or synthetic division'
+      ],
+      examples: [
+        'End behavior of f(x) = -3x⁵ + 2x³ - 1:\nDegree 5 (odd), negative leading coefficient\nAs x → ∞, f(x) → -∞; as x → -∞, f(x) → +∞',
+        'Find asymptotes of f(x) = (x² - 4)/(x² - 1):\nFactor: (x - 2)(x + 2)/[(x - 1)(x + 1)]\nVertical asymptotes: x = ±1\nDegrees equal: y = 1/1 = 1 (horizontal)',
+        'Identify hole: f(x) = (x² - 9)/(x - 3):\n= (x + 3)(x - 3)/(x - 3)\n= x + 3 with hole at x = 3\nHole location: (3, 6)',
+        'Slant asymptote of f(x) = (x² + 1)/(x - 2):\nDegree P = 2, degree Q = 1 (difference = 1)\nDivide: x² + 1 = (x - 2)(x + 2) + 5\nSlant asymptote: y = x + 2',
+        'Zeros of f(x) = x³ - 4x² + 4x:\nFactor: x(x² - 4x + 4) = x(x - 2)²\nZeros: x = 0 (multiplicity 1), x = 2 (multiplicity 2)'
+      ],
+      commonMistakes: [
+        'Not factoring to find holes vs asymptotes',
+        'Wrong horizontal asymptote rule',
+        'Forgetting that canceled factors create holes',
+        'Not checking original denominator for domain restrictions',
+        'Confusing slant and horizontal asymptotes',
+        'Thinking graph can never cross horizontal asymptote (it can!)'
+      ],
+      tips: [
+        'Always factor numerator and denominator completely first',
+        'Domain excludes all original denominator zeros',
+        'Canceled factors → holes; remaining denominator zeros → vertical asymptotes',
+        'Horizontal asymptote: compare degrees (less, equal, greater)',
+        'Use polynomial division for slant asymptotes',
+        'Even multiplicity: graph touches x-axis and bounces',
+        'Odd multiplicity: graph crosses x-axis',
+        'Test points in each region between asymptotes',
+        'Graph approaches but doesn\'t cross vertical asymptotes'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Limits and Continuity',
+    content: {
+      title: 'Limits and Continuity',
+      intro: 'Limits describe the behavior of functions as inputs approach a value. Continuity means a function has no breaks, jumps, or holes. These concepts are the foundation of calculus.',
+      keyPoints: [
+        'Limit: value f(x) approaches as x approaches a (written lim[x→a] f(x) = L)',
+        'Limit exists if left-hand limit equals right-hand limit',
+        'Left-hand limit: lim[x→a⁻] f(x); right-hand limit: lim[x→a⁺] f(x)',
+        'Limit may exist even if f(a) is undefined or different',
+        'Continuous at x = a: three conditions must hold',
+        '1) f(a) exists, 2) lim[x→a] f(x) exists, 3) lim[x→a] f(x) = f(a)',
+        'Types of discontinuity: removable (hole), jump, infinite (asymptote)',
+        'Limit laws: limits distribute over +, -, ×, ÷',
+        'Limit at infinity: behavior as x → ±∞',
+        'Indeterminate forms: 0/0 requires algebraic manipulation',
+        'Direct substitution works if function is continuous at the point'
+      ],
+      examples: [
+        'Evaluate lim[x→3] (x² - 9)/(x - 3):\nDirect sub gives 0/0 (indeterminate)\nFactor: (x + 3)(x - 3)/(x - 3) = x + 3\nlim[x→3] (x + 3) = 6',
+        'Find lim[x→2] (x³ - 8):\nContinuous polynomial, use direct substitution\n= 2³ - 8 = 0',
+        'Is f(x) = (x² - 1)/(x - 1) continuous at x = 1?\nf(1) undefined (discontinuous)\nBut lim[x→1] f(x) = lim[x→1] (x + 1) = 2\nRemovable discontinuity (hole)',
+        'Evaluate lim[x→∞] (3x² + 2)/(x² - 5):\nDivide top and bottom by x²:\n= lim[x→∞] (3 + 2/x²)/(1 - 5/x²)\n= 3/1 = 3',
+        'Piecewise: f(x) = {x² if x < 2; 2x if x ≥ 2}\nCheck continuity at x = 2:\nlim[x→2⁻] f(x) = 4, lim[x→2⁺] f(x) = 4, f(2) = 4\nContinuous at x = 2',
+        'Find lim[x→0] sin(x)/x:\nSpecial limit = 1 (important for calculus)'
+      ],
+      commonMistakes: [
+        'Using direct substitution when you get 0/0',
+        'Thinking limit doesn\'t exist just because f(a) doesn\'t exist',
+        'Not checking both left and right limits',
+        'Confusing "limit exists" with "function is continuous"',
+        'Dividing by zero instead of factoring',
+        'Not simplifying before taking limit at infinity'
+      ],
+      tips: [
+        'Try direct substitution first (easiest)',
+        'If you get 0/0, factor and cancel',
+        'For limits at infinity: divide by highest power of x',
+        'Check left and right limits separately for piecewise',
+        'Continuous means: draw without lifting pencil',
+        'Removable discontinuity → can "fix" by redefining one point',
+        'Jump discontinuity → left and right limits differ',
+        'Infinite discontinuity → function approaches ±∞',
+        'Most familiar functions are continuous on their domains'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Sequences and Series',
+    content: {
+      title: 'Sequences and Series',
+      intro: 'Sequences list numbers in order; series sum sequence terms. Arithmetic (constant difference) and geometric (constant ratio) are fundamental types with many applications.',
+      keyPoints: [
+        'Sequence: ordered list {aₙ} = a₁, a₂, a₃, ...',
+        'Series: sum of sequence Sₙ = a₁ + a₂ + ... + aₙ',
+        'Arithmetic sequence: aₙ = a₁ + (n - 1)d where d = common difference',
+        'Arithmetic series: Sₙ = n(a₁ + aₙ)/2',
+        'Geometric sequence: aₙ = a₁ · rⁿ⁻¹ where r = common ratio',
+        'Geometric series: Sₙ = a₁(1 - rⁿ)/(1 - r) for r ≠ 1',
+        'Infinite geometric series: converges to S = a₁/(1 - r) if |r| < 1',
+        'Diverges if |r| ≥ 1',
+        'Recursive: defines term using previous term(s)',
+        'Explicit: formula directly gives nth term',
+        'Sigma notation: Σ[i=1 to n] aᵢ represents series'
+      ],
+      examples: [
+        'Arithmetic: 5, 8, 11, 14, ...\nd = 3, a₁ = 5\na₂₀ = 5 + (20 - 1)(3) = 62',
+        'Sum first 10 terms of 2, 5, 8, 11, ...:\na₁ = 2, d = 3, n = 10\na₁₀ = 2 + 9(3) = 29\nS₁₀ = 10(2 + 29)/2 = 155',
+        'Geometric: 3, 6, 12, 24, ...\nr = 2, a₁ = 3\na₆ = 3 · 2⁵ = 96',
+        'Sum: 1 + 2 + 4 + 8 + ... + 512:\na₁ = 1, r = 2, find n: 512 = 2ⁿ⁻¹ → n = 10\nS₁₀ = 1(1 - 2¹⁰)/(1 - 2) = 1023',
+        'Infinite series: 1/2 + 1/4 + 1/8 + ...:\na₁ = 1/2, r = 1/2\nS = (1/2)/(1 - 1/2) = 1',
+        'Evaluate Σ[k=1 to 5] (3k + 1):\n= 4 + 7 + 10 + 13 + 16 = 50'
+      ],
+      commonMistakes: [
+        'Confusing sequence with series (list vs sum)',
+        'Using n instead of n-1 in formulas',
+        'Wrong geometric series formula',
+        'Applying infinite series formula when |r| ≥ 1',
+        'Off-by-one errors in counting terms',
+        'Not identifying whether arithmetic or geometric',
+        'Mixing up sum formulas'
+      ],
+      tips: [
+        'Arithmetic: same amount added each time',
+        'Geometric: same factor multiplied each time',
+        'Check difference (arithmetic) or ratio (geometric)',
+        'For series, know how many terms (n)',
+        'Infinite geometric converges only if |r| < 1',
+        'Write out first few terms to see pattern',
+        'Recursive good for finding next term',
+        'Explicit good for finding nth term directly',
+        'Sigma notation: lower limit to upper limit of index',
+        'Arithmetic mean: average of sequence terms'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Parametric Equations',
+    content: {
+      title: 'Parametric Equations',
+      intro: 'Parametric equations express x and y as functions of a third variable (parameter), often t for time. They describe motion, curves, and paths that functions cannot.',
+      keyPoints: [
+        'Parametric form: x = f(t), y = g(t) where t is parameter',
+        'Parameter often represents time, but can be any variable',
+        'Eliminates parameter: solve one equation for t, substitute into other',
+        'Can represent curves that fail vertical line test',
+        'Direction of motion: follow increasing t values',
+        'Starting point: evaluate at t = 0 (or given initial value)',
+        'Ending point: evaluate at final t value',
+        'Circle: x = r cos(t), y = r sin(t)',
+        'Ellipse: x = a cos(t), y = b sin(t)',
+        'Line segment: x = x₀ + at, y = y₀ + bt',
+        'Same curve can have multiple parametrizations'
+      ],
+      examples: [
+        'Eliminate parameter: x = t + 1, y = 2t - 3\nFrom x: t = x - 1\nSubstitute: y = 2(x - 1) - 3 = 2x - 5\nLine: y = 2x - 5',
+        'Eliminate parameter: x = cos(t), y = sin(t)\nx² + y² = cos²(t) + sin²(t) = 1\nCircle: x² + y² = 1',
+        'Sketch x = t², y = t - 1 for t ∈ [-2, 2]:\nEliminate: t = y + 1\nx = (y + 1)²\nParabola opening right, vertex (-1, 0)',
+        'Circle of radius 3: x = 3cos(t), y = 3sin(t)\nAs t goes from 0 to 2π, traces full circle',
+        'Line from (1, 2) to (4, 8):\nDirection: (3, 6)\nx = 1 + 3t, y = 2 + 6t for t ∈ [0, 1]',
+        'Find point at t = 2: x = t² - 1, y = 2t + 3\nx = 4 - 1 = 3, y = 7\nPoint: (3, 7)'
+      ],
+      commonMistakes: [
+        'Losing restrictions on x or y when eliminating parameter',
+        'Not considering the direction/orientation of curve',
+        'Forgetting domain restrictions on t',
+        'Assuming all parametric equations represent functions',
+        'Eliminating parameter incorrectly',
+        'Not recognizing standard forms (circle, ellipse)'
+      ],
+      tips: [
+        'Plot several points for different t values',
+        'Arrow on graph shows direction as t increases',
+        'Multiple parametrizations can give same curve',
+        'Circle/ellipse: look for cos²t + sin²t = 1',
+        'To eliminate t: solve easier equation for t first',
+        'Check domain of t and resulting restrictions',
+        'Parametric form great for motion/trajectory',
+        'Can represent curves that double back on themselves',
+        'Use calculator parametric mode to graph',
+        'Starting and ending points determined by t interval'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Polar Coordinates',
+    content: {
+      title: 'Polar Coordinates',
+      intro: 'Polar coordinates locate points using distance from origin (r) and angle from positive x-axis (θ). They simplify equations of circles, spirals, and other curves with rotational symmetry.',
+      keyPoints: [
+        'Polar form: (r, θ) where r = distance from origin, θ = angle',
+        'Convert to rectangular: x = r cos θ, y = r sin θ',
+        'Convert to polar: r = √(x² + y²), tan θ = y/x',
+        'Same point has multiple representations: (r, θ) = (r, θ + 2πn)',
+        'Negative r: (−r, θ) = (r, θ + π)',
+        'Origin: r = 0 (any θ)',
+        'Common curves: r = a (circle), r = a cos θ (circle), r = a(1 + cos θ) (cardioid)',
+        'Rose curves: r = a cos(nθ) or r = a sin(nθ)',
+        'Spiral: r = aθ (Archimedean spiral)',
+        'Symmetry tests simplify graphing',
+        'Polar equations often simpler than rectangular for circular/rotational shapes'
+      ],
+      examples: [
+        'Convert (3, π/3) to rectangular:\nx = 3 cos(π/3) = 3(1/2) = 3/2\ny = 3 sin(π/3) = 3(√3/2) = 3√3/2\nPoint: (3/2, 3√3/2)',
+        'Convert (−2, 4) to polar:\nr = √(4 + 16) = √20 = 2√5\ntan θ = 4/(−2) = −2\nθ ≈ 116.6° or 2.03 rad (Quadrant II)',
+        'Graph r = 2:\nAll points distance 2 from origin\nCircle of radius 2',
+        'Graph r = 3 cos θ:\nCircle with diameter 3, centered at (3/2, 0)',
+        'Graph r = 2(1 + cos θ):\nCardioid (heart shape), symmetric about polar axis',
+        'Rose curve r = 4 sin(3θ):\n3 petals (odd n), each length 4\nSymmetric about θ = π/2'
+      ],
+      commonMistakes: [
+        'Wrong quadrant when converting to polar',
+        'Not considering multiple angle representations',
+        'Forgetting negative r values',
+        'Confusing r and θ positions',
+        'Not checking for symmetry before graphing',
+        'Using degrees when radians expected (or vice versa)'
+      ],
+      tips: [
+        'Rectangular good for lines; polar good for circles/curves',
+        'Always check which quadrant for θ',
+        'Plot points for several θ values to see curve shape',
+        'Symmetry about x-axis: replace θ with −θ, if equivalent',
+        'Symmetry about y-axis: replace θ with π − θ',
+        'Symmetry about origin: replace r with −r or θ with θ + π',
+        'Rose curves: n petals if n odd, 2n petals if n even',
+        'Cardioid: "heart" shape, r = a(1 ± cos θ) or r = a(1 ± sin θ)',
+        'Limaçon: r = a ± b cos θ (various shapes depending on a/b)',
+        'Use polar graph paper or calculator polar mode'
+      ]
+    }
+  },
+  // Statistics Topics
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Descriptive Statistics',
+    content: {
+      title: 'Descriptive Statistics',
+      intro: 'Descriptive statistics summarize and organize data using measures of center, spread, and position. They provide quick insights into data patterns without making inferences.',
+      keyPoints: [
+        'Mean: arithmetic average (sum divided by count)',
+        'Median: middle value when data ordered (50th percentile)',
+        'Mode: most frequently occurring value',
+        'Range: max − min (simple measure of spread)',
+        'Variance: average squared deviation from mean',
+        'Standard deviation: √variance (typical distance from mean)',
+        'Quartiles: Q1 (25th %), Q2 = median (50th %), Q3 (75th %)',
+        'IQR (Interquartile Range): Q3 − Q1 (middle 50% of data)',
+        'Outlier: data point unusually far from others (outside 1.5×IQR from quartiles)',
+        'Five-number summary: min, Q1, median, Q3, max',
+        'Box plot: visual of five-number summary',
+        'Skewness: asymmetry in distribution (left, right, or symmetric)'
+      ],
+      examples: [
+        'Data: 2, 4, 4, 5, 7, 9, 12\nMean = (2+4+4+5+7+9+12)/7 = 43/7 ≈ 6.14\nMedian = 5 (middle value)\nMode = 4 (appears twice)',
+        'Find variance: data = 1, 3, 5, 7, 9\nMean = 5\nDeviations: −4, −2, 0, 2, 4\nSquared: 16, 4, 0, 4, 16\nVariance = (16+4+0+4+16)/5 = 8\nStd dev = √8 ≈ 2.83',
+        'Quartiles: 2, 3, 5, 7, 8, 10, 11, 15, 18\nMedian (Q2) = 8\nQ1 = median of lower half = 5\nQ3 = median of upper half = 11\nIQR = 11 − 5 = 6',
+        'Check outlier: Q1 = 10, Q3 = 20, IQR = 10\nLower fence: 10 − 1.5(10) = −5\nUpper fence: 20 + 1.5(10) = 35\nValue 40 is outlier (> 35)',
+        'Box plot shows: skewed right if median closer to Q1',
+        'Compare measures: mean > median suggests right skew'
+      ],
+      commonMistakes: [
+        'Using mean for skewed data (median more appropriate)',
+        'Forgetting to order data before finding median',
+        'Confusing variance with standard deviation',
+        'Wrong quartile calculation method',
+        'Not recognizing outliers',
+        'Thinking mode must be unique (can have multiple modes)'
+      ],
+      tips: [
+        'Mean sensitive to outliers; median resistant',
+        'Use median for skewed distributions',
+        'Standard deviation in same units as data',
+        'Larger std dev = more spread out',
+        'IQR robust measure of spread',
+        'Box plot great for comparing groups',
+        'Outliers: check if they\'re errors or real extreme values',
+        'Always visualize data (histogram, box plot)',
+        'Symmetric data: mean ≈ median',
+        'Calculator can compute these quickly'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Probability Distributions',
+    content: {
+      title: 'Probability Distributions',
+      intro: 'Probability distributions describe how probabilities are distributed over possible values. Discrete distributions model countable outcomes; continuous distributions model measurable quantities.',
+      keyPoints: [
+        'Random variable: variable whose value depends on chance',
+        'Discrete: countable values (coin flips, dice rolls)',
+        'Continuous: infinite possible values in range (height, time)',
+        'Probability distribution: assigns probability to each outcome',
+        'Sum of all probabilities = 1',
+        'Expected value E(X): mean of distribution (weighted average)',
+        'Binomial: n independent trials, p = success probability',
+        'Normal (Gaussian): bell-shaped, symmetric, continuous',
+        'Standard normal: mean = 0, std dev = 1 (Z-distribution)',
+        'Z-score: (x − μ)/σ (standardizes values)',
+        '68-95-99.7 rule: % within 1, 2, 3 std devs',
+        'Use normal table or calculator for probabilities'
+      ],
+      examples: [
+        'Discrete distribution: X = sum of two dice\nP(X = 7) = 6/36 = 1/6\nE(X) = 7 (expected value)',
+        'Binomial: flip coin 5 times, find P(exactly 3 heads)\nn = 5, p = 0.5, k = 3\nP(X = 3) = C(5,3)(0.5)³(0.5)² = 10(0.03125) ≈ 0.3125',
+        'Z-score: score 85, μ = 75, σ = 10\nZ = (85 − 75)/10 = 1\n(1 std dev above mean)',
+        'Find P(Z < 1.5):\nUse standard normal table\nP(Z < 1.5) ≈ 0.9332',
+        'Normal: μ = 100, σ = 15, find P(X > 115)\nZ = (115 − 100)/15 = 1\nP(Z > 1) = 1 − P(Z < 1) ≈ 1 − 0.8413 = 0.1587',
+        '68-95-99.7 rule: for normal distribution\n68% within μ ± σ\n95% within μ ± 2σ\n99.7% within μ ± 3σ'
+      ],
+      commonMistakes: [
+        'Forgetting probabilities must sum to 1',
+        'Using binomial when trials not independent',
+        'Wrong Z-score formula',
+        'Not standardizing before using Z-table',
+        'Confusing P(Z < a) with P(Z > a)',
+        'Assuming all distributions are normal'
+      ],
+      tips: [
+        'Binomial: fixed n, independent trials, constant p',
+        'E(X) for discrete: Σ x·P(x)',
+        'Normal distribution: defined by μ and σ',
+        'Z-score tells how many std devs from mean',
+        'Positive Z: above mean; negative Z: below mean',
+        'Use calculator or table for normal probabilities',
+        'Check conditions before using binomial or normal',
+        'Sketch normal curve to visualize problem',
+        'Remember: total area under curve = 1',
+        'Central Limit Theorem: sample means → normal'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Sampling and Inference',
+    content: {
+      title: 'Sampling and Inference',
+      intro: 'Sampling selects a subset from a population to make inferences about the whole. Good sampling methods and understanding sampling distributions are crucial for valid conclusions.',
+      keyPoints: [
+        'Population: entire group of interest',
+        'Sample: subset selected from population',
+        'Parameter: numerical summary of population (μ, σ, p)',
+        'Statistic: numerical summary of sample (x̄, s, p̂)',
+        'Random sampling: each member has equal chance',
+        'Bias: systematic error in sample selection or measurement',
+        'Sampling distribution: distribution of a statistic over all samples',
+        'Central Limit Theorem: sample means approach normal as n increases',
+        'Standard error: std dev of sampling distribution',
+        'SE for mean: σ/√n (larger sample → smaller SE)',
+        'Margin of error: measures precision of estimate',
+        'Point estimate: single value estimate of parameter'
+      ],
+      examples: [
+        'Population mean μ = 50, σ = 12, sample n = 36\nSE = 12/√36 = 12/6 = 2\nSample mean has std dev of 2',
+        'Sample proportion: 60 success in 100 trials\np̂ = 60/100 = 0.6 (point estimate)',
+        'CLT: even if population skewed, sample mean distribution\napproximately normal for n ≥ 30',
+        'SE for proportion: √[p(1-p)/n]\nIf p̂ = 0.4, n = 100\nSE = √[0.4(0.6)/100] = √0.0024 ≈ 0.049',
+        'Larger sample → smaller SE → more precise estimate\nCompare n = 25: SE = σ/5\nvs n = 100: SE = σ/10',
+        'Bias example: survey only morning shoppers\nMisses evening shoppers (not representative)'
+      ],
+      commonMistakes: [
+        'Confusing parameter (population) with statistic (sample)',
+        'Using σ when should use s (sample std dev)',
+        'Thinking larger sample eliminates bias (reduces variability, not bias)',
+        'Not checking CLT conditions',
+        'Confusing standard deviation with standard error',
+        'Assuming sample is representative without random sampling'
+      ],
+      tips: [
+        'Parameter uses Greek letters (μ, σ, p)',
+        'Statistic uses Roman letters (x̄, s, p̂)',
+        'Random sampling reduces bias',
+        'Larger sample → better estimate (smaller SE)',
+        'CLT requires: independent observations, large enough n',
+        'SE decreases with √n (quadruple sample → half SE)',
+        'Good sampling: random, representative, adequate size',
+        'Stratified sampling: divide population into groups first',
+        'Cluster sampling: sample groups, measure all in selected groups',
+        'Always question: is sample representative?'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Hypothesis Testing',
+    content: {
+      title: 'Hypothesis Testing',
+      intro: 'Hypothesis testing uses sample data to make decisions about population parameters. It provides a formal framework for determining if results are statistically significant.',
+      keyPoints: [
+        'Null hypothesis H₀: statement of no effect or no difference',
+        'Alternative hypothesis Hₐ: what we want to show evidence for',
+        'Significance level α: probability of Type I error (often 0.05)',
+        'Type I error: reject true H₀ (false positive)',
+        'Type II error: fail to reject false H₀ (false negative)',
+        'P-value: probability of observed result if H₀ true',
+        'Decision: reject H₀ if p-value < α',
+        'One-tailed test: Hₐ has <or >; two-tailed: Hₐ has ≠',
+        'Test statistic: Z or t, measures how far sample from H₀',
+        't-test: when σ unknown (use sample s)',
+        'Z-test: when σ known',
+        'Conclusion: "reject H₀" or "fail to reject H₀" (not "accept")'
+      ],
+      examples: [
+        'Test H₀: μ = 50 vs Hₐ: μ ≠ 50\nSample: x̄ = 52, s = 5, n = 25, α = 0.05\nSE = 5/√25 = 1\nt = (52 − 50)/1 = 2\nTwo-tailed, df = 24, critical t ≈ ±2.064\n|2| < 2.064, fail to reject H₀',
+        'P-value interpretation:\np = 0.03 < 0.05 → reject H₀ (significant)\np = 0.12 > 0.05 → fail to reject H₀ (not significant)',
+        'One-tailed test: H₀: μ = 100, Hₐ: μ > 100\nZ = 1.8, p-value = P(Z > 1.8) ≈ 0.036\np < 0.05, reject H₀',
+        'Type I error: convict innocent person (α risk)\nType II error: acquit guilty person (β risk)',
+        'Proportion test: H₀: p = 0.5 vs Hₐ: p > 0.5\nSample: 55 success in 100, p̂ = 0.55\nZ = (0.55 − 0.5)/√[0.5(0.5)/100] = 1\np-value ≈ 0.16, fail to reject H₀'
+      ],
+      commonMistakes: [
+        'Saying "accept H₀" instead of "fail to reject H₀"',
+        'Confusing statistical significance with practical importance',
+        'Using wrong tail (one vs two-tailed)',
+        'Interpreting p-value as probability H₀ is true',
+        'Not checking assumptions (normality, independence)',
+        'Choosing α after seeing results'
+      ],
+      tips: [
+        'H₀ always has equality (=, ≤, ≥)',
+        'Hₐ is what you want to prove',
+        'Small p-value = strong evidence against H₀',
+        'α = 0.05 means 5% chance of Type I error',
+        'Use t when σ unknown, Z when σ known',
+        'Two-tailed: looking for difference (any direction)',
+        'One-tailed: looking for specific direction',
+        'Check assumptions before testing',
+        'State hypotheses before collecting data',
+        'Significant ≠ important (consider effect size)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Regression Analysis',
+    content: {
+      title: 'Regression Analysis',
+      intro: 'Regression models relationships between variables. Linear regression finds the best-fit line to predict one variable from another and measure strength of association.',
+      keyPoints: [
+        'Linear regression: y = a + bx (a = intercept, b = slope)',
+        'Least squares: minimizes sum of squared residuals',
+        'Residual: actual y − predicted y (vertical distance from line)',
+        'Correlation r: measures strength and direction of linear relationship',
+        'r ranges from −1 to 1 (−1 = perfect negative, 1 = perfect positive, 0 = no linear)',
+        'r² (coefficient of determination): proportion of variance explained',
+        'Strong correlation: |r| close to 1; weak: |r| close to 0',
+        'Slope b: change in y per unit change in x',
+        'Extrapolation: predicting outside data range (risky)',
+        'Interpolation: predicting within data range',
+        'Correlation ≠ causation',
+        'Influential points: can dramatically change regression line'
+      ],
+      examples: [
+        'Regression line: ŷ = 2 + 3x\nIntercept = 2 (y when x = 0)\nSlope = 3 (y increases 3 per unit of x)',
+        'Predict y when x = 5: ŷ = 2 + 3(5) = 17',
+        'Correlation r = 0.85\nStrong positive relationship\nr² = 0.72 → 72% of variance in y explained by x',
+        'Residual: actual y = 20, predicted ŷ = 17\nResidual = 20 − 17 = 3',
+        'Interpret r = −0.6:\nModerate negative linear relationship\nAs x increases, y tends to decrease',
+        'Calculate r² = 0.64:\n64% of variability in y explained by model\n36% due to other factors'
+      ],
+      commonMistakes: [
+        'Confusing correlation with causation',
+        'Extrapolating far beyond data',
+        'Not checking for outliers/influential points',
+        'Assuming linear relationship without checking scatter plot',
+        'Interpreting r² as the correlation',
+        'Using regression when relationship is not linear',
+        'Thinking high r means x causes y'
+      ],
+      tips: [
+        'Always plot data first (scatter plot)',
+        'r measures only linear relationships',
+        'r and slope have same sign',
+        'r² tells how well line fits data',
+        'Larger |r| → better linear fit',
+        'Residual plot should show random scatter',
+        'Pattern in residuals → linear model not appropriate',
+        'Outliers can heavily influence regression line',
+        'Be cautious with extrapolation',
+        'Association ≠ causation (confounding variables possible)',
+        'Use regression for prediction, not proof of causation'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Confidence Intervals',
+    content: {
+      title: 'Confidence Intervals',
+      intro: 'Confidence intervals provide a range of plausible values for a population parameter. They quantify uncertainty in our estimates with a specified confidence level.',
+      keyPoints: [
+        'Confidence interval: estimate ± margin of error',
+        'Confidence level: probability interval captures parameter (often 95%)',
+        '95% CI: if we repeated sampling many times, 95% of intervals contain parameter',
+        'Margin of error: critical value × standard error',
+        'For mean with σ known: x̄ ± z* × σ/√n',
+        'For mean with σ unknown: x̄ ± t* × s/√n',
+        'For proportion: p̂ ± z* × √[p̂(1-p̂)/n]',
+        'Critical value z* or t* depends on confidence level',
+        'Common z*: 90% → 1.645, 95% → 1.96, 99% → 2.576',
+        'Wider interval = higher confidence or smaller sample',
+        'Trade-off: confidence vs precision',
+        'Increase n → narrower interval (more precise)'
+      ],
+      examples: [
+        '95% CI for mean: x̄ = 50, s = 10, n = 25\nt* ≈ 2.064 (df = 24)\nSE = 10/√25 = 2\nME = 2.064 × 2 = 4.128\nCI: 50 ± 4.13 → (45.87, 54.13)',
+        '95% CI for proportion: p̂ = 0.6, n = 100\nz* = 1.96\nSE = √[0.6(0.4)/100] = 0.049\nME = 1.96 × 0.049 = 0.096\nCI: 0.6 ± 0.096 → (0.504, 0.696)',
+        'Interpret 95% CI (20, 30):\nWe are 95% confident true mean is between 20 and 30',
+        'Increase confidence 95% → 99%:\nz* increases 1.96 → 2.576\nInterval becomes wider',
+        'Double sample size n → 4n:\nSE reduced by half (√4 = 2)\nInterval width halved',
+        'CI contains 0: not significant at that level\nCI for difference (−2, 8) contains 0 → no significant difference'
+      ],
+      commonMistakes: [
+        'Saying "95% chance parameter is in interval" (wrong interpretation)',
+        'Confusing confidence level with interval',
+        'Using z when should use t (σ unknown)',
+        'Not checking conditions (normality, random sample)',
+        'Thinking higher confidence is always better (wider interval)',
+        'Forgetting ± in interval'
+      ],
+      tips: [
+        'Correct interpretation: "95% confident" about method, not specific interval',
+        'Higher confidence → wider interval',
+        'Larger sample → narrower interval',
+        'Use t-distribution when σ unknown',
+        'Use z when σ known or large sample proportion',
+        'Check conditions: random sample, independence, normality',
+        'Margin of error = half the interval width',
+        'Want narrow CI? Increase sample size',
+        'Want higher confidence? Accept wider interval',
+        'CI and hypothesis test related: if CI for difference includes 0, not significant',
+        'Report CI along with point estimate for complete picture'
+      ]
+    }
+  },
+  // AP Calculus AB Topics
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Limits and Continuity',
+    content: {
+      title: 'Limits and Continuity',
+      intro: 'Limits describe function behavior as inputs approach values. Continuity means no breaks or jumps. These foundational concepts enable the development of derivatives and integrals.',
+      keyPoints: [
+        'Limit: lim[x→a] f(x) = L means f(x) approaches L as x approaches a',
+        'Limit exists if left-hand and right-hand limits are equal',
+        'Can evaluate limits by: direct substitution, factoring, conjugates, L\'Hôpital\'s rule',
+        'Indeterminate forms: 0/0, ∞/∞, 0·∞, ∞−∞, 0⁰, 1^∞, ∞⁰',
+        'Continuous at x = a: f(a) exists, lim[x→a] f(x) exists, and they\'re equal',
+        'Types of discontinuity: removable (hole), jump, infinite (asymptote)',
+        'Intermediate Value Theorem: continuous on [a,b] takes all values between f(a) and f(b)',
+        'Squeeze Theorem: if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L',
+        'Limit at infinity: end behavior of function',
+        'Horizontal asymptote: lim[x→±∞] f(x) = L',
+        'Infinite limit: lim[x→a] f(x) = ±∞ (vertical asymptote)'
+      ],
+      examples: [
+        'lim[x→2] (x² − 4)/(x − 2)\n= lim[x→2] (x+2)(x−2)/(x−2)\n= lim[x→2] (x+2) = 4',
+        'lim[x→0] sin(x)/x = 1\n(Important trig limit)',
+        'lim[x→∞] (3x² + 2x)/(x² − 1)\nDivide by x²: = 3/1 = 3',
+        'Check continuity of f(x) = {x² if x<1; 2x if x≥1} at x=1:\nf(1)=2, lim[x→1⁻]=1, lim[x→1⁺]=2\nNot continuous (jump discontinuity)',
+        'IVT: f continuous on [0,2], f(0)=−1, f(2)=3\nThen ∃c in (0,2) where f(c)=0',
+        'Squeeze: −|x| ≤ x sin(1/x) ≤ |x| near x=0\nlim[x→0] −|x| = 0 = lim[x→0] |x|\nTherefore lim[x→0] x sin(1/x) = 0'
+      ],
+      commonMistakes: [
+        'Using direct substitution for indeterminate forms',
+        'Thinking limit doesn\'t exist when f(a) doesn\'t exist',
+        'Not checking both one-sided limits',
+        'Confusing limits with function values',
+        'Forgetting to factor before canceling',
+        'Misapplying L\'Hôpital\'s rule'
+      ],
+      tips: [
+        'Try direct substitution first',
+        'If 0/0 or ∞/∞: factor, simplify, or use L\'Hôpital',
+        'Check left and right limits separately',
+        'IVT useful for proving roots exist',
+        'Squeeze theorem for oscillating functions',
+        'Graph helps visualize limit behavior',
+        'Continuous functions: polynomials, sin, cos, eˣ on their domains',
+        'Practice recognizing indeterminate forms',
+        'Learn special limits: sin(x)/x, (1−cos x)/x'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Derivatives and Rules',
+    content: {
+      title: 'Derivatives and Rules',
+      intro: 'The derivative measures instantaneous rate of change and slope of tangent line. Differentiation rules allow efficient computation of derivatives for various functions.',
+      keyPoints: [
+        'Derivative: f\'(x) = lim[h→0] [f(x+h) − f(x)]/h',
+        'Geometric: slope of tangent line at point',
+        'Physical: instantaneous rate of change',
+        'Power rule: d/dx(xⁿ) = nxⁿ⁻¹',
+        'Constant rule: d/dx(c) = 0',
+        'Sum/difference: (f ± g)\' = f\' ± g\'',
+        'Product rule: (fg)\' = f\'g + fg\'',
+        'Quotient rule: (f/g)\' = (f\'g − fg\')/g²',
+        'Chain rule: d/dx[f(g(x))] = f\'(g(x))·g\'(x)',
+        'Trig derivatives: (sin x)\' = cos x, (cos x)\' = −sin x, (tan x)\' = sec²x',
+        'Exponential: (eˣ)\' = eˣ, (aˣ)\' = aˣ ln(a)',
+        'Logarithmic: (ln x)\' = 1/x, (log_a x)\' = 1/(x ln a)'
+      ],
+      examples: [
+        'Power rule: d/dx(x⁵) = 5x⁴',
+        'Product rule: d/dx(x² sin x)\n= 2x sin x + x² cos x',
+        'Quotient rule: d/dx(x/(x²+1))\n= [(x²+1)(1) − x(2x)]/(x²+1)²\n= (1−x²)/(x²+1)²',
+        'Chain rule: d/dx(sin(x²))\n= cos(x²)·2x = 2x cos(x²)',
+        'Combined: d/dx(e^(3x²))\n= e^(3x²)·6x = 6xe^(3x²)',
+        'Find tangent line to y = x³ at x = 2:\ny\' = 3x², at x=2: m = 12\nPoint: (2,8)\nLine: y − 8 = 12(x − 2) → y = 12x − 16'
+      ],
+      commonMistakes: [
+        'Forgetting to use chain rule',
+        'Product rule wrong: (fg)\' ≠ f\'g\'',
+        'Quotient rule sign errors',
+        'Not simplifying after differentiating',
+        'Mixing up trig derivatives',
+        'Forgetting ln(a) in (aˣ)\' formula'
+      ],
+      tips: [
+        'Power rule is most common—master it first',
+        'Chain rule: derivative of outer × derivative of inner',
+        'Product rule: "first times derivative of second plus second times derivative of first"',
+        'Quotient rule: "low d-high minus high d-low over low squared"',
+        'Always check if chain rule needed',
+        'Simplify before differentiating when possible',
+        'Practice recognizing which rule to use',
+        'Trig derivatives: memorize the six basic ones',
+        'Check answer by plugging in a value'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Applications of Derivatives',
+    content: {
+      title: 'Applications of Derivatives',
+      intro: 'Derivatives solve optimization problems, analyze function behavior, and model rates of change. Applications include finding extrema, sketching curves, and related rates.',
+      keyPoints: [
+        'Critical point: where f\'(x) = 0 or f\'(x) undefined',
+        'Local max/min occur at critical points',
+        'First derivative test: f\' changes from + to − (max) or − to + (min)',
+        'Second derivative test: f\'\'(c) < 0 → local max, f\'\'(c) > 0 → local min',
+        'Absolute extrema: check critical points and endpoints on closed interval',
+        'Increasing: f\'(x) > 0; decreasing: f\'(x) < 0',
+        'Concave up: f\'\'(x) > 0 (holds water); concave down: f\'\'(x) < 0 (spills water)',
+        'Inflection point: where concavity changes (f\'\' changes sign)',
+        'Mean Value Theorem: if continuous on [a,b] and differentiable on (a,b), ∃c where f\'(c) = [f(b)−f(a)]/(b−a)',
+        'Related rates: differentiate both sides with respect to time',
+        'Optimization: find max/min of quantity subject to constraints'
+      ],
+      examples: [
+        'Find extrema of f(x) = x³ − 3x + 1 on [−2, 2]:\nf\'(x) = 3x² − 3 = 0 → x = ±1\nTest: f(−2)=3, f(−1)=3, f(1)=−1, f(2)=3\nAbs max: 3 at x=−2,−1,2; abs min: −1 at x=1',
+        'Curve sketch: f(x) = x³ − 3x²\nf\'(x) = 3x² − 6x = 3x(x−2)\nIncreasing: (−∞,0)∪(2,∞); decreasing: (0,2)\nLocal max at x=0, local min at x=2\nf\'\'(x) = 6x − 6 = 0 → x = 1\nInflection point at x=1',
+        'Related rates: balloon radius increasing 2 cm/s, find rate volume increasing when r=5\nV = (4/3)πr³\ndV/dt = 4πr²(dr/dt) = 4π(25)(2) = 200π cm³/s',
+        'Optimization: rectangle perimeter 100, max area?\nP = 2l + 2w = 100 → w = 50−l\nA = lw = l(50−l) = 50l − l²\nA\' = 50 − 2l = 0 → l = 25\nMax area when l = w = 25 (square)',
+        'MVT: f(x) = x² on [1,3]\nf\'(c) = (9−1)/(3−1) = 4\n2c = 4 → c = 2'
+      ],
+      commonMistakes: [
+        'Not checking endpoints for absolute extrema',
+        'Confusing critical points with extrema',
+        'Second derivative test inconclusive when f\'\'=0',
+        'Forgetting to verify max/min with first or second derivative test',
+        'Related rates: not differentiating implicitly with respect to t',
+        'Optimization: not checking boundary cases'
+      ],
+      tips: [
+        'Critical points: solve f\'(x) = 0 and check where f\' undefined',
+        'Always test critical points—not all are extrema',
+        'Use number line to track sign changes',
+        'Endpoints matter for absolute extrema',
+        'Related rates: draw diagram, label variables, write equation, differentiate',
+        'Optimization: express one variable in terms of another',
+        'MVT guarantees tangent parallel to secant line exists',
+        'Practice curve sketching systematically',
+        'Concavity tells about acceleration/deceleration'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Definite and Indefinite Integrals',
+    content: {
+      title: 'Definite and Indefinite Integrals',
+      intro: 'Integration is the inverse of differentiation. Indefinite integrals find antiderivatives; definite integrals compute accumulation and area under curves.',
+      keyPoints: [
+        'Indefinite integral: ∫f(x)dx = F(x) + C where F\'(x) = f(x)',
+        'C is constant of integration (family of functions)',
+        'Definite integral: ∫[a to b]f(x)dx = F(b) − F(a)',
+        'Power rule: ∫xⁿdx = xⁿ⁺¹/(n+1) + C (n ≠ −1)',
+        'Basic integrals: ∫sin x dx = −cos x + C, ∫cos x dx = sin x + C',
+        '∫eˣdx = eˣ + C, ∫(1/x)dx = ln|x| + C',
+        'Properties: ∫[cf(x)]dx = c∫f(x)dx, ∫[f±g]dx = ∫f dx ± ∫g dx',
+        'Substitution (u-substitution): ∫f(g(x))g\'(x)dx = ∫f(u)du where u=g(x)',
+        'Riemann sums approximate definite integrals (left, right, midpoint, trapezoidal)',
+        'Area interpretation: ∫[a to b]f(x)dx = signed area between curve and x-axis',
+        'If f(x) ≥ 0, integral gives actual area'
+      ],
+      examples: [
+        'Indefinite: ∫(3x² + 2x)dx\n= x³ + x² + C',
+        'Definite: ∫[1 to 3](x²)dx\n= [x³/3] from 1 to 3\n= 27/3 − 1/3 = 26/3',
+        'U-sub: ∫2x cos(x²)dx\nLet u = x², du = 2x dx\n= ∫cos(u)du = sin(u) + C = sin(x²) + C',
+        'U-sub definite: ∫[0 to π/2]sin(x)cos(x)dx\nLet u = sin(x), du = cos(x)dx\nLimits: u(0)=0, u(π/2)=1\n= ∫[0 to 1]u du = [u²/2] from 0 to 1 = 1/2',
+        'Area: ∫[0 to 2](x²)dx = [x³/3]₀² = 8/3 square units',
+        'Initial value: dy/dx = 2x, y(0) = 3\ny = ∫2x dx = x² + C\n3 = 0 + C → C = 3\ny = x² + 3'
+      ],
+      commonMistakes: [
+        'Forgetting + C for indefinite integrals',
+        'Wrong power rule: ∫xⁿ ≠ xⁿ⁺¹',
+        'Not adjusting limits when using u-substitution',
+        'Evaluating F(a) − F(b) instead of F(b) − F(a)',
+        'Incorrect u-substitution (missing du factor)',
+        'Forgetting absolute value in ln|x|'
+      ],
+      tips: [
+        'Integration is reverse of differentiation—check by differentiating',
+        'Always include +C for indefinite integrals',
+        'U-sub: look for f(g(x))g\'(x) pattern',
+        'Change limits when substituting in definite integrals',
+        'Can substitute back or use new limits—both work',
+        'Area below x-axis is negative—use |f(x)| for actual area',
+        'Practice recognizing integral forms',
+        'Check answer by differentiating',
+        'Initial value problems: find C using given condition'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Fundamental Theorem of Calculus',
+    content: {
+      title: 'Fundamental Theorem of Calculus',
+      intro: 'The Fundamental Theorem of Calculus links differentiation and integration. It has two parts: one for evaluating definite integrals, another for differentiating accumulation functions.',
+      keyPoints: [
+        'FTC Part 1: If F\'(x) = f(x), then ∫[a to b]f(x)dx = F(b) − F(a)',
+        'Find any antiderivative, evaluate at endpoints, subtract',
+        'FTC Part 2: d/dx[∫[a to x]f(t)dt] = f(x)',
+        'Derivative of accumulation function is original function',
+        'Variable upper limit: d/dx[∫[a to g(x)]f(t)dt] = f(g(x))·g\'(x)',
+        'Variable lower limit: d/dx[∫[g(x) to a]f(t)dt] = −f(g(x))·g\'(x)',
+        'Average value of f on [a,b]: (1/(b−a))∫[a to b]f(x)dx',
+        'Mean Value Theorem for Integrals: ∃c where f(c) = average value',
+        'Accumulation function: A(x) = ∫[a to x]f(t)dt',
+        'FTC connects area and antiderivatives',
+        'Integration variable is dummy variable (can use any letter)'
+      ],
+      examples: [
+        'Evaluate ∫[0 to 2]x² dx using FTC Part 1:\nF(x) = x³/3 (antiderivative)\n= [x³/3]₀² = 8/3 − 0 = 8/3',
+        'FTC Part 2: d/dx[∫[0 to x]sin(t)dt]\n= sin(x)',
+        'Variable limit: d/dx[∫[0 to x²]cos(t)dt]\n= cos(x²)·2x = 2x cos(x²)',
+        'Lower limit: d/dx[∫[x to 3]t² dt]\n= d/dx[−∫[3 to x]t² dt]\n= −x²',
+        'Average value of f(x) = x² on [0,3]:\n= (1/3)∫[0 to 3]x² dx\n= (1/3)[x³/3]₀³ = (1/3)(9) = 3',
+        'If F(x) = ∫[1 to x](t³ + 1)dt, find F\'(2):\nF\'(x) = x³ + 1\nF\'(2) = 8 + 1 = 9'
+      ],
+      commonMistakes: [
+        'Confusing which part of FTC to use',
+        'Forgetting chain rule with variable upper limit',
+        'Wrong sign with variable lower limit',
+        'Not recognizing dummy variable',
+        'Evaluating F(a) − F(b) instead of F(b) − F(a)',
+        'Trying to integrate before using FTC Part 2'
+      ],
+      tips: [
+        'FTC Part 1: for evaluating definite integrals',
+        'FTC Part 2: for differentiating integrals',
+        'Variable upper limit: just substitute x for t',
+        'Variable lower limit: add negative sign',
+        'Chain rule needed when upper limit is function of x',
+        't is integration variable—can be any letter',
+        'Average value = total accumulation / interval length',
+        'FTC bridges two main calculus operations',
+        'Check FTC Part 2 by computing both ways',
+        'Practice both parts extensively'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Applications of Integrals',
+    content: {
+      title: 'Applications of Integrals',
+      intro: 'Integrals compute areas, volumes, total change, and accumulation. Applications span geometry, physics, economics, and other fields requiring summation of infinitesimal quantities.',
+      keyPoints: [
+        'Area between curves: ∫[a to b][f(x) − g(x)]dx where f(x) ≥ g(x)',
+        'Area below x-axis counts as negative—use absolute value for actual area',
+        'Volume by disks: V = π∫[a to b][R(x)]²dx (revolve around x-axis)',
+        'Volume by washers: V = π∫[a to b]([R(x)]² − [r(x)]²)dx (hollow solid)',
+        'Volume by shells: V = 2π∫[a to b]x·f(x)dx (revolve around y-axis)',
+        'Total change: ∫[a to b]f\'(x)dx = f(b) − f(a)',
+        'Position from velocity: s(t) = ∫v(t)dt',
+        'Velocity from acceleration: v(t) = ∫a(t)dt',
+        'Displacement vs distance: displacement = ∫v(t)dt, distance = ∫|v(t)|dt',
+        'Average value: favg = (1/(b−a))∫[a to b]f(x)dx',
+        'Accumulation: A(x) = ∫[a to x]f(t)dt represents total accumulated quantity'
+      ],
+      examples: [
+        'Area between y = x² and y = x from x=0 to x=1:\nTop: y = x, bottom: y = x²\n∫[0 to 1](x − x²)dx = [x²/2 − x³/3]₀¹ = 1/2 − 1/3 = 1/6',
+        'Volume: revolve y = √x around x-axis from x=0 to x=4:\nV = π∫[0 to 4](√x)²dx = π∫[0 to 4]x dx\n= π[x²/2]₀⁴ = 8π cubic units',
+        'Washer: revolve region between y = 2 and y = x around x-axis, x∈[0,2]:\nR(x) = 2, r(x) = x\nV = π∫[0 to 2](4 − x²)dx = π[4x − x³/3]₀² = 16π/3',
+        'Total change: if v(t) = 2t, find position change from t=0 to t=3:\n∫[0 to 3]2t dt = [t²]₀³ = 9 units',
+        'Distance traveled: v(t) = t − 2 on [0,4]\nChanges sign at t=2\nDistance = ∫[0 to 2]|t−2|dt + ∫[2 to 4]|t−2|dt = 2 + 2 = 4',
+        'Average temperature: if T(t) = 60 + 10sin(πt/12) over 24 hours:\nTavg = (1/24)∫[0 to 24]T(t)dt = 60°F'
+      ],
+      commonMistakes: [
+        'Using wrong curve on top in area between curves',
+        'Forgetting π in volume formulas',
+        'Squaring incorrectly in disk/washer method',
+        'Confusing displacement with distance',
+        'Not splitting integral when curves cross',
+        'Using disk method when should use washer'
+      ],
+      tips: [
+        'Area: always subtract (top − bottom) or (right − left)',
+        'Sketch region first to identify top/bottom curves',
+        'Check where curves intersect to find limits',
+        'Disk: solid, one radius; washer: hollow, two radii',
+        'Shell method: 2π × radius × height × thickness',
+        'Velocity positive = moving forward, negative = moving backward',
+        'Displacement can be negative, distance always positive',
+        'Average value = height of rectangle with same area',
+        'Practice visualizing 3D solids of revolution',
+        'Units matter: check dimensional analysis'
+      ]
+    }
+  },
+  // AP Calculus BC Topics
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus BC',
+    topicName: 'Parametric and Polar Equations',
+    content: {
+      title: 'Parametric and Polar Equations',
+      intro: 'Parametric and polar equations extend calculus beyond rectangular coordinates. They enable analysis of curves, motion, and areas using alternative coordinate systems.',
+      keyPoints: [
+        'Parametric: x = f(t), y = g(t) where t is parameter',
+        'dy/dx = (dy/dt)/(dx/dt) for parametric curves',
+        'Second derivative: d²y/dx² = d/dx[dy/dx] = (d/dt[dy/dx])/(dx/dt)',
+        'Arc length parametric: L = ∫√[(dx/dt)² + (dy/dt)²]dt',
+        'Polar: r = f(θ) where r is distance, θ is angle',
+        'Convert: x = r cos θ, y = r sin θ',
+        'Polar derivative: dy/dx = (dr/dθ·sin θ + r cos θ)/(dr/dθ·cos θ − r sin θ)',
+        'Area in polar: A = (1/2)∫r² dθ',
+        'Arc length polar: L = ∫√[r² + (dr/dθ)²]dθ',
+        'Velocity parametric: v = √[(dx/dt)² + (dy/dt)²]',
+        'Common polar curves: circles, rose curves, cardioids, limaçons'
+      ],
+      examples: [
+        'Find dy/dx: x = t², y = t³\ndx/dt = 2t, dy/dt = 3t²\ndy/dx = 3t²/2t = 3t/2',
+        'Arc length: x = cos t, y = sin t, t ∈ [0, π]\nL = ∫₀^π √[sin²t + cos²t]dt = ∫₀^π 1 dt = π',
+        'Polar area: r = 2 sin θ, θ ∈ [0, π]\nA = (1/2)∫₀^π (2 sin θ)² dθ = 2∫₀^π sin²θ dθ = π',
+        'Rose curve: r = 3 cos(2θ)\n4 petals (even n = 2, so 2n = 4 petals)',
+        'Speed at t = 1: x = t², y = t³\ndx/dt = 2t, dy/dt = 3t²\nAt t=1: v = √[4 + 9] = √13',
+        'Tangent line parametric: x = t, y = t² at t = 2\ndy/dx = 2t, at t=2: slope = 4\nPoint (2, 4): y − 4 = 4(x − 2)'
+      ],
+      commonMistakes: [
+        'Dividing dx/dt by dy/dt (backwards)',
+        'Forgetting (1/2) in polar area formula',
+        'Not squaring r in polar area',
+        'Using wrong arc length formula',
+        'Confusing speed with velocity vector',
+        'Not converting limits when using polar coordinates'
+      ],
+      tips: [
+        'Parametric derivative: divide the derivatives',
+        'Always simplify dy/dx in terms of t',
+        'Polar area: integrate (1/2)r² with respect to θ',
+        'Sketch polar curves for key θ values',
+        'Speed is magnitude of velocity vector',
+        'Arc length: always under square root',
+        'Check symmetry in polar graphs',
+        'Rose curves: n petals if n odd, 2n if n even',
+        'Practice converting between coordinate systems'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus BC',
+    topicName: 'Vector Functions',
+    content: {
+      title: 'Vector Functions',
+      intro: 'Vector functions describe position in space as a function of time. They model motion in two or three dimensions with applications in physics and engineering.',
+      keyPoints: [
+        'Vector function: r(t) = ⟨f(t), g(t)⟩ or r(t) = ⟨f(t), g(t), h(t)⟩',
+        'Position vector: r(t) gives location at time t',
+        'Velocity vector: v(t) = r\'(t) = ⟨f\'(t), g\'(t)⟩',
+        'Speed: |v(t)| = √[(f\'(t))² + (g\'(t))²]',
+        'Acceleration: a(t) = v\'(t) = r\'\'(t)',
+        'Unit tangent vector: T(t) = v(t)/|v(t)|',
+        'Derivative: r\'(t) = ⟨f\'(t), g\'(t), h\'(t)⟩',
+        'Integral: ∫r(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ + C',
+        'Displacement: ∫[a to b]v(t)dt = r(b) − r(a)',
+        'Distance traveled: ∫[a to b]|v(t)|dt',
+        'Properties: derivative and integral work component-wise'
+      ],
+      examples: [
+        'r(t) = ⟨t², t³⟩\nv(t) = ⟨2t, 3t²⟩\na(t) = ⟨2, 6t⟩',
+        'Find speed at t = 1: v(1) = ⟨2, 3⟩\n|v(1)| = √(4 + 9) = √13',
+        'Position from velocity: v(t) = ⟨cos t, sin t⟩, r(0) = ⟨1, 0⟩\nr(t) = ⟨sin t + 1, −cos t + 1⟩',
+        'Distance traveled: v(t) = ⟨3, 4⟩ on [0, 2]\n|v| = 5 (constant)\nDistance = 5·2 = 10',
+        'Unit tangent: r(t) = ⟨t, t²⟩\nv(t) = ⟨1, 2t⟩\n|v| = √(1 + 4t²)\nT(t) = ⟨1, 2t⟩/√(1 + 4t²)',
+        'Acceleration at t = 2: r(t) = ⟨t², 2t, t³⟩\na(t) = ⟨2, 0, 6t⟩\na(2) = ⟨2, 0, 12⟩'
+      ],
+      commonMistakes: [
+        'Confusing speed (scalar) with velocity (vector)',
+        'Forgetting to take magnitude for speed',
+        'Not integrating each component separately',
+        'Mixing up displacement and distance',
+        'Forgetting constant vector when integrating',
+        'Not normalizing when finding unit tangent'
+      ],
+      tips: [
+        'Velocity: derivative of position',
+        'Acceleration: derivative of velocity',
+        'Speed: magnitude of velocity',
+        'Integrate/differentiate component by component',
+        'Displacement = change in position (can be negative)',
+        'Distance = total length traveled (always positive)',
+        'Unit vector: divide by magnitude',
+        'Position vector traces path in space',
+        'Practice 2D before moving to 3D',
+        'Sketch path to visualize motion'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus BC',
+    topicName: 'Series Convergence and Divergence',
+    content: {
+      title: 'Series Convergence and Divergence',
+      intro: 'Infinite series sum infinitely many terms. Convergence tests determine whether these sums approach finite values or diverge to infinity.',
+      keyPoints: [
+        'Series: Σaₙ = a₁ + a₂ + a₃ + ...',
+        'Converges if sequence of partial sums has finite limit',
+        'Diverges if partial sums approach ±∞ or oscillate',
+        'nth term test: if lim aₙ ≠ 0, series diverges',
+        'Geometric series: Σarⁿ converges to a/(1−r) if |r| < 1',
+        'p-series: Σ1/nᵖ converges if p > 1, diverges if p ≤ 1',
+        'Comparison test: compare with known series',
+        'Ratio test: if lim|aₙ₊₁/aₙ| < 1, converges; > 1, diverges',
+        'Integral test: ∫f(x)dx and Σf(n) converge/diverge together',
+        'Alternating series test: if |aₙ| decreasing to 0, Σ(−1)ⁿaₙ converges',
+        'Absolute vs conditional convergence'
+      ],
+      examples: [
+        'Geometric: Σ(1/2)ⁿ from n=0\nr = 1/2, |r| < 1\nSum = 1/(1 − 1/2) = 2',
+        'nth term: Σn/(n+1)\nlim n/(n+1) = 1 ≠ 0\nDiverges',
+        'p-series: Σ1/n²\np = 2 > 1, converges',
+        'Ratio test: Σ2ⁿ/n!\nlim (2ⁿ⁺¹/(n+1)!)/(2ⁿ/n!) = lim 2/(n+1) = 0 < 1\nConverges',
+        'Alternating: Σ(−1)ⁿ/n\n1/n decreases to 0\nConverges (conditionally)',
+        'Harmonic series: Σ1/n\np = 1, diverges'
+      ],
+      commonMistakes: [
+        'Using nth term test to prove convergence (only shows divergence)',
+        'Wrong ratio test interpretation',
+        'Forgetting absolute value in ratio test',
+        'Confusing geometric series formula',
+        'Not checking all conditions for alternating series',
+        'Assuming comparison test works both ways'
+      ],
+      tips: [
+        'nth term test: only proves divergence, never convergence',
+        'Geometric: know the formula and |r| < 1 condition',
+        'p-series: p > 1 converges, p ≤ 1 diverges',
+        'Ratio test: most useful for factorials and exponentials',
+        'Comparison: compare with geometric or p-series',
+        'Alternating: check decreasing and limit to 0',
+        'Absolute convergence → convergence',
+        'Convergence doesn\'t → absolute convergence',
+        'Try simplest tests first',
+        'Practice identifying which test to use'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus BC',
+    topicName: 'Taylor and Maclaurin Series',
+    content: {
+      title: 'Taylor and Maclaurin Series',
+      intro: 'Taylor series represent functions as infinite polynomials. Maclaurin series are Taylor series centered at zero. They enable approximation and analysis of complex functions.',
+      keyPoints: [
+        'Taylor series centered at a: f(x) = Σ[fⁿ(a)/n!](x−a)ⁿ',
+        'Maclaurin series (a = 0): f(x) = Σ[fⁿ(0)/n!]xⁿ',
+        'eˣ = Σxⁿ/n! = 1 + x + x²/2! + x³/3! + ...',
+        'sin x = Σ(−1)ⁿx²ⁿ⁺¹/(2n+1)! = x − x³/3! + x⁵/5! − ...',
+        'cos x = Σ(−1)ⁿx²ⁿ/(2n)! = 1 − x²/2! + x⁴/4! − ...',
+        '1/(1−x) = Σxⁿ = 1 + x + x² + ... for |x| < 1',
+        'ln(1+x) = Σ(−1)ⁿ⁺¹xⁿ/n = x − x²/2 + x³/3 − ... for |x| < 1',
+        'Taylor polynomial: finite sum approximates function',
+        'Lagrange error bound: estimates approximation error',
+        'Radius of convergence: interval where series converges',
+        'Operations: can add, multiply, differentiate, integrate series term-by-term'
+      ],
+      examples: [
+        'Find Maclaurin series for f(x) = eˣ:\nf(0) = 1, f\'(0) = 1, f\'\'(0) = 1, ...\neˣ = 1 + x + x²/2! + x³/3! + ...',
+        'Approximate e using e¹:\ne ≈ 1 + 1 + 1/2 + 1/6 = 2.667 (3 terms)',
+        'Find series for e²ˣ:\nSubstitute 2x for x in eˣ series\ne²ˣ = 1 + 2x + (2x)²/2! + ... = 1 + 2x + 2x² + ...',
+        'Maclaurin for cos x:\nf(0)=1, f\'(0)=0, f\'\'(0)=−1, f′′′(0)=0, f⁽⁴⁾(0)=1\ncos x = 1 − x²/2! + x⁴/4! − ...',
+        'Integrate: ∫sin(x²)dx\n= ∫(x² − x⁶/3! + x¹⁰/5! − ...)dx\n= x³/3 − x⁷/42 + ...',
+        'Find interval: 1/(1−x) = Σxⁿ\nGeometric with r = x\nConverges for |x| < 1'
+      ],
+      commonMistakes: [
+        'Forgetting factorial in denominator',
+        'Wrong signs in alternating series',
+        'Not centering at correct value for Taylor',
+        'Confusing radius of convergence with interval',
+        'Computing too many derivatives (use known series)',
+        'Forgetting (x−a)ⁿ for Taylor centered at a'
+      ],
+      tips: [
+        'Memorize common Maclaurin series (eˣ, sin, cos, 1/(1−x))',
+        'Pattern in derivatives helps find general term',
+        'Use substitution with known series',
+        'Can differentiate/integrate series term-by-term',
+        'Check radius of convergence',
+        'Taylor polynomial: truncate series after n terms',
+        'More terms = better approximation',
+        'Even functions have only even powers',
+        'Odd functions have only odd powers',
+        'Practice manipulation of series'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus BC',
+    topicName: 'Integration Techniques',
+    content: {
+      title: 'Integration Techniques',
+      intro: 'Advanced integration techniques handle complex integrals beyond basic formulas. Methods include integration by parts, partial fractions, and trigonometric substitution.',
+      keyPoints: [
+        'Integration by parts: ∫u dv = uv − ∫v du',
+        'Choose u using LIATE: Logarithmic, Inverse trig, Algebraic, Trig, Exponential',
+        'Partial fractions: decompose rational function into simpler fractions',
+        'Trig substitution: for √(a²−x²), √(a²+x²), √(x²−a²)',
+        'For √(a²−x²): use x = a sin θ',
+        'For √(a²+x²): use x = a tan θ',
+        'For √(x²−a²): use x = a sec θ',
+        'Improper integrals: infinite limits or discontinuous integrand',
+        'Evaluate improper: take limit as bound approaches infinity/discontinuity',
+        'Converges if limit exists and is finite',
+        'Special integrals: tabular method, reduction formulas'
+      ],
+      examples: [
+        'Parts: ∫x eˣ dx\nu = x, dv = eˣ dx\ndu = dx, v = eˣ\n= x eˣ − ∫eˣ dx = x eˣ − eˣ + C',
+        'Parts: ∫ln x dx\nu = ln x, dv = dx\n= x ln x − ∫x(1/x)dx = x ln x − x + C',
+        'Partial fractions: ∫1/(x²−1)dx\n= ∫1/[(x−1)(x+1)]dx\n= (1/2)∫[1/(x−1) − 1/(x+1)]dx\n= (1/2)[ln|x−1| − ln|x+1|] + C',
+        'Trig sub: ∫√(1−x²)dx\nLet x = sin θ, dx = cos θ dθ\n= ∫cos²θ dθ = (θ + sin θ cos θ)/2 + C',
+        'Improper: ∫₁^∞ 1/x² dx\n= lim[b→∞] [−1/x]₁ᵇ = lim[b→∞] (−1/b + 1) = 1',
+        'Diverges: ∫₁^∞ 1/x dx\n= lim[b→∞] ln b = ∞'
+      ],
+      commonMistakes: [
+        'Wrong choice of u and dv in integration by parts',
+        'Not factoring denominator before partial fractions',
+        'Forgetting to substitute back after trig substitution',
+        'Wrong trig substitution for radical type',
+        'Not taking limit for improper integrals',
+        'Declaring convergence without evaluating limit'
+      ],
+      tips: [
+        'Parts: LIATE helps choose u',
+        'Parts: dv should be integrable',
+        'May need parts multiple times',
+        'Partial fractions: factor denominator first',
+        'Degree(numerator) < degree(denominator) for partial fractions',
+        'Trig sub: match radical form to substitution',
+        'Draw triangle to convert back from trig sub',
+        'Improper: always write as limit',
+        'Check if integral converges before evaluating',
+        'Practice recognizing which technique to use'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus BC',
+    topicName: 'Differential Equations',
+    content: {
+      title: 'Differential Equations',
+      intro: 'Differential equations relate functions to their derivatives. They model growth, decay, motion, and many natural phenomena. Solutions are functions, not numbers.',
+      keyPoints: [
+        'Differential equation: equation involving derivatives',
+        'Solution: function satisfying the equation',
+        'Order: highest derivative present',
+        'Initial value problem (IVP): DE plus initial condition',
+        'Separable: dy/dx = f(x)g(y), separate and integrate',
+        'Exponential growth/decay: dy/dt = ky, solution y = Ce^(kt)',
+        'Logistic growth: dy/dt = ky(1 − y/M)',
+        'Slope field: graphical representation of DE',
+        'Euler\'s method: numerical approximation using tangent lines',
+        'General solution: family of functions (includes C)',
+        'Particular solution: one function (C determined by initial condition)'
+      ],
+      examples: [
+        'Solve: dy/dx = xy\nSeparate: dy/y = x dx\nIntegrate: ln|y| = x²/2 + C₁\ny = Ce^(x²/2)',
+        'IVP: dy/dx = 2x, y(0) = 3\ny = ∫2x dx = x² + C\n3 = 0 + C → C = 3\ny = x² + 3',
+        'Exponential growth: dy/dt = 0.05y, y(0) = 100\ny = 100e^(0.05t)',
+        'Separable: dy/dx = y/x\ndy/y = dx/x\nln|y| = ln|x| + C\ny = Cx',
+        'Euler\'s method: dy/dx = x + y, y(0) = 1, step h = 0.1\ny₁ = y₀ + h·f(x₀,y₀) = 1 + 0.1(0 + 1) = 1.1\ny₂ = 1.1 + 0.1(0.1 + 1.1) = 1.22',
+        'Logistic: dy/dt = 0.1y(1 − y/100)\nCarrying capacity M = 100'
+      ],
+      commonMistakes: [
+        'Not separating variables correctly',
+        'Forgetting absolute value in ln',
+        'Losing constant of integration',
+        'Not solving for C using initial condition',
+        'Wrong signs in separation',
+        'Euler\'s method: using wrong point for slope'
+      ],
+      tips: [
+        'Separable: get all y terms on one side, all x on other',
+        'Always include +C when integrating',
+        'Use initial condition to find C',
+        'Slope field: draw short segments with slope dy/dx',
+        'Exponential: k > 0 growth, k < 0 decay',
+        'Logistic: S-shaped curve, approaches carrying capacity',
+        'Euler: yₙ₊₁ = yₙ + h·f(xₙ,yₙ)',
+        'Smaller h in Euler = better approximation',
+        'Verify solution by substituting back',
+        'Practice identifying separable equations'
+      ]
+    }
+  },
+  // Multivariable Calculus
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Multivariable Calculus',
+    topicName: 'Partial Derivatives',
+    content: {
+      title: 'Partial Derivatives',
+      intro: 'Partial derivatives extend single-variable calculus to functions of multiple variables. They measure the rate of change with respect to one variable while holding others constant. Essential for optimization, physics, economics, and engineering applications.',
+      keyPoints: [
+        'Partial derivative: derivative with respect to one variable, others held constant',
+        'Notation: ∂f/∂x or fₓ for partial with respect to x',
+        'For f(x,y): fₓ means differentiate treating y as constant',
+        'Second-order partials: fₓₓ, fᵧᵧ, fₓᵧ, fᵧₓ',
+        'Clairaut\'s theorem: fₓᵧ = fᵧₓ if continuous',
+        'Gradient: ∇f = ⟨fₓ, fᵧ, fᵧ⟩ points in direction of steepest increase',
+        'Chain rule: dz/dt = ∂z/∂x·dx/dt + ∂z/∂y·dy/dt',
+        'Implicit differentiation: use partial derivatives for implicit functions',
+        'Tangent plane: z = f(a,b) + fₓ(a,b)(x-a) + fᵧ(a,b)(y-b)',
+        'Linear approximation: L(x,y) = f(a,b) + fₓ(a,b)Δx + fᵧ(a,b)Δy',
+        'Directional derivative: rate of change in any direction u',
+        'Critical points: where ∇f = 0 or undefined'
+      ],
+      examples: [
+        'Find ∂f/∂x and ∂f/∂y for f(x,y) = x²y + 3xy²\nPartial with respect to x (treat y as constant):\n∂f/∂x = 2xy + 3y²\nPartial with respect to y (treat x as constant):\n∂f/∂y = x² + 6xy\nAnswer: fₓ = 2xy + 3y², fᵧ = x² + 6xy',
+        'Find all second-order partials for f(x,y) = xe^(y²)\nFirst partials:\nfₓ = e^(y²)\nfᵧ = 2xye^(y²)\nSecond partials:\nfₓₓ = 0\nfᵧᵧ = 2xe^(y²) + 4xy²e^(y²) = 2xe^(y²)(1 + 2y²)\nfₓᵧ = 2ye^(y²)\nfᵧₓ = 2ye^(y²)\nNote: fₓᵧ = fᵧₓ (Clairaut\'s theorem)',
+        'Find gradient of f(x,y,z) = x²y + yz² at point (1,2,3)\nCompute partials:\nfₓ = 2xy, fᵧ = x² + z², fᵧ = 2yz\nAt (1,2,3):\nfₓ(1,2,3) = 2(1)(2) = 4\nfᵧ(1,2,3) = 1² + 3² = 10\nfᵧ(1,2,3) = 2(2)(3) = 12\nAnswer: ∇f(1,2,3) = ⟨4, 10, 12⟩',
+        'Find equation of tangent plane to z = x² + y² at (1,1,2)\nCompute partials:\nfₓ = 2x, fᵧ = 2y\nAt (1,1):\nfₓ(1,1) = 2, fᵧ(1,1) = 2\nTangent plane equation:\nz = 2 + 2(x-1) + 2(y-1)\nz = 2 + 2x - 2 + 2y - 2\nAnswer: z = 2x + 2y - 2',
+        'Use chain rule: z = x²y, x = t², y = t³, find dz/dt\nMethod 1 (direct): z = (t²)²(t³) = t⁷, so dz/dt = 7t⁶\nMethod 2 (chain rule):\n∂z/∂x = 2xy, ∂z/∂y = x²\ndx/dt = 2t, dy/dt = 3t²\ndz/dt = (2xy)(2t) + (x²)(3t²)\n= 2(t²)(t³)(2t) + (t²)²(3t²)\n= 4t⁶ + 3t⁶ = 7t⁶\nAnswer: dz/dt = 7t⁶',
+        'Find directional derivative of f(x,y) = xy² at (2,1) in direction v = ⟨3,4⟩\nCompute gradient:\n∇f = ⟨y², 2xy⟩\n∇f(2,1) = ⟨1, 4⟩\nNormalize direction:\n|v| = √(3² + 4²) = 5\nu = ⟨3/5, 4/5⟩\nDirectional derivative:\nDᵤf = ∇f · u = ⟨1,4⟩ · ⟨3/5, 4/5⟩\n= 3/5 + 16/5 = 19/5\nAnswer: 19/5'
+      ],
+      commonMistakes: [
+        'Forgetting to hold other variables constant when computing partial',
+        'Not using chain rule when variables depend on other variables',
+        'Confusing fₓᵧ with fᵧₓ (they\'re equal if continuous)',
+        'Forgetting to normalize direction vector in directional derivative',
+        'Not evaluating partials at the specific point for tangent planes',
+        'Mixing up gradient (vector) with directional derivative (scalar)',
+        'Incorrect notation: d instead of ∂ for partial derivatives',
+        'Not checking continuity before applying Clairaut\'s theorem'
+      ],
+      tips: [
+        'Partial derivative: all other variables are constants',
+        'Compute fₓ: differentiate with respect to x, everything else constant',
+        'Gradient points uphill, perpendicular to level curves',
+        'Tangent plane: use point-slope form in 3D',
+        'Chain rule: sum of (partial)×(derivative) for each variable',
+        'Directional derivative = ∇f · u (u is unit vector)',
+        'Maximum rate of increase: direction of ∇f, magnitude |∇f|',
+        'Level curves: where f(x,y) = constant',
+        'Practice: sketch level curves to visualize gradient',
+        'Remember: ∂²f/∂x∂y means differentiate fᵧ with respect to x'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Multivariable Calculus',
+    topicName: 'Multiple Integrals',
+    content: {
+      title: 'Multiple Integrals',
+      intro: 'Multiple integrals extend integration to functions of several variables. Double integrals compute volume under surfaces, triple integrals compute mass and total quantities in 3D. Essential for physics, engineering, probability, and computing areas, volumes, and averages.',
+      keyPoints: [
+        'Double integral: ∬ᴿ f(x,y) dA integrates over region R in xy-plane',
+        'Iterated integral: integrate one variable at a time',
+        'Fubini\'s theorem: ∬f dA = ∫∫f(x,y) dy dx = ∫∫f(x,y) dx dy',
+        'Order of integration matters for bounds, not for continuous functions',
+        'Type I region: a ≤ x ≤ b, g₁(x) ≤ y ≤ g₂(x)',
+        'Type II region: c ≤ y ≤ d, h₁(y) ≤ x ≤ h₂(y)',
+        'Polar coordinates: x = r cos θ, y = r sin θ, dA = r dr dθ',
+        'Triple integral: ∭ f(x,y,z) dV over 3D region',
+        'Cylindrical: x = r cos θ, y = r sin θ, z = z, dV = r dz dr dθ',
+        'Spherical: x = ρ sin φ cos θ, y = ρ sin φ sin θ, z = ρ cos φ',
+        'Spherical volume element: dV = ρ² sin φ dρ dφ dθ',
+        'Applications: volume, mass, center of mass, average value'
+      ],
+      examples: [
+        'Evaluate ∬ᴿ xy dA where R = [0,2]×[1,3]\nSet up iterated integral:\n∫₀² ∫₁³ xy dy dx\nIntegrate with respect to y:\n∫₀² [xy²/2]₁³ dx = ∫₀² x(9/2 - 1/2) dx = ∫₀² 4x dx\nIntegrate with respect to x:\n[2x²]₀² = 2(4) - 0 = 8\nAnswer: 8',
+        'Find volume under z = 4 - x² - y² above xy-plane\nSet up region: 4 - x² - y² ≥ 0, so x² + y² ≤ 4\nUse polar coordinates (circular region):\nV = ∬(4 - x² - y²) dA\n= ∫₀²ᵖ ∫₀² (4 - r²) r dr dθ\n= ∫₀²ᵖ ∫₀² (4r - r³) dr dθ\n= ∫₀²ᵖ [2r² - r⁴/4]₀² dθ\n= ∫₀²ᵖ (8 - 4) dθ = ∫₀²ᵖ 4 dθ = 8π\nAnswer: 8π cubic units',
+        'Evaluate ∫₀¹ ∫ₓ¹ eʸ² dy dx by changing order\nOriginal region: 0 ≤ x ≤ 1, x ≤ y ≤ 1\nSketch shows Type II: 0 ≤ y ≤ 1, 0 ≤ x ≤ y\nChange order:\n∫₀¹ ∫₀ʸ eʸ² dx dy = ∫₀¹ [x eʸ²]₀ʸ dy\n= ∫₀¹ y eʸ² dy\nLet u = y², du = 2y dy:\n= (1/2)∫₀¹ eᵘ du = (1/2)[eᵘ]₀¹\n= (1/2)(e - 1)\nAnswer: (e-1)/2',
+        'Find volume of sphere x² + y² + z² = a² using triple integral\nUse spherical coordinates:\n0 ≤ ρ ≤ a, 0 ≤ φ ≤ π, 0 ≤ θ ≤ 2π\nV = ∭ dV = ∫₀²ᵖ ∫₀ᵖ ∫₀ᵃ ρ² sin φ dρ dφ dθ\n= ∫₀²ᵖ ∫₀ᵖ [ρ³/3]₀ᵃ sin φ dφ dθ\n= (a³/3) ∫₀²ᵖ ∫₀ᵖ sin φ dφ dθ\n= (a³/3) ∫₀²ᵖ [-cos φ]₀ᵖ dθ\n= (a³/3) ∫₀²ᵖ 2 dθ = (2a³/3)(2π) = 4πa³/3\nAnswer: 4πa³/3',
+        'Find mass of region 0 ≤ x ≤ 1, 0 ≤ y ≤ x, density ρ(x,y) = xy\nMass = ∬ᴿ ρ(x,y) dA\n= ∫₀¹ ∫₀ˣ xy dy dx\n= ∫₀¹ [xy²/2]₀ˣ dx = ∫₀¹ x³/2 dx\n= [x⁴/8]₀¹ = 1/8\nAnswer: 1/8 units of mass',
+        'Set up (don\'t evaluate) ∭ over solid bounded by z = x² + y², z = 4\nCylindrical coordinates (circular cross-section):\nx² + y² = r², bounds: r² ≤ z ≤ 4\nProjection: x² + y² ≤ 4, so 0 ≤ r ≤ 2\nIntegral:\n∫₀²ᵖ ∫₀² ∫ᵣ²⁴ f(r,θ,z) r dz dr dθ\n(Note: r dz dr dθ is the volume element in cylindrical)'
+      ],
+      commonMistakes: [
+        'Forgetting the r in polar coordinates (dA = r dr dθ, not dr dθ)',
+        'Forgetting ρ² sin φ in spherical coordinates',
+        'Setting up bounds incorrectly for Type I vs Type II regions',
+        'Not sketching the region before setting up integral',
+        'Integrating in wrong order without adjusting bounds',
+        'Using wrong coordinate system (rectangular when polar is easier)',
+        'Sign errors when changing order of integration',
+        'Forgetting absolute value for volume (volume is always positive)'
+      ],
+      tips: [
+        'Always sketch the region first',
+        'Polar: use when region is circular or involves x² + y²',
+        'Cylindrical: use for cylinders, regions symmetric about z-axis',
+        'Spherical: use for spheres, cones, regions symmetric about origin',
+        'Type I: vertical slices (integrate dy dx)',
+        'Type II: horizontal slices (integrate dx dy)',
+        'Change order to make bounds constant or integral easier',
+        'Remember Jacobians: r for polar, r for cylindrical, ρ² sin φ for spherical',
+        'Volume under surface: ∬ f(x,y) dA where f ≥ 0',
+        'Practice converting between coordinate systems'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Multivariable Calculus',
+    topicName: 'Vector Fields',
+    content: {
+      title: 'Vector Fields',
+      intro: 'A vector field assigns a vector to each point in space. Vector fields model velocity fields in fluid dynamics, force fields in physics, and gradient fields in optimization. Understanding vector fields is essential for line integrals, flux, and fundamental theorems of calculus.',
+      keyPoints: [
+        'Vector field: function F(x,y) = ⟨P(x,y), Q(x,y)⟩ assigns vector to each point',
+        'Gradient field: F = ∇f for some scalar function f',
+        'Conservative field: line integral independent of path',
+        'F is conservative ⟺ F = ∇f for some potential function f',
+        'Test for conservative (2D): ∂P/∂y = ∂Q/∂x',
+        'Test for conservative (3D): curl F = 0',
+        'Curl: ∇ × F measures rotation/circulation of vector field',
+        'Divergence: ∇ · F measures source/sink strength',
+        'Divergence formula (2D): ∂P/∂x + ∂Q/∂y',
+        'Curl formula (3D): ∇ × F = ⟨Rᵧ - Qᵧ, Pᵧ - Rₓ, Qₓ - Pᵧ⟩',
+        'Potential function f: ∇f = F, found by integrating components',
+        'Physical meaning: gradient = steepest ascent, curl = rotation, divergence = expansion'
+      ],
+      examples: [
+        'Determine if F(x,y) = ⟨2xy, x²⟩ is conservative\nP = 2xy, Q = x²\nCompute partials:\n∂P/∂y = 2x\n∂Q/∂x = 2x\nSince ∂P/∂y = ∂Q/∂x, F is conservative\nAnswer: Yes, conservative',
+        'Find potential function f for F = ⟨2xy, x²⟩\nWe need ∇f = F, so:\nfₓ = 2xy and fᵧ = x²\nIntegrate fₓ with respect to x:\nf = ∫2xy dx = x²y + g(y)\nDifferentiate with respect to y:\nfᵧ = x² + g\'(y)\nCompare with fᵧ = x²:\ng\'(y) = 0, so g(y) = C\nAnswer: f(x,y) = x²y + C',
+        'Compute curl of F = ⟨xy, yz, xz⟩\nP = xy, Q = yz, R = xz\nCurl = ∇ × F = ⟨Rᵧ - Qᵧ, Pᵧ - Rₓ, Qₓ - Pᵧ⟩\nRᵧ = x, Qᵧ = y → first component: x - y\nPᵧ = 0, Rₓ = z → second component: 0 - z = -z\nQₓ = 0, Pᵧ = x → third component: 0 - x = -x\nAnswer: curl F = ⟨x-y, -z, -x⟩',
+        'Compute divergence of F = ⟨x², y², z²⟩\nP = x², Q = y², R = z²\ndiv F = ∇ · F = ∂P/∂x + ∂Q/∂y + ∂R/∂z\n= 2x + 2y + 2z\nAnswer: div F = 2x + 2y + 2z',
+        'Show F = ⟨y, x⟩ is NOT conservative\nP = y, Q = x\n∂P/∂y = 1\n∂Q/∂x = 1\nWait, they\'re equal! Let me check again.\nActually ∂P/∂y = 1 and ∂Q/∂x = 1, so it IS conservative.\nFind potential:\nfₓ = y → f = xy + g(y)\nfᵧ = x + g\'(y) = x → g\'(y) = 0\nAnswer: F IS conservative, f = xy + C',
+        'Is F = ⟨-y, x⟩ conservative?\nP = -y, Q = x\n∂P/∂y = -1\n∂Q/∂x = 0\nSince -1 ≠ 0, F is NOT conservative\nPhysical meaning: this is a rotation field (curl ≠ 0)\nAnswer: Not conservative'
+      ],
+      commonMistakes: [
+        'Confusing gradient (∇f), divergence (∇·F), and curl (∇×F)',
+        'Forgetting to check if ∂P/∂y = ∂Q/∂x before claiming conservative',
+        'Integration constant g(y) must be function of other variables',
+        'Wrong component order in curl formula',
+        'Thinking all vector fields are conservative (most aren\'t)',
+        'Not verifying potential function by computing gradient',
+        'Curl only defined in 3D (use ∂P/∂y = ∂Q/∂x test in 2D)',
+        'Sign errors in curl computation'
+      ],
+      tips: [
+        'Conservative test (2D): check ∂P/∂y = ∂Q/∂x',
+        'Conservative test (3D): check curl F = 0',
+        'Finding potential: integrate one component, then match others',
+        'Always include g(y) when integrating with respect to x',
+        'Gradient: outputs vector field from scalar function',
+        'Divergence: outputs scalar from vector field',
+        'Curl: outputs vector from vector field',
+        'Mnemonic: ∇ = ⟨∂/∂x, ∂/∂y, ∂/∂z⟩ (treat like a vector)',
+        'Physical: ∇f points uphill, curl measures spin, div measures expansion',
+        'Practice: sketch vector fields to build intuition'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Multivariable Calculus',
+    topicName: 'Line and Surface Integrals',
+    content: {
+      title: 'Line and Surface Integrals',
+      intro: 'Line integrals compute work along a path, circulation around a curve, and flux through a surface. Surface integrals extend double integrals to curved surfaces. These concepts are fundamental in physics, engineering, and the fundamental theorems of vector calculus.',
+      keyPoints: [
+        'Line integral of scalar: ∫ᴄ f ds measures accumulation along curve C',
+        'Line integral of vector field: ∫ᴄ F · dr measures work/circulation',
+        'Parametrize curve: r(t) = ⟨x(t), y(t), z(t)⟩, a ≤ t ≤ b',
+        'Formula: ∫ᴄ F · dr = ∫ₐᵇ F(r(t)) · r\'(t) dt',
+        'Fundamental theorem: ∫ᴄ ∇f · dr = f(B) - f(A) (path-independent)',
+        'Conservative field: work independent of path, depends only on endpoints',
+        'Surface integral: ∬ₛ f dS integrates over surface S',
+        'Parametrize surface: r(u,v) = ⟨x(u,v), y(u,v), z(u,v)⟩',
+        'Surface area element: dS = |rᵤ × rᵥ| du dv',
+        'Flux: ∬ₛ F · n dS measures flow through surface',
+        'Orientation: normal vector n points outward (closed surface)',
+        'For graph z = g(x,y): dS = √(1 + gₓ² + gᵧ²) dA'
+      ],
+      examples: [
+        'Evaluate ∫ᴄ xy ds where C is line segment from (0,0) to (1,1)\nParametrize: r(t) = ⟨t, t⟩, 0 ≤ t ≤ 1\nr\'(t) = ⟨1, 1⟩, |r\'(t)| = √2\nSubstitute:\n∫₀¹ (t)(t)√2 dt = √2 ∫₀¹ t² dt\n= √2 [t³/3]₀¹ = √2/3\nAnswer: √2/3',
+        'Compute work ∫ᴄ F · dr where F = ⟨y, x⟩, C is circle x² + y² = 1 counterclockwise\nParametrize: r(t) = ⟨cos t, sin t⟩, 0 ≤ t ≤ 2π\nr\'(t) = ⟨-sin t, cos t⟩\nF(r(t)) = ⟨sin t, cos t⟩\nF · r\' = (sin t)(-sin t) + (cos t)(cos t)\n= -sin²t + cos²t = cos(2t)\nIntegrate:\n∫₀²ᵖ cos(2t) dt = [sin(2t)/2]₀²ᵖ = 0\nAnswer: 0 (no net work around closed loop)',
+        'Evaluate ∫ᴄ ∇f · dr where f = x²y, C from (0,0) to (2,4) along any path\nSince F = ∇f (conservative), use fundamental theorem:\n∫ᴄ ∇f · dr = f(2,4) - f(0,0)\nf(2,4) = (2²)(4) = 16\nf(0,0) = 0\nAnswer: 16 (same for ANY path from (0,0) to (2,4))',
+        'Find surface area of paraboloid z = x² + y² for x² + y² ≤ 1\nUse formula for graph z = g(x,y):\ngₓ = 2x, gᵧ = 2y\ndS = √(1 + 4x² + 4y²) dA\nConvert to polar:\nA = ∫₀²ᵖ ∫₀¹ √(1 + 4r²) r dr dθ\nLet u = 1 + 4r², du = 8r dr:\n= ∫₀²ᵖ (1/8)∫₁⁵ √u du dθ\n= (1/8)(2π)[2u^(3/2)/3]₁⁵\n= (π/6)(5^(3/2) - 1)\nAnswer: (π/6)(5√5 - 1)',
+        'Compute flux of F = ⟨0, 0, z⟩ upward through z = 4 - x² - y², z ≥ 0\nParametrize: r(x,y) = ⟨x, y, 4-x²-y²⟩\nPartials: rₓ = ⟨1, 0, -2x⟩, rᵧ = ⟨0, 1, -2y⟩\nNormal: rₓ × rᵧ = ⟨2x, 2y, 1⟩ (k-component positive = upward)\nF(r) = ⟨0, 0, 4-x²-y²⟩\nF · (rₓ × rᵧ) = 4 - x² - y²\nFlux = ∬(4 - x² - y²) dA over disk x² + y² ≤ 4\nPolar: ∫₀²ᵖ ∫₀² (4 - r²)r dr dθ = 2π[2r² - r⁴/4]₀² = 2π(8-4) = 8π\nAnswer: 8π',
+        'Show ∫ᴄ ⟨-y, x⟩ · dr = 2·Area(R) for simple closed curve C enclosing R\nThis is Green\'s theorem verification:\n∫ᴄ ⟨-y, x⟩ · dr = ∬ᴿ (∂Q/∂x - ∂P/∂y) dA\nP = -y, Q = x\n∂Q/∂x = 1, ∂P/∂y = -1\n= ∬ᴿ (1 - (-1)) dA = ∬ᴿ 2 dA = 2·Area(R)\nAnswer: Verified'
+      ],
+      commonMistakes: [
+        'Forgetting to compute |r\'(t)| for scalar line integrals',
+        'Using |r\'(t)| for vector line integrals (use r\'(t) dot product)',
+        'Wrong parameterization direction changes sign',
+        'Not checking if field is conservative before doing hard integral',
+        'Forgetting cross product |rᵤ × rᵥ| in surface integral',
+        'Using wrong normal direction for flux (check orientation)',
+        'Sign errors in fundamental theorem (should be final - initial)',
+        'Computing surface integral without parametrization'
+      ],
+      tips: [
+        'Scalar line integral: use |r\'(t)| (arc length element ds)',
+        'Vector line integral: use r\'(t) (tangent vector dr)',
+        'Check if F = ∇f first (use fundamental theorem if yes)',
+        'Fundamental theorem: work = f(end) - f(start)',
+        'Closed curve + conservative field = integral is 0',
+        'Surface integral: parametrize, compute rᵤ × rᵥ',
+        'Upward orientation: normal has positive k-component',
+        'Flux = F · n (perpendicular component)',
+        'Green\'s theorem connects line integral to double integral',
+        'Practice: sketch curve/surface, check orientation'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Multivariable Calculus',
+    topicName: 'Green\'s and Stokes\' Theorems',
+    content: {
+      title: 'Green\'s and Stokes\' Theorems',
+      intro: 'Green\'s theorem, Stokes\' theorem, and the divergence theorem are the fundamental theorems of vector calculus. They relate line integrals, surface integrals, and volume integrals, providing powerful computational tools and deep insights into fluid flow, electromagnetism, and physics.',
+      keyPoints: [
+        'Green\'s theorem: ∮ᴄ P dx + Q dy = ∬ᴿ (∂Q/∂x - ∂P/∂y) dA',
+        'Green connects line integral around C to double integral over region R',
+        'C must be positively oriented (counterclockwise), closed, simple',
+        'Stokes\' theorem: ∮ᴄ F · dr = ∬ₛ (curl F) · n dS',
+        'Stokes connects line integral around boundary to surface integral',
+        'Generalizes Green\'s theorem to 3D',
+        'Divergence theorem: ∬ₛ F · n dS = ∭ᴿ div F dV',
+        'Divergence theorem connects flux out of closed surface to triple integral',
+        'Also called Gauss\'s theorem',
+        'Physical meaning: circulation = total curl, flux = total divergence',
+        'All three theorems generalize fundamental theorem of calculus',
+        'Used to simplify difficult integrals and prove theoretical results'
+      ],
+      examples: [
+        'Use Green\'s theorem: ∮ᴄ (x² + y) dx + (2x - y²) dy, C is circle x² + y² = 4\nP = x² + y, Q = 2x - y²\n∂Q/∂x = 2, ∂P/∂y = 1\nGreen\'s theorem:\n∮ᴄ = ∬ᴿ (2 - 1) dA = ∬ᴿ 1 dA = Area(R)\nR is disk of radius 2:\nArea = π(2²) = 4π\nAnswer: 4π (much easier than direct line integral!)',
+        'Find area enclosed by ellipse x²/4 + y²/9 = 1 using Green\'s theorem\nUse formula: Area = (1/2)∮ᴄ x dy - y dx\nThis comes from Green with P = -y, Q = x:\n∬(∂Q/∂x - ∂P/∂y) dA = ∬(1 - (-1)) dA = 2·Area\nParametrize: x = 2cos t, y = 3sin t, 0 ≤ t ≤ 2π\ndx = -2sin t dt, dy = 3cos t dt\n(1/2)∮(2cos t)(3cos t) - (3sin t)(-2sin t) dt\n= (1/2)∫₀²ᵖ (6cos²t + 6sin²t) dt\n= (1/2)∫₀²ᵖ 6 dt = 3(2π) = 6π\nAnswer: 6π',
+        'Use Stokes\' theorem: ∮ᴄ F · dr where F = ⟨-y, x, z²⟩, C is circle x² + y² = 1 in plane z = 2\nCompute curl F:\nP = -y, Q = x, R = z²\ncurl F = ⟨Rᵧ - Qᵧ, Pᵧ - Rₓ, Qₓ - Pᵧ⟩\n= ⟨0 - 0, 0 - 0, 1 - (-1)⟩ = ⟨0, 0, 2⟩\nSurface S: disk x² + y² ≤ 1 in plane z = 2\nUpward normal: n = ⟨0, 0, 1⟩\nStokes: ∮ᴄ F · dr = ∬ₛ ⟨0,0,2⟩ · ⟨0,0,1⟩ dS\n= ∬ₛ 2 dS = 2·Area(S) = 2π\nAnswer: 2π',
+        'Use divergence theorem: flux of F = ⟨x³, y³, z³⟩ out of unit sphere\ndiv F = ∂(x³)/∂x + ∂(y³)/∂y + ∂(z³)/∂z = 3x² + 3y² + 3z²\nDivergence theorem:\n∬ₛ F · n dS = ∭ div F dV\n= ∭(3x² + 3y² + 3z²) dV\nSpherical: x² + y² + z² = ρ²\n= 3∫₀²ᵖ ∫₀ᵖ ∫₀¹ ρ² · ρ² sin φ dρ dφ dθ\n= 3∫₀²ᵖ ∫₀ᵖ [ρ⁵/5]₀¹ sin φ dφ dθ\n= (3/5)∫₀²ᵖ [-cos φ]₀ᵖ dθ = (3/5)(2)(2π) = 12π/5\nAnswer: 12π/5',
+        'Verify Stokes\' for F = ⟨y, -x, 0⟩ on hemisphere z = √(1-x²-y²)\nDirect line integral around boundary (circle x² + y² = 1, z = 0):\nParametrize: r(t) = ⟨cos t, sin t, 0⟩, 0 ≤ t ≤ 2π\nF(r(t)) = ⟨sin t, -cos t, 0⟩, r\'(t) = ⟨-sin t, cos t, 0⟩\n∮F · dr = ∫₀²ᵖ (sin t)(-sin t) + (-cos t)(cos t) dt\n= ∫₀²ᵖ (-sin²t - cos²t) dt = ∫₀²ᵖ -1 dt = -2π\nSurface integral:\ncurl F = ⟨0, 0, -1-1⟩ = ⟨0, 0, -2⟩\nDownward normal on hemisphere → multiply by -1 for upward\n∬ ⟨0,0,-2⟩ · (upward n) dS = -2 · (hemisphere area/2)\nWait, let me use projection: ∬ᴿ -2 dA = -2π\nAnswer: Both give -2π ✓',
+        'Use Green to evaluate ∮ eˣ sin y dx + eˣ cos y dy around triangle (0,0), (1,0), (0,1)\nP = eˣ sin y, Q = eˣ cos y\n∂Q/∂x = eˣ cos y, ∂P/∂y = eˣ cos y\n∂Q/∂x - ∂P/∂y = 0\nGreen: ∮ = ∬ 0 dA = 0\nAnswer: 0 (this is conservative field!)'
+      ],
+      commonMistakes: [
+        'Wrong orientation: Green needs counterclockwise, Stokes needs right-hand rule',
+        'Forgetting divergence theorem only works for closed surfaces',
+        'Sign errors in curl computation',
+        'Using Green\'s theorem on non-simple curves (with self-intersections)',
+        'Not verifying curve is closed before applying circulation theorems',
+        'Confusing when to use which theorem',
+        'Wrong normal direction in Stokes\' or divergence theorem',
+        'Forgetting these theorems can make hard integrals easy'
+      ],
+      tips: [
+        'Green: line integral = double integral (2D)',
+        'Stokes: line integral = surface integral (3D)',
+        'Divergence: surface integral = triple integral (3D)',
+        'Green test: ∂Q/∂x - ∂P/∂y = 0 → conservative',
+        'Stokes test: curl F = 0 → conservative',
+        'Use theorems to avoid parametrization',
+        'Circulation ∮F · dr related to curl',
+        'Flux ∬F · n dS related to divergence',
+        'Check orientation carefully (counterclockwise, outward normal)',
+        'These theorems are generalizations of FTC: ∫f\' dx = f(b) - f(a)'
+      ]
+    }
   }
 ]
 
