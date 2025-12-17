@@ -1020,6 +1020,604 @@ export const pregeneratedNotes: PregeneratedNote[] = [
       ]
     }
   },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Cellular Respiration',
+    content: {
+      title: 'Cellular Respiration',
+      intro: 'Cellular respiration is the process by which cells break down glucose to produce ATP (energy). This process occurs in all living cells and is essential for powering cellular activities.',
+      keyPoints: [
+        'Cellular respiration converts glucose into ATP (adenosine triphosphate)',
+        'Occurs in the mitochondria of eukaryotic cells',
+        'Overall equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP',
+        'Inputs: glucose and oxygen',
+        'Outputs: carbon dioxide, water, and ATP energy',
+        'Three main stages: glycolysis, Krebs cycle, electron transport chain',
+        'Glycolysis occurs in cytoplasm, breaks glucose into pyruvate',
+        'Krebs cycle (citric acid cycle) occurs in mitochondrial matrix',
+        'Electron transport chain in inner mitochondrial membrane produces most ATP',
+        'Aerobic respiration requires oxygen and produces ~36-38 ATP per glucose',
+        'Anaerobic respiration (fermentation) occurs without oxygen, produces only 2 ATP',
+        'Lactic acid fermentation in muscles causes soreness during intense exercise',
+        'Alcoholic fermentation produces ethanol (used in brewing)',
+        'Cellular respiration is the opposite of photosynthesis',
+        'All organisms (plants and animals) perform cellular respiration'
+      ],
+      examples: [
+        'Your muscle cells use cellular respiration to produce ATP for movement',
+        'During sprint: muscles use oxygen faster than supplied → lactic acid fermentation',
+        'Yeast + sugar → alcoholic fermentation → ethanol + CO₂ (bread rises)',
+        'Plant cells respire at night when photosynthesis stops',
+        'Complete aerobic respiration: 1 glucose → ~36-38 ATP molecules',
+        'Fermentation: 1 glucose → 2 ATP (much less efficient than aerobic)'
+      ],
+      commonMistakes: [
+        'Thinking only animals do cellular respiration (plants do it too)',
+        'Confusing cellular respiration with breathing (they\'re related but different)',
+        'Mixing up the equations for respiration and photosynthesis',
+        'Thinking fermentation produces more ATP than aerobic respiration',
+        'Not recognizing that mitochondria are required for most ATP production'
+      ],
+      tips: [
+        'Memorize equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP',
+        'Remember: respiration "breaks down" glucose to release energy',
+        'Aerobic = with oxygen (more ATP), Anaerobic = without oxygen (less ATP)',
+        'Mitochondria = powerhouse because it makes most ATP here',
+        'Cellular respiration and photosynthesis are opposite processes'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Evolution and Natural Selection',
+    content: {
+      title: 'Evolution and Natural Selection',
+      intro: 'Evolution is the process by which species change over time through natural selection. Understanding evolution explains the diversity of life on Earth and how organisms adapt to their environments.',
+      keyPoints: [
+        'Evolution: change in species over time through genetic variation',
+        'Natural selection: survival and reproduction of individuals best adapted to environment',
+        'Charles Darwin proposed natural selection in "On the Origin of Species" (1859)',
+        'Key ingredients for natural selection: variation, inheritance, selection, time',
+        'Variation: individuals in population have different traits',
+        'Inheritance: traits are passed from parents to offspring through genes',
+        'Selection: individuals with favorable traits survive and reproduce more',
+        'Over time, beneficial traits become more common in the population',
+        'Adaptation: trait that increases survival/reproduction in specific environment',
+        'Fitness: measure of reproductive success (not physical strength)',
+        'Evidence for evolution: fossils, comparative anatomy, DNA similarities, biogeography',
+        'Homologous structures: similar structure, different function (common ancestor)',
+        'Vestigial structures: remnants of features that were useful in ancestors',
+        'Speciation: formation of new species when populations can\'t interbreed',
+        'Evolution doesn\'t have a goal—it responds to current environment'
+      ],
+      examples: [
+        'Peppered moths: dark moths survived better in polluted areas (industrial melanism)',
+        'Antibiotic resistance: bacteria evolve resistance when exposed to antibiotics',
+        'Darwin\'s finches: different beak shapes evolved for different food sources',
+        'Whale flippers and human arms: homologous structures from common ancestor',
+        'Human tailbone (coccyx): vestigial structure from ancestors with tails',
+        'Fossil record shows gradual changes in horse size and toe number over millions of years'
+      ],
+      commonMistakes: [
+        'Thinking evolution happens to individuals (it happens in populations over generations)',
+        'Believing evolution has a goal or direction',
+        'Saying "survival of the fittest" means strongest (it means best adapted)',
+        'Thinking evolution is just a theory without evidence (it\'s supported by massive evidence)',
+        'Confusing adaptation (evolutionary process) with acclimation (individual adjustment)'
+      ],
+      tips: [
+        'Remember VIST: Variation, Inheritance, Selection, Time',
+        'Natural selection acts on existing variation—doesn\'t create new traits directly',
+        'Fitness = reproductive success, not physical fitness',
+        'Evolution is change in allele frequencies in a population over time',
+        'Multiple lines of evidence support evolution (fossils, DNA, anatomy, embryology)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Ecology and Ecosystems',
+    content: {
+      title: 'Ecology and Ecosystems',
+      intro: 'Ecology studies the interactions between organisms and their environment. Understanding ecosystems, energy flow, and population dynamics is essential for environmental conservation and understanding life on Earth.',
+      keyPoints: [
+        'Ecology: study of interactions between organisms and their environment',
+        'Ecosystem: all living (biotic) and non-living (abiotic) factors in an area',
+        'Biotic factors: living things (plants, animals, bacteria, fungi)',
+        'Abiotic factors: non-living things (temperature, water, sunlight, soil)',
+        'Population: all individuals of one species in an area',
+        'Community: all populations of different species in an area',
+        'Habitat: where an organism lives',
+        'Niche: an organism\'s role in the ecosystem (what it eats, when it\'s active, etc.)',
+        'Food chain: linear sequence of who eats whom',
+        'Food web: interconnected food chains showing complex feeding relationships',
+        'Trophic levels: producers → primary consumers → secondary consumers → tertiary consumers',
+        'Energy pyramid: shows energy decreases at each trophic level (~10% passes up)',
+        'Producers (autotrophs): make their own food via photosynthesis',
+        'Consumers (heterotrophs): eat other organisms for energy',
+        'Decomposers: break down dead material, recycle nutrients (bacteria, fungi)',
+        'Symbiotic relationships: mutualism (+/+), commensalism (+/0), parasitism (+/-)',
+        'Carrying capacity: maximum population size an environment can support',
+        'Limiting factors: resources that limit population growth (food, water, space)'
+      ],
+      examples: [
+        'Food chain: grass → grasshopper → frog → snake → hawk',
+        'Energy pyramid: 10,000 J (plants) → 1,000 J (herbivores) → 100 J (carnivores)',
+        'Mutualism: bees pollinate flowers while getting nectar (both benefit)',
+        'Commensalism: barnacles on whale (barnacle benefits, whale unaffected)',
+        'Parasitism: tick on dog (tick benefits, dog harmed)',
+        'Limiting factor: drought limits plant growth, reducing herbivore populations',
+        'Decomposers: mushrooms break down dead log, returning nutrients to soil'
+      ],
+      commonMistakes: [
+        'Thinking all energy passes to the next trophic level (only ~10% does)',
+        'Confusing food chains with food webs (webs are more realistic)',
+        'Thinking decomposers are consumers (they\'re a separate category)',
+        'Mixing up habitat (where it lives) with niche (its role)',
+        'Forgetting that plants are producers and also consumers (cellular respiration)',
+        'Confusing population, community, and ecosystem'
+      ],
+      tips: [
+        'Remember: only ~10% of energy transfers between trophic levels',
+        'Producers always form the base of food chains and pyramids',
+        'Symbiosis: mutualism = both win, commensalism = one wins/one neutral, parasitism = one wins/one loses',
+        'Draw food webs to see connections between organisms',
+        'Carrying capacity is like a ceiling—populations can\'t grow beyond it indefinitely'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Mitosis and Cell Division',
+    content: {
+      title: 'Mitosis and Cell Division',
+      intro: 'Mitosis is the process by which a cell divides to produce two identical daughter cells. This process is essential for growth, repair, and asexual reproduction in organisms.',
+      keyPoints: [
+        'Cell cycle: series of events in cell growth and division',
+        'Two main phases: interphase (growth) and mitotic phase (division)',
+        'Interphase has 3 stages: G1 (growth), S (DNA replication), G2 (preparation for division)',
+        'Mitosis: nuclear division producing two identical nuclei',
+        'Cytokinesis: division of cytoplasm following mitosis',
+        'Four stages of mitosis: prophase, metaphase, anaphase, telophase (PMAT)',
+        'Prophase: chromosomes condense, nuclear membrane breaks down, spindle forms',
+        'Metaphase: chromosomes line up at cell equator (middle)',
+        'Anaphase: sister chromatids separate and move to opposite poles',
+        'Telophase: nuclear membranes reform, chromosomes decondense',
+        'Cytokinesis: cell membrane pinches (animal) or cell plate forms (plant)',
+        'Result: two genetically identical diploid daughter cells',
+        'Mitosis produces body (somatic) cells for growth and repair',
+        'DNA replicates during S phase, so each chromosome has two sister chromatids',
+        'Spindle fibers attach to centromeres and pull chromatids apart',
+        'Cell division is tightly regulated—errors can lead to cancer'
+      ],
+      examples: [
+        'Human skin cells divide by mitosis to replace old/damaged cells',
+        'When you cut your finger, mitosis produces new cells for healing',
+        'Plant root tip cells rapidly divide via mitosis for growth',
+        'One cell with 46 chromosomes → mitosis → two cells each with 46 chromosomes',
+        'During S phase, DNA amount doubles from 2n to 4n, then mitosis returns to 2n in each daughter',
+        'Cancer: uncontrolled mitosis due to mutations in cell cycle regulation'
+      ],
+      commonMistakes: [
+        'Confusing mitosis with meiosis (meiosis is for sex cells, produces 4 non-identical cells)',
+        'Thinking DNA replicates during mitosis (it replicates before, in S phase)',
+        'Mixing up the order of mitosis stages',
+        'Forgetting that cytokinesis is separate from mitosis',
+        'Thinking daughter cells are haploid (they\'re diploid, same as parent)'
+      ],
+      tips: [
+        'Remember PMAT: Prophase, Metaphase, Anaphase, Telophase',
+        'Metaphase: chromosomes in the Middle',
+        'Anaphase: chromatids move Apart',
+        'Interphase is when cell grows and DNA replicates—not part of mitosis itself',
+        'Mitosis = identical cells, Meiosis = sex cells (different)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Meiosis and Sexual Reproduction',
+    content: {
+      title: 'Meiosis and Sexual Reproduction',
+      intro: 'Meiosis is the specialized cell division that produces sex cells (gametes) with half the chromosome number. This process is essential for sexual reproduction and creates genetic diversity.',
+      keyPoints: [
+        'Meiosis: division producing four non-identical haploid cells (gametes)',
+        'Occurs only in reproductive organs (testes and ovaries)',
+        'Purpose: produce sex cells (sperm and eggs) for sexual reproduction',
+        'Two divisions: meiosis I and meiosis II',
+        'Meiosis I: homologous chromosomes separate (reduces chromosome number)',
+        'Meiosis II: sister chromatids separate (similar to mitosis)',
+        'Result: four haploid cells (n) from one diploid cell (2n)',
+        'Diploid (2n): two sets of chromosomes (body cells)',
+        'Haploid (n): one set of chromosomes (sex cells)',
+        'Humans: diploid cells have 46 chromosomes, haploid gametes have 23',
+        'Crossing over: exchange of DNA between homologous chromosomes in prophase I',
+        'Independent assortment: random distribution of maternal/paternal chromosomes',
+        'Crossing over and independent assortment create genetic variation',
+        'Fertilization: fusion of sperm (n) and egg (n) → zygote (2n)',
+        'Sexual reproduction increases genetic diversity compared to asexual',
+        'Meiosis errors can cause chromosome disorders (e.g., Down syndrome)'
+      ],
+      examples: [
+        'Human cell with 46 chromosomes → meiosis → 4 gametes each with 23 chromosomes',
+        'Sperm (23) + egg (23) → fertilization → zygote (46 chromosomes)',
+        'Crossing over: pieces of chromosome swap between homologous pairs',
+        'Independent assortment: 2²³ possible chromosome combinations in human gametes',
+        'Nondisjunction in meiosis: egg with 24 chromosomes → Down syndrome (trisomy 21)',
+        'Identical twins: from one zygote splitting; Fraternal twins: from two separate eggs'
+      ],
+      commonMistakes: [
+        'Confusing mitosis with meiosis (mitosis = 2 identical cells, meiosis = 4 different gametes)',
+        'Thinking meiosis produces diploid cells (it produces haploid)',
+        'Forgetting that meiosis has two divisions (meiosis I and II)',
+        'Not recognizing crossing over and independent assortment create variation',
+        'Thinking all cells undergo meiosis (only reproductive cells do)'
+      ],
+      tips: [
+        'Mitosis = "Make Identical Two," Meiosis = "Make Eggs/sperm, Involve Sex"',
+        'Remember: meiosis → half the chromosomes (2n → n)',
+        'Crossing over happens in prophase I (creates variation)',
+        'Fertilization restores diploid number (n + n = 2n)',
+        'Genetic variation from meiosis explains why siblings look different'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Enzymes and Metabolism',
+    content: {
+      title: 'Enzymes and Metabolism',
+      intro: 'Enzymes are biological catalysts that speed up chemical reactions in living organisms. Understanding enzyme function is crucial for comprehending metabolism and cellular processes.',
+      keyPoints: [
+        'Enzymes: proteins that speed up chemical reactions (biological catalysts)',
+        'Substrate: the reactant molecule that binds to an enzyme',
+        'Active site: specific region on enzyme where substrate binds',
+        'Lock-and-key model: substrate fits into active site like a key in a lock',
+        'Induced fit: enzyme changes shape slightly to fit substrate better',
+        'Enzymes lower activation energy needed to start a reaction',
+        'Enzymes are not consumed—they can be reused many times',
+        'Enzyme names often end in "-ase" (e.g., amylase, lactase, DNA polymerase)',
+        'Factors affecting enzyme activity: temperature, pH, substrate concentration',
+        'Optimal temperature: enzyme works best (too hot → denatures)',
+        'Optimal pH: specific to each enzyme (pepsin works in acidic stomach)',
+        'Denaturation: enzyme loses shape and function (high temp or extreme pH)',
+        'Competitive inhibitors: block active site by mimicking substrate',
+        'Non-competitive inhibitors: bind elsewhere, change enzyme shape',
+        'Metabolism: all chemical reactions in an organism',
+        'Anabolic reactions: build molecules (require energy)',
+        'Catabolic reactions: break down molecules (release energy)'
+      ],
+      examples: [
+        'Amylase breaks down starch into sugars (saliva and pancreas)',
+        'Lactase breaks down lactose (milk sugar); lactose intolerant people lack it',
+        'DNA polymerase builds new DNA strands during replication',
+        'Catalase breaks down hydrogen peroxide into water and oxygen (in cells)',
+        'Heating egg whites denatures proteins—they turn white and solid',
+        'Enzyme activity increases with temperature until optimum, then drops sharply',
+        'Pepsin (stomach enzyme) works best at pH 2; trypsin (intestine) at pH 8'
+      ],
+      commonMistakes: [
+        'Thinking enzymes are consumed in reactions (they\'re reusable)',
+        'Confusing substrate with product',
+        'Believing all enzymes work at the same temperature and pH',
+        'Not recognizing that denaturation is usually irreversible',
+        'Thinking enzymes provide energy (they speed up reactions but don\'t add energy)'
+      ],
+      tips: [
+        'Remember: enzymes end in "-ase" (easy to identify)',
+        'Substrate + enzyme → enzyme-substrate complex → product + enzyme',
+        'Enzyme shape is critical—denaturation destroys function',
+        'Each enzyme is specific for one substrate (lock-and-key)',
+        'High temp or wrong pH → denaturation → loss of function'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Plant Structure and Transport',
+    content: {
+      title: 'Plant Structure and Transport',
+      intro: 'Plants have specialized structures and transport systems to move water, nutrients, and sugars throughout the organism. Understanding plant anatomy is key to understanding how plants grow and survive.',
+      keyPoints: [
+        'Three main plant organs: roots, stems, leaves',
+        'Roots: anchor plant, absorb water and minerals from soil',
+        'Root hairs: increase surface area for water absorption',
+        'Stems: support plant, transport materials between roots and leaves',
+        'Leaves: main site of photosynthesis, gas exchange through stomata',
+        'Vascular tissue: transports water, nutrients, and sugars',
+        'Xylem: transports water and minerals from roots to leaves (one direction, upward)',
+        'Phloem: transports sugars (glucose) from leaves to rest of plant (bidirectional)',
+        'Transpiration: evaporation of water from leaves through stomata',
+        'Transpiration pull: creates suction that pulls water up through xylem',
+        'Stomata: pores in leaves that allow CO₂ in and O₂/water vapor out',
+        'Guard cells: control opening and closing of stomata',
+        'Cuticle: waxy coating on leaves that prevents water loss',
+        'Meristems: regions of rapid cell division (growth)',
+        'Apical meristem: at tips of roots and shoots (primary growth—length)',
+        'Lateral meristem: in stems (secondary growth—width/thickness)',
+        'Cohesion-adhesion theory: water molecules stick together and to xylem walls'
+      ],
+      examples: [
+        'Water travels: soil → root hairs → xylem → stem → leaves → stomata → air',
+        'Glucose made in leaves travels via phloem to roots for storage',
+        'On hot day, stomata close to reduce water loss (transpiration)',
+        'Carrot: taproot stores nutrients; grass: fibrous roots spread widely',
+        'Tree rings: result of secondary growth in lateral meristem',
+        'Celery in colored water: xylem visible as colored streaks in stem',
+        'Cactus has thick cuticle and few stomata to minimize water loss in desert'
+      ],
+      commonMistakes: [
+        'Confusing xylem and phloem (xylem = water up, phloem = sugar around)',
+        'Thinking stomata are always open (they close to conserve water)',
+        'Believing only roots absorb water (root hairs do most absorption)',
+        'Confusing transpiration with respiration',
+        'Not recognizing that phloem can transport in multiple directions'
+      ],
+      tips: [
+        'Remember: Xylem carries "X"tra water upward',
+        'Phloem = "flow"em = flows sugar to where needed',
+        'Transpiration = like perspiration (evaporation of water)',
+        'Root hairs greatly increase surface area (like villi in intestines)',
+        'Stomata open during day for photosynthesis, may close at night or in drought'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Homeostasis and Feedback',
+    content: {
+      title: 'Homeostasis and Feedback Mechanisms',
+      intro: 'Homeostasis is the maintenance of stable internal conditions in organisms. Understanding feedback mechanisms explains how the body regulates temperature, blood sugar, and other vital processes.',
+      keyPoints: [
+        'Homeostasis: maintaining stable internal conditions despite external changes',
+        'Examples of regulated variables: temperature, pH, water balance, blood sugar',
+        'Negative feedback: response reverses the initial stimulus (most common)',
+        'Positive feedback: response amplifies the initial stimulus (less common)',
+        'Thermoregulation: maintaining constant body temperature',
+        'Endotherms: regulate body temperature internally (birds, mammals)',
+        'Ectotherms: rely on external environment for temperature (reptiles, fish)',
+        'When hot: sweat, vasodilation (blood vessels widen), panting',
+        'When cold: shivering, vasoconstriction (blood vessels narrow), goosebumps',
+        'Blood glucose regulation: insulin lowers blood sugar, glucagon raises it',
+        'Diabetes: inability to regulate blood sugar properly',
+        'Osmoregulation: maintaining water and salt balance',
+        'Kidneys: filter blood, regulate water and waste removal',
+        'Set point: ideal value for a regulated variable (e.g., 37°C body temp)',
+        'Sensor: detects changes from set point',
+        'Control center: processes information and sends signals (often brain)',
+        'Effector: carries out response to bring variable back to set point'
+      ],
+      examples: [
+        'Body temp rises → sweat glands activated → evaporation cools body → temp returns to normal (negative feedback)',
+        'Blood sugar high after meal → pancreas releases insulin → cells absorb glucose → blood sugar decreases (negative feedback)',
+        'Blood sugar low → pancreas releases glucagon → liver releases glucose → blood sugar increases (negative feedback)',
+        'Childbirth: contractions → oxytocin release → stronger contractions → more oxytocin (positive feedback loop)',
+        'Blood clotting: platelet activation → more platelets recruited → clot forms (positive feedback)',
+        'Sweating during exercise: evaporation removes heat, cools body'
+      ],
+      commonMistakes: [
+        'Thinking positive feedback is more common (negative feedback maintains stability)',
+        'Confusing negative feedback with "bad" (it\'s actually stabilizing)',
+        'Mixing up insulin and glucagon functions',
+        'Not recognizing set point as the target value',
+        'Believing all organisms regulate temperature the same way'
+      ],
+      tips: [
+        'Negative feedback = brings variable back to normal (like a thermostat)',
+        'Positive feedback = amplifies change (less common, used in specific situations)',
+        'Insulin lowers blood sugar, Glucagon raises it',
+        'Homeostasis = maintaining balance/stability',
+        'Set point → sensor → control center → effector → response'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Immune System Basics',
+    content: {
+      title: 'Immune System Basics',
+      intro: 'The immune system defends the body against pathogens like bacteria, viruses, and parasites. Understanding innate and adaptive immunity is essential for health and disease prevention.',
+      keyPoints: [
+        'Immune system: defends body against disease-causing agents (pathogens)',
+        'Pathogens: harmful microorganisms (bacteria, viruses, fungi, parasites)',
+        'Two lines of defense: innate (non-specific) and adaptive (specific)',
+        'Innate immunity: first line of defense, immediate, non-specific',
+        'Physical barriers: skin, mucus membranes, stomach acid, enzymes in saliva',
+        'Inflammatory response: swelling, redness, heat, pain at infection site',
+        'White blood cells (leukocytes): cells of immune system',
+        'Phagocytes: cells that engulf and digest pathogens (e.g., macrophages)',
+        'Adaptive immunity: specific response, takes longer, has memory',
+        'Antigens: molecules on pathogen surface recognized as foreign',
+        'Antibodies: proteins produced by B cells that bind to specific antigens',
+        'B cells: produce antibodies (humoral immunity)',
+        'T cells: destroy infected cells directly (cell-mediated immunity)',
+        'Memory cells: remain after infection, provide immunity to future infections',
+        'Vaccination: exposes immune system to weakened/dead pathogen to create memory',
+        'Allergies: immune system overreacts to harmless substances',
+        'Autoimmune diseases: immune system attacks body\'s own cells'
+      ],
+      examples: [
+        'Skin cut → bacteria enter → inflammation → phagocytes arrive → bacteria destroyed',
+        'Virus infects cell → antigen displayed → T cells recognize and destroy infected cell',
+        'First chickenpox infection: slow response, get sick; Second exposure: fast response from memory cells, no illness',
+        'Vaccine: weakened measles virus → immune response → memory cells formed → protection against measles',
+        'Fever: raises body temperature to slow pathogen reproduction',
+        'Allergic reaction: pollen triggers histamine release → sneezing, itching, inflammation'
+      ],
+      commonMistakes: [
+        'Thinking antibiotics work on viruses (they only work on bacteria)',
+        'Confusing antigens with antibodies',
+        'Believing innate immunity is learned (it\'s present from birth)',
+        'Thinking vaccines give you the disease (they trigger immunity without full infection)',
+        'Not recognizing that immunity can be passive (from mother) or active (from infection/vaccine)'
+      ],
+      tips: [
+        'Innate = immediate, non-specific; Adaptive = specific, has memory',
+        'Antibodies are Y-shaped proteins that tag pathogens for destruction',
+        'Memory cells = why you don\'t get chickenpox twice',
+        'Vaccination = training immune system with a "practice run"',
+        'White blood cells are the immune system\'s army'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Protein Synthesis',
+    content: {
+      title: 'Protein Synthesis (Transcription and Translation)',
+      intro: 'Protein synthesis is the process by which cells use DNA instructions to build proteins. This two-step process—transcription and translation—is central to gene expression and cell function.',
+      keyPoints: [
+        'Gene expression: process of using DNA to make proteins',
+        'Two main steps: transcription (DNA → RNA) and translation (RNA → protein)',
+        'Transcription occurs in the nucleus',
+        'RNA polymerase: enzyme that reads DNA and makes RNA',
+        'mRNA (messenger RNA): carries genetic code from DNA to ribosome',
+        'Transcription: DNA template strand → mRNA copy',
+        'RNA uses uracil (U) instead of thymine (T)',
+        'DNA base A → RNA base U; DNA base T → RNA base A; C and G pair as usual',
+        'mRNA exits nucleus through nuclear pores',
+        'Translation occurs in the cytoplasm at ribosomes',
+        'Ribosome: reads mRNA and assembles amino acids into protein',
+        'tRNA (transfer RNA): carries amino acids to ribosome',
+        'Codon: 3-base sequence on mRNA that codes for one amino acid',
+        'Anticodon: 3-base sequence on tRNA that pairs with mRNA codon',
+        'Start codon (AUG): signals where translation begins',
+        'Stop codons (UAA, UAG, UGA): signal end of translation',
+        'Amino acids link together to form polypeptide (protein)',
+        'Central Dogma: DNA → RNA → Protein'
+      ],
+      examples: [
+        'DNA template: TAC → mRNA codon: AUG (start codon, codes for methionine)',
+        'DNA sequence TACGCAATT → mRNA sequence AUGCGUUAA',
+        'mRNA codon UUU → tRNA anticodon AAA → amino acid phenylalanine added',
+        'Insulin protein: transcribed from insulin gene, translated at ribosome',
+        'Mutations: change in DNA → change in mRNA → change in amino acid → altered protein',
+        'Sickle cell anemia: single DNA base change → wrong amino acid in hemoglobin'
+      ],
+      commonMistakes: [
+        'Confusing transcription with translation',
+        'Mixing up DNA bases with RNA bases (RNA has U instead of T)',
+        'Thinking translation occurs in nucleus (it\'s in cytoplasm)',
+        'Forgetting that codons are on mRNA, anticodons on tRNA',
+        'Not recognizing that multiple codons can code for same amino acid (redundancy)'
+      ],
+      tips: [
+        'Remember: TransCRIPtion makes a SCRIPT (mRNA copy)',
+        'TransLATion makes a protein LATER (in cytoplasm)',
+        'Transcription = DNA → RNA (nucleus); Translation = RNA → protein (ribosome)',
+        'Codon = 3 bases on mRNA; codes for 1 amino acid',
+        'Central Dogma: DNA → RNA → Protein (flow of genetic information)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Human Body Systems Overview',
+    content: {
+      title: 'Human Body Systems Overview',
+      intro: 'The human body consists of multiple interconnected organ systems that work together to maintain life. Understanding these systems and their interactions is fundamental to human biology and health.',
+      keyPoints: [
+        'Circulatory system: heart, blood vessels, blood; transports oxygen, nutrients, wastes',
+        'Heart pumps blood; arteries carry blood away, veins return blood to heart',
+        'Respiratory system: lungs, trachea, bronchi; gas exchange (O₂ in, CO₂ out)',
+        'Digestive system: breaks down food into nutrients; includes mouth, stomach, intestines',
+        'Small intestine: absorbs nutrients; large intestine: absorbs water',
+        'Nervous system: brain, spinal cord, nerves; controls and coordinates body',
+        'Neurons transmit electrical signals; brain processes information',
+        'Endocrine system: glands release hormones into bloodstream to regulate processes',
+        'Examples: pancreas (insulin), thyroid (metabolism), pituitary (growth)',
+        'Skeletal system: bones provide structure, protect organs, produce blood cells',
+        'Muscular system: muscles enable movement; three types: skeletal, cardiac, smooth',
+        'Excretory system: kidneys filter blood, remove waste, regulate water balance',
+        'Immune system: white blood cells defend against pathogens',
+        'Reproductive system: produces gametes (sperm/eggs) for reproduction',
+        'Integumentary system: skin protects body, regulates temperature',
+        'All systems work together to maintain homeostasis'
+      ],
+      examples: [
+        'Circulatory + Respiratory: lungs add O₂ to blood, heart pumps oxygenated blood to body',
+        'Digestive + Circulatory: intestines absorb nutrients, blood transports them to cells',
+        'Nervous + Muscular: brain sends signal → nerves transmit → muscles contract → movement',
+        'Endocrine + Reproductive: hormones trigger puberty and regulate reproductive functions',
+        'Excretory + Circulatory: kidneys filter blood to remove urea, maintain fluid balance',
+        'Exercise: respiratory rate increases (more O₂), heart rate increases (faster delivery), muscles work harder'
+      ],
+      commonMistakes: [
+        'Thinking systems work independently (they\'re highly interconnected)',
+        'Confusing arteries with veins',
+        'Believing lungs remove all CO₂ (kidneys also excrete waste)',
+        'Not recognizing skin as an organ system',
+        'Mixing up nervous system (electrical signals) with endocrine system (hormones)'
+      ],
+      tips: [
+        'Arteries = Away from heart; Veins = back to heart',
+        'Small intestine = nutrient absorption; Large intestine = water absorption',
+        'Nervous system = fast, short-term; Endocrine system = slow, long-term',
+        'All systems support homeostasis and work together',
+        'Heart is part of circulatory system; lungs part of respiratory system'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Biology',
+    topicName: 'Classification and Taxonomy',
+    content: {
+      title: 'Classification and Taxonomy',
+      intro: 'Taxonomy is the science of classifying and naming organisms. Understanding the hierarchical classification system helps organize biodiversity and shows evolutionary relationships among species.',
+      keyPoints: [
+        'Taxonomy: science of classifying and naming organisms',
+        'Classification organizes biodiversity into groups based on shared characteristics',
+        'Hierarchical system: Domain → Kingdom → Phylum → Class → Order → Family → Genus → Species',
+        'Mnemonic: "Dear King Philip Came Over For Good Soup"',
+        'Three domains: Bacteria, Archaea, Eukarya',
+        'Bacteria and Archaea: prokaryotes (no nucleus)',
+        'Eukarya: eukaryotes (animals, plants, fungi, protists)',
+        'Six kingdoms: Bacteria, Archaea, Protista, Fungi, Plantae, Animalia',
+        'Binomial nomenclature: two-part scientific name (Genus species)',
+        'Example: Homo sapiens (humans); Canis lupus (wolf)',
+        'Genus capitalized, species lowercase, both italicized or underlined',
+        'Species: group of organisms that can interbreed and produce fertile offspring',
+        'Closely related organisms share more classification levels',
+        'Phylogenetic tree: shows evolutionary relationships',
+        'Classification reflects evolutionary history',
+        'Dichotomous key: tool using yes/no questions to identify organisms'
+      ],
+      examples: [
+        'Human classification: Domain Eukarya, Kingdom Animalia, Phylum Chordata, Class Mammalia, Order Primates, Family Hominidae, Genus Homo, Species sapiens',
+        'Domestic dog: Canis familiaris; Gray wolf: Canis lupus (same genus, different species)',
+        'Lions (Panthera leo) and tigers (Panthera tigris) share genus Panthera',
+        'All members of Kingdom Plantae are multicellular, eukaryotic, and photosynthetic',
+        'Dichotomous key example: Does it have fur? Yes → go to 2; No → go to 5',
+        'Phylogenetic tree: shows common ancestors and branching evolution'
+      ],
+      commonMistakes: [
+        'Writing scientific names incorrectly (must italicize/underline)',
+        'Capitalizing species name (only genus is capitalized)',
+        'Thinking organisms in same genus are same species',
+        'Confusing classification levels (kingdom is broader than phylum)',
+        'Believing classification is arbitrary (it reflects evolutionary relationships)'
+      ],
+      tips: [
+        'Remember hierarchy: Domain → Kingdom → Phylum → Class → Order → Family → Genus → Species',
+        'Binomial nomenclature: Genus species (e.g., Homo sapiens)',
+        'More classification levels shared = more closely related',
+        'Species is most specific level; Domain is broadest',
+        'Use dichotomous keys step-by-step to identify unknown organisms'
+      ]
+    }
+  },
 
   // ============================================================================
   // GENERAL CHEMISTRY - FUNDAMENTALS
@@ -8534,6 +9132,4611 @@ export const pregeneratedNotes: PregeneratedNote[] = [
         'Flux ∬F · n dS related to divergence',
         'Check orientation carefully (counterclockwise, outward normal)',
         'These theorems are generalizations of FTC: ∫f\' dx = f(b) - f(a)'
+      ]
+    }
+  },
+  // AP Biology
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Water and Its Properties',
+    content: {
+      title: 'Water and Its Properties',
+      intro: 'Water is the universal solvent and foundation of life on Earth. Its unique molecular structure and properties—polarity, cohesion, adhesion, and high specific heat—enable essential biological processes from temperature regulation to nutrient transport.',
+      keyPoints: [
+        'Water molecule: H₂O with bent shape (104.5° angle)',
+        'Polar covalent bonds: oxygen is partially negative, hydrogens partially positive',
+        'Hydrogen bonding: attraction between δ+ H and δ- O on different molecules',
+        'Cohesion: water molecules stick to each other (surface tension)',
+        'Adhesion: water molecules stick to other polar substances',
+        'High specific heat: absorbs lots of energy to change temperature',
+        'High heat of vaporization: requires lots of energy to evaporate',
+        'Ice is less dense than liquid water (expands when frozen)',
+        'Universal solvent: dissolves polar and ionic substances',
+        'Hydrophilic: "water-loving" polar molecules dissolve in water',
+        'Hydrophobic: "water-fearing" nonpolar molecules don\'t dissolve',
+        'Capillary action: water moves up narrow tubes (xylem in plants)'
+      ],
+      examples: [
+        'Why does ice float?\nWater molecules in ice form regular hexagonal lattice with hydrogen bonds.\nThis structure has more space between molecules than liquid water.\nIce density ≈ 0.92 g/cm³, liquid water ≈ 1.00 g/cm³.\nBecause ice is less dense, it floats.\nBiological importance: Ice insulates aquatic life in winter.',
+        'Explain water\'s role in temperature regulation\nHigh specific heat: water absorbs lots of heat without big temperature change.\nOceans moderate coastal climates.\nSweat evaporation: high heat of vaporization removes body heat.\nExample: 1 g water requires 540 calories to evaporate.\nCooling effect prevents overheating in organisms.',
+        'How does capillary action work in plants?\nCohesion: water molecules stick together (hydrogen bonding).\nAdhesion: water sticks to xylem cell walls (polar attraction).\nCombination creates upward pull through narrow xylem tubes.\nTranspiration at leaves creates tension that pulls water column up.\nCan lift water over 100 meters in tall trees!',
+        'Why is water called the universal solvent?\nPolar water molecules surround and separate ions.\nExample: NaCl dissolves\n  Na⁺ surrounded by δ- oxygen atoms\n  Cl⁻ surrounded by δ+ hydrogen atoms\nThis is called hydration or solvation.\nAllows transport of nutrients in blood, sap, cytoplasm.',
+        'Compare hydrophilic vs hydrophobic molecules\nHydrophilic: polar, charged, dissolve in water\n  Examples: glucose, amino acids, ions, salts\n  Form hydrogen bonds with water\nHydrophobic: nonpolar, uncharged, don\'t dissolve\n  Examples: lipids, fats, oils, steroids\n  Excluded from water, cluster together\nAmphipathic: have both regions (phospholipids)',
+        'Surface tension demonstration\nWater forms "skin" at surface due to cohesion.\nHydrogen bonds pull molecules together.\nAllows insects to walk on water.\nAllows water to form droplets.\nHigher surface tension than most liquids.'
+      ],
+      commonMistakes: [
+        'Confusing cohesion (water-water) with adhesion (water-other)',
+        'Thinking ice is denser than water (it\'s less dense)',
+        'Forgetting that hydrogen bonds are intermolecular, not intramolecular',
+        'Not recognizing water\'s bent shape causes polarity',
+        'Confusing specific heat with heat of vaporization',
+        'Thinking all molecules dissolve in water (only polar/ionic do)',
+        'Not understanding that hydrogen bonding requires H bonded to N, O, or F',
+        'Forgetting biological importance of each property'
+      ],
+      tips: [
+        'Remember: "Like dissolves like" (polar dissolves polar)',
+        'Hydrogen bond: always involves H bonded to N, O, or F',
+        'Cohesion = together, Adhesion = to something else',
+        'Ice floats because it\'s LESS dense (unusual property)',
+        'High specific heat = temperature stability for organisms',
+        'Capillary action = cohesion + adhesion working together',
+        'Water is bent (not linear) → creates polarity',
+        'Hydrophilic ends with -philic (loving), hydrophobic with -phobic (fearing)',
+        'Every water property connects to hydrogen bonding',
+        'Know examples of biological importance for each property'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Carbohydrates, Lipids, Proteins, Nucleic Acids',
+    content: {
+      title: 'Biological Macromolecules',
+      intro: 'The four major macromolecules—carbohydrates, lipids, proteins, and nucleic acids—are the building blocks of life. Each has unique structure, function, and chemical properties essential for cellular processes, energy storage, information transfer, and structural support.',
+      keyPoints: [
+        'Macromolecules: large biological molecules built from smaller subunits',
+        'Polymers: long chains formed by linking monomers together',
+        'Dehydration synthesis: removes water to join monomers (anabolic)',
+        'Hydrolysis: adds water to break bonds between monomers (catabolic)',
+        'Carbohydrates: composed of C, H, O in ratio ~1:2:1 (CH₂O)ₙ',
+        'Monosaccharides: simple sugars (glucose, fructose, galactose)',
+        'Disaccharides: two sugars linked (sucrose, lactose, maltose)',
+        'Polysaccharides: many sugars linked (starch, glycogen, cellulose)',
+        'Lipids: hydrophobic molecules (fats, oils, phospholipids, steroids)',
+        'Fatty acids: long hydrocarbon chains with carboxyl group',
+        'Saturated fats: no double bonds, solid at room temperature',
+        'Unsaturated fats: have double bonds (kinks), liquid at room temperature'
+      ],
+      examples: [
+        'Dehydration synthesis of disaccharide\nGlucose + Fructose → Sucrose + H₂O\n-OH from glucose + -H from fructose combine to form water\nGlycosidic bond forms between the two monosaccharides\nThis is an anabolic (building) reaction\nRequires energy input\nEnzymes: synthases',
+        'Hydrolysis of sucrose\nSucrose + H₂O → Glucose + Fructose\nWater molecule is added\nGlycosidic bond is broken\nThis is a catabolic (breaking down) reaction\nReleases energy\nEnzymes: hydrolases (like sucrase)',
+        'Compare starch, glycogen, and cellulose\nAll are glucose polymers but different structures:\n\nStarch (plants):\n  - α-glucose linked α-1,4 bonds\n  - Coiled helix structure\n  - Energy storage in plants\n  \nGlycogen (animals):\n  - α-glucose, α-1,4 and α-1,6 bonds\n  - Highly branched\n  - Energy storage in liver and muscles\n  \nCellulose (plants):\n  - β-glucose linked β-1,4 bonds\n  - Straight chains, hydrogen bonded\n  - Structural support in cell walls\n  - Humans can\'t digest (no cellulase enzyme)',
+        'Structure of a triglyceride (fat)\nGlycerol (3-carbon backbone) + 3 fatty acids\nEster bonds form via dehydration synthesis\nSaturated fat example: butter\n  - No C=C double bonds\n  - Chains pack tightly\n  - Solid at room temperature\nUnsaturated fat example: olive oil\n  - Has C=C double bonds\n  - Kinks prevent tight packing\n  - Liquid at room temperature',
+        'Phospholipid structure\nGlycerol backbone\n2 fatty acid tails (hydrophobic, nonpolar)\n1 phosphate group head (hydrophilic, polar)\nAmphipathic: has both hydrophobic and hydrophilic regions\nForms bilayer in water:\n  - Heads face water (outside and inside cell)\n  - Tails face each other (away from water)\nBasis of cell membrane structure',
+        'Four levels of protein structure\nPrimary: sequence of amino acids (peptide bonds)\nSecondary: α-helix or β-pleated sheet (H-bonds)\nTertiary: 3D folding (multiple bond types)\nQuaternary: multiple polypeptide chains together\n\nExample: Hemoglobin\n  - 4 polypeptide chains (quaternary)\n  - Each chain is folded (tertiary)\n  - Contains α-helices (secondary)\n  - Specific amino acid sequence (primary)'
+      ],
+      commonMistakes: [
+        'Confusing dehydration synthesis (builds) with hydrolysis (breaks down)',
+        'Thinking all lipids are fats (steroids and phospholipids are lipids too)',
+        'Not recognizing cellulose vs starch difference (β vs α glucose)',
+        'Forgetting that lipids are defined by being hydrophobic, not by structure',
+        'Mixing up saturated (no double bonds) and unsaturated (has double bonds)',
+        'Thinking proteins are just for structure (they also catalyze, transport, signal)',
+        'Not understanding that DNA and RNA are both nucleic acids',
+        'Confusing monomers with polymers'
+      ],
+      tips: [
+        'Carbohydrates: quick energy, ratio C:H:O is 1:2:1',
+        'Monosaccharide monomers: glucose, fructose, galactose',
+        'Lipids: long-term energy storage, 2× energy per gram vs carbs',
+        'Saturated: "saturated" with hydrogen, no room for more',
+        'Proteins: 20 amino acids, peptide bonds, diverse functions',
+        'Nucleic acids: DNA (deoxyribose) and RNA (ribose)',
+        'Dehydration = remove water = build polymer',
+        'Hydrolysis = add water = break polymer',
+        'Amphipathic = both hydrophobic and hydrophilic regions',
+        'Learn the biological function of each macromolecule type'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Enzyme Structure and Function',
+    content: {
+      title: 'Enzyme Structure and Function',
+      intro: 'Enzymes are biological catalysts that speed up chemical reactions without being consumed. These proteins lower activation energy, making essential life processes possible at body temperature. Understanding enzyme structure, specificity, and regulation is fundamental to biochemistry.',
+      keyPoints: [
+        'Enzyme: biological catalyst, usually a protein',
+        'Substrate: the reactant molecule that enzyme acts upon',
+        'Active site: specific region where substrate binds',
+        'Enzyme-substrate complex: temporary binding of enzyme and substrate',
+        'Induced fit model: active site changes shape to fit substrate',
+        'Activation energy (Ea): energy needed to start a reaction',
+        'Enzymes lower activation energy, speeding up reactions',
+        'Enzymes are specific: one enzyme typically catalyzes one reaction',
+        'Enzymes are reusable: not consumed in the reaction',
+        'Products: molecules produced by the reaction',
+        'Cofactors: inorganic helpers (metal ions like Zn²⁺, Fe²⁺)',
+        'Coenzymes: organic helpers (vitamins like NAD⁺, FAD)'
+      ],
+      examples: [
+        'How enzymes lower activation energy\nWithout enzyme:\n  - High activation energy barrier\n  - Slow reaction rate\n  - May require high temperature\n  \nWith enzyme:\n  - Enzyme binds substrate\n  - Stabilizes transition state\n  - Lowers Ea (activation energy)\n  - Reaction proceeds faster\n  - Works at body temperature (37°C)\n  \nAnalogy: Enzyme is like a tunnel through a mountain\n  (easier than climbing over the mountain)',
+        'Lock-and-key vs Induced fit models\nLock-and-key (older model):\n  - Active site is rigid\n  - Substrate fits perfectly like key in lock\n  - Simple but not fully accurate\n  \nInduced fit (current model):\n  - Active site is flexible\n  - Changes shape when substrate binds\n  - Like a handshake, not a key\n  - Better explains enzyme specificity\n  - Explains how binding can strain substrate bonds',
+        'Example: Catalase breaks down hydrogen peroxide\nReaction: 2H₂O₂ → 2H₂O + O₂\n\nEnzyme: Catalase\nSubstrate: Hydrogen peroxide (H₂O₂)\nProducts: Water (H₂O) and oxygen (O₂)\n\nWithout enzyme: very slow, H₂O₂ is toxic\nWith catalase: extremely fast (millions of molecules/second)\nFound in: liver, blood cells (protects from oxidative damage)\nDemonstration: Add catalase to H₂O₂ → vigorous bubbling (O₂)',
+        'Cofactors and coenzymes example\nCofactor (inorganic):\n  Carbonic anhydrase requires Zn²⁺\n  Zn²⁺ helps catalyze: CO₂ + H₂O ⇌ H₂CO₃\n  Without zinc, enzyme is inactive\n  \nCoenzyme (organic):\n  NAD⁺ (derived from vitamin B₃/niacin)\n  Accepts electrons in cellular respiration\n  NAD⁺ → NADH (carries high-energy electrons)\n  Vitamin deficiency → enzyme doesn\'t work properly',
+        'Enzyme specificity example\nLactase: breaks down lactose (milk sugar)\n  Lactose + H₂O → Glucose + Galactose\n  \nWon\'t work on:\n  - Sucrose (table sugar)\n  - Starch\n  - Other disaccharides\n  \nWhy? Active site shape matches only lactose\nLactose intolerance: lack of lactase enzyme\nResults: undigested lactose → digestive problems',
+        'General enzyme reaction mechanism\n1. Substrate approaches enzyme\n2. Substrate binds to active site → ES complex\n3. Enzyme-substrate complex forms\n4. Catalysis occurs (bonds broken/formed)\n5. Products released\n6. Enzyme returns to original state (reusable)\n\nE + S ⇌ ES → E + P\n(E = enzyme, S = substrate, P = products)'
+      ],
+      commonMistakes: [
+        'Thinking enzymes are consumed in reactions (they\'re reusable)',
+        'Confusing substrate with product',
+        'Believing enzymes change the equilibrium of reaction (they don\'t)',
+        'Not understanding that enzymes only speed up reactions that would occur anyway',
+        'Mixing up cofactors (inorganic) and coenzymes (organic)',
+        'Thinking all enzymes are proteins (some RNA molecules are enzymes)',
+        'Forgetting that enzyme names often end in -ase',
+        'Not recognizing that lowering Ea increases reaction rate'
+      ],
+      tips: [
+        'Enzyme names typically end in -ase (lactase, amylase, catalase)',
+        'Substrate name often in enzyme name (sucrase breaks down sucrose)',
+        'Enzymes speed up reactions but don\'t change equilibrium',
+        'Active site is complementary to substrate shape',
+        'Induced fit: active site adjusts to fit substrate',
+        'Lower Ea = faster reaction rate',
+        'Enzymes are specific: one enzyme, one reaction (usually)',
+        'Cofactor = inorganic (metals), Coenzyme = organic (vitamins)',
+        'Enzymes work in both directions (forward and reverse)',
+        'Temperature and pH affect enzyme shape and function'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Enzyme Kinetics and Inhibition',
+    content: {
+      title: 'Enzyme Kinetics and Inhibition',
+      intro: 'Enzyme kinetics studies the rates of enzyme-catalyzed reactions and factors affecting them. Enzyme inhibition—competitive and noncompetitive—is crucial for metabolic regulation and drug design. Understanding these concepts explains how cells control biochemical pathways.',
+      keyPoints: [
+        'Enzyme kinetics: study of reaction rates and factors affecting them',
+        'Factors affecting enzyme activity: temperature, pH, substrate concentration, enzyme concentration',
+        'Optimal temperature: typically 37°C for human enzymes',
+        'Optimal pH: varies by enzyme (pepsin ~2, trypsin ~8)',
+        'Denaturation: loss of enzyme shape and function (high temp or extreme pH)',
+        'Competitive inhibition: inhibitor competes with substrate for active site',
+        'Noncompetitive inhibition: inhibitor binds to allosteric site, changes active site shape',
+        'Allosteric site: regulatory site on enzyme, distinct from active site',
+        'Feedback inhibition: end product inhibits first enzyme in pathway',
+        'Vmax: maximum reaction rate when all enzyme active sites saturated',
+        'Km: substrate concentration at half Vmax (measure of affinity)',
+        'Irreversible inhibition: inhibitor permanently inactivates enzyme'
+      ],
+      examples: [
+        'Effect of temperature on enzyme activity\nLow temperature (0-20°C):\n  - Slow molecular movement\n  - Few enzyme-substrate collisions\n  - Low reaction rate\n  \nOptimal temperature (~37°C for humans):\n  - Maximum enzyme activity\n  - Optimal molecular movement\n  - Highest reaction rate\n  \nHigh temperature (>45°C):\n  - Enzyme denatures (unfolds)\n  - Active site destroyed\n  - Reaction rate drops to zero\n  - Usually irreversible',
+        'Effect of pH on enzyme activity\nPepsin (stomach enzyme):\n  - Optimal pH = 2 (very acidic)\n  - Denatures at neutral pH\n  \nTrypsin (small intestine):\n  - Optimal pH = 8 (slightly basic)\n  - Denatures in acidic conditions\n  \nWhy pH matters:\n  - Affects charges on amino acids\n  - Changes enzyme and active site shape\n  - Extreme pH → denaturation',
+        'Competitive inhibition example\nEnzyme: Succinate dehydrogenase\nSubstrate: Succinate\nInhibitor: Malonate (similar structure to succinate)\n\nMechanism:\n  - Malonate competes for active site\n  - Blocks succinate from binding\n  - No reaction occurs when inhibitor bound\n  \nOvercoming:\n  - Increase substrate concentration\n  - Substrate outcompetes inhibitor\n  - Vmax unchanged, Km increases\n  \nMedical example: Statins (cholesterol drugs) competitively inhibit HMG-CoA reductase',
+        'Noncompetitive inhibition example\nInhibitor binds to allosteric site (not active site)\n  - Changes enzyme shape\n  - Active site becomes less functional\n  - Can\'t be overcome by adding more substrate\n  - Vmax decreases, Km unchanged\n  \nExample: Heavy metals (Pb²⁺, Hg²⁺)\n  - Bind to sulfhydryl groups on enzyme\n  - Distort enzyme structure\n  - Reduce or eliminate activity\n  - Often irreversible',
+        'Feedback inhibition (negative feedback)\nExample: Isoleucine synthesis pathway\n  Threonine → A → B → C → Isoleucine\n  \nRegulation:\n  - When isoleucine concentration is high\n  - Isoleucine binds to allosteric site on first enzyme\n  - Inhibits conversion of threonine → A\n  - Pathway shuts down\n  - Prevents wasteful overproduction\n  \nThis is noncompetitive inhibition by the end product\nCommon in metabolic pathways',
+        'Substrate concentration vs reaction rate\nLow [S]: Reaction rate increases linearly with [S]\n  - Plenty of free enzyme active sites\n  - Rate limited by substrate availability\n  \nMedium [S]: Curve begins to plateau\n  - Most active sites occupied\n  - Rate still increases but slowing\n  \nHigh [S]: Reaction rate plateaus at Vmax\n  - All active sites saturated\n  - Rate limited by enzyme amount\n  - Adding more substrate doesn\'t help\n  \nGraph: Hyperbolic (Michaelis-Menten) curve'
+      ],
+      commonMistakes: [
+        'Confusing competitive and noncompetitive inhibition',
+        'Thinking denaturation is always reversible (usually it\'s not)',
+        'Believing all enzymes have same optimal temperature and pH',
+        'Not understanding that competitive inhibition can be overcome with more substrate',
+        'Mixing up Vmax (maximum rate) with actual reaction rate',
+        'Forgetting that noncompetitive inhibitors bind to allosteric sites, not active sites',
+        'Thinking feedback inhibition is competitive (it\'s noncompetitive)',
+        'Not recognizing that enzyme concentration affects Vmax'
+      ],
+      tips: [
+        'Competitive: inhibitor resembles substrate, binds to active site',
+        'Noncompetitive: inhibitor binds elsewhere (allosteric site)',
+        'More substrate overcomes competitive, not noncompetitive',
+        'Denaturation: high temp or extreme pH destroys enzyme structure',
+        'Feedback inhibition: end product inhibits first enzyme',
+        'Vmax: maximum rate when enzyme saturated',
+        'Km: affinity measure (low Km = high affinity)',
+        'Optimal conditions vary: pepsin likes acid, trypsin likes base',
+        'Allosteric regulation: binding at one site affects another site',
+        'Draw graphs: know shapes for temp, pH, and substrate concentration effects'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Cell Membrane Structure (Fluid Mosaic Model)',
+    content: {
+      title: 'Cell Membrane Structure (Fluid Mosaic Model)',
+      intro: 'The cell membrane is a selectively permeable barrier composed of a phospholipid bilayer with embedded proteins. The fluid mosaic model describes the membrane as a dynamic, fluid structure where components move laterally. This structure enables vital functions like transport, communication, and cell recognition.',
+      keyPoints: [
+        'Fluid mosaic model: membrane is fluid with embedded proteins forming a mosaic',
+        'Phospholipid bilayer: two layers of phospholipids form membrane foundation',
+        'Amphipathic phospholipids: hydrophilic heads face water, hydrophobic tails face inward',
+        'Selective permeability: membrane controls what enters and exits cell',
+        'Integral proteins: embedded in membrane, span bilayer (transmembrane)',
+        'Peripheral proteins: attached to membrane surface, don\'t span bilayer',
+        'Cholesterol: stabilizes membrane, reduces fluidity at high temp',
+        'Glycoproteins: proteins with carbohydrate chains (cell recognition)',
+        'Glycolipids: lipids with carbohydrate chains (cell recognition)',
+        'Membrane fluidity: phospholipids and proteins move laterally (sideways)',
+        'Unsaturated fatty acids increase fluidity (kinks prevent tight packing)',
+        'Functions: barrier, transport, cell recognition, communication, enzymatic activity'
+      ],
+      examples: [
+        'Structure of phospholipid bilayer\nPhospholipid molecule:\n  Head: phosphate group (polar, hydrophilic)\n  Tails: two fatty acid chains (nonpolar, hydrophobic)\n  \nIn water (aqueous environment):\n  - Heads face outward (toward cytoplasm and extracellular fluid)\n  - Tails face inward (away from water)\n  - Forms stable bilayer automatically (self-assembly)\n  - Hydrophobic core blocks polar molecules\n  - Small nonpolar molecules can pass through',
+        'Membrane proteins and their functions\nTransport proteins:\n  - Channel proteins: form pores (ions pass through)\n  - Carrier proteins: change shape to move molecules\n  \nReceptor proteins:\n  - Bind signal molecules (hormones, neurotransmitters)\n  - Trigger cellular response\n  \nEnzymes:\n  - Catalyze reactions at membrane\n  \nCell recognition proteins:\n  - Glycoproteins act as ID tags\n  - MHC proteins, blood type markers\n  \nAdhesion proteins:\n  - Attach cells to each other or extracellular matrix',
+        'Cholesterol\'s role in membrane\nLocation: Embedded among phospholipids in bilayer\n\nFunctions:\n  - Reduces fluidity at high temperatures (restrains movement)\n  - Prevents solidification at low temperatures (prevents tight packing)\n  - Makes membrane less permeable to small molecules\n  - Provides mechanical stability\n  \nAmount varies:\n  - Animal cells: 20-25% of membrane lipids\n  - Plant cells: little to no cholesterol\n  - Bacteria: no cholesterol (different membrane composition)',
+        'Why "fluid" mosaic?\nFluid:\n  - Phospholipids move laterally (sideways) within layer\n  - Proteins drift in "sea" of phospholipids\n  - Membrane components not fixed in place\n  - Necessary for membrane function, repair, growth\n  \nMosaic:\n  - Diverse components (lipids, proteins, carbohydrates)\n  - Proteins embedded like tiles in mosaic\n  - Different proteins at different locations\n  - Varied composition gives varied function',
+        'Selective permeability examples\nCan cross membrane freely:\n  - Small nonpolar molecules (O₂, CO₂, N₂)\n  - Small uncharged polar molecules (water, glycerol)\n  - Hydrophobic molecules (lipids, steroids)\n  \nCannot cross freely (need transport proteins):\n  - Large polar molecules (glucose, amino acids)\n  - Ions (Na⁺, K⁺, Ca²⁺, Cl⁻)\n  - Charged molecules\n  \nWhy?\n  - Hydrophobic core repels charged/polar molecules\n  - Size exclusion for large molecules',
+        'Glycocalyx: carbohydrate coat\nLocation: Outer surface of membrane\nComponents:\n  - Glycoproteins (protein + carbohydrate)\n  - Glycolipids (lipid + carbohydrate)\n  \nFunctions:\n  - Cell recognition (self vs non-self)\n  - Immune system recognition\n  - Blood type determination (A, B, AB, O)\n  - Cell adhesion\n  - Protection\n  \nExample: Blood type\n  - Type A: has A antigen (specific glycoprotein)\n  - Type B: has B antigen\n  - Type AB: has both A and B\n  - Type O: has neither'
+      ],
+      commonMistakes: [
+        'Drawing phospholipids with heads facing inward (should face water)',
+        'Thinking membrane is static (it\'s fluid, components move)',
+        'Confusing integral proteins (embedded) with peripheral (surface)',
+        'Believing all molecules can freely cross membrane (selective permeability)',
+        'Forgetting cholesterol\'s role in membrane stability',
+        'Not recognizing that hydrophobic tails face each other',
+        'Thinking proteins are evenly distributed (they\'re not, hence "mosaic")',
+        'Confusing glycoproteins (protein-based) with glycolipids (lipid-based)'
+      ],
+      tips: [
+        'Remember: Hydrophilic heads OUT, hydrophobic tails IN',
+        'Fluid = components can move laterally',
+        'Mosaic = diverse embedded proteins',
+        'Integral proteins span membrane, peripheral don\'t',
+        'Cholesterol = membrane stabilizer (animal cells)',
+        'Glycocalyx = carbohydrate "coat" for recognition',
+        'Selective permeability: small + nonpolar pass freely',
+        'Large, polar, or charged molecules need help (proteins)',
+        'Unsaturated fatty acids → more fluid (kinks)',
+        'Cell membrane is ~7-8 nm thick'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Passive Transport (Diffusion, Osmosis)',
+    content: {
+      title: 'Passive Transport (Diffusion, Osmosis)',
+      intro: 'Passive transport moves molecules across membranes without energy input, driven by concentration gradients. Diffusion moves any molecules from high to low concentration, while osmosis specifically moves water. Facilitated diffusion uses protein channels for larger or charged molecules. Understanding these processes is essential for cell homeostasis.',
+      keyPoints: [
+        'Passive transport: movement without energy (ATP) input',
+        'Concentration gradient: difference in concentration between two areas',
+        'Simple diffusion: movement from high to low concentration through membrane',
+        'Osmosis: diffusion of water across selectively permeable membrane',
+        'Facilitated diffusion: passive transport using protein channels or carriers',
+        'Dynamic equilibrium: equal movement in both directions, no net change',
+        'Hypertonic solution: higher solute concentration outside cell (cell shrinks)',
+        'Hypotonic solution: lower solute concentration outside cell (cell swells)',
+        'Isotonic solution: equal solute concentration (no net water movement)',
+        'Aquaporins: protein channels that facilitate water movement',
+        'Turgor pressure: pressure of water against plant cell wall',
+        'Plasmolysis: plant cell membrane pulls away from cell wall in hypertonic solution'
+      ],
+      examples: [
+        'Simple diffusion of oxygen into cells\nScenario: O₂ concentration high in blood, low in cells\n\nProcess:\n  1. O₂ molecules move randomly (kinetic energy)\n  2. More O₂ moves from blood → cells (down gradient)\n  3. Continues until equilibrium reached\n  4. No energy (ATP) required\n  5. Small, nonpolar O₂ crosses membrane easily\n  \nFactors affecting rate:\n  - Steeper gradient = faster diffusion\n  - Higher temperature = faster movement\n  - Smaller molecules = faster diffusion',
+        'Osmosis in animal cells (red blood cells)\nHypertonic solution (high salt):\n  - Water moves OUT of cell\n  - Cell shrinks (crenation)\n  - Example: Seawater\n  \nHypotonic solution (low salt):\n  - Water moves INTO cell\n  - Cell swells, may burst (lysis)\n  - Example: Distilled water\n  \nIsotonic solution (0.9% NaCl):\n  - No net water movement\n  - Cell maintains normal shape\n  - Example: Normal saline, blood plasma',
+        'Osmosis in plant cells\nHypertonic solution:\n  - Water moves OUT of cell\n  - Cytoplasm shrinks away from cell wall\n  - Plasmolysis occurs\n  - Plant wilts\n  \nHypotonic solution:\n  - Water moves INTO cell\n  - Cell swells but doesn\'t burst (cell wall prevents)\n  - Turgor pressure builds up\n  - Plant becomes firm, stands upright\n  \nNote: Cell wall prevents lysis that occurs in animal cells',
+        'Facilitated diffusion: glucose transport\nGlucose: large, polar molecule\nCannot cross lipid bilayer by simple diffusion\n\nMechanism:\n  1. Glucose binds to GLUT transporter protein\n  2. Protein changes shape (conformational change)\n  3. Glucose released on other side of membrane\n  4. Protein returns to original shape\n  5. No ATP required (passive)\n  6. Moves down concentration gradient\n  \nExample: GLUT4 in muscle cells\n  - Insulin signals GLUT4 to membrane\n  - Glucose enters cell from blood',
+        'Calculating water potential\nWater potential (Ψ) = Ψₛ + Ψₚ\n\nΨ = water potential\nΨₛ = solute potential (osmotic potential)\nΨₚ = pressure potential (turgor pressure)\n\nSolute potential: Ψₛ = -iCRT\n  i = ionization constant\n  C = molar concentration\n  R = gas constant (0.0831)\n  T = temperature (Kelvin)\n  \nWater moves from higher Ψ to lower Ψ\n\nExample:\n  Cell: Ψ = -0.5 MPa\n  Solution: Ψ = -0.3 MPa\n  Water moves from solution → cell (hypertonic solution)',
+        'Ion channels (facilitated diffusion)\nVoltage-gated channels:\n  - Open/close in response to voltage change\n  - Example: Na⁺ channels in neurons\n  \nLigand-gated channels:\n  - Open when specific molecule binds\n  - Example: Neurotransmitter receptors\n  \nAlways passive:\n  - Ions move down concentration gradient\n  - No ATP required\n  - Can move very quickly (millions of ions/second)'
+      ],
+      commonMistakes: [
+        'Confusing diffusion (any molecule) with osmosis (water only)',
+        'Thinking facilitated diffusion requires ATP (it doesn\'t)',
+        'Mixing up hypertonic and hypotonic solutions',
+        'Forgetting that water moves toward higher solute concentration',
+        'Not recognizing that plant cells don\'t burst in hypotonic solutions (cell wall)',
+        'Believing equilibrium means no movement (molecules still move, just no net change)',
+        'Thinking concentration gradient is the same as water potential',
+        'Confusing passive transport with active transport'
+      ],
+      tips: [
+        'Passive = no ATP required',
+        'Diffusion = high to low concentration',
+        'Osmosis = water diffusion across membrane',
+        'Hypertonic = higher solute, water moves OUT',
+        'Hypotonic = lower solute, water moves IN',
+        'Isotonic = equal solute, no net movement',
+        'Facilitated diffusion = passive but uses proteins',
+        'Water follows solutes (moves toward higher solute concentration)',
+        'Mnemonic: Hyper = shrink, Hypo = swell',
+        'Plant cells have turgor pressure, animal cells don\'t (no cell wall)',
+        'Water potential: water moves from high Ψ to low Ψ',
+        'Equilibrium ≠ no movement, means equal movement both directions'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Active Transport and Bulk Transport',
+    content: {
+      title: 'Active Transport and Bulk Transport',
+      intro: 'Active transport moves molecules against their concentration gradient using ATP energy. This process is essential for maintaining concentration gradients, nutrient uptake, and waste removal. Bulk transport (endocytosis and exocytosis) moves large particles or volumes of material across the membrane.',
+      keyPoints: [
+        'Active transport: movement against concentration gradient, requires ATP',
+        'Sodium-potassium pump: primary active transport, maintains ion gradients',
+        'Primary active transport: ATP directly powers the transport',
+        'Secondary active transport: uses existing gradient to power transport of another molecule',
+        'Cotransport: two molecules transported together (symport or antiport)',
+        'Endocytosis: cell takes in material by forming vesicle from membrane',
+        'Phagocytosis: "cell eating," engulfs large particles',
+        'Pinocytosis: "cell drinking," engulfs liquids/small particles',
+        'Receptor-mediated endocytosis: specific uptake using receptors',
+        'Exocytosis: cell releases material by fusing vesicle with membrane',
+        'Bulk transport: moves large quantities or particles too big for proteins',
+        'Active processes require energy (ATP), unlike passive transport'
+      ],
+      examples: [
+        'Sodium-Potassium Pump (Na⁺/K⁺-ATPase)\nFunction: Maintains concentration gradients\nProcess:\n  1. 3 Na⁺ bind inside cell\n  2. ATP binds and is hydrolyzed → ADP + Pi\n  3. Phosphorylation causes shape change\n  4. 3 Na⁺ released outside cell\n  5. 2 K⁺ bind outside cell\n  6. Phosphate released, shape changes back\n  7. 2 K⁺ released inside cell\n  \nResult:\n  - 3 Na⁺ out, 2 K⁺ in (per ATP)\n  - Creates electrical gradient (more + outside)\n  - Essential for nerve function, muscle contraction\n  - Uses ~30% of cell\'s ATP',
+        'Secondary active transport: glucose-sodium cotransport\nLocation: Intestinal epithelial cells\n\nMechanism:\n  - Na⁺/K⁺ pump creates low Na⁺ inside cell (primary active transport)\n  - Cotransporter protein in membrane\n  - Na⁺ moves down gradient (high→low)\n  - Energy from Na⁺ movement powers glucose uptake\n  - Glucose moves against its gradient (low→high)\n  \nType: Symport (both molecules same direction)\nNo direct ATP use, but depends on Na⁺ gradient created by ATP\nAllows glucose absorption even when glucose is higher inside cell',
+        'Phagocytosis example: White blood cell engulfing bacteria\nProcess:\n  1. Bacterium binds to receptors on cell surface\n  2. Cell membrane extends around bacterium (pseudopodia)\n  3. Membrane fuses, forming food vacuole (phagosome)\n  4. Lysosome fuses with phagosome\n  5. Enzymes digest bacterium\n  6. Useful materials absorbed, waste expelled\n  \n"Cell eating" - important for:\n  - Immune defense (neutrophils, macrophages)\n  - Protists feeding (amoeba)\n  - Removing dead cells',
+        'Receptor-mediated endocytosis: LDL cholesterol uptake\nSpecific and efficient uptake\n\nProcess:\n  1. LDL (cholesterol carrier) binds to LDL receptors\n  2. Receptors cluster in coated pits (clathrin protein coating)\n  3. Membrane invaginates, pinches off\n  4. Forms coated vesicle\n  5. Coating removed, vesicle fuses with endosome\n  6. LDL separated from receptors\n  7. Receptors recycled to membrane\n  8. LDL delivered to lysosomes for processing\n  \nHighly selective: only molecules with correct ligand bind',
+        'Exocytosis: neurotransmitter release at synapse\nProcess:\n  1. Vesicles containing neurotransmitters made in cell body\n  2. Transported to axon terminal\n  3. Action potential arrives at terminal\n  4. Voltage-gated Ca²⁺ channels open\n  5. Ca²⁺ influx triggers vesicle fusion\n  6. Vesicle membrane fuses with plasma membrane\n  7. Neurotransmitters released into synaptic cleft\n  \nOther examples:\n  - Insulin secretion from pancreas\n  - Digestive enzyme secretion\n  - Mucus secretion',
+        'Comparing transport mechanisms\nPassive vs Active:\n\nPassive (no ATP):\n  - Simple diffusion: O₂, CO₂\n  - Facilitated diffusion: glucose (GLUT), ions\n  - Osmosis: water\n  - Down concentration gradient\n  \nActive (requires ATP):\n  - Primary: Na⁺/K⁺ pump, Ca²⁺ pump, H⁺ pump\n  - Secondary: glucose-Na⁺ cotransport\n  - Against concentration gradient\n  \nBulk transport (requires ATP):\n  - Endocytosis: brings material in\n  - Exocytosis: sends material out\n  - For large particles or volumes'
+      ],
+      commonMistakes: [
+        'Confusing active transport (uses ATP) with facilitated diffusion (no ATP)',
+        'Thinking Na⁺/K⁺ pump moves equal numbers (it\'s 3 Na⁺ out, 2 K⁺ in)',
+        'Forgetting that secondary active transport still requires ATP (indirectly)',
+        'Mixing up phagocytosis (solids) and pinocytosis (liquids)',
+        'Believing exocytosis is passive (it requires energy)',
+        'Not recognizing receptor-mediated endocytosis is specific',
+        'Confusing symport (same direction) with antiport (opposite directions)',
+        'Thinking all transport proteins require ATP (only active transport does)'
+      ],
+      tips: [
+        'Active transport: "active" means requires energy (ATP)',
+        'Sodium-potassium pump: 3 Na⁺ OUT, 2 K⁺ IN per ATP',
+        'Primary active: ATP directly used',
+        'Secondary active: uses gradient created by primary active',
+        'Phago = eating (large solids), Pino = drinking (liquids)',
+        'Endo = into cell, Exo = out of cell',
+        'Receptor-mediated: specific, selective uptake',
+        'Symport: same direction, Antiport: opposite directions',
+        'Bulk transport: when molecule too large for protein channels',
+        'Remember: concentration gradient flows downhill (passive), uphill needs energy (active)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Cell Communication and Signal Transduction',
+    content: {
+      title: 'Cell Communication and Signal Transduction',
+      intro: 'Cells communicate through chemical signals in a process called signal transduction. A signal molecule binds to a receptor, triggering a cascade of events that amplifies the signal and produces a cellular response. This process is fundamental for coordination in multicellular organisms.',
+      keyPoints: [
+        'Cell signaling: communication between cells using chemical signals',
+        'Signal transduction: conversion of extracellular signal to cellular response',
+        'Three stages: reception, transduction, response',
+        'Reception: signal molecule (ligand) binds to receptor protein',
+        'Transduction: signal converted through cascade of molecular interactions',
+        'Response: cellular activity triggered (gene expression, enzyme activity, etc.)',
+        'Signal amplification: each step in cascade produces multiple products',
+        'Receptor types: G protein-coupled receptors, receptor tyrosine kinases, ion channels',
+        'Second messengers: small molecules that relay signals (cAMP, Ca²⁺, IP₃)',
+        'Protein phosphorylation: adding phosphate groups activates/deactivates proteins',
+        'Protein kinase: enzyme that phosphorylates proteins',
+        'Phosphorylation cascade: series of kinases activating other kinases'
+      ],
+      examples: [
+        'Three stages of cell signaling\n1. RECEPTION:\n   - Signal molecule (ligand) binds to receptor\n   - Receptor is usually membrane protein\n   - Shape change in receptor\n   - Example: Epinephrine binds to G protein-coupled receptor\n   \n2. TRANSDUCTION:\n   - Signal converted to form that brings about response\n   - Often involves cascade of molecular interactions\n   - Signal amplification occurs\n   - Example: G protein activates adenylyl cyclase → cAMP\n   \n3. RESPONSE:\n   - Cell\'s activity altered\n   - Examples: enzyme activation, gene expression, cytoskeleton changes\n   - Example: Glycogen breakdown in liver cells',
+        'G protein-coupled receptor (GPCR) pathway\nExample: Epinephrine (adrenaline) signaling\n\n1. Epinephrine binds to GPCR on cell surface\n2. Receptor changes shape, activates G protein\n3. G protein binds GTP, becomes active\n4. Active G protein activates adenylyl cyclase (enzyme)\n5. Adenylyl cyclase converts ATP → cAMP (second messenger)\n6. cAMP activates protein kinase A (PKA)\n7. PKA phosphorylates target proteins\n8. Response: Glycogen breakdown → glucose release\n\nNote: 1 signal molecule → millions of cAMP → amplification!',
+        'Signal amplification example\nEpinephrine signaling cascade:\n\n1 epinephrine molecule\n  ↓\n1 receptor activated\n  ↓\nMany G proteins activated\n  ↓\nMany adenylyl cyclase activated\n  ↓\nMillions of cAMP produced (second messenger)\n  ↓\nMany PKA activated\n  ↓\nMany phosphorylase kinase activated\n  ↓\nMany glycogen phosphorylase activated\n  ↓\nMILLIONS of glucose released\n\nAmplification factor: >1,000,000×\nCritical for rapid response to hormones',
+        'Receptor tyrosine kinase (RTK) pathway\nExample: Growth factor signaling\n\n1. Growth factor (ligand) binds to RTK\n2. Two receptors come together (dimerization)\n3. Receptors phosphorylate each other (autophosphorylation)\n4. Relay proteins recognize phosphorylated tyrosines\n5. Ras protein activated (similar to G protein)\n6. MAP kinase cascade begins\n7. Series of kinases phosphorylate each other\n8. Transcription factors activated\n9. Gene expression changes\n10. Response: Cell division, growth, differentiation',
+        'Calcium as second messenger\nExample: Muscle contraction signal\n\n1. Nerve signal arrives at muscle cell\n2. Acetylcholine binds to receptor\n3. Membrane depolarization\n4. Voltage-gated Ca²⁺ channels open\n5. Ca²⁺ floods into cytoplasm (1000× increase)\n6. Ca²⁺ binds to troponin (regulatory protein)\n7. Troponin changes shape\n8. Myosin binding sites on actin exposed\n9. Muscle contraction occurs\n\nCa²⁺ also important in:\n  - Neurotransmitter release\n  - Fertilization (egg activation)\n  - Enzyme regulation',
+        'Termination of signal\nSignal must be turned off to prevent continuous response\n\nMechanisms:\n1. Ligand degradation or removal\n   - Enzymes break down signal molecule\n   - Example: Acetylcholinesterase breaks down acetylcholine\n   \n2. Receptor inactivation\n   - Receptor endocytosis (removed from membrane)\n   - Receptor desensitization\n   \n3. Inactivation of signaling molecules\n   - Phosphatases remove phosphate groups (reverse kinase)\n   - GTPase converts GTP → GDP (inactivates G proteins)\n   - Phosphodiesterase converts cAMP → AMP\n   \nWithout termination: continuous inappropriate response'
+      ],
+      commonMistakes: [
+        'Confusing reception (binding) with transduction (signal cascade)',
+        'Forgetting that signal amplification occurs during transduction',
+        'Thinking signal molecules enter the cell (most bind to surface receptors)',
+        'Not understanding that second messengers are inside the cell',
+        'Mixing up kinases (add phosphate) with phosphatases (remove phosphate)',
+        'Believing all receptors are on cell surface (some are intracellular)',
+        'Forgetting that signals must be terminated',
+        'Not recognizing that one receptor type can trigger multiple responses'
+      ],
+      tips: [
+        'Three stages: Reception → Transduction → Response',
+        'Reception: signal binds receptor (lock and key)',
+        'Transduction: cascade amplifies signal',
+        'Response: cellular activity changes',
+        'Second messengers: cAMP, Ca²⁺, IP₃ (small, diffusible)',
+        'GPCR: G protein-coupled receptor (very common)',
+        'RTK: receptor tyrosine kinase (growth/development)',
+        'Kinase adds phosphate (activates), phosphatase removes it',
+        'Amplification: 1 signal → millions of responses',
+        'Learn specific examples: epinephrine, growth factors, neurotransmitters'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Photosynthesis',
+    content: {
+      title: 'Photosynthesis',
+      intro: 'Photosynthesis converts light energy into chemical energy stored in glucose. This process occurs in chloroplasts and has two main stages: light-dependent reactions (in thylakoids) produce ATP and NADPH, while light-independent reactions (Calvin cycle, in stroma) use these products to fix CO₂ into organic molecules.',
+      keyPoints: [
+        'Photosynthesis equation: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂',
+        'Occurs in chloroplasts of plant cells and algae',
+        'Chloroplast structure: outer/inner membrane, thylakoids, stroma',
+        'Thylakoid: membrane sacs, contain chlorophyll, site of light reactions',
+        'Stroma: fluid-filled space, site of Calvin cycle',
+        'Two stages: light-dependent reactions and Calvin cycle (light-independent)',
+        'Chlorophyll: primary photosynthetic pigment, absorbs red and blue light',
+        'Accessory pigments: carotenoids (absorb different wavelengths)',
+        'Light reactions: convert light energy to chemical energy (ATP, NADPH)',
+        'Calvin cycle: fixes CO₂ into glucose using ATP and NADPH',
+        'Water is split (photolysis), provides electrons and releases O₂',
+        'Overall: converts light energy into chemical bond energy'
+      ],
+      examples: [
+        'Overview of photosynthesis process\nLocation: Chloroplast\n\nINPUTS: CO₂, H₂O, light energy\nOUTPUTS: C₆H₁₂O₆ (glucose), O₂\n\nTwo main stages:\n\n1. LIGHT-DEPENDENT REACTIONS (thylakoid membrane):\n   Inputs: Light, H₂O, NADP⁺, ADP + Pi\n   Outputs: O₂, ATP, NADPH\n   \n2. CALVIN CYCLE (stroma):\n   Inputs: CO₂, ATP, NADPH\n   Outputs: Glucose (C₆H₁₂O₆), ADP + Pi, NADP⁺\n   \nNote: Products of light reactions power Calvin cycle',
+        'Light-dependent reactions (detailed)\nLocation: Thylakoid membrane\n\nPhotosystem II:\n  1. Chlorophyll absorbs light energy\n  2. Electrons excited to higher energy level\n  3. Water split (photolysis): 2H₂O → 4H⁺ + 4e⁻ + O₂\n  4. Electrons replace those lost by chlorophyll\n  5. O₂ released as byproduct\n  \nElectron Transport Chain:\n  6. Excited electrons pass through chain\n  7. Energy pumps H⁺ into thylakoid space\n  8. Creates H⁺ gradient (high inside, low in stroma)\n  \nPhotosystem I:\n  9. Chlorophyll absorbs more light\n  10. Electrons excited again\n  11. NADP⁺ + 2e⁻ + H⁺ → NADPH\n  \nChemiosmosis:\n  12. H⁺ flows through ATP synthase\n  13. ADP + Pi → ATP',
+        'Calvin Cycle (Light-Independent Reactions)\nLocation: Stroma\nDoes NOT require direct light but needs ATP and NADPH from light reactions\n\nThree phases (for 3 CO₂ → 1 G3P):\n\n1. CARBON FIXATION:\n   - 3 CO₂ + 3 RuBP (5C) → 6 3-PGA (3C)\n   - Enzyme: RuBisCO (most abundant protein on Earth)\n   \n2. REDUCTION:\n   - 6 3-PGA + 6 ATP + 6 NADPH → 6 G3P\n   - G3P = glyceraldehyde-3-phosphate (3-carbon sugar)\n   \n3. REGENERATION OF RuBP:\n   - 5 G3P + 3 ATP → 3 RuBP\n   - Cycle can continue\n   \nNET: 1 G3P leaves cycle (every 3 CO₂)\n2 G3P combine → 1 glucose (6 carbons)',
+        'Energy accounting for one glucose molecule\nFor Calvin Cycle to produce 1 glucose:\n  - Need 6 CO₂ (6 carbons total)\n  - Must turn cycle 6 times\n  \nInputs needed:\n  - 6 CO₂\n  - 18 ATP\n  - 12 NADPH\n  \nThese come from light reactions:\n  - Light energy converted to ATP and NADPH\n  - About 18 photons absorbed\n  \nOutputs:\n  - 1 C₆H₁₂O₆ (glucose)\n  - 6 O₂ (from splitting 6 H₂O)\n  \nEfficiency: ~3-6% of light energy stored in glucose',
+        'Chlorophyll and light absorption\nChlorophyll a (primary pigment):\n  - Absorbs red (~680 nm) and blue-violet (~430 nm)\n  - Reflects green (why plants appear green)\n  - Found in all photosynthetic organisms\n  \nChlorophyll b (accessory):\n  - Absorbs slightly different wavelengths\n  - Transfers energy to chlorophyll a\n  \nCarotenoids (accessory pigments):\n  - Absorb blue-green light\n  - Protect from excess light\n  - Give fall colors (when chlorophyll breaks down)\n  \nWhy multiple pigments?\n  - Capture broader spectrum of light\n  - Maximize energy absorption',
+        'Factors affecting photosynthesis rate\n1. Light intensity:\n   - Low light: limiting factor\n   - High light: rate plateaus (other factors limiting)\n   - Too high: damage to chloroplast\n   \n2. CO₂ concentration:\n   - Increases rate until saturation\n   - Normal air: ~0.04% CO₂\n   - Greenhouses: add CO₂ to increase yield\n   \n3. Temperature:\n   - Optimal: 25-35°C for most plants\n   - Too low: enzymes slow\n   - Too high: enzymes denature\n   \n4. Water availability:\n   - Needed as electron donor\n   - Drought stress closes stomata → less CO₂'
+      ],
+      commonMistakes: [
+        'Thinking oxygen comes from CO₂ (it comes from H₂O splitting)',
+        'Confusing light-dependent with light-independent reactions',
+        'Believing Calvin cycle requires direct light (it needs ATP/NADPH from light reactions)',
+        'Forgetting that glucose is the product, not ATP',
+        'Mixing up inputs and outputs of each stage',
+        'Not understanding that 6 turns of Calvin cycle → 1 glucose',
+        'Thinking chlorophyll absorbs green light (it reflects it)',
+        'Forgetting that photosynthesis occurs in two separate locations'
+      ],
+      tips: [
+        'Overall: 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂',
+        'Light reactions (thylakoid): light + H₂O → ATP + NADPH + O₂',
+        'Calvin cycle (stroma): CO₂ + ATP + NADPH → glucose',
+        'O₂ comes from H₂O, not CO₂',
+        'RuBisCO: enzyme that fixes CO₂ in Calvin cycle',
+        'Chlorophyll: reflects green, absorbs red and blue',
+        'Photosystems I and II work together in light reactions',
+        'Calvin cycle: Carbon fixation → Reduction → Regeneration',
+        'Remember: 3 CO₂ → 1 G3P; 2 G3P → 1 glucose',
+        'ATP synthase uses H⁺ gradient (chemiosmosis) to make ATP'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Cellular Respiration',
+    content: {
+      title: 'Cellular Respiration',
+      intro: 'Cellular respiration breaks down glucose to produce ATP, the energy currency of cells. This process occurs in three main stages: glycolysis (cytoplasm), Krebs cycle (mitochondrial matrix), and electron transport chain (inner mitochondrial membrane). Under aerobic conditions, one glucose yields approximately 32 ATP.',
+      keyPoints: [
+        'Cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP',
+        'Three stages: glycolysis, Krebs cycle (citric acid cycle), electron transport chain',
+        'Glycolysis: glucose (6C) → 2 pyruvate (3C), produces 2 ATP (net) and 2 NADH',
+        'Occurs in cytoplasm, doesn\'t require oxygen (anaerobic)',
+        'Krebs cycle: pyruvate → CO₂, produces ATP, NADH, FADH₂',
+        'Occurs in mitochondrial matrix',
+        'Electron transport chain: NADH and FADH₂ donate electrons, produces most ATP',
+        'Occurs in inner mitochondrial membrane (cristae)',
+        'Chemiosmosis: H⁺ gradient drives ATP synthase',
+        'Aerobic respiration: requires O₂, produces ~32 ATP per glucose',
+        'Anaerobic respiration: fermentation, produces only 2 ATP (from glycolysis)',
+        'Total yield: ~32 ATP (30-32 depending on shuttle system)'
+      ],
+      examples: [
+        'Overview of cellular respiration\nLocation: Mitochondria (mostly) and cytoplasm\n\nOVERALL EQUATION:\nC₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ~32 ATP\n\nThree stages:\n\n1. GLYCOLYSIS (cytoplasm):\n   Input: 1 glucose, 2 NAD⁺, 2 ADP + Pi\n   Output: 2 pyruvate, 2 NADH, 2 ATP (net)\n   \n2. KREBS CYCLE (mitochondrial matrix):\n   Input: 2 pyruvate (→ 2 acetyl-CoA)\n   Output: 4 CO₂, 6 NADH, 2 FADH₂, 2 ATP\n   \n3. ELECTRON TRANSPORT CHAIN (inner membrane):\n   Input: 10 NADH, 2 FADH₂, O₂\n   Output: ~28 ATP, H₂O',
+        'Glycolysis (detailed)\nLocation: Cytoplasm\n10 steps, two phases\n\nENERGY INVESTMENT PHASE (uses 2 ATP):\n  1. Glucose (6C) → Glucose-6-phosphate\n     - Uses 1 ATP\n  2-3. Rearrangements\n  4. Fructose-6-phosphate → Fructose-1,6-bisphosphate\n     - Uses 1 ATP\n  5. Split into 2 G3P (3-carbon molecules)\n\nENERGY PAYOFF PHASE (makes 4 ATP, 2 NADH):\n  6. 2 G3P → 2 1,3-BPG\n     - 2 NAD⁺ → 2 NADH\n  7. 2 1,3-BPG → 2 3-PG\n     - Makes 2 ATP (substrate-level phosphorylation)\n  8-9. Rearrangements → 2 PEP\n  10. 2 PEP → 2 Pyruvate\n     - Makes 2 ATP\n\nNET: 2 ATP, 2 NADH, 2 pyruvate',
+        'Krebs Cycle (Citric Acid Cycle)\nLocation: Mitochondrial matrix\n\nPREP STEP (before cycle):\n  - Pyruvate (3C) → Acetyl-CoA (2C) + CO₂\n  - Produces 1 NADH per pyruvate\n  - Occurs twice per glucose (2 pyruvate)\n\nTHE CYCLE (per acetyl-CoA):\n  1. Acetyl-CoA (2C) + Oxaloacetate (4C) → Citrate (6C)\n  2. Citrate → Isocitrate (rearrangement)\n  3. Isocitrate → α-Ketoglutarate (5C) + CO₂\n     - Produces 1 NADH\n  4. α-Ketoglutarate → Succinyl-CoA (4C) + CO₂\n     - Produces 1 NADH\n  5. Succinyl-CoA → Succinate\n     - Produces 1 ATP (or GTP)\n  6. Succinate → Fumarate\n     - Produces 1 FADH₂\n  7-8. Fumarate → Oxaloacetate\n     - Produces 1 NADH\n\nPer acetyl-CoA: 3 NADH, 1 FADH₂, 1 ATP, 2 CO₂\nPer glucose (×2): 6 NADH, 2 FADH₂, 2 ATP, 4 CO₂',
+        'Electron Transport Chain and Chemiosmosis\nLocation: Inner mitochondrial membrane (cristae)\n\nELECTRON TRANSPORT:\n  1. NADH donates electrons to Complex I\n     - H⁺ pumped into intermembrane space\n  2. FADH₂ donates electrons to Complex II\n  3. Electrons pass through Complexes III and IV\n     - More H⁺ pumped at each complex\n  4. O₂ is final electron acceptor\n     - O₂ + 4e⁻ + 4H⁺ → 2H₂O\n\nCHEMIOSMOSIS:\n  5. H⁺ gradient created (high in intermembrane space)\n  6. H⁺ flows through ATP synthase\n  7. ATP synthase rotates, catalyzes ADP + Pi → ATP\n  \nYield:\n  - 1 NADH → ~2.5 ATP\n  - 1 FADH₂ → ~1.5 ATP\n  - Total from ETC: ~28 ATP',
+        'ATP accounting summary\nFrom 1 glucose molecule:\n\nGLYCOLYSIS:\n  - 2 ATP (substrate-level)\n  - 2 NADH → ~5 ATP (via ETC)\n  Subtotal: ~7 ATP\n\nPREP STEP (Pyruvate → Acetyl-CoA):\n  - 2 NADH → ~5 ATP\n  Subtotal: ~5 ATP\n\nKREBS CYCLE (×2):\n  - 2 ATP (substrate-level)\n  - 6 NADH → ~15 ATP\n  - 2 FADH₂ → ~3 ATP\n  Subtotal: ~20 ATP\n\nTOTAL: ~32 ATP per glucose\n(Range: 30-32 depending on shuttle system)',
+        'Fermentation (anaerobic respiration)\nWhen O₂ is unavailable, cells use fermentation\n\nGlycolysis still occurs (2 ATP, 2 NADH, 2 pyruvate)\nProblem: NAD⁺ runs out, glycolysis stops\nSolution: Regenerate NAD⁺ by fermentation\n\nALCOHOL FERMENTATION (yeast):\n  - Pyruvate → Ethanol + CO₂\n  - NADH → NAD⁺ (regenerated)\n  - Net: 2 ATP per glucose\n  - Used in: brewing, baking\n\nLACTIC ACID FERMENTATION (muscle cells):\n  - Pyruvate → Lactate (lactic acid)\n  - NADH → NAD⁺ (regenerated)\n  - Net: 2 ATP per glucose\n  - Causes muscle fatigue/soreness\n  - Also used in: yogurt, cheese production'
+      ],
+      commonMistakes: [
+        'Confusing glycolysis location (cytoplasm, not mitochondria)',
+        'Thinking all ATP comes from glycolysis (ETC makes most)',
+        'Forgetting to count per glucose (Krebs cycle turns twice)',
+        'Mixing up NADH and FADH₂ (different ATP yields)',
+        'Not understanding that O₂ is final electron acceptor in ETC',
+        'Believing fermentation produces more ATP (only 2 vs 32)',
+        'Confusing substrate-level phosphorylation with oxidative phosphorylation',
+        'Thinking CO₂ is released in glycolysis (released in Krebs cycle)'
+      ],
+      tips: [
+        'Glycolysis: "glyco" (glucose) + "lysis" (splitting)',
+        'Glycolysis: 2 ATP invested, 4 produced, net = 2 ATP',
+        'Krebs cycle: 8 steps, makes NADH, FADH₂, and some ATP',
+        'ETC: NADH and FADH₂ donate electrons, O₂ is final acceptor',
+        'Chemiosmosis: H⁺ gradient powers ATP synthase',
+        'Total: ~32 ATP (from aerobic respiration)',
+        'Fermentation: only 2 ATP (from glycolysis), regenerates NAD⁺',
+        'Remember locations: Glycolysis (cytoplasm), Krebs (matrix), ETC (inner membrane)',
+        'Oxygen debt: why you breathe heavy after exercise (paying back O₂)',
+        'Per glucose: count everything ×2 for Krebs cycle (2 pyruvate)'
+      ]
+    }
+  },
+  // AP Chemistry
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Chemical Equilibrium',
+    content: {
+      title: 'Chemical Equilibrium',
+      intro: 'Chemical equilibrium occurs when the forward and reverse reaction rates are equal, resulting in constant concentrations of reactants and products. The equilibrium constant (K) quantifies this balance. Le Chatelier\'s principle predicts how systems respond to disturbances, essential for optimizing industrial processes and understanding biological systems.',
+      keyPoints: [
+        'Equilibrium: forward rate = reverse rate, concentrations constant',
+        'Dynamic equilibrium: reactions continue in both directions',
+        'Equilibrium constant K: ratio of products to reactants at equilibrium',
+        'K > 1: products favored, K < 1: reactants favored, K = 1: neither favored',
+        'K expression: K = [products]/[reactants], each raised to coefficient power',
+        'Pure solids and liquids not included in K expression',
+        'Le Chatelier\'s principle: system shifts to counteract disturbances',
+        'Adding reactant: shifts right (toward products)',
+        'Adding product: shifts left (toward reactants)',
+        'Increasing temperature: favors endothermic direction',
+        'Increasing pressure: favors side with fewer gas molecules',
+        'Catalysts speed up both directions equally, don\'t affect K or position'
+      ],
+      examples: [
+        'Writing equilibrium constant expression\nReaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g)\n\nK expression:\nK = [NH₃]²/([N₂][H₂]³)\n\nNotes:\n  - Products in numerator, reactants in denominator\n  - Each concentration raised to its coefficient\n  - All gases, so all included\n  - Square brackets [ ] mean molar concentration\n\nIf K = 100: products heavily favored\nIf K = 0.01: reactants heavily favored',
+        'Heterogeneous equilibrium (phases involved)\nReaction: CaCO₃(s) ⇌ CaO(s) + CO₂(g)\n\nK expression:\nK = [CO₂]\n\nNotes:\n  - Pure solids (CaCO₃, CaO) NOT included\n  - Only gases and aqueous species included\n  - Concentration of pure solid is constant\n  \nAnother example:\nAgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq)\nK = Ksp = [Ag⁺][Cl⁻]\nThis is solubility product constant',
+        'Le Chatelier: adding/removing substances\nReaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g) + heat\n\nDisturbance → Response:\n\n1. Add N₂:\n   - System shifts RIGHT\n   - More NH₃ produced\n   - Consumes added N₂\n   \n2. Remove NH₃:\n   - System shifts RIGHT\n   - More NH₃ produced\n   - Replaces removed NH₃\n   \n3. Add NH₃:\n   - System shifts LEFT\n   - More N₂ and H₂ produced\n   - Consumes added NH₃',
+        'Le Chatelier: temperature changes\nReaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g)  ΔH = -92 kJ\n\nExothermic reaction (releases heat):\nThink of heat as a product: N₂ + 3H₂ ⇌ 2NH₃ + heat\n\n1. Increase temperature:\n   - Adding heat (product)\n   - Shifts LEFT (toward reactants)\n   - K decreases\n   - Less NH₃ at equilibrium\n   \n2. Decrease temperature:\n   - Removing heat (product)\n   - Shifts RIGHT (toward products)\n   - K increases\n   - More NH₃ at equilibrium\n   \nNote: Temperature is ONLY change that affects K value',
+        'Le Chatelier: pressure/volume changes\nReaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g)\n\nCount gas molecules:\nLeft side: 1 + 3 = 4 moles gas\nRight side: 2 moles gas\n\n1. Increase pressure (decrease volume):\n   - System shifts to side with FEWER gas molecules\n   - Shifts RIGHT (toward NH₃)\n   - Reduces pressure by having fewer molecules\n   \n2. Decrease pressure (increase volume):\n   - System shifts to side with MORE gas molecules\n   - Shifts LEFT (toward N₂ and H₂)\n   \nNote: If equal moles on both sides, pressure change has no effect',
+        'Calculating equilibrium concentrations\nInitial: [N₂] = 1.0 M, [H₂] = 1.0 M, [NH₃] = 0 M\nReaction: N₂ + 3H₂ ⇌ 2NH₃\nAt equilibrium: [NH₃] = 0.40 M\n\nICE table (Initial, Change, Equilibrium):\n          N₂    3H₂    2NH₃\nI:        1.0   1.0    0\nC:        -x    -3x    +2x\nE:      1.0-x  1.0-3x  2x\n\nGiven: 2x = 0.40, so x = 0.20\n\nEquilibrium concentrations:\n[N₂] = 1.0 - 0.20 = 0.80 M\n[H₂] = 1.0 - 3(0.20) = 0.40 M\n[NH₃] = 0.40 M\n\nK = [NH₃]²/([N₂][H₂]³) = (0.40)²/((0.80)(0.40)³) = 3.1'
+      ],
+      commonMistakes: [
+        'Including pure solids or liquids in K expression',
+        'Forgetting to raise concentrations to coefficient powers',
+        'Thinking equilibrium means equal concentrations (it means equal rates)',
+        'Believing catalysts change K or equilibrium position',
+        'Confusing K > 1 (products favored) with K < 1 (reactants favored)',
+        'Not recognizing that only temperature changes affect K value',
+        'Thinking system at equilibrium stops reacting (it\'s dynamic)',
+        'Forgetting that pressure changes only affect gases'
+      ],
+      tips: [
+        'K = [products]/[reactants], coefficients become exponents',
+        'Pure solids and liquids: leave out of K expression',
+        'K > 1: products favored, K < 1: reactants favored',
+        'Le Chatelier: system opposes the change',
+        'Add reactant → shifts right, add product → shifts left',
+        'Increase temp → favors endothermic direction',
+        'Increase pressure → favors fewer gas molecules',
+        'Catalyst: speeds reaction, doesn\'t change equilibrium',
+        'Only temperature change affects K value',
+        'Use ICE tables to organize equilibrium calculations'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Acid-Base Equilibria',
+    content: {
+      title: 'Acid-Base Equilibria',
+      intro: 'Acids donate protons (H⁺) while bases accept them. pH quantifies acidity on a logarithmic scale. Strong acids/bases dissociate completely, while weak acids/bases establish equilibrium. Buffer solutions resist pH changes, crucial for biological systems and chemical processes.',
+      keyPoints: [
+        'Acid: proton (H⁺) donor, increases [H⁺] in solution',
+        'Base: proton (H⁺) acceptor, increases [OH⁻] in solution',
+        'pH = -log[H⁺], pOH = -log[OH⁻], pH + pOH = 14 (at 25°C)',
+        'pH < 7: acidic, pH = 7: neutral, pH > 7: basic',
+        'Strong acids: completely dissociate (HCl, HNO₃, H₂SO₄)',
+        'Strong bases: completely dissociate (NaOH, KOH)',
+        'Weak acids: partially dissociate, Ka = acid dissociation constant',
+        'Weak bases: partially dissociate, Kb = base dissociation constant',
+        'Ka × Kb = Kw = 1.0 × 10⁻¹⁴ (for conjugate acid-base pair)',
+        'Buffer: weak acid + conjugate base (or weak base + conjugate acid)',
+        'Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA])',
+        'Titration: neutralization reaction to determine concentration'
+      ],
+      examples: [
+        'Calculating pH from [H⁺]\n[H⁺] = 1.0 × 10⁻⁵ M\n\npH = -log[H⁺]\npH = -log(1.0 × 10⁻⁵)\npH = -(-5.00) = 5.00\n\nSince pH < 7, solution is acidic\n\nFinding [H⁺] from pH:\npH = 3.5\n[H⁺] = 10⁻ᵖᴴ = 10⁻³·⁵ = 3.2 × 10⁻⁴ M\n\nRelationship:\npH + pOH = 14\n5.00 + pOH = 14\npOH = 9.00\n[OH⁻] = 10⁻⁹ M',
+        'Strong acid pH calculation\nFind pH of 0.01 M HCl\n\nHCl is strong acid → 100% dissociation:\nHCl → H⁺ + Cl⁻\n\n[H⁺] = 0.01 M = 1.0 × 10⁻² M\n\npH = -log(1.0 × 10⁻²) = 2.00\n\nStrong base example:\nFind pH of 0.01 M NaOH\n\nNaOH → Na⁺ + OH⁻ (complete)\n[OH⁻] = 0.01 M\npOH = -log(0.01) = 2.00\npH = 14 - 2.00 = 12.00',
+        'Weak acid equilibrium\nCalculate pH of 0.10 M acetic acid (CH₃COOH), Ka = 1.8 × 10⁻⁵\n\nCH₃COOH ⇌ H⁺ + CH₃COO⁻\n\nICE table:\n          CH₃COOH    H⁺    CH₃COO⁻\nI:         0.10      0      0\nC:          -x      +x     +x\nE:        0.10-x     x      x\n\nKa = [H⁺][CH₃COO⁻]/[CH₃COOH]\n1.8 × 10⁻⁵ = (x)(x)/(0.10-x)\n\nAssume x << 0.10:\n1.8 × 10⁻⁵ = x²/0.10\nx² = 1.8 × 10⁻⁶\nx = 1.3 × 10⁻³ M = [H⁺]\n\npH = -log(1.3 × 10⁻³) = 2.87',
+        'Buffer solution calculation\nBuffer: 0.50 M CH₃COOH and 0.50 M CH₃COO⁻Na⁺\npKa of acetic acid = 4.74\n\nHenderson-Hasselbalch equation:\npH = pKa + log([A⁻]/[HA])\npH = 4.74 + log(0.50/0.50)\npH = 4.74 + log(1)\npH = 4.74 + 0 = 4.74\n\nWhen [acid] = [base], pH = pKa\n\nAfter adding 0.01 mol HCl to 1.0 L buffer:\nH⁺ reacts with CH₃COO⁻ → CH₃COOH\n[CH₃COOH] = 0.50 + 0.01 = 0.51 M\n[CH₃COO⁻] = 0.50 - 0.01 = 0.49 M\n\npH = 4.74 + log(0.49/0.51) = 4.72\n\nOnly small pH change!',
+        'Titration curve: strong acid + strong base\nTitrating 25.0 mL of 0.10 M HCl with 0.10 M NaOH\n\nBefore equivalence point:\n  - Excess H⁺, acidic\n  - pH gradually increases\n  \nAt equivalence point:\n  - All H⁺ neutralized: H⁺ + OH⁻ → H₂O\n  - Only Na⁺ and Cl⁻ (neutral ions)\n  - pH = 7.00\n  - Sharp pH jump\n  \nAfter equivalence point:\n  - Excess OH⁻, basic\n  - pH continues to increase\n  \nVolume at equivalence:\nM₁V₁ = M₂V₂\n(0.10)(25.0) = (0.10)(V₂)\nV₂ = 25.0 mL NaOH needed',
+        'Conjugate acid-base pairs\nAcid: CH₃COOH ⇌ H⁺ + CH₃COO⁻ (conjugate base)\nBase: NH₃ + H⁺ ⇌ NH₄⁺ (conjugate acid)\n\nRelationship:\nKa(CH₃COOH) × Kb(CH₃COO⁻) = Kw = 1.0 × 10⁻¹⁴\n\nIf Ka = 1.8 × 10⁻⁵:\nKb = Kw/Ka = (1.0 × 10⁻¹⁴)/(1.8 × 10⁻⁵) = 5.6 × 10⁻¹⁰\n\nStrong acid → very weak conjugate base\nWeak acid → weak conjugate base'
+      ],
+      commonMistakes: [
+        'Confusing [H⁺] with pH (pH is -log[H⁺])',
+        'Thinking pH 6 is twice as acidic as pH 3 (it\'s 1000× less acidic)',
+        'Forgetting that strong acids/bases dissociate completely',
+        'Using Ka expression for strong acids (they don\'t establish equilibrium)',
+        'Not recognizing that buffers need both weak acid and conjugate base',
+        'Confusing pKa with Ka (pKa = -log Ka)',
+        'Thinking neutralization always gives pH 7 (only for strong acid + strong base)',
+        'Forgetting to check if x << initial concentration approximation is valid'
+      ],
+      tips: [
+        'pH = -log[H⁺], [H⁺] = 10⁻ᵖᴴ',
+        'pH + pOH = 14 (at 25°C)',
+        'Strong acids: HCl, HNO₃, H₂SO₄, HBr, HI, HClO₄',
+        'Strong bases: NaOH, KOH, Ca(OH)₂, Ba(OH)₂',
+        'Weak acid: use Ka, set up ICE table',
+        'Buffer: pH = pKa + log([base]/[acid])',
+        'When [acid] = [base], pH = pKa (best buffer)',
+        'pH scale is logarithmic: each unit = 10× change in [H⁺]',
+        'Equivalence point: moles acid = moles base',
+        'Practice: know how to use ICE tables and Henderson-Hasselbalch'
+      ]
+    }
+  },
+  // AP Physics 1
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Kinematics',
+    content: {
+      title: 'Kinematics',
+      intro: 'Kinematics describes motion using position, velocity, and acceleration without considering forces. These fundamental concepts use equations to predict an object\'s motion. Understanding displacement, velocity, and acceleration in one and two dimensions is essential for all of physics.',
+      keyPoints: [
+        'Position (x): location relative to origin, scalar or vector',
+        'Displacement (Δx): change in position, vector quantity',
+        'Distance: total path length, scalar quantity',
+        'Velocity (v): rate of change of position, v = Δx/Δt, vector',
+        'Speed: magnitude of velocity, scalar',
+        'Acceleration (a): rate of change of velocity, a = Δv/Δt, vector',
+        'Average velocity: vₐᵥᵧ = Δx/Δt = (x₂ - x₁)/(t₂ - t₁)',
+        'Instantaneous velocity: velocity at specific instant',
+        'Free fall: constant acceleration a = g = 9.8 m/s² downward',
+        'Kinematic equations (constant acceleration only)',
+        'Projectile motion: horizontal (constant velocity) + vertical (constant acceleration)',
+        'Graphs: position-time, velocity-time, acceleration-time'
+      ],
+      examples: [
+        'Kinematic equations (constant acceleration)\nFour key equations:\n\n1. v = v₀ + at\n   (velocity as function of time)\n   \n2. x = x₀ + v₀t + ½at²\n   (position as function of time)\n   \n3. v² = v₀² + 2a(x - x₀)\n   (no time variable)\n   \n4. x = x₀ + ½(v₀ + v)t\n   (average velocity)\n   \nVariables:\n  v = final velocity\n  v₀ = initial velocity\n  a = acceleration (constant)\n  t = time\n  x = final position\n  x₀ = initial position',
+        'Problem: Car accelerating from rest\nCar accelerates from rest at 2.0 m/s² for 5.0 s\nFind: (a) final velocity, (b) distance traveled\n\nGiven:\n  v₀ = 0 m/s (from rest)\n  a = 2.0 m/s²\n  t = 5.0 s\n  \n(a) Find v:\nv = v₀ + at\nv = 0 + (2.0)(5.0)\nv = 10 m/s\n\n(b) Find x (let x₀ = 0):\nx = v₀t + ½at²\nx = 0 + ½(2.0)(5.0)²\nx = ½(2.0)(25)\nx = 25 m',
+        'Free fall problem\nBall dropped from 45 m height\nFind: (a) time to hit ground, (b) velocity when hits ground\n\nGiven:\n  y₀ = 45 m\n  v₀ = 0 m/s (dropped)\n  a = -9.8 m/s² (down is negative)\n  y = 0 m (ground)\n  \n(a) Find t:\ny = y₀ + v₀t + ½at²\n0 = 45 + 0 + ½(-9.8)t²\n-45 = -4.9t²\nt² = 9.18\nt = 3.0 s\n\n(b) Find v:\nv = v₀ + at\nv = 0 + (-9.8)(3.0)\nv = -29.4 m/s (negative = downward)',
+        'Projectile motion: horizontal launch\nBall rolls off 20 m high cliff at 10 m/s horizontally\nFind: (a) time in air, (b) horizontal distance\n\nHorizontal motion (constant velocity):\n  vₓ = 10 m/s (constant)\n  aₓ = 0\n  \nVertical motion (free fall):\n  y₀ = 20 m, v₀ᵧ = 0, aᵧ = -9.8 m/s²\n  \n(a) Time in air (use vertical):\ny = y₀ + v₀ᵧt + ½aᵧt²\n0 = 20 + 0 + ½(-9.8)t²\nt = 2.02 s\n\n(b) Horizontal distance:\nx = vₓt\nx = (10)(2.02)\nx = 20.2 m',
+        'Velocity-time graph interpretation\nGraph shows velocity vs time\n\nSlope of v-t graph:\n  slope = Δv/Δt = acceleration\n  \nArea under v-t graph:\n  area = displacement\n  \nExample graph:\n  v = 10 m/s from t=0 to t=5s (horizontal line)\n  \nAcceleration:\n  slope = 0, so a = 0 (constant velocity)\n  \nDisplacement:\n  area = (10 m/s)(5 s) = 50 m',
+        'Projectile at angle\nBall kicked at 20 m/s at 30° above horizontal\nFind maximum height\n\nResolve initial velocity:\nvₓ = v₀cos(30°) = 20(0.866) = 17.3 m/s\nvᵧ = v₀sin(30°) = 20(0.500) = 10.0 m/s\n\nAt maximum height, vᵧ = 0:\nvᵧ² = v₀ᵧ² + 2aᵧy\n0 = (10.0)² + 2(-9.8)y\n0 = 100 - 19.6y\ny = 5.1 m\n\nAlternatively use: yₘₐₓ = v₀ᵧ²/(2g) = 100/(2×9.8) = 5.1 m'
+      ],
+      commonMistakes: [
+        'Using kinematic equations when acceleration isn\'t constant',
+        'Confusing velocity (vector) with speed (scalar)',
+        'Confusing displacement (vector) with distance (scalar)',
+        'Forgetting to use correct sign for acceleration (gravity is negative if up is positive)',
+        'Using wrong kinematic equation (pick one with known variables)',
+        'Not separating horizontal and vertical components in projectile motion',
+        'Thinking horizontal velocity changes in projectile motion (it doesn\'t)',
+        'Forgetting that at maximum height, vertical velocity = 0'
+      ],
+      tips: [
+        'Choose coordinate system: up is usually positive',
+        'Free fall: a = -g = -9.8 m/s² (if up is positive)',
+        'Identify knowns and unknown, then choose right equation',
+        'Projectile motion: treat x and y independently',
+        'Horizontal: vₓ = constant, aₓ = 0',
+        'Vertical: aᵧ = -g (free fall)',
+        'At peak of trajectory: vᵧ = 0, vₓ unchanged',
+        'Time up = time down (if same height)',
+        'v-t graph: slope = acceleration, area = displacement',
+        'Units: check that units work out in equations'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Dynamics and Forces',
+    content: {
+      title: 'Dynamics and Forces',
+      intro: 'Dynamics studies forces and their effects on motion using Newton\'s laws. Forces cause acceleration, and analyzing forces with free-body diagrams is fundamental to physics. Understanding net force, friction, tension, and normal force enables solving complex motion problems.',
+      keyPoints: [
+        'Force (F): push or pull, measured in newtons (N), vector quantity',
+        'Newton\'s First Law: object at rest stays at rest, moving object continues at constant velocity (unless net force acts)',
+        'Inertia: tendency to resist changes in motion, proportional to mass',
+        'Newton\'s Second Law: Fₙₑₜ = ma (net force = mass × acceleration)',
+        'Newton\'s Third Law: for every action, equal and opposite reaction',
+        'Weight: W = mg (force of gravity)',
+        'Normal force (N): perpendicular force from surface',
+        'Friction: fₛ ≤ μₛN (static), fₖ = μₖN (kinetic)',
+        'Tension (T): force transmitted through rope/string',
+        'Free-body diagram: shows all forces on single object',
+        'Net force: vector sum of all forces, Fₙₑₜ = ΣF',
+        'Equilibrium: Fₙₑₜ = 0, a = 0 (at rest or constant velocity)'
+      ],
+      examples: [
+        'Applying Newton\'s Second Law\nProblem: 10 kg box pushed with 50 N, friction = 20 N\nFind acceleration\n\nFree-body diagram:\n  Applied force: F = 50 N →\n  Friction: f = 20 N ←\n  Weight: W = mg = 98 N ↓\n  Normal: N = 98 N ↑\n  \nHorizontal (x-direction):\n  ΣFₓ = F - f = ma\n  50 - 20 = 10a\n  30 = 10a\n  a = 3.0 m/s² →\n  \nVertical (y-direction):\n  ΣFᵧ = N - W = 0 (no vertical motion)\n  N = W = 98 N',
+        'Friction problem\n5.0 kg block on horizontal surface, μₛ = 0.40, μₖ = 0.30\nFind: (a) max static friction, (b) kinetic friction\n\nNormal force:\n  N = mg = (5.0)(9.8) = 49 N\n  \n(a) Maximum static friction:\nfₛ(max) = μₛN\nfₛ(max) = (0.40)(49)\nfₛ(max) = 19.6 N\n\nStatic friction prevents motion until F > 19.6 N\n\n(b) Kinetic friction (when sliding):\nfₖ = μₖN\nfₖ = (0.30)(49)\nfₖ = 14.7 N\n\nNote: μₖ < μₛ (easier to keep moving than to start)',
+        'Newton\'s Third Law: Action-Reaction\nExamples of action-reaction pairs:\n\n1. Book on table:\n   Action: Book pushes down on table (weight)\n   Reaction: Table pushes up on book (normal force)\n   \n2. Rocket propulsion:\n   Action: Rocket pushes gas backward\n   Reaction: Gas pushes rocket forward\n   \n3. Swimming:\n   Action: Swimmer pushes water backward\n   Reaction: Water pushes swimmer forward\n   \nIMPORTANT: Action-reaction pairs:\n  - Equal magnitude, opposite direction\n  - Act on DIFFERENT objects\n  - Same type of force\n  - Occur simultaneously',
+        'Inclined plane problem\n8.0 kg block on frictionless 30° incline\nFind: (a) acceleration, (b) normal force\n\nForces:\n  Weight: W = mg = 78.4 N (straight down)\n  Normal: N (perpendicular to surface)\n  \nResolve weight into components:\n  Parallel to incline: W∥ = mg sin(30°)\n  Perpendicular: W⊥ = mg cos(30°)\n  \n(a) Acceleration (parallel direction):\nΣF∥ = ma\nmg sin(30°) = ma\na = g sin(30°)\na = 9.8 × 0.5 = 4.9 m/s²\n\n(b) Normal force (perpendicular):\nΣF⊥ = 0 (no motion perpendicular)\nN - mg cos(30°) = 0\nN = mg cos(30°) = 78.4 × 0.866 = 67.9 N',
+        'Atwood machine (two masses, pulley)\nm₁ = 5.0 kg, m₂ = 3.0 kg connected by string over pulley\nFind acceleration and tension\n\nFree-body diagrams:\n  m₁: T ↑, m₁g ↓\n  m₂: T ↑, m₂g ↓\n  \nFor m₁ (assume moving down):\n  m₁g - T = m₁a\n  \nFor m₂ (moving up):\n  T - m₂g = m₂a\n  \nAdd equations:\n  m₁g - m₂g = m₁a + m₂a\n  (m₁ - m₂)g = (m₁ + m₂)a\n  a = (m₁ - m₂)g/(m₁ + m₂)\n  a = (5.0 - 3.0)(9.8)/(5.0 + 3.0)\n  a = 2.45 m/s²\n  \nTension (substitute back):\n  T = m₂(g + a) = 3.0(9.8 + 2.45) = 36.8 N',
+        'Elevator problem\n60 kg person in elevator\nFind apparent weight when: (a) accelerating up at 2.0 m/s², (b) free fall\n\nFree-body diagram:\n  Normal force: N ↑ (scale reading = apparent weight)\n  Weight: W = mg = 588 N ↓\n  \n(a) Accelerating upward:\nΣF = ma\nN - mg = ma\nN = m(g + a)\nN = 60(9.8 + 2.0) = 708 N\nFeels heavier!\n\n(b) Free fall (a = -g):\nN = m(g - g) = 0\nWeightless!'
+      ],
+      commonMistakes: [
+        'Confusing weight (force) with mass',
+        'Not drawing free-body diagram for each object separately',
+        'Including forces that don\'t act on the object',
+        'Forgetting that normal force isn\'t always equal to weight',
+        'Mixing up static and kinetic friction',
+        'Thinking action-reaction pairs cancel (they act on different objects)',
+        'Using wrong component of weight on incline',
+        'Not checking if object is in equilibrium before using Fₙₑₜ = 0'
+      ],
+      tips: [
+        'Always draw free-body diagram first',
+        'Include only forces acting ON the object',
+        'Weight W = mg always points downward',
+        'Normal force perpendicular to surface',
+        'Fₙₑₜ = ma applies to each direction separately',
+        'Static friction: fₛ ≤ μₛN (inequality)',
+        'Kinetic friction: fₖ = μₖN (equality)',
+        'Action-reaction pairs act on different objects',
+        'Incline: resolve weight into parallel and perpendicular components',
+        'Equilibrium: a = 0, so Fₙₑₜ = 0'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Light-Dependent and Light-Independent Reactions',
+    content: {
+      title: 'Light-Dependent and Light-Independent Reactions',
+      intro: 'Photosynthesis has two interconnected stages: light-dependent reactions capture light energy in thylakoids to produce ATP and NADPH, while light-independent reactions (Calvin cycle) use these products in the stroma to fix CO₂ into glucose. Together, they convert light energy into stable chemical energy.',
+      keyPoints: [
+        'Light-dependent reactions: occur in thylakoid membranes',
+        'Light-independent reactions (Calvin cycle): occur in stroma',
+        'Photosystem II: absorbs light at 680 nm (P680)',
+        'Photosystem I: absorbs light at 700 nm (P700)',
+        'Photolysis: splitting of water (2H₂O → 4H⁺ + 4e⁻ + O₂)',
+        'Electron transport chain: creates proton gradient',
+        'Chemiosmosis: ATP synthase uses H⁺ gradient to make ATP',
+        'NADPH: electron carrier produced in light reactions',
+        'Calvin cycle: carbon fixation, reduction, regeneration',
+        'RuBisCO: enzyme that fixes CO₂ to RuBP',
+        '3 CO₂ molecules → 1 G3P (3-carbon sugar)',
+        '6 turns of Calvin cycle → 1 glucose molecule'
+      ],
+      examples: [
+        'Light reactions produce ATP and NADPH\nCalvin cycle uses ATP and NADPH to fix CO₂',
+        'Photolysis splits water, releasing O₂',
+        'RuBisCO is the most abundant enzyme on Earth'
+      ],
+      commonMistakes: [
+        'Confusing the two stages of photosynthesis',
+        'Thinking oxygen comes from CO₂ (comes from H₂O)'
+      ],
+      tips: [
+        'Light reactions: thylakoid, produce ATP + NADPH + O₂',
+        'Calvin cycle: stroma, produce G3P (glucose precursor)',
+        'O₂ source: water splitting in PS II'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Glycolysis, Krebs Cycle, Electron Transport Chain',
+    content: {
+      title: 'Cellular Respiration Details',
+      intro: 'Cellular respiration extracts energy from glucose through three stages in specific locations, producing ATP as the cell\'s energy currency.',
+      keyPoints: [
+        'Glycolysis: glucose → 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm)',
+        'Krebs cycle: acetyl-CoA → 2 CO₂, produces NADH, FADH₂, ATP (matrix)',
+        'Electron transport chain (ETC): NADH and FADH₂ → ATP (inner membrane)',
+        'Total ATP: ~30-32 per glucose (aerobic)',
+        'Oxygen: final electron acceptor in ETC',
+        'NADH: ~2.5 ATP, FADH₂: ~1.5 ATP'
+      ],
+      examples: [
+        'Glycolysis net: 2 ATP + 2 NADH',
+        'Krebs cycle per glucose: 6 NADH + 2 FADH₂ + 2 ATP',
+        'ETC produces most ATP through chemiosmosis'
+      ],
+      commonMistakes: [
+        'Forgetting to multiply Krebs cycle by 2',
+        'Thinking glycolysis requires O₂ (it doesn\'t)'
+      ],
+      tips: [
+        'Glycolysis: cytoplasm, anaerobic',
+        'Krebs: matrix, Krebs ×2 per glucose',
+        'ETC: inner membrane, needs O₂'
+      ]
+    }
+  },
+  // More AP Chemistry
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Thermodynamics',
+    content: {
+      title: 'Thermodynamics',
+      intro: 'Thermodynamics studies energy changes in chemical reactions. Enthalpy (ΔH) measures heat flow, entropy (ΔS) measures disorder, and Gibbs free energy (ΔG) predicts spontaneity. Understanding these concepts is essential for predicting reaction behavior.',
+      keyPoints: [
+        'First Law: Energy is conserved (ΔE = q + w)',
+        'Enthalpy (ΔH): heat content change at constant pressure',
+        'ΔH < 0: exothermic (releases heat), ΔH > 0: endothermic (absorbs heat)',
+        'Entropy (ΔS): measure of disorder or randomness',
+        'Second Law: Entropy of universe always increases',
+        'Gibbs Free Energy: ΔG = ΔH - TΔS',
+        'ΔG < 0: spontaneous, ΔG > 0: nonspontaneous, ΔG = 0: equilibrium',
+        'Standard conditions: 25°C (298 K), 1 atm, 1 M concentrations',
+        'Hess\'s Law: ΔH is path-independent',
+        'Bond energy: energy to break bonds (always positive)',
+        'ΔH_rxn = Σ(bonds broken) - Σ(bonds formed)',
+        'Calorimetry: q = mcΔT'
+      ],
+      examples: [
+        'Calculating ΔH using Hess\'s Law\nWant: C(s) + O₂(g) → CO₂(g)\nGiven:\n  C(s) + ½O₂(g) → CO(g)   ΔH₁ = -110 kJ\n  CO(g) + ½O₂(g) → CO₂(g)  ΔH₂ = -283 kJ\nAdd equations:\n  C + ½O₂ → CO\n  CO + ½O₂ → CO₂\n  ___________________\n  C + O₂ → CO₂\nΔH = ΔH₁ + ΔH₂ = -110 + (-283) = -393 kJ',
+        'Predicting spontaneity with ΔG\nΔG = ΔH - TΔS\nFour cases:\n1. ΔH < 0, ΔS > 0: Always spontaneous (both favor)\n2. ΔH > 0, ΔS < 0: Never spontaneous (both oppose)\n3. ΔH < 0, ΔS < 0: Spontaneous at low T\n4. ΔH > 0, ΔS > 0: Spontaneous at high T',
+        'Calorimetry problem\n50 g water, ΔT = 10°C, c = 4.18 J/g°C\nq = mcΔT = (50)(4.18)(10) = 2090 J = 2.09 kJ'
+      ],
+      commonMistakes: [
+        'Confusing ΔH and ΔG',
+        'Wrong sign conventions',
+        'Forgetting temperature must be in Kelvin for ΔG',
+        'Not understanding spontaneous ≠ fast'
+      ],
+      tips: [
+        'Exothermic: ΔH < 0 (releases heat)',
+        'Endothermic: ΔH > 0 (absorbs heat)',
+        'ΔG < 0: spontaneous (thermodynamically favored)',
+        'Higher entropy = more disorder',
+        'Remember: ΔG = ΔH - TΔS'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Electrochemistry',
+    content: {
+      title: 'Electrochemistry',
+      intro: 'Electrochemistry studies redox reactions and electron transfer. Galvanic cells generate electricity from spontaneous reactions, while electrolytic cells use electricity to drive nonspontaneous reactions. Cell potential indicates reaction spontaneity.',
+      keyPoints: [
+        'Oxidation: loss of electrons (OIL)',
+        'Reduction: gain of electrons (RIG)',
+        'Galvanic/Voltaic cell: spontaneous, produces electricity',
+        'Electrolytic cell: nonspontaneous, requires external voltage',
+        'Anode: oxidation occurs (negative in galvanic)',
+        'Cathode: reduction occurs (positive in galvanic)',
+        'Standard reduction potential (E°): tendency to be reduced',
+        'E°cell = E°cathode - E°anode',
+        'Positive E°cell: spontaneous reaction',
+        'Nernst equation: E = E° - (RT/nF)lnQ',
+        'Faraday\'s law: charge and moles of electrons related',
+        'Corrosion: oxidation of metals'
+      ],
+      examples: [
+        'Calculate cell potential\nZn²⁺ + 2e⁻ → Zn   E° = -0.76 V\nCu²⁺ + 2e⁻ → Cu   E° = +0.34 V\nCell: Zn | Zn²⁺ || Cu²⁺ | Cu\nZn oxidized (anode): E° = -0.76 V\nCu²⁺ reduced (cathode): E° = +0.34 V\nE°cell = 0.34 - (-0.76) = +1.10 V (spontaneous!)',
+        'Balancing redox in acidic solution\nMnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺\n1. Split half-reactions\n2. Balance atoms\n3. Balance O with H₂O, H with H⁺\n4. Balance charge with e⁻\n5. Equalize electrons and add'
+      ],
+      commonMistakes: [
+        'Mixing up anode and cathode',
+        'Wrong sign in E°cell calculation',
+        'Forgetting electrons in half-reactions'
+      ],
+      tips: [
+        'OIL RIG: Oxidation Is Loss, Reduction Is Gain',
+        'AN OX, RED CAT: Anode Oxidation, Reduction Cathode',
+        'Positive E°cell = spontaneous',
+        'Galvanic: spontaneous, Electrolytic: forced'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Chemical Kinetics',
+    content: {
+      title: 'Chemical Kinetics',
+      intro: 'Kinetics studies reaction rates and mechanisms. Rate depends on concentration, temperature, and catalysts. Rate laws show mathematical relationship between concentration and rate. Understanding kinetics helps control reactions.',
+      keyPoints: [
+        'Rate: change in concentration over time',
+        'Rate law: rate = k[A]ᵐ[B]ⁿ',
+        'k: rate constant (temperature dependent)',
+        'm, n: reaction orders (determined experimentally)',
+        'Zero order: rate independent of concentration',
+        'First order: rate ∝ [A]',
+        'Second order: rate ∝ [A]²',
+        'Half-life (t₁/₂): time for half to react',
+        'Arrhenius equation: k = Ae^(-Ea/RT)',
+        'Activation energy (Ea): minimum energy for reaction',
+        'Catalyst: lowers Ea, speeds reaction',
+        'Mechanism: step-by-step path'
+      ],
+      examples: [
+        'Rate law determination\nExperiment 1: [A]=0.1, [B]=0.1, rate=2\nExperiment 2: [A]=0.2, [B]=0.1, rate=8\nExperiment 3: [A]=0.1, [B]=0.2, rate=2\nCompare 1&2: doubling A quadruples rate → order=2\nCompare 1&3: doubling B no change → order=0\nRate = k[A]²',
+        'First-order half-life\nt₁/₂ = 0.693/k\nIf k = 0.0693 s⁻¹\nt₁/₂ = 0.693/0.0693 = 10 s'
+      ],
+      commonMistakes: [
+        'Thinking order = coefficient (must determine experimentally)',
+        'Confusing rate constant with rate',
+        'Wrong half-life formula for different orders'
+      ],
+      tips: [
+        'Order: determined by experiment, not equation',
+        'Zero order: constant rate, first order: exponential decay',
+        'Catalyst: speeds both forward and reverse',
+        'Higher T or lower Ea = faster reaction'
+      ]
+    }
+  },
+  // More AP Physics 1
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Circular Motion and Gravitation',
+    content: {
+      title: 'Circular Motion and Gravitation',
+      intro: 'Circular motion requires centripetal force directed toward center. Universal gravitation describes force between masses. Satellites and planets follow these principles.',
+      keyPoints: [
+        'Centripetal acceleration: ac = v²/r',
+        'Centripetal force: Fc = mv²/r',
+        'Period (T): time for one revolution',
+        'Frequency (f): revolutions per second, f = 1/T',
+        'v = 2πr/T (tangential velocity)',
+        'Newton\'s Law of Gravitation: F = Gm₁m₂/r²',
+        'G = 6.67 × 10⁻¹¹ N⋅m²/kg²',
+        'Gravitational field: g = GM/r²',
+        'Orbital velocity: v = √(GM/r)',
+        'Centripetal force provides gravitational force in orbits',
+        'Weight varies with distance from Earth',
+        'Apparent weightlessness in orbit'
+      ],
+      examples: [
+        'Car turning (circular motion)\nr = 50 m, v = 20 m/s, m = 1000 kg\nac = v²/r = 400/50 = 8 m/s²\nFc = mac = 1000(8) = 8000 N\nFriction must provide this force',
+        'Satellite orbit\nEarth mass M, radius r, satellite mass m\nFgrav = Fcentripetal\nGMm/r² = mv²/r\nv = √(GM/r)'
+      ],
+      commonMistakes: [
+        'Thinking centrifugal force exists (it doesn\'t)',
+        'Confusing speed with velocity in circular motion',
+        'Wrong direction for centripetal force'
+      ],
+      tips: [
+        'Centripetal: toward center, always perpendicular to velocity',
+        'Speed constant but velocity changes (direction)',
+        'Friction, tension, or gravity can provide centripetal force',
+        'In orbit: Fgrav = Fcentripetal'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Energy and Work',
+    content: {
+      title: 'Work and Energy',
+      intro: 'Work transfers energy. Kinetic energy is energy of motion, potential energy is stored energy. Conservation of energy is fundamental principle.',
+      keyPoints: [
+        'Work: W = Fd cos θ',
+        'Kinetic energy: KE = ½mv²',
+        'Gravitational PE: PEg = mgh',
+        'Elastic PE: PEs = ½kx²',
+        'Work-Energy Theorem: W = ΔKE',
+        'Conservation of Energy: Ei = Ef (isolated system)',
+        'Power: P = W/t = Fv',
+        'Joule (J): unit of energy and work',
+        'Watt (W): unit of power, 1 W = 1 J/s',
+        'Conservative force: work path-independent (gravity)',
+        'Non-conservative: friction, air resistance',
+        'Mechanical energy: E = KE + PE'
+      ],
+      examples: [
+        'Sliding down frictionless ramp\nm = 5 kg, h = 10 m\nTop: PEi = mgh = 5(10)(10) = 500 J, KEi = 0\nBottom: PEf = 0, KEf = ?\nConservation: 500 = KEf\nKEf = ½mv² = 500\nv = √(200) = 14.1 m/s',
+        'Work against friction\nF = 100 N, d = 5 m, θ = 0°\nW = Fd = 100(5) = 500 J'
+      ],
+      commonMistakes: [
+        'Forgetting cos θ in work equation',
+        'Not using conservation when appropriate',
+        'Confusing power with energy'
+      ],
+      tips: [
+        'No work if force perpendicular (cos 90° = 0)',
+        'Conservative forces: can use energy conservation',
+        'With friction: some energy becomes thermal',
+        'Power = energy/time'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Momentum and Collisions',
+    content: {
+      title: 'Momentum and Collisions',
+      intro: 'Momentum is mass times velocity. In isolated systems, momentum is conserved. Collisions are elastic (KE conserved) or inelastic (KE not conserved).',
+      keyPoints: [
+        'Momentum: p = mv (vector)',
+        'Impulse: J = Δp = FΔt',
+        'Conservation: pinitial = pfinal (isolated system)',
+        'Elastic collision: KE and momentum conserved',
+        'Inelastic collision: only momentum conserved',
+        'Perfectly inelastic: objects stick together',
+        'Impulse-Momentum Theorem: FΔt = Δp',
+        'In 2D: conserve x and y components separately',
+        'Center of mass: xcm = Σ(mixi)/Σmi',
+        'Recoil: gun and bullet example',
+        'Newton\'s 3rd law basis for conservation',
+        'Explosions: momentum conserved'
+      ],
+      examples: [
+        'Perfectly inelastic collision\nm₁ = 2 kg, v₁ = 5 m/s\nm₂ = 3 kg, v₂ = 0\nStick together, find vf\nConservation: m₁v₁ + m₂v₂ = (m₁+m₂)vf\n2(5) + 0 = 5vf\nvf = 2 m/s',
+        'Impulse on ball\nΔp = 10 kg⋅m/s, Δt = 0.1 s\nF = Δp/Δt = 10/0.1 = 100 N'
+      ],
+      commonMistakes: [
+        'Not using vector nature of momentum',
+        'Thinking KE always conserved (only in elastic)',
+        'Wrong sign for velocities'
+      ],
+      tips: [
+        'Momentum always conserved in isolated system',
+        'Elastic: both p and KE conserved',
+        'Inelastic: only p conserved',
+        'Impulse: large force, short time OR small force, long time'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Rotational Motion',
+    content: {
+      title: 'Rotational Motion',
+      intro: 'Rotational motion is analogous to linear motion. Torque causes angular acceleration. Rotational kinetic energy and angular momentum are conserved.',
+      keyPoints: [
+        'Angular position: θ (radians)',
+        'Angular velocity: ω = Δθ/Δt',
+        'Angular acceleration: α = Δω/Δt',
+        'Torque: τ = rF sin θ',
+        'Rotational inertia: I = Σmr²',
+        'Newton\'s 2nd for rotation: τ = Iα',
+        'Rotational KE: KErot = ½Iω²',
+        'Angular momentum: L = Iω',
+        'Conservation of L: Li = Lf (isolated)',
+        'Parallel axis theorem: I = Icm + md²',
+        'Equilibrium: Στ = 0',
+        'Rolling without slipping: v = rω'
+      ],
+      examples: [
+        'Torque on lever\nr = 2 m, F = 50 N, θ = 90°\nτ = rF sin θ = 2(50)(1) = 100 N⋅m',
+        'Conservation of angular momentum\nSkater pulls arms in, I decreases\nL = Iω = constant\nIf I decreases, ω increases (spins faster)'
+      ],
+      commonMistakes: [
+        'Confusing torque with force',
+        'Wrong rotational inertia formula',
+        'Forgetting sin θ in torque'
+      ],
+      tips: [
+        'Torque = rotational force',
+        'Larger I = harder to rotate',
+        'L conserved when no external torque',
+        'Rolling: both translational and rotational KE'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Simple Harmonic Motion',
+    content: {
+      title: 'Simple Harmonic Motion',
+      intro: 'SHM is periodic motion with restoring force proportional to displacement. Springs and pendulums exhibit SHM. Energy oscillates between kinetic and potential.',
+      keyPoints: [
+        'Restoring force: F = -kx (Hooke\'s Law)',
+        'Period of spring: T = 2π√(m/k)',
+        'Period of pendulum: T = 2π√(L/g)',
+        'Frequency: f = 1/T',
+        'Angular frequency: ω = 2πf = √(k/m)',
+        'Position: x = A cos(ωt)',
+        'Velocity: v = -Aω sin(ωt)',
+        'Acceleration: a = -ω²x',
+        'Total energy: E = ½kA²',
+        'At equilibrium: max KE, zero PE',
+        'At amplitude: zero KE, max PE',
+        'Period independent of amplitude'
+      ],
+      examples: [
+        'Spring oscillation\nm = 0.5 kg, k = 200 N/m\nT = 2π√(m/k) = 2π√(0.5/200)\nT = 2π√(0.0025) = 0.314 s\nf = 1/T = 3.18 Hz',
+        'Pendulum period\nL = 1 m, g = 9.8 m/s²\nT = 2π√(L/g) = 2π√(1/9.8)\nT = 2.0 s'
+      ],
+      commonMistakes: [
+        'Thinking period depends on amplitude (it doesn\'t)',
+        'Wrong formula for spring vs pendulum',
+        'Confusing ω (angular freq) with v (velocity)'
+      ],
+      tips: [
+        'SHM: restoring force ∝ displacement',
+        'Spring: T depends on m and k',
+        'Pendulum: T depends on L and g only',
+        'Energy trades between KE and PE',
+        'Max speed at equilibrium'
+      ]
+    }
+  },
+  // AP Computer Science A
+  {
+    categorySlug: 'computer-science',
+    subjectName: 'AP Computer Science A',
+    topicName: 'Java Basics and Syntax',
+    content: {
+      title: 'Java Basics and Syntax',
+      intro: 'Java is a strongly-typed, object-oriented programming language. Understanding basic syntax, data types, and program structure is essential for writing Java programs.',
+      keyPoints: [
+        'Java is compiled: .java files → .class bytecode → run on JVM',
+        'main method: public static void main(String[] args)',
+        'Semicolons end statements',
+        'Case-sensitive: myVariable ≠ MyVariable',
+        'Comments: // single-line, /* multi-line */',
+        'println() prints with newline, print() without',
+        'Primitive types: int, double, boolean, char',
+        'Reference types: String, arrays, objects',
+        'Variables must be declared with type',
+        'Constants: final keyword',
+        'Naming: camelCase for variables, PascalCase for classes',
+        'Operators: +, -, *, /, %, ++, --'
+      ],
+      examples: [
+        'Basic Java program\npublic class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println("Hello, World!");\n  }\n}',
+        'Variables and types\nint age = 16;\ndouble gpa = 3.85;\nboolean isStudent = true;\nchar grade = \'A\';\nString name = "Alice";',
+        'Arithmetic operators\nint a = 10, b = 3;\nint sum = a + b;      // 13\nint diff = a - b;     // 7\nint prod = a * b;     // 30\nint quot = a / b;     // 3 (integer division)\nint rem = a % b;      // 1 (remainder)',
+        'Increment/decrement\nint x = 5;\nx++;  // x is now 6 (post-increment)\n++x;  // x is now 7 (pre-increment)\nx--;  // x is now 6 (post-decrement)',
+        'Type casting\ndouble d = 9.7;\nint i = (int) d;  // i = 9 (truncates)\nint a = 5, b = 2;\ndouble result = (double) a / b;  // 2.5'
+      ],
+      commonMistakes: [
+        'Forgetting semicolons',
+        'Case sensitivity errors',
+        'Integer division: 5/2 = 2, not 2.5',
+        'Uninitialized variables',
+        'Confusing = (assignment) with == (comparison)'
+      ],
+      tips: [
+        'Every statement ends with ;',
+        'main method is entry point',
+        'Use descriptive variable names',
+        'int division truncates: cast to double for decimals',
+        'Strings use double quotes, chars use single quotes'
+      ]
+    }
+  },
+  {
+    categorySlug: 'computer-science',
+    subjectName: 'AP Computer Science A',
+    topicName: 'Object-Oriented Programming',
+    content: {
+      title: 'Object-Oriented Programming',
+      intro: 'OOP organizes code into classes and objects. Classes are blueprints, objects are instances. Encapsulation, inheritance, and polymorphism are key OOP principles.',
+      keyPoints: [
+        'Class: blueprint for objects',
+        'Object: instance of a class',
+        'Constructor: initializes new objects',
+        'Instance variables: each object has own copy',
+        'Methods: define object behavior',
+        'this keyword: refers to current object',
+        'Encapsulation: private variables, public methods',
+        'Getters/Setters: accessor/mutator methods',
+        'Access modifiers: public, private, protected',
+        'static: belongs to class, not instance',
+        'Instantiation: new ClassName()',
+        'null: no object reference'
+      ],
+      examples: [
+        'Defining a class\npublic class Student {\n  private String name;\n  private int grade;\n  \n  public Student(String n, int g) {\n    name = n;\n    grade = g;\n  }\n  \n  public String getName() {\n    return name;\n  }\n  \n  public void setGrade(int g) {\n    grade = g;\n  }\n}',
+        'Creating objects\nStudent s1 = new Student("Alice", 11);\nStudent s2 = new Student("Bob", 12);\nSystem.out.println(s1.getName());  // "Alice"\ns2.setGrade(11);',
+        'Constructor overloading\npublic class Point {\n  private int x, y;\n  \n  public Point() {  // default\n    x = 0;\n    y = 0;\n  }\n  \n  public Point(int x, int y) {  // parameterized\n    this.x = x;\n    this.y = y;\n  }\n}',
+        'Static vs instance\npublic class Circle {\n  private double radius;\n  private static int count = 0;  // shared\n  \n  public Circle(double r) {\n    radius = r;\n    count++;  // all circles share\n  }\n  \n  public static int getCount() {\n    return count;\n  }\n}'
+      ],
+      commonMistakes: [
+        'Accessing private variables directly from outside class',
+        'Forgetting new keyword when creating objects',
+        'Not using this when parameter names match instance variables',
+        'Trying to access instance variables from static methods'
+      ],
+      tips: [
+        'Make instance variables private (encapsulation)',
+        'Provide public getters/setters',
+        'Constructor name = class name',
+        'static methods: called on class, not object',
+        'Use this to refer to current object'
+      ]
+    }
+  },
+  {
+    categorySlug: 'computer-science',
+    subjectName: 'AP Computer Science A',
+    topicName: 'Arrays and ArrayLists',
+    content: {
+      title: 'Arrays and ArrayLists',
+      intro: 'Arrays store fixed-size collections of same type. ArrayLists are dynamic, resizable collections. Both are fundamental for storing and manipulating data.',
+      keyPoints: [
+        'Array: fixed size, declared with type[]',
+        'Array index: starts at 0, ends at length-1',
+        'Array length: array.length (no parentheses)',
+        'ArrayList: resizable, import java.util.ArrayList',
+        'ArrayList<Type>: generic type in angle brackets',
+        'ArrayList methods: add(), get(), set(), remove(), size()',
+        'ArrayList size: list.size() (with parentheses)',
+        'Arrays can be multidimensional',
+        'Enhanced for loop: for(Type item : collection)',
+        'Arrays.toString(): convert array to string',
+        'IndexOutOfBoundsException: accessing invalid index',
+        'Wrapper classes: Integer, Double for ArrayList'
+      ],
+      examples: [
+        'Array declaration and initialization\nint[] scores = new int[5];  // [0,0,0,0,0]\nint[] nums = {1, 2, 3, 4, 5};\nString[] names = {"Alice", "Bob", "Carol"};\nSystem.out.println(names.length);  // 3',
+        'Accessing and modifying arrays\nint[] arr = {10, 20, 30};\nSystem.out.println(arr[0]);  // 10\narr[1] = 25;  // now {10, 25, 30}\n// arr[3] = 40;  // ERROR: IndexOutOfBounds',
+        'Traversing arrays\nint[] nums = {1, 2, 3, 4, 5};\n// Regular for loop\nfor(int i = 0; i < nums.length; i++) {\n  System.out.println(nums[i]);\n}\n// Enhanced for loop\nfor(int n : nums) {\n  System.out.println(n);\n}',
+        'ArrayList basics\nimport java.util.ArrayList;\n\nArrayList<String> list = new ArrayList<String>();\nlist.add("apple");     // ["apple"]\nlist.add("banana");    // ["apple", "banana"]\nString fruit = list.get(0);  // "apple"\nlist.set(1, "cherry"); // ["apple", "cherry"]\nlist.remove(0);        // ["cherry"]\nint size = list.size(); // 1',
+        '2D arrays (matrix)\nint[][] matrix = new int[3][4];  // 3 rows, 4 cols\nint[][] grid = {\n  {1, 2, 3},\n  {4, 5, 6},\n  {7, 8, 9}\n};\nSystem.out.println(grid[1][2]);  // 6\n// Traverse 2D array\nfor(int r = 0; r < grid.length; r++) {\n  for(int c = 0; c < grid[r].length; c++) {\n    System.out.print(grid[r][c] + " ");\n  }\n}',
+        'ArrayList of objects\nArrayList<Student> students = new ArrayList<>();\nstudents.add(new Student("Alice", 11));\nstudents.add(new Student("Bob", 12));\nfor(Student s : students) {\n  System.out.println(s.getName());\n}'
+      ],
+      commonMistakes: [
+        'Using length() for arrays (it\'s length, no parentheses)',
+        'Using length for ArrayList (it\'s size())',
+        'Accessing index array.length or list.size()',
+        'Forgetting to import ArrayList',
+        'Using primitive types in ArrayList (use Integer, not int)'
+      ],
+      tips: [
+        'Array: fixed size, use length',
+        'ArrayList: dynamic, use size()',
+        'Index always starts at 0',
+        'Enhanced for: when you don\'t need index',
+        'ArrayList: must use wrapper classes for primitives'
+      ]
+    }
+  },
+  {
+    categorySlug: 'computer-science',
+    subjectName: 'AP Computer Science A',
+    topicName: 'Inheritance and Polymorphism',
+    content: {
+      title: 'Inheritance and Polymorphism',
+      intro: 'Inheritance allows classes to inherit properties from parent classes. Polymorphism enables objects to take multiple forms. These are core OOP concepts.',
+      keyPoints: [
+        'extends: creates subclass (child) from superclass (parent)',
+        'Subclass inherits public/protected members',
+        'super: calls parent constructor or methods',
+        'Method overriding: subclass redefines parent method',
+        '@Override annotation: marks overridden methods',
+        'Polymorphism: parent reference, child object',
+        'Dynamic binding: method determined at runtime',
+        'Object class: parent of all classes',
+        'Cannot inherit from multiple classes (no multiple inheritance)',
+        'Constructor chaining: super() calls parent constructor',
+        'abstract class: cannot be instantiated',
+        'abstract method: must be overridden in subclass'
+      ],
+      examples: [
+        'Basic inheritance\npublic class Animal {\n  protected String name;\n  \n  public Animal(String n) {\n    name = n;\n  }\n  \n  public void makeSound() {\n    System.out.println("Some sound");\n  }\n}\n\npublic class Dog extends Animal {\n  public Dog(String n) {\n    super(n);  // call parent constructor\n  }\n  \n  @Override\n  public void makeSound() {\n    System.out.println("Woof!");\n  }\n}',
+        'Using inheritance\nDog d = new Dog("Buddy");\nd.makeSound();  // "Woof!"\nSystem.out.println(d.name);  // "Buddy" (inherited)',
+        'Polymorphism example\nAnimal a1 = new Dog("Rex");\nAnimal a2 = new Cat("Whiskers");\na1.makeSound();  // "Woof!" (Dog\'s method)\na2.makeSound();  // "Meow!" (Cat\'s method)\n// Type: Animal, actual object: Dog or Cat',
+        'Abstract class\npublic abstract class Shape {\n  abstract double getArea();  // no implementation\n  \n  public void display() {\n    System.out.println("Area: " + getArea());\n  }\n}\n\npublic class Circle extends Shape {\n  private double radius;\n  \n  public Circle(double r) { radius = r; }\n  \n  @Override\n  public double getArea() {\n    return Math.PI * radius * radius;\n  }\n}'
+      ],
+      commonMistakes: [
+        'Forgetting super() in subclass constructor',
+        'Not using @Override annotation',
+        'Trying to access private parent members',
+        'Attempting to instantiate abstract class'
+      ],
+      tips: [
+        'Subclass IS-A relationship with superclass',
+        'super() must be first in constructor',
+        'Use @Override for clarity and error checking',
+        'Polymorphism: write code using parent type',
+        'Abstract: use when subclasses must implement method'
+      ]
+    }
+  },
+  {
+    categorySlug: 'computer-science',
+    subjectName: 'AP Computer Science A',
+    topicName: 'Recursion',
+    content: {
+      title: 'Recursion',
+      intro: 'Recursion is when a method calls itself. Every recursive method needs a base case (stops) and recursive case (calls itself). Essential for divide-and-conquer algorithms.',
+      keyPoints: [
+        'Recursive method: calls itself',
+        'Base case: condition that stops recursion',
+        'Recursive case: method calls itself with modified parameter',
+        'Stack overflow: too many recursive calls',
+        'Each call has own local variables (on call stack)',
+        'Recursion vs iteration: recursion often clearer but uses more memory',
+        'Tail recursion: recursive call is last operation',
+        'Common uses: factorials, Fibonacci, tree traversal, searching',
+        'Divide and conquer: break problem into smaller subproblems',
+        'Call stack: tracks recursive calls',
+        'Every recursion can be written iteratively',
+        'Base case prevents infinite recursion'
+      ],
+      examples: [
+        'Factorial (n!)\npublic int factorial(int n) {\n  // Base case\n  if(n == 0 || n == 1) {\n    return 1;\n  }\n  // Recursive case\n  return n * factorial(n - 1);\n}\n// factorial(5) = 5 * 4 * 3 * 2 * 1 = 120',
+        'Fibonacci sequence\npublic int fib(int n) {\n  if(n <= 1) return n;  // base cases\n  return fib(n-1) + fib(n-2);  // recursive\n}\n// fib(5) = fib(4) + fib(3)\n//        = (fib(3)+fib(2)) + (fib(2)+fib(1))\n//        = ... = 5',
+        'Sum of array\npublic int sum(int[] arr, int index) {\n  if(index >= arr.length) return 0;  // base\n  return arr[index] + sum(arr, index + 1);\n}\n// sum([1,2,3,4], 0) = 1+2+3+4 = 10',
+        'Binary search (recursive)\npublic int binarySearch(int[] arr, int target, \n                        int low, int high) {\n  if(low > high) return -1;  // not found\n  \n  int mid = (low + high) / 2;\n  if(arr[mid] == target) return mid;\n  else if(arr[mid] > target)\n    return binarySearch(arr, target, low, mid-1);\n  else\n    return binarySearch(arr, target, mid+1, high);\n}',
+        'Palindrome check\npublic boolean isPalindrome(String s) {\n  if(s.length() <= 1) return true;  // base\n  if(s.charAt(0) != s.charAt(s.length()-1))\n    return false;\n  return isPalindrome(s.substring(1, s.length()-1));\n}\n// "racecar" → true, "hello" → false'
+      ],
+      commonMistakes: [
+        'Forgetting base case (infinite recursion)',
+        'Base case never reached',
+        'Not making problem smaller in recursive call',
+        'Stack overflow from too many calls',
+        'Inefficient recursion (like naive Fibonacci)'
+      ],
+      tips: [
+        'Always define base case first',
+        'Make sure recursive calls move toward base case',
+        'Trace small examples by hand',
+        'Draw recursion tree to visualize',
+        'Consider iteration if recursion too complex'
+      ]
+    }
+  },
+  {
+    categorySlug: 'computer-science',
+    subjectName: 'AP Computer Science A',
+    topicName: 'Searching and Sorting',
+    content: {
+      title: 'Searching and Sorting Algorithms',
+      intro: 'Searching finds elements in collections. Sorting arranges elements in order. Understanding algorithm efficiency (Big O) is crucial for choosing appropriate algorithms.',
+      keyPoints: [
+        'Linear search: check each element, O(n)',
+        'Binary search: divide and conquer, O(log n), requires sorted array',
+        'Selection sort: find min, swap, O(n²)',
+        'Insertion sort: insert each into sorted portion, O(n²)',
+        'Merge sort: divide, sort, merge, O(n log n)',
+        'Big O notation: describes time complexity',
+        'O(1): constant, O(log n): logarithmic, O(n): linear',
+        'O(n²): quadratic, O(n log n): linearithmic',
+        'Best/average/worst case scenarios',
+        'Space complexity: memory usage',
+        'Stable sort: maintains relative order of equal elements',
+        'In-place sort: doesn\'t require extra array'
+      ],
+      examples: [
+        'Linear search\npublic int linearSearch(int[] arr, int target) {\n  for(int i = 0; i < arr.length; i++) {\n    if(arr[i] == target) return i;\n  }\n  return -1;  // not found\n}\n// Checks every element: O(n)',
+        'Binary search\npublic int binarySearch(int[] arr, int target) {\n  int low = 0, high = arr.length - 1;\n  while(low <= high) {\n    int mid = (low + high) / 2;\n    if(arr[mid] == target) return mid;\n    else if(arr[mid] < target) low = mid + 1;\n    else high = mid - 1;\n  }\n  return -1;\n}\n// Halves search space each time: O(log n)',
+        'Selection sort\npublic void selectionSort(int[] arr) {\n  for(int i = 0; i < arr.length-1; i++) {\n    int minIndex = i;\n    for(int j = i+1; j < arr.length; j++) {\n      if(arr[j] < arr[minIndex])\n        minIndex = j;\n    }\n    // Swap\n    int temp = arr[i];\n    arr[i] = arr[minIndex];\n    arr[minIndex] = temp;\n  }\n}\n// Nested loops: O(n²)',
+        'Insertion sort\npublic void insertionSort(int[] arr) {\n  for(int i = 1; i < arr.length; i++) {\n    int key = arr[i];\n    int j = i - 1;\n    while(j >= 0 && arr[j] > key) {\n      arr[j+1] = arr[j];\n      j--;\n    }\n    arr[j+1] = key;\n  }\n}\n// Average case: O(n²), best case O(n) if nearly sorted',
+        'Merge sort (recursive)\npublic void mergeSort(int[] arr, int l, int r) {\n  if(l < r) {\n    int mid = (l + r) / 2;\n    mergeSort(arr, l, mid);\n    mergeSort(arr, mid+1, r);\n    merge(arr, l, mid, r);\n  }\n}\n// Divide and conquer: O(n log n) always'
+      ],
+      commonMistakes: [
+        'Using binary search on unsorted array',
+        'Off-by-one errors in loop bounds',
+        'Forgetting to return -1 when not found',
+        'Not handling empty arrays',
+        'Inefficient nested loops'
+      ],
+      tips: [
+        'Linear search: works on any array, slow O(n)',
+        'Binary search: fast O(log n) but needs sorted array',
+        'Selection/Insertion: simple but slow O(n²)',
+        'Merge sort: fast O(n log n) but uses extra space',
+        'Know Big O: constant < log < linear < quadratic'
+      ]
+    }
+  },
+  // AP Physics 2
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 2',
+    topicName: 'Thermodynamics',
+    content: {
+      title: 'Thermodynamics',
+      intro: 'Thermodynamics studies heat, work, and energy transfer. The laws of thermodynamics govern energy transformations. Understanding PV diagrams and heat engines is essential.',
+      keyPoints: [
+        'First Law: ΔU = Q - W (energy conservation)',
+        'ΔU: change in internal energy',
+        'Q: heat added to system (+ in, - out)',
+        'W: work done by system (+ expansion, - compression)',
+        'Second Law: entropy always increases',
+        'Isothermal: constant temperature, ΔU = 0',
+        'Adiabatic: no heat transfer, Q = 0',
+        'Isochoric: constant volume, W = 0',
+        'Isobaric: constant pressure, W = PΔV',
+        'Ideal gas: PV = nRT',
+        'Heat capacity: C = Q/ΔT',
+        'Entropy: measure of disorder, S'
+      ],
+      examples: [
+        'First Law application\nGas absorbs Q = 500 J, does W = 200 J work\nΔU = Q - W = 500 - 200 = 300 J\nInternal energy increases by 300 J',
+        'Isothermal process (T constant)\nFor ideal gas: ΔU = 0\nQ = W (all heat goes to work)\nPV = constant',
+        'Adiabatic process (Q = 0)\nNo heat transfer\nΔU = -W\nCompression: W negative, ΔU positive (temp rises)'
+      ],
+      commonMistakes: [
+        'Wrong sign for Q or W',
+        'Confusing work done by vs on system',
+        'Not using absolute temperature (Kelvin)'
+      ],
+      tips: [
+        'First Law: ΔU = Q - W',
+        'Q positive: heat in, Q negative: heat out',
+        'W positive: expansion, W negative: compression',
+        'Isothermal: ΔU = 0, Adiabatic: Q = 0'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 2',
+    topicName: 'Electrostatics',
+    content: {
+      title: 'Electrostatics',
+      intro: 'Electrostatics studies stationary charges and electric forces. Coulomb\'s law describes force between charges. Electric fields and potential are fundamental concepts.',
+      keyPoints: [
+        'Like charges repel, opposite charges attract',
+        'Coulomb\'s Law: F = kq₁q₂/r²',
+        'k = 9.0 × 10⁹ N⋅m²/C²',
+        'Electric field: E = F/q = kQ/r²',
+        'Field direction: away from + , toward -',
+        'Electric potential: V = kQ/r',
+        'Potential energy: U = kq₁q₂/r',
+        'Work: W = qΔV',
+        'Electric field lines: density shows strength',
+        'Conductors: charge on surface',
+        'Insulators: charge stays put',
+        'Capacitance: C = Q/V'
+      ],
+      examples: [
+        'Coulomb force between charges\nq₁ = 2×10⁻⁶ C, q₂ = -3×10⁻⁶ C, r = 0.1 m\nF = kq₁q₂/r² = (9×10⁹)(2×10⁻⁶)(3×10⁻⁶)/(0.1)²\nF = 5.4 N (attractive, opposite charges)',
+        'Electric field from point charge\nQ = 5×10⁻⁶ C, r = 0.2 m\nE = kQ/r² = (9×10⁹)(5×10⁻⁶)/(0.2)²\nE = 1.125 × 10⁶ N/C'
+      ],
+      commonMistakes: [
+        'Forgetting force direction (attraction vs repulsion)',
+        'Sign errors with charges',
+        'Confusing E-field and potential'
+      ],
+      tips: [
+        'Like charges: repel, Unlike: attract',
+        'E-field: force per unit charge',
+        'Potential: energy per unit charge',
+        'Field points from + to -'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 2',
+    topicName: 'Circuits',
+    content: {
+      title: 'Electric Circuits',
+      intro: 'Circuits consist of power source, wires, and components. Current flows through closed loops. Ohm\'s law relates voltage, current, and resistance.',
+      keyPoints: [
+        'Current: I = Q/t (charge flow rate), unit: ampere (A)',
+        'Voltage: V, potential difference, unit: volt (V)',
+        'Resistance: R, opposes current, unit: ohm (Ω)',
+        'Ohm\'s Law: V = IR',
+        'Power: P = IV = I²R = V²/R',
+        'Series: same current, voltages add',
+        'Parallel: same voltage, currents add',
+        'Series resistance: Rtotal = R₁ + R₂ + ...',
+        'Parallel resistance: 1/Rtotal = 1/R₁ + 1/R₂ + ...',
+        'Kirchhoff\'s Current Law: Σ I_in = Σ I_out',
+        'Kirchhoff\'s Voltage Law: Σ V = 0 (around loop)',
+        'Internal resistance: real batteries have r'
+      ],
+      examples: [
+        'Ohm\'s Law\nV = 12 V, R = 4 Ω\nI = V/R = 12/4 = 3 A\nP = IV = (3)(12) = 36 W',
+        'Series circuit\nR₁ = 2 Ω, R₂ = 3 Ω, V = 10 V\nRtotal = 2 + 3 = 5 Ω\nI = V/R = 10/5 = 2 A (same through both)',
+        'Parallel circuit\nR₁ = 6 Ω, R₂ = 3 Ω, V = 12 V\n1/Rtotal = 1/6 + 1/3 = 1/2\nRtotal = 2 Ω\nI_total = 12/2 = 6 A'
+      ],
+      commonMistakes: [
+        'Confusing series and parallel rules',
+        'Adding parallel resistances directly',
+        'Wrong current/voltage in series vs parallel'
+      ],
+      tips: [
+        'V = IR (Ohm\'s Law)',
+        'Series: current same, add voltages and resistances',
+        'Parallel: voltage same, add currents',
+        'Power: P = IV'
+      ]
+    }
+  },
+  // Complete Pre-Algebra (remaining topics)
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Variables and Expressions',
+    content: {
+      title: 'Variables and Expressions',
+      intro: 'Variables represent unknown values. Expressions combine numbers, variables, and operations. Understanding variables is the foundation of algebra.',
+      keyPoints: ['Variable: letter representing a number', 'Expression: combination of numbers and variables', 'Constant: number that doesn\'t change', 'Coefficient: number multiplying variable', 'Term: single number or variable or product', 'Evaluate: substitute value for variable', 'Like terms: same variables with same exponents', 'Simplify: combine like terms'],
+      examples: ['3x + 5 is an expression\n3 is coefficient, x is variable, 5 is constant', 'Evaluate 2x + 3 when x = 4:\n2(4) + 3 = 8 + 3 = 11', 'Combine: 3x + 2x = 5x\n(like terms)'],
+      commonMistakes: ['Confusing 3x with 3 + x', 'Adding unlike terms (2x + 3 ≠ 5x)', 'Forgetting order of operations when evaluating'],
+      tips: ['Variable = placeholder for number', 'Like terms: same variable part', 'To evaluate: substitute then calculate', 'Cannot add unlike terms']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Solving Equations',
+    content: {
+      title: 'Solving Equations',
+      intro: 'Equations state two expressions are equal. Solving means finding the variable value that makes the equation true.',
+      keyPoints: ['Equation: two expressions with = sign', 'Solution: value making equation true', 'Inverse operations: undo operations', 'Addition/subtraction are inverses', 'Multiplication/division are inverses', 'Do same operation to both sides', 'Check solution by substituting back'],
+      examples: ['x + 5 = 12\nx = 12 - 5 = 7', '3x = 15\nx = 15 ÷ 3 = 5', 'x - 4 = 10\nx = 10 + 4 = 14'],
+      commonMistakes: ['Only operating on one side', 'Wrong inverse operation', 'Not checking answer'],
+      tips: ['Inverse of + is -, inverse of × is ÷', 'Always do same to both sides', 'Check: plug answer back in']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Ratios and Proportions',
+    content: {
+      title: 'Ratios and Proportions',
+      intro: 'Ratios compare quantities. Proportions state two ratios are equal. Essential for scaling and real-world problem solving.',
+      keyPoints: ['Ratio: comparison of two quantities', 'Write as a:b or a/b', 'Proportion: two equal ratios', 'Cross multiply to solve proportions', 'Equivalent ratios: multiply/divide both by same number', 'Unit rate: ratio with denominator 1'],
+      examples: ['Ratio 3:4 means 3 parts to 4 parts', 'Proportion: 2/3 = 4/6\nCross multiply: 2×6 = 3×4 ✓', 'If 2 apples cost $3, 6 apples cost?\n2/3 = 6/x\nx = $9'],
+      commonMistakes: ['Not keeping ratio order consistent', 'Wrong cross multiplication', 'Not simplifying ratios'],
+      tips: ['Ratios compare two quantities', 'Proportion: set two ratios equal', 'Cross multiply: a/b = c/d → ad = bc']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Percentages and Decimals',
+    content: {
+      title: 'Percentages and Decimals',
+      intro: 'Percentages represent parts per hundred. Decimals represent fractions in base-10. Converting between forms is essential.',
+      keyPoints: ['Percent: per 100, symbol %', 'Decimal: base-10 fraction', '50% = 0.50 = 1/2', 'To decimal: divide by 100', 'To percent: multiply by 100', 'Percent of: multiply', '100% = whole = 1.0'],
+      examples: ['75% = 75/100 = 0.75', '0.6 = 60%', '25% of 80 = 0.25 × 80 = 20'],
+      commonMistakes: ['Not moving decimal correctly', 'Confusing 0.5 with 5%', 'Forgetting to convert before multiplying'],
+      tips: ['% → decimal: divide by 100', 'Decimal → %: multiply by 100', '"Of" means multiply']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Order of Operations',
+    content: {
+      title: 'Order of Operations',
+      intro: 'PEMDAS ensures consistent calculation order. Parentheses first, then exponents, then multiplication/division, finally addition/subtraction.',
+      keyPoints: ['PEMDAS: Please Excuse My Dear Aunt Sally', 'P: Parentheses first', 'E: Exponents second', 'MD: Multiply/Divide left to right', 'AS: Add/Subtract left to right', 'Work from left to right within same level'],
+      examples: ['3 + 4 × 2 = 3 + 8 = 11 (not 14!)', '(3 + 4) × 2 = 7 × 2 = 14', '2³ + 5 = 8 + 5 = 13'],
+      commonMistakes: ['Doing operations left to right only', 'Forgetting parentheses come first', 'Adding before multiplying'],
+      tips: ['PEMDAS: order matters!', 'Multiply before add', 'Parentheses change everything', 'M and D are equal level (left to right)']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Integers and Absolute Value',
+    content: {
+      title: 'Integers and Absolute Value',
+      intro: 'Integers include positive and negative whole numbers. Absolute value measures distance from zero.',
+      keyPoints: ['Integers: ..., -2, -1, 0, 1, 2, ...', 'Positive: greater than 0', 'Negative: less than 0', 'Absolute value: distance from zero', 'Symbol: |x|', '|5| = 5, |-5| = 5', 'Always non-negative'],
+      examples: ['|-3| = 3', '|7| = 7', '|0| = 0', 'Number line: -3 is 3 units from 0'],
+      commonMistakes: ['Thinking |-5| = -5', 'Confusing negative with absolute value', 'Forgetting |0| = 0'],
+      tips: ['Absolute value = distance (always positive)', '|x| ≥ 0 always', 'On number line: count units from 0']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Fractions and Mixed Numbers',
+    content: {
+      title: 'Fractions and Mixed Numbers',
+      intro: 'Fractions represent parts of a whole. Mixed numbers combine whole numbers and fractions.',
+      keyPoints: ['Fraction: numerator/denominator', 'Numerator: top (parts we have)', 'Denominator: bottom (total parts)', 'Proper: numerator < denominator', 'Improper: numerator ≥ denominator', 'Mixed number: whole + fraction', 'Convert: divide or multiply'],
+      examples: ['3/4: 3 parts out of 4', '7/4 = 1¾ (mixed)', '2½ = 5/2 (improper)'],
+      commonMistakes: ['Flipping numerator/denominator', 'Wrong conversion', 'Adding denominators'],
+      tips: ['Top = parts we have', 'Bottom = total parts', 'Improper → mixed: divide', 'Mixed → improper: multiply + add']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Greatest Common Factor (GCF)',
+    content: {
+      title: 'Greatest Common Factor (GCF)',
+      intro: 'The GCF is the largest number that divides evenly into two or more numbers. Essential for simplifying fractions.',
+      keyPoints: ['GCF: largest common divisor', 'List all factors of each number', 'Find common factors', 'Pick the greatest one', 'Used to simplify fractions', 'GCF of 12 and 18 is 6'],
+      examples: ['GCF(12, 18): Factors of 12: 1,2,3,4,6,12; Factors of 18: 1,2,3,6,9,18; Common: 1,2,3,6; GCF = 6', 'GCF(8, 12) = 4', 'Simplify 12/18 = (12÷6)/(18÷6) = 2/3'],
+      commonMistakes: ['Finding LCM instead of GCF', 'Picking any common factor, not greatest', 'Listing multiples instead of factors'],
+      tips: ['GCF ≤ smallest number', 'List factors systematically', 'Use prime factorization for large numbers']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Least Common Multiple (LCM)',
+    content: {
+      title: 'Least Common Multiple (LCM)',
+      intro: 'The LCM is the smallest number that is a multiple of two or more numbers. Critical for adding/subtracting fractions.',
+      keyPoints: ['LCM: smallest common multiple', 'List multiples of each number', 'Find first common one', 'Used for common denominators', 'LCM of 4 and 6 is 12', 'LCM ≥ largest number'],
+      examples: ['LCM(4, 6): Multiples of 4: 4,8,12,16...; Multiples of 6: 6,12,18...; LCM = 12', 'LCM(3, 5) = 15', 'Add 1/4 + 1/6: LCM(4,6)=12, so 3/12 + 2/12 = 5/12'],
+      commonMistakes: ['Finding GCF instead of LCM', 'Just multiplying numbers (too large)', 'Stopping at any common multiple'],
+      tips: ['LCM ≥ largest number', 'First common multiple = LCM', 'For adding fractions: find LCM of denominators']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Prime Factorization',
+    content: {
+      title: 'Prime Factorization',
+      intro: 'Breaking a number into its prime number building blocks. Every number has a unique prime factorization.',
+      keyPoints: ['Prime: only divisible by 1 and itself', 'Prime factorization: product of primes', 'Use factor tree', 'Keep dividing until all primes', '12 = 2² × 3', 'Useful for GCF and LCM'],
+      examples: ['24 = 2 × 12 = 2 × 2 × 6 = 2 × 2 × 2 × 3 = 2³ × 3', '30 = 2 × 3 × 5', '36 = 2² × 3²'],
+      commonMistakes: ['Including 1 as prime', 'Stopping before all primes', 'Missing repeated factors'],
+      tips: ['Start with smallest prime (2)', 'Use factor tree', 'Write repeated factors as exponents']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Exponents and Powers',
+    content: {
+      title: 'Exponents and Powers',
+      intro: 'Exponents show repeated multiplication. Base raised to a power represents how many times to multiply.',
+      keyPoints: ['Base^exponent = power', '2³ = 2 × 2 × 2 = 8', 'Exponent = how many times', 'Any number⁰ = 1', 'Any number¹ = itself', 'Negative exponent = reciprocal'],
+      examples: ['5² = 5 × 5 = 25', '10³ = 10 × 10 × 10 = 1000', '3⁰ = 1', '2⁻² = 1/2² = 1/4'],
+      commonMistakes: ['Thinking 2³ = 6 (multiplying instead)', 'Confusing 0⁰ (undefined)', 'Wrong order of operations'],
+      tips: ['Read as "base to the power"', 'Exponent = count multiplications', '⁰ = 1 (except 0⁰)']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Square Roots and Cube Roots',
+    content: {
+      title: 'Square Roots and Cube Roots',
+      intro: 'Roots are the inverse of exponents. Square root asks "what squared gives this?" Cube root asks "what cubed?"',
+      keyPoints: ['√x: what squared = x', '∛x: what cubed = x', '√25 = 5 because 5² = 25', '∛8 = 2 because 2³ = 8', 'Perfect squares: 1,4,9,16,25,36...', 'Perfect cubes: 1,8,27,64,125...'],
+      examples: ['√36 = 6', '√100 = 10', '∛27 = 3', '√49 = 7'],
+      commonMistakes: ['√25 = ±5 (positive only for principal root)', 'Confusing square and cube root', 'Memorizing too few perfect squares'],
+      tips: ['Memorize perfect squares 1-15', 'Square root undoes squaring', 'Check: (√x)² = x']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Negative Numbers and Operations',
+    content: {
+      title: 'Negative Numbers and Operations',
+      intro: 'Negative numbers extend the number line below zero. Rules for operations differ from positive numbers.',
+      keyPoints: ['Negative × Negative = Positive', 'Negative × Positive = Negative', 'Same signs → add, keep sign', 'Different signs → subtract, take larger sign', '-3 + (-5) = -8', '-3 - (-5) = -3 + 5 = 2'],
+      examples: ['-4 × -3 = 12', '-6 × 2 = -12', '-8 + 3 = -5', '4 - (-2) = 4 + 2 = 6'],
+      commonMistakes: ['Two negatives make negative (wrong!)', 'Subtracting negative stays negative', 'Wrong multiplication signs'],
+      tips: ['Subtracting = adding opposite', 'Two negatives = positive in multiplication', 'Number line helps visualize']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Properties of Operations (Commutative, Associative, Distributive)',
+    content: {
+      title: 'Properties of Operations',
+      intro: 'Fundamental rules that make algebra work. These properties allow us to rearrange and simplify expressions.',
+      keyPoints: ['Commutative: order doesn\'t matter (a+b = b+a)', 'Associative: grouping doesn\'t matter', 'Distributive: a(b+c) = ab + ac', 'Only + and × are commutative', 'Distributive connects × and +'],
+      examples: ['Commutative: 3+5 = 5+3', 'Associative: (2+3)+4 = 2+(3+4)', 'Distributive: 3(x+2) = 3x + 6'],
+      commonMistakes: ['Thinking subtraction is commutative (5-3 ≠ 3-5)', 'Forgetting to distribute to all terms', 'Dividing instead of distributing'],
+      tips: ['Commutative = can swap', 'Associative = can regroup', 'Distributive = multiply each term']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Evaluating Algebraic Expressions',
+    content: {
+      title: 'Evaluating Algebraic Expressions',
+      intro: 'Substituting values for variables and calculating the result. Foundation of all algebra.',
+      keyPoints: ['Replace variable with given value', 'Follow order of operations', 'Use parentheses when substituting', 'Simplify step by step', 'Check your arithmetic'],
+      examples: ['Evaluate 3x + 5 when x=2: 3(2) + 5 = 6 + 5 = 11', 'Evaluate x² - 4 when x=-3: (-3)² - 4 = 9 - 4 = 5'],
+      commonMistakes: ['Forgetting parentheses: 3x when x=-2 should be 3(-2) not 3-2', 'Wrong order of operations', 'Sign errors with negatives'],
+      tips: ['Always use parentheses when substituting', 'PEMDAS applies', 'Double-check negative signs']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Combining Like Terms',
+    content: {
+      title: 'Combining Like Terms',
+      intro: 'Simplifying expressions by adding/subtracting terms with the same variable part. Essential for solving equations.',
+      keyPoints: ['Like terms: same variable, same exponent', '3x and 5x are like terms', '3x and 3y are NOT like terms', 'Add/subtract coefficients', 'Keep variable part same'],
+      examples: ['3x + 5x = 8x', '7y - 2y = 5y', '4x + 3 + 2x - 1 = 6x + 2', '2x² + 3x + 5x² - x = 7x² + 2x'],
+      commonMistakes: ['Combining unlike terms: 3x + 2y ≠ 5xy', 'Multiplying coefficients instead of adding', 'Forgetting to combine constants'],
+      tips: ['Like = same variable part', 'Only add/subtract coefficients', 'Circle like terms in different colors']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'One-Step and Two-Step Equations',
+    content: {
+      title: 'One-Step and Two-Step Equations',
+      intro: 'Solving equations using inverse operations to isolate the variable. Building blocks for all equation solving.',
+      keyPoints: ['Goal: isolate variable', 'Use inverse operations', 'One-step: one operation to undo', 'Two-step: undo addition/subtraction first, then multiply/divide', 'Keep equation balanced'],
+      examples: ['One-step: x + 5 = 12 → x = 7', 'One-step: 3x = 15 → x = 5', 'Two-step: 2x + 3 = 11 → 2x = 8 → x = 4'],
+      commonMistakes: ['Wrong order in two-step', 'Forgetting to do same to both sides', 'Sign errors'],
+      tips: ['Opposite operation undoes', 'Addition ↔ Subtraction', 'Multiplication ↔ Division', 'Two-step: undo +/- first']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Multi-Step Equations',
+    content: {
+      title: 'Multi-Step Equations',
+      intro: 'Equations requiring multiple operations to solve. Combine like terms, use distributive property, then isolate variable.',
+      keyPoints: ['Simplify both sides first', 'Distribute if needed', 'Combine like terms', 'Move variables to one side', 'Undo operations', 'Solve'],
+      examples: ['2(x + 3) = 14 → 2x + 6 = 14 → 2x = 8 → x = 4', '3x + 5 = 2x + 9 → x + 5 = 9 → x = 4'],
+      commonMistakes: ['Skipping distribution', 'Not combining like terms first', 'Moving terms wrong'],
+      tips: ['Simplify first', 'Get variables on one side', 'Undo in reverse order of PEMDAS']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Inequalities on Number Lines',
+    content: {
+      title: 'Inequalities on Number Lines',
+      intro: 'Visual representation of inequality solutions. Shows all values that make the inequality true.',
+      keyPoints: ['< or > = open circle (not included)', '≤ or ≥ = closed circle (included)', 'Arrow shows all solutions', 'x > 3: open circle at 3, arrow right', 'x ≤ -2: closed circle at -2, arrow left'],
+      examples: ['x < 5: open circle at 5, arrow left', 'x ≥ -1: closed circle at -1, arrow right', 'Graph shows infinite solutions'],
+      commonMistakes: ['Using closed circle for < or >', 'Arrow pointing wrong direction', 'Forgetting the arrow'],
+      tips: ['Open = strict inequality', 'Closed = includes endpoint', 'Arrow = infinity']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Unit Rates and Unit Prices',
+    content: {
+      title: 'Unit Rates and Unit Prices',
+      intro: 'Comparing quantities by finding the amount per one unit. Essential for real-world comparisons.',
+      keyPoints: ['Unit rate: amount per 1 unit', 'Divide to find unit rate', 'Used to compare deals', 'Miles per hour, price per ounce', 'Lower unit price = better deal'],
+      examples: ['$6 for 3 apples: $6 ÷ 3 = $2 per apple', '150 miles in 3 hours: 150 ÷ 3 = 50 mph', 'Compare: 8 oz for $2 vs 12 oz for $3.60 → $0.25/oz vs $0.30/oz → first is better'],
+      commonMistakes: ['Dividing wrong way', 'Not simplifying fully', 'Comparing without same units'],
+      tips: ['Unit rate = divide by bottom', 'Check units make sense', 'Lower unit price = better deal']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Scale Drawings and Maps',
+    content: {
+      title: 'Scale Drawings and Maps',
+      intro: 'Using proportional reasoning to work with scaled representations. Maps and blueprints use scales.',
+      keyPoints: ['Scale: ratio of drawing to actual', 'Scale 1:100 means 1 cm = 100 cm', 'Set up proportion to convert', 'Units must match', 'Cross multiply to solve'],
+      examples: ['Map scale 1 inch = 50 miles. Drawing shows 3 inches. Actual distance: 3 × 50 = 150 miles', 'Blueprint scale 1:200. Door is 1.5 cm on plan. Actual: 1.5 × 200 = 300 cm = 3 m'],
+      commonMistakes: ['Mixing units (inches and cm)', 'Multiplying when should divide', 'Not keeping ratios consistent'],
+      tips: ['Set up proportion', 'Check units match', 'Scale × drawing = actual']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Algebra',
+    topicName: 'Converting Units of Measurement',
+    content: {
+      title: 'Converting Units of Measurement',
+      intro: 'Changing between different measurement units using conversion factors. Critical for science and real-world problems.',
+      keyPoints: ['Use conversion factor', 'Multiply to cancel units', '1 foot = 12 inches', '1 meter = 100 cm', 'Multiply by form of 1', 'Units cancel diagonally'],
+      examples: ['5 feet to inches: 5 ft × (12 in/1 ft) = 60 inches', '250 cm to meters: 250 cm × (1 m/100 cm) = 2.5 m', '3 hours to minutes: 3 hr × (60 min/1 hr) = 180 min'],
+      commonMistakes: ['Multiplying when should divide', 'Forgetting conversion factor', 'Units not canceling'],
+      tips: ['Write units in fraction', 'Units should cancel', 'Conversion factor = ratio equals 1']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Lines and Angles',
+    content: {
+      title: 'Lines and Angles',
+      intro: 'Lines extend infinitely in both directions. Angles measure rotation between two rays sharing an endpoint.',
+      keyPoints: ['Line: extends infinitely both directions', 'Ray: starts at point, extends one direction', 'Angle: two rays, common endpoint (vertex)', 'Acute: < 90°', 'Right: = 90°', 'Obtuse: > 90°', 'Straight: = 180°'],
+      examples: ['∠ABC with vertex at B', 'Acute angle: 45°', 'Right angle: 90° (square corner)', 'Obtuse angle: 120°'],
+      commonMistakes: ['Confusing ray and line', 'Naming angle incorrectly', 'Mixing up acute/obtuse'],
+      tips: ['Vertex = corner point', 'Right angle has square symbol', 'Straight angle = line']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Points, Lines, and Planes',
+    content: {
+      title: 'Points, Lines, and Planes',
+      intro: 'Building blocks of geometry. Points have no dimension, lines are one-dimensional, planes are two-dimensional.',
+      keyPoints: ['Point: exact location, no size', 'Line: infinite points in straight path', 'Plane: flat surface extending infinitely', 'Two points determine a line', 'Three non-collinear points determine a plane', 'Notation: point A, line AB, plane ABC'],
+      examples: ['Point P has no dimensions', 'Line through A and B written as AB↔', 'Plane containing points A, B, C'],
+      commonMistakes: ['Thinking points have size', 'Confusing line and line segment', 'Wrong notation'],
+      tips: ['Point = location only', 'Line = infinite', 'Plane = flat surface']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Parallel and Perpendicular Lines',
+    content: {
+      title: 'Parallel and Perpendicular Lines',
+      intro: 'Parallel lines never intersect and maintain constant distance. Perpendicular lines intersect at 90° angles.',
+      keyPoints: ['Parallel: never intersect, symbol ∥', 'Same slope = parallel', 'Perpendicular: intersect at 90°, symbol ⊥', 'Slopes are negative reciprocals', 'If m₁ = 2, then m₂ = -1/2 for perpendicular'],
+      examples: ['Lines y = 2x + 1 and y = 2x - 3 are parallel (same slope)', 'Lines y = 2x + 1 and y = -1/2x + 3 are perpendicular'],
+      commonMistakes: ['Thinking parallel means same line', 'Wrong perpendicular slope', 'Forgetting negative reciprocal'],
+      tips: ['Parallel = same slope', 'Perpendicular = negative reciprocal slopes', 'Railroad tracks = parallel']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Angle Relationships (Complementary, Supplementary, Vertical)',
+    content: {
+      title: 'Angle Relationships',
+      intro: 'Special angle pairs have predictable relationships. Understanding these saves time in proofs and calculations.',
+      keyPoints: ['Complementary: sum = 90°', 'Supplementary: sum = 180°', 'Vertical angles: opposite, formed by intersecting lines, equal', 'Linear pair: adjacent, supplementary', 'Adjacent: share vertex and side'],
+      examples: ['30° and 60° are complementary (sum = 90°)', '120° and 60° are supplementary (sum = 180°)', 'Vertical angles both = 45°'],
+      commonMistakes: ['Mixing up complementary/supplementary', 'Thinking adjacent always equal', 'Forgetting vertical angles equal'],
+      tips: ['Complementary = Corner (90°)', 'Supplementary = Straight (180°)', 'Vertical angles always equal']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Triangles and Congruence',
+    content: {
+      title: 'Triangles and Congruence',
+      intro: 'Congruent triangles have exactly the same size and shape. All corresponding parts are equal.',
+      keyPoints: ['Congruent: same size and shape, symbol ≅', 'All sides equal, all angles equal', 'Corresponding parts match', 'Order matters in naming', 'CPCTC: Corresponding Parts of Congruent Triangles are Congruent'],
+      examples: ['△ABC ≅ △DEF means AB=DE, BC=EF, AC=DF and all angles match', 'Use congruence to find unknown sides/angles'],
+      commonMistakes: ['Confusing similar and congruent', 'Wrong correspondence', 'Assuming looks congruent without proof'],
+      tips: ['Congruent = identical twins', 'Order of letters shows correspondence', 'Need proof, not just appearance']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Triangle Angle Sum Theorem',
+    content: {
+      title: 'Triangle Angle Sum Theorem',
+      intro: 'The sum of interior angles in any triangle always equals 180°. One of the most fundamental theorems in geometry.',
+      keyPoints: ['Sum of angles = 180°', 'Works for ALL triangles', 'a + b + c = 180°', 'Find missing angle by subtracting', 'Used constantly in proofs'],
+      examples: ['If angles are 50° and 60°, third angle = 180° - 50° - 60° = 70°', 'Equilateral triangle: each angle = 180° ÷ 3 = 60°'],
+      commonMistakes: ['Thinking only applies to certain triangles', 'Adding to 360°', 'Forgetting to subtract from 180°'],
+      tips: ['ALWAYS 180° for triangles', 'Two angles known → find third', 'Works even for obtuse triangles']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Exterior Angle Theorem',
+    content: {
+      title: 'Exterior Angle Theorem',
+      intro: 'An exterior angle of a triangle equals the sum of the two non-adjacent interior angles.',
+      keyPoints: ['Exterior angle = sum of two remote interior angles', 'Remote = non-adjacent', 'Exterior + adjacent interior = 180° (linear pair)', 'Each triangle has 6 exterior angles'],
+      examples: ['Interior angles 40° and 70°, exterior angle = 40° + 70° = 110°', 'If exterior = 130° and one remote = 50°, other remote = 80°'],
+      commonMistakes: ['Adding all three interior angles', 'Confusing which angles are remote', 'Forgetting linear pair relationship'],
+      tips: ['Exterior = sum of two far angles', 'Draw and label to visualize', 'Faster than angle sum sometimes']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Isosceles and Equilateral Triangles',
+    content: {
+      title: 'Isosceles and Equilateral Triangles',
+      intro: 'Special triangles with equal sides have equal angles. Isosceles has two equal sides, equilateral has three.',
+      keyPoints: ['Isosceles: 2 equal sides, 2 equal angles', 'Base angles are equal', 'Equilateral: 3 equal sides, 3 equal angles (60° each)', 'Vertex angle: between equal sides', 'Base: third side'],
+      examples: ['Isosceles with base angles 70°, vertex angle = 180° - 140° = 40°', 'Equilateral: all angles = 60°, all sides equal'],
+      commonMistakes: ['Thinking all isosceles are equilateral', 'Wrong angle identification', 'Forgetting base angles equal'],
+      tips: ['Isosceles = 2 equal', 'Equilateral = all equal', 'Equal sides → equal angles opposite them']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Triangle Inequality Theorem',
+    content: {
+      title: 'Triangle Inequality Theorem',
+      intro: 'The sum of any two sides of a triangle must be greater than the third side. Determines if three lengths can form a triangle.',
+      keyPoints: ['a + b > c for all side combinations', 'Check all three inequalities', 'If any fails, not a triangle', 'Difference of two sides < third < sum of two sides'],
+      examples: ['Can 3, 4, 5 form triangle? 3+4>5✓, 3+5>4✓, 4+5>3✓ → YES', 'Can 1, 2, 5 form triangle? 1+2>5✗ → NO'],
+      commonMistakes: ['Checking only one inequality', 'Using ≥ instead of >', 'Forgetting to check all combinations'],
+      tips: ['Check all three combinations', 'Two short sides must exceed long side', 'Quick test: biggest side < sum of other two']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'SSS, SAS, ASA, AAS Congruence',
+    content: {
+      title: 'Triangle Congruence Theorems',
+      intro: 'Shortcuts to prove triangles congruent without checking all six parts. Only need three specific parts.',
+      keyPoints: ['SSS: 3 sides equal → triangles congruent', 'SAS: 2 sides and included angle', 'ASA: 2 angles and included side', 'AAS: 2 angles and non-included side', 'AAA does NOT work (similar, not congruent)', 'SSA does NOT work (ambiguous)'],
+      examples: ['SSS: sides 3,4,5 match → congruent', 'SAS: sides 3,4 and angle between = 90° → congruent', 'ASA: angles 50°,60° and side between = 5 → congruent'],
+      commonMistakes: ['Using AAA', 'Using SSA', 'Wrong angle for SAS (must be included)', 'Wrong side for ASA'],
+      tips: ['SSS = all sides', 'Included = between the two parts', 'AAA and SSA never work']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Similar Triangles',
+    content: {
+      title: 'Similar Triangles',
+      intro: 'Similar triangles have the same shape but different size. All angles equal, sides proportional.',
+      keyPoints: ['Similar: same shape, different size, symbol ~', 'All angles equal', 'Sides proportional (same ratio)', 'AA similarity: 2 angles equal → similar', 'SAS similarity: 2 sides proportional, included angle equal', 'SSS similarity: all 3 sides proportional'],
+      examples: ['△ABC ~ △DEF with ratio 2:1 means if AB=4, then DE=2', 'If two triangles have angles 50°,60°,70°, they are similar'],
+      commonMistakes: ['Confusing similar and congruent', 'Wrong ratio setup', 'Forgetting corresponding parts'],
+      tips: ['Similar = same shape, scale model', 'Congruent is special case of similar (ratio 1:1)', 'AA is easiest similarity test']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Pythagorean Theorem',
+    content: {
+      title: 'Pythagorean Theorem',
+      intro: 'For right triangles: a² + b² = c² where c is the hypotenuse. Most famous theorem in geometry.',
+      keyPoints: ['Only for right triangles', 'a² + b² = c²', 'c = hypotenuse (longest, opposite right angle)', 'a, b = legs', 'Find missing side', '3-4-5, 5-12-13 are common Pythagorean triples'],
+      examples: ['Legs 3 and 4: c² = 9 + 16 = 25, c = 5', 'Leg 6, hypotenuse 10: 6² + b² = 100, b² = 64, b = 8'],
+      commonMistakes: ['Using for non-right triangles', 'Putting wrong side as c', 'Forgetting square root', 'Adding before squaring'],
+      tips: ['Right triangle only!', 'Hypotenuse = longest side', 'Memorize 3-4-5 and 5-12-13']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Special Right Triangles (30-60-90, 45-45-90)',
+    content: {
+      title: 'Special Right Triangles',
+      intro: 'Two special right triangles have predictable side ratios. Memorizing these saves time and avoids calculator use.',
+      keyPoints: ['45-45-90: sides in ratio 1:1:√2', '45-45-90 is isosceles right triangle', '30-60-90: sides in ratio 1:√3:2', 'In 30-60-90: shortest opposite 30°, longest is hypotenuse', 'Multiply ratio by scale factor to find actual sides'],
+      examples: ['45-45-90 with leg 5: other leg = 5, hypotenuse = 5√2', '30-60-90 with short leg 3: long leg = 3√3, hypotenuse = 6'],
+      commonMistakes: ['Mixing up the ratios', 'Forgetting which side is which', 'Wrong ratio for 30-60-90'],
+      tips: ['45-45-90: legs equal, hypotenuse = leg√2', '30-60-90: memorize 1:√3:2', 'Draw and label to remember']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Quadrilaterals (Parallelograms, Rectangles, Rhombi, Trapezoids)',
+    content: {
+      title: 'Quadrilaterals',
+      intro: 'Four-sided polygons with special properties. Understanding the hierarchy helps identify relationships.',
+      keyPoints: ['Parallelogram: opposite sides parallel and equal', 'Rectangle: parallelogram with 4 right angles', 'Rhombus: parallelogram with 4 equal sides', 'Square: rectangle AND rhombus', 'Trapezoid: exactly one pair parallel sides', 'Sum of angles = 360°'],
+      examples: ['Square is special rectangle (all sides equal)', 'Rhombus has perpendicular diagonals', 'Trapezoid has bases (parallel sides)'],
+      commonMistakes: ['Thinking all rectangles are squares', 'Confusing rhombus and square', 'Forgetting angle sum'],
+      tips: ['Square = rectangle + rhombus', 'Parallelogram properties apply to all', 'Draw the hierarchy']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Properties of Polygons',
+    content: {
+      title: 'Properties of Polygons',
+      intro: 'General formulas for polygons with any number of sides. From triangles to n-gons.',
+      keyPoints: ['Sum of interior angles = (n-2) × 180°', 'Each interior angle of regular polygon = (n-2) × 180° / n', 'Sum of exterior angles = 360° (any polygon)', 'Each exterior angle of regular = 360° / n', 'Regular: all sides and angles equal'],
+      examples: ['Pentagon (n=5): sum = (5-2) × 180° = 540°', 'Regular hexagon: each interior = (6-2) × 180° / 6 = 120°'],
+      commonMistakes: ['Forgetting (n-2)', 'Confusing interior and exterior', 'Using wrong formula'],
+      tips: ['Interior sum: (n-2) × 180°', 'Exterior sum always 360°', 'n = number of sides']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Circles and Arc Length',
+    content: {
+      title: 'Circles and Arc Length',
+      intro: 'Circle basics and measuring arc length. Central angles determine arc length.',
+      keyPoints: ['Circle: all points equidistant from center', 'Radius: center to edge', 'Diameter = 2 × radius', 'Circumference = 2πr = πd', 'Arc length = (θ/360°) × 2πr', 'Central angle determines arc'],
+      examples: ['Circle radius 5: C = 2π(5) = 10π', 'Arc with 90° central angle, radius 6: length = (90/360) × 2π(6) = 3π'],
+      commonMistakes: ['Using diameter instead of radius', 'Forgetting to convert angle', 'Confusing arc length and arc measure'],
+      tips: ['Arc length = fraction of circumference', 'θ/360 = fraction', 'Radius appears in all formulas']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Circle Theorems',
+    content: {
+      title: 'Circle Theorems',
+      intro: 'Key theorems about angles and segments in circles. Essential for solving circle problems.',
+      keyPoints: ['Inscribed angle = 1/2 central angle', 'Angle in semicircle = 90°', 'Inscribed angles on same arc are equal', 'Tangent perpendicular to radius at point of tangency', 'Two tangents from external point are equal'],
+      examples: ['Central angle 80°, inscribed angle = 40°', 'Triangle in semicircle is right triangle'],
+      commonMistakes: ['Confusing inscribed and central angles', 'Forgetting 90° in semicircle', 'Wrong tangent properties'],
+      tips: ['Inscribed = half of central', 'Semicircle → right angle', 'Tangent ⊥ radius']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Chords, Secants, and Tangents',
+    content: {
+      title: 'Chords, Secants, and Tangents',
+      intro: 'Lines interacting with circles. Each type has unique properties and theorems.',
+      keyPoints: ['Chord: segment with both endpoints on circle', 'Secant: line intersecting circle twice', 'Tangent: line touching circle at exactly one point', 'Perpendicular from center bisects chord', 'Tangent perpendicular to radius', 'Power of a point theorems'],
+      examples: ['Radius to midpoint of chord is perpendicular', 'Two tangents from point P have equal length'],
+      commonMistakes: ['Confusing chord and diameter', 'Thinking secant is tangent', 'Wrong perpendicular relationships'],
+      tips: ['Chord = both ends on circle', 'Tangent touches once', 'Secant crosses twice']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Circle Sectors and Segments',
+    content: {
+      title: 'Circle Sectors and Segments',
+      intro: 'Parts of circles bounded by radii and chords. Calculating areas of these regions.',
+      keyPoints: ['Sector: pie slice (bounded by 2 radii and arc)', 'Segment: bounded by chord and arc', 'Sector area = (θ/360°) × πr²', 'Segment area = sector area - triangle area', 'Major/minor sectors and segments'],
+      examples: ['Sector with 60° angle, radius 6: area = (60/360) × π(36) = 6π', 'Segment = sector minus triangle'],
+      commonMistakes: ['Confusing sector and segment', 'Forgetting to subtract triangle for segment', 'Using wrong formula'],
+      tips: ['Sector = pizza slice', 'Segment = sector minus triangle', 'Fraction of full circle area']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Area and Perimeter',
+    content: {
+      title: 'Area and Perimeter',
+      intro: 'Measuring boundary length (perimeter) and enclosed space (area) for various shapes.',
+      keyPoints: ['Perimeter: distance around', 'Area: space inside', 'Rectangle: P = 2l + 2w, A = lw', 'Square: P = 4s, A = s²', 'Triangle: A = 1/2 bh', 'Circle: P = 2πr, A = πr²', 'Units: perimeter linear, area squared'],
+      examples: ['Rectangle 5×3: P = 16, A = 15', 'Triangle base 6, height 4: A = 12'],
+      commonMistakes: ['Mixing up formulas', 'Wrong units', 'Using base instead of height'],
+      tips: ['Perimeter = add all sides', 'Area always squared units', 'Triangle needs height (perpendicular)']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Area of Triangles, Rectangles, and Trapezoids',
+    content: {
+      title: 'Area Formulas for Common Shapes',
+      intro: 'Specific area formulas for triangles, rectangles, and trapezoids. Foundation for all area calculations.',
+      keyPoints: ['Triangle: A = 1/2 bh', 'Rectangle: A = lw', 'Trapezoid: A = 1/2(b₁ + b₂)h', 'Height must be perpendicular', 'Trapezoid has two bases', 'Can derive other shapes from these'],
+      examples: ['Triangle base 8, height 5: A = 1/2(8)(5) = 20', 'Trapezoid bases 6 and 10, height 4: A = 1/2(16)(4) = 32'],
+      commonMistakes: ['Forgetting 1/2 for triangle', 'Using slant height instead of perpendicular', 'Adding bases before multiplying by height'],
+      tips: ['Triangle = half rectangle', 'Trapezoid = average of bases × height', 'Height always perpendicular']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Area of Circles and Composite Figures',
+    content: {
+      title: 'Areas of Circles and Complex Shapes',
+      intro: 'Circle area and breaking complex shapes into simpler parts. Essential problem-solving skill.',
+      keyPoints: ['Circle: A = πr²', 'Composite figure: break into simple shapes', 'Add areas for separate pieces', 'Subtract for holes/cutouts', 'Semicircle: A = 1/2 πr²', 'Quarter circle: A = 1/4 πr²'],
+      examples: ['Circle radius 5: A = π(25) = 25π', 'Rectangle with semicircle: add both areas', 'Rectangle with circle hole: subtract circle from rectangle'],
+      commonMistakes: ['Using diameter instead of radius', 'Forgetting to square radius', 'Not breaking composite correctly'],
+      tips: ['πr² not 2πr (that\'s circumference)', 'Break complex into triangles, rectangles, circles', 'Add or subtract appropriately']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Volume and Surface Area',
+    content: {
+      title: 'Volume and Surface Area',
+      intro: 'Three-dimensional measurement. Volume measures space inside, surface area measures outside covering.',
+      keyPoints: ['Volume: space inside (cubic units)', 'Surface area: outside covering (square units)', 'Prism: V = Bh (B = base area)', 'Cylinder: V = πr²h', 'Always check units (volume cubed, SA squared)'],
+      examples: ['Rectangular prism 3×4×5: V = 60, SA = 2(12+15+20) = 94', 'Cylinder r=3, h=10: V = π(9)(10) = 90π'],
+      commonMistakes: ['Mixing up volume and surface area formulas', 'Wrong units', 'Forgetting to multiply by height'],
+      tips: ['Volume = base × height (usually)', 'Surface area = add all faces', 'Volume cubic, SA squared']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Surface Area of Prisms and Cylinders',
+    content: {
+      title: 'Surface Area: Prisms and Cylinders',
+      intro: 'Calculating total surface area by adding all faces. Think of unwrapping the shape.',
+      keyPoints: ['Prism SA = 2B + Ph (B=base area, P=base perimeter, h=height)', 'Rectangular prism: SA = 2(lw + lh + wh)', 'Cylinder: SA = 2πr² + 2πrh = 2πr(r + h)', 'Lateral area: just sides, no bases', 'Think of net (unfolded shape)'],
+      examples: ['Cube side 4: SA = 6(16) = 96', 'Cylinder r=5, h=10: SA = 2π(5)(15) = 150π'],
+      commonMistakes: ['Forgetting top and/or bottom', 'Counting faces wrong', 'Using wrong radius/height'],
+      tips: ['Draw the net', 'Add all face areas', 'Cylinder: 2 circles + rectangle']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Surface Area of Pyramids and Cones',
+    content: {
+      title: 'Surface Area: Pyramids and Cones',
+      intro: 'Surface area for shapes that taper to a point. Slant height is key.',
+      keyPoints: ['Pyramid SA = B + 1/2 Pl (B=base, P=perimeter, l=slant height)', 'Cone SA = πr² + πrl (r=radius, l=slant height)', 'Slant height ≠ vertical height', 'Use Pythagorean theorem to find slant height', 'l² = h² + r²'],
+      examples: ['Square pyramid base 6, slant 5: SA = 36 + 1/2(24)(5) = 96', 'Cone r=3, l=5: SA = 9π + 15π = 24π'],
+      commonMistakes: ['Using height instead of slant height', 'Forgetting base area', 'Wrong formula for lateral area'],
+      tips: ['Slant height goes along surface', 'Pythagorean theorem for slant height', 'Lateral area uses slant height']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Volume of Prisms and Cylinders',
+    content: {
+      title: 'Volume: Prisms and Cylinders',
+      intro: 'Volume formula V = Bh works for all prisms and cylinders. B is base area, h is height.',
+      keyPoints: ['V = Bh for all prisms and cylinders', 'B = area of base', 'h = perpendicular height', 'Rectangular prism: V = lwh', 'Cylinder: V = πr²h', 'Units are cubed'],
+      examples: ['Rectangular prism 3×4×5: V = 60', 'Cylinder r=4, h=7: V = π(16)(7) = 112π', 'Triangular prism base area 10, height 6: V = 60'],
+      commonMistakes: ['Forgetting to find base area first', 'Using slant height', 'Wrong units (not cubed)'],
+      tips: ['Base area × height always', 'Identify the base shape', 'Height perpendicular to base']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Volume of Pyramids, Cones, and Spheres',
+    content: {
+      title: 'Volume: Pyramids, Cones, and Spheres',
+      intro: 'Pyramids and cones are 1/3 of corresponding prism/cylinder. Spheres use different formula.',
+      keyPoints: ['Pyramid: V = 1/3 Bh', 'Cone: V = 1/3 πr²h', 'Sphere: V = 4/3 πr³', 'h = perpendicular height (not slant)', '1/3 appears in pyramid and cone', 'Sphere only needs radius'],
+      examples: ['Pyramid base area 12, height 9: V = 1/3(12)(9) = 36', 'Cone r=3, h=8: V = 1/3π(9)(8) = 24π', 'Sphere r=3: V = 4/3π(27) = 36π'],
+      commonMistakes: ['Forgetting 1/3', 'Using slant height', 'Wrong formula for sphere'],
+      tips: ['Pyramid & cone: 1/3 of prism/cylinder', 'Sphere: 4/3πr³', 'Use perpendicular height']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Coordinate Geometry',
+    content: {
+      title: 'Coordinate Geometry',
+      intro: 'Connecting algebra and geometry using coordinate plane. Points, lines, and shapes defined by equations.',
+      keyPoints: ['Points: (x, y) ordered pairs', 'x-axis horizontal, y-axis vertical', 'Slope: m = (y₂-y₁)/(x₂-x₁)', 'Distance and midpoint formulas', 'Linear equations graph as lines', 'Quadrants numbered I, II, III, IV'],
+      examples: ['Point (3, -2): right 3, down 2', 'Slope through (1,2) and (3,8): m = 6/2 = 3'],
+      commonMistakes: ['Reversing x and y', 'Wrong quadrant', 'Slope formula upside down'],
+      tips: ['x first, y second', 'Run right/left, rise up/down', 'Draw axes to visualize']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Distance Formula',
+    content: {
+      title: 'Distance Formula',
+      intro: 'Finding distance between two points on coordinate plane. Direct application of Pythagorean theorem.',
+      keyPoints: ['d = √[(x₂-x₁)² + (y₂-y₁)²]', 'Based on Pythagorean theorem', 'Find horizontal and vertical distances first', 'Then use a² + b² = c²', 'Order of points doesn\'t matter'],
+      examples: ['Distance from (1,2) to (4,6): d = √[(3)² + (4)²] = √25 = 5', 'Distance from (0,0) to (3,4): d = 5'],
+      commonMistakes: ['Forgetting square root', 'Adding before squaring', 'Wrong order of operations'],
+      tips: ['Pythagorean theorem in disguise', 'Always positive', 'Sketch helps visualize']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Midpoint Formula',
+    content: {
+      title: 'Midpoint Formula',
+      intro: 'Finding the exact center point between two coordinates. Average the coordinates.',
+      keyPoints: ['M = ((x₁+x₂)/2, (y₁+y₂)/2)', 'Average the x-coordinates', 'Average the y-coordinates', 'Midpoint is halfway between', 'Works in any quadrant'],
+      examples: ['Midpoint of (2,3) and (8,7): M = ((2+8)/2, (3+7)/2) = (5, 5)', 'Midpoint of (0,0) and (6,4): M = (3, 2)'],
+      commonMistakes: ['Subtracting instead of adding', 'Forgetting to divide by 2', 'Mixing up coordinates'],
+      tips: ['Average x, average y', 'Add then divide by 2', 'Exactly in the middle']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Transformations',
+    content: {
+      title: 'Transformations',
+      intro: 'Moving, flipping, turning, and resizing shapes. Four main types: translation, rotation, reflection, dilation.',
+      keyPoints: ['Translation: slide (no rotation)', 'Rotation: turn around point', 'Reflection: flip over line', 'Dilation: resize (scale)', 'First three preserve size (isometries)', 'Dilation changes size, preserves shape'],
+      examples: ['Translate (2,3) right 5: (7,3)', 'Reflect (3,2) over x-axis: (3,-2)', 'Dilate (4,6) by factor 2: (8,12)'],
+      commonMistakes: ['Confusing transformation types', 'Wrong direction', 'Forgetting to apply to all points'],
+      tips: ['Translation = slide', 'Rotation = turn', 'Reflection = flip', 'Dilation = resize']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Translations, Rotations, and Reflections',
+    content: {
+      title: 'Rigid Transformations',
+      intro: 'Transformations that preserve size and shape (congruence). Position and orientation may change.',
+      keyPoints: ['Translation: (x,y) → (x+a, y+b)', 'Reflection over x-axis: (x,y) → (x,-y)', 'Reflection over y-axis: (x,y) → (-x,y)', 'Rotation 90° CCW about origin: (x,y) → (-y,x)', 'Rotation 180°: (x,y) → (-x,-y)', 'All preserve congruence'],
+      examples: ['Translate (3,2) by <-1,4>: (2,6)', 'Reflect (5,3) over x-axis: (5,-3)', 'Rotate (2,3) 90° CCW: (-3,2)'],
+      commonMistakes: ['Wrong sign in reflection', 'Rotating wrong direction', 'Confusing x and y in rotation'],
+      tips: ['Translation adds to coordinates', 'Reflection changes sign', 'Rotation formula by heart']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Dilations and Scale Factor',
+    content: {
+      title: 'Dilations and Scale Factor',
+      intro: 'Resizing shapes by multiplying coordinates. Creates similar (not congruent) figures.',
+      keyPoints: ['Dilation: (x,y) → (kx, ky)', 'k = scale factor', 'k > 1: enlargement', '0 < k < 1: reduction', 'k < 0: dilation and reflection', 'Preserves shape, changes size'],
+      examples: ['Dilate (3,4) by k=2: (6,8)', 'Dilate (8,6) by k=1/2: (4,3)', 'Dilate (2,3) by k=-1: (-2,-3)'],
+      commonMistakes: ['Not multiplying both coordinates', 'Confusing with translation', 'Wrong scale factor'],
+      tips: ['Multiply by scale factor', 'k>1 bigger, k<1 smaller', 'Center usually at origin']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Geometric Proofs',
+    content: {
+      title: 'Geometric Proofs',
+      intro: 'Logical arguments proving geometric statements. Uses definitions, postulates, and theorems.',
+      keyPoints: ['Start with given information', 'Use definitions, postulates, theorems', 'Each step needs justification', 'End with what you\'re proving', 'Common justifications: def, theorem, given', 'Build on previous steps'],
+      examples: ['Given: AB = CD; Prove: AB + 5 = CD + 5 using addition property', 'Use triangle sum theorem to find missing angle'],
+      commonMistakes: ['Skipping steps', 'No justification', 'Circular reasoning', 'Assuming what you\'re proving'],
+      tips: ['Every statement needs reason', 'Work backwards from goal', 'Use properties correctly']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Two-Column Proofs',
+    content: {
+      title: 'Two-Column Proofs',
+      intro: 'Organized proof format with statements on left, reasons on right. Most common proof style.',
+      keyPoints: ['Left column: statements', 'Right column: reasons', 'Start with given', 'End with prove statement', 'Each statement justified', 'Reasons: definitions, postulates, theorems, given'],
+      examples: ['Statement: AB = CD | Reason: Given', 'Statement: AB + BC = AC | Reason: Segment Addition'],
+      commonMistakes: ['Missing reasons', 'Statements without justification', 'Wrong order', 'Incomplete proof'],
+      tips: ['Two columns always', 'Match statement with reason', 'Logical order matters']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Geometry',
+    topicName: 'Paragraph Proofs',
+    content: {
+      title: 'Paragraph Proofs',
+      intro: 'Proofs written in paragraph form with logical flow. Same logic as two-column, different format.',
+      keyPoints: ['Written as connected sentences', 'State given first', 'Use words like "since," "therefore," "because"', 'Justify each step', 'Conclude with proved statement', 'Same logic as two-column'],
+      examples: ['Since AB = CD (given) and BC = BC (reflexive property), therefore AB + BC = CD + BC (addition property)...'],
+      commonMistakes: ['Missing justifications', 'Unclear connections', 'No logical flow', 'Skipping steps'],
+      tips: ['Use transition words', 'State reason in parentheses', 'Read it aloud to check flow']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Right Triangle Trigonometry',
+    content: {
+      title: 'Right Triangle Trigonometry',
+      intro: 'SOH-CAH-TOA defines ratios of sides in right triangles. Foundation of all trigonometry.',
+      keyPoints: ['sin θ = Opposite / Hypotenuse', 'cos θ = Adjacent / Hypotenuse', 'tan θ = Opposite / Adjacent', 'SOH-CAH-TOA mnemonic', 'Only for right triangles', 'Hypotenuse is longest side', 'Angle determines which sides are opposite/adjacent'],
+      examples: ['In triangle with angle 30°, opp=5, hyp=10: sin 30° = 5/10 = 0.5', 'If cos θ = 3/5, adjacent=3, hypotenuse=5'],
+      commonMistakes: ['Mixing up opposite and adjacent', 'Using wrong side as hypotenuse', 'Applying to non-right triangles'],
+      tips: ['SOH-CAH-TOA!', 'Draw and label triangle', 'Hypotenuse never changes']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Unit Circle',
+    content: {
+      title: 'Unit Circle',
+      intro: 'Circle with radius 1 centered at origin. Extends trig beyond right triangles to all angles.',
+      keyPoints: ['Radius = 1', 'Center at origin', 'Coordinates: (cos θ, sin θ)', 'Angle measured from positive x-axis', 'Counterclockwise = positive', '360° = 2π radians', 'Key angles: 0°, 30°, 45°, 60°, 90°, 180°, 270°'],
+      examples: ['At 0°: point (1, 0) so cos 0° = 1, sin 0° = 0', 'At 90°: point (0, 1) so cos 90° = 0, sin 90° = 1', 'At 45°: point (√2/2, √2/2)'],
+      commonMistakes: ['Forgetting radius = 1', 'Wrong coordinates', 'Confusing degrees and radians'],
+      tips: ['Memorize key angles', '(cos θ, sin θ) = coordinates', 'All angles work, not just 0-90°']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Trigonometric Functions',
+    content: {
+      title: 'Trigonometric Functions',
+      intro: 'Six trig functions: sine, cosine, tangent, and their reciprocals. Periodic functions with specific domains and ranges.',
+      keyPoints: ['sin, cos, tan = primary three', 'csc = 1/sin, sec = 1/cos, cot = 1/tan', 'sin and cos range: [-1, 1]', 'Period of sin/cos: 2π', 'Period of tan: π', 'All are periodic functions'],
+      examples: ['sin 30° = 1/2, csc 30° = 2', 'tan 45° = 1, cot 45° = 1', 'cos repeats every 2π'],
+      commonMistakes: ['Confusing reciprocal functions', 'Wrong period', 'Domain restrictions for tan'],
+      tips: ['csc/sec/cot are reciprocals', 'sin and cos always between -1 and 1', 'Tan has asymptotes']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Inverse Trigonometric Functions',
+    content: {
+      title: 'Inverse Trigonometric Functions',
+      intro: 'Finding angles when you know the ratio. Written as sin⁻¹, cos⁻¹, tan⁻¹ or arcsin, arccos, arctan.',
+      keyPoints: ['sin⁻¹ finds angle from sine value', 'cos⁻¹ finds angle from cosine value', 'tan⁻¹ finds angle from tangent value', 'Range restricted for inverse to be function', 'sin⁻¹: [-90°, 90°], cos⁻¹: [0°, 180°], tan⁻¹: (-90°, 90°)', 'Calculator gives principal value'],
+      examples: ['sin⁻¹(1/2) = 30°', 'cos⁻¹(0) = 90°', 'tan⁻¹(1) = 45°'],
+      commonMistakes: ['Thinking sin⁻¹ = 1/sin (NO!)', 'Ignoring range restrictions', 'Multiple angle solutions'],
+      tips: ['sin⁻¹ = arcsin', 'Calculator mode matters (degrees vs radians)', 'Check range restrictions']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Trigonometric Identities',
+    content: {
+      title: 'Trigonometric Identities',
+      intro: 'Equations true for all angle values. Used to simplify expressions and solve equations.',
+      keyPoints: ['Pythagorean: sin²θ + cos²θ = 1', '1 + tan²θ = sec²θ', '1 + cot²θ = csc²θ', 'Double angle: sin 2θ = 2sin θ cos θ', 'Sum: sin(A+B) = sin A cos B + cos A sin B', 'Even/odd: cos(-θ) = cos θ, sin(-θ) = -sin θ'],
+      examples: ['Simplify sin²θ + cos²θ = 1', 'sin 2(30°) = 2 sin 30° cos 30° = 2(1/2)(√3/2) = √3/2'],
+      commonMistakes: ['Treating like algebra (sin²θ ≠ (sin θ)²)', 'Wrong sign in formulas', 'Forgetting domain'],
+      tips: ['Memorize Pythagorean identity', 'Check both sides equal', 'Work from complex to simple']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Trigonometry',
+    topicName: 'Law of Sines and Cosines',
+    content: {
+      title: 'Law of Sines and Cosines',
+      intro: 'Solving non-right triangles. Law of Sines for ASA/AAS/SSA, Law of Cosines for SAS/SSS.',
+      keyPoints: ['Law of Sines: a/sin A = b/sin B = c/sin C', 'Law of Cosines: c² = a² + b² - 2ab cos C', 'Sines: need angle-side pairs', 'Cosines: like Pythagorean with correction term', 'Use Sines when have 2 angles', 'Use Cosines when have 2 sides and included angle'],
+      examples: ['Given: A=40°, B=60°, a=10. Find b: 10/sin 40° = b/sin 60°', 'Given: a=5, b=7, C=60°. Find c: c² = 25 + 49 - 2(5)(7)cos 60°'],
+      commonMistakes: ['Using on right triangles (use SOH-CAH-TOA instead)', 'SSA ambiguous case', 'Wrong angle-side pair'],
+      tips: ['Not just for right triangles!', 'Law of Cosines generalizes Pythagorean', 'Draw and label']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Linear Algebra',
+    topicName: 'Matrices and Determinants',
+    content: {
+      title: 'Matrices and Determinants',
+      intro: 'Matrices are rectangular arrays of numbers. Determinants measure matrix properties and invertibility.',
+      keyPoints: ['Matrix: m×n array', 'Add/subtract: same dimensions', 'Multiply: (m×n)(n×p) = m×p', 'Determinant: only square matrices', '2×2 det: ad - bc', 'det = 0 → not invertible', 'Properties: det(AB) = det(A)det(B)'],
+      examples: ['[2 3][1 0] = [2 0][4 3] → [2 3; 1 4]', 'det([2 3; 1 4]) = 8 - 3 = 5'],
+      commonMistakes: ['Wrong multiplication order', 'Adding different dimensions', 'Wrong determinant formula'],
+      tips: ['Matrix mult: rows × columns', 'Determinant diagonal trick for 2×2', 'Check dimensions first']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Linear Algebra',
+    topicName: 'Vector Spaces',
+    content: {
+      title: 'Vector Spaces',
+      intro: 'Abstract structure where vectors can be added and scaled. Foundation of linear algebra.',
+      keyPoints: ['Vector space has vectors and scalars', 'Closed under addition and scalar multiplication', '10 axioms define vector space', 'Examples: R², R³, polynomials, functions', 'Subspace: subset that is also vector space', 'Must contain zero vector'],
+      examples: ['R²: all (x,y) pairs form vector space', 'Polynomials of degree ≤ n form vector space'],
+      commonMistakes: ['Thinking only geometric vectors', 'Forgetting zero vector', 'Missing closure properties'],
+      tips: ['Many things are "vectors"', 'Check 10 axioms', 'Zero vector always included']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Linear Algebra',
+    topicName: 'Linear Transformations',
+    content: {
+      title: 'Linear Transformations',
+      intro: 'Functions between vector spaces preserving addition and scalar multiplication. Represented by matrices.',
+      keyPoints: ['T: V → W is linear if T(u+v) = T(u) + T(v)', 'T(cv) = cT(v)', 'Matrix represents transformation', 'Kernel: vectors mapping to zero', 'Range/Image: all possible outputs', 'One-to-one if kernel = {0}'],
+      examples: ['Rotation, scaling, projection are linear', 'T([x;y]) = [2x;3y] is linear'],
+      commonMistakes: ['Assuming all functions linear', 'Confusing kernel and range', 'Not checking both properties'],
+      tips: ['Preserves addition and scaling', 'Matrix = transformation', 'Check with examples']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Linear Algebra',
+    topicName: 'Eigenvalues and Eigenvectors',
+    content: {
+      title: 'Eigenvalues and Eigenvectors',
+      intro: 'Special vectors that only get scaled (not rotated) by a transformation. Av = λv.',
+      keyPoints: ['Eigenvector: Av = λv', 'λ = eigenvalue (scalar)', 'v = eigenvector (non-zero)', 'Find λ: det(A - λI) = 0', 'Characteristic equation', 'Applications: stability, vibrations, Google PageRank'],
+      examples: ['If A[1;2] = 3[1;2], then v=[1;2] is eigenvector with λ=3', 'A = [4 1; 2 3]: eigenvalues λ=5, 2'],
+      commonMistakes: ['Zero vector as eigenvector', 'Wrong characteristic equation', 'Not solving det = 0'],
+      tips: ['Eigen = "own" in German', 'Direction preserved, magnitude scaled', 'Solve det(A-λI) = 0']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Linear Algebra',
+    topicName: 'Orthogonality',
+    content: {
+      title: 'Orthogonality',
+      intro: 'Perpendicularity in vector spaces. Orthogonal vectors have dot product zero.',
+      keyPoints: ['Orthogonal: u · v = 0', 'Perpendicular in geometric sense', 'Orthonormal: orthogonal AND unit length', 'Gram-Schmidt: makes orthogonal basis', 'Orthogonal matrices preserve length', 'Applications: least squares, QR decomposition'],
+      examples: ['[1;0] and [0;1] are orthogonal', '[3;4] and [-4;3] are orthogonal (dot product = 0)'],
+      commonMistakes: ['Confusing orthogonal and orthonormal', 'Not checking unit length', 'Wrong dot product'],
+      tips: ['Dot product = 0 → orthogonal', 'Orthonormal = orthogonal + length 1', 'Right angles in any dimension']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Descriptive Statistics',
+    content: {
+      title: 'Descriptive Statistics',
+      intro: 'Summarizing and describing data using measures of center and spread. Foundation of statistical analysis.',
+      keyPoints: ['Mean: average (sum / count)', 'Median: middle value when ordered', 'Mode: most frequent value', 'Range: max - min', 'Standard deviation: typical distance from mean', 'Variance: average squared deviation', 'IQR: Q3 - Q1 (middle 50%)'],
+      examples: ['Data: 2,3,5,5,8. Mean=4.6, Median=5, Mode=5', 'Range: 8-2=6', 'Use median for skewed data'],
+      commonMistakes: ['Mean sensitive to outliers', 'Not ordering data for median', 'Confusing variance and std dev'],
+      tips: ['Mean = balance point', 'Median = middle', 'Std dev in same units as data']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Probability Distributions',
+    content: {
+      title: 'Probability Distributions',
+      intro: 'Functions describing likelihood of outcomes. Discrete and continuous distributions model random phenomena.',
+      keyPoints: ['Discrete: countable outcomes (binomial, Poisson)', 'Continuous: infinite outcomes (normal, uniform)', 'Normal: bell curve, mean μ, std dev σ', '68-95-99.7 rule for normal', 'Binomial: n trials, p success probability', 'Expected value: long-run average'],
+      examples: ['Normal(0,1): 68% within ±1σ', 'Coin flip 10 times: binomial n=10, p=0.5', 'Z-score: z = (x-μ)/σ'],
+      commonMistakes: ['Using wrong distribution', 'Forgetting assumptions', 'Z-score formula backwards'],
+      tips: ['Normal most common', 'Binomial for yes/no trials', 'Check distribution assumptions']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Sampling and Inference',
+    content: {
+      title: 'Sampling and Inference',
+      intro: 'Drawing conclusions about populations from samples. Central limit theorem enables inference.',
+      keyPoints: ['Population: entire group', 'Sample: subset of population', 'Random sampling reduces bias', 'Sample statistic estimates population parameter', 'Central limit theorem: sampling distribution becomes normal', 'Larger n → better estimate'],
+      examples: ['Poll 1000 voters to estimate all voter preferences', 'Sample mean estimates population mean', 'n≥30 often sufficient for CLT'],
+      commonMistakes: ['Biased sampling', 'Too small sample size', 'Generalizing beyond population'],
+      tips: ['Random sampling crucial', 'Larger sample better', 'Sample ≠ population']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Hypothesis Testing',
+    content: {
+      title: 'Hypothesis Testing',
+      intro: 'Statistical method to test claims about populations. Compare evidence against null hypothesis.',
+      keyPoints: ['H₀: null hypothesis (status quo)', 'Hₐ: alternative hypothesis (claim)', 'p-value: probability of data if H₀ true', 'α: significance level (often 0.05)', 'p < α → reject H₀', 'Type I error: reject true H₀', 'Type II error: fail to reject false H₀'],
+      examples: ['H₀: μ = 100, Hₐ: μ ≠ 100', 'p-value = 0.03 < 0.05 → reject H₀', 'Conclude evidence supports Hₐ'],
+      commonMistakes: ['Accepting H₀ (say "fail to reject")', 'Confusing p-value and α', 'Wrong conclusion'],
+      tips: ['Small p-value = strong evidence against H₀', 'Never "prove" H₀', 'p < α → statistically significant']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Regression Analysis',
+    content: {
+      title: 'Regression Analysis',
+      intro: 'Modeling relationships between variables. Linear regression finds best-fit line.',
+      keyPoints: ['y = mx + b (or y = β₀ + β₁x)', 'Least squares: minimizes sum of squared residuals', 'r: correlation coefficient (-1 to 1)', 'r²: coefficient of determination (variation explained)', 'Residual: actual - predicted', 'Assumptions: linearity, independence, normality, equal variance'],
+      examples: ['r = 0.9: strong positive correlation', 'r² = 0.81: model explains 81% of variation', 'Line: y = 2.5x + 3'],
+      commonMistakes: ['Correlation ≠ causation', 'Extrapolating beyond data', 'Ignoring assumptions'],
+      tips: ['r near ±1 = strong linear relationship', 'Check residual plot', 'Correlation doesn\'t imply causation']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Statistics',
+    topicName: 'Confidence Intervals',
+    content: {
+      title: 'Confidence Intervals',
+      intro: 'Range of plausible values for population parameter. Quantifies estimation uncertainty.',
+      keyPoints: ['CI: estimate ± margin of error', '95% CI: 95% of intervals capture true parameter', 'Formula: x̄ ± t*(s/√n) or x̄ ± z*(σ/√n)', 'Wider interval = more confidence', 'Larger n = narrower interval', 'Common levels: 90%, 95%, 99%'],
+      examples: ['95% CI for mean: (48, 52)', 'Interpret: "95% confident true mean between 48 and 52"', 'Not "95% chance true mean in interval"'],
+      commonMistakes: ['Wrong interpretation', 'Confusing confidence level and interval', 'Using z when should use t'],
+      tips: ['Higher confidence → wider interval', 'Larger sample → narrower interval', 'Interpretation is key']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Water and Its Properties',
+    content: {
+      title: 'Water and Its Properties',
+      intro: 'Water\'s unique properties make life possible. Polarity, hydrogen bonding, and emergent properties.',
+      keyPoints: ['Polar molecule (O partially negative, H partially positive)', 'Hydrogen bonds between molecules', 'High specific heat (temperature regulation)', 'High heat of vaporization (cooling)', 'Cohesion (water-water attraction)', 'Adhesion (water-other surface)', 'Less dense as ice (floats)', 'Universal solvent for polar substances'],
+      examples: ['Hydrogen bonds create surface tension', 'Ice floats protecting aquatic life', 'Sweating cools through evaporation'],
+      commonMistakes: ['Confusing covalent and hydrogen bonds', 'Forgetting polarity causes properties', 'Missing biological significance'],
+      tips: ['Polar → dissolves polar', 'H-bonds = key to properties', 'Life depends on water']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Enzyme Structure and Function',
+    content: {
+      title: 'Enzyme Structure and Function',
+      intro: 'Enzymes are biological catalysts that speed reactions. Proteins with specific active sites.',
+      keyPoints: ['Enzyme = catalyst (speeds reaction, not consumed)', 'Active site binds substrate', 'Lock and key vs induced fit models', 'Lower activation energy', 'Specificity determined by shape', 'Most enzymes are proteins', 'Optimal pH and temperature'],
+      examples: ['Amylase breaks down starch', 'Catalase breaks down H₂O₂', 'Pepsin works in acidic stomach pH~2'],
+      commonMistakes: ['Thinking enzymes are consumed', 'Confusing enzyme and substrate', 'Forgetting environmental effects'],
+      tips: ['Enzyme + substrate → product + enzyme', 'Shape = function', 'Denatures at extreme pH/temp']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Enzyme Kinetics and Inhibition',
+    content: {
+      title: 'Enzyme Kinetics and Inhibition',
+      intro: 'Rate of enzyme reactions and how inhibitors regulate enzyme activity.',
+      keyPoints: ['Reaction rate increases with substrate concentration', 'Vmax: maximum reaction rate', 'Km: substrate concentration at 1/2 Vmax', 'Competitive inhibition: blocks active site', 'Noncompetitive inhibition: binds allosteric site', 'Feedback inhibition regulates pathways'],
+      examples: ['Competitive: add more substrate to overcome', 'Noncompetitive: changing substrate won\'t help', 'End product inhibits first enzyme (feedback)'],
+      commonMistakes: ['Confusing competitive and noncompetitive', 'Wrong Michaelis-Menten interpretation', 'Missing regulation importance'],
+      tips: ['Competitive = competes for active site', 'Noncompetitive = changes enzyme shape', 'Feedback prevents overproduction']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Cell Communication and Signal Transduction',
+    content: {
+      title: 'Cell Communication and Signal Transduction',
+      intro: 'Cells communicate through chemical signals. Three stages: reception, transduction, response.',
+      keyPoints: ['Reception: signal binds receptor', 'Transduction: signal relay cascade', 'Response: cellular activity changes', 'Types: endocrine, paracrine, autocrine', 'Second messengers amplify signal', 'Phosphorylation cascade common', 'Examples: hormones, neurotransmitters, growth factors'],
+      examples: ['Epinephrine → cAMP → glycogen breakdown', 'Growth factors → cell division', 'Insulin → glucose uptake'],
+      commonMistakes: ['Skipping transduction steps', 'Forgetting amplification', 'Missing specificity of receptors'],
+      tips: ['Reception → Transduction → Response', 'Cascade amplifies signal', 'Specific receptor = specific response']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Light-Dependent and Light-Independent Reactions',
+    content: {
+      title: 'Photosynthesis: Light and Dark Reactions',
+      intro: 'Photosynthesis has two stages. Light reactions produce ATP/NADPH, Calvin cycle fixes CO₂.',
+      keyPoints: ['Light reactions: thylakoid membrane, need light', 'Photosystems II and I (Z-scheme)', 'Water split → O₂ released', 'Products: ATP, NADPH', 'Calvin cycle: stroma, doesn\'t need light directly', 'CO₂ fixed into G3P (sugar)', 'Uses ATP and NADPH from light reactions'],
+      examples: ['Light: 6H₂O + light → O₂ + ATP + NADPH', 'Calvin: 6CO₂ + ATP + NADPH → C₆H₁₂O₆', 'Overall: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂'],
+      commonMistakes: ['Thinking dark reactions only at night', 'Wrong location', 'Missing cyclic flow'],
+      tips: ['Light = energy capture', 'Calvin = sugar synthesis', 'Both needed for photosynthesis']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Glycolysis, Krebs Cycle, Electron Transport Chain',
+    content: {
+      title: 'Cellular Respiration Stages',
+      intro: 'Three stages extract energy from glucose. Glycolysis, Krebs cycle, and electron transport chain.',
+      keyPoints: ['Glycolysis: cytoplasm, glucose → 2 pyruvate, 2 ATP, 2 NADH', 'Krebs cycle: mitochondrial matrix, 2 ATP, 6 NADH, 2 FADH₂', 'ETC: inner membrane, uses NADH/FADH₂, ~32 ATP', 'O₂ final electron acceptor → H₂O', 'Total: ~36-38 ATP per glucose', 'Most ATP from ETC'],
+      examples: ['Glycolysis works without O₂', 'Krebs produces most electron carriers', 'ETC produces most ATP'],
+      commonMistakes: ['Wrong location for each stage', 'Confusing ATP yields', 'Forgetting O₂ role in ETC'],
+      tips: ['Glycolysis = glucose splitting', 'Krebs = CO₂ release', 'ETC = most ATP']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Fermentation (Lactic Acid and Alcoholic)',
+    content: {
+      title: 'Fermentation',
+      intro: 'Anaerobic pathway regenerating NAD⁺ when O₂ unavailable. Two types: lactic acid and alcoholic.',
+      keyPoints: ['Occurs when no O₂ available', 'Glycolysis continues', 'Regenerates NAD⁺ for glycolysis', 'Lactic acid: pyruvate → lactate (animals, some bacteria)', 'Alcoholic: pyruvate → ethanol + CO₂ (yeast)', 'Only 2 ATP per glucose (from glycolysis)', 'Much less efficient than aerobic respiration'],
+      examples: ['Muscle cells during intense exercise (lactic)', 'Yeast making beer/bread (alcoholic)', 'Only glycolysis ATP produced'],
+      commonMistakes: ['Thinking fermentation produces ATP beyond glycolysis', 'Confusing two types', 'Missing NAD⁺ regeneration purpose'],
+      tips: ['Fermentation = no O₂', 'Main purpose = regenerate NAD⁺', 'Only 2 ATP vs 36-38 with O₂']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'DNA Replication in Detail',
+    content: {
+      title: 'DNA Replication',
+      intro: 'Semiconservative replication copies DNA before cell division. Complex multi-enzyme process.',
+      keyPoints: ['Semiconservative: each new DNA has 1 old, 1 new strand', 'Helicase unwinds double helix', 'DNA polymerase adds nucleotides 5\' → 3\'', 'Leading strand: continuous', 'Lagging strand: Okazaki fragments', 'DNA ligase joins fragments', 'Primase adds RNA primers'],
+      examples: ['Replication fork forms at origin', 'Leading synthesized continuously', 'Lagging requires multiple primers'],
+      commonMistakes: ['Thinking both strands continuous', 'Wrong direction (must be 5\'→3\')', 'Forgetting primers needed'],
+      tips: ['Semi = half old, half new', 'DNA polymerase can\'t start, needs primer', 'Leading continuous, lagging fragments']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Transcription and RNA Processing',
+    content: {
+      title: 'Transcription and RNA Processing',
+      intro: 'DNA → RNA in nucleus. Eukaryotes modify pre-mRNA before translation.',
+      keyPoints: ['RNA polymerase synthesizes RNA from DNA template', 'Promoter signals start', 'Terminator signals end', 'In eukaryotes: pre-mRNA processed', '5\' cap and poly-A tail added', 'Splicing removes introns, keeps exons', 'mRNA exits nucleus'],
+      examples: ['Promoter: TATA box', 'Introns spliced out', 'Alternative splicing → different proteins from same gene'],
+      commonMistakes: ['Thinking prokaryotes have introns', 'Skipping processing steps', 'Confusing transcription and translation'],
+      tips: ['Transcription = DNA → RNA', 'Processing = eukaryotic specialty', 'Exons expressed, introns intervening']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Translation and the Genetic Code',
+    content: {
+      title: 'Translation and the Genetic Code',
+      intro: 'mRNA → protein at ribosome. Genetic code: 64 codons specify 20 amino acids.',
+      keyPoints: ['Ribosome reads mRNA 3 nucleotides at a time (codon)', 'tRNA brings amino acids', 'Anticodon on tRNA pairs with codon', 'Start codon: AUG (Met)', 'Stop codons: UAA, UAG, UGA', 'Code is universal and redundant', 'Three steps: initiation, elongation, termination'],
+      examples: ['AUG = start + methionine', 'UAA = stop', 'Multiple codons code for same amino acid (redundancy)'],
+      commonMistakes: ['Confusing codon and anticodon', 'Wrong reading frame', 'Forgetting stop codons'],
+      tips: ['Codon = mRNA (3 bases)', 'Anticodon = tRNA', 'Translation = RNA → protein']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Gene Regulation in Prokaryotes (Operon Model)',
+    content: {
+      title: 'Gene Regulation: Prokaryotes',
+      intro: 'Bacteria use operons to regulate gene clusters. Lac operon and trp operon are classic examples.',
+      keyPoints: ['Operon: cluster of genes with single promoter', 'Lac operon: inducible (on when lactose present)', 'Repressor protein blocks transcription', 'Inducer (lactose) inactivates repressor', 'Trp operon: repressible (off when tryptophan present)', 'Negative vs positive control'],
+      examples: ['Lac: no lactose → repressor blocks genes', 'Lac: lactose present → genes ON', 'Trp: tryptophan present → genes OFF'],
+      commonMistakes: ['Confusing inducible and repressible', 'Wrong inducer/corepressor', 'Missing biological logic'],
+      tips: ['Inducible = turn ON when substrate present', 'Repressible = turn OFF when product present', 'Makes metabolic sense']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Gene Regulation in Eukaryotes',
+    content: {
+      title: 'Gene Regulation: Eukaryotes',
+      intro: 'More complex regulation. Chromatin structure, transcription factors, and epigenetics.',
+      keyPoints: ['Chromatin remodeling: DNA accessibility', 'Transcription factors bind promoter/enhancer', 'Enhancers far from gene', 'Alternative splicing creates protein diversity', 'miRNA and siRNA regulate post-transcription', 'Epigenetics: DNA methylation, histone modification'],
+      examples: ['DNA methylation silences genes', 'Histone acetylation opens chromatin', 'Alternative splicing → multiple proteins'],
+      commonMistakes: ['Thinking same as prokaryotes', 'Ignoring chromatin', 'Missing multiple control levels'],
+      tips: ['More complex than prokaryotes', 'Multiple control points', 'Chromatin = structural regulation']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Mutations and Their Effects',
+    content: {
+      title: 'Mutations and Their Effects',
+      intro: 'Changes in DNA sequence. Can be beneficial, neutral, or harmful.',
+      keyPoints: ['Point mutations: single nucleotide change', 'Substitution: replace one base', 'Silent: no amino acid change', 'Missense: different amino acid', 'Nonsense: creates stop codon', 'Frameshift: insertion/deletion shifts reading frame', 'Chromosomal mutations: large-scale changes'],
+      examples: ['Silent: GAA → GAG (both code for Glu)', 'Missense: sickle cell (Glu → Val)', 'Nonsense: premature stop', 'Frameshift: usually devastating'],
+      commonMistakes: ['Thinking all mutations harmful', 'Confusing point and frameshift', 'Missing wobble position'],
+      tips: ['Frameshift usually worse than substitution', 'Third position often wobbles (silent)', 'Source of genetic variation']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Viral Replication and Infection',
+    content: {
+      title: 'Viral Replication and Infection',
+      intro: 'Viruses hijack cells to reproduce. Lytic and lysogenic cycles.',
+      keyPoints: ['Virus: DNA or RNA in protein coat', 'Not alive (can\'t reproduce alone)', 'Lytic cycle: infect, reproduce, lyse cell', 'Lysogenic cycle: integrate into host genome (prophage)', 'Retroviruses: RNA → DNA (reverse transcriptase)', 'Bacteriophages infect bacteria'],
+      examples: ['Lytic: T4 phage kills bacteria', 'Lysogenic: lambda phage integrates', 'HIV: retrovirus'],
+      commonMistakes: ['Thinking viruses are alive', 'Confusing lytic and lysogenic', 'Missing host specificity'],
+      tips: ['Lytic = lyse (burst) cell', 'Lysogenic = hidden in genome', 'Retrovirus goes RNA → DNA']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Recombinant DNA and Genetic Engineering',
+    content: {
+      title: 'Recombinant DNA and Genetic Engineering',
+      intro: 'Combining DNA from different sources. Foundation of biotechnology.',
+      keyPoints: ['Restriction enzymes cut DNA at specific sequences', 'Sticky ends allow joining', 'DNA ligase seals DNA', 'Plasmids as vectors', 'Insert gene into bacteria for production', 'Applications: insulin, vaccines, GMOs'],
+      examples: ['Human insulin produced in bacteria', 'Bt corn has bacterial gene', 'Cut with same enzyme → compatible ends'],
+      commonMistakes: ['Wrong enzyme use', 'Forgetting ligase to seal', 'Missing selection process'],
+      tips: ['Restriction enzyme = molecular scissors', 'Same enzyme → compatible ends', 'Bacteria = protein factories']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'PCR and Gel Electrophoresis',
+    content: {
+      title: 'PCR and Gel Electrophoresis',
+      intro: 'PCR amplifies DNA. Gel electrophoresis separates DNA fragments by size.',
+      keyPoints: ['PCR: 3 steps (denature, anneal, extend)', 'Taq polymerase: heat-stable', 'Exponential amplification', 'Gel electrophoresis: DNA moves toward positive', 'Smaller fragments move farther', 'DNA ladder for size comparison', 'Visualize with UV and dye'],
+      examples: ['PCR: 1 DNA → millions in hours', 'Gel: smallest band traveled farthest', 'Used in forensics, paternity tests'],
+      commonMistakes: ['Wrong PCR temperature', 'Reading gel backwards', 'Confusing + and - poles'],
+      tips: ['PCR cycles: 94°C → 55°C → 72°C', 'Small DNA = far migration', 'DNA negative, moves to positive']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'CRISPR and Gene Editing',
+    content: {
+      title: 'CRISPR and Gene Editing',
+      intro: 'Revolutionary gene editing technology. Precise, efficient, and versatile.',
+      keyPoints: ['CRISPR: Clustered Regularly Interspaced Short Palindromic Repeats', 'Cas9: enzyme that cuts DNA', 'Guide RNA directs Cas9 to target', 'Can knockout, insert, or modify genes', 'Applications: disease treatment, agriculture', 'Ethical concerns about germline editing'],
+      examples: ['Cure genetic diseases', 'Create disease-resistant crops', 'Edit mosquitoes to prevent malaria'],
+      commonMistakes: ['Thinking it\'s 100% accurate', 'Missing off-target effects', 'Ignoring ethical issues'],
+      tips: ['Guide RNA = GPS for Cas9', 'More precise than older methods', 'Powerful but raises ethical questions']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Genomics and Bioinformatics',
+    content: {
+      title: 'Genomics and Bioinformatics',
+      intro: 'Study of entire genomes using computational tools. Big data analysis in biology.',
+      keyPoints: ['Genomics: study complete DNA sequence', 'Human genome ~3 billion base pairs', 'Comparative genomics reveals evolution', 'Bioinformatics: computational analysis', 'BLAST: compare sequences', 'Applications: personalized medicine, evolutionary studies'],
+      examples: ['Human Genome Project completed 2003', 'Compare human and chimp genomes (98% similar)', 'Identify disease genes'],
+      commonMistakes: ['Confusing genomics and genetics', 'Underestimating computational needs', 'Missing non-coding DNA importance'],
+      tips: ['Genomics = whole genome', 'Bioinformatics = computers + biology', 'Most DNA is non-coding']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Hardy-Weinberg Equilibrium',
+    content: {
+      title: 'Hardy-Weinberg Equilibrium',
+      intro: 'Model for non-evolving populations. Allele frequencies stay constant under specific conditions.',
+      keyPoints: ['p + q = 1 (allele frequencies)', 'p² + 2pq + q² = 1 (genotype frequencies)', '5 conditions: large population, no mutations, random mating, no selection, no gene flow', 'If conditions violated → evolution occurs', 'Use to calculate carrier frequencies'],
+      examples: ['p = 0.7, q = 0.3: p² = 0.49 (AA), 2pq = 0.42 (Aa), q² = 0.09 (aa)', 'Deviation indicates evolution'],
+      commonMistakes: ['Using when evolution occurring', 'Wrong formula application', 'Confusing p and q'],
+      tips: ['Equilibrium = no evolution', 'p² = homozygous dominant, 2pq = heterozygous, q² = homozygous recessive', 'Real populations rarely meet all conditions']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Natural Selection and Microevolution',
+    content: {
+      title: 'Natural Selection and Microevolution',
+      intro: 'Mechanism of evolution. Differential survival and reproduction based on traits.',
+      keyPoints: ['Variation exists in populations', 'Heritable traits', 'More offspring than can survive', 'Differential survival (fitness)', 'Types: directional, stabilizing, disruptive', 'Microevolution: change in allele frequencies'],
+      examples: ['Directional: antibiotic resistance', 'Stabilizing: human birth weight', 'Disruptive: beak sizes in varying environments'],
+      commonMistakes: ['Thinking individuals evolve', 'Confusing fitness with strength', 'Missing heritability requirement'],
+      tips: ['Populations evolve, not individuals', 'Fitness = reproductive success', 'Variation + heritability + selection = evolution']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Phylogenetic Trees and Cladograms',
+    content: {
+      title: 'Phylogenetic Trees and Cladograms',
+      intro: 'Visual representation of evolutionary relationships. Based on shared derived characteristics.',
+      keyPoints: ['Phylogenetic tree shows evolutionary history', 'Cladogram focuses on branching patterns', 'Branch points: common ancestors', 'Clades: ancestor + all descendants', 'Derived characters: evolutionary innovations', 'Outgroup for comparison'],
+      examples: ['Mammals form monophyletic clade', 'Hair is derived character for mammals', 'Reading trees: tips = current species'],
+      commonMistakes: ['Reading tree like ladder', 'Thinking proximity = similarity', 'Missing that branch lengths may vary'],
+      tips: ['Rotate at nodes without changing meaning', 'Closer common ancestor = more closely related', 'Tips are present, nodes are past']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Origin of Life Theories',
+    content: {
+      title: 'Origin of Life Theories',
+      intro: 'How life began on Earth. From chemicals to cells.',
+      keyPoints: ['Abiotic synthesis of organic molecules', 'Miller-Urey experiment: amino acids from inorganic', 'RNA world hypothesis: RNA before DNA', 'Protocells: membrane-bound droplets', 'Self-replicating molecules key', 'Fossil evidence: 3.5 billion years old'],
+      examples: ['Miller-Urey: lightning + primordial atmosphere → organic compounds', 'RNA can catalyze and store info', 'Stromatolites: ancient bacterial mats'],
+      commonMistakes: ['Confusing with evolution of species', 'Missing chemical evolution first', 'Wrong timeline'],
+      tips: ['Abiotic → organic → RNA → DNA → cells', 'RNA world: RNA came first', 'Long process over millions of years']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Population Growth Models',
+    content: {
+      title: 'Population Growth Models',
+      intro: 'Exponential vs logistic growth. Carrying capacity limits population size.',
+      keyPoints: ['Exponential: J-shaped curve, unlimited resources', 'Logistic: S-shaped curve, limited resources', 'Carrying capacity (K): maximum sustainable population', 'r: intrinsic growth rate', 'Density-dependent factors: competition, predation, disease', 'Density-independent: weather, natural disasters'],
+      examples: ['Bacteria with unlimited food: exponential', 'Deer population reaches carrying capacity: logistic', 'K = 1000 → population stabilizes at 1000'],
+      commonMistakes: ['Thinking real populations grow exponentially forever', 'Confusing r and K strategies', 'Missing limiting factors'],
+      tips: ['Exponential = ideal conditions (rare)', 'Logistic = realistic', 'K = carrying capacity']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Community Ecology and Species Interactions',
+    content: {
+      title: 'Community Ecology and Species Interactions',
+      intro: 'How species interact in communities. Competition, predation, mutualism, and more.',
+      keyPoints: ['Competition: both harmed (-/-)', 'Predation: one benefits, one harmed (+/-)', 'Mutualism: both benefit (+/+)', 'Commensalism: one benefits, other neutral (+/0)', 'Parasitism: one benefits at expense of other (+/-)', 'Competitive exclusion principle', 'Resource partitioning reduces competition'],
+      examples: ['Mutualism: bees and flowers', 'Predation: lion and zebra', 'Parasitism: tapeworm in host'],
+      commonMistakes: ['Confusing interaction types', 'Missing that relationships can change', 'Forgetting indirect effects'],
+      tips: ['Competition = struggle for resources', 'Mutualism = win-win', 'Symbiosis = living together']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Succession and Ecosystem Changes',
+    content: {
+      title: 'Succession and Ecosystem Changes',
+      intro: 'Progressive changes in community composition over time. Primary and secondary succession.',
+      keyPoints: ['Primary succession: starts with bare rock', 'Pioneer species: lichens, mosses', 'Secondary succession: after disturbance (soil remains)', 'Faster than primary', 'Climax community: stable endpoint', 'Disturbances reset succession'],
+      examples: ['Primary: glacier retreats → bare rock → lichens → grasses → forest', 'Secondary: forest fire → grasses return quickly → shrubs → trees'],
+      commonMistakes: ['Confusing primary and secondary', 'Thinking climax never changes', 'Missing pioneer species role'],
+      tips: ['Primary = no soil initially', 'Secondary = soil present', 'Pioneer species = first colonizers']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Animal Behavior and Ethology',
+    content: {
+      title: 'Animal Behavior and Ethology',
+      intro: 'Study of animal behavior. Innate vs learned behaviors, communication, and social structures.',
+      keyPoints: ['Innate: genetically programmed (instinct)', 'Learned: modified by experience', 'Imprinting: critical period learning', 'Classical conditioning: association', 'Operant conditioning: trial and error', 'Altruism: helping others', 'Kin selection explains altruism'],
+      examples: ['Innate: spider web building', 'Imprinting: goslings follow first moving object', 'Altruism: warning calls (help kin)'],
+      commonMistakes: ['Thinking all behavior learned', 'Missing genetic component', 'Confusing conditioning types'],
+      tips: ['Innate = born with it', 'Learned = acquired', 'Kin selection = help relatives']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Immune System Response',
+    content: {
+      title: 'Immune System Response',
+      intro: 'Body\'s defense against pathogens. Innate and adaptive immunity.',
+      keyPoints: ['Innate: first line, non-specific (skin, phagocytes)', 'Adaptive: specific, has memory (B and T cells)', 'B cells: produce antibodies (humoral)', 'T cells: cell-mediated immunity', 'Memory cells enable faster secondary response', 'Vaccines stimulate memory cells'],
+      examples: ['Innate: inflammation response', 'Adaptive: antibodies against flu', 'Vaccine → memory cells → fast response on reinfection'],
+      commonMistakes: ['Confusing humoral and cell-mediated', 'Missing memory component', 'Thinking innate and adaptive separate'],
+      tips: ['Innate = fast, non-specific', 'Adaptive = slow first time, specific, memory', 'B = antibody, T = cell attack']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Nervous System Structure and Function',
+    content: {
+      title: 'Nervous System Structure and Function',
+      intro: 'Electrical signaling in neurons. Action potentials and synaptic transmission.',
+      keyPoints: ['Neuron: cell body, dendrites, axon', 'Resting potential: -70mV (Na⁺ out, K⁺ in)', 'Action potential: rapid depolarization then repolarization', 'All-or-none response', 'Synapse: chemical or electrical', 'Neurotransmitters cross synaptic cleft', 'CNS: brain and spinal cord', 'PNS: sensory and motor neurons'],
+      examples: ['Action potential: Na⁺ in → depolarize → K⁺ out → repolarize', 'Synapse: neurotransmitter binds postsynaptic receptors', 'Reflex arc bypasses brain'],
+      commonMistakes: ['Confusing depolarization and repolarization', 'Wrong ion movement', 'Missing myelin role'],
+      tips: ['Resting = negative inside', 'Action potential = voltage spike', 'Myelin speeds transmission']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Biology',
+    topicName: 'Endocrine System and Hormones',
+    content: {
+      title: 'Endocrine System and Hormones',
+      intro: 'Chemical signaling through hormones. Slower but longer-lasting than nervous system.',
+      keyPoints: ['Endocrine glands secrete hormones into blood', 'Hormones bind specific receptors', 'Negative feedback most common', 'Hypothalamus-pituitary axis controls many', 'Steroid hormones: enter cell, affect transcription', 'Peptide hormones: bind surface, second messengers', 'Examples: insulin, growth hormone, thyroid hormone'],
+      examples: ['Insulin lowers blood glucose', 'Growth hormone stimulates growth', 'Negative feedback: high thyroid hormone inhibits TSH'],
+      commonMistakes: ['Confusing steroid and peptide mechanisms', 'Missing feedback loops', 'Wrong gland-hormone pairs'],
+      tips: ['Hormones = chemical messengers in blood', 'Negative feedback = homeostasis', 'Steroid inside, peptide surface']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Thermochemistry',
+    content: {
+      title: 'Thermochemistry',
+      intro: 'Heat energy in chemical reactions. Enthalpy, entropy, and free energy.',
+      keyPoints: ['Enthalpy (ΔH): heat change at constant pressure', 'Exothermic: ΔH negative (releases heat)', 'Endothermic: ΔH positive (absorbs heat)', 'Entropy (ΔS): disorder', 'Gibbs free energy: ΔG = ΔH - TΔS', 'ΔG < 0: spontaneous', 'Hess\'s law: add equations, add ΔH'],
+      examples: ['Combustion: exothermic (ΔH < 0)', 'Melting ice: endothermic (ΔH > 0)', 'ΔG negative → reaction spontaneous'],
+      commonMistakes: ['Wrong sign for ΔH', 'Confusing spontaneous and fast', 'Missing temperature role in ΔG'],
+      tips: ['Exo = exits (releases heat)', 'Endo = enters (absorbs heat)', 'Spontaneous ≠ fast']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Electrochemistry',
+    content: {
+      title: 'Electrochemistry',
+      intro: 'Redox reactions and electricity. Galvanic and electrolytic cells.',
+      keyPoints: ['Oxidation: lose electrons (LEO)', 'Reduction: gain electrons (GER)', 'Galvanic cell: spontaneous, generates electricity', 'Electrolytic cell: non-spontaneous, requires electricity', 'Anode: oxidation occurs', 'Cathode: reduction occurs', 'Standard reduction potential E°', 'E°cell = E°cathode - E°anode'],
+      examples: ['Galvanic: battery produces electricity', 'Electrolytic: electroplating uses electricity', 'Positive E°cell → spontaneous'],
+      commonMistakes: ['Confusing anode and cathode', 'Wrong sign for E°cell', 'Mixing up galvanic and electrolytic'],
+      tips: ['LEO says GER (lose e⁻ oxidation, gain e⁻ reduction)', 'AN OX (anode oxidation)', 'RED CAT (reduction cathode)']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Kinetics and Reaction Rates',
+    content: {
+      title: 'Kinetics and Reaction Rates',
+      intro: 'How fast reactions occur. Rate laws, reaction orders, and mechanisms.',
+      keyPoints: ['Rate = Δ[product]/Δt or -Δ[reactant]/Δt', 'Rate law: rate = k[A]ᵐ[B]ⁿ', 'k: rate constant', 'm, n: reaction orders (from experiment)', 'Collision theory: particles must collide with proper orientation and energy', 'Activation energy (Ea): minimum energy needed', 'Catalyst lowers Ea', 'Temperature increases rate'],
+      examples: ['Zero order: rate = k', 'First order: rate = k[A]', 'Second order: rate = k[A]²'],
+      commonMistakes: ['Using stoichiometry for rate law (NO!)', 'Confusing rate and k', 'Wrong units'],
+      tips: ['Rate law from experiment only', 'Catalyst ≠ consumed', 'Higher T → faster rate']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Forces and Newton\'s Laws',
+    content: {
+      title: 'Forces and Newton\'s Laws',
+      intro: 'Foundation of mechanics. Three laws govern motion.',
+      keyPoints: ['Newton 1: object at rest stays at rest, moving stays moving (inertia)', 'Newton 2: F = ma (force = mass × acceleration)', 'Newton 3: equal and opposite forces', 'Force is vector', 'Net force causes acceleration', 'Common forces: gravity, normal, friction, tension'],
+      examples: ['Book on table: weight down, normal up (balanced)', 'Push box: F = ma calculates acceleration', 'Action-reaction: push wall, wall pushes you'],
+      commonMistakes: ['Confusing mass and weight', 'Wrong free body diagram', 'Missing net force concept'],
+      tips: ['F = ma is THE equation', 'Draw free body diagram', 'Action-reaction on different objects']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Energy and Work',
+    content: {
+      title: 'Energy and Work',
+      intro: 'Work-energy theorem. Conservative and non-conservative forces.',
+      keyPoints: ['Work: W = Fd cos θ', 'Kinetic energy: KE = 1/2 mv²', 'Potential energy: PE = mgh (gravitational)', 'Work-energy theorem: W_net = ΔKE', 'Conservation of energy: E_total constant (if no friction)', 'Power: P = W/t'],
+      examples: ['Lift book: W = mgh', 'Moving object: KE increases', 'Roller coaster: PE ↔ KE conversion'],
+      commonMistakes: ['Forgetting cos θ in work', 'Wrong sign for work', 'Ignoring friction'],
+      tips: ['Work = force × distance (parallel component)', 'Energy conserved if no friction', 'Power = how fast work done']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Circular Motion and Gravitation',
+    content: {
+      title: 'Circular Motion and Gravitation',
+      intro: 'Objects moving in circles. Centripetal force and universal gravitation.',
+      keyPoints: ['Centripetal acceleration: a_c = v²/r', 'Centripetal force: F_c = mv²/r (toward center)', 'Period: T = 2πr/v', 'Universal gravitation: F = Gm₁m₂/r²', 'Orbital motion: gravity provides centripetal force', 'Satellites: v = √(GM/r)'],
+      examples: ['Car turning: friction provides F_c', 'Moon orbiting Earth: gravity = centripetal', 'Satellite speed depends on orbital radius'],
+      commonMistakes: ['Thinking centrifugal force exists', 'Wrong direction for F_c', 'Confusing period and frequency'],
+      tips: ['Centripetal = center-seeking', 'F_c always toward center', 'Gravity = centripetal for orbits']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Waves and Sound',
+    content: {
+      title: 'Waves and Sound',
+      intro: 'Mechanical waves transfer energy. Sound is longitudinal wave.',
+      keyPoints: ['Transverse: perpendicular motion (light, string)', 'Longitudinal: parallel motion (sound)', 'Wavelength λ: distance per cycle', 'Frequency f: cycles per second (Hz)', 'Wave equation: v = fλ', 'Sound speed ~340 m/s in air', 'Doppler effect: frequency shift with motion'],
+      examples: ['String wave: transverse', 'Sound wave: longitudinal compressions', 'Doppler: ambulance siren pitch changes'],
+      commonMistakes: ['Confusing transverse and longitudinal', 'Wrong wave equation', 'Missing medium requirement for sound'],
+      tips: ['v = fλ always', 'Sound needs medium (no sound in space)', 'Doppler: approaching = higher f']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Functions and Transformations',
+    content: {
+      title: 'Functions and Transformations',
+      intro: 'Function families and how to transform them. Parent functions and graph shifts.',
+      keyPoints: ['Function: each input has exactly one output', 'Parent functions: basic forms (linear, quadratic, cubic, etc.)', 'Vertical shift: f(x) + k (up k units)', 'Horizontal shift: f(x - h) (right h units)', 'Vertical stretch: a·f(x) (multiply y-values)', 'Reflection: -f(x) over x-axis, f(-x) over y-axis', 'Composition: (f∘g)(x) = f(g(x))'],
+      examples: ['f(x) = x² parent, f(x) + 3 shifts up 3', 'f(x - 2) shifts right 2', '2f(x) stretches vertically by 2'],
+      commonMistakes: ['Horizontal shift wrong direction (x-h goes right!)', 'Confusing stretch and shift', 'Order matters in composition'],
+      tips: ['Inside affects x (horizontal)', 'Outside affects y (vertical)', 'Opposite of what you think for horizontal']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Polynomial and Rational Functions',
+    content: {
+      title: 'Polynomial and Rational Functions',
+      intro: 'Higher degree polynomials and ratios of polynomials. Zeros, asymptotes, and behavior.',
+      keyPoints: ['Polynomial: sum of terms with non-negative integer exponents', 'Degree: highest exponent', 'End behavior determined by leading term', 'Rational function: P(x)/Q(x)', 'Vertical asymptotes: zeros of denominator', 'Horizontal asymptote: compare degrees', 'Holes: common factors cancel'],
+      examples: ['x³ - 2x²: degree 3, end behavior like x³', '(x-2)/(x+3): VA at x=-3, HA at y=0', 'Same degree: HA at ratio of leading coefficients'],
+      commonMistakes: ['Forgetting to factor completely', 'Missing holes vs asymptotes', 'Wrong horizontal asymptote rule'],
+      tips: ['Factor first!', 'Holes = cancel, VA = denominator zero', 'Degree determines end behavior']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Limits and Continuity',
+    content: {
+      title: 'Limits and Continuity',
+      intro: 'Introduction to calculus concepts. What happens as x approaches a value.',
+      keyPoints: ['Limit: value function approaches', 'lim(x→a) f(x) = L', 'Left-hand and right-hand limits must match', 'Continuous: no breaks, jumps, or holes', 'Three conditions for continuity at x=a: f(a) exists, limit exists, limit = f(a)', 'Indeterminate forms: 0/0, ∞/∞'],
+      examples: ['lim(x→2) x² = 4', 'lim(x→0) (sin x)/x = 1', 'Jump discontinuity: piecewise function'],
+      commonMistakes: ['Plugging in before checking form', 'Missing that limit can exist when function doesn\'t', 'Confusing limit with value'],
+      tips: ['Try direct substitution first', 'Factor to resolve 0/0', 'Continuous = can draw without lifting pencil']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Sequences and Series',
+    content: {
+      title: 'Sequences and Series',
+      intro: 'Ordered lists and their sums. Arithmetic and geometric patterns.',
+      keyPoints: ['Sequence: ordered list a₁, a₂, a₃, ...', 'Arithmetic: constant difference (aₙ = a₁ + (n-1)d)', 'Geometric: constant ratio (aₙ = a₁·rⁿ⁻¹)', 'Series: sum of sequence terms', 'Arithmetic sum: Sₙ = n(a₁ + aₙ)/2', 'Geometric sum: Sₙ = a₁(1-rⁿ)/(1-r)', 'Infinite geometric: S = a₁/(1-r) if |r| < 1'],
+      examples: ['Arithmetic: 2,5,8,11 (d=3)', 'Geometric: 3,6,12,24 (r=2)', 'Infinite: 1 + 1/2 + 1/4 + ... = 2'],
+      commonMistakes: ['Confusing arithmetic and geometric', 'Wrong formula', 'Infinite sum when |r| ≥ 1'],
+      tips: ['Arithmetic = add, geometric = multiply', 'Arithmetic sum = average × count', 'Infinite sum only if |r| < 1']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Parametric Equations',
+    content: {
+      title: 'Parametric Equations',
+      intro: 'Expressing x and y separately in terms of parameter t. Useful for motion and curves.',
+      keyPoints: ['x = f(t), y = g(t)', 't is parameter (often time)', 'Trace curve by varying t', 'Eliminate parameter to get Cartesian equation', 'Can represent non-functions', 'Direction matters', 'Velocity vector: (dx/dt, dy/dt)'],
+      examples: ['Circle: x = cos t, y = sin t', 'Line: x = 2 + 3t, y = 1 - t', 'Eliminate: x = t², y = t → y = √x'],
+      commonMistakes: ['Losing direction information', 'Wrong elimination', 'Missing domain restrictions'],
+      tips: ['t = time often', 'Can describe same curve multiple ways', 'Useful for motion problems']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Pre-Calculus',
+    topicName: 'Polar Coordinates',
+    content: {
+      title: 'Polar Coordinates',
+      intro: 'Alternative coordinate system using distance and angle. (r, θ) instead of (x, y).',
+      keyPoints: ['Polar: (r, θ) where r = distance, θ = angle', 'Convert to Cartesian: x = r cos θ, y = r sin θ', 'Convert from Cartesian: r² = x² + y², tan θ = y/x', 'Polar graphs: r = f(θ)', 'Common: circles, roses, spirals', 'Symmetric about different axes'],
+      examples: ['Circle: r = 4', 'Rose: r = 2 cos 3θ', 'Spiral: r = θ'],
+      commonMistakes: ['Wrong conversion formulas', 'Missing angle quadrant', 'Negative r confusion'],
+      tips: ['r can be negative', 'Many representations for same point', 'Beautiful symmetric curves']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Limits and Continuity',
+    content: {
+      title: 'Limits and Continuity',
+      intro: 'Formal foundation of calculus. Precise definition of limits and continuity.',
+      keyPoints: ['Limit: lim(x→a) f(x) = L', 'Epsilon-delta definition (conceptual)', 'One-sided limits: left and right', 'Infinite limits: approach ±∞', 'Limits at infinity: end behavior', 'Continuity: lim(x→a) f(x) = f(a)', 'IVT: continuous function takes all intermediate values'],
+      examples: ['lim(x→0) (sin x)/x = 1', 'lim(x→∞) 1/x = 0', 'f(x) = 1/x discontinuous at x=0'],
+      commonMistakes: ['Confusing limit and value', 'Not checking one-sided limits', 'Misapplying IVT'],
+      tips: ['Limit can exist when function doesn\'t', 'Check left = right for limit to exist', 'IVT guarantees solution exists']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Derivatives and Rules',
+    content: {
+      title: 'Derivatives and Rules',
+      intro: 'Instantaneous rate of change. Derivative rules and techniques.',
+      keyPoints: ['Derivative: f\'(x) = lim(h→0) [f(x+h) - f(x)]/h', 'Power rule: d/dx[xⁿ] = nxⁿ⁻¹', 'Product rule: (uv)\' = u\'v + uv\'', 'Quotient rule: (u/v)\' = (u\'v - uv\')/v²', 'Chain rule: d/dx[f(g(x))] = f\'(g(x))·g\'(x)', 'Derivative = slope of tangent = rate of change'],
+      examples: ['d/dx[x³] = 3x²', 'd/dx[x sin x] = sin x + x cos x', 'd/dx[sin(x²)] = cos(x²)·2x'],
+      commonMistakes: ['Forgetting chain rule', 'Wrong quotient rule', 'Missing product rule'],
+      tips: ['Power rule most common', 'Chain rule = outer × inner derivative', 'Product: first × derivative of second + second × derivative of first']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Applications of Derivatives',
+    content: {
+      title: 'Applications of Derivatives',
+      intro: 'Using derivatives to analyze functions and solve optimization problems.',
+      keyPoints: ['Critical points: f\'(x) = 0 or undefined', 'First derivative test: increasing/decreasing', 'Second derivative test: concavity', 'Max/min: check critical points and endpoints', 'Related rates: connect changing quantities', 'Optimization: maximize/minimize with constraints'],
+      examples: ['f\' > 0: increasing, f\' < 0: decreasing', 'f\'\' > 0: concave up (cup shape)', 'Maximize area with fixed perimeter'],
+      commonMistakes: ['Forgetting endpoints', 'Wrong concavity', 'Not checking if max or min'],
+      tips: ['Sketch sign chart for f\'', 'Inflection point: f\'\' changes sign', 'Related rates: implicit differentiation with respect to time']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Definite and Indefinite Integrals',
+    content: {
+      title: 'Integrals: Definite and Indefinite',
+      intro: 'Antiderivatives and area under curves. Reverse of differentiation.',
+      keyPoints: ['Indefinite: ∫f(x)dx = F(x) + C', 'Definite: ∫ₐᵇ f(x)dx = area under curve', 'Power rule: ∫xⁿdx = xⁿ⁺¹/(n+1) + C', 'u-substitution: change of variable', 'Definite integral: F(b) - F(a)', 'Riemann sums approximate area'],
+      examples: ['∫x²dx = x³/3 + C', '∫₀¹ x²dx = 1/3', '∫sin x dx = -cos x + C'],
+      commonMistakes: ['Forgetting +C for indefinite', 'Wrong limits after substitution', 'Sign errors'],
+      tips: ['Integration harder than differentiation', 'Check by differentiating', 'u-substitution when composition present']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Fundamental Theorem of Calculus',
+    content: {
+      title: 'Fundamental Theorem of Calculus',
+      intro: 'Connects differentiation and integration. Two parts link derivatives and integrals.',
+      keyPoints: ['FTC Part 1: d/dx[∫ₐˣ f(t)dt] = f(x)', 'FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Integration and differentiation are inverses', 'Accumulation function', 'Net change theorem'],
+      examples: ['d/dx[∫₀ˣ t²dt] = x²', '∫₁³ 2x dx = [x²]₁³ = 9 - 1 = 8'],
+      commonMistakes: ['Confusing the two parts', 'Wrong variable in Part 1', 'Forgetting chain rule in Part 1'],
+      tips: ['Part 1: derivative of integral = original function', 'Part 2: evaluate antiderivative at bounds', 'Most important theorem in calculus']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'AP Calculus AB',
+    topicName: 'Applications of Integrals',
+    content: {
+      title: 'Applications of Integrals',
+      intro: 'Using integrals to find areas, volumes, and other quantities.',
+      keyPoints: ['Area between curves: ∫[f(x) - g(x)]dx', 'Volume by disks: π∫R²dx', 'Volume by washers: π∫(R² - r²)dx', 'Volume by shells: 2π∫rh dx', 'Average value: (1/(b-a))∫ₐᵇ f(x)dx', 'Accumulation and net change'],
+      examples: ['Area between y=x² and y=x: ∫₀¹(x - x²)dx', 'Disk: rotate y=x² around x-axis', 'Average value of sin x on [0,π] = 2/π'],
+      commonMistakes: ['Wrong function on top', 'Forgetting π in volume', 'Wrong radius for shells'],
+      tips: ['Sketch region first', 'Top - bottom for area', 'Disk vs shell: choose easier setup']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Discrete Mathematics',
+    topicName: 'Logic and Proofs',
+    content: {
+      title: 'Logic and Proofs',
+      intro: 'Mathematical reasoning and proof techniques. Foundation of rigorous mathematics.',
+      keyPoints: ['Statements: true or false', 'Connectives: AND, OR, NOT, implies, if and only if', 'Truth tables verify logical equivalence', 'Proof techniques: direct, contrapositive, contradiction, induction', 'Quantifiers: ∀ (for all), ∃ (there exists)', 'Negation rules'],
+      examples: ['Direct: prove "if n even, then n² even"', 'Contradiction: prove √2 irrational', 'Induction: prove sum formula'],
+      commonMistakes: ['Confusing converse and contrapositive', 'Wrong negation of quantifiers', 'Assuming what you want to prove'],
+      tips: ['Contrapositive logically equivalent to original', 'Contradiction: assume opposite, find contradiction', 'Induction: base case + inductive step']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Discrete Mathematics',
+    topicName: 'Set Theory',
+    content: {
+      title: 'Set Theory',
+      intro: 'Collections of objects. Foundation for modern mathematics.',
+      keyPoints: ['Set: collection of distinct objects', 'Element: x ∈ A (x in A)', 'Subset: A ⊆ B (all elements of A in B)', 'Union: A ∪ B (in A or B)', 'Intersection: A ∩ B (in both)', 'Complement: Aᶜ (not in A)', 'Empty set: ∅', 'Cardinality: |A| = number of elements'],
+      examples: ['A = {1,2,3}, B = {2,3,4}: A ∪ B = {1,2,3,4}', 'A ∩ B = {2,3}', '|A| = 3'],
+      commonMistakes: ['Confusing ∈ and ⊆', 'Wrong set operations', 'Forgetting empty set'],
+      tips: ['Venn diagrams help visualize', 'Union = or, intersection = and', 'De Morgan\'s laws for complements']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Discrete Mathematics',
+    topicName: 'Combinatorics',
+    content: {
+      title: 'Combinatorics',
+      intro: 'Counting techniques. Permutations, combinations, and principles.',
+      keyPoints: ['Multiplication principle: if m ways then n ways, total m×n', 'Permutation: order matters, P(n,r) = n!/(n-r)!', 'Combination: order doesn\'t matter, C(n,r) = n!/[r!(n-r)!]', 'Binomial coefficient: ⁿCᵣ', 'Pigeonhole principle: n+1 objects in n holes → at least 2 in one hole'],
+      examples: ['Arrange 5 books: 5! = 120', 'Choose 3 from 5: C(5,3) = 10', 'Lock with 3 digits: 10³ = 1000'],
+      commonMistakes: ['Using permutation when should use combination', 'Forgetting to divide by r!', 'Overcounting'],
+      tips: ['Order matters → permutation', 'Order doesn\'t matter → combination', 'Draw tree diagram for small cases']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Discrete Mathematics',
+    topicName: 'Graph Theory',
+    content: {
+      title: 'Graph Theory',
+      intro: 'Networks of vertices and edges. Applications in computer science and optimization.',
+      keyPoints: ['Graph: vertices (nodes) connected by edges', 'Degree: number of edges at vertex', 'Path: sequence of edges', 'Cycle: path that returns to start', 'Connected: path exists between any two vertices', 'Tree: connected graph with no cycles', 'Euler path: use each edge exactly once', 'Hamiltonian path: visit each vertex exactly once'],
+      examples: ['Complete graph K₅: all vertices connected', 'Tree with n vertices has n-1 edges', 'Seven bridges of Königsberg: no Euler path'],
+      commonMistakes: ['Confusing Euler and Hamiltonian', 'Wrong degree sum', 'Missing disconnected components'],
+      tips: ['Euler path: all degrees even (or exactly 2 odd)', 'Tree = connected + no cycles', 'Handshaking lemma: sum of degrees = 2×edges']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Discrete Mathematics',
+    topicName: 'Number Theory',
+    content: {
+      title: 'Number Theory',
+      intro: 'Properties of integers. Divisibility, primes, and modular arithmetic.',
+      keyPoints: ['Divisibility: a|b means a divides b', 'Prime: only divisible by 1 and itself', 'GCD and LCM', 'Fundamental theorem: unique prime factorization', 'Modular arithmetic: a ≡ b (mod n)', 'Congruence properties', 'Fermat\'s little theorem'],
+      examples: ['12 ≡ 2 (mod 5)', 'gcd(12,18) = 6', '7 is prime'],
+      commonMistakes: ['Thinking 1 is prime', 'Wrong modular arithmetic', 'Confusing GCD and LCM'],
+      tips: ['Prime factorization helps find GCD/LCM', 'Clock arithmetic = modular arithmetic', 'Euclidean algorithm finds GCD efficiently']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Discrete Mathematics',
+    topicName: 'Algorithms',
+    content: {
+      title: 'Algorithms',
+      intro: 'Step-by-step procedures. Efficiency and complexity analysis.',
+      keyPoints: ['Algorithm: finite sequence of steps', 'Input and output', 'Correctness: produces right answer', 'Efficiency: time and space complexity', 'Big-O notation: O(n), O(n²), O(log n)', 'Sorting: bubble, merge, quick', 'Searching: linear, binary', 'Recursion vs iteration'],
+      examples: ['Binary search: O(log n)', 'Bubble sort: O(n²)', 'Merge sort: O(n log n)'],
+      commonMistakes: ['Confusing worst and average case', 'Wrong complexity analysis', 'Infinite recursion'],
+      tips: ['O(1) = constant, O(n) = linear, O(n²) = quadratic', 'Binary search requires sorted data', 'Recursion needs base case']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Stoichiometry',
+    content: {
+      title: 'Stoichiometry',
+      intro: 'Quantitative relationships in chemical reactions. Mole ratios and mass calculations.',
+      keyPoints: ['Mole: 6.02 × 10²³ particles (Avogadro\'s number)', 'Molar mass: grams per mole', 'Balanced equation shows mole ratios', 'mol A × (mol B / mol A) = mol B', 'Mass → moles → moles → mass', 'Limiting reactant: runs out first', 'Percent yield: (actual/theoretical) × 100%'],
+      examples: ['2H₂ + O₂ → 2H₂O: 2 mol H₂ per 1 mol O₂', 'If 4g H₂ and 32g O₂: O₂ is excess', 'Limiting reactant determines product amount'],
+      commonMistakes: ['Using mass ratios instead of mole ratios', 'Not balancing equation first', 'Wrong limiting reactant'],
+      tips: ['Always work in moles', 'Balance equation first!', 'Limiting reactant = smallest mol/coefficient ratio']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Gas Laws',
+    content: {
+      title: 'Gas Laws',
+      intro: 'Behavior of gases under different conditions. Pressure, volume, temperature relationships.',
+      keyPoints: ['Ideal gas law: PV = nRT', 'Boyle: P₁V₁ = P₂V₂ (constant T, n)', 'Charles: V₁/T₁ = V₂/T₂ (constant P, n)', 'Gay-Lussac: P₁/T₁ = P₂/T₂ (constant V, n)', 'Combined: (P₁V₁)/T₁ = (P₂V₂)/T₂', 'STP: 0°C (273K), 1 atm, 22.4 L/mol', 'Dalton: P_total = P₁ + P₂ + ...'],
+      examples: ['Double volume at constant T → pressure halves', '2 atm, 3L, 300K with n=0.2 mol: check PV=nRT', 'Partial pressure: χ × P_total'],
+      commonMistakes: ['Forgetting to convert to Kelvin', 'Wrong R value', 'Not matching units'],
+      tips: ['T must be in Kelvin!', 'R = 0.0821 L·atm/mol·K', 'Ideal gas approximation (works best high T, low P)']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Solutions and Molarity',
+    content: {
+      title: 'Solutions and Molarity',
+      intro: 'Homogeneous mixtures and concentration. Mol solute per liter solution.',
+      keyPoints: ['Molarity (M): mol solute / L solution', 'Dilution: M₁V₁ = M₂V₂', 'Solubility: max amount dissolved at given T', 'Saturated: max dissolved, unsaturated: more can dissolve', 'Factors: temperature, pressure (gases)', 'Electrolytes dissociate, nonelectrolytes don\'t'],
+      examples: ['2 mol NaCl in 1 L water: 2 M', 'Dilute 10 mL of 6M to 60 mL: M₂ = 1 M', 'NaCl → Na⁺ + Cl⁻ (strong electrolyte)'],
+      commonMistakes: ['Using volume solute instead of solution', 'Forgetting dissociation', 'Wrong dilution formula'],
+      tips: ['M = mol/L', 'Dilution: concentrated × volume = dilute × volume', 'Strong electrolytes fully dissociate']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Chemistry',
+    topicName: 'Atomic Structure and Electron Configuration',
+    content: {
+      title: 'Atomic Structure',
+      intro: 'Electrons in atoms. Energy levels, orbitals, and electron configuration.',
+      keyPoints: ['Quantum numbers: n (shell), l (subshell), ml, ms', 'Aufbau: fill lowest energy first', 'Hund\'s rule: spread out in subshell before pairing', 'Pauli: max 2 electrons per orbital (opposite spins)', 'Orbital order: 1s 2s 2p 3s 3p 4s 3d 4p...', 'Valence electrons: outermost shell'],
+      examples: ['C (Z=6): 1s² 2s² 2p²', 'Fe (Z=26): [Ar] 4s² 3d⁶', 'Noble gas shorthand: use previous noble gas'],
+      commonMistakes: ['Wrong orbital filling order', 'Forgetting Hund\'s rule', 'Ions: remove from highest n first'],
+      tips: ['Aufbau = building up', 'Use periodic table as guide', 'Valence electrons determine chemistry']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Momentum and Collisions',
+    content: {
+      title: 'Momentum and Collisions',
+      intro: 'Conservation of momentum. Elastic and inelastic collisions.',
+      keyPoints: ['Momentum: p = mv (vector)', 'Impulse: J = Δp = FΔt', 'Conservation: total p before = total p after (isolated system)', 'Elastic: KE conserved', 'Inelastic: KE not conserved', 'Perfectly inelastic: objects stick together'],
+      examples: ['2 kg at 3 m/s: p = 6 kg·m/s', 'Elastic: billiard balls bounce', 'Inelastic: car crash, objects stick'],
+      commonMistakes: ['Forgetting vector nature', 'Thinking KE always conserved', 'Wrong sign for opposite directions'],
+      tips: ['Momentum always conserved (if isolated)', 'KE conserved only in elastic', 'Impulse = area under F-t graph']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 1',
+    topicName: 'Simple Harmonic Motion',
+    content: {
+      title: 'Simple Harmonic Motion',
+      intro: 'Oscillatory motion with restoring force proportional to displacement. Springs and pendulums.',
+      keyPoints: ['Restoring force: F = -kx (Hooke\'s law)', 'Period: T = 2π√(m/k) for spring', 'T = 2π√(L/g) for pendulum', 'Frequency: f = 1/T', 'Energy oscillates: PE ↔ KE', 'Amplitude: maximum displacement'],
+      examples: ['Spring k=100 N/m, m=1kg: T = 2π√(1/100) ≈ 0.63 s', 'Pendulum L=1m: T = 2π√(1/9.8) ≈ 2 s', 'At equilibrium: max KE, zero PE'],
+      commonMistakes: ['Confusing period and frequency', 'Thinking amplitude affects period (doesn\'t!)', 'Wrong formula for pendulum vs spring'],
+      tips: ['Period independent of amplitude (small angles)', 'Spring: mass matters, pendulum: length matters', 'Energy constant, just transforms']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 2',
+    topicName: 'Fluid Mechanics',
+    content: {
+      title: 'Fluid Mechanics',
+      intro: 'Behavior of fluids at rest and in motion. Pressure, buoyancy, and flow.',
+      keyPoints: ['Pressure: P = F/A', 'Depth pressure: P = P₀ + ρgh', 'Buoyancy: F_b = ρ_fluid V_displaced g', 'Archimedes: buoyant force = weight of fluid displaced', 'Continuity: A₁v₁ = A₂v₂ (flow rate constant)', 'Bernoulli: P + ½ρv² + ρgh = constant'],
+      examples: ['Underwater 10m: P = 1 atm + ρgh ≈ 2 atm', 'Object floats if ρ_object < ρ_fluid', 'Narrow pipe: faster flow'],
+      commonMistakes: ['Forgetting ρ in pressure formula', 'Wrong buoyancy direction (upward!)', 'Bernoulli only for streamline flow'],
+      tips: ['Pressure increases with depth', 'Buoyant force = weight of displaced fluid', 'Fast flow = low pressure (Bernoulli)']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 2',
+    topicName: 'Thermodynamics',
+    content: {
+      title: 'Thermodynamics',
+      intro: 'Heat, work, and energy transformations. Laws governing thermal processes.',
+      keyPoints: ['First law: ΔU = Q - W (energy conservation)', 'Q: heat added to system', 'W: work done by system', 'Second law: entropy increases', 'Heat engines: convert heat to work', 'Efficiency: η = W/Q_h = 1 - Q_c/Q_h', 'Carnot: maximum theoretical efficiency'],
+      examples: ['Add 100J heat, system does 60J work: ΔU = 40J', 'Refrigerator: moves heat from cold to hot', 'No engine can be 100% efficient'],
+      commonMistakes: ['Wrong sign for Q or W', 'Confusing Q and U', 'Thinking perfect efficiency possible'],
+      tips: ['ΔU = internal energy change', 'W positive when system does work', 'Second law: can\'t have perfect engine']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'AP Physics 2',
+    topicName: 'Modern Physics',
+    content: {
+      title: 'Modern Physics',
+      intro: 'Quantum mechanics and relativity basics. Photons, atoms, and nuclear physics.',
+      keyPoints: ['Photon energy: E = hf = hc/λ', 'Photoelectric effect: light as particles', 'De Broglie: λ = h/p (matter waves)', 'Bohr model: quantized energy levels', 'E = mc² (mass-energy equivalence)', 'Nuclear: fission and fusion', 'Radioactive decay: exponential'],
+      examples: ['Blue light (450nm): E = hc/λ ≈ 2.76 eV', 'Electron wavelength ≈ 10⁻¹⁰ m', 'Uranium fission releases energy'],
+      commonMistakes: ['Using wrong energy formula', 'Confusing fission and fusion', 'Missing wave-particle duality'],
+      tips: ['h = 6.63 × 10⁻³⁴ J·s', 'Photon: particle of light', 'All matter has wave nature']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Atomic Structure',
+    content: {
+      title: 'Atomic Structure',
+      intro: 'Building blocks of matter. Protons, neutrons, electrons, and atomic organization.',
+      keyPoints: ['Atom: smallest unit of element', 'Nucleus: protons + neutrons', 'Electrons: orbit nucleus in shells', 'Proton: +1 charge, mass ≈1 amu', 'Neutron: 0 charge, mass ≈1 amu', 'Electron: -1 charge, negligible mass', 'Atomic number Z = # protons', 'Mass number A = protons + neutrons'],
+      examples: ['Carbon: 6 protons, 6 neutrons, 6 electrons', 'Atomic # = identity of element', 'Neutral atom: protons = electrons'],
+      commonMistakes: ['Confusing atomic # and mass #', 'Thinking electrons have significant mass', 'Wrong particle locations'],
+      tips: ['Atomic # defines element', 'Mass mostly from nucleus', 'Electrons determine chemistry']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Periodic Table Trends',
+    content: {
+      title: 'Periodic Table Trends',
+      intro: 'Patterns in element properties. Atomic radius, ionization energy, and electronegativity.',
+      keyPoints: ['Atomic radius: decreases left→right, increases top→bottom', 'Ionization energy: increases left→right, decreases top→bottom', 'Electronegativity: increases left→right, decreases top→bottom', 'Metals: left side, nonmetals: right side', 'Periods: horizontal rows', 'Groups/Families: vertical columns'],
+      examples: ['F most electronegative', 'Fr largest atomic radius', 'He highest ionization energy'],
+      commonMistakes: ['Backwards trends', 'Forgetting noble gases', 'Confusing radius and ionization'],
+      tips: ['Right & up = more pull on electrons', 'Effective nuclear charge explains trends', 'Noble gases: full shells']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Chemical Bonding',
+    content: {
+      title: 'Chemical Bonding',
+      intro: 'How atoms connect. Ionic, covalent, and metallic bonds.',
+      keyPoints: ['Ionic: transfer electrons (metal + nonmetal)', 'Covalent: share electrons (nonmetal + nonmetal)', 'Metallic: sea of electrons (metal + metal)', 'Ionic: electrostatic attraction', 'Covalent: shared pairs', 'Polar vs nonpolar covalent', 'Bond strength: triple > double > single'],
+      examples: ['NaCl: ionic (Na⁺ + Cl⁻)', 'H₂O: polar covalent', 'O₂: nonpolar covalent (equal sharing)'],
+      commonMistakes: ['Thinking all bonds either 100% ionic or covalent', 'Wrong bond type', 'Missing polarity'],
+      tips: ['Electronegativity difference determines type', 'Ionic: big ΔEN', 'Covalent: small ΔEN']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Stoichiometry',
+    content: {
+      title: 'Stoichiometry',
+      intro: 'Quantitative relationships in reactions. Mole conversions and calculations.',
+      keyPoints: ['Mole: 6.02×10²³ particles', 'Molar mass: g/mol', 'Balanced equation → mole ratios', 'Limiting reactant limits product', 'Excess reactant left over', 'Theoretical vs actual yield', 'Percent yield = (actual/theoretical) × 100%'],
+      examples: ['2H₂ + O₂ → 2H₂O: 2:1:2 ratio', '4g H₂ needs 32g O₂', 'Limiting reactant determines max product'],
+      commonMistakes: ['Using mass ratios directly', 'Not balancing first', 'Wrong limiting reactant'],
+      tips: ['Always moles for stoichiometry', 'Balance equation first', 'Limiting = runs out']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'States of Matter',
+    content: {
+      title: 'States of Matter',
+      intro: 'Solid, liquid, gas, and plasma. Phase changes and energy.',
+      keyPoints: ['Solid: fixed shape and volume', 'Liquid: fixed volume, shape of container', 'Gas: neither fixed', 'Plasma: ionized gas', 'Melting/freezing: solid ↔ liquid', 'Vaporization/condensation: liquid ↔ gas', 'Sublimation: solid → gas', 'Deposition: gas → solid'],
+      examples: ['Ice melts at 0°C', 'Water boils at 100°C (1 atm)', 'Dry ice sublimates'],
+      commonMistakes: ['Confusing evaporation and boiling', 'Missing energy in phase changes', 'Wrong phase change names'],
+      tips: ['Energy absorbed: solid→liquid→gas', 'Temperature constant during phase change', 'Intermolecular forces determine state']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Solutions and Concentration',
+    content: {
+      title: 'Solutions and Concentration',
+      intro: 'Homogeneous mixtures. Molarity, dilutions, and solubility.',
+      keyPoints: ['Solution: solute dissolved in solvent', 'Molarity M = mol/L', 'Dilution: M₁V₁ = M₂V₂', 'Saturated: maximum dissolved', 'Solubility increases with T (most solids)', 'Solubility decreases with T (gases)', 'Like dissolves like'],
+      examples: ['1 mol NaCl in 1L water: 1M', 'Dilute 100mL of 2M to 200mL: 1M', 'Sugar dissolves in water (both polar)'],
+      commonMistakes: ['Volume of solute vs solution', 'Wrong dilution', 'Backwards temperature effect'],
+      tips: ['M = moles per liter solution', 'Diluting decreases concentration', 'Polar dissolves polar, nonpolar dissolves nonpolar']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Acids and Bases',
+    content: {
+      title: 'Acids and Bases',
+      intro: 'pH scale and acid-base chemistry. Definitions and neutralization.',
+      keyPoints: ['Acid: H⁺ donor, pH < 7', 'Base: H⁺ acceptor (or OH⁻ donor), pH > 7', 'pH = -log[H⁺]', 'pH + pOH = 14', 'Neutralization: acid + base → salt + water', 'Strong acids/bases fully dissociate', 'Weak partially dissociate'],
+      examples: ['HCl: strong acid', 'NaOH: strong base', 'pH 3: acidic, pH 11: basic'],
+      commonMistakes: ['pH backwards (low = acidic)', 'Confusing strong and concentrated', 'Wrong neutralization products'],
+      tips: ['pH 7 = neutral', 'Lower pH = more acidic', 'Strong completely dissociates']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Matter: Elements, Compounds, Mixtures',
+    content: {
+      title: 'Classification of Matter',
+      intro: 'Pure substances vs mixtures. Elements, compounds, and mixture types.',
+      keyPoints: ['Element: one type of atom', 'Compound: chemically bonded elements', 'Mixture: physically combined', 'Homogeneous mixture: uniform (solution)', 'Heterogeneous mixture: non-uniform', 'Pure substance: element or compound', 'Mixture: can be separated physically'],
+      examples: ['Element: O₂, Au', 'Compound: H₂O, NaCl', 'Mixture: air, saltwater'],
+      commonMistakes: ['Confusing compound and mixture', 'Thinking mixtures are pure', 'Wrong separation method'],
+      tips: ['Compound = chemical bond', 'Mixture = physical combination', 'Elements cannot be broken down chemically']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Physical vs Chemical Changes',
+    content: {
+      title: 'Physical vs Chemical Changes',
+      intro: 'Distinguishing types of changes. Identity vs appearance.',
+      keyPoints: ['Physical: no new substance (state, shape, size)', 'Chemical: new substance formed', 'Physical: reversible often', 'Chemical: not easily reversed', 'Signs of chemical: color change, gas produced, temperature change, precipitate', 'Energy involved in both'],
+      examples: ['Physical: ice melting, paper tearing', 'Chemical: burning wood, rusting iron', 'Cooking egg: chemical'],
+      commonMistakes: ['Dissolving as chemical (it\'s physical)', 'Phase changes as chemical', 'Missing identity change'],
+      tips: ['New substance = chemical', 'Only appearance = physical', 'Chemical bonds broken/formed = chemical']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Atoms: Protons, Neutrons, Electrons',
+    content: {
+      title: 'Subatomic Particles',
+      intro: 'Components of atoms. Charge, mass, and location of particles.',
+      keyPoints: ['Proton: +1, 1 amu, nucleus', 'Neutron: 0, 1 amu, nucleus', 'Electron: -1, ~0 amu, shells/orbitals', 'Atomic # = protons', 'Mass # = protons + neutrons', 'Neutral atom: p = e', 'Ion: p ≠ e'],
+      examples: ['¹²C: 6p, 6n, 6e', 'Na⁺: 11p, 12n, 10e', 'Cl⁻: 17p, 18n, 18e'],
+      commonMistakes: ['Electrons in nucleus', 'Mass # = protons only', 'Forgetting ion charge affects electrons'],
+      tips: ['Nucleus = p + n', 'Shells = e', 'Atomic # never changes for element']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Isotopes and Atomic Mass',
+    content: {
+      title: 'Isotopes and Atomic Mass',
+      intro: 'Atoms with different neutron numbers. Average atomic mass.',
+      keyPoints: ['Isotope: same protons, different neutrons', 'Same element, different mass', 'Notation: ᴬₖX (A = mass, Z = atomic)', 'Atomic mass: weighted average of isotopes', 'Natural abundance affects average', 'Most elements have multiple isotopes'],
+      examples: ['¹²C and ¹³C: both carbon', 'Atomic mass of C ≈ 12.01 (weighted average)', 'H has ¹H, ²H (deuterium), ³H (tritium)'],
+      commonMistakes: ['Thinking isotopes are different elements', 'Mass # = atomic mass', 'Forgetting weighted average'],
+      tips: ['Same element = same protons', 'Isotopes differ by neutrons', 'Atomic mass on periodic table = average']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Electron Configuration',
+    content: {
+      title: 'Electron Configuration',
+      intro: 'Arrangement of electrons in atoms. Shells, subshells, and orbitals.',
+      keyPoints: ['Aufbau: fill lowest energy first', 'Order: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d...', 'Hund\'s: spread before pairing', 'Pauli: max 2 per orbital', 's: 2, p: 6, d: 10, f: 14 electrons max', 'Valence: outermost electrons'],
+      examples: ['C: 1s² 2s² 2p²', 'Ne: 1s² 2s² 2p⁶', '[Ar] 4s² 3d⁶ for Fe'],
+      commonMistakes: ['Wrong filling order', 'Too many in subshell', 'Forgetting Hund\'s rule'],
+      tips: ['Use periodic table as guide', 'Noble gas notation shortcut', 'Valence determines reactivity']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Quantum Numbers and Orbitals',
+    content: {
+      title: 'Quantum Numbers and Orbitals',
+      intro: 'Describing electron location. Four quantum numbers define each electron.',
+      keyPoints: ['n: principal (shell, energy level)', 'l: angular momentum (subshell shape)', 's: l=0, p: l=1, d: l=2, f: l=3', 'ml: magnetic (orbital orientation)', 'ms: spin (+½ or -½)', 'Orbital: region of space, max 2 electrons'],
+      examples: ['n=2, l=1: 2p', 'p subshell: 3 orbitals (ml = -1,0,+1)', '2p⁶: all 3 p orbitals filled'],
+      commonMistakes: ['Wrong l values', 'Too many orbitals', 'Forgetting spin'],
+      tips: ['n = 1,2,3...', 'l = 0 to n-1', 's is sphere, p is dumbbell']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Periodic Trends (Ionization Energy, Electronegativity, Atomic Radius)',
+    content: {
+      title: 'Periodic Trends',
+      intro: 'Predictable patterns across periodic table. Key properties vary systematically.',
+      keyPoints: ['Atomic radius: size of atom', 'Increases down group, decreases across period', 'Ionization energy: energy to remove electron', 'Increases across period, decreases down group', 'Electronegativity: attract electrons in bond', 'Same trend as ionization', 'Effective nuclear charge explains'],
+      examples: ['F: smallest, highest EN, highest IE', 'Cs: largest radius, lowest IE', 'Noble gases: no EN (don\'t bond)'],
+      commonMistakes: ['Backwards trends', 'Forgetting shielding effect', 'Confusing properties'],
+      tips: ['Right & up = stronger pull', 'Radius opposite of IE and EN', 'Shielding reduces effective charge']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Ionic Bonding and Ionic Compounds',
+    content: {
+      title: 'Ionic Bonding',
+      intro: 'Electron transfer between atoms. Formation of cations and anions.',
+      keyPoints: ['Metal loses electrons → cation (+)', 'Nonmetal gains electrons → anion (-)', 'Electrostatic attraction forms bond', 'Crystal lattice structure', 'High melting points', 'Conduct when dissolved/melted', 'Brittle solids'],
+      examples: ['Na + Cl → Na⁺Cl⁻ (NaCl)', 'Mg²⁺ + 2Cl⁻ → MgCl₂', 'Ionic: hard, brittle, high mp'],
+      commonMistakes: ['Thinking ionic bonds share', 'Wrong ion charges', 'Missing crystal structure'],
+      tips: ['Complete transfer', 'Opposite charges attract', 'Metals form cations, nonmetals form anions']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Covalent Bonding and Molecular Compounds',
+    content: {
+      title: 'Covalent Bonding',
+      intro: 'Electron sharing between nonmetals. Molecules and molecular compounds.',
+      keyPoints: ['Share electron pairs', 'Single: 2e⁻ shared, double: 4e⁻, triple: 6e⁻', 'Polar: unequal sharing', 'Nonpolar: equal sharing', 'Lower melting points than ionic', 'Don\'t conduct electricity', 'Discrete molecules'],
+      examples: ['H₂: nonpolar single bond', 'O₂: nonpolar double', 'H₂O: polar covalent'],
+      commonMistakes: ['All covalent is nonpolar', 'Confusing with ionic', 'Wrong bond count'],
+      tips: ['Shared pairs = covalent', 'Electronegativity difference → polarity', 'Nonmetal + nonmetal = covalent']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Lewis Dot Structures',
+    content: {
+      title: 'Lewis Dot Structures',
+      intro: 'Representing valence electrons and bonds. Electron dot diagrams.',
+      keyPoints: ['Dots represent valence electrons', 'Lines represent bonds (2e⁻)', 'Octet rule: 8 valence (except H: 2)', 'Central atom: least electronegative', 'Double/triple bonds if needed', 'Lone pairs: non-bonding electrons', 'Formal charge helps choose best structure'],
+      examples: ['H₂O: O with 2 bonds, 2 lone pairs', 'CO₂: O=C=O (double bonds)', 'Exceptions: BeCl₂ (4e⁻), BF₃ (6e⁻)'],
+      commonMistakes: ['Wrong number of valence electrons', 'Missing lone pairs', 'Violating octet unnecessarily'],
+      tips: ['Count all valence electrons', 'H never in middle', 'Check octet for each atom']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'VSEPR Theory and Molecular Geometry',
+    content: {
+      title: 'VSEPR and Molecular Geometry',
+      intro: 'Predicting 3D molecular shapes. Valence Shell Electron Pair Repulsion.',
+      keyPoints: ['Electron pairs repel → geometry', 'Count bonding + lone pairs', 'Linear: 2 groups (180°)', 'Trigonal planar: 3 groups (120°)', 'Tetrahedral: 4 groups (109.5°)', 'Lone pairs affect shape more', 'Bent, trigonal pyramidal common'],
+      examples: ['CO₂: linear (2 bonding, 0 lone)', 'H₂O: bent (2 bonding, 2 lone)', 'CH₄: tetrahedral (4 bonding, 0 lone)'],
+      commonMistakes: ['Forgetting lone pairs', 'Wrong angles', 'Confusing electron vs molecular geometry'],
+      tips: ['Count all electron groups on central', 'Lone pairs take more space', 'Draw 3D structure']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Polarity and Intermolecular Forces',
+    content: {
+      title: 'Polarity and Intermolecular Forces',
+      intro: 'Molecular polarity and forces between molecules. Determines physical properties.',
+      keyPoints: ['Polar molecule: uneven charge distribution', 'Symmetry can cancel polarity', 'IMFs: dipole-dipole, H-bond, London dispersion', 'H-bond: strongest IMF (H bonded to N, O, F)', 'London: weakest, all molecules have', 'Stronger IMF → higher bp, mp'],
+      examples: ['H₂O: polar (bent shape)', 'CO₂: nonpolar (linear, symmetry)', 'H₂O has H-bonds → high bp'],
+      commonMistakes: ['Polar bonds = polar molecule (not always!)', 'Forgetting symmetry', 'Confusing IMF and bonds'],
+      tips: ['Check shape AND bonds', 'Symmetry → nonpolar', 'H-bonds only with H-N/O/F']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Metallic Bonding',
+    content: {
+      title: 'Metallic Bonding',
+      intro: 'Bonding in metals. Sea of electrons model.',
+      keyPoints: ['Metal atoms release valence electrons', 'Delocalized electrons move freely', '"Sea of electrons" around cations', 'Explains conductivity', 'Explains malleability/ductility', 'Strong bonding → high mp', 'Luster from electron movement'],
+      examples: ['Cu conducts electricity', 'Al can be shaped (malleable)', 'Metals shiny (luster)'],
+      commonMistakes: ['Thinking like ionic or covalent', 'Missing electron mobility', 'Wrong properties'],
+      tips: ['Electrons free to move', 'Explains all metallic properties', 'Not ionic (no complete transfer)']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Balancing Chemical Equations',
+    content: {
+      title: 'Balancing Chemical Equations',
+      intro: 'Law of conservation of mass. Equal atoms on both sides.',
+      keyPoints: ['Atoms conserved in reactions', 'Adjust coefficients, not subscripts', 'Balance one element at a time', 'Polyatomic ions as units if unchanged', 'Leave H and O for last often', 'Check all atoms balanced'],
+      examples: ['H₂ + O₂ → H₂O becomes 2H₂ + O₂ → 2H₂O', 'Fe + O₂ → Fe₂O₃ becomes 4Fe + 3O₂ → 2Fe₂O₃'],
+      commonMistakes: ['Changing subscripts', 'Forgetting to check all atoms', 'Not using lowest whole numbers'],
+      tips: ['Coefficients only!', 'Start with complex molecule', 'Finish with diatomic elements']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Mole Concept and Avogadro\'s Number',
+    content: {
+      title: 'Mole Concept',
+      intro: 'Counting atoms and molecules. Avogadro\'s number connects particles to mass.',
+      keyPoints: ['1 mole = 6.02 × 10²³ particles', 'Avogadro\'s number (NA)', 'Mole: amount unit (like dozen)', 'Molar mass: g/mol', 'Particles: atoms, molecules, ions, etc.', 'Convert: particles ↔ moles ↔ grams'],
+      examples: ['1 mol C = 12g = 6.02×10²³ atoms', '2 mol H₂O = 36g = 1.2×10²⁴ molecules'],
+      commonMistakes: ['Confusing moles and grams', 'Wrong Avogadro\'s number', 'Missing conversion steps'],
+      tips: ['Mole = counting unit', 'Use molar mass to convert g ↔ mol', 'Use NA to convert mol ↔ particles']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Molar Mass Calculations',
+    content: {
+      title: 'Molar Mass Calculations',
+      intro: 'Finding mass of one mole. Sum of atomic masses.',
+      keyPoints: ['Molar mass: grams per mole', 'Add atomic masses from periodic table', 'Multiply by subscripts', 'Units: g/mol', 'Used to convert mass ↔ moles', 'Also called molecular weight'],
+      examples: ['H₂O: 2(1) + 16 = 18 g/mol', 'NaCl: 23 + 35.5 = 58.5 g/mol', 'Ca(OH)₂: 40 + 2(16+1) = 74 g/mol'],
+      commonMistakes: ['Forgetting subscripts', 'Wrong atomic masses', 'Not including all atoms'],
+      tips: ['Use periodic table', 'Multiply by subscripts', 'Parentheses multiply all inside']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Limiting Reactant Problems',
+    content: {
+      title: 'Limiting Reactant',
+      intro: 'Reactant that runs out first. Determines maximum product formed.',
+      keyPoints: ['Limiting reactant: consumed completely', 'Excess reactant: left over', 'Determines max product', 'Convert to moles first', 'Use stoichiometry for each reactant', 'Smallest product amount identifies limiting'],
+      examples: ['2H₂ + O₂ → 2H₂O: if 3 mol H₂, 1 mol O₂, then H₂ limiting', 'Can make at most 3 mol H₂O'],
+      commonMistakes: ['Using grams directly', 'Picking smallest number', 'Not comparing to stoichiometry'],
+      tips: ['Convert to moles first', 'Calculate product from each', 'Smallest product = limiting reactant']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Percent Yield',
+    content: {
+      title: 'Percent Yield',
+      intro: 'Efficiency of reactions. Actual vs theoretical yield.',
+      keyPoints: ['Theoretical: calculated maximum', 'Actual: what you get in lab', 'Percent yield = (actual/theoretical) × 100%', 'Always ≤ 100%', 'Losses due to side reactions, purification', '>100% means error'],
+      examples: ['Theoretical 50g, actual 40g: 80% yield', '100% yield is ideal (rare)'],
+      commonMistakes: ['Using wrong denominator', 'Getting >100%', 'Confusing actual and theoretical'],
+      tips: ['Actual ÷ theoretical × 100%', 'Lower % = less efficient', 'Real reactions < 100%']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Gas Laws (Boyle\'s, Charles\'s, Gay-Lussac\'s)',
+    content: {
+      title: 'Individual Gas Laws',
+      intro: 'Relationships between P, V, T for gases. Named gas laws.',
+      keyPoints: ['Boyle\'s: P₁V₁ = P₂V₂ (T constant)', 'Charles\'s: V₁/T₁ = V₂/T₂ (P constant)', 'Gay-Lussac\'s: P₁/T₁ = P₂/T₂ (V constant)', 'T must be in Kelvin', 'Inverse vs direct relationships'],
+      examples: ['Double pressure → half volume (Boyle)', 'Double temperature → double volume (Charles)'],
+      commonMistakes: ['Forgetting Kelvin', 'Wrong law for conditions', 'Not keeping variable constant'],
+      tips: ['Boyle: P and V inverse', 'Charles: V and T direct', 'T in Kelvin always!']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Ideal Gas Law',
+    content: {
+      title: 'Ideal Gas Law',
+      intro: 'PV = nRT combines all gas laws. Universal gas equation.',
+      keyPoints: ['PV = nRT', 'P: pressure (atm)', 'V: volume (L)', 'n: moles', 'R: 0.0821 L·atm/mol·K', 'T: temperature (K)', 'STP: 0°C, 1 atm, 22.4 L/mol'],
+      examples: ['1 mol gas at STP: PV = (1)(0.0821)(273) = 22.4 L', 'Find n: n = PV/RT'],
+      commonMistakes: ['Wrong R value', 'Wrong units', 'Forgetting Kelvin'],
+      tips: ['Check units match R', 'K = °C + 273', 'Ideal = approximation']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Dalton\'s Law of Partial Pressures',
+    content: {
+      title: 'Dalton\'s Law',
+      intro: 'Total pressure equals sum of partial pressures. Gas mixtures.',
+      keyPoints: ['P_total = P₁ + P₂ + P₃ + ...', 'Partial pressure: pressure if alone', 'Mole fraction: χ = n_gas/n_total', 'P_gas = χ × P_total', 'Gases don\'t interact (ideal)'],
+      examples: ['Air: P_total = P_N₂ + P_O₂ + P_Ar + ...', 'If 80% N₂ and 1 atm total: P_N₂ = 0.8 atm'],
+      commonMistakes: ['Multiplying instead of adding', 'Wrong mole fraction', 'Forgetting all gases'],
+      tips: ['Each gas contributes', 'Mole fraction = pressure fraction', 'Add all partial pressures']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Properties of Solids, Liquids, and Gases',
+    content: {
+      title: 'Properties of States',
+      intro: 'Comparing physical properties. Shape, volume, and compressibility.',
+      keyPoints: ['Solid: definite shape & volume, incompressible', 'Liquid: definite volume, shape of container, incompressible', 'Gas: neither definite, highly compressible', 'Particles: solid vibrate, liquid slide, gas free', 'IMFs: solid strongest, gas weakest', 'Density: solid ≈ liquid > gas'],
+      examples: ['Ice: solid (fixed)', 'Water: liquid (flows)', 'Steam: gas (expands)'],
+      commonMistakes: ['Liquids have definite shape', 'All solids denser than liquids', 'Missing particle motion'],
+      tips: ['Shape & volume define state', 'Particle motion increases: solid < liquid < gas', 'IMF strength decreases: solid > liquid > gas']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Phase Changes and Energy',
+    content: {
+      title: 'Phase Changes and Energy',
+      intro: 'Energy in state transformations. Heating curves and phase diagrams.',
+      keyPoints: ['Melting: solid → liquid (heat absorbed)', 'Freezing: liquid → solid (heat released)', 'Vaporization: liquid → gas (heat absorbed)', 'Condensation: gas → liquid (heat released)', 'Sublimation: solid → gas', 'Deposition: gas → solid', 'Temperature constant during phase change'],
+      examples: ['Ice melting: absorbs energy, stays 0°C', 'Water boiling: absorbs energy, stays 100°C'],
+      commonMistakes: ['Temperature rising during phase change', 'Wrong energy direction', 'Confusing terms'],
+      tips: ['Energy absorbed: →', 'Energy released: ←', 'Temperature flat during change']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Chemistry',
+    topicName: 'Molarity and Dilutions',
+    content: {
+      title: 'Molarity and Dilutions',
+      intro: 'Solution concentration calculations. Making solutions from stock.',
+      keyPoints: ['Molarity M = mol solute / L solution', 'Dilution: M₁V₁ = M₂V₂', 'Add solvent to dilute', 'Moles stay constant in dilution', 'Final volume > initial volume'],
+      examples: ['2 mol in 1L: 2M', '100mL of 6M diluted to 600mL: 1M', 'To make 1M from 10M: use 1:10 ratio'],
+      commonMistakes: ['Volume of solute in denominator', 'Wrong dilution equation', 'Adding wrong amounts'],
+      tips: ['M₁V₁ = M₂V₂ for dilution', 'More solvent = less concentrated', 'Moles conserved']
+    }
+  },
+
+  // ============================================================================
+  // ORGANIC CHEMISTRY - FUNDAMENTALS
+  // ============================================================================
+  {
+    categorySlug: 'science',
+    subjectName: 'Organic Chemistry',
+    topicName: 'Functional Groups',
+    content: {
+      title: 'Functional Groups in Organic Chemistry',
+      intro: 'Functional groups are specific groups of atoms within molecules that determine the chemical properties and reactions of organic compounds. Recognizing and understanding functional groups is fundamental to organic chemistry.',
+      keyPoints: [
+        'Functional group: specific arrangement of atoms that gives molecules characteristic properties',
+        'Alkanes: only C-C and C-H single bonds; general formula CₙH₂ₙ₊₂',
+        'Alkenes: contain C=C double bond; general formula CₙH₂ₙ',
+        'Alkynes: contain C≡C triple bond; general formula CₙH₂ₙ₋₂',
+        'Alcohols: -OH group attached to carbon (e.g., ethanol)',
+        'Carboxylic acids: -COOH group (e.g., acetic acid in vinegar)',
+        'Aldehydes: C=O with H on carbonyl carbon (e.g., formaldehyde)',
+        'Ketones: C=O with two carbons attached to carbonyl (e.g., acetone)',
+        'Esters: -COO- linkage (often have fruity smells)',
+        'Amines: contain nitrogen -NH₂, -NHR, or -NR₂ (related to ammonia)',
+        'Ethers: C-O-C linkage between two carbon chains',
+        'Haloalkanes: carbon bonded to halogen (F, Cl, Br, I)',
+        'Naming priority: carboxylic acid > aldehyde > ketone > alcohol > amine > alkene > alkyne > alkane',
+        'Functional groups determine reactivity and chemical behavior',
+        'Multiple functional groups can exist in one molecule'
+      ],
+      examples: [
+        'Methanol (CH₃OH): alcohol group; used as solvent and fuel',
+        'Acetic acid (CH₃COOH): carboxylic acid; main component of vinegar',
+        'Acetone (CH₃COCH₃): ketone; nail polish remover',
+        'Ethene (C₂H₄): alkene; used to make plastics',
+        'Ethyl acetate (CH₃COOCH₂CH₃): ester; fruity smell in nail polish',
+        'Methylamine (CH₃NH₂): amine; fishy odor, used in synthesis'
+      ],
+      commonMistakes: [
+        'Confusing aldehydes with ketones (aldehydes have H on carbonyl)',
+        'Mixing up alcohols (-OH) with carboxylic acids (-COOH)',
+        'Not recognizing that functional groups change naming priority',
+        'Thinking all compounds with oxygen are alcohols',
+        'Forgetting that esters come from carboxylic acids + alcohols'
+      ],
+      tips: [
+        'Remember: aldehydes have H on C=O, ketones have two carbons',
+        'Alcohols end in -ol, aldehydes in -al, ketones in -one, carboxylic acids in -oic acid',
+        'Carboxylic acids are the highest priority for naming',
+        'Draw structures to visualize functional groups clearly',
+        'Esters smell fruity; amines smell fishy'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Organic Chemistry',
+    topicName: 'Hydrocarbons and Isomers',
+    content: {
+      title: 'Hydrocarbons and Isomers',
+      intro: 'Hydrocarbons are organic compounds composed only of carbon and hydrogen. Isomers are compounds with the same molecular formula but different structural arrangements, leading to different properties.',
+      keyPoints: [
+        'Hydrocarbons: compounds containing only carbon and hydrogen',
+        'Saturated hydrocarbons (alkanes): all single bonds, no double/triple bonds',
+        'Unsaturated hydrocarbons: contain double bonds (alkenes) or triple bonds (alkynes)',
+        'Alkane naming: methane (1C), ethane (2C), propane (3C), butane (4C), pentane (5C), hexane (6C)',
+        'Straight-chain vs. branched hydrocarbons',
+        'Isomers: same molecular formula, different structural arrangement',
+        'Structural isomers: different connectivity of atoms',
+        'Example: C₄H₁₀ has two isomers: n-butane (straight chain) and isobutane (branched)',
+        'Geometric isomers (cis-trans): different spatial arrangement around double bond',
+        'Cis isomer: substituents on same side of double bond',
+        'Trans isomer: substituents on opposite sides of double bond',
+        'Optical isomers (enantiomers): mirror images, non-superimposable',
+        'Cyclic hydrocarbons: carbon atoms form rings (e.g., cyclohexane)',
+        'Aromatic hydrocarbons: contain benzene ring (C₆H₆)',
+        'Number of isomers increases rapidly with carbon chain length'
+      ],
+      examples: [
+        'C₅H₁₂ has 3 structural isomers: pentane, isopentane, neopentane',
+        'But-2-ene has cis and trans isomers depending on CH₃ group positions',
+        'Benzene (C₆H₆): aromatic ring, very stable, found in many compounds',
+        'Cyclohexane (C₆H₁₂): six-carbon ring, saturated',
+        'n-butane: CH₃-CH₂-CH₂-CH₃ (straight); isobutane: (CH₃)₃CH (branched)',
+        'Optical isomers: your left and right hands are mirror images (like enantiomers)'
+      ],
+      commonMistakes: [
+        'Thinking different isomers have different molecular formulas',
+        'Not recognizing that isomers have different properties despite same formula',
+        'Confusing structural isomers with geometric isomers',
+        'Drawing the same structure rotated and calling it an isomer',
+        'Forgetting that rotation around single bonds is free (not isomers)'
+      ],
+      tips: [
+        'Same formula, different structure = isomers',
+        'Cis = same side, Trans = opposite sides (geometric isomers)',
+        'Draw all possible structures systematically to find isomers',
+        'Alkanes are saturated (no double/triple bonds)',
+        'Aromatic = contains benzene ring (very stable)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Organic Chemistry',
+    topicName: 'Organic Reactions Overview',
+    content: {
+      title: 'Organic Reactions Overview',
+      intro: 'Organic reactions involve the breaking and forming of covalent bonds in carbon-containing compounds. Understanding reaction types helps predict products and mechanisms in organic chemistry.',
+      keyPoints: [
+        'Addition reactions: two molecules combine to form one product',
+        'Alkenes undergo addition: C=C + reagent → saturated product',
+        'Hydrogenation: adding H₂ to alkene → alkane (requires catalyst)',
+        'Halogenation: adding X₂ (Br₂, Cl₂) to alkene → dihalide',
+        'Hydration: adding H₂O to alkene → alcohol (requires acid catalyst)',
+        'Substitution reactions: one atom/group replaces another',
+        'Halogenation of alkanes: UV light causes H replacement by halogen',
+        'Elimination reactions: removal of atoms to form double/triple bond',
+        'Dehydration of alcohols: removes H₂O → forms alkene',
+        'Oxidation reactions: increase oxygen or decrease hydrogen',
+        'Primary alcohol → aldehyde → carboxylic acid (with oxidizing agent)',
+        'Secondary alcohol → ketone',
+        'Tertiary alcohols resist oxidation',
+        'Combustion: hydrocarbon + O₂ → CO₂ + H₂O + energy',
+        'Polymerization: small molecules (monomers) join to form polymer',
+        'Condensation reactions: two molecules combine, losing small molecule (e.g., H₂O)'
+      ],
+      examples: [
+        'Ethene + H₂ → ethane (hydrogenation, addition)',
+        'Ethene + Br₂ → 1,2-dibromoethane (halogenation, addition)',
+        'Ethanol → ethene + H₂O (dehydration, elimination)',
+        'Ethanol → ethanal → ethanoic acid (oxidation)',
+        'Methane + Cl₂ → CH₃Cl + HCl (substitution with UV light)',
+        'Polyethylene: many ethene molecules join (addition polymerization)'
+      ],
+      commonMistakes: [
+        'Confusing addition with substitution reactions',
+        'Thinking all alcohols oxidize the same way (tertiary don\'t oxidize easily)',
+        'Forgetting catalysts needed for certain reactions',
+        'Not balancing organic reaction equations',
+        'Mixing up elimination with substitution'
+      ],
+      tips: [
+        'Addition = double bond → single bond (adds atoms)',
+        'Substitution = swap one atom for another',
+        'Elimination = remove atoms → form double bond',
+        'Primary alcohol → aldehyde → acid; Secondary → ketone; Tertiary → no reaction',
+        'Combustion always produces CO₂ + H₂O (complete combustion)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Organic Chemistry',
+    topicName: 'Polymers and Macromolecules',
+    content: {
+      title: 'Polymers and Macromolecules',
+      intro: 'Polymers are large molecules made of repeating units called monomers. Understanding polymerization is essential for materials science, biochemistry, and industrial chemistry.',
+      keyPoints: [
+        'Polymer: large molecule made of many repeating units (monomers)',
+        'Monomer: small molecule that joins with others to form polymer',
+        'Addition polymerization: monomers add together without loss of atoms',
+        'Requires C=C double bond in monomer (alkenes)',
+        'Example: ethene monomers → polyethylene (plastic bags)',
+        'Condensation polymerization: monomers join with loss of small molecule (H₂O, HCl)',
+        'Forms polyesters and polyamides (like nylon)',
+        'Thermoplastics: soften when heated, can be reshaped (e.g., polyethylene)',
+        'Thermosetting plastics: harden permanently, can\'t be reshaped (e.g., epoxy)',
+        'Natural polymers: proteins, DNA, cellulose, starch, rubber',
+        'Synthetic polymers: plastics, nylon, polyester, PVC, Teflon',
+        'Biodegradable polymers: break down naturally (e.g., PLA from corn starch)',
+        'Cross-linking: bonds between polymer chains increase strength',
+        'Plasticizers: added to make polymers more flexible',
+        'Recycling codes (1-7) indicate plastic type for recycling'
+      ],
+      examples: [
+        'Polyethylene (PE): from ethene; used in bags, bottles (HDPE, LDPE)',
+        'Polypropylene (PP): from propene; used in containers, ropes',
+        'Polystyrene (PS): from styrene; used in foam cups, packaging',
+        'PVC (polyvinyl chloride): from vinyl chloride; pipes, flooring',
+        'PET (polyethylene terephthalate): from condensation; bottles, clothing',
+        'Nylon: condensation polymer; clothing, ropes, parachutes',
+        'Proteins: polymers of amino acids; natural macromolecules'
+      ],
+      commonMistakes: [
+        'Confusing monomers with polymers',
+        'Thinking all plastics are the same (many types with different properties)',
+        'Not recognizing condensation polymerization loses small molecules',
+        'Believing all polymers are synthetic (many are natural)',
+        'Forgetting that polymer properties depend on structure and cross-linking'
+      ],
+      tips: [
+        'Monomer = building block; Polymer = many building blocks joined',
+        'Addition polymerization: alkene → polymer (no loss)',
+        'Condensation polymerization: monomers → polymer + H₂O (or other small molecule)',
+        'Thermo-plastic = can be melted and reshaped',
+        'Natural polymers: proteins, DNA, starch, cellulose'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Organic Chemistry',
+    topicName: 'Nomenclature (IUPAC Naming)',
+    content: {
+      title: 'IUPAC Nomenclature of Organic Compounds',
+      intro: 'IUPAC (International Union of Pure and Applied Chemistry) nomenclature provides systematic rules for naming organic compounds. Proper naming ensures clear communication in chemistry.',
+      keyPoints: [
+        'Identify the longest carbon chain (parent chain)',
+        'Parent chain determines base name: meth (1C), eth (2C), prop (3C), but (4C), pent (5C), hex (6C), hept (7C), oct (8C)',
+        'Suffix indicates functional group: -ane (alkane), -ene (alkene), -yne (alkyne), -ol (alcohol), -al (aldehyde), -one (ketone), -oic acid (carboxylic acid)',
+        'Number carbon chain from end nearest functional group or substituent',
+        'Identify substituents (branches): methyl (CH₃-), ethyl (C₂H₅-), propyl (C₃H₇-)',
+        'Use di-, tri-, tetra- prefixes for multiple identical substituents',
+        'List substituents alphabetically (ignore prefixes like di-, tri-)',
+        'Format: (position)-(substituent)-(parent chain)-(suffix)',
+        'Multiple bonds: indicate position with lowest number',
+        'Functional group priority: carboxylic acid > aldehyde > ketone > alcohol > amine > alkene > alkyne > alkane',
+        'Cyclic compounds: prefix with "cyclo-"',
+        'Aromatic compounds: often use benzene as base',
+        'Halogens as substituents: fluoro-, chloro-, bromo-, iodo-',
+        'Use commas between numbers, hyphens between numbers and words'
+      ],
+      examples: [
+        'CH₃CH₂CH₃: propane (3 carbons, alkane)',
+        'CH₃CH(CH₃)CH₃: 2-methylpropane (branch on carbon 2)',
+        'CH₃CH₂OH: ethanol (2 carbons, alcohol)',
+        'CH₃CH=CH₂: propene (3 carbons, double bond at position 1)',
+        'CH₃COCH₃: propan-2-one or acetone (ketone at carbon 2)',
+        'CH₃CH₂COOH: propanoic acid (3 carbons, carboxylic acid)',
+        'CH₃CHBrCH₂CH₃: 2-bromobutane (Br on carbon 2 of 4-carbon chain)',
+        'Cyclohexane: C₆H₁₂ in a ring'
+      ],
+      commonMistakes: [
+        'Not using the longest carbon chain as parent',
+        'Numbering from wrong end of chain',
+        'Forgetting to use di-, tri- for multiple identical groups',
+        'Listing substituents in wrong (non-alphabetical) order',
+        'Incorrect punctuation (commas and hyphens)',
+        'Not giving functional group the lowest position number'
+      ],
+      tips: [
+        'Longest chain = parent name',
+        'Number from end nearest functional group or substituent',
+        'Alphabetize substituents (di-, tri- don\'t count for alphabetizing)',
+        'Format: position-substituent-parent-suffix',
+        'Meth-eth-prop-but-pent-hex-hept-oct (1-8 carbons)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Organic Chemistry',
+    topicName: 'Stereochemistry Basics',
+    content: {
+      title: 'Stereochemistry Basics',
+      intro: 'Stereochemistry studies the three-dimensional arrangement of atoms in molecules. Understanding stereochemistry is crucial because molecules with the same formula can have different spatial arrangements and properties.',
+      keyPoints: [
+        'Stereoisomers: same molecular formula and connectivity, different 3D arrangement',
+        'Chirality: property of a molecule that is not superimposable on its mirror image',
+        'Chiral center (stereocenter): carbon atom bonded to four different groups',
+        'Enantiomers: pair of mirror-image stereoisomers (like left and right hands)',
+        'Enantiomers have identical physical properties except rotation of plane-polarized light',
+        'Dextrorotatory (+): rotates light clockwise',
+        'Levorotatory (-): rotates light counterclockwise',
+        'Racemic mixture: equal amounts of both enantiomers (no net rotation)',
+        'Diastereomers: stereoisomers that are not mirror images',
+        'Cis-trans isomers: type of diastereomers due to restricted rotation',
+        'Cis: substituents on same side; Trans: substituents on opposite sides',
+        'E-Z notation: alternative to cis-trans for more complex alkenes',
+        'R/S nomenclature: systematic way to name chiral centers',
+        'Biological importance: enzymes recognize specific enantiomers',
+        'Drug activity: one enantiomer may be active while the other is inactive or harmful'
+      ],
+      examples: [
+        'Your hands: mirror images, not superimposable (chiral)',
+        'Thalidomide: one enantiomer treated morning sickness, other caused birth defects',
+        'Amino acids: L-forms in proteins; D-forms rare in nature',
+        'Cis-2-butene vs trans-2-butene: different boiling points and properties',
+        'Lactic acid has one chiral center: exists as D and L enantiomers',
+        'Glucose: multiple chiral centers; D-glucose is the common form in biology'
+      ],
+      commonMistakes: [
+        'Thinking enantiomers have different physical properties (they\'re identical except light rotation)',
+        'Confusing enantiomers with diastereomers',
+        'Not recognizing that four different groups are required for chirality',
+        'Thinking cis-trans isomers are enantiomers (they\'re diastereomers)',
+        'Forgetting that biological systems are highly selective for specific enantiomers'
+      ],
+      tips: [
+        'Chiral = four different groups on carbon (like a hand)',
+        'Enantiomers = mirror images (same properties except light rotation)',
+        'Cis = same side, Trans = opposite sides',
+        'Racemic = 50:50 mix of enantiomers (no net rotation)',
+        'Biology is chiral-selective: wrong enantiomer may not work or be harmful'
+      ]
+    }
+  },
+
+  // ============================================================================
+  // EARTH SCIENCE - FUNDAMENTALS
+  // ============================================================================
+  {
+    categorySlug: 'science',
+    subjectName: 'Earth Science',
+    topicName: 'Plate Tectonics',
+    content: {
+      title: 'Plate Tectonics',
+      intro: 'Plate tectonics is the theory that Earth\'s lithosphere is divided into large plates that move over the asthenosphere. This movement causes earthquakes, volcanoes, and the formation of mountains.',
+      keyPoints: [
+        'Lithosphere: rigid outer layer of Earth (crust + upper mantle)',
+        'Asthenosphere: semi-fluid layer beneath lithosphere where plates move',
+        'Earth has ~12 major tectonic plates and many minor plates',
+        'Plates move 2-10 cm per year (about as fast as fingernails grow)',
+        'Three types of plate boundaries: divergent, convergent, transform',
+        'Divergent boundaries: plates move apart (mid-ocean ridges, rift valleys)',
+        'New oceanic crust forms at divergent boundaries (seafloor spreading)',
+        'Convergent boundaries: plates collide (mountains, trenches, subduction zones)',
+        'Ocean-continent convergence: oceanic plate subducts under continental plate',
+        'Ocean-ocean convergence: one oceanic plate subducts, forms volcanic island arc',
+        'Continent-continent convergence: forms mountain ranges (e.g., Himalayas)',
+        'Transform boundaries: plates slide past each other (earthquakes, e.g., San Andreas Fault)',
+        'Subduction: denser oceanic plate sinks beneath another plate',
+        'Convection currents in mantle drive plate movement',
+        'Ring of Fire: zone of volcanoes and earthquakes around Pacific Plate',
+        'Continental drift: continents were once joined (Pangaea), then separated'
+      ],
+      examples: [
+        'Mid-Atlantic Ridge: divergent boundary creating new seafloor',
+        'Himalayas: convergent boundary (India colliding with Asia)',
+        'San Andreas Fault: transform boundary (Pacific Plate sliding past North American Plate)',
+        'Andes Mountains: ocean-continent convergence, subduction zone',
+        'Hawaiian Islands: formed by hotspot, not plate boundary',
+        'Iceland: on Mid-Atlantic Ridge, growing as plates diverge'
+      ],
+      commonMistakes: [
+        'Thinking plates move quickly (they move very slowly)',
+        'Confusing the three boundary types',
+        'Believing all mountains form the same way',
+        'Not recognizing that oceanic crust is denser than continental crust',
+        'Thinking earthquakes only occur at transform boundaries (they happen at all types)'
+      ],
+      tips: [
+        'Divergent = plates Divide (move apart)',
+        'Convergent = plates Converge (come together)',
+        'Transform = plates slide Transform (sideways)',
+        'Subduction occurs at convergent boundaries (denser plate sinks)',
+        'Ring of Fire = most volcanoes and earthquakes (Pacific Plate edges)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Earth Science',
+    topicName: 'Rock Cycle',
+    content: {
+      title: 'The Rock Cycle',
+      intro: 'The rock cycle describes how rocks transform from one type to another through geological processes. Understanding the rock cycle explains Earth\'s dynamic crust and formation of different rock types.',
+      keyPoints: [
+        'Three main rock types: igneous, sedimentary, metamorphic',
+        'Igneous rocks: formed from cooling and solidification of magma or lava',
+        'Intrusive igneous: cools slowly underground (large crystals, e.g., granite)',
+        'Extrusive igneous: cools quickly at surface (small crystals, e.g., basalt)',
+        'Sedimentary rocks: formed from sediments compacted and cemented together',
+        'Sediments come from weathering and erosion of existing rocks',
+        'Clastic sedimentary: fragments cemented (sandstone, shale, conglomerate)',
+        'Chemical sedimentary: minerals precipitate from solution (limestone, rock salt)',
+        'Organic sedimentary: from remains of organisms (coal, some limestone)',
+        'Metamorphic rocks: existing rocks changed by heat and/or pressure',
+        'Foliated metamorphic: layered appearance (slate, schist, gneiss)',
+        'Non-foliated metamorphic: no layers (marble from limestone, quartzite from sandstone)',
+        'Weathering: breaking down rocks (physical, chemical, biological)',
+        'Erosion: transport of weathered material by wind, water, ice, gravity',
+        'Any rock type can transform into any other type through rock cycle processes',
+        'The cycle has no beginning or end—continuous transformation'
+      ],
+      examples: [
+        'Granite (intrusive igneous): large crystals, forms underground from slow cooling magma',
+        'Basalt (extrusive igneous): small crystals, forms from lava cooling quickly',
+        'Sandstone (sedimentary): sand grains cemented together',
+        'Limestone (sedimentary): calcium carbonate, often from shells',
+        'Marble (metamorphic): limestone altered by heat/pressure',
+        'Slate (metamorphic): shale altered by pressure, used for roofing',
+        'Coal (organic sedimentary): from compressed plant material over millions of years'
+      ],
+      commonMistakes: [
+        'Thinking rock cycle is one-directional (it\'s cyclical with multiple paths)',
+        'Confusing igneous intrusive with extrusive',
+        'Not recognizing that sedimentary rocks require compaction and cementation',
+        'Believing all metamorphic rocks are foliated',
+        'Mixing up weathering (breakdown) with erosion (transport)'
+      ],
+      tips: [
+        'Igneous = fire (from molten rock)',
+        'Sedimentary = layers of sediments',
+        'Metamorphic = changed form (heat/pressure)',
+        'Intrusive = inside (large crystals); Extrusive = exits (small crystals)',
+        'Any rock can become any other rock through the cycle'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Earth Science',
+    topicName: 'Weathering and Erosion',
+    content: {
+      title: 'Weathering and Erosion',
+      intro: 'Weathering breaks down rocks, while erosion transports the weathered material. These processes shape Earth\'s surface, create soil, and are essential to the rock cycle.',
+      keyPoints: [
+        'Weathering: breakdown of rocks into smaller pieces (in place)',
+        'Erosion: transport of weathered material by agents of erosion',
+        'Physical (mechanical) weathering: rock breaks without chemical change',
+        'Frost wedging: water freezes in cracks, expands, breaks rock apart',
+        'Abrasion: rocks scrape against each other, wearing down',
+        'Root wedging: plant roots grow in cracks, split rocks',
+        'Chemical weathering: rock composition changes through chemical reactions',
+        'Oxidation: oxygen reacts with minerals (rusting of iron)',
+        'Carbonation: CO₂ + water forms carbonic acid, dissolves limestone',
+        'Hydrolysis: water reacts with minerals, breaks down feldspars',
+        'Biological weathering: organisms contribute to breakdown (lichens, burrowing animals)',
+        'Agents of erosion: water, wind, ice (glaciers), gravity (mass wasting)',
+        'Deposition: eroded material settles in new location',
+        'Climate affects weathering rate: warm/wet climates → faster chemical weathering',
+        'Surface area affects rate: more surface area → faster weathering',
+        'Soil forms from weathering of bedrock + organic material'
+      ],
+      examples: [
+        'Grand Canyon: carved by water erosion over millions of years',
+        'Sand dunes: wind erosion and deposition of sand',
+        'U-shaped valleys: carved by glacier erosion',
+        'Potholes in sidewalks: frost wedging from freeze-thaw cycles',
+        'Rusty rocks: oxidation (chemical weathering)',
+        'Caves in limestone: carbonation (chemical weathering)',
+        'Landslide: mass wasting (gravity-driven erosion)'
+      ],
+      commonMistakes: [
+        'Confusing weathering (breakdown) with erosion (transport)',
+        'Thinking physical weathering changes rock composition (it doesn\'t)',
+        'Not recognizing that climate affects weathering rate',
+        'Believing erosion only happens by water',
+        'Forgetting that deposition follows erosion'
+      ],
+      tips: [
+        'Weathering = breaks down in place; Erosion = moves it away',
+        'Physical weathering = breaks rock; Chemical weathering = changes composition',
+        'Water is the most powerful agent of erosion',
+        'Frost wedging = freeze, expand, crack',
+        'Deposition creates sedimentary layers'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Earth Science',
+    topicName: 'Water Cycle',
+    content: {
+      title: 'The Water Cycle (Hydrologic Cycle)',
+      intro: 'The water cycle describes the continuous movement of water on, above, and below Earth\'s surface. This cycle is driven by solar energy and is essential for life and weather.',
+      keyPoints: [
+        'Water cycle: continuous movement of water through evaporation, condensation, precipitation',
+        'Evaporation: liquid water becomes water vapor (heat energy from sun)',
+        'Transpiration: water released from plants into atmosphere',
+        'Evapotranspiration: combined evaporation + transpiration',
+        'Condensation: water vapor cools and becomes liquid (forms clouds)',
+        'Precipitation: water falls from clouds as rain, snow, sleet, or hail',
+        'Infiltration: water soaks into ground',
+        'Groundwater: water stored underground in aquifers',
+        'Runoff: water flows over land surface to rivers, lakes, oceans',
+        'Percolation: water moves downward through soil and rock',
+        'Water storage: oceans, lakes, rivers, glaciers, groundwater, atmosphere',
+        'Oceans contain 97% of Earth\'s water (saltwater)',
+        'Only ~3% is freshwater; most is frozen in glaciers/ice caps',
+        'Solar energy drives evaporation; gravity drives precipitation and runoff',
+        'Water is constantly recycled—same water molecules used for billions of years'
+      ],
+      examples: [
+        'Ocean water evaporates → forms clouds → precipitation → returns to ocean',
+        'Rain falls on mountain → infiltrates soil → groundwater → spring → river → ocean',
+        'Plant absorbs water from soil → transpiration releases it to atmosphere',
+        'Snow on mountain melts in spring → runoff fills rivers',
+        'Water stored in glacier (ice) for thousands of years, then melts',
+        'Wells pump groundwater from aquifers for drinking'
+      ],
+      commonMistakes: [
+        'Thinking water cycle is linear (it\'s continuous and cyclical)',
+        'Forgetting that plants contribute water to atmosphere (transpiration)',
+        'Not recognizing solar energy drives evaporation',
+        'Believing all water flows to ocean immediately (some stored as groundwater, ice)',
+        'Confusing infiltration (into ground) with percolation (through ground)'
+      ],
+      tips: [
+        'Evaporation = liquid to vapor (sun heats water)',
+        'Condensation = vapor to liquid (cooling forms clouds)',
+        'Precipitation = water falls from clouds',
+        'Infiltration = water soaks into ground',
+        'Most water on Earth is in oceans (97%)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Earth Science',
+    topicName: 'Atmosphere and Weather',
+    content: {
+      title: 'Atmosphere and Weather',
+      intro: 'Earth\'s atmosphere is a layer of gases surrounding the planet. Weather occurs in the troposphere and results from uneven heating of Earth\'s surface by the sun.',
+      keyPoints: [
+        'Atmosphere: layer of gases held by gravity around Earth',
+        'Composition: 78% nitrogen, 21% oxygen, 1% other gases (CO₂, argon, water vapor)',
+        'Five layers: troposphere, stratosphere, mesosphere, thermosphere, exosphere',
+        'Troposphere: lowest layer, where weather occurs (0-12 km)',
+        'Temperature decreases with altitude in troposphere',
+        'Stratosphere: contains ozone layer, absorbs UV radiation (12-50 km)',
+        'Weather: day-to-day conditions (temperature, precipitation, wind, humidity)',
+        'Climate: long-term average weather patterns',
+        'Air pressure: weight of air above, decreases with altitude',
+        'Uneven heating of Earth causes air movement (wind)',
+        'Warm air rises (low pressure), cool air sinks (high pressure)',
+        'Water vapor in air condenses to form clouds when air cools',
+        'Fronts: boundaries between air masses (cold front, warm front)',
+        'Cold front: cold air pushes under warm air (rapid weather changes, storms)',
+        'Warm front: warm air rises over cold air (gradual changes, steady rain)',
+        'Humidity: amount of water vapor in air',
+        'Dew point: temperature at which air becomes saturated and condensation occurs'
+      ],
+      examples: [
+        'Sea breeze: cool air from ocean moves inland during day (land heats faster)',
+        'Land breeze: cool air from land moves to ocean at night (land cools faster)',
+        'Thunderstorm: warm moist air rises rapidly, condenses, forms storm clouds',
+        'Cold front passage: temperature drops quickly, winds shift, possible storms',
+        'High pressure system: clear, calm weather (sinking air)',
+        'Low pressure system: cloudy, stormy weather (rising air)',
+        'Morning dew: temperature dropped to dew point overnight, water vapor condensed'
+      ],
+      commonMistakes: [
+        'Confusing weather with climate',
+        'Thinking temperature increases with altitude (it decreases in troposphere)',
+        'Not recognizing that air pressure decreases with altitude',
+        'Believing all clouds produce rain (many don\'t)',
+        'Mixing up high pressure (clear) with low pressure (stormy)'
+      ],
+      tips: [
+        'Weather = short-term; Climate = long-term average',
+        'Troposphere = weather layer (lowest)',
+        'Warm air rises, cool air sinks',
+        'Low pressure = lousy weather; High pressure = happy weather',
+        'Cold front = rapid changes; Warm front = gradual changes'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Earth Science',
+    topicName: 'Solar System and Earth-Sun-Moon',
+    content: {
+      title: 'Solar System and Earth-Sun-Moon System',
+      intro: 'Understanding the solar system and the relationships between Earth, the Sun, and the Moon explains seasons, day/night cycles, moon phases, and eclipses.',
+      keyPoints: [
+        'Solar system: Sun and all objects orbiting it (8 planets, moons, asteroids, comets)',
+        'Planets in order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune',
+        'Inner planets (terrestrial): small, rocky (Mercury, Venus, Earth, Mars)',
+        'Outer planets (gas giants): large, gaseous (Jupiter, Saturn, Uranus, Neptune)',
+        'Earth rotates on axis (24 hours) → day/night cycle',
+        'Earth revolves around Sun (365.25 days) → year',
+        'Earth\'s axis tilted 23.5° → causes seasons',
+        'Summer: hemisphere tilted toward Sun (longer days, more direct sunlight)',
+        'Winter: hemisphere tilted away from Sun (shorter days, less direct sunlight)',
+        'Moon orbits Earth (~27.3 days)',
+        'Moon phases: new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous, third quarter, waning crescent',
+        'Moon reflects sunlight—doesn\'t produce own light',
+        'Solar eclipse: Moon blocks Sun (Moon between Earth and Sun)',
+        'Lunar eclipse: Earth\'s shadow falls on Moon (Earth between Sun and Moon)',
+        'Tides: caused by gravitational pull of Moon (and Sun)',
+        'Spring tides: Sun and Moon aligned (higher high tides, lower low tides)',
+        'Neap tides: Sun and Moon at right angles (smaller tidal range)'
+      ],
+      examples: [
+        'Summer in Northern Hemisphere: North Pole tilted toward Sun (June)',
+        'Winter in Northern Hemisphere: North Pole tilted away from Sun (December)',
+        'New Moon: Moon between Earth and Sun (can\'t see Moon from Earth)',
+        'Full Moon: Earth between Sun and Moon (entire lit side visible)',
+        'Total solar eclipse: Moon perfectly blocks Sun (rare, narrow path)',
+        'Lunar eclipse: Moon appears red (Earth\'s shadow)',
+        'High tide: water bulges toward Moon due to gravity'
+      ],
+      commonMistakes: [
+        'Thinking seasons are caused by Earth\'s distance from Sun (it\'s the tilt)',
+        'Confusing solar and lunar eclipses',
+        'Believing Moon produces its own light (it reflects sunlight)',
+        'Not recognizing that opposite hemispheres have opposite seasons',
+        'Thinking Moon phases are caused by Earth\'s shadow (it\'s the angle of sunlight)'
+      ],
+      tips: [
+        'My Very Educated Mother Just Served Us Nachos (planet order)',
+        'Tilt causes seasons, not distance from Sun',
+        'Rotation = day/night (24 hrs); Revolution = year (365 days)',
+        'Solar eclipse: Moon blocks Sun; Lunar eclipse: Earth blocks Sun',
+        'Moon phases: waxing = growing, waning = shrinking'
+      ]
+    }
+  },
+
+  // ============================================================================
+  // ENVIRONMENTAL SCIENCE
+  // ============================================================================
+  {
+    categorySlug: 'science',
+    subjectName: 'Environmental Science',
+    topicName: 'Climate Change and Global Warming',
+    content: {
+      title: 'Climate Change and Global Warming',
+      intro: 'Climate change refers to long-term shifts in global temperatures and weather patterns. Global warming, caused primarily by increased greenhouse gases from human activities, is a major driver of climate change.',
+      keyPoints: [
+        'Climate change: long-term shift in global or regional climate patterns',
+        'Global warming: increase in Earth\'s average surface temperature',
+        'Greenhouse effect: gases trap heat in atmosphere (natural and necessary for life)',
+        'Enhanced greenhouse effect: human activities increase greenhouse gases beyond natural levels',
+        'Main greenhouse gases: CO₂ (carbon dioxide), CH₄ (methane), N₂O (nitrous oxide), water vapor',
+        'CO₂ from burning fossil fuels (coal, oil, natural gas) is largest contributor',
+        'Deforestation reduces CO₂ absorption (trees absorb CO₂ during photosynthesis)',
+        'Evidence: rising global temperatures, melting ice caps, rising sea levels, extreme weather events',
+        'Consequences: sea level rise, habitat loss, species extinction, agricultural disruption, extreme weather',
+        'Positive feedback loops: melting ice → less reflection → more warming',
+        'Arctic ice melting faster than Antarctic ice',
+        'Ocean acidification: oceans absorb CO₂, becoming more acidic (harms coral, shellfish)',
+        'Mitigation: reduce emissions (renewable energy, energy efficiency, reforestation)',
+        'Adaptation: adjust to changing climate (sea walls, drought-resistant crops)',
+        'Paris Agreement: international effort to limit warming to below 2°C',
+        'Individual actions: reduce energy use, use public transit, reduce meat consumption, support renewable energy'
+      ],
+      examples: [
+        'Burning coal for electricity releases CO₂ into atmosphere',
+        'Deforestation in Amazon reduces CO₂ absorption capacity',
+        'Arctic sea ice extent has decreased ~13% per decade since 1979',
+        'Sea levels rising ~3mm per year, threatening coastal cities',
+        'More frequent and intense hurricanes, droughts, and heatwaves',
+        'Coral bleaching from warmer ocean temperatures and acidification',
+        'Greenland ice sheet losing ~280 billion tons of ice per year'
+      ],
+      commonMistakes: [
+        'Confusing weather (short-term) with climate (long-term)',
+        'Thinking climate change is only about temperature (it affects precipitation, storms, etc.)',
+        'Believing climate has never changed naturally (it has, but current change is rapid and human-caused)',
+        'Not recognizing the greenhouse effect is natural and necessary (enhanced effect is the problem)',
+        'Thinking individual actions don\'t matter (collective action is powerful)'
+      ],
+      tips: [
+        'Weather = day-to-day; Climate = long-term average',
+        'CO₂ is main greenhouse gas from human activity',
+        'Fossil fuels (coal, oil, gas) release CO₂ when burned',
+        'Renewable energy (solar, wind) reduces CO₂ emissions',
+        'Trees absorb CO₂; deforestation increases atmospheric CO₂'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Environmental Science',
+    topicName: 'Biodiversity and Conservation',
+    content: {
+      title: 'Biodiversity and Conservation',
+      intro: 'Biodiversity refers to the variety of life on Earth at all levels—genes, species, and ecosystems. Conservation efforts aim to protect biodiversity and prevent species extinction.',
+      keyPoints: [
+        'Biodiversity: variety of life (genetic diversity, species diversity, ecosystem diversity)',
+        'Genetic diversity: variation within a species',
+        'Species diversity: variety of species in an area',
+        'Ecosystem diversity: variety of habitats and ecosystems',
+        'Benefits of biodiversity: ecosystem services, food security, medicine, resilience',
+        'Threats to biodiversity: habitat loss, pollution, climate change, invasive species, overexploitation',
+        'Habitat loss is the leading cause of species extinction',
+        'Deforestation, urbanization, and agriculture destroy habitats',
+        'Invasive species: non-native species that harm ecosystems',
+        'Overexploitation: hunting, fishing, and harvesting beyond sustainable levels',
+        'Mass extinction event: current rate of extinction 100-1000x natural background rate',
+        'Endangered species: at risk of extinction',
+        'Conservation strategies: protected areas (national parks, reserves), habitat restoration, captive breeding',
+        'Ecosystem services: pollination, water purification, climate regulation, nutrient cycling',
+        'Keystone species: species with disproportionate impact on ecosystem',
+        'Biodiversity hotspots: areas with high species diversity and high threat level'
+      ],
+      examples: [
+        'Amazon rainforest: highest biodiversity on Earth, threatened by deforestation',
+        'Coral reefs: 25% of marine species depend on them, threatened by warming and acidification',
+        'Bees as pollinators: essential ecosystem service for agriculture',
+        'Wolves in Yellowstone: keystone species; reintroduction restored ecosystem balance',
+        'Invasive species: Burmese pythons in Florida Everglades harm native species',
+        'Overexploitation: bluefin tuna populations collapsed from overfishing',
+        'Protected area: Serengeti National Park protects diverse African wildlife'
+      ],
+      commonMistakes: [
+        'Thinking biodiversity is only about number of species (it\'s also genetic and ecosystem diversity)',
+        'Believing extinction is always natural (current rate is driven by human activity)',
+        'Not recognizing ecosystem services provided by biodiversity',
+        'Thinking conservation is only about charismatic megafauna (all species matter)',
+        'Assuming protected areas alone are sufficient (need habitat connectivity and climate action)'
+      ],
+      tips: [
+        'Biodiversity = genetic + species + ecosystem diversity',
+        'Habitat loss = #1 threat to biodiversity',
+        'Ecosystem services = benefits nature provides (free!)',
+        'Invasive species harm native ecosystems',
+        'Conservation protects species and ecosystems for future generations'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Environmental Science',
+    topicName: 'Pollution Types and Effects',
+    content: {
+      title: 'Pollution Types and Effects',
+      intro: 'Pollution is the introduction of harmful substances into the environment. Understanding different types of pollution and their effects is essential for environmental protection and public health.',
+      keyPoints: [
+        'Pollution: harmful substances released into air, water, or soil',
+        'Air pollution: particulate matter (PM), ozone (O₃), CO, CO₂, SO₂, NOₓ',
+        'Sources of air pollution: vehicles, factories, power plants, agriculture',
+        'Smog: mixture of smoke and fog (visible air pollution)',
+        'Acid rain: SO₂ and NOₓ combine with water → sulfuric/nitric acid',
+        'Ozone depletion: CFCs destroy stratospheric ozone, increasing UV radiation',
+        'Water pollution: chemicals, sewage, plastics, agricultural runoff',
+        'Eutrophication: excess nutrients (nitrogen, phosphorus) → algal blooms → oxygen depletion',
+        'Point source pollution: identifiable source (factory pipe)',
+        'Non-point source pollution: diffuse sources (agricultural runoff)',
+        'Plastic pollution: microplastics in oceans harm marine life',
+        'Soil pollution: pesticides, heavy metals, industrial chemicals',
+        'Noise pollution: excessive sound harms wildlife and human health',
+        'Light pollution: artificial light disrupts ecosystems and human health',
+        'Thermal pollution: heated water discharged into rivers harms aquatic life',
+        'Effects: respiratory diseases, cancer, ecosystem disruption, biodiversity loss'
+      ],
+      examples: [
+        'Beijing smog: visible air pollution from vehicles and factories',
+        'Acid rain in northeastern US damaged forests and lakes in 1980s',
+        'Ozone hole over Antarctica from CFC use (now recovering due to Montreal Protocol)',
+        'Great Pacific Garbage Patch: massive accumulation of plastic debris',
+        'Flint water crisis: lead contamination from aging pipes',
+        'Dead zones in Gulf of Mexico from agricultural runoff eutrophication',
+        'Mercury in fish from coal plant emissions'
+      ],
+      commonMistakes: [
+        'Confusing tropospheric ozone (pollutant) with stratospheric ozone (protective)',
+        'Thinking all pollution is visible (many pollutants are invisible)',
+        'Not recognizing non-point source pollution as significant problem',
+        'Believing pollution is only a local issue (it crosses borders)',
+        'Assuming natural processes can handle unlimited pollution'
+      ],
+      tips: [
+        'Air pollution: smog, acid rain, ozone depletion',
+        'Water pollution: eutrophication, plastics, chemicals',
+        'Point source = specific location; Non-point = diffuse',
+        'Eutrophication = too many nutrients → algae → oxygen depletion',
+        'Reduce, reuse, recycle to decrease pollution'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Environmental Science',
+    topicName: 'Renewable and Non-Renewable Resources',
+    content: {
+      title: 'Renewable and Non-Renewable Resources',
+      intro: 'Natural resources are materials from Earth used by humans. Renewable resources can be replenished naturally, while non-renewable resources are finite. Sustainable use is critical for future generations.',
+      keyPoints: [
+        'Natural resources: materials from Earth used by humans',
+        'Renewable resources: can be replenished naturally on human timescale',
+        'Examples of renewable: solar, wind, hydroelectric, geothermal, biomass',
+        'Non-renewable resources: finite supply, cannot be replenished quickly',
+        'Fossil fuels: coal, oil, natural gas (formed over millions of years)',
+        'Nuclear energy: uses uranium (non-renewable but low carbon)',
+        'Solar energy: unlimited, clean, but intermittent and requires storage',
+        'Wind energy: clean, growing rapidly, depends on location and weather',
+        'Hydroelectric: reliable but limited by geography, affects ecosystems',
+        'Geothermal: uses Earth\'s heat, reliable, limited locations',
+        'Biomass: organic material burned for energy (can be renewable if sustainably managed)',
+        'Sustainability: using resources to meet current needs without compromising future generations',
+        'Fossil fuels release CO₂ and contribute to climate change',
+        'Renewable energy reduces greenhouse gas emissions',
+        'Energy efficiency: using less energy to perform same task',
+        'Transition to renewables is essential for climate mitigation'
+      ],
+      examples: [
+        'Solar panels on homes generate electricity from sunlight',
+        'Wind turbines in Texas and Iowa produce significant electricity',
+        'Hoover Dam generates hydroelectric power for Southwest US',
+        'Iceland uses abundant geothermal energy for heating and electricity',
+        'Burning coal releases CO₂ and air pollutants',
+        'Electric vehicles reduce reliance on oil',
+        'LED bulbs use 75% less energy than incandescent (energy efficiency)'
+      ],
+      commonMistakes: [
+        'Thinking renewable energy is always 100% clean (manufacturing has impacts)',
+        'Believing we can run out of solar or wind energy (they\'re unlimited)',
+        'Not recognizing that fossil fuels take millions of years to form',
+        'Assuming nuclear energy is renewable (uranium is finite)',
+        'Thinking renewable energy can\'t meet our needs (technology is advancing rapidly)'
+      ],
+      tips: [
+        'Renewable = replenished naturally (solar, wind, hydro, geothermal)',
+        'Non-renewable = finite (fossil fuels, nuclear)',
+        'Fossil fuels = major source of CO₂ emissions',
+        'Renewable energy = key to combating climate change',
+        'Energy efficiency = doing more with less energy'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Environmental Science',
+    topicName: 'Sustainable Development',
+    content: {
+      title: 'Sustainable Development',
+      intro: 'Sustainable development meets the needs of the present without compromising the ability of future generations to meet their own needs. It balances economic growth, environmental protection, and social equity.',
+      keyPoints: [
+        'Sustainable development: meeting present needs without harming future generations',
+        'Three pillars: economic, environmental, social (people, planet, profit)',
+        'Economic sustainability: prosperity without depleting resources',
+        'Environmental sustainability: protecting ecosystems and biodiversity',
+        'Social sustainability: equity, health, education, quality of life',
+        'UN Sustainable Development Goals (SDGs): 17 goals for global sustainability by 2030',
+        'Examples of SDGs: no poverty, zero hunger, clean water, affordable clean energy, climate action',
+        'Circular economy: reduce waste, reuse materials, recycle (opposite of linear "take-make-dispose")',
+        'Green building: energy-efficient design, sustainable materials, reduced environmental impact',
+        'Sustainable agriculture: organic farming, crop rotation, reduced pesticide use',
+        'Overpopulation: more people = more resource use and waste',
+        'Carrying capacity: maximum population an environment can support sustainably',
+        'Ecological footprint: measure of human demand on nature',
+        'Carbon footprint: total greenhouse gas emissions caused by individual/organization',
+        'Fair trade: ensures producers in developing countries receive fair wages',
+        'Corporate social responsibility (CSR): businesses considering environmental and social impacts'
+      ],
+      examples: [
+        'Costa Rica: 99% renewable electricity, leader in ecotourism and conservation',
+        'Tesla: promotes electric vehicles to reduce fossil fuel use',
+        'LEED certification: green building standard for energy efficiency',
+        'Organic farming: avoids synthetic pesticides, protects soil health',
+        'Recycling programs reduce landfill waste and conserve resources',
+        'Fair trade coffee ensures farmers receive fair compensation',
+        'Bike-sharing programs reduce car use in cities (social and environmental benefits)'
+      ],
+      commonMistakes: [
+        'Thinking sustainability is only environmental (it\'s economic and social too)',
+        'Believing economic growth always harms environment (sustainable growth is possible)',
+        'Not recognizing trade-offs between pillars (requires balance)',
+        'Assuming sustainability is only for governments/corporations (individuals matter)',
+        'Thinking sustainable development means no development (it means smarter development)'
+      ],
+      tips: [
+        'Sustainability = economic + environmental + social',
+        'SDGs = 17 global goals for sustainable future',
+        'Circular economy = reduce, reuse, recycle',
+        'Ecological footprint = measure of resource use',
+        'Fair trade = equitable compensation for producers'
+      ]
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'Environmental Science',
+    topicName: 'Human Impact on Ecosystems',
+    content: {
+      title: 'Human Impact on Ecosystems',
+      intro: 'Human activities significantly alter ecosystems through habitat destruction, pollution, resource extraction, and introduction of invasive species. Understanding these impacts is essential for conservation and restoration.',
+      keyPoints: [
+        'Human activities are major drivers of ecosystem change',
+        'Deforestation: clearing forests for agriculture, logging, urbanization',
+        'Consequences of deforestation: habitat loss, CO₂ emissions, soil erosion, species extinction',
+        'Urbanization: cities expand, replacing natural habitats with buildings and roads',
+        'Urban heat island effect: cities warmer than surrounding rural areas',
+        'Agriculture: monocultures reduce biodiversity, pesticides harm non-target species',
+        'Overfishing: depletes fish populations, disrupts marine food webs',
+        'Bottom trawling: destroys seafloor habitats',
+        'Dam construction: alters river ecosystems, blocks fish migration',
+        'Mining: habitat destruction, water pollution from toxic chemicals',
+        'Introduced species: humans transport species globally (sometimes becomes invasive)',
+        'Habitat fragmentation: large habitats divided into smaller, isolated patches',
+        'Edge effects: conditions at habitat edges differ from interior',
+        'Restoration ecology: science of restoring degraded ecosystems',
+        'Rewilding: reintroducing keystone species to restore ecosystem function',
+        'Conservation easements: landowners agree to protect land from development'
+      ],
+      examples: [
+        'Amazon deforestation for cattle ranching and soy farming',
+        'Chesapeake Bay: overfishing and pollution degraded once-productive ecosystem',
+        'Kudzu in southeastern US: invasive vine smothers native plants',
+        'Three Gorges Dam in China: displaced people, altered Yangtze River ecosystem',
+        'Mountaintop removal mining in Appalachia destroys forests and pollutes streams',
+        'Everglades restoration: removing invasive species, restoring water flow',
+        'Yellowstone wolf reintroduction: restored ecosystem balance (trophic cascade)'
+      ],
+      commonMistakes: [
+        'Thinking human impact is only negative (we can also restore ecosystems)',
+        'Not recognizing cumulative impacts (many small impacts add up)',
+        'Believing technology alone can solve environmental problems (behavior change needed)',
+        'Assuming ecosystems can recover quickly (restoration takes time)',
+        'Thinking only direct impacts matter (indirect impacts can be significant)'
+      ],
+      tips: [
+        'Deforestation = major cause of habitat loss and CO₂ emissions',
+        'Habitat fragmentation isolates populations, reduces biodiversity',
+        'Invasive species harm native ecosystems',
+        'Restoration can reverse damage, but prevention is better',
+        'Human choices determine future of ecosystems'
       ]
     }
   }
