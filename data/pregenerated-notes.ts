@@ -243,6 +243,1212 @@ export const pregeneratedNotes: PregeneratedNote[] = [
       ]
     }
   },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Linear Functions',
+    content: {
+      title: 'Linear Functions',
+      intro: 'Linear functions are fundamental mathematical relationships where the rate of change is constant. Understanding slope, y-intercept, and function notation is essential for success on the Digital SAT.',
+      keyPoints: [
+        'A linear function has the form f(x) = mx + b or y = mx + b',
+        'The graph of a linear function is always a straight line',
+        'Slope (m) represents the rate of change: m = (y₂ - y₁)/(x₂ - x₁)',
+        'Y-intercept (b) is the value of y when x = 0',
+        'X-intercept is found by setting y = 0 and solving for x',
+        'Positive slope: line rises from left to right',
+        'Negative slope: line falls from left to right',
+        'Zero slope: horizontal line (constant function)',
+        'Undefined slope: vertical line (not a function)',
+        'Parallel lines have equal slopes',
+        'Perpendicular lines have slopes that are negative reciprocals: m₁ · m₂ = -1',
+        'Function notation: f(x) is the output when x is the input',
+        'Point-slope form: y - y₁ = m(x - x₁)',
+        'Standard form: Ax + By = C',
+        'Linear functions model constant rates: speed, cost per item, temperature change'
+      ],
+      examples: [
+        'Find slope between (2, 5) and (8, 17):\nm = (17 - 5)/(8 - 2) = 12/6 = 2',
+        'Write equation with slope 3 and y-intercept -4:\ny = 3x - 4',
+        'Find f(5) if f(x) = 2x - 7:\nf(5) = 2(5) - 7 = 10 - 7 = 3',
+        'Convert 3x + 4y = 12 to slope-intercept form:\n4y = -3x + 12\ny = (-3/4)x + 3',
+        'Line through (1, 4) with slope -2:\ny - 4 = -2(x - 1)\ny = -2x + 6'
+      ],
+      commonMistakes: [
+        'Confusing x and y when calculating slope',
+        'Thinking vertical lines have zero slope (they have undefined slope)',
+        'Forgetting to distribute negative signs when rearranging equations',
+        'Mixing up parallel (equal slopes) and perpendicular (negative reciprocal slopes)',
+        'Not recognizing that f(a) means substitute a for x'
+      ],
+      tips: [
+        'Always identify slope and y-intercept first when analyzing linear functions',
+        'Sketch a quick graph to visualize the relationship',
+        'Check your slope sign: does the line rise or fall?',
+        'For perpendicular slopes: flip and negate (2 becomes -1/2)',
+        'Practice converting between different forms of linear equations'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Exponential Functions',
+    content: {
+      title: 'Exponential Functions',
+      intro: 'Exponential functions model situations where quantities grow or decay at a constant percentage rate. They appear frequently in real-world contexts like population growth, compound interest, and radioactive decay.',
+      keyPoints: [
+        'Exponential function form: f(x) = a · bˣ where a ≠ 0 and b > 0, b ≠ 1',
+        'a is the initial value (y-intercept when x = 0)',
+        'b is the base (growth/decay factor)',
+        'If b > 1: exponential growth (increasing)',
+        'If 0 < b < 1: exponential decay (decreasing)',
+        'Growth rate r: use b = 1 + r (e.g., 5% growth → b = 1.05)',
+        'Decay rate r: use b = 1 - r (e.g., 5% decay → b = 0.95)',
+        'The graph passes through (0, a) always',
+        'Exponential functions never reach zero (have a horizontal asymptote)',
+        'Domain: all real numbers; Range: y > 0 (when a > 0)',
+        'Compound interest formula: A = P(1 + r/n)^(nt)',
+        'Continuous growth: A = Pe^(rt)',
+        'Half-life: time for a quantity to reduce to half its value',
+        'Exponential functions increase/decrease much faster than linear functions',
+        'The base e ≈ 2.718 is used for natural exponential functions'
+      ],
+      examples: [
+        'Population of 1000 grows at 3% per year. Find population after 5 years:\nP(t) = 1000(1.03)^t\nP(5) = 1000(1.03)^5 ≈ 1159',
+        'Radioactive substance decays by 12% per hour. Write the function:\nA(t) = A₀(1 - 0.12)^t = A₀(0.88)^t',
+        'Investment of $5000 at 4% annual interest compounded quarterly for 3 years:\nA = 5000(1 + 0.04/4)^(4·3) = 5000(1.01)^12 ≈ $5634',
+        'Half-life of 10 years means after 10 years, amount = 0.5A₀:\nA(t) = A₀(0.5)^(t/10)'
+      ],
+      commonMistakes: [
+        'Confusing growth rate with growth factor (3% growth is b = 1.03, not 0.03)',
+        'Using wrong formula for compound interest (forgetting n for compounding frequency)',
+        'Thinking exponential decay means the function becomes negative',
+        'Not recognizing that exponential functions never equal zero',
+        'Mixing up half-life formula structure'
+      ],
+      tips: [
+        'Growth rate r converts to b = 1 + r; decay rate converts to b = 1 - r',
+        'Graph exponential functions to check if growth/decay makes sense',
+        'For compound interest: A = P(1 + r/n)^(nt) - memorize this formula',
+        'Exponential growth: starts slow, then explodes; decay: drops fast, then levels off',
+        'Practice identifying a (initial value) and b (growth factor) from word problems'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Polynomial Operations',
+    content: {
+      title: 'Polynomial Operations',
+      intro: 'Polynomials are algebraic expressions consisting of variables and coefficients combined using addition, subtraction, and multiplication. Mastering polynomial operations is crucial for algebra and higher mathematics.',
+      keyPoints: [
+        'A polynomial is a sum of terms: aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀',
+        'Degree of polynomial: highest power of the variable',
+        'Leading coefficient: coefficient of the term with highest degree',
+        'Constant term: term with no variable (degree 0)',
+        'Adding/subtracting polynomials: combine like terms',
+        'Like terms have identical variables and exponents',
+        'Multiplying monomials: multiply coefficients, add exponents of same base',
+        'Distributive property: a(b + c) = ab + ac',
+        'FOIL method for binomials: (a + b)(c + d) = ac + ad + bc + bd',
+        'Multiplying polynomials: distribute each term of first to each term of second',
+        'Special products: (a + b)² = a² + 2ab + b²',
+        'Difference of squares: (a + b)(a - b) = a² - b²',
+        'Factoring: reverse of multiplication, finding expressions that multiply together',
+        'Greatest Common Factor (GCF): factor out largest common term',
+        'Polynomial long division: similar to numerical long division'
+      ],
+      examples: [
+        'Add: (3x² - 5x + 2) + (x² + 4x - 7)\n= 4x² - x - 5',
+        'Subtract: (2x³ + x - 3) - (x³ - 2x + 1)\n= 2x³ + x - 3 - x³ + 2x - 1 = x³ + 3x - 4',
+        'Multiply: (2x + 3)(x - 5)\n= 2x² - 10x + 3x - 15 = 2x² - 7x - 15',
+        'Expand: (x + 4)²\n= x² + 8x + 16',
+        'Factor: 3x² + 12x = 3x(x + 4)',
+        'Difference of squares: x² - 25 = (x + 5)(x - 5)'
+      ],
+      commonMistakes: [
+        'Forgetting to distribute negative signs when subtracting',
+        'Combining unlike terms (e.g., x² and x cannot be combined)',
+        'Errors in FOIL (forgetting inner or outer terms)',
+        'Sign errors when multiplying negative terms',
+        'Not factoring out GCF completely',
+        'Incorrectly applying (a + b)² as a² + b² (forgetting the 2ab term)'
+      ],
+      tips: [
+        'Line up like terms vertically when adding/subtracting',
+        'Check multiplication by plugging in a test value',
+        'Remember: (a + b)² = a² + 2ab + b², NOT a² + b²',
+        'Factor by finding GCF first, then other patterns',
+        'Practice special products to recognize them quickly'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Right Triangle Trigonometry',
+    content: {
+      title: 'Right Triangle Trigonometry',
+      intro: 'Right triangle trigonometry uses the ratios of side lengths in right triangles to solve for unknown angles and distances. SOH-CAH-TOA is the key to mastering these relationships.',
+      keyPoints: [
+        'SOH: sin(θ) = Opposite/Hypotenuse',
+        'CAH: cos(θ) = Adjacent/Hypotenuse',
+        'TOA: tan(θ) = Opposite/Adjacent',
+        'Hypotenuse: longest side, opposite the right angle',
+        'Opposite side: across from the angle you\'re considering',
+        'Adjacent side: next to the angle (but not the hypotenuse)',
+        'Inverse trig functions find angles: sin⁻¹, cos⁻¹, tan⁻¹',
+        'Complementary angles: sin(θ) = cos(90° - θ)',
+        'Pythagorean identity: sin²(θ) + cos²(θ) = 1',
+        'Common angles to memorize: 30°, 45°, 60°',
+        'Calculator must be in degree mode for SAT problems',
+        'Reciprocal functions: csc = 1/sin, sec = 1/cos, cot = 1/tan',
+        'tan(θ) = sin(θ)/cos(θ)',
+        'Angle of elevation: angle up from horizontal',
+        'Angle of depression: angle down from horizontal'
+      ],
+      examples: [
+        'Right triangle: hypotenuse = 10, opposite = 6. Find sin(θ):\nsin(θ) = 6/10 = 0.6',
+        'Find angle θ when tan(θ) = 3/4:\nθ = tan⁻¹(3/4) ≈ 36.87°',
+        'In 30-60-90 triangle with hypotenuse 8, find short leg:\nShort leg = 8 · sin(30°) = 8 · 0.5 = 4',
+        'Building casts 50 ft shadow, angle of elevation to sun is 40°. Find height:\ntan(40°) = h/50\nh = 50 · tan(40°) ≈ 42 ft',
+        'Ladder 20 ft long leans against wall at 70° angle. How high does it reach?\nh = 20 · sin(70°) ≈ 18.8 ft'
+      ],
+      commonMistakes: [
+        'Mixing up opposite and adjacent sides',
+        'Forgetting to identify which angle you\'re working with',
+        'Calculator in wrong mode (radians vs degrees)',
+        'Using wrong trig function for the given information',
+        'Confusing trig function with its inverse',
+        'Not labeling sides relative to the angle of interest'
+      ],
+      tips: [
+        'Always draw and label a diagram',
+        'Identify the angle first, then label opposite, adjacent, hypotenuse',
+        'SOH-CAH-TOA is your best friend - write it down',
+        'Check calculator mode before computing',
+        'For inverse trig: you have the ratio, you want the angle',
+        'Memorize special angle values: sin(30°) = 0.5, cos(45°) = √2/2, etc.'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Circle Properties',
+    content: {
+      title: 'Circle Properties',
+      intro: 'Circles are fundamental geometric shapes with unique properties involving circumference, area, arcs, and sectors. Understanding these relationships is essential for geometry problems on the SAT.',
+      keyPoints: [
+        'Circle: set of all points equidistant from a center point',
+        'Radius (r): distance from center to any point on circle',
+        'Diameter (d): distance across circle through center, d = 2r',
+        'Circumference (perimeter): C = 2πr = πd',
+        'Area: A = πr²',
+        'π ≈ 3.14159 (often use 3.14 or leave as π)',
+        'Chord: line segment connecting two points on circle',
+        'Diameter is the longest chord',
+        'Arc: portion of the circle\'s circumference',
+        'Central angle: angle formed at center of circle',
+        'Arc length: s = (θ/360°) · 2πr (θ in degrees)',
+        'Sector: pie-slice region bounded by two radii and an arc',
+        'Sector area: A = (θ/360°) · πr²',
+        'Inscribed angle: angle formed by two chords sharing an endpoint',
+        'Inscribed angle = (1/2) central angle subtending same arc',
+        'Tangent line: touches circle at exactly one point, perpendicular to radius at that point'
+      ],
+      examples: [
+        'Circle with radius 5. Find circumference and area:\nC = 2π(5) = 10π ≈ 31.4\nA = π(5)² = 25π ≈ 78.5',
+        'Circle with diameter 12. Find area:\nr = 6, A = π(6)² = 36π',
+        'Find arc length of 60° arc in circle with radius 9:\ns = (60/360) · 2π(9) = (1/6) · 18π = 3π',
+        'Sector with central angle 90° and radius 4:\nSector area = (90/360) · π(4)² = (1/4) · 16π = 4π',
+        'Circumference is 20π. Find radius:\n2πr = 20π, r = 10'
+      ],
+      commonMistakes: [
+        'Confusing radius and diameter',
+        'Using diameter instead of radius in area formula',
+        'Forgetting to square the radius in A = πr²',
+        'Not converting arc angle to fraction of full circle',
+        'Leaving answer in terms of π when decimal is requested (or vice versa)',
+        'Mixing up arc length and sector area formulas'
+      ],
+      tips: [
+        'Always identify whether you\'re given radius or diameter first',
+        'For arc/sector problems: find the fraction (θ/360°), then apply to circumference or area',
+        'Check if answer should be in terms of π or as a decimal',
+        'Circumference is 1-dimensional (length), area is 2-dimensional (square units)',
+        'Draw a diagram and label known values'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Triangle Similarity',
+    content: {
+      title: 'Triangle Similarity',
+      intro: 'Similar triangles have the same shape but different sizes. Their corresponding angles are equal and corresponding sides are proportional. These properties are powerful tools for solving geometric problems.',
+      keyPoints: [
+        'Similar triangles: same shape, corresponding angles equal, sides proportional',
+        'Symbol for similarity: △ABC ~ △DEF',
+        'AA Similarity: if two angles of one triangle equal two angles of another, triangles are similar',
+        'SAS Similarity: two sides proportional and included angle equal',
+        'SSS Similarity: all three sides proportional',
+        'Corresponding sides: sides opposite equal angles',
+        'Scale factor: ratio of corresponding side lengths',
+        'If scale factor is k, then area ratio is k²',
+        'Proportionality: a/b = c/d means ad = bc (cross-multiply)',
+        'Altitude to hypotenuse creates two similar right triangles',
+        'Similar triangles used for indirect measurement',
+        'Parallel lines cut by transversal create similar triangles',
+        'Corresponding angles: angles in same relative position',
+        'Geometric mean: if h is altitude to hypotenuse, h² = xy (where x, y are segments of hypotenuse)',
+        'Applications: shadows, mirrors, surveying, architecture'
+      ],
+      examples: [
+        'Triangles with angles 40°-60°-80° and 40°-60°-80° are similar by AA',
+        'Triangle sides 3, 4, 5 and triangle sides 6, 8, 10:\n3/6 = 4/8 = 5/10 = 1/2 (similar by SSS, scale factor 1/2)',
+        'Similar triangles: one side is 8, corresponding side is 12. Another side is 10, find corresponding:\n8/12 = 10/x\n8x = 120\nx = 15',
+        'Tree casts 24 ft shadow, 6 ft person casts 4 ft shadow. Find tree height:\n6/4 = h/24\n4h = 144\nh = 36 ft',
+        'Right triangle altitude to hypotenuse: hypotenuse segments are 4 and 9:\nh² = 4 · 9 = 36\nh = 6'
+      ],
+      commonMistakes: [
+        'Assuming triangles are similar without checking',
+        'Matching sides incorrectly (not using corresponding sides)',
+        'Forgetting to set up proportions correctly',
+        'Errors in cross-multiplication',
+        'Not recognizing similar triangles in complex diagrams',
+        'Confusing similarity with congruence (congruent = same size and shape)'
+      ],
+      tips: [
+        'Mark equal angles with the same symbol',
+        'Write similarity statement carefully: △ABC ~ △DEF means A↔D, B↔E, C↔F',
+        'Set up proportions with corresponding sides',
+        'Check that ratios are equal to verify similarity',
+        'Draw separate diagrams for similar triangles to see correspondence clearly',
+        'For word problems: sketch diagram and label all known measurements'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Probability Basics',
+    content: {
+      title: 'Probability Basics',
+      intro: 'Probability measures the likelihood of an event occurring, expressed as a number between 0 and 1. Understanding basic probability concepts helps analyze real-world situations involving chance and uncertainty.',
+      keyPoints: [
+        'Probability = (Number of favorable outcomes)/(Total number of possible outcomes)',
+        'Probability ranges from 0 (impossible) to 1 (certain)',
+        'Can express as fraction, decimal, or percentage',
+        'P(event) + P(not event) = 1',
+        'Complement: P(not A) = 1 - P(A)',
+        'Independent events: outcome of one doesn\'t affect the other',
+        'P(A and B) = P(A) · P(B) for independent events',
+        'Dependent events: outcome of one affects the other',
+        'P(A and B) = P(A) · P(B|A) for dependent events',
+        'P(A or B) = P(A) + P(B) - P(A and B)',
+        'For mutually exclusive events: P(A or B) = P(A) + P(B)',
+        'Mutually exclusive: events cannot both occur',
+        'Conditional probability: P(A|B) = probability of A given B has occurred',
+        'Sample space: set of all possible outcomes',
+        'Tree diagrams help visualize multiple events'
+      ],
+      examples: [
+        'Roll a die, find P(rolling 5):\nP(5) = 1/6 ≈ 0.167',
+        'Draw card from deck, find P(heart):\nP(heart) = 13/52 = 1/4 = 0.25',
+        'Flip two coins, P(both heads) [independent]:\nP(H and H) = 1/2 · 1/2 = 1/4',
+        'Bag: 3 red, 5 blue marbles. Pick one, don\'t replace, pick another. P(both red):\nP(1st red) = 3/8\nP(2nd red|1st red) = 2/7\nP(both red) = 3/8 · 2/7 = 6/56 = 3/28',
+        'P(rain) = 0.4. Find P(no rain):\nP(no rain) = 1 - 0.4 = 0.6'
+      ],
+      commonMistakes: [
+        'Mixing up independent and dependent events',
+        'Forgetting to account for replacement vs. no replacement',
+        'Adding probabilities when should multiply (for "and" with independent events)',
+        'Not recognizing mutually exclusive events',
+        'Calculating sample space incorrectly',
+        'Forgetting P(A or B) formula includes subtracting P(A and B)'
+      ],
+      tips: [
+        'For "and" with independent events: multiply',
+        'For "or" with mutually exclusive: add',
+        'Draw tree diagram for multi-stage experiments',
+        'Check: does outcome of first event change the second? → dependent',
+        'Complement is often easier: P(at least one) = 1 - P(none)',
+        'Always verify probability is between 0 and 1'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Scatter Plots and Correlation',
+    content: {
+      title: 'Scatter Plots and Correlation',
+      intro: 'Scatter plots visualize the relationship between two quantitative variables. Understanding correlation, lines of best fit, and outliers helps interpret data trends and make predictions.',
+      keyPoints: [
+        'Scatter plot: graph with points representing (x, y) data pairs',
+        'Shows relationship between two variables',
+        'Positive correlation: as x increases, y tends to increase',
+        'Negative correlation: as x increases, y tends to decrease',
+        'No correlation: no clear pattern or relationship',
+        'Line of best fit (trend line): line that best represents the data',
+        'Correlation coefficient (r): measures strength and direction, -1 ≤ r ≤ 1',
+        'r = 1: perfect positive correlation',
+        'r = -1: perfect negative correlation',
+        'r = 0: no linear correlation',
+        '|r| close to 1: strong correlation; close to 0: weak correlation',
+        'Outlier: point that deviates significantly from the pattern',
+        'Outliers can affect the line of best fit',
+        'Correlation does NOT imply causation',
+        'Interpolation: predicting within data range',
+        'Extrapolation: predicting outside data range (less reliable)'
+      ],
+      examples: [
+        'Study hours vs test scores: positive correlation (more study → higher scores)',
+        'Temperature vs heating costs: negative correlation (warmer → less heating)',
+        'Shoe size vs intelligence: no correlation (unrelated variables)',
+        'Data points: (1,2), (2,4), (3,5), (4,8), (5,9)\nPattern rises → positive correlation',
+        'Correlation r = 0.85 → strong positive relationship',
+        'Correlation r = -0.92 → strong negative relationship',
+        'Point far from others in pattern → outlier'
+      ],
+      commonMistakes: [
+        'Assuming correlation means causation',
+        'Confusing positive/negative correlation',
+        'Thinking r = 0.5 means 50% correlation (r is not a percentage)',
+        'Ignoring outliers when describing trends',
+        'Over-relying on extrapolation',
+        'Not checking scale of axes before interpreting'
+      ],
+      tips: [
+        'Look at overall pattern: does it rise, fall, or show no trend?',
+        'Strong correlation: points tightly clustered around line',
+        'Weak correlation: points widely scattered',
+        'Identify outliers: points far from the main cluster',
+        'Correlation strength: |r| > 0.7 is generally considered strong',
+        'Remember: correlation ≠ causation (ice cream sales and drownings both increase in summer, but ice cream doesn\'t cause drowning)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Sampling and Study Design',
+    content: {
+      title: 'Sampling and Study Design',
+      intro: 'Statistical studies require careful design to produce valid and reliable results. Understanding sampling methods, bias, and study types helps evaluate the quality of data and conclusions.',
+      keyPoints: [
+        'Population: entire group being studied',
+        'Sample: subset of population selected for study',
+        'Random sample: each member has equal chance of selection',
+        'Random sampling reduces bias and improves generalizability',
+        'Simple random sample: select individuals completely at random',
+        'Stratified sample: divide population into groups, randomly sample each',
+        'Systematic sample: select every kth individual',
+        'Convenience sample: use readily available subjects (often biased)',
+        'Bias: systematic error that skews results',
+        'Selection bias: sample not representative of population',
+        'Response bias: participants don\'t answer truthfully',
+        'Observational study: observe without intervening',
+        'Experiment: actively impose treatment to measure effect',
+        'Control group: receives no treatment (for comparison)',
+        'Random assignment: randomly assign subjects to treatment/control',
+        'Confounding variable: factor that affects results but isn\'t controlled'
+      ],
+      examples: [
+        'Survey 50 students by randomly selecting from all students → random sample',
+        'Survey students only in cafeteria → convenience sample (biased: only hungry students)',
+        'Divide students by grade, randomly select from each grade → stratified sample',
+        'Test new medication: randomly assign patients to drug vs placebo → experiment with random assignment',
+        'Study smoking habits by asking smokers vs non-smokers → observational study',
+        'Survey asks "Don\'t you agree that...?" → response bias (leading question)'
+      ],
+      commonMistakes: [
+        'Thinking convenience samples are representative',
+        'Confusing observational study with experiment',
+        'Not recognizing sources of bias',
+        'Assuming correlation from observational study means causation',
+        'Ignoring confounding variables',
+        'Generalizing from biased samples'
+      ],
+      tips: [
+        'Random sampling = good; convenience sampling = often biased',
+        'Experiments can show causation; observational studies show correlation',
+        'Look for control group and random assignment in experiments',
+        'Identify potential biases: who was sampled? How were questions asked?',
+        'Larger samples generally more reliable (but quality > quantity)',
+        'Ask: Is the sample representative of the population?'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Complex Numbers',
+    content: {
+      title: 'Complex Numbers',
+      intro: 'Complex numbers extend the real number system to include solutions to equations like x² = -1. They have both real and imaginary parts and are written in the form a + bi.',
+      keyPoints: [
+        'Complex number form: a + bi where a, b are real numbers and i = √(-1)',
+        'i is the imaginary unit: i² = -1',
+        'Real part: a; Imaginary part: b (or bi)',
+        'Powers of i cycle: i¹ = i, i² = -1, i³ = -i, i⁴ = 1, then repeats',
+        'Adding/subtracting: combine like terms (real with real, imaginary with imaginary)',
+        'Multiplying: use distributive property and i² = -1',
+        'FOIL with complex numbers: (a + bi)(c + di) = (ac - bd) + (ad + bc)i',
+        'Complex conjugate of a + bi is a - bi',
+        'Multiplying conjugates: (a + bi)(a - bi) = a² + b² (always real)',
+        'Dividing: multiply numerator and denominator by conjugate of denominator',
+        'Absolute value (modulus): |a + bi| = √(a² + b²)',
+        'Complex plane: horizontal = real axis, vertical = imaginary axis',
+        'Every polynomial of degree n has n complex roots (Fundamental Theorem)',
+        'If a + bi is root of polynomial with real coefficients, so is a - bi',
+        'Pure imaginary: a = 0 (form bi)'
+      ],
+      examples: [
+        'Simplify i⁷:\ni⁷ = i⁴ · i³ = 1 · (-i) = -i',
+        'Add: (3 + 2i) + (5 - 7i)\n= 8 - 5i',
+        'Multiply: (2 + 3i)(1 - 4i)\n= 2 - 8i + 3i - 12i²\n= 2 - 5i - 12(-1) = 14 - 5i',
+        'Find conjugate of 6 - 2i:\nConjugate = 6 + 2i',
+        'Simplify: (3 + i)(3 - i)\n= 9 - i² = 9 - (-1) = 10',
+        'Divide: (2 + i)/(3 - i)\nMultiply by (3 + i)/(3 + i):\n= (6 + 5i + i²)/(9 - i²) = (5 + 5i)/10 = (1 + i)/2'
+      ],
+      commonMistakes: [
+        'Forgetting that i² = -1',
+        'Not simplifying powers of i correctly',
+        'Adding real and imaginary parts together',
+        'Forgetting to multiply by conjugate when dividing',
+        'Errors in distributing when multiplying complex numbers',
+        'Thinking imaginary numbers aren\'t "real" mathematically (they are valid)'
+      ],
+      tips: [
+        'Memorize i² = -1 and the cycle of i powers',
+        'Treat i like a variable but replace i² with -1',
+        'For division: always multiply by conjugate of denominator',
+        'Check: real parts with real, imaginary with imaginary',
+        'Conjugates are useful: they eliminate the imaginary part when multiplied'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Rational Expressions',
+    content: {
+      title: 'Rational Expressions',
+      intro: 'Rational expressions are fractions with polynomials in the numerator and denominator. Simplifying, multiplying, dividing, and adding rational expressions requires factoring skills and careful attention to restrictions.',
+      keyPoints: [
+        'Rational expression: ratio of two polynomials, P(x)/Q(x)',
+        'Undefined when denominator equals zero',
+        'Restrictions: values that make denominator = 0',
+        'Simplify: factor numerator and denominator, cancel common factors',
+        'Only cancel factors, not terms that are added or subtracted',
+        'Multiplying: (a/b) · (c/d) = (ac)/(bd), then simplify',
+        'Dividing: (a/b) ÷ (c/d) = (a/b) · (d/c) = (ad)/(bc)',
+        'Adding/subtracting: need common denominator',
+        'LCD (Least Common Denominator): smallest expression divisible by all denominators',
+        'Find LCD: factor denominators, take highest power of each factor',
+        'Multiply each fraction by what\'s needed to get LCD',
+        'Complex fraction: fraction with fractions in numerator or denominator',
+        'Simplify complex fractions: multiply by LCD of all small fractions',
+        'Check restrictions at the end',
+        'Domain: all real numbers except values that make denominator = 0'
+      ],
+      examples: [
+        'Simplify: (x² - 4)/(x + 2)\n= (x + 2)(x - 2)/(x + 2) = x - 2, x ≠ -2',
+        'Multiply: (2x/3) · (9/4x²)\n= 18x/(12x²) = 3/(2x), x ≠ 0',
+        'Divide: (x + 1)/2 ÷ (x + 1)/5\n= (x + 1)/2 · 5/(x + 1) = 5/2, x ≠ -1',
+        'Add: 3/x + 2/(x - 1)\nLCD = x(x - 1)\n= 3(x - 1)/(x(x - 1)) + 2x/(x(x - 1))\n= (3x - 3 + 2x)/(x(x - 1)) = (5x - 3)/(x(x - 1))',
+        'Find restrictions: 5/(x² - 9)\nx² - 9 = 0 → x = ±3\nRestrictions: x ≠ 3, x ≠ -3'
+      ],
+      commonMistakes: [
+        'Canceling terms instead of factors: (x + 2)/(x + 3) cannot simplify',
+        'Forgetting to state restrictions',
+        'Not finding LCD correctly',
+        'Errors in factoring polynomials',
+        'Forgetting to flip second fraction when dividing',
+        'Not simplifying final answer'
+      ],
+      tips: [
+        'Factor everything first before simplifying or operating',
+        'Only cancel factors (things multiplied), never cancel terms (things added)',
+        'Always state restrictions: values that make any denominator = 0',
+        'For adding/subtracting: LCD is your friend',
+        'Check your answer: plug in a test value to verify',
+        'Remember: dividing by a fraction = multiplying by its reciprocal'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Radical Equations',
+    content: {
+      title: 'Radical Equations',
+      intro: 'Radical equations contain variables inside radical symbols (square roots, cube roots, etc.). Solving them requires isolating the radical and then eliminating it by raising both sides to a power.',
+      keyPoints: [
+        'Radical: expression with a root symbol, like √x or ∛x',
+        'Square root: √x, principal (positive) root',
+        '√(a²) = |a| (absolute value)',
+        'To solve: isolate the radical on one side',
+        'Square both sides to eliminate square root',
+        'Cube both sides to eliminate cube root, etc.',
+        'Squaring can introduce extraneous solutions',
+        'Extraneous solution: satisfies squared equation but not original',
+        'Always check solutions in the original equation',
+        'For √x, domain is x ≥ 0 (radicand must be non-negative)',
+        'For even roots: radicand ≥ 0',
+        'For odd roots: all real numbers allowed',
+        'Multiple radicals: isolate one, square, repeat if needed',
+        'Simplifying radicals: √(ab) = √a · √b',
+        'Rationalizing denominator: multiply by radical over itself'
+      ],
+      examples: [
+        'Solve: √(x + 3) = 5\nSquare both sides: x + 3 = 25\nx = 22\nCheck: √(22 + 3) = √25 = 5 ✓',
+        'Solve: √(2x - 1) = x - 2\nSquare: 2x - 1 = x² - 4x + 4\n0 = x² - 6x + 5\n0 = (x - 5)(x - 1)\nx = 5 or x = 1\nCheck x = 5: √9 = 3 ✓\nCheck x = 1: √1 = -1 ✗ (extraneous)\nSolution: x = 5 only',
+        'Solve: ∛(x + 1) = 2\nCube both sides: x + 1 = 8\nx = 7',
+        'Simplify: √50 = √(25·2) = 5√2',
+        'Rationalize: 1/√3 = 1/√3 · √3/√3 = √3/3'
+      ],
+      commonMistakes: [
+        'Forgetting to check for extraneous solutions',
+        'Squaring before isolating the radical',
+        'Errors in expanding when squaring binomials',
+        'Not considering domain restrictions',
+        'Assuming all solutions are valid without checking',
+        'Sign errors when squaring'
+      ],
+      tips: [
+        'Isolate radical BEFORE squaring',
+        'Always check solutions in the original equation',
+        'Squaring creates extraneous solutions: verification is essential',
+        'For √x = a, require a ≥ 0 for real solutions',
+        'When squaring (a + b)²: don\'t forget the middle term 2ab',
+        'Domain: even roots require non-negative radicand'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Absolute Value Functions',
+    content: {
+      title: 'Absolute Value Functions',
+      intro: 'Absolute value represents distance from zero, always non-negative. Absolute value functions create V-shaped graphs and require special techniques for solving equations and inequalities.',
+      keyPoints: [
+        'Absolute value: |x| = distance of x from 0 on number line',
+        '|x| = x if x ≥ 0; |x| = -x if x < 0',
+        '|x| is always non-negative: |x| ≥ 0',
+        '|-5| = 5, |5| = 5, |0| = 0',
+        'Graph of y = |x| is V-shaped with vertex at origin',
+        'Transformations: y = |x - h| + k has vertex at (h, k)',
+        'Solving |x| = a: two solutions x = a or x = -a (if a > 0)',
+        'If a < 0: |x| = a has no solution',
+        'If a = 0: only solution is x = 0',
+        'Solving |ax + b| = c: set ax + b = c and ax + b = -c',
+        'Inequality |x| < a means -a < x < a',
+        'Inequality |x| > a means x < -a or x > a',
+        'Distance between points: |x - y| = distance from x to y',
+        'Properties: |ab| = |a|·|b|, |a/b| = |a|/|b|',
+        'Triangle inequality: |a + b| ≤ |a| + |b|'
+      ],
+      examples: [
+        'Solve: |x - 3| = 7\nx - 3 = 7 or x - 3 = -7\nx = 10 or x = -4',
+        'Solve: |2x + 1| = 5\n2x + 1 = 5 or 2x + 1 = -5\n2x = 4 or 2x = -6\nx = 2 or x = -3',
+        'Solve: |x| < 4\n-4 < x < 4',
+        'Solve: |x + 2| ≥ 3\nx + 2 ≥ 3 or x + 2 ≤ -3\nx ≥ 1 or x ≤ -5',
+        'Graph y = |x - 2| + 1:\nVertex at (2, 1), V-shaped, opens upward',
+        'Distance from 7 to -3: |7 - (-3)| = |10| = 10'
+      ],
+      commonMistakes: [
+        'Forgetting the negative case when solving |x| = a',
+        'Thinking |x + 3| = x + 3 (only true if x + 3 ≥ 0)',
+        'Mixing up < and > cases for inequalities',
+        'Not checking that a > 0 before solving |x| = a',
+        'Errors in transformation: |x - 2| shifts right, not left',
+        'Incorrectly simplifying |a - b|'
+      ],
+      tips: [
+        'For |expression| = a: create two equations (positive and negative cases)',
+        'For |x| < a: "less than" means "between" → -a < x < a',
+        'For |x| > a: "greater than" means "outside" → x < -a or x > a',
+        'Always check solutions in the original equation',
+        'Vertex form: y = a|x - h| + k has vertex (h, k)',
+        'Draw number line to visualize inequality solutions'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Unit Circle and Radian Measure',
+    content: {
+      title: 'Unit Circle and Radian Measure',
+      intro: 'The unit circle is a circle with radius 1 centered at the origin. It provides a geometric way to understand trigonometric functions and introduces radian measure, the standard unit for angles in mathematics.',
+      keyPoints: [
+        'Unit circle: circle with radius 1, center at origin',
+        'Point on unit circle: (cos θ, sin θ)',
+        'Radian: angle subtended by arc length equal to radius',
+        'Full circle: 360° = 2π radians',
+        'Half circle: 180° = π radians',
+        'Convert degrees to radians: multiply by π/180',
+        'Convert radians to degrees: multiply by 180/π',
+        'Common angles: 30° = π/6, 45° = π/4, 60° = π/3, 90° = π/2',
+        'Quadrant I (0 to π/2): all trig functions positive',
+        'Quadrant II (π/2 to π): sin positive, cos and tan negative',
+        'Quadrant III (π to 3π/2): tan positive, sin and cos negative',
+        'Quadrant IV (3π/2 to 2π): cos positive, sin and tan negative',
+        'Reference angle: acute angle to x-axis',
+        'Arc length: s = rθ (θ in radians)',
+        'Sector area: A = (1/2)r²θ (θ in radians)',
+        'Memorize unit circle values for 0°, 30°, 45°, 60°, 90° (and multiples)'
+      ],
+      examples: [
+        'Convert 60° to radians:\n60° · π/180 = π/3',
+        'Convert 3π/4 to degrees:\n3π/4 · 180/π = 135°',
+        'Find sin(π/6):\nπ/6 = 30°, sin(30°) = 1/2',
+        'Find cos(3π/4):\n3π/4 = 135° (QII), reference angle 45°\ncos(135°) = -√2/2 (negative in QII)',
+        'Arc length with r = 5, θ = π/3:\ns = 5 · π/3 = 5π/3',
+        'Point (√3/2, 1/2) on unit circle:\ncos θ = √3/2, sin θ = 1/2 → θ = 30° = π/6'
+      ],
+      commonMistakes: [
+        'Using degrees when radians required (or vice versa)',
+        'Forgetting conversion factors: π/180 and 180/π',
+        'Not recognizing common angle values',
+        'Sign errors in different quadrants',
+        'Using arc length formula with degrees instead of radians',
+        'Mixing up which trig functions are positive in which quadrant'
+      ],
+      tips: [
+        'Memorize: π rad = 180°',
+        'All Students Take Calculus: ASTC for quadrant signs (All, Sin, Tan, Cos positive)',
+        'Memorize unit circle for multiples of 30° and 45°',
+        'Radians are "cleaner" for calculus and advanced math',
+        'Reference angle: find equivalent acute angle',
+        'For unit circle: x-coordinate is cos, y-coordinate is sin'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Sequences and Series',
+    content: {
+      title: 'Sequences and Series',
+      intro: 'Sequences are ordered lists of numbers following a pattern. Series are the sums of sequence terms. Understanding arithmetic and geometric sequences helps solve problems involving patterns and repeated processes.',
+      keyPoints: [
+        'Sequence: ordered list of numbers (a₁, a₂, a₃, ...)',
+        'Series: sum of sequence terms',
+        'Arithmetic sequence: constant difference between consecutive terms',
+        'Common difference: d = aₙ - aₙ₋₁',
+        'Arithmetic nth term: aₙ = a₁ + (n - 1)d',
+        'Arithmetic series sum: Sₙ = n(a₁ + aₙ)/2 or Sₙ = n(2a₁ + (n-1)d)/2',
+        'Geometric sequence: constant ratio between consecutive terms',
+        'Common ratio: r = aₙ/aₙ₋₁',
+        'Geometric nth term: aₙ = a₁ · r^(n-1)',
+        'Geometric series sum (finite): Sₙ = a₁(1 - rⁿ)/(1 - r) when r ≠ 1',
+        'Infinite geometric series: converges if |r| < 1',
+        'Infinite geometric sum: S = a₁/(1 - r) when |r| < 1',
+        'Sigma notation: Σ represents summation',
+        'Recursive formula: defines term using previous term(s)',
+        'Explicit formula: defines term directly from n'
+      ],
+      examples: [
+        'Arithmetic: 3, 7, 11, 15, ...\nd = 4, a₁ = 3\na₁₀ = 3 + (10-1)·4 = 3 + 36 = 39',
+        'Sum first 10 terms of 2, 5, 8, 11, ...:\na₁ = 2, d = 3, n = 10\nS₁₀ = 10(2·2 + 9·3)/2 = 10(4 + 27)/2 = 155',
+        'Geometric: 2, 6, 18, 54, ...\nr = 3, a₁ = 2\na₅ = 2 · 3⁴ = 2 · 81 = 162',
+        'Sum first 5 terms of 3, 6, 12, 24, ...:\na₁ = 3, r = 2, n = 5\nS₅ = 3(1 - 2⁵)/(1 - 2) = 3(-31)/(-1) = 93',
+        'Infinite: 1/2 + 1/4 + 1/8 + ...\na₁ = 1/2, r = 1/2\nS = (1/2)/(1 - 1/2) = 1',
+        'Σ(2k + 1) from k=1 to 5:\n= 3 + 5 + 7 + 9 + 11 = 35'
+      ],
+      commonMistakes: [
+        'Confusing arithmetic and geometric sequences',
+        'Using wrong formula (arithmetic vs geometric)',
+        'Errors in calculating n (number of terms)',
+        'Not recognizing when infinite series diverges (|r| ≥ 1)',
+        'Forgetting (n - 1) in nth term formulas',
+        'Mixing up a₁ (first term) and aₙ (nth term)'
+      ],
+      tips: [
+        'Arithmetic: add same amount each time; Geometric: multiply by same amount',
+        'Find d or r first by looking at consecutive terms',
+        'For series: know your formulas (arithmetic sum, geometric sum)',
+        'Infinite geometric series only converges when |r| < 1',
+        'Check: does pattern match arithmetic, geometric, or neither?',
+        'Write out first few terms to verify your formula works'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Reading Comprehension Strategies',
+    content: {
+      title: 'Reading Comprehension Strategies',
+      intro: 'Effective reading comprehension requires active engagement with text, identifying main ideas and supporting details, and understanding the author\'s purpose and perspective. These strategies are essential for success on the SAT Reading section.',
+      keyPoints: [
+        'Main idea: central point or message of the passage',
+        'Supporting details: facts, examples, evidence that support the main idea',
+        'Topic sentence: often contains the main idea of a paragraph',
+        'Thesis statement: presents the main argument in an essay',
+        'Author\'s purpose: why the author wrote the text (inform, persuade, entertain)',
+        'Tone: author\'s attitude toward the subject (formal, critical, enthusiastic, etc.)',
+        'Point of view: perspective from which the passage is written (1st, 2nd, 3rd person)',
+        'Active reading: annotate, underline key points, ask questions',
+        'Context clues: surrounding words/sentences help determine meaning',
+        'Inference: conclusion based on evidence, not explicitly stated',
+        'Fact vs opinion: facts can be verified; opinions are beliefs or judgments',
+        'Cause and effect: identify relationships between events',
+        'Compare and contrast: identify similarities and differences',
+        'Chronological order: events in time sequence',
+        'Text structure: how information is organized (problem-solution, description, sequence)'
+      ],
+      examples: [
+        'Main idea: "Climate change is the most pressing environmental challenge of our time" (rest of passage provides supporting evidence)',
+        'Supporting detail: "Studies show global temperatures have risen 1.1°C since pre-industrial times"',
+        'Inference: "She grabbed her umbrella and raincoat before leaving" → likely raining outside',
+        'Author\'s purpose in editorial criticizing policy → to persuade',
+        'Tone: "This groundbreaking discovery revolutionizes our understanding" → enthusiastic',
+        'Fact: "The human heart has four chambers" vs Opinion: "Biology is the most interesting science"'
+      ],
+      commonMistakes: [
+        'Confusing main idea with supporting details',
+        'Choosing answers based on personal opinion rather than text evidence',
+        'Not reading the full passage before answering questions',
+        'Missing key transitions that signal relationships',
+        'Assuming information not stated in the text',
+        'Speed reading without comprehension'
+      ],
+      tips: [
+        'Read the questions first to know what to look for',
+        'Underline or note key phrases as you read',
+        'Main idea is usually supported by multiple paragraphs, not just one detail',
+        'Author\'s purpose: look at overall message, not just one sentence',
+        'Eliminate obviously wrong answers first',
+        'Find evidence in the text for every answer - don\'t assume',
+        'Pay attention to transition words: however, therefore, additionally, etc.'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Vocabulary in Context',
+    content: {
+      title: 'Vocabulary in Context',
+      intro: 'Understanding words in context means determining their meaning based on how they\'re used in a sentence or passage. This skill is more important than memorizing definitions, as words can have multiple meanings depending on context.',
+      keyPoints: [
+        'Context: surrounding words and sentences that clarify meaning',
+        'Context clues help determine unfamiliar word meanings',
+        'Definition clue: meaning stated directly nearby',
+        'Synonym clue: similar word provides hint',
+        'Antonym clue: opposite word helps by contrast',
+        'Example clue: examples illustrate the meaning',
+        'Inference clue: use logic and background knowledge',
+        'Multiple meanings: many words have different definitions in different contexts',
+        'Connotation: emotional or cultural associations of a word',
+        'Denotation: literal, dictionary definition',
+        'Replace word with answer choice and reread to check',
+        'Look for signal words: "such as," "for example," "however," "in other words"',
+        'Consider the part of speech (noun, verb, adjective, adverb)',
+        'Tone and author\'s attitude provide clues',
+        'Don\'t rely solely on memorized definitions - use context'
+      ],
+      examples: [
+        '"The dog was docile, gentle and easy to train" → synonym clue, docile = gentle',
+        '"Unlike his gregarious sister, Tom was quite shy" → antonym clue, gregarious = outgoing',
+        '"Herbivores, such as deer and rabbits, eat only plants" → example clue defines herbivores',
+        '"The project was a fiasco; everything went wrong" → definition clue after semicolon',
+        '"The judge was impartial and fair" → impartial means unbiased (synonym clue)',
+        'Word "current" in "ocean current" vs "current events" → different meanings based on context'
+      ],
+      commonMistakes: [
+        'Choosing the most common meaning without checking context',
+        'Not reading enough of the surrounding text',
+        'Ignoring tone and connotation',
+        'Assuming a word can only have one meaning',
+        'Not substituting answer choice back into sentence',
+        'Relying on vague recollection of word instead of passage context'
+      ],
+      tips: [
+        'Read the full sentence, plus one before and after',
+        'Look for context clue types: definition, synonym, antonym, example',
+        'Substitute each answer choice and see which makes the most sense',
+        'Consider tone: is the word positive, negative, or neutral?',
+        'Pay attention to signal words that introduce clues',
+        'Part of speech must match: if original is verb, answer must be verb form',
+        'When stuck, eliminate choices that clearly don\'t fit'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Evidence-Based Reading',
+    content: {
+      title: 'Evidence-Based Reading',
+      intro: 'Evidence-based reading requires supporting your answer choices with specific details from the text. The SAT emphasizes finding textual evidence and understanding how authors use evidence to support their claims.',
+      keyPoints: [
+        'Textual evidence: specific words, phrases, or sentences from the passage',
+        'Always base answers on what the text actually says',
+        'Direct evidence: explicitly stated in the passage',
+        'Indirect evidence: implied or suggested, requires inference',
+        'Author\'s claim: statement or argument the author makes',
+        'Supporting evidence: facts, statistics, examples, expert quotes that back up claims',
+        'Relevant evidence: directly relates to and supports the claim',
+        'Irrelevant evidence: doesn\'t support the claim, even if interesting',
+        'Strong evidence: specific, credible, sufficient',
+        'Weak evidence: vague, unreliable, insufficient',
+        'Quote accurately: use exact wording when citing evidence',
+        'Paraphrase: restate in your own words while maintaining meaning',
+        'Line references: questions often point to specific lines for evidence',
+        'Command of evidence questions: choose best support for previous answer',
+        'Evaluate reasoning: how well does evidence support the claim?'
+      ],
+      examples: [
+        'Claim: "Exercise improves mental health"\nStrong evidence: "Studies of 10,000 participants found 30 min daily exercise reduced depression by 25%"',
+        'Question: "Which lines best support that the character is nervous?"\nEvidence: "Her hands trembled as she reached for the doorknob" (lines 23-24)',
+        'Weak evidence: "Some people think exercise might help"\nStrong evidence: "Research published in JAMA showed..."',
+        'Paraphrase: Text says "The economy contracted by 2%" → "Economic growth was negative"',
+        'Direct evidence: "The population increased to 5 million"\nInference: "Housing demand likely rose" (implied, not stated)'
+      ],
+      commonMistakes: [
+        'Choosing answers based on what you think, not what the text says',
+        'Selecting evidence that\'s interesting but doesn\'t answer the question',
+        'Not reading enough context around line references',
+        'Misinterpreting or misquoting the evidence',
+        'Assuming information not explicitly or implicitly in the text',
+        'Choosing evidence for the wrong part of a two-part question'
+      ],
+      tips: [
+        'Always ask: "Where in the text does it say this?"',
+        'For two-part questions: answers should connect (evidence should support interpretation)',
+        'Underline relevant evidence as you identify it',
+        'Best evidence is specific, clear, and directly relevant',
+        'Eliminate choices not supported by any text',
+        'If you can\'t find evidence for an answer, it\'s probably wrong',
+        'Line reference questions: read 2-3 lines before and after for context'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Grammar and Usage',
+    content: {
+      title: 'Grammar and Usage',
+      intro: 'Grammar and usage rules ensure clear, correct communication. The SAT Writing section tests subject-verb agreement, pronoun usage, verb tense, and other essential grammar concepts.',
+      keyPoints: [
+        'Subject-verb agreement: singular subject takes singular verb, plural takes plural',
+        'Collective nouns (team, group, committee) are usually singular',
+        'Compound subjects joined by "and" are plural',
+        'Subjects joined by "or" or "nor": verb agrees with nearest subject',
+        'Pronoun-antecedent agreement: pronoun matches its noun in number and gender',
+        'Indefinite pronouns: each, every, everyone, somebody are singular',
+        'Plural indefinite pronouns: both, few, many, several',
+        'Pronoun case: I/he/she/they (subject); me/him/her/them (object)',
+        'Who vs whom: who is subject, whom is object',
+        'Verb tense consistency: don\'t shift tenses unnecessarily',
+        'Past: happened before; Present: happening now; Future: will happen',
+        'Modifier placement: place adjectives and adverbs near what they modify',
+        'Dangling modifier: phrase doesn\'t clearly modify anything',
+        'Misplaced modifier: modifier in wrong position creates confusion',
+        'Parallel structure: items in a list should have same grammatical form'
+      ],
+      examples: [
+        'Subject-verb agreement:\n✓ The dogs bark\n✓ The dog barks\n✗ The dog bark',
+        'Pronoun agreement:\n✓ Each student must bring their materials (singular they) or his or her materials\n✗ Each student must bring their own materials (traditionally incorrect, but increasingly accepted)',
+        'Pronoun case:\n✓ She and I went to the store\n✗ Her and me went to the store',
+        'Who vs whom:\n✓ Who is calling? (subject)\n✓ Whom did you call? (object)',
+        'Dangling modifier:\n✗ "Running to catch the bus, my backpack fell"\n✓ "Running to catch the bus, I dropped my backpack"',
+        'Parallel structure:\n✓ "I like swimming, biking, and running"\n✗ "I like swimming, biking, and to run"'
+      ],
+      commonMistakes: [
+        'Using "they" with singular antecedents (though this is evolving)',
+        'Subject-verb disagreement with intervening phrases: "The box of cookies are" ✗',
+        'Confusing who/whom, I/me, who/that',
+        'Shifting verb tenses mid-passage without reason',
+        'Misplacing modifiers, creating unintended meanings',
+        'Breaking parallel structure in lists'
+      ],
+      tips: [
+        'Find the subject: ignore prepositional phrases between subject and verb',
+        'For pronouns: identify the antecedent (word it refers to)',
+        'Who = subject (doing action), Whom = object (receiving action)',
+        'Trick for I/me: remove the other person - "Me went" sounds wrong',
+        'Check modifier: what is being modified? Is modifier next to it?',
+        'Lists need parallelism: same verb form, same structure',
+        'Read it aloud: errors often sound wrong'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Punctuation Rules',
+    content: {
+      title: 'Punctuation Rules',
+      intro: 'Proper punctuation clarifies meaning and shows relationships between ideas. The SAT tests your knowledge of commas, semicolons, colons, apostrophes, and other punctuation marks.',
+      keyPoints: [
+        'Period (.) ends a complete sentence',
+        'Comma (,) separates items in a list, after introductory phrases, between independent clauses with conjunction',
+        'Use comma after introductory word/phrase: "However, I disagree"',
+        'Use comma before coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so) joining independent clauses',
+        'No comma with subordinating conjunction starting sentence: "Although it rained we played"',
+        'Semicolon (;) joins two closely related independent clauses',
+        'Semicolon separates items in complex lists',
+        'Colon (:) introduces a list, explanation, or example after independent clause',
+        'Apostrophe shows possession: cat\'s toy, dogs\' toys',
+        'It\'s = it is; its = possessive (no apostrophe)',
+        'They\'re = they are; their = possessive; there = location',
+        'Your = possessive; you\'re = you are',
+        'Quotation marks around direct speech or titles of short works',
+        'Em dash (—) sets off additional information or emphasis',
+        'Parentheses ( ) enclose supplementary information'
+      ],
+      examples: [
+        'Comma in list: "I bought apples, bananas, and oranges"',
+        'Comma with conjunction: "I studied hard, but I still found the test difficult"',
+        'Semicolon: "She loves reading; her favorite genre is mystery"',
+        'Colon: "Bring the following: a pencil, paper, and calculator"',
+        'Apostrophe possession:\n✓ The student\'s book (one student)\n✓ The students\' books (multiple students)',
+        'Its vs it\'s:\n✓ The dog wagged its tail\n✓ It\'s raining outside',
+        'Semicolon in complex list: "Attendees came from Paris, France; Rome, Italy; and Berlin, Germany"'
+      ],
+      commonMistakes: [
+        'Comma splice: joining independent clauses with just comma ✗ "I ran, I walked"',
+        'Confusing its/it\'s, their/there/they\'re, your/you\'re',
+        'Using semicolon when colon is needed (before a list after independent clause)',
+        'Forgetting comma after introductory phrase',
+        'Apostrophe in plural (dogs not dog\'s when showing plural, not possession)',
+        'Using colon after incomplete sentence: "My favorites are: pizza..." ✗'
+      ],
+      tips: [
+        'Comma + FANBOYS joins independent clauses; semicolon alone does too',
+        'Colon requires independent clause before it',
+        'For possession: add \'s to singular, just \' to plural already ending in s',
+        'Contractions have apostrophes; possessive pronouns don\'t (its, your, their)',
+        'Semicolon = strong pause, comma = light pause',
+        'When in doubt, check if both sides of semicolon are complete sentences',
+        'Read without parenthetical: sentence should still be complete'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Transitions and Organization',
+    content: {
+      title: 'Transitions and Organization',
+      intro: 'Transitions connect ideas and show relationships between sentences and paragraphs. Good organization ensures logical flow and coherence, making writing clear and easy to follow.',
+      keyPoints: [
+        'Transition words show relationships between ideas',
+        'Addition: furthermore, moreover, additionally, also, in addition',
+        'Contrast: however, nevertheless, on the other hand, conversely, yet',
+        'Cause/Effect: therefore, consequently, as a result, thus, hence',
+        'Example: for instance, for example, specifically, namely',
+        'Time/Sequence: first, next, then, finally, meanwhile, previously',
+        'Emphasis: indeed, in fact, certainly, undoubtedly',
+        'Conclusion: in conclusion, in summary, ultimately, overall',
+        'Logical organization: ideas in sensible order',
+        'Topic sentence introduces paragraph\'s main idea',
+        'Supporting sentences develop the topic',
+        'Concluding sentence wraps up the paragraph',
+        'Chronological order: events in time sequence',
+        'Order of importance: most to least or least to most important',
+        'Spatial order: organize by physical location or position',
+        'Coherence: ideas connect clearly and logically'
+      ],
+      examples: [
+        'Addition: "Pollution harms wildlife. Moreover, it affects human health"',
+        'Contrast: "I studied hard; however, the test was still challenging"',
+        'Cause/Effect: "It rained heavily. Consequently, the game was cancelled"',
+        'Example: "Many animals are endangered, for instance, tigers and pandas"',
+        'Sequence: "First, preheat the oven. Next, mix the ingredients. Finally, bake for 30 minutes"',
+        'Poor transition: "I like pizza. Elephants are large" (unrelated)\nGood: "I like pizza. Similarly, I enjoy pasta"'
+      ],
+      commonMistakes: [
+        'Using wrong transition for the relationship (e.g., "however" when adding info)',
+        'Overusing one transition (e.g., "also" repeatedly)',
+        'No transition when one is needed',
+        'Illogical organization (jumping between unrelated points)',
+        'Starting every sentence with "And" or "But"',
+        'Placing unrelated ideas together without transition'
+      ],
+      tips: [
+        'Match transition to relationship: contrast vs cause vs addition',
+        'Topic sentences should clearly state the paragraph\'s focus',
+        'Check: does each sentence connect logically to the one before?',
+        'Vary transitions: don\'t use "also" five times in a row',
+        'Ask: what\'s the relationship? Addition? Contrast? Example?',
+        'Read passage aloud: transitions should make flow smooth',
+        'Common SAT question: "Which transition best connects these ideas?"'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Rhetorical Skills',
+    content: {
+      title: 'Rhetorical Skills',
+      intro: 'Rhetorical skills involve effective communication strategies: choosing the right words, tone, and style for your audience and purpose. The SAT tests your ability to improve clarity, precision, and effectiveness of written expression.',
+      keyPoints: [
+        'Rhetoric: art of effective communication',
+        'Audience: who you\'re writing for',
+        'Purpose: why you\'re writing (inform, persuade, entertain, explain)',
+        'Tone: attitude toward subject (formal, casual, serious, humorous)',
+        'Style: how you express ideas (word choice, sentence structure)',
+        'Conciseness: express ideas in fewest words without losing meaning',
+        'Wordiness: using more words than necessary',
+        'Redundancy: repeating the same idea unnecessarily',
+        'Precision: choosing exact, specific words',
+        'Diction: word choice appropriate for context',
+        'Formal diction: sophisticated vocabulary, proper grammar (academic writing)',
+        'Informal diction: casual language, contractions (friendly letter)',
+        'Active voice: subject performs action (clearer, more direct)',
+        'Passive voice: subject receives action (can be vague)',
+        'Sentence variety: mix short and long sentences, different structures'
+      ],
+      examples: [
+        'Wordy: "Due to the fact that it was raining..."\nConcise: "Because it was raining..."',
+        'Redundant: "The final outcome" (outcome is already final)\nBetter: "The outcome"',
+        'Vague: "The thing was good"\nPrecise: "The presentation was insightful"',
+        'Passive: "The ball was thrown by John"\nActive: "John threw the ball"',
+        'Informal tone: "Hey! Check this out!"\nFormal tone: "Please review the following information"',
+        'Redundant: "Past history, advance planning, free gift"\nBetter: "History, planning, gift"'
+      ],
+      commonMistakes: [
+        'Using overly complex words when simple ones are clearer',
+        'Mixing formal and informal tone inappropriately',
+        'Being wordy instead of concise',
+        'Using passive voice when active is clearer',
+        'Not considering audience (too technical or too simple)',
+        'Redundancy: "repeat again," "past memories," "completely full"'
+      ],
+      tips: [
+        'Cut unnecessary words: "in order to" → "to"',
+        'Prefer active voice for clarity and directness',
+        'Match tone to purpose: formal for academic, casual for friendly letter',
+        'Ask: Can I say this in fewer words without losing meaning?',
+        'Specific words > vague words: "sprinted" > "moved quickly"',
+        'Eliminate redundancies: if two words mean the same thing, choose one',
+        'Vary sentence length: all short = choppy; all long = hard to follow'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Scientific Method',
+    content: {
+      title: 'Scientific Method',
+      intro: 'The scientific method is a systematic approach to investigating questions and testing hypotheses. Understanding this process is essential for analyzing science passages and experiments on the SAT.',
+      keyPoints: [
+        'Scientific method: observation → question → hypothesis → experiment → analysis → conclusion',
+        'Observation: notice something in the natural world',
+        'Question: what do you want to find out?',
+        'Hypothesis: testable prediction or explanation',
+        'Good hypothesis: specific, testable, falsifiable',
+        'Experiment: controlled test of the hypothesis',
+        'Independent variable: what the experimenter changes',
+        'Dependent variable: what is measured in response',
+        'Control group: receives no treatment (baseline for comparison)',
+        'Experimental group: receives the treatment',
+        'Constants: factors kept the same to ensure fair test',
+        'Data: measurements and observations collected',
+        'Analysis: examine data for patterns and trends',
+        'Conclusion: does data support or reject hypothesis?',
+        'Peer review: other scientists evaluate the research',
+        'Reproducibility: others should be able to repeat the experiment and get similar results'
+      ],
+      examples: [
+        'Observation: Plants in sunlight seem healthier',
+        'Question: Does sunlight affect plant growth?',
+        'Hypothesis: Plants receiving more sunlight will grow taller',
+        'Experiment: Grow 20 plants - 10 in sunlight, 10 in shade (control). Measure height after 4 weeks',
+        'Independent variable: amount of sunlight',
+        'Dependent variable: plant height',
+        'Constants: same plant species, soil, water, temperature',
+        'Analysis: Average height in sunlight = 15 cm; in shade = 8 cm',
+        'Conclusion: Data supports hypothesis - sunlight increased plant growth'
+      ],
+      commonMistakes: [
+        'Confusing independent and dependent variables',
+        'Not identifying control group',
+        'Assuming correlation means causation',
+        'Hypothesis not testable or too vague',
+        'Not keeping constants controlled (multiple variables changing)',
+        'Drawing conclusions not supported by data'
+      ],
+      tips: [
+        'Independent variable: what YOU change; Dependent: what you MEASURE',
+        'Control group gets no treatment - needed for comparison',
+        'Good experiment changes only ONE variable',
+        'Hypothesis format: "If [independent], then [dependent] because..."',
+        'Look for: What was tested? What was measured? What stayed the same?',
+        'Larger sample size = more reliable results',
+        'Reproducible experiments are more credible'
+      ]
+    }
+  },
+  {
+    categorySlug: 'test-prep',
+    subjectName: 'Digital SAT',
+    topicName: 'Interpreting Data Tables and Graphs',
+    content: {
+      title: 'Interpreting Data Tables and Graphs',
+      intro: 'Data visualization through tables and graphs allows scientists to present findings clearly. The SAT tests your ability to read, interpret, and draw conclusions from various data representations.',
+      keyPoints: [
+        'Data table: organized rows and columns displaying information',
+        'Read labels: column and row headers identify what data represents',
+        'Units: pay attention to units (meters, seconds, %, etc.)',
+        'Bar graph: uses bars to compare categories',
+        'Line graph: shows change over time or continuous relationship',
+        'Pie chart (circle graph): shows parts of a whole, percentages',
+        'Scatter plot: shows relationship between two variables',
+        'Axes: x-axis (horizontal), y-axis (vertical)',
+        'Title: tells what the graph represents',
+        'Trend: general pattern or direction in data',
+        'Increasing trend: values going up',
+        'Decreasing trend: values going down',
+        'Constant: values staying the same',
+        'Interpolation: estimating values within the data range',
+        'Extrapolation: predicting values beyond the data range (less reliable)',
+        'Range: difference between highest and lowest values'
+      ],
+      examples: [
+        'Table shows test scores: find average by adding all scores and dividing by number of students',
+        'Bar graph of book sales: tallest bar shows bestselling genre',
+        'Line graph of temperature over 24 hours: identify highest point (peak temperature)',
+        'Pie chart: if "Sports" section is 25% of 400 students, 0.25 × 400 = 100 students like sports',
+        'Scatter plot: upward trend from left to right = positive correlation',
+        'Graph shows population grew from 1000 to 5000 over 10 years: increase of 4000 (or 400% growth)'
+      ],
+      commonMistakes: [
+        'Not reading axis labels and units',
+        'Misreading scale (especially if not starting at zero)',
+        'Confusing x and y axes',
+        'Ignoring graph title and legend',
+        'Assuming pie chart sections without checking percentages',
+        'Extrapolating too far beyond the data',
+        'Not noticing breaks in scale (can exaggerate differences)'
+      ],
+      tips: [
+        'Always read title, axis labels, and units first',
+        'Check the scale: does y-axis start at zero?',
+        'For tables: identify what each row and column represents',
+        'Trends: increasing, decreasing, or constant?',
+        'Scatter plots: look for positive, negative, or no correlation',
+        'Pie charts: all sections should total 100%',
+        'Be careful with percentages vs absolute numbers',
+        'If graph looks dramatic, check if scale is manipulated'
+      ]
+    }
+  },
 
   // ============================================================================
   // ALGEBRA 1 - CORE TOPICS
@@ -13738,6 +14944,1493 @@ export const pregeneratedNotes: PregeneratedNote[] = [
         'Restoration can reverse damage, but prevention is better',
         'Human choices determine future of ecosystems'
       ]
+    }
+  },
+
+  // ============================================================================
+  // COMPREHENSIVE EXPANSION - REMAINING ALGEBRA 1 TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Linear Equations and Inequalities',
+    content: {
+      title: 'Linear Equations and Inequalities',
+      intro: 'Linear equations and inequalities form the foundation of algebra. Solving them requires systematic application of inverse operations while maintaining equality or inequality relationships.',
+      keyPoints: [
+        'Linear equation: ax + b = c where a ≠ 0',
+        'Inverse operations undo each other: +/-, ×/÷',
+        'Addition/Subtraction Property of Equality: add or subtract same value from both sides',
+        'Multiplication/Division Property of Equality: multiply or divide both sides by same non-zero value',
+        'Goal: isolate variable on one side of equation',
+        'Check solution by substituting back into original equation',
+        'Inequality symbols: < (less than), > (greater than), ≤ (at most), ≥ (at least)',
+        'Solving inequalities: same steps as equations with ONE exception',
+        'KEY RULE: Flip inequality symbol when multiplying or dividing by negative number',
+        'Graph solutions on number line: open circle for < or >, closed circle for ≤ or ≥',
+        'Compound inequalities: AND (intersection) vs OR (union)',
+        'Multi-step equations: use order of operations in reverse (PEMDAS backwards)',
+        'Equations with variables on both sides: move all variables to one side',
+        'Distributive property: a(b + c) = ab + ac',
+        'Combining like terms: simplify before solving'
+      ],
+      examples: [
+        'Solve: 3x - 7 = 11\nAdd 7: 3x = 18\nDivide by 3: x = 6\nCheck: 3(6) - 7 = 18 - 7 = 11 ✓',
+        'Solve: -2x + 5 > 13\nSubtract 5: -2x > 8\nDivide by -2 (FLIP): x < -4',
+        'Solve: 4(x - 3) = 2x + 10\nDistribute: 4x - 12 = 2x + 10\nSubtract 2x: 2x - 12 = 10\nAdd 12: 2x = 22\nx = 11',
+        'Solve: 5 ≤ 2x + 1 < 13\nSubtract 1 from all parts: 4 ≤ 2x < 12\nDivide by 2: 2 ≤ x < 6',
+        'Solve: |x - 5| = 8\nx - 5 = 8 OR x - 5 = -8\nx = 13 OR x = -3'
+      ],
+      commonMistakes: [
+        'Forgetting to flip inequality when dividing/multiplying by negative',
+        'Adding/subtracting incorrectly across equals sign',
+        'Not distributing to all terms inside parentheses',
+        'Combining terms that aren\'t like terms',
+        'Forgetting to check solution in original equation',
+        'Using wrong type of circle on number line graph'
+      ],
+      tips: [
+        'Whatever you do to one side, do to the other',
+        'Undo operations in reverse order (reverse PEMDAS)',
+        'Always check your answer - plug it back in!',
+        'For inequalities: remember to FLIP when × or ÷ by negative',
+        'Draw number line to visualize inequality solutions',
+        'Keep work organized - write each step on new line'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Slope-Intercept Form',
+    content: {
+      title: 'Slope-Intercept Form (y = mx + b)',
+      intro: 'Slope-intercept form is the most commonly used form of a linear equation. It immediately reveals the slope and y-intercept, making graphing and interpretation straightforward.',
+      keyPoints: [
+        'Slope-intercept form: y = mx + b',
+        'm is the slope (rate of change, steepness)',
+        'b is the y-intercept (where line crosses y-axis when x = 0)',
+        'Slope formula: m = (y₂ - y₁)/(x₂ - x₁) = rise/run',
+        'Positive slope: line rises left to right (↗)',
+        'Negative slope: line falls left to right (↘)',
+        'Zero slope: horizontal line (y = b)',
+        'Undefined slope: vertical line (x = c, not a function)',
+        'Parallel lines: same slope (m₁ = m₂)',
+        'Perpendicular lines: negative reciprocal slopes (m₁ · m₂ = -1)',
+        'To graph: plot y-intercept (0, b), then use slope to find next point',
+        'Slope = 3 means rise 3, run 1; slope = -2/5 means down 2, right 5',
+        'Convert standard form to slope-intercept: solve for y',
+        'Real-world: slope = unit rate (mph, $/hour, etc.)',
+        'Steeper line = larger absolute value of slope'
+      ],
+      examples: [
+        'Identify m and b: y = 3x - 4\nm = 3 (slope), b = -4 (y-intercept)',
+        'Write equation with m = -2 and b = 5:\ny = -2x + 5',
+        'Find slope between (1, 3) and (4, 9):\nm = (9-3)/(4-1) = 6/3 = 2',
+        'Line passes through (0, -2) with slope 1/2:\ny = (1/2)x - 2',
+        'Convert 2x + 3y = 12 to slope-intercept:\n3y = -2x + 12\ny = (-2/3)x + 4',
+        'Perpendicular to y = 4x + 1:\nSlope = -1/4 (negative reciprocal of 4)'
+      ],
+      commonMistakes: [
+        'Confusing m and b (slope vs y-intercept)',
+        'Calculating slope as (x₂-x₁)/(y₂-y₁) instead of (y₂-y₁)/(x₂-x₁)',
+        'Forgetting negative signs when finding slope',
+        'Thinking perpendicular just means opposite sign (must be negative reciprocal)',
+        'Not recognizing y = # as horizontal line with m = 0',
+        'Assuming vertical lines have slope 0 (they have undefined slope)'
+      ],
+      tips: [
+        'Remember: y = mx + b (slope first, then y-intercept)',
+        'Slope is "rise over run" - vertical change over horizontal change',
+        'Start at y-intercept, use slope to plot second point',
+        'Parallel lines: copy the slope, change b',
+        'Perpendicular: flip and negate the slope',
+        'Bigger |m| = steeper line'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Graphing Linear Functions',
+    content: {
+      title: 'Graphing Linear Functions',
+      intro: 'Graphing linear functions visually represents the relationship between variables. Multiple methods exist depending on the form of the equation given.',
+      keyPoints: [
+        'Linear function graph is always a straight line',
+        'Two points determine a line',
+        'Method 1 - Slope-intercept (y = mx + b): plot (0,b), use slope for next point',
+        'Method 2 - Table of values: pick x values, calculate y, plot points',
+        'Method 3 - Intercepts: find x-intercept (set y=0) and y-intercept (set x=0)',
+        'X-intercept: point where line crosses x-axis (y = 0)',
+        'Y-intercept: point where line crosses y-axis (x = 0)',
+        'Horizontal line: y = c (slope = 0)',
+        'Vertical line: x = c (undefined slope, not a function)',
+        'Domain of linear function: all real numbers (unless restricted)',
+        'Range of linear function: all real numbers (except horizontal line)',
+        'Use ruler or straight edge for accuracy',
+        'Label axes with scales',
+        'Arrows on ends indicate line continues forever',
+        'Check with third point to verify'
+      ],
+      examples: [
+        'Graph y = 2x - 3:\nPlot (0, -3) [y-intercept]\nSlope = 2 = 2/1, so from (0,-3) go up 2, right 1 to (1,-1)\nDraw line through points',
+        'Graph using intercepts: 2x + 3y = 6\nX-intercept: 2x + 0 = 6 → x = 3, point (3, 0)\nY-intercept: 0 + 3y = 6 → y = 2, point (0, 2)\nPlot and connect',
+        'Graph y = -4 (horizontal line):\nDraw horizontal line through y = -4',
+        'Graph x = 2 (vertical line):\nDraw vertical line through x = 2',
+        'Table method for y = x + 1:\nx: -2, -1, 0, 1, 2\ny: -1, 0, 1, 2, 3\nPlot all points and connect'
+      ],
+      commonMistakes: [
+        'Not using a ruler (line looks curved or wobbly)',
+        'Plotting slope incorrectly (confusing rise and run)',
+        'Forgetting to extend line with arrows',
+        'Mislabeling axes or forgetting scales',
+        'Not plotting y-intercept first in slope-intercept method',
+        'Thinking you need more than 2 points (though 3rd is good to check)'
+      ],
+      tips: [
+        'Always plot at least 3 points to check your work',
+        'For slope-intercept: y-intercept first, then use slope',
+        'For standard form: find both intercepts',
+        'Use graph paper for accuracy',
+        'Check: Does the line match the slope? (positive = rising, negative = falling)',
+        'Label your axes and use consistent scales'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Solving Systems by Elimination',
+    content: {
+      title: 'Solving Systems by Elimination (Addition Method)',
+      intro: 'The elimination method solves systems of equations by adding or subtracting equations to eliminate one variable, allowing you to solve for the other.',
+      keyPoints: [
+        'Goal: add or subtract equations to eliminate one variable',
+        'Opposite coefficients: when coefficients are opposites (3x and -3x), add equations',
+        'Same coefficients: when coefficients are same (2y and 2y), subtract equations',
+        'If coefficients don\'t match: multiply one or both equations first',
+        'LCM strategy: find least common multiple of coefficients',
+        'Once one variable eliminated: solve for remaining variable',
+        'Back-substitute: plug value into either original equation to find second variable',
+        'Solution is ordered pair (x, y)',
+        'Check solution in BOTH original equations',
+        'Elimination often faster than substitution when coefficients align well',
+        'Multiply equation by number (not just one term - distribute to all)',
+        'Can multiply by negative to create opposite coefficients',
+        'May need to multiply both equations by different numbers',
+        'If get 0 = 0: infinitely many solutions (same line)',
+        'If get 0 = # (where # ≠ 0): no solution (parallel lines)'
+      ],
+      examples: [
+        'Solve: 2x + 3y = 13 and x - 3y = -4\nCoefficients of y are opposites (3y and -3y)\nAdd equations:\n(2x + 3y) + (x - 3y) = 13 + (-4)\n3x = 9, x = 3\nSubstitute into x - 3y = -4:\n3 - 3y = -4, -3y = -7, y = 7/3\nSolution: (3, 7/3)',
+        'Solve: 3x + 2y = 16 and 5x - 2y = 8\nCoefficients of y are opposites\nAdd: 8x = 24, x = 3\nSubstitute into 3x + 2y = 16:\n9 + 2y = 16, 2y = 7, y = 3.5\nSolution: (3, 3.5)',
+        'Solve: 2x + 3y = 7 and 3x + 4y = 10\nMultiply first by 3: 6x + 9y = 21\nMultiply second by -2: -6x - 8y = -20\nAdd: y = 1\nSubstitute: 2x + 3 = 7, x = 2\nSolution: (2, 1)'
+      ],
+      commonMistakes: [
+        'Only multiplying one term instead of entire equation',
+        'Adding when should subtract, or vice versa',
+        'Arithmetic errors in multiplication or addition',
+        'Forgetting to substitute back to find second variable',
+        'Not checking solution in both equations',
+        'Sign errors when multiplying by negatives'
+      ],
+      tips: [
+        'Look for opposite coefficients first (easiest case)',
+        'If no opposites, create them by multiplying',
+        'Multiply entire equation (all terms) not just one',
+        'Organize work vertically to avoid errors',
+        'After eliminating, you should have equation with one variable',
+        'Always check final answer in both original equations'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Difference of Squares',
+    content: {
+      title: 'Difference of Squares',
+      intro: 'The difference of squares is a special factoring pattern that applies when you have two perfect squares separated by subtraction. Recognition of this pattern enables quick factoring.',
+      keyPoints: [
+        'Pattern: a² - b² = (a + b)(a - b)',
+        'Must be subtraction (difference), not addition',
+        'Both terms must be perfect squares',
+        'Perfect squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144...',
+        'Variables can be squared: x², y², x⁴ = (x²)², x⁶ = (x³)²',
+        'Sum of squares (a² + b²) does NOT factor over reals',
+        'Check factorization by multiplying: (a+b)(a-b) = a² - b²',
+        'First factor: sum of square roots (a + b)',
+        'Second factor: difference of square roots (a - b)',
+        'May need to factor out GCF first',
+        'Can appear after factoring out GCF',
+        'Useful for solving equations when set equal to zero',
+        'Examples of perfect squares: x², 4y², 9z², 16a²b²',
+        'Coefficient must also be perfect square: 25x² = (5x)²',
+        'Can have difference of squares within difference of squares'
+      ],
+      examples: [
+        'Factor: x² - 25\n= x² - 5²\n= (x + 5)(x - 5)',
+        'Factor: 9y² - 16\n= (3y)² - 4²\n= (3y + 4)(3y - 4)',
+        'Factor: 4a² - 49b²\n= (2a)² - (7b)²\n= (2a + 7b)(2a - 7b)',
+        'Factor: x⁴ - 81\n= (x²)² - 9²\n= (x² + 9)(x² - 9)\n= (x² + 9)(x + 3)(x - 3)\n[Factor again - x² - 9 is also difference of squares!]',
+        'Factor: 2x² - 50\n= 2(x² - 25)\n= 2(x + 5)(x - 5)\n[Factor out GCF first]',
+        'Solve: x² - 36 = 0\n(x + 6)(x - 6) = 0\nx = -6 or x = 6'
+      ],
+      commonMistakes: [
+        'Trying to factor a² + b² (sum of squares doesn\'t factor)',
+        'Not recognizing perfect squares (forgetting 49 = 7², etc.)',
+        'Forgetting to factor out GCF first',
+        'Only writing one binomial instead of two',
+        'Sign errors: using (a - b)(a - b) instead of (a + b)(a - b)',
+        'Not factoring completely (missing nested difference of squares)'
+      ],
+      tips: [
+        'Memorize perfect squares 1² through 12²',
+        'Check: is it subtraction? Are both terms perfect squares?',
+        'Pattern: (√first + √second)(√first - √second)',
+        'If sum of squares a² + b², it doesn\'t factor (over reals)',
+        'Always factor out GCF before looking for difference of squares',
+        'Check for more factoring after first step (like x⁴ - 81)'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Domain and Range',
+    content: {
+      title: 'Domain and Range of Functions',
+      intro: 'Domain and range describe the input and output values of a function. Understanding restrictions helps determine what values are valid and possible.',
+      keyPoints: [
+        'Domain: all possible input values (x-values)',
+        'Range: all possible output values (y-values)',
+        'For continuous graphs: look at left-to-right span (domain), bottom-to-top span (range)',
+        'Interval notation: [a, b] includes endpoints, (a, b) excludes endpoints',
+        'Infinity symbols: ∞ and -∞, always use parentheses with infinity',
+        'Domain restrictions for rational functions: cannot divide by zero',
+        'Domain restrictions for square roots: radicand ≥ 0 (even roots)',
+        'Domain of most polynomials: all real numbers (-∞, ∞)',
+        'Range of parabola opening up: [k, ∞) where k is minimum y-value',
+        'Range of parabola opening down: (-∞, k] where k is maximum y-value',
+        'Linear functions (non-horizontal): domain and range both all reals',
+        'Horizontal line y = c: range is {c} (single value)',
+        'Absolute value V-shape: domain all reals, range [0, ∞) or transformed',
+        'Set notation: {x | x ≥ 0} means "set of x such that x is greater than or equal to zero"',
+        'Discrete functions (points only): list values or describe pattern'
+      ],
+      examples: [
+        'f(x) = 2x - 5 (linear):\nDomain: (-∞, ∞) all real numbers\nRange: (-∞, ∞) all real numbers',
+        'f(x) = x² - 4 (parabola opening up):\nDomain: (-∞, ∞)\nRange: [-4, ∞) [vertex at (0, -4)]',
+        'f(x) = 1/(x - 3) (rational):\nDomain: x ≠ 3, or (-∞, 3) ∪ (3, ∞)\nRange: y ≠ 0, or (-∞, 0) ∪ (0, ∞)',
+        'f(x) = √(x + 2):\nDomain: x + 2 ≥ 0, so x ≥ -2, or [-2, ∞)\nRange: [0, ∞)',
+        'f(x) = |x| - 3:\nDomain: (-∞, ∞)\nRange: [-3, ∞) [vertex at (0, -3)]',
+        'Graph from x = -2 to x = 5, y from 0 to 8:\nDomain: [-2, 5]\nRange: [0, 8]'
+      ],
+      commonMistakes: [
+        'Confusing domain and range',
+        'Using brackets with infinity (must use parentheses)',
+        'Not finding restrictions for rational or radical functions',
+        'Reading range from left-to-right instead of bottom-to-top',
+        'Forgetting to exclude division by zero values',
+        'Incorrect interval notation'
+      ],
+      tips: [
+        'Domain = all valid x-values, Range = all possible y-values',
+        'For graphs: domain is horizontal extent, range is vertical extent',
+        'Check for restrictions: division by zero, square root of negative',
+        'Infinity always gets parentheses: (a, ∞) or (-∞, b)',
+        'Brackets [ ] mean included, parentheses ( ) mean excluded',
+        'For parabolas: range starts at vertex y-value'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Function Notation',
+    content: {
+      title: 'Function Notation',
+      intro: 'Function notation f(x) is a way to name functions and indicate their inputs. It provides a clear, standardized method for evaluating functions and discussing their properties.',
+      keyPoints: [
+        'f(x) reads as "f of x" meaning "function f with input x"',
+        'f(x) = 2x + 1 means "the function f takes input x and outputs 2x + 1"',
+        'f is the function name, x is the input variable',
+        'To evaluate f(3): substitute 3 for every x in the function',
+        'Output is also called the function value',
+        'Different letters can name functions: g(x), h(t), P(n), etc.',
+        'f(x) = y, so f(x) and y are interchangeable',
+        'Composition: f(g(x)) means put g(x) into function f',
+        'f(a + b) ≠ f(a) + f(b) in general (careful with distribution)',
+        'Domain element → Function → Range element',
+        'Multiple representations: f(x) = x², f(2) = 4, the point (2, 4)',
+        'Piecewise functions: different rules for different x intervals',
+        'Inverse function: f⁻¹(x), undoes what f does',
+        'Function transformation: f(x) + k, f(x + h), af(x), etc.',
+        'Independent variable: input (usually x), Dependent variable: output (usually y)'
+      ],
+      examples: [
+        'If f(x) = 3x - 5, find f(4):\nf(4) = 3(4) - 5 = 12 - 5 = 7',
+        'If g(x) = x² + 2x, find g(-3):\ng(-3) = (-3)² + 2(-3) = 9 - 6 = 3',
+        'If h(x) = (x + 1)/x, find h(5):\nh(5) = (5 + 1)/5 = 6/5',
+        'If f(x) = 2x + 1, find f(a):\nf(a) = 2a + 1\n[Just replace x with a]',
+        'If f(x) = x² and g(x) = x + 3, find f(g(2)):\nFirst g(2) = 2 + 3 = 5\nThen f(5) = 5² = 25',
+        'If f(x) = 2x - 1, find x when f(x) = 11:\n2x - 1 = 11\n2x = 12\nx = 6'
+      ],
+      commonMistakes: [
+        'Thinking f(x) means f times x (it\'s not multiplication)',
+        'Not substituting into ALL instances of x',
+        'Confusing f(a + b) with f(a) + f(b)',
+        'Sign errors when substituting negative numbers',
+        'Confusing function composition order: f(g(x)) means g first, then f',
+        'Thinking f⁻¹ means 1/f (it means inverse function)'
+      ],
+      tips: [
+        'f(x) is just a fancy way to write y',
+        'To evaluate: substitute the input for every x in the expression',
+        'Use parentheses when substituting to avoid sign errors',
+        'For composition f(g(x)): work from inside out (g first, then f)',
+        'Function notation tells you input and output clearly',
+        'Check work by verifying the substitution'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Properties of Exponents',
+    content: {
+      title: 'Properties of Exponents',
+      intro: 'Exponent properties allow us to simplify expressions with powers efficiently. Understanding these rules is essential for working with polynomials and scientific notation.',
+      keyPoints: [
+        'Product Rule: aᵐ · aⁿ = aᵐ⁺ⁿ (same base, add exponents)',
+        'Quotient Rule: aᵐ ÷ aⁿ = aᵐ⁻ⁿ (same base, subtract exponents)',
+        'Power Rule: (aᵐ)ⁿ = aᵐⁿ (power to a power, multiply exponents)',
+        'Power of Product: (ab)ⁿ = aⁿbⁿ',
+        'Power of Quotient: (a/b)ⁿ = aⁿ/bⁿ',
+        'Zero Exponent: a⁰ = 1 (for a ≠ 0)',
+        'Negative Exponent: a⁻ⁿ = 1/aⁿ (reciprocal with positive exponent)',
+        'a¹ = a (any number to first power is itself)',
+        '1ⁿ = 1 (one to any power is one)',
+        'Negative base: (-a)ⁿ is positive if n even, negative if n odd',
+        'Only apply rules to same base',
+        'Cannot simplify 2³ · 3² (different bases)',
+        'Parentheses matter: -2⁴ = -16, but (-2)⁴ = 16',
+        'Multiple rules often apply in sequence',
+        'Simplify means: positive exponents, no parentheses, each base appears once'
+      ],
+      examples: [
+        'x³ · x⁵ = x³⁺⁵ = x⁸',
+        'y⁷ ÷ y³ = y⁷⁻³ = y⁴',
+        '(a⁴)³ = a⁴·³ = a¹²',
+        '(3x²)³ = 3³x⁶ = 27x⁶',
+        '5⁰ = 1',
+        'x⁻³ = 1/x³',
+        '(2x³y⁴)² = 4x⁶y⁸',
+        'Simplify: (a²b³)⁴/(a⁵b) = a⁸b¹²/(a⁵b) = a³b¹¹',
+        '(-3)² = 9, but -3² = -9'
+      ],
+      commonMistakes: [
+        'Multiplying exponents when adding: x² · x³ ≠ x⁶ (correct: x⁵)',
+        'Distributing exponents over addition: (x + y)² ≠ x² + y²',
+        'Thinking a⁰ = 0 (actually equals 1)',
+        'Forgetting negative becomes reciprocal: x⁻² ≠ -x²',
+        'Applying rules to different bases',
+        'Not distributing exponent to coefficient: (2x)³ ≠ 2x³'
+      ],
+      tips: [
+        'Same base, multiply: ADD exponents',
+        'Same base, divide: SUBTRACT exponents',
+        'Power to power: MULTIPLY exponents',
+        'Anything to the zero power is 1 (except 0⁰)',
+        'Negative exponent: flip to reciprocal, make exponent positive',
+        'Write out steps - don\'t skip!',
+        'Check: Does each base appear only once with positive exponent?'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Scientific Notation',
+    content: {
+      title: 'Scientific Notation',
+      intro: 'Scientific notation expresses very large or very small numbers in compact form using powers of 10. It\'s essential in science and engineering for handling extreme values.',
+      keyPoints: [
+        'Scientific notation form: a × 10ⁿ where 1 ≤ |a| < 10',
+        'a is called the coefficient (must be between 1 and 10, not including 10)',
+        'n is an integer (positive, negative, or zero)',
+        'Positive exponent: large number (move decimal right)',
+        'Negative exponent: small number (move decimal left)',
+        'To convert TO scientific notation: move decimal until 1 digit on left',
+        'Count moves: right moves give negative exponent, left moves give positive',
+        'To convert FROM scientific notation: move decimal based on exponent',
+        'Positive exponent: move decimal right n places',
+        'Negative exponent: move decimal left n places',
+        'Multiplying: multiply coefficients, add exponents',
+        'Dividing: divide coefficients, subtract exponents',
+        'May need to adjust to keep 1 ≤ |a| < 10',
+        'Leading zeros don\'t count as significant figures',
+        'Useful for: astronomy, microbiology, chemistry, physics'
+      ],
+      examples: [
+        '45,000 = 4.5 × 10⁴\n(move decimal left 4 places)',
+        '0.00032 = 3.2 × 10⁻⁴\n(move decimal right 4 places)',
+        '7.2 × 10⁶ = 7,200,000\n(move decimal right 6 places)',
+        '5.1 × 10⁻³ = 0.0051\n(move decimal left 3 places)',
+        'Multiply: (2 × 10³)(3 × 10⁵)\n= (2 × 3) × 10³⁺⁵\n= 6 × 10⁸',
+        'Divide: (8 × 10⁷) ÷ (2 × 10⁴)\n= (8 ÷ 2) × 10⁷⁻⁴\n= 4 × 10³',
+        'Adjust: 12.5 × 10⁴\n= 1.25 × 10¹ × 10⁴\n= 1.25 × 10⁵'
+      ],
+      commonMistakes: [
+        'Coefficient not between 1 and 10',
+        'Moving decimal wrong direction',
+        'Counting decimal moves incorrectly',
+        'Sign error on exponent (mixing up large vs small)',
+        'Forgetting to adjust after multiplication/division',
+        'Adding/subtracting exponents when multiplying coefficients'
+      ],
+      tips: [
+        'Coefficient must be ≥ 1 but < 10 (one non-zero digit left of decimal)',
+        'Large numbers (> 10): positive exponent',
+        'Small numbers (< 1): negative exponent',
+        'Exponent = number of decimal places moved',
+        'For operations: use exponent rules',
+        'Always adjust final answer if needed to keep proper form'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Point-Slope Form',
+    content: {
+      title: 'Point-Slope Form',
+      intro: 'Point-slope form is ideal when you know a point on the line and the slope. It provides a direct way to write the equation without finding the y-intercept first.',
+      keyPoints: [
+        'Point-slope form: y - y₁ = m(x - x₁)',
+        'm is the slope',
+        '(x₁, y₁) is a known point on the line',
+        'Use when given: one point and slope',
+        'Use when given: two points (find slope first)',
+        'Can convert to slope-intercept by solving for y',
+        'Can convert to standard form by eliminating fractions and rearranging',
+        'Any point on the line works for (x₁, y₁)',
+        'Be careful with signs: y - (-3) becomes y + 3',
+        'Distribute slope to both terms: m(x - x₁) = mx - mx₁',
+        'Quick check: plug in (x₁, y₁) - should get 0 = 0',
+        'Useful for tangent lines in calculus',
+        'Multiple correct forms exist (using different points)',
+        'Slope formula: m = (y₂ - y₁)/(x₂ - x₁)',
+        'After writing, often convert to slope-intercept or standard form'
+      ],
+      examples: [
+        'Line through (2, 5) with slope 3:\ny - 5 = 3(x - 2)',
+        'Line through (4, -1) with slope -2:\ny - (-1) = -2(x - 4)\ny + 1 = -2(x - 4)',
+        'Find equation through (1, 3) and (4, 9):\nSlope m = (9 - 3)/(4 - 1) = 6/3 = 2\ny - 3 = 2(x - 1)\nOr: y - 9 = 2(x - 4) [using other point]',
+        'Convert to slope-intercept:\ny - 3 = 2(x - 1)\ny - 3 = 2x - 2\ny = 2x + 1',
+        'Horizontal line through (2, 5):\nm = 0, so y - 5 = 0(x - 2)\ny = 5'
+      ],
+      commonMistakes: [
+        'Sign errors: y - (-3) should become y + 3, not y - 3',
+        'Using (x, y) instead of (x₁, y₁) in formula',
+        'Not distributing slope when converting forms',
+        'Calculating slope incorrectly from two points',
+        'Forgetting parentheses around (x - x₁)',
+        'Mixing up x₁ and y₁ coordinates'
+      ],
+      tips: [
+        'Formula: y - y₁ = m(x - x₁)',
+        'Plug in the point\'s coordinates for (x₁, y₁)',
+        'Watch signs carefully, especially with negative coordinates',
+        'Given two points: find slope first with m = (y₂ - y₁)/(x₂ - x₁)',
+        'To convert to y = mx + b: distribute m and solve for y',
+        'Check your answer: does the given point satisfy the equation?'
+      ]
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Algebra 1',
+    topicName: 'Standard Form of a Line',
+    content: {
+      title: 'Standard Form of a Linear Equation',
+      intro: 'Standard form arranges a linear equation as Ax + By = C where A, B, and C are integers and A is positive. It\'s useful for quickly finding both intercepts.',
+      keyPoints: [
+        'Standard form: Ax + By = C',
+        'A, B, C are integers (no fractions or decimals)',
+        'A should be positive (A > 0)',
+        'A and B should not both be zero',
+        'Typically, A, B, C have no common factors (reduced form)',
+        'To find x-intercept: set y = 0, solve for x',
+        'To find y-intercept: set x = 0, solve for y',
+        'Convert from slope-intercept: multiply to clear fractions, rearrange',
+        'Convert to slope-intercept: solve for y',
+        'Slope = -A/B (can determine from standard form)',
+        'Useful for integer solutions and intercepts',
+        'Vertical line: x = c (B = 0)',
+        'Horizontal line: y = c (A = 0)',
+        'Some textbooks allow A = 0 or negative, but positive A is standard',
+        'Moving terms: maintain equality by adding/subtracting same amount both sides'
+      ],
+      examples: [
+        '3x + 2y = 12 is in standard form\nA = 3, B = 2, C = 12\nX-intercept: 3x = 12 → x = 4, (4, 0)\nY-intercept: 2y = 12 → y = 6, (0, 6)',
+        'Convert y = 2x - 5 to standard form:\ny = 2x - 5\n-2x + y = -5\n2x - y = 5 [multiply by -1 to make A positive]',
+        'Convert y = (1/2)x + 3 to standard form:\nMultiply by 2: 2y = x + 6\n-x + 2y = 6\nx - 2y = -6 [multiply by -1]',
+        'Slope from standard form 4x + 3y = 12:\nSlope = -A/B = -4/3',
+        'Write with integer coefficients: 0.5x + y = 2\nMultiply by 2: x + 2y = 4'
+      ],
+      commonMistakes: [
+        'Leaving fractions or decimals in A, B, or C',
+        'Making A negative (should multiply equation by -1)',
+        'Forgetting to multiply ALL terms when clearing fractions',
+        'Not reducing to lowest terms',
+        'Confusing which intercept is which',
+        'Thinking standard form is y = mx + b'
+      ],
+      tips: [
+        'Standard form: Ax + By = C with A > 0 and all integers',
+        'To eliminate fractions: multiply entire equation by LCD',
+        'To find intercepts quickly: cover one variable, solve for other',
+        'X-intercept at (C/A, 0), Y-intercept at (0, C/B)',
+        'Slope = -A/B (rise/run from standard form)',
+        'Make sure A is positive by multiplying by -1 if needed'
+      ]
+    }
+  },
+
+  // ============================================================================
+  // ENGLISH LITERATURE - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'humanities',
+    subjectName: 'English Literature',
+    topicName: 'Poetry Analysis',
+    content: {
+      title: 'Poetry Analysis',
+      intro: 'Poetry analysis involves examining the elements of a poem including form, structure, sound devices, figurative language, and theme to understand the poet\'s message and craft.',
+      keyPoints: ['Speaker: voice telling the poem (not necessarily the poet)', 'Theme: central message or insight about life', 'Imagery: descriptive language appealing to the five senses', 'Figurative language: metaphor, simile, personification, hyperbole', 'Sound devices: rhyme, rhythm, alliteration, assonance, consonance', 'Form: sonnet, haiku, free verse, ballad, etc.', 'Structure: stanza organization, line breaks, punctuation', 'Tone: poet\'s attitude toward subject', 'Mood: emotional atmosphere created for reader', 'Symbolism: objects representing abstract ideas', 'Diction: word choice and its effect', 'Meter: rhythmic pattern of stressed/unstressed syllables'],
+      examples: ['Metaphor: "Hope is the thing with feathers" - Emily Dickinson', 'Alliteration: "The fair breeze blew, the white foam flew"', 'Symbolism: Raven representing death/grief in Poe\'s "The Raven"', 'Sonnet: 14-line poem, often about love (Shakespeare)', 'Free verse: no regular rhyme or meter (Walt Whitman)'],
+      commonMistakes: ['Confusing speaker with poet', 'Only focusing on literal meaning', 'Ignoring sound devices', 'Not considering historical context'],
+      tips: ['Read the poem multiple times', 'Look for patterns in sound and structure', 'Consider why the poet made specific choices', 'Connect form to meaning']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'English Literature',
+    topicName: 'Literary Devices and Figurative Language',
+    content: {
+      title: 'Literary Devices and Figurative Language',
+      intro: 'Literary devices are techniques writers use to create effects, convey meaning, and engage readers. Figurative language uses words in non-literal ways to create vivid imagery and deeper meaning.',
+      keyPoints: ['Simile: comparison using "like" or "as"', 'Metaphor: direct comparison without "like" or "as"', 'Personification: giving human qualities to non-human things', 'Hyperbole: extreme exaggeration for emphasis', 'Irony: contrast between expectation and reality', 'Allusion: reference to well-known person, place, event, or work', 'Symbolism: object representing abstract idea', 'Foreshadowing: hints about future events', 'Flashback: scene from the past', 'Imagery: vivid descriptive language', 'Onomatopoeia: words that sound like their meaning'],
+      examples: ['Simile: "busy as a bee"', 'Metaphor: "Time is money"', 'Personification: "The wind whispered secrets"', 'Hyperbole: "I\'ve told you a million times"', 'Irony: Fire station burns down', 'Allusion: "He was a real Romeo with the ladies"', 'Symbolism: Dove = peace, red rose = love'],
+      commonMistakes: ['Confusing simile and metaphor', 'Missing subtle irony', 'Not recognizing allusions', 'Overlooking symbolism'],
+      tips: ['Simile has "like" or "as," metaphor doesn\'t', 'Look for repeated symbols', 'Consider author\'s purpose for each device', 'Practice identifying devices in context']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'English Literature',
+    topicName: 'Character Analysis',
+    content: {
+      title: 'Character Analysis',
+      intro: 'Character analysis examines how characters are developed through their actions, words, thoughts, interactions, and changes throughout a narrative.',
+      keyPoints: ['Protagonist: main character', 'Antagonist: character opposing protagonist', 'Round character: complex, multi-dimensional', 'Flat character: one-dimensional, simple', 'Dynamic character: undergoes significant change', 'Static character: remains essentially unchanged', 'Direct characterization: author explicitly describes character', 'Indirect characterization: revealed through STEAL (Speech, Thoughts, Effects on others, Actions, Looks)', 'Motivation: reasons behind character\'s actions', 'Character arc: journey of change', 'Foil: character contrasting with another to highlight traits', 'Archetype: universal character type (hero, mentor, trickster)'],
+      examples: ['Protagonist: Harry Potter', 'Antagonist: Voldemort', 'Round: Elizabeth Bennet (Pride and Prejudice)', 'Flat: Mr. Collins (Pride and Prejudice)', 'Dynamic: Ebenezer Scrooge transforms in A Christmas Carol', 'Static: Sherlock Holmes remains consistent', 'Foil: Mercutio highlights Romeo\'s romantic nature'],
+      commonMistakes: ['Confusing round with dynamic', 'Ignoring subtle character development', 'Not considering motivation', 'Only analyzing protagonist'],
+      tips: ['Track character changes through the story', 'Pay attention to what characters say vs. do', 'Consider relationships between characters', 'Use STEAL method for indirect characterization']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'English Literature',
+    topicName: 'Theme and Central Idea',
+    content: {
+      title: 'Theme and Central Idea',
+      intro: 'Theme is the underlying message, insight, or commentary about life that a literary work conveys. It\'s the "so what?" of the story - what the reader should take away.',
+      keyPoints: ['Theme: universal message about life or human nature', 'Not the same as topic or subject', 'Stated as complete sentence, not one word', 'Can have multiple themes in one work', 'Revealed through characters, plot, setting, symbols', 'Universal themes: love, death, coming of age, good vs. evil, power, identity', 'Theme vs. Moral: theme is insight, moral is lesson', 'Supporting evidence: find multiple examples in text', 'Recurring elements often point to theme', 'Title often hints at theme', 'Conflicts reveal thematic concerns'],
+      examples: ['Topic: war → Theme: "War dehumanizes soldiers and destroys innocence"', 'Topic: friendship → Theme: "True friendship requires sacrifice and loyalty"', 'The Great Gatsby theme: "The American Dream is corrupted by materialism"', 'To Kill a Mockingbird: "Prejudice blinds people to truth and justice"', 'Romeo and Juliet: "Hatred and prejudice lead to tragedy"'],
+      commonMistakes: ['Stating theme as one word ("love" instead of statement about love)', 'Confusing topic with theme', 'Being too specific to story instead of universal', 'Not supporting with evidence'],
+      tips: ['Ask: What is the author saying about [topic]?', 'Look for what characters learn', 'Consider the ending\'s message', 'Find patterns and recurring ideas', 'Theme should apply beyond the specific story']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'English Literature',
+    topicName: 'Plot Structure and Narrative Elements',
+    content: {
+      title: 'Plot Structure and Narrative Elements',
+      intro: 'Plot structure organizes the sequence of events in a narrative. Understanding traditional plot elements helps analyze how stories create tension, develop meaning, and satisfy readers.',
+      keyPoints: ['Exposition: introduction of setting, characters, background', 'Rising Action: conflicts develop, tension builds', 'Climax: turning point, moment of highest tension', 'Falling Action: events after climax, moving toward resolution', 'Resolution/Denouement: conflicts resolved, loose ends tied', 'Conflict types: person vs. person, self, society, nature, technology, supernatural', 'Inciting Incident: event that starts the main conflict', 'Suspense: uncertainty about outcome', 'Pacing: speed of story progression', 'Flashforward: scene from the future', 'In medias res: starting in the middle of action', 'Circular structure: ending returns to beginning'],
+      examples: ['Romeo and Juliet - Exposition: feuding families; Climax: deaths of Romeo and Juliet', 'The Hunger Games - Inciting incident: Prim\'s name drawn', 'A Christmas Carol - Circular: begins and ends on Christmas', 'Internal conflict: Hamlet\'s indecision', 'External conflict: Katniss vs. Capitol'],
+      commonMistakes: ['Confusing climax with conclusion', 'Missing the inciting incident', 'Not identifying all conflicts', 'Thinking every story follows same structure'],
+      tips: ['Climax is the point of no return', 'Rising action takes up most of the story', 'Identify what each character wants and what prevents them', 'Track how tension builds']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'English Literature',
+    topicName: 'Point of View and Narrator',
+    content: {
+      title: 'Point of View and Narrator',
+      intro: 'Point of view determines who tells the story and how much the reader knows. The narrator\'s perspective shapes how readers understand events and characters.',
+      keyPoints: ['First Person: narrator is character in story ("I")', 'Third Person Limited: narrator outside story, knows one character\'s thoughts', 'Third Person Omniscient: narrator knows all characters\' thoughts and feelings', 'Third Person Objective: narrator reports only observable actions, no thoughts', 'Second Person: addresses reader as "you" (rare)', 'Reliable Narrator: trustworthy, accurate account', 'Unreliable Narrator: biased, deceptive, or limited understanding', 'Stream of consciousness: unfiltered flow of thoughts', 'Narrative distance: how close reader feels to character', 'Multiple narrators: different perspectives on same events'],
+      examples: ['First Person: "The Catcher in the Rye" (Holden tells his story)', 'Third Limited: "Harry Potter" (follows Harry\'s perspective)', 'Third Omniscient: "Pride and Prejudice" (knows all characters)', 'Unreliable: "The Tell-Tale Heart" (narrator is insane)', 'Multiple: "As I Lay Dying" (different family members narrate)'],
+      commonMistakes: ['Confusing narrator with author', 'Not recognizing unreliable narration', 'Mixing up limited and omniscient', 'Assuming first person is always reliable'],
+      tips: ['Whose thoughts do we access? That indicates POV', 'First person = "I," Third person = "he/she/they"', 'Question narrator\'s reliability', 'Consider what POV reveals vs. conceals']
+    }
+  },
+
+  // ============================================================================
+  // US HISTORY - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'humanities',
+    subjectName: 'US History',
+    topicName: 'Colonial America and Early Settlement',
+    content: {
+      title: 'Colonial America and Early Settlement',
+      intro: 'European colonization of North America began in the late 1500s, establishing diverse colonies with distinct economies, cultures, and relationships with Native Americans.',
+      keyPoints: ['Jamestown (1607): first permanent English settlement in Virginia', 'Plymouth (1620): Pilgrims seeking religious freedom', 'Three colonial regions: New England, Middle, Southern', 'New England: shipbuilding, fishing, trade, Puritan religion', 'Middle Colonies: "breadbasket," religious diversity, trade', 'Southern Colonies: plantation agriculture, slavery, tobacco and rice', 'Mercantilism: economic system benefiting mother country', 'Triangular Trade: Europe, Africa, Americas', 'Great Awakening: religious revival movement', 'Colonial self-government: House of Burgesses, town meetings', 'Native American displacement and conflict'],
+      examples: ['Massachusetts Bay Colony: Puritan "city upon a hill"', 'Pennsylvania: William Penn\'s "holy experiment" with religious tolerance', 'Virginia: tobacco economy, indentured servants then slaves', 'Mayflower Compact: self-government agreement'],
+      commonMistakes: ['Confusing Pilgrims and Puritans', 'Thinking all colonies were alike', 'Ignoring Native American perspective', 'Forgetting regional differences'],
+      tips: ['Remember three regions and their characteristics', 'Jamestown = economic, Plymouth = religious', 'Mercantilism = colonies exist to benefit England', 'Economic differences shaped colonial society']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'US History',
+    topicName: 'The Civil War',
+    content: {
+      title: 'The Civil War (1861-1865)',
+      intro: 'The Civil War was fought between the Union (North) and Confederacy (South) primarily over slavery and states\' rights, resulting in over 600,000 deaths and the preservation of the United States.',
+      keyPoints: ['Causes: slavery, states\' rights, economic differences, sectionalism', 'Immediate cause: election of Lincoln (1860), secession of Southern states', 'Confederate States of America: 11 Southern states seceded', 'Union advantages: larger population, industry, railroads, navy', 'Confederate advantages: defensive war, military leadership, motivation', 'Major battles: Fort Sumter, Bull Run, Antietam, Gettysburg, Vicksburg', 'Emancipation Proclamation (1863): freed slaves in Confederate states', 'Gettysburg Address: redefined war as fight for equality', 'Total war: Sherman\'s March to the Sea', 'Appomattox Court House (1865): Lee surrenders to Grant', 'Results: slavery abolished (13th Amendment), federal power strengthened'],
+      examples: ['Antietam: bloodiest single day, led to Emancipation Proclamation', 'Gettysburg: turning point, Union victory', 'Vicksburg: Union control of Mississippi River', 'Sherman\'s March: destroyed Southern resources and morale'],
+      commonMistakes: ['Thinking Civil War was only about slavery (also states\' rights, economics)', 'Confusing Emancipation Proclamation with 13th Amendment', 'Not understanding regional differences', 'Forgetting war\'s impact on civilians'],
+      tips: ['North = Union = blue, South = Confederacy = gray', 'Emancipation Proclamation was war strategy, 13th Amendment ended slavery nationally', 'Battle of Gettysburg was the turning point', 'War redefined federal-state relationship']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'US History',
+    topicName: 'The Great Depression',
+    content: {
+      title: 'The Great Depression (1929-1939)',
+      intro: 'The Great Depression was the worst economic crisis in American history, causing massive unemployment, poverty, and despair, ultimately reshaping the role of government.',
+      keyPoints: ['Stock Market Crash (October 1929): "Black Tuesday" began economic collapse', 'Causes: overproduction, speculation, unequal wealth distribution, bank failures', 'Unemployment reached 25%, banks failed, homelessness increased', 'Dust Bowl: environmental disaster worsened agricultural depression', 'Hoovervilles: shanty towns named after President Hoover', 'FDR elected (1932), promised "New Deal"', 'New Deal: government programs to provide relief, recovery, reform', 'Alphabet agencies: CCC, WPA, SSA, TVA, FDIC', 'Social Security Act (1935): retirement and unemployment insurance', 'Expanded federal government role in economy', 'Didn\'t fully end until WWII mobilization'],
+      examples: ['CCC: employed young men in conservation work', 'WPA: created jobs building infrastructure', 'Social Security: safety net for elderly and unemployed', 'FDIC: insured bank deposits to restore confidence', 'TVA: electrified rural Tennessee Valley'],
+      commonMistakes: ['Thinking crash alone caused Depression', 'Confusing Hoover and FDR policies', 'Not understanding New Deal\'s lasting impact', 'Forgetting Dust Bowl environmental component'],
+      tips: ['Stock crash was trigger, not sole cause', 'New Deal = Relief, Recovery, Reform (3 Rs)', 'FDR expanded federal government power permanently', 'Great Depression ended only with WWII']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'US History',
+    topicName: 'World War II',
+    content: {
+      title: 'World War II (1939-1945)',
+      intro: 'World War II was the deadliest conflict in human history. The US initially remained neutral but entered after Pearl Harbor, playing a decisive role in Allied victory.',
+      keyPoints: ['US initially neutral, provided aid to Allies (Lend-Lease Act)', 'Pearl Harbor (December 7, 1941): Japanese attack brought US into war', 'Two-front war: Europe and Pacific', 'European Theater: D-Day invasion, defeat of Nazi Germany', 'Pacific Theater: island-hopping strategy, atomic bombs', 'Home front: rationing, war production, women in workforce', 'Rosie the Riveter: symbol of women workers', 'Japanese internment: 120,000 Japanese Americans imprisoned', 'Manhattan Project: developed atomic bomb', 'Hiroshima and Nagasaki: atomic bombs ended war with Japan', 'Emerged as superpower, start of Cold War'],
+      examples: ['D-Day (June 6, 1944): Allied invasion of Normandy', 'Battle of Midway: turning point in Pacific', 'Iwo Jima and Okinawa: costly island battles', 'V-E Day (May 8, 1945): victory in Europe', 'V-J Day (August 15, 1945): victory over Japan'],
+      commonMistakes: ['Thinking US entered at war\'s start (actually 1941)', 'Not understanding two-theater strategy', 'Forgetting home front changes', 'Overlooking Japanese internment injustice'],
+      tips: ['Pearl Harbor = US entry point', 'Europe First strategy, but war fought on both fronts', 'Atomic bombs controversial but ended war', 'War transformed US into superpower']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'US History',
+    topicName: 'The Civil Rights Movement',
+    content: {
+      title: 'The Civil Rights Movement (1950s-1960s)',
+      intro: 'The Civil Rights Movement fought to end racial segregation and discrimination, secure voting rights, and achieve equality for African Americans through both legal action and direct protest.',
+      keyPoints: ['Brown v. Board of Education (1954): declared school segregation unconstitutional', 'Montgomery Bus Boycott (1955-56): Rosa Parks, MLK emerged', 'Little Rock Nine (1957): federal troops enforced school integration', 'Sit-ins: nonviolent protests at segregated lunch counters', 'Freedom Rides: challenged segregation in interstate travel', 'March on Washington (1963): "I Have a Dream" speech', 'Civil Rights Act (1964): banned discrimination in public accommodations and employment', 'Voting Rights Act (1965): protected African American voting rights', 'MLK Jr.: nonviolent resistance leader', 'Malcolm X: advocated Black empowerment and self-defense', 'Black Power movement: pride and political power'],
+      examples: ['Woolworth\'s sit-ins (1960): college students in Greensboro, NC', 'Freedom Summer (1964): voter registration in Mississippi', 'Selma to Montgomery marches (1965): "Bloody Sunday"', 'Assassination of MLK (1968): sparked riots nationwide'],
+      commonMistakes: ['Thinking movement ended in 1960s', 'Only crediting MLK, ignoring many leaders', 'Not understanding variety of tactics', 'Forgetting violent opposition faced'],
+      tips: ['Brown decision started legal fight, but enforcement took decades', 'Nonviolent protest was strategic, not passive', 'Civil Rights Act and Voting Rights Act were major victories', 'Movement had many leaders with different approaches']
+    }
+  },
+
+  // ============================================================================
+  // WORLD HISTORY - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'humanities',
+    subjectName: 'World History',
+    topicName: 'The Renaissance',
+    content: {
+      title: 'The Renaissance (1300-1600)',
+      intro: 'The Renaissance was a cultural rebirth in Europe emphasizing humanism, art, science, and learning. It marked the transition from medieval to modern times.',
+      keyPoints: ['Began in Italian city-states (Florence, Venice)', 'Humanism: focus on human potential and achievements', 'Secular: less religious focus than Middle Ages', 'Classical revival: renewed interest in Greek and Roman culture', 'Patronage: wealthy families (Medici) supported artists', 'Art innovations: perspective, realism, oil painting', 'Famous artists: Leonardo da Vinci, Michelangelo, Raphael', 'Literature: Dante, Petrarch, Shakespeare', 'Printing press (Gutenberg): spread of knowledge', 'Scientific inquiry: observation and experimentation', 'Spread to Northern Europe'],
+      examples: ['Leonardo: Mona Lisa, Last Supper, polymath genius', 'Michelangelo: Sistine Chapel ceiling, David sculpture', 'Shakespeare: playwright and poet', 'Machiavelli: The Prince (political theory)', 'Erasmus: Christian humanism'],
+      commonMistakes: ['Thinking Renaissance was sudden change', 'Confusing Renaissance with Reformation', 'Only crediting Italian Renaissance', 'Forgetting gradual spread across Europe'],
+      tips: ['Renaissance = rebirth of classical learning', 'Started in Italy, spread north', 'Humanism = focus on human, not just divine', 'Gutenberg\'s printing press was revolutionary']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'World History',
+    topicName: 'World War I',
+    content: {
+      title: 'World War I (1914-1918)',
+      intro: 'World War I, "The Great War," was an unprecedented global conflict that destroyed empires, reshaped borders, and set the stage for World War II.',
+      keyPoints: ['Causes: MAIN (Militarism, Alliances, Imperialism, Nationalism)', 'Assassination of Archduke Franz Ferdinand: immediate trigger', 'Allied Powers: Britain, France, Russia, later US', 'Central Powers: Germany, Austria-Hungary, Ottoman Empire', 'Trench warfare: stalemate on Western Front', 'New weapons: machine guns, poison gas, tanks, airplanes', 'Total war: entire societies mobilized', 'US entered 1917 (Zimmermann Telegram, unrestricted submarine warfare)', 'Russian Revolution (1917): Russia withdrew from war', 'Armistice: November 11, 1918', 'Treaty of Versailles: harsh terms for Germany, League of Nations', 'Consequences: empires collapsed, maps redrawn, economic devastation'],
+      examples: ['Battle of Verdun: 700,000+ casualties', 'Battle of the Somme: first day 60,000 British casualties', 'Gallipoli: failed Allied invasion of Ottoman Empire', 'Russian Revolution: Bolsheviks took power'],
+      commonMistakes: ['Thinking assassination alone caused war', 'Not understanding alliance system', 'Confusing which countries were Allied vs. Central', 'Forgetting US entered late'],
+      tips: ['MAIN causes: Militarism, Alliances, Imperialism, Nationalism', 'Trench warfare defined Western Front', 'Treaty of Versailles planted seeds for WWII', 'War ended empires (Russian, Ottoman, Austro-Hungarian, German)']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'World History',
+    topicName: 'The Cold War',
+    content: {
+      title: 'The Cold War (1947-1991)',
+      intro: 'The Cold War was a prolonged geopolitical tension between the United States and Soviet Union, characterized by ideological conflict, nuclear arms race, and proxy wars.',
+      keyPoints: ['US (capitalism, democracy) vs. USSR (communism, totalitarian)', 'Iron Curtain: division of Europe', 'Containment: US policy to stop spread of communism', 'Truman Doctrine: aid to countries resisting communism', 'Marshall Plan: economic aid to rebuild Western Europe', 'NATO vs. Warsaw Pact: military alliances', 'Berlin Airlift (1948-49): supplied West Berlin', 'Korean War (1950-53): divided Korea', 'Cuban Missile Crisis (1962): nuclear brinkmanship', 'Vietnam War: US attempt to prevent communist takeover', 'Space Race: competition for technological superiority', 'Arms race: nuclear weapons stockpiling', 'Détente: period of easing tensions (1970s)', 'Fall of Berlin Wall (1989), Soviet collapse (1991)'],
+      examples: ['Berlin Wall: symbol of Cold War division', 'Sputnik: Soviet satellite shocked US', 'Bay of Pigs: failed US invasion of Cuba', 'Reagan: "Tear down this wall!"'],
+      commonMistakes: ['Thinking Cold War was armed conflict', 'Not understanding proxy wars concept', 'Confusing which side countries supported', 'Forgetting Space Race component'],
+      tips: ['Cold War = no direct fighting between US and USSR', 'Proxy wars: Korea, Vietnam, Afghanistan', 'Nuclear threat defined era', 'Ended with Soviet collapse, not military victory']
+    }
+  },
+
+  // ============================================================================
+  // ECONOMICS - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Economics',
+    topicName: 'Market Structures',
+    content: {
+      title: 'Market Structures',
+      intro: 'Market structures describe the competitive environment in which firms operate, ranging from perfect competition to monopoly, affecting prices, output, and consumer choice.',
+      keyPoints: ['Perfect Competition: many firms, identical products, no barriers to entry', 'Monopolistic Competition: many firms, differentiated products, some control over price', 'Oligopoly: few large firms dominate, interdependent pricing', 'Monopoly: single firm controls entire market', 'Barriers to entry: factors preventing new firms from entering market', 'Price maker vs. price taker', 'Product differentiation: making products seem unique', 'Market power: ability to influence price', 'Collusion: firms cooperate to reduce competition (illegal)', 'Natural monopoly: one firm can serve market most efficiently'],
+      examples: ['Perfect competition: agricultural markets (wheat, corn)', 'Monopolistic: restaurants, clothing stores', 'Oligopoly: airlines, cell phone carriers, auto manufacturers', 'Monopoly: local utility companies (before deregulation)', 'Natural monopoly: water and electric utilities'],
+      commonMistakes: ['Confusing monopolistic competition with monopoly', 'Thinking all big companies are monopolies', 'Not understanding product differentiation', 'Forgetting barriers to entry'],
+      tips: ['Perfect competition = many firms, identical products', 'Monopoly = one firm, no close substitutes', 'Oligopoly = few firms, watch each other closely', 'More competition = lower prices generally']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Economics',
+    topicName: 'Fiscal and Monetary Policy',
+    content: {
+      title: 'Fiscal and Monetary Policy',
+      intro: 'Fiscal and monetary policies are tools governments and central banks use to influence the economy, affecting employment, inflation, and economic growth.',
+      keyPoints: ['Fiscal Policy: government spending and taxation', 'Expansionary fiscal: increase spending or cut taxes (stimulate economy)', 'Contractionary fiscal: decrease spending or raise taxes (slow economy)', 'Monetary Policy: central bank control of money supply and interest rates', 'Expansionary monetary: lower interest rates, increase money supply', 'Contractionary monetary: raise interest rates, decrease money supply', 'Federal Reserve (Fed): US central bank', 'Tools: open market operations, discount rate, reserve requirement', 'Inflation: general increase in price level', 'Recession: period of economic decline', 'Crowding out: government borrowing reduces private investment'],
+      examples: ['2008 Financial Crisis: Fed lowered rates, government stimulus spending', 'COVID-19: massive fiscal stimulus checks, Fed cut rates to near zero', 'Expansionary: tax cuts to boost spending', 'Contractionary: raise rates to fight inflation'],
+      commonMistakes: ['Confusing fiscal and monetary policy', 'Not understanding Fed independence', 'Thinking one policy is always better', 'Forgetting time lags in policy effects'],
+      tips: ['Fiscal = government taxing/spending', 'Monetary = Fed controlling money supply/interest rates', 'Low interest rates = encourage borrowing and spending', 'High interest rates = discourage borrowing, fight inflation']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Economics',
+    topicName: 'Comparative Advantage and Trade',
+    content: {
+      title: 'Comparative Advantage and International Trade',
+      intro: 'Comparative advantage explains why countries benefit from specialization and trade, even when one country is more efficient at producing everything.',
+      keyPoints: ['Absolute advantage: producing more output with same resources', 'Comparative advantage: producing at lower opportunity cost', 'Opportunity cost: what you give up to produce something', 'Specialization: focus on what you do best', 'Trade benefits both parties when based on comparative advantage', 'Terms of trade: exchange rate between goods', 'Trade barriers: tariffs, quotas, subsidies', 'Tariff: tax on imported goods', 'Quota: limit on quantity imported', 'Free trade: no barriers to international exchange', 'Protectionism: policies protecting domestic industries', 'Balance of trade: exports minus imports'],
+      examples: ['Country A better at both wheat and cars, but comparative advantage in wheat', 'Trade allows both countries to consume beyond production possibilities', 'NAFTA/USMCA: free trade agreement North America', 'Tariff on steel: protects domestic producers, raises prices for consumers'],
+      commonMistakes: ['Confusing absolute and comparative advantage', 'Thinking trade requires absolute advantage', 'Not calculating opportunity cost correctly', 'Assuming trade always hurts domestic workers'],
+      tips: ['Comparative advantage = lower opportunity cost', 'Countries benefit from trade even with absolute disadvantage', 'Calculate opportunity cost by what you give up', 'Specialization + trade increases total output']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Economics',
+    topicName: 'GDP and Economic Growth',
+    content: {
+      title: 'GDP and Economic Growth',
+      intro: 'Gross Domestic Product (GDP) measures the total value of goods and services produced in an economy. Understanding GDP helps assess economic health and growth.',
+      keyPoints: ['GDP: total market value of all final goods and services produced', 'Final goods: sold to end user (not intermediate goods)', 'Approaches: expenditure, income, production', 'Expenditure approach: C + I + G + (X - M)', 'C = Consumer spending, I = Investment, G = Government, (X-M) = Net exports', 'Nominal GDP: current prices', 'Real GDP: adjusted for inflation (constant prices)', 'GDP per capita: GDP divided by population', 'Economic growth: increase in real GDP over time', 'Recession: two consecutive quarters of negative GDP growth', 'GDP limitations: doesn\'t measure quality of life, inequality, non-market activities'],
+      examples: ['US GDP ~$25 trillion (world\'s largest)', 'Real GDP growth of 3% = healthy economy', 'GDP doesn\'t count: household work, volunteer work, black market', 'Per capita income: US ~$75,000, Haiti ~$1,800'],
+      commonMistakes: ['Using nominal instead of real GDP for comparisons', 'Counting intermediate goods (double counting)', 'Thinking GDP measures happiness', 'Forgetting GDP excludes non-market activities'],
+      tips: ['GDP = C + I + G + (X - M)', 'Real GDP accounts for inflation, better for comparisons', 'Higher GDP per capita generally = higher living standards', 'GDP has limitations - doesn\'t capture everything']
+    }
+  },
+
+  // ============================================================================
+  // AP ENGLISH LITERATURE - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'humanities',
+    subjectName: 'AP English Literature',
+    topicName: 'Analyzing Poetry - Sound and Structure',
+    content: {
+      title: 'Analyzing Poetry - Sound and Structure',
+      intro: 'Poetry uses sound devices and structural elements to create meaning, evoke emotions, and enhance themes.',
+      keyPoints: ['Rhyme scheme patterns', 'Meter and iambic pentameter', 'Alliteration, assonance, consonance', 'Enjambment vs caesura', 'Stanza structures', 'Sonnet forms'],
+      examples: ['Shakespearean sonnet structure', 'Enjambment in Williams', 'Alliteration examples'],
+      commonMistakes: ['Identifying rhyme scheme incorrectly', 'Not considering form and meaning'],
+      tips: ['Form and content work together', 'Enjambment creates urgency', 'Sonnets have turns']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'AP English Literature',
+    topicName: 'Prose Fiction Analysis',
+    content: {
+      title: 'Prose Fiction Analysis',
+      intro: 'Analyzing prose requires examining narrative techniques, characterization, setting, and thematic development.',
+      keyPoints: ['Narrative voice and distance', 'Direct vs indirect characterization', 'Setting significance', 'Imagery and sensory details', 'Syntax and diction effects', 'Tone and mood', 'Symbolism and irony'],
+      examples: ['Hemingway short sentences', 'Faulkner complexity', 'Symbolism in Gatsby'],
+      commonMistakes: ['Only summarizing plot', 'Not connecting techniques to meaning'],
+      tips: ['Ask why author made choices', 'Connect techniques to theme', 'Close read key passages']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'AP English Literature',
+    topicName: 'Drama Analysis',
+    content: {
+      title: 'Drama Analysis',
+      intro: 'Drama analysis requires understanding theatrical conventions, dialogue, and performance elements.',
+      keyPoints: ['Act and scene structure', 'Soliloquy vs aside vs monologue', 'Dramatic irony', 'Stage directions importance', 'Tragic flaw and catharsis'],
+      examples: ['Hamlet soliloquy', 'Romeo and Juliet dramatic irony'],
+      commonMistakes: ['Reading like prose', 'Ignoring stage directions'],
+      tips: ['Visualize performance', 'Pay attention to who speaks when']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'AP English Literature',
+    topicName: 'Writing About Literature',
+    content: {
+      title: 'Writing About Literature - Essays',
+      intro: 'Effective literary analysis requires clear thesis, textual evidence, and sophisticated analysis.',
+      keyPoints: ['Arguable thesis', 'Literary present tense', 'Textual evidence with analysis', 'Avoid plot summary', 'Close reading passages', 'Embed quotes smoothly'],
+      examples: ['Strong vs weak thesis', 'CEA pattern'],
+      commonMistakes: ['Too much summary', 'Quotes without analysis', 'Past tense'],
+      tips: ['Commentary exceeds evidence', 'Every quote needs explanation']
+    }
+  },
+
+  // ============================================================================
+  // GENERAL PHYSICS
+  // ============================================================================
+  {
+    categorySlug: 'science',
+    subjectName: 'General Physics',
+    topicName: 'Kinematics in One Dimension',
+    content: {
+      title: 'Kinematics - Motion in One Dimension',
+      intro: 'Kinematics describes motion using position, velocity, and acceleration.',
+      keyPoints: ['Position, displacement, distance', 'Velocity vs speed', 'Acceleration', 'Kinematic equations', 'Free fall: a = 9.8 m/s²', 'Motion graphs interpretation'],
+      examples: ['Car accelerating from rest', 'Ball in free fall', 'Velocity-time graphs'],
+      commonMistakes: ['Confusing distance and displacement', 'Sign errors'],
+      tips: ['Choose coordinate system', 'At max height v = 0', 'List knowns and unknowns']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Physics',
+    topicName: 'Forces and Newton\'s Laws',
+    content: {
+      title: 'Forces and Newton\'s Laws',
+      intro: 'Newton\'s three laws explain how forces cause motion changes.',
+      keyPoints: ['First Law: inertia', 'Second Law: F = ma', 'Third Law: action-reaction', 'Weight vs mass', 'Normal force, friction, tension', 'Free body diagrams'],
+      examples: ['Pushing a box', 'Weight calculations', 'Action-reaction pairs'],
+      commonMistakes: ['Confusing mass and weight', 'Not drawing FBD'],
+      tips: ['Draw free body diagram first', 'Weight = mg always downward']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Physics',
+    topicName: 'Work Energy and Power',
+    content: {
+      title: 'Work, Energy, and Power',
+      intro: 'Energy is the capacity to do work. Conservation of energy simplifies problem-solving.',
+      keyPoints: ['Work: W = Fd cos θ', 'Kinetic energy: KE = ½mv²', 'Potential energy: PE = mgh', 'Conservation of energy', 'Power: P = W/t'],
+      examples: ['Lifting objects', 'Ball dropped converting PE to KE', 'Power calculations'],
+      commonMistakes: ['Forgetting cos θ', 'Not recognizing energy conservation'],
+      tips: ['No displacement = no work', 'Energy is conserved']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Physics',
+    topicName: 'Waves and Sound',
+    content: {
+      title: 'Waves and Sound',
+      intro: 'Waves transfer energy. Understanding wave properties explains sound, light, and seismic phenomena.',
+      keyPoints: ['Wave types: transverse vs longitudinal', 'Wavelength, frequency, period', 'Wave equation: v = fλ', 'Amplitude and energy', 'Doppler effect'],
+      examples: ['Sound waves', 'Light waves', 'Doppler effect with sirens'],
+      commonMistakes: ['Confusing wavelength and amplitude', 'Wrong wave speed'],
+      tips: ['v = fλ is fundamental', 'Sound needs medium, light doesn\'t']
+    }
+  },
+  {
+    categorySlug: 'science',
+    subjectName: 'General Physics',
+    topicName: 'Basic Electricity and Circuits',
+    content: {
+      title: 'Electricity - Circuits and Ohm\'s Law',
+      intro: 'Electric circuits control charge flow. Ohm\'s Law relates voltage, current, and resistance.',
+      keyPoints: ['Current, voltage, resistance', 'Ohm\'s Law: V = IR', 'Series circuits', 'Parallel circuits', 'Power: P = IV'],
+      examples: ['Simple circuits', 'Resistors in series and parallel'],
+      commonMistakes: ['Series vs parallel formulas', 'Not recognizing configuration'],
+      tips: ['V = IR memorize this', 'Series: resistances add', 'Parallel: use reciprocal']
+    }
+  },
+
+  // ============================================================================
+  // PROGRAMMING FUNDAMENTALS
+  // ============================================================================
+  {
+    categorySlug: 'technology',
+    subjectName: 'Programming Fundamentals',
+    topicName: 'Arrays and Lists',
+    content: {
+      title: 'Arrays and Lists',
+      intro: 'Arrays store multiple values in single variable, enabling efficient data organization.',
+      keyPoints: ['Array basics', 'Index starts at 0', 'Accessing and modifying', 'Looping through arrays', 'Multi-dimensional arrays', 'Dynamic lists'],
+      examples: ['Array declaration', 'Accessing elements', 'For loops'],
+      commonMistakes: ['Off-by-one errors', 'Index out of bounds'],
+      tips: ['First: array[0]', 'Last: array[length-1]', 'Loop: i < length']
+    }
+  },
+  {
+    categorySlug: 'technology',
+    subjectName: 'Programming Fundamentals',
+    topicName: 'Searching and Sorting Algorithms',
+    content: {
+      title: 'Algorithms - Searching and Sorting',
+      intro: 'Fundamental algorithms every programmer must understand.',
+      keyPoints: ['Linear search', 'Binary search (requires sorted)', 'Bubble sort', 'Selection sort', 'Big O notation', 'Time complexity'],
+      examples: ['Search examples', 'Sorting examples'],
+      commonMistakes: ['Binary search on unsorted', 'Off-by-one errors'],
+      tips: ['Binary search only on sorted', 'Practice with small arrays']
+    }
+  },
+  {
+    categorySlug: 'technology',
+    subjectName: 'Programming Fundamentals',
+    topicName: 'OOP Basics',
+    content: {
+      title: 'Object-Oriented Programming Basics',
+      intro: 'OOP organizes code around objects combining data and behavior.',
+      keyPoints: ['Classes and objects', 'Attributes and methods', 'Constructors', 'Encapsulation', 'this/self reference', 'Getters and setters'],
+      examples: ['Class definition', 'Object creation', 'Method calls'],
+      commonMistakes: ['Confusing class and object', 'Making everything public'],
+      tips: ['Class = blueprint', 'Keep data private', 'Use constructors']
+    }
+  },
+  {
+    categorySlug: 'technology',
+    subjectName: 'Programming Fundamentals',
+    topicName: 'Debugging and Testing',
+    content: {
+      title: 'Debugging and Testing',
+      intro: 'Finding and fixing errors, verifying code correctness.',
+      keyPoints: ['Bug types: syntax, runtime, logic', 'Debugging techniques', 'Print statements', 'Testing strategies', 'Edge cases', 'Unit testing'],
+      examples: ['Common errors', 'Debug with prints', 'Test cases'],
+      commonMistakes: ['Not reading error messages', 'Not testing edge cases'],
+      tips: ['Read error messages', 'Test simple inputs first', 'Test edge cases']
+    }
+  },
+
+  // ============================================================================
+  // GRAMMAR AND WRITING
+  // ============================================================================
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Grammar and Writing',
+    topicName: 'Verb Tenses',
+    content: {
+      title: 'Verb Tenses and Consistency',
+      intro: 'Verb tenses indicate when actions occur. Consistency is essential.',
+      keyPoints: ['Present, past, future', 'Perfect tenses', 'Progressive tenses', 'Tense consistency', 'Literary present'],
+      examples: ['Tense examples', 'Consistency examples'],
+      commonMistakes: ['Shifting tenses unnecessarily', 'Past tense for literature'],
+      tips: ['Stay in one tense', 'Literature uses present', 'Signal words indicate tense']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Grammar and Writing',
+    topicName: 'Comma Rules',
+    content: {
+      title: 'Comma Usage Rules',
+      intro: 'Commas clarify meaning by separating sentence elements.',
+      keyPoints: ['Series commas', 'Introductory elements', 'FANBOYS with independent clauses', 'Non-essential vs essential', 'Dates and addresses'],
+      examples: ['Series example', 'FANBOYS example', 'Non-essential clause'],
+      commonMistakes: ['Comma splice', 'Missing comma before FANBOYS'],
+      tips: ['FANBOYS: for, and, nor, but, or, yet, so', 'Test non-essential by removing']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Grammar and Writing',
+    topicName: 'Active vs Passive Voice',
+    content: {
+      title: 'Active vs. Passive Voice',
+      intro: 'Active voice creates stronger, clearer writing.',
+      keyPoints: ['Active: subject performs action', 'Passive: subject receives action', 'When to use each', 'Converting between voices'],
+      examples: ['Active vs passive examples'],
+      commonMistakes: ['Overusing passive', 'Not recognizing passive'],
+      tips: ['Active = stronger usually', 'Spot passive: be + past participle']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'Grammar and Writing',
+    topicName: 'Paragraph Structure',
+    content: {
+      title: 'Paragraph Structure and Unity',
+      intro: 'Well-structured paragraphs have clear main ideas and coherent organization.',
+      keyPoints: ['Topic sentence', 'Supporting sentences', 'Unity and coherence', 'Transitions', 'One idea per paragraph'],
+      examples: ['Paragraph structure example', 'Transition words'],
+      commonMistakes: ['No clear topic sentence', 'Unrelated ideas'],
+      tips: ['Start with topic sentence', 'Use transitions', 'New idea = new paragraph']
+    }
+  },
+
+  // ============================================================================
+  // AP ECONOMICS
+  // ============================================================================
+  {
+    categorySlug: 'humanities',
+    subjectName: 'AP Economics',
+    topicName: 'Elasticity',
+    content: {
+      title: 'Elasticity of Demand and Supply',
+      intro: 'Elasticity measures responsiveness of quantity to price changes.',
+      keyPoints: ['PED formula', 'Elastic vs inelastic', 'Determinants', 'Total revenue test', 'Cross-price and income elasticity'],
+      examples: ['Gasoline: inelastic', 'Restaurant meals: elastic'],
+      commonMistakes: ['Confusing elasticity with slope', 'Wrong TR prediction'],
+      tips: ['Elastic = responsive', 'More substitutes = more elastic', 'Total revenue test']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'AP Economics',
+    topicName: 'Production Possibilities Curve',
+    content: {
+      title: 'Production Possibilities Curve',
+      intro: 'PPC shows maximum production combinations, illustrating scarcity and opportunity cost.',
+      keyPoints: ['Points on/inside/outside curve', 'Opportunity cost', 'Economic growth shifts', 'Increasing opportunity cost', 'Trade benefits'],
+      examples: ['Guns vs butter', 'Opportunity cost calculations'],
+      commonMistakes: ['Confusing movement vs shift', 'Wrong opportunity cost calculation'],
+      tips: ['On = efficient', 'Inside = inefficient', 'Outside = impossible currently']
+    }
+  },
+  {
+    categorySlug: 'humanities',
+    subjectName: 'AP Economics',
+    topicName: 'Market Equilibrium',
+    content: {
+      title: 'Market Equilibrium and Disequilibrium',
+      intro: 'Equilibrium occurs when quantity demanded equals quantity supplied.',
+      keyPoints: ['Equilibrium: Qd = Qs', 'Shortage and surplus', 'Price adjustments', 'Demand and supply shifts', 'Price ceilings and floors'],
+      examples: ['Equilibrium examples', 'Rent control shortage', 'Minimum wage surplus'],
+      commonMistakes: ['Confusing shortage and scarcity', 'Ceiling vs floor confusion'],
+      tips: ['Shortage = price too low', 'Surplus = price too high', 'Draw graphs']
+    }
+  },
+
+  // ============================================================================
+  // PRECALCULUS - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Precalculus',
+    topicName: 'Trigonometric Functions and Identities',
+    content: {
+      title: 'Trigonometric Functions and Identities',
+      intro: 'Trigonometric identities are equations involving trig functions that are true for all values. They simplify expressions and solve equations.',
+      keyPoints: ['Pythagorean identities: sin²θ + cos²θ = 1', 'Reciprocal identities: csc = 1/sin, sec = 1/cos, cot = 1/tan', 'Quotient identities: tan = sin/cos, cot = cos/sin', 'Even-odd identities: cos(-θ) = cos θ, sin(-θ) = -sin θ', 'Sum formulas: sin(A+B) = sinA cosB + cosA sinB', 'Double angle: sin(2θ) = 2sinθ cosθ', 'Half angle formulas', 'Law of Sines: a/sinA = b/sinB = c/sinC', 'Law of Cosines: c² = a² + b² - 2ab cosC'],
+      examples: ['Simplify: sin²x + cos²x = 1', 'tan x = sin x / cos x', 'sin(2x) = 2sin x cos x'],
+      commonMistakes: ['Not recognizing which identity to use', 'Sign errors in identities'],
+      tips: ['Memorize fundamental identities', 'Start with Pythagorean identity', 'Practice recognizing patterns']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Precalculus',
+    topicName: 'Exponential and Logarithmic Functions',
+    content: {
+      title: 'Exponential and Logarithmic Functions',
+      intro: 'Exponential and logarithmic functions are inverses. Logs help solve exponential equations.',
+      keyPoints: ['y = logₐ x means aʸ = x', 'ln x = logₑ x (natural log)', 'log laws: log(ab) = log a + log b', 'log(a/b) = log a - log b', 'log(aⁿ) = n log a', 'Change of base: logₐ b = (log b)/(log a)', 'e ≈ 2.718', 'Exponential growth: y = abˣ', 'Continuous growth: A = Pe^(rt)'],
+      examples: ['Solve: 2ˣ = 8 → x = 3', 'log₂ 8 = 3', 'ln(e³) = 3'],
+      commonMistakes: ['Confusing log properties', 'Not converting between forms'],
+      tips: ['Log undoes exponent', 'Use log properties to simplify', 'ln and e are inverses']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Precalculus',
+    topicName: 'Conic Sections',
+    content: {
+      title: 'Conic Sections - Circles, Ellipses, Parabolas, Hyperbolas',
+      intro: 'Conic sections are curves formed by intersecting a plane with a cone.',
+      keyPoints: ['Circle: (x-h)² + (y-k)² = r²', 'Parabola: y = a(x-h)² + k or x = a(y-k)² + h', 'Ellipse: (x-h)²/a² + (y-k)²/b² = 1', 'Hyperbola: (x-h)²/a² - (y-k)²/b² = 1', 'Center: (h, k)', 'Vertices, foci, directrix', 'Eccentricity measures shape'],
+      examples: ['Circle: (x-2)² + (y+3)² = 25 has center (2,-3), r=5', 'Parabola: y = x²'],
+      commonMistakes: ['Confusing ellipse and hyperbola', 'Wrong center coordinates'],
+      tips: ['Memorize standard forms', 'Complete the square to get standard form', 'Circle: sum, Hyperbola: difference']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Precalculus',
+    topicName: 'Vectors and Parametric Equations',
+    content: {
+      title: 'Vectors and Parametric Equations',
+      intro: 'Vectors have magnitude and direction. Parametric equations express curves using a parameter.',
+      keyPoints: ['Vector: v = <a, b>', 'Magnitude: |v| = √(a² + b²)', 'Unit vector: v/|v|', 'Vector addition: <a,b> + <c,d> = <a+c, b+d>', 'Dot product: u·v = u₁v₁ + u₂v₂', 'Parametric form: x = f(t), y = g(t)', 'Eliminate parameter to get Cartesian equation'],
+      examples: ['v = <3, 4>, |v| = 5', 'Parametric: x = t, y = t² gives y = x²'],
+      commonMistakes: ['Adding vectors incorrectly', 'Not eliminating parameter correctly'],
+      tips: ['Draw vectors to visualize', 'Magnitude uses Pythagorean theorem', 'Parametric gives position at time t']
+    }
+  },
+
+  // ============================================================================
+  // CALCULUS - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Calculus',
+    topicName: 'Limits and Continuity',
+    content: {
+      title: 'Limits and Continuity',
+      intro: 'Limits describe function behavior as input approaches a value. Continuity means no breaks or jumps.',
+      keyPoints: ['Limit: lim(x→a) f(x) = L', 'One-sided limits: left and right', 'Continuous: lim(x→a) f(x) = f(a)', 'Discontinuity types: removable, jump, infinite', 'Limit laws: sum, product, quotient', 'Indeterminate forms: 0/0, ∞/∞', 'L\'Hôpital\'s Rule for 0/0 or ∞/∞'],
+      examples: ['lim(x→2) (x² - 4)/(x - 2) = 4', 'lim(x→0) sin x / x = 1'],
+      commonMistakes: ['Not checking one-sided limits', 'Dividing by zero'],
+      tips: ['Factor and cancel for 0/0', 'Graph helps visualize', 'Three conditions for continuity']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Calculus',
+    topicName: 'Derivatives - Power Rule and Product Rule',
+    content: {
+      title: 'Derivatives - Basic Rules',
+      intro: 'Derivatives measure instantaneous rate of change. Basic rules enable efficient differentiation.',
+      keyPoints: ['Derivative: f\'(x) = lim(h→0) [f(x+h) - f(x)]/h', 'Power Rule: d/dx(xⁿ) = nxⁿ⁻¹', 'Constant Rule: d/dx(c) = 0', 'Sum Rule: (f + g)\' = f\' + g\'', 'Product Rule: (fg)\' = f\'g + fg\'', 'Quotient Rule: (f/g)\' = (f\'g - fg\')/g²', 'Chain Rule: d/dx[f(g(x))] = f\'(g(x))·g\'(x)'],
+      examples: ['d/dx(x³) = 3x²', 'd/dx(x²·sin x) = 2x·sin x + x²·cos x'],
+      commonMistakes: ['Forgetting to apply chain rule', 'Product rule errors'],
+      tips: ['Power rule is most common', 'Product rule: derivative of first times second + first times derivative of second']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Calculus',
+    topicName: 'Integration - Antiderivatives and Definite Integrals',
+    content: {
+      title: 'Integration Basics',
+      intro: 'Integration is the reverse of differentiation. It finds area under curves and accumulation.',
+      keyPoints: ['Antiderivative: ∫f(x)dx', 'Power rule: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C', 'Definite integral: ∫ₐᵇ f(x)dx = area under curve', 'Fundamental Theorem: ∫ₐᵇ f(x)dx = F(b) - F(a)', 'u-substitution for chain rule reverse', 'Integration by parts'],
+      examples: ['∫x² dx = x³/3 + C', '∫₀¹ x dx = 1/2'],
+      commonMistakes: ['Forgetting +C for indefinite integrals', 'Sign errors in definite integrals'],
+      tips: ['Integration is harder than differentiation', 'Check by differentiating', 'Don\'t forget constant of integration']
+    }
+  },
+  {
+    categorySlug: 'mathematics',
+    subjectName: 'Calculus',
+    topicName: 'Applications of Derivatives',
+    content: {
+      title: 'Applications of Derivatives - Optimization and Related Rates',
+      intro: 'Derivatives solve real-world problems involving rates of change and optimization.',
+      keyPoints: ['Critical points: where f\'(x) = 0 or undefined', 'First derivative test: increasing/decreasing', 'Second derivative test: concavity', 'Optimization: find max/min values', 'Related rates: multiple variables changing', 'Implicit differentiation'],
+      examples: ['Find max/min of f(x) = x² - 4x: f\'(x) = 2x - 4 = 0, x = 2 (minimum)', 'Related rate: balloon radius growing'],
+      commonMistakes: ['Not checking endpoints', 'Forgetting to verify max vs min'],
+      tips: ['Set derivative = 0 for critical points', 'Check second derivative for concavity', 'Draw picture for related rates']
+    }
+  },
+
+  // ============================================================================
+  // ACCOUNTING - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'business',
+    subjectName: 'Accounting',
+    topicName: 'The Accounting Equation',
+    content: {
+      title: 'The Accounting Equation',
+      intro: 'The accounting equation is the foundation of double-entry bookkeeping: Assets = Liabilities + Equity.',
+      keyPoints: ['Assets = Liabilities + Equity', 'Assets: what company owns', 'Liabilities: what company owes', 'Equity: owner\'s stake', 'Equation always balances', 'Every transaction affects both sides', 'Debits = Credits always'],
+      examples: ['Buy equipment $10k cash: Assets +$10k (equipment), Assets -$10k (cash)', 'Borrow $5k: Assets +$5k (cash), Liabilities +$5k (loan)'],
+      commonMistakes: ['Not balancing equation', 'Confusing assets and liabilities'],
+      tips: ['Always balance', 'Think: what did we get? what did we give up?', 'Every transaction has two effects']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Accounting',
+    topicName: 'Journal Entries and T-Accounts',
+    content: {
+      title: 'Journal Entries and T-Accounts',
+      intro: 'Journal entries record transactions chronologically. T-accounts track individual account balances.',
+      keyPoints: ['Debit: left side', 'Credit: right side', 'Assets: debit increase, credit decrease', 'Liabilities/Equity: credit increase, debit decrease', 'Revenue: credit increases', 'Expenses: debit increases', 'DEALER acronym: Debits - Expenses, Assets, Losses; Credits - Equity, Revenue'],
+      examples: ['Cash sale $100: Debit Cash $100, Credit Revenue $100', 'Pay rent $500: Debit Rent Expense $500, Credit Cash $500'],
+      commonMistakes: ['Mixing up debits and credits', 'Unbalanced entries'],
+      tips: ['Debits on left, credits on right', 'Total debits must = total credits', 'Use DEALER to remember normal balances']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Accounting',
+    topicName: 'Financial Statements Overview',
+    content: {
+      title: 'Financial Statements Overview',
+      intro: 'Four main financial statements tell the complete financial story of a business.',
+      keyPoints: ['Income Statement: revenues - expenses = net income (period)', 'Balance Sheet: Assets = Liabilities + Equity (point in time)', 'Cash Flow Statement: operating, investing, financing activities', 'Statement of Retained Earnings: tracks equity changes', 'Statements are interconnected', 'Net income flows to equity', 'Accrual vs cash basis'],
+      examples: ['Income statement shows profit/loss for year', 'Balance sheet shows financial position on Dec 31'],
+      commonMistakes: ['Confusing balance sheet and income statement', 'Not understanding period vs point in time'],
+      tips: ['Income statement = performance', 'Balance sheet = position', 'Cash flow = where money came from and went']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Accounting',
+    topicName: 'Depreciation Methods',
+    content: {
+      title: 'Depreciation Methods',
+      intro: 'Depreciation allocates asset cost over its useful life. Different methods suit different assets.',
+      keyPoints: ['Straight-line: (Cost - Salvage) / Useful life', 'Most common and simple method', 'Declining balance: accelerated depreciation', 'Units of production: based on usage', 'Depreciation is expense, not cash outflow', 'Accumulated depreciation is contra-asset', 'Book value = Cost - Accumulated depreciation'],
+      examples: ['Asset $10k, salvage $1k, 3 years: Straight-line = $3k/year', 'Year 1 depreciation $3k reduces income'],
+      commonMistakes: ['Thinking depreciation is cash expense', 'Forgetting salvage value', 'Not accumulating depreciation'],
+      tips: ['Straight-line is simplest', 'Depreciation spreads cost over time', 'Reduces taxable income']
+    }
+  },
+
+  // ============================================================================
+  // FINANCE - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'business',
+    subjectName: 'Finance',
+    topicName: 'Time Value of Money - Present and Future Value',
+    content: {
+      title: 'Time Value of Money',
+      intro: 'A dollar today is worth more than a dollar tomorrow due to earning potential. Core concept in finance.',
+      keyPoints: ['Future Value: FV = PV(1 + r)ⁿ', 'Present Value: PV = FV/(1 + r)ⁿ', 'r = interest rate per period', 'n = number of periods', 'Compounding frequency matters', 'Annuity: series of equal payments', 'PV of annuity: PV = PMT × [(1 - (1+r)⁻ⁿ)/r]', 'Perpetuity: PV = PMT/r'],
+      examples: ['$1000 at 5% for 3 years: FV = 1000(1.05)³ = $1157.63', 'Receive $1000 in 2 years, r=6%: PV = 1000/1.06² = $890'],
+      commonMistakes: ['Using wrong n or r', 'Not matching compounding frequency', 'Mixing up PV and FV formulas'],
+      tips: ['FV = growing money forward', 'PV = discounting money back', 'Higher rate = lower PV', 'Draw timeline']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Finance',
+    topicName: 'Risk and Return',
+    content: {
+      title: 'Risk and Return',
+      intro: 'Higher expected return comes with higher risk. Understanding this tradeoff is fundamental to investing.',
+      keyPoints: ['Return: gain or loss on investment', 'Risk: uncertainty of returns', 'Standard deviation measures risk', 'Higher risk → higher expected return', 'Diversification reduces risk', 'Systematic risk: market-wide (can\'t diversify)', 'Unsystematic risk: firm-specific (can diversify)', 'Beta measures systematic risk', 'Risk-free rate: T-bills', 'Risk premium: extra return for taking risk'],
+      examples: ['Stocks: high risk, high return', 'Bonds: lower risk, lower return', 'T-bills: lowest risk, lowest return', 'Beta = 1.5 means 50% more volatile than market'],
+      commonMistakes: ['Thinking high return = good investment (ignoring risk)', 'Not diversifying', 'Confusing risk types'],
+      tips: ['Don\'t put all eggs in one basket', 'Risk and return go together', 'Diversification is free lunch']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Finance',
+    topicName: 'Capital Budgeting - NPV and IRR',
+    content: {
+      title: 'Capital Budgeting',
+      intro: 'Capital budgeting evaluates long-term investments using NPV and IRR to make accept/reject decisions.',
+      keyPoints: ['NPV: Net Present Value of all cash flows', 'NPV = Σ CF_t/(1+r)^t - Initial Investment', 'Accept if NPV > 0', 'IRR: Internal Rate of Return', 'IRR makes NPV = 0', 'Accept if IRR > required return', 'Payback period: time to recover investment', 'Profitability index: NPV/Initial Investment'],
+      examples: ['Project costs $1000, returns $400/year for 3 years, r=10%: NPV = -1000 + 400/1.1 + 400/1.21 + 400/1.331 ≈ -$5 (reject)', 'IRR > cost of capital → accept project'],
+      commonMistakes: ['Not discounting cash flows', 'Wrong discount rate', 'Forgetting initial outflow is negative'],
+      tips: ['NPV is king - best method', 'Positive NPV adds value', 'IRR is rate of return', 'Always use discounted cash flows']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Finance',
+    topicName: 'Stock Valuation',
+    content: {
+      title: 'Stock Valuation - Dividend Discount Model',
+      intro: 'Stock value equals present value of future dividends. DDM is fundamental valuation method.',
+      keyPoints: ['Stock value = PV of future dividends', 'Constant growth DDM: P = D₁/(r - g)', 'D₁ = next year\'s dividend', 'r = required return', 'g = growth rate (must be < r)', 'P/E ratio: Price/Earnings', 'Higher growth → higher value', 'Dividends are cash flows to shareholders'],
+      examples: ['Stock pays $2 dividend, grows 5%, r=10%: P = 2/(0.10-0.05) = $40', 'P/E = 20 means paying $20 for $1 of earnings'],
+      commonMistakes: ['Using g > r (impossible)', 'Wrong dividend (use D₁ not D₀)', 'Forgetting to convert percentages'],
+      tips: ['Gordon Growth Model most common', 'Growth rate must be sustainable', 'Higher required return = lower price']
+    }
+  },
+
+  // ============================================================================
+  // PERSONAL FINANCE - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'business',
+    subjectName: 'Personal Finance',
+    topicName: 'Emergency Funds',
+    content: {
+      title: 'Emergency Funds',
+      intro: 'Emergency fund covers unexpected expenses without going into debt. Financial safety net.',
+      keyPoints: ['Save 3-6 months of expenses', 'Keep in liquid, accessible account', 'High-yield savings account ideal', 'Only use for true emergencies', 'Build gradually if needed', 'Before investing aggressively', 'Prevents debt from emergencies', 'Peace of mind'],
+      examples: ['Monthly expenses $3000 → emergency fund $9,000-$18,000', 'Job loss, medical bill, car repair'],
+      commonMistakes: ['Not having emergency fund', 'Keeping in stocks (too volatile)', 'Using for non-emergencies'],
+      tips: ['Start with $1000, build to 3-6 months', 'Automate savings', 'Keep separate from checking']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Personal Finance',
+    topicName: 'Retirement Accounts - 401k and IRA',
+    content: {
+      title: 'Retirement Accounts',
+      intro: 'Tax-advantaged retirement accounts help build long-term wealth. Understanding options is crucial.',
+      keyPoints: ['401(k): employer-sponsored', '403(b): for non-profits', 'IRA: Individual Retirement Account', 'Traditional: tax deduction now, taxed later', 'Roth: taxed now, tax-free later', 'Contribution limits (2024): 401k $23k, IRA $7k', 'Employer match: free money!', 'Early withdrawal penalty: 10% before 59.5', 'Required minimum distributions at 73'],
+      examples: ['Employer matches 50% up to 6%: contribute 6% to get full match', 'Roth: pay tax now at 22%, withdraw tax-free in retirement'],
+      commonMistakes: ['Not getting full employer match', 'Early withdrawals', 'Wrong account type for situation'],
+      tips: ['Always get full employer match first', 'Roth better if young/low tax bracket', 'Start early - compound growth']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Personal Finance',
+    topicName: 'Debt Management',
+    content: {
+      title: 'Debt Management Strategies',
+      intro: 'Managing debt wisely prevents financial stress. Different strategies for different situations.',
+      keyPoints: ['Good debt: appreciating assets (education, home)', 'Bad debt: depreciating assets (car, credit cards)', 'Snowball method: pay smallest balance first', 'Avalanche method: pay highest interest first', 'Credit utilization under 30%', 'Minimum payments = years of interest', 'Consolidation: combine debts', 'Refinancing: lower interest rate'],
+      examples: ['Snowball: pay $500 balance, then $1000, then $5000', 'Avalanche: pay 24% APR card before 10% APR'],
+      commonMistakes: ['Only paying minimums', 'Taking on bad debt', 'Ignoring interest rates'],
+      tips: ['Avalanche saves most money', 'Snowball provides quick wins', 'Avoid credit card debt - highest interest']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Personal Finance',
+    topicName: 'Investment Basics for Beginners',
+    content: {
+      title: 'Investment Basics',
+      intro: 'Investing grows wealth over time. Understanding basics helps make informed decisions.',
+      keyPoints: ['Start early - compound interest', 'Diversification reduces risk', 'Index funds: low-cost, diversified', 'Asset allocation: stocks, bonds, cash', 'Stocks: ownership, higher risk/return', 'Bonds: loans, lower risk/return', 'Dollar-cost averaging: invest regularly', 'Time horizon matters', 'Avoid timing market', 'Fees matter - keep low'],
+      examples: ['$100/month for 30 years at 8% = $150k', 'S&P 500 index fund: instant diversification', '60/40 stocks/bonds for moderate risk'],
+      commonMistakes: ['Trying to time market', 'Not diversifying', 'High fees eating returns', 'Selling in panic'],
+      tips: ['Time in market > timing market', 'Index funds beat most active managers', 'Stay invested through ups and downs']
+    }
+  },
+
+  // ============================================================================
+  // MARKETING - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'business',
+    subjectName: 'Marketing',
+    topicName: 'Market Segmentation and Targeting',
+    content: {
+      title: 'Market Segmentation and Targeting',
+      intro: 'Market segmentation divides customers into groups. Targeting selects which segments to serve.',
+      keyPoints: ['Segmentation: divide market into groups', 'Demographic: age, income, education', 'Geographic: location, climate, region', 'Psychographic: lifestyle, values, personality', 'Behavioral: usage, loyalty, benefits sought', 'Target market: segment(s) to focus on', 'Positioning: how brand is perceived', 'Differentiation: how you\'re unique'],
+      examples: ['Nike targets athletes (behavioral)', 'Luxury brands target high-income (demographic)', 'Sunscreen targets warm climates (geographic)'],
+      commonMistakes: ['Too broad targeting', 'Ignoring segment needs', 'Not differentiating'],
+      tips: ['Segment, Target, Position (STP)', 'Can\'t serve everyone', 'Focus on profitable segments']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Marketing',
+    topicName: 'Digital Marketing Fundamentals',
+    content: {
+      title: 'Digital Marketing Fundamentals',
+      intro: 'Digital marketing uses online channels to reach customers. Essential in modern marketing.',
+      keyPoints: ['SEO: Search Engine Optimization', 'SEM: Search Engine Marketing (paid ads)', 'Social media marketing', 'Content marketing: valuable content attracts customers', 'Email marketing: direct communication', 'PPC: Pay-Per-Click advertising', 'Analytics: measure and optimize', 'Conversion rate: visitors who take action', 'CTR: Click-Through Rate', 'ROI: Return on Investment'],
+      examples: ['Google Ads: PPC on search results', 'Blog posts: content marketing', 'Instagram ads: social media marketing'],
+      commonMistakes: ['Not tracking metrics', 'Ignoring mobile users', 'No clear strategy'],
+      tips: ['Data drives decisions', 'Test and optimize', 'Multi-channel approach', 'Content is king']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Marketing',
+    topicName: 'Consumer Behavior',
+    content: {
+      title: 'Consumer Behavior',
+      intro: 'Understanding why consumers buy helps create effective marketing. Psychology meets business.',
+      keyPoints: ['Decision process: recognize need, search, evaluate, purchase, post-purchase', 'Maslow\'s hierarchy: physiological, safety, social, esteem, self-actualization', 'Motivation: what drives purchase', 'Perception: how consumers interpret info', 'Learning: past experiences influence future', 'Attitudes: positive/negative feelings about brand', 'Social influence: family, friends, culture', 'Cognitive dissonance: post-purchase doubt'],
+      examples: ['Luxury purchases satisfy esteem needs', 'Word-of-mouth influences buying decisions', 'Free samples create positive attitudes'],
+      commonMistakes: ['Assuming rational decisions only', 'Ignoring emotional factors', 'Not considering culture'],
+      tips: ['Consumers are emotional', 'Social proof powerful', 'Reduce post-purchase anxiety']
+    }
+  },
+  {
+    categorySlug: 'business',
+    subjectName: 'Marketing',
+    topicName: 'Brand Management',
+    content: {
+      title: 'Brand Management',
+      intro: 'Strong brands create customer loyalty and premium pricing. Managing brand equity is crucial.',
+      keyPoints: ['Brand: name, symbol, design identifying product', 'Brand equity: value added by brand name', 'Brand awareness: recognition', 'Brand loyalty: repeat purchases', 'Brand positioning: place in consumer mind', 'Brand personality: human characteristics', 'Co-branding: two brands together', 'Brand extension: use brand on new product'],
+      examples: ['Apple: high brand equity, premium pricing', 'Nike: strong brand personality', 'Coca-Cola: high brand awareness'],
+      commonMistakes: ['Inconsistent messaging', 'Diluting brand with poor extensions', 'Ignoring brand perception'],
+      tips: ['Consistency builds brands', 'Protect brand reputation', 'Emotional connections matter']
+    }
+  },
+
+  // ============================================================================
+  // AP COMPUTER SCIENCE - COMPREHENSIVE TOPICS
+  // ============================================================================
+  {
+    categorySlug: 'technology',
+    subjectName: 'AP Computer Science',
+    topicName: 'Java Syntax and Basics',
+    content: {
+      title: 'Java Syntax and Basics',
+      intro: 'Java syntax is the grammar of the language. Mastering basics is essential for AP CS A.',
+      keyPoints: ['Statements end with semicolon', 'Case-sensitive language', 'main method: entry point', 'System.out.println() prints', 'Comments: //, /* */', 'Variables: type name = value', 'Primitive types: int, double, boolean, char', 'Strings are objects', 'Operators: +, -, *, /, %', 'Comparison: ==, !=, <, >, <=, >=', 'Logical: &&, ||, !'],
+      examples: ['int age = 17;', 'String name = "Java";', 'System.out.println("Hello");', 'boolean isStudent = true;'],
+      commonMistakes: ['Missing semicolons', 'Using = instead of ==', 'Case errors'],
+      tips: ['Every statement needs semicolon', 'main method must be exact', 'Practice syntax daily']
+    }
+  },
+  {
+    categorySlug: 'technology',
+    subjectName: 'AP Computer Science',
+    topicName: 'Classes and Objects in Java',
+    content: {
+      title: 'Classes and Objects in Java',
+      intro: 'Java is object-oriented. Understanding classes and objects is fundamental.',
+      keyPoints: ['Class: blueprint for objects', 'Object: instance of class', 'Instance variables: object data', 'Methods: object behaviors', 'Constructor: initializes objects', 'this keyword: current object', 'Public vs private access', 'Encapsulation: data hiding', 'Accessor (getter): returns value', 'Mutator (setter): changes value'],
+      examples: ['public class Dog { private String name; public Dog(String n) { name = n; } }', 'Dog myDog = new Dog("Rex");'],
+      commonMistakes: ['Public instance variables', 'No constructor', 'Forgetting this'],
+      tips: ['Instance variables private', 'Use getters/setters', 'Constructor same name as class']
+    }
+  },
+  {
+    categorySlug: 'technology',
+    subjectName: 'AP Computer Science',
+    topicName: 'ArrayList in Java',
+    content: {
+      title: 'ArrayList in Java',
+      intro: 'ArrayList is dynamic array. Crucial data structure for AP CS A exam.',
+      keyPoints: ['ArrayList: resizable array', 'Import: java.util.ArrayList', 'Declaration: ArrayList<Type> list = new ArrayList<Type>()', 'add(element): appends to end', 'add(index, element): inserts at index', 'get(index): returns element', 'set(index, element): replaces', 'remove(index): deletes and returns', 'size(): number of elements', 'Wrapper classes: Integer, Double for primitives'],
+      examples: ['ArrayList<String> names = new ArrayList<String>();', 'names.add("Alice");', 'String first = names.get(0);', 'names.size() returns 1'],
+      commonMistakes: ['Using [] instead of get/set', 'Primitive types instead of wrapper classes', 'Off-by-one errors'],
+      tips: ['Use get/set not []', 'size() not length', 'Wrapper classes for primitives']
+    }
+  },
+  {
+    categorySlug: 'technology',
+    subjectName: 'AP Computer Science',
+    topicName: 'Inheritance in Java',
+    content: {
+      title: 'Inheritance in Java',
+      intro: 'Inheritance creates class hierarchies. Subclass inherits from superclass.',
+      keyPoints: ['extends keyword: create subclass', 'Subclass inherits fields and methods', 'super: reference to superclass', 'super(): calls superclass constructor', 'Overriding: subclass redefines method', '@Override annotation', 'Cannot override private methods', 'is-a relationship', 'Polymorphism: object can be treated as superclass type'],
+      examples: ['public class Cat extends Animal', 'super(name); calls Animal constructor', '@Override public void makeSound() { ... }'],
+      commonMistakes: ['Forgetting super()', 'Overriding wrong', 'Private inheritance attempts'],
+      tips: ['Call super() first in constructor', 'Override for specialized behavior', 'Use @Override']
+    }
+  },
+  {
+    categorySlug: 'technology',
+    subjectName: 'AP Computer Science',
+    topicName: 'Recursion in Java',
+    content: {
+      title: 'Recursion in Java',
+      intro: 'Recursion: method calls itself. Powerful technique for certain problems.',
+      keyPoints: ['Base case: stops recursion', 'Recursive case: calls itself', 'Must progress toward base case', 'Stack: stores method calls', 'Stack overflow: too many calls', 'Common uses: factorial, Fibonacci, tree traversal', 'Alternative to iteration'],
+      examples: ['factorial(5) = 5 * factorial(4)', 'Base: factorial(0) = 1', 'Fibonacci: fib(n) = fib(n-1) + fib(n-2)'],
+      commonMistakes: ['No base case', 'Not progressing to base', 'Inefficient recursion'],
+      tips: ['Always have base case', 'Make sure recursion ends', 'Trace with small values']
     }
   }
 ]
